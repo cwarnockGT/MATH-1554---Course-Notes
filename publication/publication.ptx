@@ -17,7 +17,7 @@
     </common>
 
     <html embed-button="yes">
-
-
+        <platform host="web" portable="yes">
+        </platform>
     </html>
 </publication>
