@@ -3,3 +3,12 @@ div.printout.handout h1,
 div.printout.handout h2 {
   display: none !important;
 }
+
+
+
+example {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
