@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <handout xml:id="handout-1-2" xmlns:xi="http://www.w3.org/2001/XInclude">
 
-  <!-- Header block to mirror slide title area -->
-  <objectives xml:id="obj-1-2">
-    <title>Learning Objectives</title>
-    <ul>
-      <li>Characterize a linear system in terms of leading entries, free variables, pivots, pivot columns, and pivot positions.</li>
-      <li>Apply the row reduction algorithm to reduce a linear system to echelon form or reduced echelon form.</li>
-      <li>Apply row reduction to compute the coefficients of a polynomial.</li>
-    </ul>
-  </objectives>
-
   <!-- Topics -->
-  <paragraphs xml:id="topics-1-2">
-    <title>Topics</title>
-    <ul>
-      <li>Row reduction algorithm</li>
-      <li>Pivots; basic and free variables</li>
-      <li>Echelon forms; existence and uniqueness</li>
-    </ul>
-  </paragraphs>
+    <objectives xml:id="obj-1-2-topics">
+      <title>Topics</title>
+      <ul>
+        <li>Row reduction algorithm</li>
+        <li>Pivots; basic and free variables</li>
+        <li>Echelon forms; existence and uniqueness</li>
+      </ul>
+    </objectives>
+
+  <!-- Learning Objectives -->
+    <objectives xml:id="obj-1-2">
+      <title>Learning Objectives</title>
+      <ul>
+        <li>Characterize a linear system in terms of leading entries, free variables, pivots, pivot columns, and pivot positions.</li>
+        <li>Apply the row reduction algorithm to reduce a linear system to echelon form or reduced echelon form.</li>
+        <li>Apply row reduction to compute the coefficients of a polynomial.</li>
+      </ul>
+    </objectives>
 
   <!-- Definition: Echelon form and RREF -->
   <definition xml:id="def-echelon-rref">

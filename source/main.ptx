@@ -16,7 +16,7 @@
     
     <xi:include href="./introduction.ptx" />
     <xi:include href="./chapter-1.ptx" />
-    <xi:include href="./chapter-2.ptx" />
+    <!-- <xi:include href="./chapter-2.ptx" /> -->
   </book>
 
 </pretext>

@@ -6,7 +6,7 @@
   <page>
 
     <!-- Topics -->
-    <objectives xml:id="obj-1-2-topics">
+    <objectives xml:id="obj-1-2b-topics">
       <title>Topics</title>
       <ul>
         <li>Row reduction algorithm</li>
@@ -16,7 +16,7 @@
     </objectives>
 
     <!-- Learning Objectives -->
-    <objectives xml:id="obj-1-2">
+    <objectives xml:id="obj-1-2b">
       <title>Learning Objectives</title>
       <ul>
         <li>Characterize a linear system in terms of leading entries, free variables, pivots, pivot columns, and pivot positions.</li>

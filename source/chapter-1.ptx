@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chapter xml:id="chapter-1" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Linear Equations in Linear Algebra</title>
-  <introduction>
+  <!-- <introduction>
     <p>Some words</p>
-  </introduction>
+  </introduction> -->
   <section xml:id="sec-1-1">
     <title>Systems of Linear Equations</title>
       <xi:include href="./chapter-1-notes/section-1-1.ptx" />
   </section>
   
-  <section xml:id="sec-1-2">
+  <section xml:id="sec-1-2b">
     <title>Row Reduction and Echelon Forms</title>
-      <xi:include href="./chapter-1-notes/section-1-2-b.ptx" />
+      <xi:include href="./chapter-1-notes/section-1-2.ptx" />
   </section>
+
   
   
 

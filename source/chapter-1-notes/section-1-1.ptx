@@ -7,43 +7,33 @@
   <page>
     <title>Topics and Objectives</title>
 
-    <p workspace="1in">
-      <em>Topics</em>
+    <objectives>
+      <title>Topics</title>
       <ul>
         <li>Systems of Linear Equations</li>
         <li>Matrix Notation</li>
         <li>Elementary Row Operations</li>
         <li>Existence and Uniqueness of Solutions</li>
       </ul>
-    </p>
+    </objectives>
 
-    <p workspace="1in">
-      <em>Objectives</em>
+    <objectives>
+      <title>Goals</title>
       <ol>
         <li>Characterize a linear system by the number of solutions and consistency.</li>
         <li>Apply elementary row operations to solve linear systems.</li>
         <li>Express a system as an augmented matrix.</li>
       </ol>
-    </p>
-  </page>
-
-  <!-- Page 2: Single linear equation -->
-  <page>
+    </objectives>
+  
+    <definition>
     <title>A Single Linear Equation</title>
-
-    <p>
-      A linear equation has the form:
-    </p>
-    <p workspace="1.5in">
-      <m>\begin{aligned}
-        a_1 x_1 + a_2 x_2 + \cdots + a_n x_n = b
-      \end{aligned}</m>
-    </p>
-
-    <p workspace="1in">
-      Here, <m>a_1,\dotsc,a_n</m> and <m>b</m> are the <em>coefficients</em>, <m>x_1,\dotsc,x_n</m> are the
+      <statement>A <term>linear equation</term> has the form:
+        <md>a_1 x_1 + a_2 x_2 + \cdots + a_n x_n = b</md>
+      where, <m>a_1,\dots,a_n</m> and <m>b</m> are the <em>coefficients</em>, <m>x_1,\dots,x_n</m> are the
       <em>variables</em> (unknowns), and <m>n</m> is the <em>dimension</em> (number of variables).
-    </p>
+      </statement>
+      </definition>
 
     <p workspace="2in">
       Examples:
@@ -54,73 +44,69 @@
     </p>
   </page>
 
-  <!-- Page 3: Systems of linear equations + definition -->
+  <!-- Page 2: Systems of linear equations + definition -->
   <page>
     <title>Systems of Linear Equations</title>
 
     <p>
-      A <em>linear system</em> consists of multiple linear equations in the same variables. For example:
+      When we have more than one linear equation, we have a <em>system of linear equations</em>. For example, a system of two linear equations is:
     </p>
 
-    <p workspace="2in">
-      <m>\begin{aligned}
+    <p workspace="2.5in">
+      <md>\begin{aligned}
         x_1 \amp\;+\; 1.5\,x_2 \;+\; \pi x_3 \;=\; 4 \\
         5x_1 \amp\;+\; \phantom{1.5\,x_2}\;+\; 7x_3 \;=\; 5
-      \end{aligned}</m>
+      \end{aligned}</md>
     </p>
 
+    <p workspace="2.5in">
     <definition>
       <title>Solution to a Linear System</title>
-      <p workspace="1.5in">
-        The set of all values of <m>x_1, x_2, \ldots, x_n</m> that satisfy <em>every</em> equation in the system.
-      </p>
+      <statement>
+        The set of all possible values of <m>x_1, x_2, \ldots, x_n</m> that satisfy <em>every</em> equation in the system is the <term>solution, or solution set,</term> to the system.
+      </statement
+      >
     </definition>
-
-    <p workspace="1in">
-      A system can have a unique solution, no solution, or infinitely many solutions.
+    </p>
+    
+    <p>
+      How many solutions can a system have?
     </p>
   </page>
 
   <!-- Page 4: Two variables—guided sketches -->
   <page>
-    <title>Two Variables — Compare Systems</title>
-
-    <p>
-      Consider the following systems. Sketch and classify each (non-parallel / parallel / identical lines).
-    </p>
-
-    <!-- System A -->
-    <p workspace="2.5in">
-      System A:
+    <example> 
+      <statement>
+      Consider the following systems of two linear equations in two variables and determine how many solutions there are for each.
+    <ol>
+     <!-- System A -->
+    <li workspace="2.5in">
       <m>\begin{aligned}
         x_1 - 2x_2 \amp= -1 \\
         -x_1 + 3x_2 \amp= 3
       \end{aligned}</m>
-      Classification: ____________
-      <br/>Sketch axes and both lines; mark intersection if any.
-    </p>
+      </li>
+
 
     <!-- System B -->
-    <p workspace="2.5in">
-      System B:
+    <li workspace="2.5in">
       <m>\begin{aligned}
         x_1 - 2x_2 \amp= -1 \\
         -x_1 + 2x_2 \amp= 3
       \end{aligned}</m>
-      Classification: ____________
-      <br/>Sketch axes and both lines; explain your reasoning.
-    </p>
+      </li>
 
     <!-- System C -->
-    <p workspace="2.5in">
-      System C:
+    <li workspace="2.5in">
       <m>\begin{aligned}
         x_1 - 2x_2 \amp= -1 \\
         -x_1 + 2x_2 \amp= 1
       \end{aligned}</m>
-      Classification: ____________
-      <br/>Sketch axes and the line(s); note coincidences if present.
-    </p>
+      </li>
+    </ol>
+  </statement>
+</example>
   </page>
 
   <!-- Page 5: Three-dimensional case -->
