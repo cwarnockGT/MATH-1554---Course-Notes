@@ -5,7 +5,11 @@
 
     <document-id>Warnock_MATH1554CourseNotes</document-id>
 
-    <macros>\newcommand{\foo}{b^{ar}}</macros>
+    <macros>
+      \newcommand{\foo}{b^{ar}}
+      \newcommand{\aug}{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
+    </macros>
+
     <latex-image-preamble>\usepackage{tikz}</latex-image-preamble>
   </docinfo>
 

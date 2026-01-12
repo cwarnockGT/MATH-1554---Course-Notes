@@ -2,7 +2,7 @@
 
 
 <handout xml:lang="en" xml:id="section-1-1" toc="no" display="inline">
-  
+  <title>Systems of Linear Equations</title>
   <!-- Page 1: Section overview, topics and objectives -->
   <page>
     <title>Topics and Objectives</title>
@@ -17,7 +17,7 @@
       </ul>
     </objectives>
 
-    <objectives>
+    <objectives workspace="0.5in">
       <title>Goals</title>
       <ol>
         <li>Characterize a linear system by the number of solutions and consistency.</li>
@@ -74,186 +74,173 @@
     </p>
   </page>
 
-  <!-- Page 4: Two variables—guided sketches -->
+  <!-- Page 3: Two variables—guided sketches -->
   <page>
+    <title>Two-Dimensional Case</title>
     <example> 
       <statement>
       Consider the following systems of two linear equations in two variables and determine how many solutions there are for each.
     <ol>
      <!-- System A -->
-    <li workspace="2.5in">
+    <li workspace="2.1in">
       <m>\begin{aligned}
         x_1 - 2x_2 \amp= -1 \\
-        -x_1 + 3x_2 \amp= 3
+        -x_1 + 3x_2 \amp= \phantom{-}3
       \end{aligned}</m>
       </li>
 
 
     <!-- System B -->
-    <li workspace="2.5in">
+    <li workspace="2.1in">
       <m>\begin{aligned}
         x_1 - 2x_2 \amp= -1 \\
-        -x_1 + 2x_2 \amp= 3
+        -x_1 + 2x_2 \amp= \phantom{-}3
       \end{aligned}</m>
       </li>
 
     <!-- System C -->
-    <li workspace="2.5in">
+    <li workspace="2.1in">
       <m>\begin{aligned}
         x_1 - 2x_2 \amp= -1 \\
-        -x_1 + 2x_2 \amp= 1
+        -x_1 + 2x_2 \amp= \phantom{-}1
       \end{aligned}</m>
       </li>
     </ol>
+
+    <p workspace="0.3in">
+      <em>Conclusion:</em> A system of linear equations in two variables can have <m>\underline{\phantom{\,\,zero, one, or infinitely many zero, one, or infinitely many \,\,}}</m> solutions.
+    </p>
   </statement>
 </example>
   </page>
 
-  <!-- Page 5: Three-dimensional case -->
+  <!-- Page 4: Three-dimensional case -->
   <page>
     <title>Three-Dimensional Case</title>
 
     <p>
-      An equation <m>a_1x_1+a_2x_2+a_3x_3=b</m> defines a plane in <m>\mathbb{R}^3</m>.
-      For three equations, the solution set is the intersection of three planes.
+      An equation linear equation in three variables, <m>a_1x_1+a_2x_2+a_3x_3=b</m>, defines a plane in <m>\mathbb{R}^3</m>.
     </p>
 
-    <p workspace="2in">
-      For each possible solution set, sketch and state the number of solutions:
+    <example workspace = "2in">
+      <statement>
+        <p>
+          How many solutions can a system of <em>two</em> linear equations in three variables have?
+        </p>
+      </statement>
+    </example>
+
+    <example workspace = "3in">
+      <statement>
+        <p>
+          How many solutions can a system of <em>three</em> linear equations in three variables have?
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      <em>Conclusion:</em> Every system of linear equations, no matter the number of equations and number of variables has <m>\underline{\phantom{\,\,zero, one, or infinitely many zero, one, or infinitely many \,\,}}</m> solutions.
     </p>
 
-    <p workspace="2.5in">
-      <strong>Line:</strong> intersection of two non-parallel planes with the third also intersecting along that line.
-      <br/>Number of solutions: ____________
-    </p>
-
-    <p workspace="2.5in">
-      <strong>Point:</strong> three planes intersect at a single point.
-      <br/>Number of solutions: ____________
-    </p>
-
-    <p workspace="2.5in">
-      <strong>Empty:</strong> no common intersection (e.g., parallel or inconsistent planes).
-      <br/>Number of solutions: ____________
-    </p>
+    
   </page>
 
-  <!-- Page 6: Row operations -->
+  <!-- Page 5: Row operations -->
   <page>
     <title>Row Reduction by Elementary Row Operations</title>
 
     <p>
-      To solve a linear system, we use <em>row operations</em> on the augmented matrix:
+      As we saw in the previous examples, one way to solve a system of linear equations is by graphing. This is not practical for most examples, especially if we are working with four or more varialbes.
+      A more useful approach to solving a linear system is to manipulate the equations through the use of <term>row operations</term>.
     </p>
-    <p workspace="1.5in">
+    <p>
       <ol>
-        <li><strong>Replacement/Addition:</strong> add a multiple of one row to another.</li>
-        <li><strong>Interchange:</strong> swap two rows.</li>
-        <li><strong>Scaling:</strong> multiply a row by a nonzero scalar.</li>
+        <li workspace="2in"><term>Replacement/Addition:</term> add a multiple of one row to another.</li>
+        <li workspace="2in"><term>Interchange:</term> swap two rows.</li>
+        <li workspace="2in"><term>Scaling:</term> multiply a row by a nonzero scalar.</li>
       </ol>
     </p>
-
-    <p workspace="2.5in">
-      Apply these operations to systematically simplify the matrix to an equivalent (easier to read) form.
-      Explain each step as you go.
-    </p>
   </page>
 
-  <!-- Page 7: Example system to solve -->
+  <!-- Page 6: Example -->
   <page>
-    <title>Example 1 — Solve the System</title>
-
-    <p>Identify the solution set (show all steps and justify each row operation).</p>
-
-    <p workspace="3in">
-      <m>\begin{aligned}
-        x_1 \amp- 2x_2 + x_3 \amp= 0 \\
-            \amp\phantom{- 2x_2}\;\;\; 2x_2 - 8x_3 \amp= 8 \\
-        5x_1 \amp\phantom{- 2x_2}\;\;\; - 5x_3 \amp= 10
-      \end{aligned}</m>
-    </p>
-
-    <p workspace="2in">
-      Final solution (parametric or unique): ______________________________________
-    </p>
+    <title>Example of Row Reduction</title>
+    <example workspace="4in">
+      <statement> 
+        Apply row operations to systematically simplify the system below to an equivalent (easier to read) form in order to more easily identify the solution(s).
+      <md alignment="alignat">
+        <mrow> x_1  \amp {}-{} \amp 2x_2 \amp {}+{} \amp x_3 \amp {}={} \amp 0 </mrow>
+        <mrow>      \amp       \amp 2x_2 \amp {}-{} \amp 8x_3 \amp {}={} \amp 8 </mrow>
+        <mrow> 5x_1 \amp       \amp      \amp {}-{} \amp 5x_3 \amp {}={} \amp 10 </mrow>
+      </md>
+    </statement>
+    </example>
   </page>
 
-  <!-- Page 8: Augmented matrices -->
+  <!-- Page 7: Augmented matrices -->
   <page>
     <title>Augmented Matrices</title>
 
     <p>
-      It’s redundant to write variables repeatedly; we use an augmented matrix to encode the system.
-    </p>
+      It’s redundant to write variables repeatedly, so we use a <term>augmented matrix</term> to simplify the notation for the system. 
+      For example, the previous system
+      
+      <md alignment="alignat">
+        <mrow> x_1  \amp {}-{} \amp 2x_2 \amp {}+{} \amp x_3 \amp {}={} \amp 0 </mrow>
+        <mrow>      \amp       \amp 2x_2 \amp {}-{} \amp 8x_3 \amp {}={} \amp 8 </mrow>
+        <mrow> 5x_1 \amp       \amp      \amp {}-{} \amp 5x_3 \amp {}={} \amp 10 </mrow>
+      </md>
+      
+      Can be writen as the augmented matrix
+        
+      <md>\begin{bmatrix} 1 \amp -2 \amp 1 \amp \vert \amp 0 \\ 
+                          0 \amp 2 \amp -8 \amp \vert \amp 8 \\ 
+                          5 \amp 0 \amp -5 \amp \vert \amp 10 
+                          \end{bmatrix}</md>
 
-    <p>
-      Original system:
-    </p>
-    <p workspace="1.5in">
-      <m>\begin{aligned}
-        x_1 - 2x_2 + x_3 \amp= 0 \\
-        \phantom{x_1 - 2x_2 +}\; 2x_2 - 8x_3 \amp= 8 \\
-        5x_1 - 5x_3 \amp= 10
-      \end{aligned}</m>
-    </p>
-
-    <p>
-      Augmented matrix:
-    </p>
-    <p workspace="2in">
-      <m>\left[\begin{array}{ccc|c}
-        1 \amp -2 \amp 1 \amp 0 \\
-        0 \amp 2 \amp -8 \amp 8 \\
-        5 \amp 0 \amp -5 \amp 10
-      \end{array}\right]</m>
-    </p>
-
-    <p workspace="1.5in">
       The vertical bar separates the coefficient matrix (for <m>x_1,x_2,x_3</m>) from the constants.
     </p>
+
+    <example workspace="4in">
+      <statement> 
+        Determine if the following system has a solution.
+      <md alignment="alignat">
+        <mrow>      \amp       \amp x_2  \amp {}-{} \amp 4x_3 \amp {}={} \amp 8 </mrow>
+        <mrow> 2x_1 \amp {}-{} \amp 3x_2 \amp {}+{} \amp 2x_3 \amp {}={} \amp 1 </mrow>
+        <mrow> 4x_1 \amp {}-{} \amp 8x_2 \amp {}+{} \amp 12x_3 \amp {}={} \amp 1 </mrow>
+      </md>
+    </statement>
+    </example>
   </page>
 
-  <!-- Page 9: Consistency + Row equivalence (fill-in definitions) -->
+  <!-- Page 8: Consistency + Row equivalence (fill-in definitions) -->
   <page>
     <title>Consistent Systems and Row Equivalence</title>
 
-    <definition>
+    <definition workspace="1.5in">
       <title>Consistent</title>
-      <p workspace="1.5in">
-        A linear system is <em>consistent</em> if it has at least one
-        <m>\underline{\phantom{\,\,solution\,\,}}</m>.
-      </p>
+      <statement>
+        A linear system is <term>consistent</term> if it has at least one <em>solution</em>. Otherwise, it is <term>inconsistent</term>.
+      </statement>
     </definition>
 
-    <definition>
+    <definition workspace="1.5in">
       <title>Row Equivalence</title>
-      <p workspace="2in">
-        Two matrices are <em>row equivalent</em> if a sequence of
-        <m>\underline{\phantom{\,\,elementary row operations\,\,}}</m>
-        transforms one matrix into the other.
-      </p>
+      <statement>
+        Two matrices are <term>row equivalent</term> if a sequence of <em>row operations</em> transforms one matrix into the other.
+      </statement>
     </definition>
 
-    <p workspace="1.5in">
-      Note: If the augmented matrices of two linear systems are row equivalent, they have the same solution set.
+    <p workspace="0.5in">
+      <em>Note</em>: If the augmented matrices of two linear systems are row equivalent, they have the same solution set.
     </p>
-  </page>
-
-  <!-- Page 10: Fundamental questions -->
-  <page>
-    <title>Fundamental Questions</title>
 
     <p workspace="2in">
-      We will revisit these throughout the course:
+      <term>Fundamental Questions</term>: Two questions that we will revisit many times throughout the course:
       <ol>
-        <li>Does a given linear system have a solution (i.e., is it consistent)?</li>
+        <li>Does a given linear system have a solution? In other words, is it consistent?</li>
         <li>If it is consistent, is the solution unique?</li>
       </ol>
-    </p>
-
-    <p workspace="2in">
-      Briefly explain how row-reduction can help answer (1) and (2):
-      ____________________________________________________________________________
     </p>
   </page>
 

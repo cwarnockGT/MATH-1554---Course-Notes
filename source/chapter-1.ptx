@@ -9,10 +9,10 @@
       <xi:include href="./chapter-1-notes/section-1-1.ptx" />
   </section>
   
-  <section xml:id="sec-1-2b">
+  <!-- <section xml:id="sec-1-2b">
     <title>Row Reduction and Echelon Forms</title>
       <xi:include href="./chapter-1-notes/section-1-2.ptx" />
-  </section>
+  </section> -->
 
   
   
