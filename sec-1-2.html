@@ -134,8 +134,9 @@ eBookConfig.enable_chatcodes =  false;
 <textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
 </div>
 </div>
-<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-1-2b.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-1.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="section-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-1-1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-1.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\foo}{b^{ar}}
+\newcommand{\aug}{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -143,26 +144,19 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-chapter contains-active">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active"><li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="chapter-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Linear Equations in Linear Algebra</span></a></div>
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-1-1.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Systems of Linear Equations</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="sec-1-1.html#section-1-1" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Handout</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-1-2b.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Row Reduction and Echelon Forms</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-1-2b.html#ws-1-2b" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Row Reductions and Echelon Forms</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="sec-1-1.html#section-1-1" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Systems of Linear Equations</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section contains-active">
-<div class="toc-title-box"><a href="sec-1-2.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Row Reduction and Echelon Forms</span></a></div>
-<ul class="structural toc-item-list active"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="sec-1-2.html#handout-1-2" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Handout</span></a></div></li></ul>
+<div class="toc-title-box"><a href="sec-1-2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Row Reduction and Echelon Forms</span></a></div>
+<ul class="structural toc-item-list active"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="sec-1-2.html#handout-1-2" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Handout</span></a></div></li></ul>
 </li>
 </ul>
-</li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="section-2.html" class="internal"><span class="codenumber">2</span> <span class="title">My Additional Section</span></a></div></li>
-</ul></nav></div>
+</li></ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <div class="print-preview-header">
 <h2 class="print-preview">Print preview</h2>
@@ -181,13 +175,30 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <section class="section" id="sec-1-2"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Row Reduction and Echelon Forms</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Row Reduction and Echelon Forms</span>
 </h2>
 <section class="handout" id="handout-1-2" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
-<span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Handout</span><div class="print-links"><a href="?printpreview=handout-1-2" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+<span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Handout</span><div class="print-links"><a href="?printpreview=handout-1-2" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h3>
-<article class="objectives goal-like" id="obj-1-2"><h4 class="heading">
-<span class="type">Objectives<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Learning Objectives</span>
+<article class="objectives goal-like" id="obj-1-2-topics"><h4 class="heading">
+<span class="type">Objectives<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Topics</span>
+</h4>
+<ul class="disc" id="obj-1-2-topics-2">
+<li id="obj-1-2-topics-2-1">
+<div class="para" id="p-derived-obj-1-2-topics-2-1">Row reduction algorithm</div>
+<div class="autopermalink" data-description="Objective"><a href="#obj-1-2-topics-2-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="obj-1-2-topics-2-2">
+<div class="para" id="p-derived-obj-1-2-topics-2-2">Pivots, basic and free variables</div>
+<div class="autopermalink" data-description="Objective"><a href="#obj-1-2-topics-2-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="obj-1-2-topics-2-3">
+<div class="para" id="p-derived-obj-1-2-topics-2-3">Echelon forms, existence and uniqueness</div>
+<div class="autopermalink" data-description="Objective"><a href="#obj-1-2-topics-2-3" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Objectives 1.2.1: Topics"><a href="#obj-1-2-topics" title="Copy heading and permalink for Objectives 1.2.1: Topics" aria-label="Copy heading and permalink for Objectives 1.2.1: Topics">🔗</a></div></article><article class="objectives goal-like" id="obj-1-2"><h4 class="heading">
+<span class="type">Objectives<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Goals</span>
 </h4>
 <ul class="disc" id="obj-1-2-2">
 <li id="obj-1-2-2-1">
@@ -203,39 +214,25 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Objective"><a href="#obj-1-2-2-3" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Objectives 1.3.1: Learning Objectives"><a href="#obj-1-2" title="Copy heading and permalink for Objectives 1.3.1: Learning Objectives" aria-label="Copy heading and permalink for Objectives 1.3.1: Learning Objectives">🔗</a></div></article><section class="paragraphs" id="topics-1-2"><h4 class="heading"><span class="title">Topics.</span></h4>
-<ul class="disc" id="topics-1-2-2">
-<li id="topics-1-2-2-1">
-<div class="para" id="p-derived-topics-1-2-2-1">Row reduction algorithm</div>
-<div class="autopermalink" data-description="Item"><a href="#topics-1-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="topics-1-2-2-2">
-<div class="para" id="p-derived-topics-1-2-2-2">Pivots; basic and free variables</div>
-<div class="autopermalink" data-description="Item"><a href="#topics-1-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-<li id="topics-1-2-2-3">
-<div class="para" id="p-derived-topics-1-2-2-3">Echelon forms; existence and uniqueness</div>
-<div class="autopermalink" data-description="Item"><a href="#topics-1-2-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
-</li>
-</ul>
-<div class="autopermalink" data-description="Paragraphs: Topics"><a href="#topics-1-2" title="Copy heading and permalink for Paragraphs: Topics" aria-label="Copy heading and permalink for Paragraphs: Topics">🔗</a></div></section><article class="definition definition-like" id="def-echelon-rref"><h4 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Definition: Echelon Form and RREF.</span>
+<div class="workspace" data-space="0.2in"></div>
+<div class="autopermalink" data-description="Objectives 1.2.1: Goals"><a href="#obj-1-2" title="Copy heading and permalink for Objectives 1.2.1: Goals" aria-label="Copy heading and permalink for Objectives 1.2.1: Goals">🔗</a></div></article><article class="definition definition-like" id="def-echelon-rref"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Echelon Form and Row Row Reduced Echelon Form.</span>
 </h4>
-<div class="para" id="def-echelon-rref-2-1">A rectangular matrix is in <em class="emphasis">echelon form</em> if:<div class="autopermalink" data-description="Paragraph"><a href="#def-echelon-rref-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="def-echelon-rref-2-1">A rectangular matrix is in <dfn class="terminology">echelon form</dfn> (REF) if:<div class="autopermalink" data-description="Paragraph"><a href="#def-echelon-rref-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <ol class="lower-alpha lower-alpha-level-1" id="def-echelon-rref-2-2">
 <li id="def-echelon-rref-2-2-1">
 <div class="para" id="p-derived-def-echelon-rref-2-2-1">All zero rows (if any) are at the bottom.</div>
 <div class="autopermalink" data-description="Item a"><a href="#def-echelon-rref-2-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
 </li>
 <li id="def-echelon-rref-2-2-2">
-<div class="para" id="p-derived-def-echelon-rref-2-2-2">The first nonzero entry (the <em class="emphasis">leading entry</em>) of a row is to the right of any leading entry in the row above it.</div>
+<div class="para" id="p-derived-def-echelon-rref-2-2-2">The first nonzero entry (or <dfn class="terminology">leading entry</dfn>) of a row is to the right of any leading entry in the row above it.</div>
 <div class="autopermalink" data-description="Item b"><a href="#def-echelon-rref-2-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 <li id="def-echelon-rref-2-2-3">
 <div class="para" id="p-derived-def-echelon-rref-2-2-3">All entries below a leading entry are zero.</div>
 <div class="autopermalink" data-description="Item c"><a href="#def-echelon-rref-2-2-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
 </li>
-</ol> <div class="para" id="def-echelon-rref-2-3">A matrix in echelon form is in <em class="emphasis">row reduced echelon form</em> (RREF) if additionally:<div class="autopermalink" data-description="Paragraph"><a href="#def-echelon-rref-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</ol> <div class="para" id="def-echelon-rref-2-3">A matrix in echelon form is in <dfn class="terminology">row reduced echelon form</dfn> (RREF) if additionally:<div class="autopermalink" data-description="Paragraph"><a href="#def-echelon-rref-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <ol class="lower-alpha lower-alpha-level-1" id="def-echelon-rref-2-4">
 <li id="def-echelon-rref-2-4-1">
 <div class="para" id="p-derived-def-echelon-rref-2-4-1">All leading entries equal <span class="process-math">\(1\text{.}\)</span>
@@ -247,125 +244,179 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Item b"><a href="#def-echelon-rref-2-4-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Definition 1.3.1: Definition: Echelon Form and RREF"><a href="#def-echelon-rref" title="Copy heading and permalink for Definition 1.3.1: Definition: Echelon Form and RREF" aria-label="Copy heading and permalink for Definition 1.3.1: Definition: Echelon Form and RREF">🔗</a></div></article><details id="ex-echelon" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Example: A Matrix in Echelon Form.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="ex-echelon-2-1">Let <span class="process-math">\(\blacksquare\)</span> denote a nonzero number, and <span class="process-math">\(\ast\)</span> denote any number.<div class="autopermalink" data-description="Paragraph"><a href="#ex-echelon-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="ex-echelon-2-2">
+<div class="workspace" data-space="0.3in"></div>
+<div class="autopermalink" data-description="Definition 1.2.1: Echelon Form and Row Row Reduced Echelon Form"><a href="#def-echelon-rref" title="Copy heading and permalink for Definition 1.2.1: Echelon Form and Row Row Reduced Echelon Form" aria-label="Copy heading and permalink for Definition 1.2.1: Echelon Form and Row Row Reduced Echelon Form">🔗</a></div></article><article class="example example-like" id="ex-echelon"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="ex-echelon-1-1">Let <span class="process-math">\(\blacksquare\)</span> denote a nonzero number, and <span class="process-math">\(\ast\)</span> denote any number.<div class="autopermalink" data-description="Paragraph"><a href="#ex-echelon-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-echelon-1-2">
 <span class="process-math">\(\begin{bmatrix}
 0 \amp \blacksquare \amp \ast \amp \ast \amp \ast \amp \ast \amp \ast \amp \ast \amp \ast \amp \ast \\
 0 \amp 0 \amp 0 \amp \blacksquare \amp \ast \amp \ast \amp \ast \amp \ast \amp \ast \amp \ast \\
 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp \blacksquare \amp \ast \amp \ast \\
 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp \blacksquare \amp \ast \\
 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0
-\end{bmatrix}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-echelon-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+\end{bmatrix}\)</span> is in REF.<div class="autopermalink" data-description="Paragraph"><a href="#ex-echelon-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-echelon-1-3">
+<span class="process-math">\(\begin{bmatrix}
+0 \amp 1 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \\
+0 \amp 0 \amp 0 \amp 1 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \\
+0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 0 \amp 0 \\
+0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 0 \\
+0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0
+\end{bmatrix}\)</span> is in RREF.<div class="autopermalink" data-description="Paragraph"><a href="#ex-echelon-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 1.3.2: Example: A Matrix in Echelon Form"><a href="#ex-echelon" title="Copy heading and permalink for Example 1.3.2: Example: A Matrix in Echelon Form" aria-label="Copy heading and permalink for Example 1.3.2: Example: A Matrix in Echelon Form">🔗</a></div></article></details><article class="task exercise-like" id="task-rref-check"><h4 class="heading">
-<span class="codenumber">(a)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Guided Practice: Which of the following are in RREF?</span>
+<div class="autopermalink" data-description="Example 1.2.2"><a href="#ex-echelon" title="Copy heading and permalink for Example 1.2.2" aria-label="Copy heading and permalink for Example 1.2.2">🔗</a></div></article><article class="example example-like" id="task-rref-check"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="task-rref-check-2-1">Determine whether each matrix is in RREF. Justify your answer.<div class="autopermalink" data-description="Paragraph"><a href="#task-rref-check-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="task-rref-check-2-2">
+<div class="para" id="task-rref-check-1-1">Determine whether each matrix is in RREF, REF, or neither.<div class="autopermalink" data-description="Paragraph"><a href="#task-rref-check-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="task-rref-check-1-2">
 <span class="process-math">\(\text{a)}\quad \begin{bmatrix} 1 \amp 0 \\ 0 \amp 2 \end{bmatrix}
-\qquad
+\qquad \qquad \qquad
 \text{b)}\quad \begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}
-\qquad
-\text{c)}\quad \begin{bmatrix} 0 \\ 1 \\ 0 \\ 0 \end{bmatrix}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#task-rref-check-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="task-rref-check-2-3">
+\qquad \qquad \qquad
+\text{c)}\quad \begin{bmatrix} 0 \\ 1 \\ 0 \\ 0 \end{bmatrix}\)</span><div class="workspace" data-space="0.3in"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#task-rref-check-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="task-rref-check-1-3">
 <span class="process-math">\(\text{d)}\quad \begin{bmatrix} 0 \amp 6 \amp 3 \amp 0 \end{bmatrix}
-\qquad
-\text{e)}\quad \begin{bmatrix} 1 \amp 17 \amp 0 \\ 0 \amp 0 \amp 1 \end{bmatrix}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#task-rref-check-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+\qquad \qquad
+\text{e)}\quad \begin{bmatrix} 1 \amp 17 \amp 0 \\ 0 \amp 0 \amp 1 \end{bmatrix}\)</span><div class="workspace" data-space="0.3in"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#task-rref-check-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="workspace" data-space="2in"></div>
-<div class="autopermalink" data-description="Task 1.3.1.a: Guided Practice: Which of the following are in RREF?"><a href="#task-rref-check" title="Copy heading and permalink for Task 1.3.1.a: Guided Practice: Which of the following are in RREF?" aria-label="Copy heading and permalink for Task 1.3.1.a: Guided Practice: Which of the following are in RREF?">🔗</a></div></article><article class="definition definition-like" id="def-pivot"><h4 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Definition: Pivot Position and Pivot Column.</span>
+<div class="autopermalink" data-description="Example 1.2.3"><a href="#task-rref-check" title="Copy heading and permalink for Example 1.2.3" aria-label="Copy heading and permalink for Example 1.2.3">🔗</a></div></article><article class="definition definition-like" id="def-pivot"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Pivot Position and Pivot Column.</span>
 </h4>
-<div class="para" id="def-pivot-2-1">A <em class="emphasis">pivot position</em> in a matrix <span class="process-math">\(A\)</span> is a location in <span class="process-math">\(A\)</span> that corresponds to a leading <span class="process-math">\(1\)</span> in the RREF of <span class="process-math">\(A\text{.}\)</span> A <em class="emphasis">pivot column</em> is a column of <span class="process-math">\(A\)</span> that contains a pivot position.<div class="autopermalink" data-description="Paragraph"><a href="#def-pivot-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="def-pivot-2-1">A <dfn class="terminology">pivot position</dfn> in a matrix <span class="process-math">\(A\)</span> is a location in <span class="process-math">\(A\)</span> that corresponds to a leading <span class="process-math">\(1\)</span> in the RREF of <span class="process-math">\(A\text{.}\)</span> A <dfn class="terminology">pivot column</dfn> is a column of <span class="process-math">\(A\)</span> that contains a pivot position.<div class="autopermalink" data-description="Paragraph"><a href="#def-pivot-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 1.3.3: Definition: Pivot Position and Pivot Column"><a href="#def-pivot" title="Copy heading and permalink for Definition 1.3.3: Definition: Pivot Position and Pivot Column" aria-label="Copy heading and permalink for Definition 1.3.3: Definition: Pivot Position and Pivot Column">🔗</a></div></article><article class="task exercise-like" id="task-pivots"><h4 class="heading">
-<span class="codenumber">(b)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Guided Notes: Compute RREF and Identify Pivot Columns.</span>
+<div class="workspace" data-space="0.2in"></div>
+<div class="autopermalink" data-description="Definition 1.2.4: Pivot Position and Pivot Column"><a href="#def-pivot" title="Copy heading and permalink for Definition 1.2.4: Pivot Position and Pivot Column" aria-label="Copy heading and permalink for Definition 1.2.4: Pivot Position and Pivot Column">🔗</a></div></article><article class="example example-like" id="task-pivots"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="task-pivots-2-1">Express the matrix in row reduced echelon form and identify the pivot columns.<div class="autopermalink" data-description="Paragraph"><a href="#task-pivots-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="task-pivots-2-2">
-<span class="process-math">\(\left[
+<div class="para" id="task-pivots-1-1">Express the matrix in row reduced echelon form and identify the pivot columns.<div class="autopermalink" data-description="Paragraph"><a href="#task-pivots-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="task-pivots-1-2">
+<div class="displaymath process-math" id="task-pivots-1-2-1">
+\begin{equation*}
+\left[
 \begin{array}{rrrr}
 0 \amp -3 \amp -6 \amp 4 \\
 -1 \amp -2 \amp -1 \amp 3 \\
 -2 \amp -3 \amp 0 \amp 3
 \end{array}
-\right]\)</span><div class="autopermalink" data-description="Paragraph"><a href="#task-pivots-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+\right]
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#task-pivots-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="2in"></div>
-<div class="autopermalink" data-description="Task 1.3.1.b: Guided Notes: Compute RREF and Identify Pivot Columns"><a href="#task-pivots" title="Copy heading and permalink for Task 1.3.1.b: Guided Notes: Compute RREF and Identify Pivot Columns" aria-label="Copy heading and permalink for Task 1.3.1.b: Guided Notes: Compute RREF and Identify Pivot Columns">🔗</a></div></article><section class="paragraphs" id="algo-rref"><h4 class="heading"><span class="title">Row Reduction Algorithm (Steps to RREF).</span></h4>
+<div class="autopermalink" data-description="Example 1.2.5"><a href="#task-pivots" title="Copy heading and permalink for Example 1.2.5" aria-label="Copy heading and permalink for Example 1.2.5">🔗</a></div></article><section class="paragraphs" id="algo-rref"><h4 class="heading"><span class="title">Row Reduction Algorithm (Steps to RREF).</span></h4>
 <div class="para" id="algo-rref-2">The algorithm below produces a matrix in RREF.<div class="autopermalink" data-description="Paragraph"><a href="#algo-rref-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<ol class="lower-alpha lower-alpha-level-1" id="algo-rref-3">
+<ul class="disc" id="algo-rref-3">
 <li id="algo-rref-3-1">
 <div class="para" id="p-derived-algo-rref-3-1">Step 1a: Swap the first row with a lower one so the leftmost nonzero entry is in the first row.</div>
-<div class="autopermalink" data-description="Item a"><a href="#algo-rref-3-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#algo-rref-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="algo-rref-3-2">
 <div class="para" id="p-derived-algo-rref-3-2">Step 1b: Scale the first row so that its leading entry equals <span class="process-math">\(1\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item b"><a href="#algo-rref-3-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#algo-rref-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="algo-rref-3-3">
-<div class="para" id="p-derived-algo-rref-3-3">Step 1c: Use row replacement so all entries below this <span class="process-math">\(1\)</span> are <span class="process-math">\(0\text{.}\)</span>
+<div class="para" id="p-derived-algo-rref-3-3">Step 1c: Use row replacement so all entries above and below this <span class="process-math">\(1\)</span> are <span class="process-math">\(0\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item c"><a href="#algo-rref-3-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#algo-rref-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="algo-rref-3-4">
 <div class="para" id="p-derived-algo-rref-3-4">Step 2a: Swap the second row with a lower one so the leftmost nonzero entry below the first row is in the second row.</div>
-<div class="autopermalink" data-description="Item d"><a href="#algo-rref-3-4" title="Copy heading and permalink for Item d" aria-label="Copy heading and permalink for Item d">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#algo-rref-3-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="algo-rref-3-5">
-<div class="para" id="p-derived-algo-rref-3-5">Continue: Repeat to obtain echelon form with leading entries equal to <span class="process-math">\(1\text{.}\)</span>
+<div class="para" id="p-derived-algo-rref-3-5">Step 2b: Scale the second row so that its leading entry equals <span class="process-math">\(1\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item e"><a href="#algo-rref-3-5" title="Copy heading and permalink for Item e" aria-label="Copy heading and permalink for Item e">🔗</a></div>
+<div class="autopermalink" data-description="Item"><a href="#algo-rref-3-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="algo-rref-3-6">
-<div class="para" id="p-derived-algo-rref-3-6">Last step: Use row replacement so all entries above each leading entry are <span class="process-math">\(0\text{,}\)</span> starting from the right.</div>
-<div class="autopermalink" data-description="Item f"><a href="#algo-rref-3-6" title="Copy heading and permalink for Item f" aria-label="Copy heading and permalink for Item f">🔗</a></div>
-</li>
-</ol>
-<div class="autopermalink" data-description="Paragraphs: Row Reduction Algorithm (Steps to RREF)"><a href="#algo-rref" title="Copy heading and permalink for Paragraphs: Row Reduction Algorithm (Steps to RREF)" aria-label="Copy heading and permalink for Paragraphs: Row Reduction Algorithm (Steps to RREF)">🔗</a></div></section><details id="ex-basic-free" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Basic and Free Variables.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="ex-basic-free-2-1">Consider the augmented matrix <span class="process-math">\(\left[\,A\,\middle|\,\vec b\,\right]\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-basic-free-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="ex-basic-free-2-2">
-<span class="process-math">\(\left[
-\begin{array}{ccccc|c}
-1 \amp 3 \amp 0 \amp 7 \amp 0 \amp 4 \\
-0 \amp 0 \amp 1 \amp 4 \amp 0 \amp 5 \\
-0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 6
-\end{array}
-\right]\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-basic-free-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="ex-basic-free-2-3">The leading ones are in the first, third, and fifth columns. Thus, the pivot variables of the system <span class="process-math">\(A\,\vec x \,=\, \vec b\)</span> are <span class="process-math">\(x_1\text{,}\)</span> <span class="process-math">\(x_3\text{,}\)</span> and <span class="process-math">\(x_5\text{;}\)</span> the free variables are <span class="process-math">\(x_2\)</span> and <span class="process-math">\(x_4\text{.}\)</span> <em class="emphasis">Any choice</em> of the free variables leads to a solution of the system.<div class="autopermalink" data-description="Paragraph"><a href="#ex-basic-free-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="ex-basic-free-2-4">
-<em class="emphasis">Note:</em> The matrix <span class="process-math">\(A\)</span> itself does not have “variables”; systems have variables.<div class="autopermalink" data-description="Paragraph"><a href="#ex-basic-free-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="p-derived-algo-rref-3-6">Step 2c: Use row replacement so all entries above and below this <span class="process-math">\(1\)</span> are <span class="process-math">\(0\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Example 1.3.4: Basic and Free Variables"><a href="#ex-basic-free" title="Copy heading and permalink for Example 1.3.4: Basic and Free Variables" aria-label="Copy heading and permalink for Example 1.3.4: Basic and Free Variables">🔗</a></div></article></details><article class="theorem theorem-like" id="thm-existence-uniqueness"><h4 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Theorem: Existence and Uniqueness of Solutions.</span>
+<div class="autopermalink" data-description="Item"><a href="#algo-rref-3-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="algo-rref-3-7">
+<div class="para" id="p-derived-algo-rref-3-7">Continue: Repeat these steps for each subsequent row until the matrix is in RREF.</div>
+<div class="autopermalink" data-description="Item"><a href="#algo-rref-3-7" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="workspace" data-space="0.2in"></div>
+<div class="autopermalink" data-description="Paragraphs: Row Reduction Algorithm (Steps to RREF)"><a href="#algo-rref" title="Copy heading and permalink for Paragraphs: Row Reduction Algorithm (Steps to RREF)" aria-label="Copy heading and permalink for Paragraphs: Row Reduction Algorithm (Steps to RREF)">🔗</a></div></section><article class="example example-like" id="handout-1-2-9"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="thm-existence-uniqueness-2-1">A linear system is consistent iff the last column of the augmented matrix does not have a pivot. Equivalently, the RREF of the augmented matrix does <em class="emphasis">not</em> contain a row of the form <span class="process-math">\(\left[\,0,\,0,\,0,\,\dots,\,0 \,\middle|\, 1\,\right]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-existence-uniqueness-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="handout-1-2-9-1-1">Use the algorithm above to convert the following matrix into RREF.<div class="autopermalink" data-description="Paragraph"><a href="#handout-1-2-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="handout-1-2-9-1-2">
+<div class="displaymath process-math" id="handout-1-2-9-1-2-1">
+\begin{equation*}
+\left[
+\begin{array}{rrrr}
+0 \amp 2 \amp 7 \amp 6 \\
+3 \amp 6 \amp 0 \amp -3 \\
+2 \amp 8 \amp 12 \amp 6
+\end{array}
+\right]
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#handout-1-2-9-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Example 1.2.6"><a href="#handout-1-2-9" title="Copy heading and permalink for Example 1.2.6" aria-label="Copy heading and permalink for Example 1.2.6">🔗</a></div></article><article class="definition definition-like" id="handout-1-2-10"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Pivot Variables and Free Variables.</span>
+</h4>
+<div class="para" id="handout-1-2-10-2-1">Variables in a system that correspond to pivot column in the augmented matrix are called <dfn class="terminology">pivot variables</dfn>. The other variables in the system are called <dfn class="terminology">free variables</dfn>. This is because, if the system is consistent, then any choice of the free variables will lead to a valid solution.<div class="autopermalink" data-description="Paragraph"><a href="#handout-1-2-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="0.2in"></div>
+<div class="autopermalink" data-description="Definition 1.2.7: Pivot Variables and Free Variables"><a href="#handout-1-2-10" title="Copy heading and permalink for Definition 1.2.7: Pivot Variables and Free Variables" aria-label="Copy heading and permalink for Definition 1.2.7: Pivot Variables and Free Variables">🔗</a></div></article><article class="example example-like" id="ex-basic-free"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="ex-basic-free-1-1">Determine the pivot variables and the free variables for the system represented below.<div class="autopermalink" data-description="Paragraph"><a href="#ex-basic-free-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-basic-free-1-2">
+<div class="displaymath process-math" id="ex-basic-free-1-2-1">
+\begin{equation*}
+\left[
+\begin{array}{rrrrr|r}
+1 \amp 3 \amp 0 \amp 7 \amp 2 \amp 4 \\
+0 \amp 0 \amp 2 \amp 0 \amp 4 \amp -2 \\
+0 \amp 0 \amp 0 \amp -3 \amp 0 \amp 0 \\
+\end{array}
+\right]
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-basic-free-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Example 1.2.8"><a href="#ex-basic-free" title="Copy heading and permalink for Example 1.2.8" aria-label="Copy heading and permalink for Example 1.2.8">🔗</a></div></article><article class="theorem theorem-like" id="thm-existence-uniqueness"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Existence and Uniqueness of Solutions.</span>
+</h4>
+<div class="para logical" id="thm-existence-uniqueness-2-1">
+<div class="para">A linear system is consistent if and only if the last column of the augmented matrix does not have a pivot. Equivalently, the RREF of the augmented matrix does <em class="emphasis">not</em> contain a row of the form</div>
+<div class="displaymath process-math" id="thm-existence-uniqueness-2-1-3">
+\begin{equation*}
+\begin{bmatrix} 0 \amp 0 \amp 0 \amp \cdots \amp 0 \amp \vert \amp  1\end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-existence-uniqueness-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para" id="thm-existence-uniqueness-2-2">If a linear system is consistent, then:<div class="autopermalink" data-description="Paragraph"><a href="#thm-existence-uniqueness-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <ol class="lower-alpha lower-alpha-level-1" id="thm-existence-uniqueness-2-3">
 <li id="thm-existence-uniqueness-2-3-1">
-<div class="para" id="p-derived-thm-existence-uniqueness-2-3-1">It has a unique solution iff there are no free variables.</div>
+<div class="para" id="p-derived-thm-existence-uniqueness-2-3-1">It has a unique solution if and only if (iff) there are <span class="process-math">\(\underline{\phantom{free variable free variables}}\text{.}\)</span>
+</div>
 <div class="autopermalink" data-description="Item a"><a href="#thm-existence-uniqueness-2-3-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
 </li>
 <li id="thm-existence-uniqueness-2-3-2">
-<div class="para" id="p-derived-thm-existence-uniqueness-2-3-2">Otherwise, it has infinitely many solutions parameterized by the free variables.</div>
+<div class="para" id="p-derived-thm-existence-uniqueness-2-3-2">Otherwise, it has <span class="process-math">\(\underline{\phantom{infinitely infinitely}}\)</span> many solutions parameterized by the free variables.</div>
 <div class="autopermalink" data-description="Item b"><a href="#thm-existence-uniqueness-2-3-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Theorem 1.3.5: Theorem: Existence and Uniqueness of Solutions"><a href="#thm-existence-uniqueness" title="Copy heading and permalink for Theorem 1.3.5: Theorem: Existence and Uniqueness of Solutions" aria-label="Copy heading and permalink for Theorem 1.3.5: Theorem: Existence and Uniqueness of Solutions">🔗</a></div></article><article class="task exercise-like" id="task-wrap"><h4 class="heading">
-<span class="codenumber">(c)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Wrap-Up.</span>
-</h4>
-<div class="para" id="task-wrap-2-1">Summarize how pivots determine basic vs. free variables and how this affects existence and uniqueness.<div class="autopermalink" data-description="Paragraph"><a href="#task-wrap-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="workspace" data-space="2in"></div>
-<div class="autopermalink" data-description="Task 1.3.1.c: Wrap-Up"><a href="#task-wrap" title="Copy heading and permalink for Task 1.3.1.c: Wrap-Up" aria-label="Copy heading and permalink for Task 1.3.1.c: Wrap-Up">🔗</a></div></article><div class="autopermalink" data-description="Handout 1.3.1"><a href="#handout-1-2" title="Copy heading and permalink for Handout 1.3.1" aria-label="Copy heading and permalink for Handout 1.3.1">🔗</a></div></section><div class="autopermalink" data-description="Section 1.3: Row Reduction and Echelon Forms"><a href="#sec-1-2" title="Copy heading and permalink for Section 1.3: Row Reduction and Echelon Forms" aria-label="Copy heading and permalink for Section 1.3: Row Reduction and Echelon Forms">🔗</a></div></section>
+<div class="autopermalink" data-description="Theorem 1.2.9: Existence and Uniqueness of Solutions"><a href="#thm-existence-uniqueness" title="Copy heading and permalink for Theorem 1.2.9: Existence and Uniqueness of Solutions" aria-label="Copy heading and permalink for Theorem 1.2.9: Existence and Uniqueness of Solutions">🔗</a></div></article><div class="autopermalink" data-description="Handout 1.2.1"><a href="#handout-1-2" title="Copy heading and permalink for Handout 1.2.1" aria-label="Copy heading and permalink for Handout 1.2.1">🔗</a></div></section><div class="autopermalink" data-description="Section 1.2: Row Reduction and Echelon Forms"><a href="#sec-1-2" title="Copy heading and permalink for Section 1.2: Row Reduction and Echelon Forms" aria-label="Copy heading and permalink for Section 1.2: Row Reduction and Echelon Forms">🔗</a></div></section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sec-1-2b.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="section-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-1-1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
