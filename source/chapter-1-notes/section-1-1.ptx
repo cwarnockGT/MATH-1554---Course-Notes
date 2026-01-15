@@ -193,10 +193,11 @@
       
       Can be writen as the augmented matrix
         
-      <md>\begin{bmatrix} 1 \amp -2 \amp 1 \amp \vert \amp 0 \\ 
-                          0 \amp 2 \amp -8 \amp \vert \amp 8 \\ 
-                          5 \amp 0 \amp -5 \amp \vert \amp 10 
-                          \end{bmatrix}</md>
+      <md>\left[\begin{array}{rrr|r} 
+                          1 \amp -2 \amp 1  \amp 0 \\ 
+                          0 \amp 2 \amp -8  \amp 8 \\ 
+                          5 \amp 0 \amp -5  \amp 10 
+                          \end{array}\right]</md>
 
       The vertical bar separates the coefficient matrix (for <m>x_1,x_2,x_3</m>) from the constants.
     </p>

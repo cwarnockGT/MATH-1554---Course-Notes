@@ -10,7 +10,11 @@
       \newcommand{\aug}{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
     </macros>
 
-    <latex-image-preamble>\usepackage{tikz}</latex-image-preamble>
+    <latex-image-preamble>
+        \usepackage{tikz}
+        \usepackage{tikz-3dplot}
+        \usetikzlibrary{arrows.meta}
+    </latex-image-preamble>
   </docinfo>
 
   <book xml:id="notes">

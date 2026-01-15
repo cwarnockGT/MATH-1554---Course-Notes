@@ -1,0 +1,23 @@
+ <handout xml:id="sec-1-3-vector-equations">
+  <title>Test</title>
+ <figure xml:id="fig-number-line">
+      <caption>The number line for <m>\mathbb{R}</m>.</caption>
+      <description>
+        A horizontal line with tick marks labeled from -3 to 3 representing the real numbers.
+      </description>
+      <image xml:id="img-number-line">
+        <latex-image>
+          <preamble>
+          </preamble>
+          <tex>
+\begin{tikzpicture}
+  \draw[&lt;-&gt;, thick] (-3.5,0) -- (3.5,0);
+  \foreach \x in {-3,...,3} {
+    \draw[thin] (\x,-.1) -- (\x,0.1) node[anchor=south] {\small$\x$};
+  }
+\end{tikzpicture}
+          </tex>
+        </latex-image>
+      </image>
+    </figure>
+</handout>
