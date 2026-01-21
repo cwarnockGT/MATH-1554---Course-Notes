@@ -1,5 +1,5 @@
 <handout xml:id="sec-1-3-vector-equations">
-  <title>Vector Equations</title>
+  <title>1.3 Vector Equations</title>
   <page>
     <title>Introduction</title>
   <objectives xml:id="obj-1-3-topics">
@@ -39,10 +39,11 @@
         <figure xml:id="fig-motivation-lines">
           <caption>Two lines in the plane with a single point of intersection.</caption>
           <image xml:id="img-motivation-lines" width="30%" decorative="no">
-            <description>
+            <shortdescription>
             Cartesian axes with two lines: one with positive slope (from the equation <m>x-3y=-3</m>) and one 
             with negative slope (from <m>2x+y=8</m>), intersecting at a point.
-          </description>
+          </shortdescription>
+          <description> Test </description>
             <latex-image>
               <preamble>
               </preamble>
@@ -87,10 +88,10 @@
 
     <figure xml:id="fig-number-line" workspace=".5in">
       <caption>The number line for <m>\mathbb{R}</m>.</caption>
-      <image xml:id="img-number-line" width="70%" decorative="yes">
-        <description>
+      <image xml:id="img-number-line" width="70%" decorative="no">
+        <shortdescription>
         A horizontal line with tick marks labeled from -3 to 3 representing the real numbers.
-      </description>
+      </shortdescription>
         <latex-image>
           <preamble>
           </preamble>
@@ -120,9 +121,9 @@
     <figure xml:id="fig-r2-grid">
       <caption>Cartesian plane with grid, axes, and room to mark <m>(3,2)</m> and <m>\begin{bmatrix}3\\2\end{bmatrix}</m>.</caption>
       <image xml:id="img-r2-grid" width="50%">
-        <description>
-        A square grid with horizontal and vertical axes spanning from -4 to 4, ready to plot the point (3,2) and the arrow from the origin to (3,2).
-      </description>
+        <shortdescription>
+        A square grid with horizontal and vertical axes spanning from -4 to 4.
+      </shortdescription>
         <latex-image>
           <preamble>
           </preamble>

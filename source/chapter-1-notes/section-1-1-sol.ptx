@@ -63,8 +63,7 @@
       <title>Solution to a Linear System</title>
       <statement>
         The set of all possible values of <m>x_1, x_2, \ldots, x_n</m> that satisfy <em>every</em> equation in the system is the <term>solution, or solution set,</term> to the system.
-      </statement
-      >
+      </statement>
     </definition>
     </p>
     
@@ -79,14 +78,22 @@
     <example> 
       <statement>
       Consider the following systems of two linear equations in two variables and determine how many solutions there are for each.
+      </statement>
     <ol>
      <!-- System A -->
+      <statement>
     <li workspace="2.1in">
       <m>\begin{aligned}
         x_1 - 2x_2 \amp= -1 \\
         -x_1 + 3x_2 \amp= \phantom{-}3
       \end{aligned}</m>
       </li>
+    </statement>
+        <solution>
+        <p>
+            Test inside
+        </p>
+      </solution>
 
 
     <!-- System B -->
@@ -109,7 +116,11 @@
     <p workspace="0.3in">
       <em>Conclusion:</em> A system of linear equations in two variables can have <m>\underline{\phantom{\,\,zero, one, or infinitely many zero, one, or infinitely many \,\,}}</m> solutions.
     </p>
-  </statement>
+  <solution>
+        <p>
+            Test outside
+        </p>
+      </solution>
 </example>
   </page>
 

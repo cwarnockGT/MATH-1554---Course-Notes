@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <handout xml:id="handout-1-2" xmlns:xi="http://www.w3.org/2001/XInclude">
-
+  <title>1.2 Row Reduction and Echelon Forms</title>
   <!-- Topics -->
     <objectives xml:id="obj-1-2-topics">
       <title>Topics</title>

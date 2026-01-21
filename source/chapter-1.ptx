@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <chapter xml:id="chapter-1" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Linear Equations in Linear Algebra</title>
+  <title>Chapter 1 Linear Equations in Linear Algebra</title>
   <!-- <introduction>
     <p>Some words</p>
   </introduction> -->
   <section xml:id="sec-1-1">
-    <title>Systems of Linear Equations</title>
-      <xi:include href="./chapter-1-notes/section-1-1.ptx" />
+    <title>1.1 Systems of Linear Equations</title>
+      <xi:include href="./chapter-1-notes/section-1-1-sol.ptx" />
   </section>
   
   <section xml:id="sec-1-2">
-    <title>Row Reduction and Echelon Forms</title>
+    <title>1.2 Row Reduction and Echelon Forms</title>
       <xi:include href="./chapter-1-notes/section-1-2.ptx" />
   </section>
 
   <section xml:id="sec-1-3">
-    <title>Vector Equations</title>
+    <title>1.3 Vector Equations</title>
       <xi:include href="./chapter-1-notes/section-1-3.ptx" />
+  </section>
+
+  <section xml:id="sec-1-4">
+    <title>1.4 The Matrix Equation <m>A \vec{x} = \vec{b}</m></title>
+      <xi:include href="./chapter-1-notes/section-1-4.ptx" />
   </section>
 
 
