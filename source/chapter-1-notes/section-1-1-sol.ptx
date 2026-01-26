@@ -34,26 +34,21 @@
       </statement>
       </definition>
 
-    <p>
-      Examples:
+      <p workspace="true">Some Examples:
       <ul>
         <li><m>2x_1+4x_2=4</m> is a line in two dimensions.</li>
         <li><m>3x_1+2x_2+x_3=6</m> is a plane in three dimensions.</li>
+        <li><m>x_1 + x_2 + x_3 = x_4 + x_5</m></li>
+        <li><m>x_1 + \sqrt{2}x_2 -\frac{1}{7}  = \pi x_3</m></li>
       </ul>
     </p>
-    <solution>
-      <p>More Examples:
-      <ul>
-        <li><m>y = 3x + 7</m> is a line in two dimensions</li>
-        <li><m>x_1 + x_2 + x_3 = x_4 + x_5</m></li>
-      </ul>
-    Non Examples:
+    <p workspace="true">Non Examples:
     <ul>
         <li><m>x_1 + x_2^3 = 3</m></li>
+        <li><m>2x_1 - 4x_2 - \sqrt{x_3} = 4</m></li>
         <li><m>\dfrac{1}{x_1} + x_2 + x_3 = 4</m></li>
       </ul>
-    </p>
-  </solution>
+</p>
     
   </page>
 

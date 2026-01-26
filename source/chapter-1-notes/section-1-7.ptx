@@ -63,7 +63,9 @@
   <page>
     <example>
         <introduction>
+          <p>
             For each of the following sets, determine if the set is linearly independent or linearly dependent.
+          </p>
             </introduction>
         <task workspace="true">
           <statement >
