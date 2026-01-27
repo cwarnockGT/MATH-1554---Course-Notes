@@ -6,17 +6,17 @@
   </introduction> -->
   <section xml:id="sec-1-1">
     <title>1.1 Systems of Linear Equations</title>
-      <xi:include href="./chapter-1-notes/section-1-1.ptx" />
+      <xi:include href="./chapter-1-notes/section-1-1-sol.ptx" />
   </section>
   
   <section xml:id="sec-1-2">
     <title>1.2 Row Reduction and Echelon Forms</title>
-      <xi:include href="./chapter-1-notes/section-1-2.ptx" />
+      <xi:include href="./chapter-1-notes/section-1-2-sol.ptx" />
   </section>
 
   <section xml:id="sec-1-3">
     <title>1.3 Vector Equations</title>
-      <xi:include href="./chapter-1-notes/section-1-3.ptx" />
+      <xi:include href="./chapter-1-notes/section-1-3-sol.ptx" />
   </section>
 
   <section xml:id="sec-1-4">

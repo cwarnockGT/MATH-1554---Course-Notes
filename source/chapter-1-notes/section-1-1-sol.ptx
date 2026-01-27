@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <handout xml:lang="en" xml:id="section-1-1-sol" toc="no" display="inline">
-  <title>1.1 Systems of Linear Equations - Solutions</title>
+  <title>1.1 Systems of Linear Equations</title>
   <!-- Page 1: Section overview, topics and objectives -->
   <page>
     <title>Topics and Objectives</title>
@@ -16,7 +16,7 @@
       </ul>
     </objectives>
 
-    <objectives >
+    <objectives workspace="0.5in">
       <title>Goals</title>
       <ol>
         <li>Characterize a linear system by the number of solutions and consistency.</li>
@@ -60,7 +60,7 @@
       When we have more than one linear equation, we have a <em>system of linear equations</em>. For example, a system of two linear equations is:
     </p>
 
-    <p>
+    <p xml:id="sys-ex">
       <md>\begin{aligned}
         x_1 \amp\;+\; 1.5\,x_2 \;+\; \pi x_3 \;=\; 4 \\
         5x_1 \amp\;+\; \phantom{1.5\,x_2}\;+\; 7x_3 \;=\; 5
@@ -68,7 +68,7 @@
     </p>
 
 
-    <p>
+    <p workspace="2.5in">
     <definition>
       <title>Solution to a Linear System</title>
       <statement>
@@ -77,9 +77,9 @@
     </definition>
     </p>
 
-    <solution workspace="2in">
+    <solution>
       <p>
-        At this point, we don't have a great way of determining the solutions to a system of linear equations. We can try guessing some solutions.
+        Consider finding solutions to the system given <xref ref="sys-ex" text="custom">above</xref>. At this point, we don't have a great way of determining the solutions to a system of linear equations. We can try guessing some solutions.
         <ul>
           <li> Try <m>(4,0,0)</m>: Note this points makes the first equation true since <m>4 + 1.5(0) + \pi(0) = 4</m>, but it does not make the second equation true since <m> 5(4) + 7(0) \neq 5</m>. Therefore, <m>(4,0,0)</m> is not a solution to the system.</li>
           <li> Try <m>(1,2,0)</m>: Note plugging this point into the first equation yields <m>1 + 1.5(2) + \pi(0) = 4</m> which is a true statement. Plugging the point into the second equation yields <m>5(1) + 7(0) = 5</m> which is also a true statement. Since the point makes both equations true, it is a solution to the system.</li>
@@ -88,7 +88,7 @@
       </p>
     </solution>
     
-    <p>
+    <p workspace="1.5in">
       How many solutions can a system have?
     </p>
   </page>
@@ -102,7 +102,7 @@
           Consider the following systems of two linear equations in two variables and determine how many solutions there are for each.
         </p>
       </introduction>
-      <task>
+      <task workspace="2in">
         <statement>
       <m>\begin{aligned}
         x_1 - 2x_2 \amp= -1 \\
@@ -114,7 +114,7 @@
         Graphing the two lines gives the following:
         <figure >
           <caption>Two lines in the plane with a single point of intersection.</caption>
-          <image xml:id="sec1-1-img1" width="50%" decorative="no">
+          <image xml:id="sec1-1-img1" width="70%" decorative="no">
             <shortdescription>
             Cartesian axes with two lines, showing where they intersect.
           </shortdescription>
@@ -146,7 +146,7 @@
       </p>
     </solution>
     </task>
-    <task>
+    <task workspace="2in">
       <statement>
       <m>\begin{aligned}
         x_1 - 2x_2 \amp= -1 \\
@@ -158,7 +158,7 @@
         Graphing the two lines gives the following:
         <figure >
           <caption>Two parallel lines in the plane.</caption>
-          <image xml:id="sec1-1-img2" width="50%" decorative="no">
+          <image xml:id="sec1-1-img2" width="70%" decorative="no">
             <shortdescription>
             Cartesian axes with two parallel lines.
           </shortdescription>
@@ -190,7 +190,7 @@
     </solution>
     </task>
 
-    <task>
+    <task workspace="2in">
       <statement>
       <m>\begin{aligned}
         x_1 - 2x_2 \amp= -1 \\
@@ -202,7 +202,7 @@
         Graphing the two lines gives the following:
         <figure >
           <caption>Two lines lying on top of one another.</caption>
-          <image xml:id="sec1-1-img3" width="50%" decorative="no">
+          <image xml:id="sec1-1-img3" width="70%" decorative="no">
             <shortdescription>
             Cartesian axes with two parallel lines.
           </shortdescription>
@@ -236,7 +236,12 @@
     </task>
 
     <conclusion>
-      <p><em>Conclusion:</em> A system of linear equations in two variables can have <m>\underline{\text{zero, one, or infinitely many}}</m> solutions.</p>
+      <p><em>Conclusion:</em> A system of linear equations in two variables can have <m>\underline{\hspace{4in}}</m> solutions.</p>
+      <answer>
+        <p>
+          zero, one, or infinitely many
+        </p>
+      </answer>
     </conclusion>
 </example>
   </page>
@@ -246,7 +251,7 @@
     <title>Three-Dimensional Case</title>
 
     <p>
-      An equation linear equation in three variables, <m>a_1x_1+a_2x_2+a_3x_3=b</m>, defines a plane in <m>\mathbb{R}^3</m>.
+      A linear equation in three variables, <m>a_1x_1+a_2x_2+a_3x_3=b</m>, defines a plane in <m>\mathbb{R}^3</m>.
     </p>
 
     <example workspace = "2in">
@@ -255,6 +260,11 @@
           How many solutions can a system of <em>two</em> linear equations in three variables have?
         </p>
       </statement>
+      <hint>
+        <p>
+          Play around with drawing two planes in 3-space and seeing how they intersect. Can they never intersect? What about intersect in a finite number of points? What about intersect in infinitely many points?
+        </p>
+      </hint>
     </example>
 
     <example workspace = "3in">
@@ -263,10 +273,20 @@
           How many solutions can a system of <em>three</em> linear equations in three variables have?
         </p>
       </statement>
+      <hint>
+        <p>
+          Play around with drawing three planes in 3-space and seeing how they intersect.  Can they never intersect? What about intersect in a finite number of points? What about intersect in infinitely many points?
+        </p>
+      </hint>
     </example>
 
     <p>
-      <em>Conclusion:</em> Every system of linear equations, no matter the number of equations and number of variables has <m>\underline{\text{zero, one, or infinitely many}}</m> solutions.
+      <em>Conclusion:</em> Every system of linear equations, no matter the number of equations and number of variables has <m>\underline{\hspace{4in}}</m> solutions.
+      <answer>
+        <p>
+          zero, one, or infinitely many
+        </p>
+      </answer>
     </p>
 
     
