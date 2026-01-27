@@ -15,6 +15,7 @@
         \usepackage{tikz-3dplot}
         \usetikzlibrary{arrows.meta}
         \usepackage{amsmath}
+        \usepackage{pgfplots}
     </latex-image-preamble>
   </docinfo>
 

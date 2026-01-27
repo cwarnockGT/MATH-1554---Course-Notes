@@ -34,6 +34,21 @@
       <xi:include href="./chapter-1-notes/section-1-7.ptx" />
   </section>
 
+  <section xml:id="sec-1-8">
+    <title>1.8 An Introduction to Linear Transformations</title>
+      <xi:include href="./chapter-1-notes/section-1-8.ptx" />
+  </section>
+
+
+
+
+
+
+   <!-- <section xml:id="test">
+    <title>TEST</title>
+      <xi:include href="./chapter-1-notes/test.ptx" />
+  </section> -->
+
 
 
   
