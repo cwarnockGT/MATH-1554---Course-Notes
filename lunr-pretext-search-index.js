@@ -622,6 +622,105 @@ var ptx_lunr_docs = [
   "body": " For what values of are the vectors   linearly dependent?  "
 },
 {
+  "id": "sec-1-8",
+  "level": "1",
+  "url": "sec-1-8.html",
+  "type": "Section",
+  "number": "",
+  "title": "1.8 An Introduction to Linear Transformations",
+  "body": " 1.8 An Introduction to Linear Transformations   1.8 An Introduction to Linear Transformations    Topics and Objectives   Topics   The definition of a linear transformation.  Interpreting matrix multiplication as a linear transformation.     Goals   Construct and interpret linear transformations in (e.g., view a linear transformation as a projection or a shear).  Characterize linear transformations using:  existence and uniqueness,  domain, codomain, and range.         Let be an matrix. Define a function   A function of this form is called a matrix transformation .   The domain of is .  The codomain (or target ) of is .  The vector is the image of under .  The set of all possible images is the range of .     This yields another interpretation of the equation :   as a system of linear equations,  as an augmented matrix,  as a vector equation,  as a matrix equation,  as a linear transformation equation.      Functions from Calculus (and their graphs)  Many familiar functions have domain and codomain . For example, the sine function can be described by the rule   In calculus we often visualize a function via its graph: the horizontal axis represents the domain and the vertical axis the codomain.   Graph of function on the Cartesian plane.  Graph of on the interval with axes labeled and and a light grid.    This is fine when both domain and codomain are . If the domain is and the codomain is , we would need five dimensions to draw the full graph—so a geometric graph is not possible.     Example 1: Working with a Matrix Transformation    Let   Consider the matrix transformation .    Compute .    Find so that .     Give a vector for which there is no with .  Equivalently: Give a not in the range of , i.e., not in the span of the columns of .        Linear Transformations and Superposition   A function is linear if for all and all scalars :  ,  .     By linearity, for any scalars and vectors ,   This is the principle of superposition . In particular, once we know , we can compute for any .   Every matrix transformation is linear.      Example 2: Geometric Actions in \\m{\\mathbb{R}^2}    Suppose . Give a brief geometric description of the action of in for each matrix.               for        Example 3: Geometric Actions in \\m{\\mathbb{R}^3}   Describe the effect of on vectors in .                Example 4: Building the Matrix from Basis Images    A linear transformation satisfies   What is the matrix that represents ?      "
+},
+{
+  "id": "sec-1-8-2-2-2",
+  "level": "2",
+  "url": "sec-1-8.html#sec-1-8-2-2-2",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   The definition of a linear transformation.  Interpreting matrix multiplication as a linear transformation.   "
+},
+{
+  "id": "sec-1-8-2-2-3",
+  "level": "2",
+  "url": "sec-1-8.html#sec-1-8-2-2-3",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals   Construct and interpret linear transformations in (e.g., view a linear transformation as a projection or a shear).  Characterize linear transformations using:  existence and uniqueness,  domain, codomain, and range.      "
+},
+{
+  "id": "sec-1-8-2-2-4",
+  "level": "2",
+  "url": "sec-1-8.html#sec-1-8-2-2-4",
+  "type": "Definition",
+  "number": "1.47",
+  "title": "",
+  "body": "  Let be an matrix. Define a function   A function of this form is called a matrix transformation .   The domain of is .  The codomain (or target ) of is .  The vector is the image of under .  The set of all possible images is the range of .    "
+},
+{
+  "id": "ex-1",
+  "level": "2",
+  "url": "sec-1-8.html#ex-1",
+  "type": "Example",
+  "number": "1.48",
+  "title": "",
+  "body": "  Let   Consider the matrix transformation .    Compute .    Find so that .     Give a vector for which there is no with .  Equivalently: Give a not in the range of , i.e., not in the span of the columns of .    "
+},
+{
+  "id": "sec-1-8-2-5-2",
+  "level": "2",
+  "url": "sec-1-8.html#sec-1-8-2-5-2",
+  "type": "Definition",
+  "number": "1.49",
+  "title": "",
+  "body": " A function is linear if for all and all scalars :  ,  .    "
+},
+{
+  "id": "sec-1-8-2-5-4",
+  "level": "2",
+  "url": "sec-1-8.html#sec-1-8-2-5-4",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "principle of superposition "
+},
+{
+  "id": "sec-1-8-2-5-5",
+  "level": "2",
+  "url": "sec-1-8.html#sec-1-8-2-5-5",
+  "type": "Fact",
+  "number": "1.50",
+  "title": "",
+  "body": " Every matrix transformation is linear.  "
+},
+{
+  "id": "ex-2",
+  "level": "2",
+  "url": "sec-1-8.html#ex-2",
+  "type": "Example",
+  "number": "1.51",
+  "title": "",
+  "body": "  Suppose . Give a brief geometric description of the action of in for each matrix.               for    "
+},
+{
+  "id": "ex-3",
+  "level": "2",
+  "url": "sec-1-8.html#ex-3",
+  "type": "Example",
+  "number": "1.52",
+  "title": "",
+  "body": " Describe the effect of on vectors in .            "
+},
+{
+  "id": "ex-4",
+  "level": "2",
+  "url": "sec-1-8.html#ex-4",
+  "type": "Example",
+  "number": "1.53",
+  "title": "",
+  "body": "  A linear transformation satisfies   What is the matrix that represents ?   "
+},
+{
   "id": "sec-1-1-sol",
   "level": "1",
   "url": "sec-1-1-sol.html",
