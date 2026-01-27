@@ -154,7 +154,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-1-2.html" class="internal"><span class="title">1.2 Row Reduction and Echelon Forms</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="sec-1-2.html#handout-1-2" class="internal"><span class="title">1.2 Row Reduction and Echelon Forms</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-1-2.html#handout-1-2-sol" class="internal"><span class="title">1.2 Row Reduction and Echelon Forms</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-1-3.html" class="internal"><span class="title">1.3 Vector Equations</span></a></div>
@@ -196,9 +196,17 @@ eBookConfig.enable_chatcodes =  false;
         </label><label><input type="radio" name="papersize" value="letter">Letter
         </label>
 </form>
-<details class="print-options"><summary>Additional printing options</summary><div class="hide-solutions-options"><div class="hide-option">
+<details class="print-options"><summary>Additional printing options</summary><div class="hide-solutions-options">
+<div class="hide-option">
+<label for="hide-hint-checkbox">Hide hints</label><input type="checkbox" id="hide-hint-checkbox">
+</div>
+<div class="hide-option">
+<label for="hide-answer-checkbox">Hide answers</label><input type="checkbox" id="hide-answer-checkbox">
+</div>
+<div class="hide-option">
 <label for="hide-solution-checkbox">Hide solutions</label><input type="checkbox" id="hide-solution-checkbox">
-</div></div>
+</div>
+</div>
 <div class="header-footer-options">
 <div class="header-option">
 <span class="title">Print headers</span><label>First page<input type="checkbox" id="print-first-page-header-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-header-checkbox" checked></label>
@@ -258,6 +266,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Objective c"><a href="#section-1-1-sol-2-3-2-3" title="Copy heading and permalink for Objective c" aria-label="Copy heading and permalink for Objective c">🔗</a></div>
 </li>
 </ol>
+<div class="workspace" data-space="0.5in"></div>
 <div class="autopermalink" data-description="Objectives: Goals"><a href="#section-1-1-sol-2-3" title="Copy heading and permalink for Objectives: Goals" aria-label="Copy heading and permalink for Objectives: Goals">🔗</a></div></article><article class="definition definition-like" id="section-1-1-sol-2-4"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Single Linear Equation.</span>
 </h4>A <dfn class="terminology">linear equation</dfn> has the form:<div class="displaymath process-math" id="section-1-1-sol-2-4-2-2">
@@ -309,8 +318,8 @@ a_1 x_1 + a_2 x_2 + \cdots + a_n x_n = b
 <div class="autopermalink" data-description="Paragraph"><a href="#section-1-1-sol-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><section class="onepage" id="section-1-1-sol-3"><div class="para" id="section-1-1-sol-3-2">When we have more than one linear equation, we have a <em class="emphasis">system of linear equations</em>. For example, a system of two linear equations is:<div class="autopermalink" data-description="Paragraph"><a href="#section-1-1-sol-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="section-1-1-sol-3-3">
-<div class="displaymath process-math" id="section-1-1-sol-3-3-1">
+<div class="para logical" id="sys-ex">
+<div class="displaymath process-math" id="sys-ex-1">
 \begin{equation*}
 \begin{aligned}
 x_1 \amp\;+\; 1.5\,x_2 \;+\; \pi x_3 \;=\; 4 \\
@@ -318,34 +327,36 @@ x_1 \amp\;+\; 1.5\,x_2 \;+\; \pi x_3 \;=\; 4 \\
 \end{aligned}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#section-1-1-sol-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sys-ex" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="section-1-1-sol-3-4">
 <article class="definition definition-like" id="section-1-1-sol-3-4-1"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Solution to a Linear System.</span>
-</h4>The set of all possible values of <span class="process-math">\(x_1, x_2, \ldots, x_n\)</span> that satisfy <em class="emphasis">every</em> equation in the system is the <dfn class="terminology">solution, or solution set,</dfn> to the system.<div class="autopermalink" data-description="Definition 2.2: Solution to a Linear System"><a href="#section-1-1-sol-3-4-1" title="Copy heading and permalink for Definition 2.2: Solution to a Linear System" aria-label="Copy heading and permalink for Definition 2.2: Solution to a Linear System">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#section-1-1-sol-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h4>The set of all possible values of <span class="process-math">\(x_1, x_2, \ldots, x_n\)</span> that satisfy <em class="emphasis">every</em> equation in the system is the <dfn class="terminology">solution, or solution set,</dfn> to the system.<div class="autopermalink" data-description="Definition 2.2: Solution to a Linear System"><a href="#section-1-1-sol-3-4-1" title="Copy heading and permalink for Definition 2.2: Solution to a Linear System" aria-label="Copy heading and permalink for Definition 2.2: Solution to a Linear System">🔗</a></div></article><div class="workspace" data-space="2.5in"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#section-1-1-sol-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="section-1-1-sol-3-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="section-1-1-sol-3-5-1">
-<div class="para">At this point, we don’t have a great way of determining the solutions to a system of linear equations. We can try guessing some solutions.</div>
-<ul class="disc" id="section-1-1-sol-3-5-1-1">
-<li id="section-1-1-sol-3-5-1-1-1">
-<div class="para" id="p-derived-section-1-1-sol-3-5-1-1-1">Try <span class="process-math">\((4,0,0)\text{:}\)</span> Note this points makes the first equation true since <span class="process-math">\(4 + 1.5(0) + \pi(0) = 4\text{,}\)</span> but it does not make the second equation true since <span class="process-math">\(5(4) + 7(0) \neq 5\text{.}\)</span> Therefore, <span class="process-math">\((4,0,0)\)</span> is not a solution to the system.</div>
-<div class="autopermalink" data-description="Item"><a href="#section-1-1-sol-3-5-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="para">Consider finding solutions to the system given <a href="sec-1-1-sol.html#sys-ex" class="xref" data-knowl="./knowl/xref/sys-ex.html" data-reveal-label="Reveal" data-close-label="Close" title="Paragraph">above </a>. At this point, we don’t have a great way of determining the solutions to a system of linear equations. We can try guessing some solutions.</div>
+<ul class="disc" id="section-1-1-sol-3-5-1-2">
+<li id="section-1-1-sol-3-5-1-2-1">
+<div class="para" id="p-derived-section-1-1-sol-3-5-1-2-1">Try <span class="process-math">\((4,0,0)\text{:}\)</span> Note this points makes the first equation true since <span class="process-math">\(4 + 1.5(0) + \pi(0) = 4\text{,}\)</span> but it does not make the second equation true since <span class="process-math">\(5(4) + 7(0) \neq 5\text{.}\)</span> Therefore, <span class="process-math">\((4,0,0)\)</span> is not a solution to the system.</div>
+<div class="autopermalink" data-description="Item"><a href="#section-1-1-sol-3-5-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="section-1-1-sol-3-5-1-1-2">
-<div class="para" id="p-derived-section-1-1-sol-3-5-1-1-2">Try <span class="process-math">\((1,2,0)\text{:}\)</span> Note plugging this point into the first equation yields <span class="process-math">\(1 + 1.5(2) + \pi(0) = 4\)</span> which is a true statement. Plugging the point into the second equation yields <span class="process-math">\(5(1) + 7(0) = 5\)</span> which is also a true statement. Since the point makes both equations true, it is a solution to the system.</div>
-<div class="autopermalink" data-description="Item"><a href="#section-1-1-sol-3-5-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<li id="section-1-1-sol-3-5-1-2-2">
+<div class="para" id="p-derived-section-1-1-sol-3-5-1-2-2">Try <span class="process-math">\((1,2,0)\text{:}\)</span> Note plugging this point into the first equation yields <span class="process-math">\(1 + 1.5(2) + \pi(0) = 4\)</span> which is a true statement. Plugging the point into the second equation yields <span class="process-math">\(5(1) + 7(0) = 5\)</span> which is also a true statement. Since the point makes both equations true, it is a solution to the system.</div>
+<div class="autopermalink" data-description="Item"><a href="#section-1-1-sol-3-5-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="section-1-1-sol-3-5-1-1-3">
-<div class="para" id="p-derived-section-1-1-sol-3-5-1-1-3">Can you find any more solutions?</div>
-<div class="autopermalink" data-description="Item"><a href="#section-1-1-sol-3-5-1-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<li id="section-1-1-sol-3-5-1-2-3">
+<div class="para" id="p-derived-section-1-1-sol-3-5-1-2-3">Can you find any more solutions?</div>
+<div class="autopermalink" data-description="Item"><a href="#section-1-1-sol-3-5-1-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
 <div class="autopermalink" data-description="Paragraph"><a href="#section-1-1-sol-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 1"><a href="#section-1-1-sol-3-5" title="Copy heading and permalink for Solution 1" aria-label="Copy heading and permalink for Solution 1">🔗</a></div>
-</div></details><div class="para" id="section-1-1-sol-3-6">How many solutions can a system have?<div class="autopermalink" data-description="Paragraph"><a href="#section-1-1-sol-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></details><div class="para" id="section-1-1-sol-3-6">How many solutions can a system have?<div class="workspace" data-space="1.5in"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#section-1-1-sol-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><section class="onepage" id="section-1-1-sol-4"><article class="example example-like" id="section-1-1-sol-4-2"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
@@ -356,7 +367,7 @@ x_1 \amp\;+\; 1.5\,x_2 \;+\; \pi x_3 \;=\; 4 \\
 x_1 - 2x_2 \amp= -1 \\
 -x_1 + 3x_2 \amp= \phantom{-}3
 \end{aligned}\)</span><div class="solutions"><details id="section-1-1-sol-4-2-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="section-1-1-sol-4-2-2-2-1">Graphing the two lines gives the following: <figure class="figure figure-like" id="section-1-1-sol-4-2-2-2-1-1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;">
+<div class="para" id="section-1-1-sol-4-2-2-2-1">Graphing the two lines gives the following: <figure class="figure figure-like" id="section-1-1-sol-4-2-2-2-1-1"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;">
 <img src="generated/latex-image/sec1-1-img1.svg" role="img" class="contained" alt="Cartesian axes with two lines, showing where they intersect."><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="sec1-1-img1-description">The graph of the lines <span class="process-math">\(x_1 - 2x_2 = -1\)</span> (in red) and <span class="process-math">\(-x_1 + 3x_2 = 3\)</span> (in blue), showing their intersection point at <span class="process-math">\((3,2)\)</span>
 </div></details>
 </div>
@@ -364,49 +375,73 @@ x_1 - 2x_2 \amp= -1 \\
 </div>
 <div class="autopermalink" data-description="Solution 2.3.a.1"><a href="#section-1-1-sol-4-2-2-2" title="Copy heading and permalink for Solution 2.3.a.1" aria-label="Copy heading and permalink for Solution 2.3.a.1">🔗</a></div>
 </div></details></div>
+<div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Task 2.3.a"><a href="#section-1-1-sol-4-2-2" title="Copy heading and permalink for Task 2.3.a" aria-label="Copy heading and permalink for Task 2.3.a">🔗</a></div></article><article class="task exercise-like" id="section-1-1-sol-4-2-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <span class="process-math">\(\begin{aligned}
 x_1 - 2x_2 \amp= -1 \\
 -x_1 + 2x_2 \amp= \phantom{-}3
 \end{aligned}\)</span><div class="solutions"><details id="section-1-1-sol-4-2-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="section-1-1-sol-4-2-3-2-1">Graphing the two lines gives the following: <figure class="figure figure-like" id="section-1-1-sol-4-2-3-2-1-1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;">
+<div class="para" id="section-1-1-sol-4-2-3-2-1">Graphing the two lines gives the following: <figure class="figure figure-like" id="section-1-1-sol-4-2-3-2-1-1"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;">
 <img src="generated/latex-image/sec1-1-img2.svg" role="img" class="contained" alt="Cartesian axes with two parallel lines."><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="sec1-1-img2-description">The graph of the lines <span class="process-math">\(x_1 - 2x_2 = -1\)</span> (in red) and <span class="process-math">\(-x_1 + 2x_2 = 3\)</span> (in blue)</div></details>
 </div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Two parallel lines in the plane.<div class="autopermalink" data-description="Figure 2.5"><a href="#section-1-1-sol-4-2-3-2-1-1" title="Copy heading and permalink for Figure 2.5" aria-label="Copy heading and permalink for Figure 2.5">🔗</a></div></figcaption></figure> We see that the lines are parallel, so they never intersect. Therefore, there is no solution to the system.<div class="autopermalink" data-description="Paragraph"><a href="#section-1-1-sol-4-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 2.3.b.1"><a href="#section-1-1-sol-4-2-3-2" title="Copy heading and permalink for Solution 2.3.b.1" aria-label="Copy heading and permalink for Solution 2.3.b.1">🔗</a></div>
 </div></details></div>
+<div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Task 2.3.b"><a href="#section-1-1-sol-4-2-3" title="Copy heading and permalink for Task 2.3.b" aria-label="Copy heading and permalink for Task 2.3.b">🔗</a></div></article><article class="task exercise-like" id="section-1-1-sol-4-2-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
 <span class="process-math">\(\begin{aligned}
 x_1 - 2x_2 \amp= -1 \\
 -x_1 + 2x_2 \amp= \phantom{-}1
 \end{aligned}\)</span><div class="solutions"><details id="section-1-1-sol-4-2-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="section-1-1-sol-4-2-4-2-1">Graphing the two lines gives the following: <figure class="figure figure-like" id="section-1-1-sol-4-2-4-2-1-1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;">
+<div class="para" id="section-1-1-sol-4-2-4-2-1">Graphing the two lines gives the following: <figure class="figure figure-like" id="section-1-1-sol-4-2-4-2-1-1"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;">
 <img src="generated/latex-image/sec1-1-img3.svg" role="img" class="contained" alt="Cartesian axes with two parallel lines."><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="sec1-1-img3-description">The graph of the lines <span class="process-math">\(x_1 - 2x_2 = -1\)</span> (in red) and <span class="process-math">\(-x_1 + 2x_2 = 1\)</span> (in blue)</div></details>
 </div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Two lines lying on top of one another.<div class="autopermalink" data-description="Figure 2.6"><a href="#section-1-1-sol-4-2-4-2-1-1" title="Copy heading and permalink for Figure 2.6" aria-label="Copy heading and permalink for Figure 2.6">🔗</a></div></figcaption></figure> The two linear equations give the same line. Therefore, there are infinitely many points that satisfy both equations, any point that is on the line.<div class="autopermalink" data-description="Paragraph"><a href="#section-1-1-sol-4-2-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 2.3.c.1"><a href="#section-1-1-sol-4-2-4-2" title="Copy heading and permalink for Solution 2.3.c.1" aria-label="Copy heading and permalink for Solution 2.3.c.1">🔗</a></div>
 </div></details></div>
-<div class="autopermalink" data-description="Task 2.3.c"><a href="#section-1-1-sol-4-2-4" title="Copy heading and permalink for Task 2.3.c" aria-label="Copy heading and permalink for Task 2.3.c">🔗</a></div></article><div class="conclusion" id="section-1-1-sol-4-2-5"><div class="para" id="section-1-1-sol-4-2-5-1">
-<em class="emphasis">Conclusion:</em> A system of linear equations in two variables can have <span class="process-math">\(\underline{\text{zero, one, or infinitely many}}\)</span> solutions.<div class="autopermalink" data-description="Paragraph"><a href="#section-1-1-sol-4-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
-<div class="autopermalink" data-description="Example 2.3"><a href="#section-1-1-sol-4-2" title="Copy heading and permalink for Example 2.3" aria-label="Copy heading and permalink for Example 2.3">🔗</a></div></article></section><section class="onepage" id="section-1-1-sol-5"><div class="para" id="section-1-1-sol-5-2">An equation linear equation in three variables, <span class="process-math">\(a_1x_1+a_2x_2+a_3x_3=b\text{,}\)</span> defines a plane in <span class="process-math">\(\mathbb{R}^3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-1-1-sol-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Task 2.3.c"><a href="#section-1-1-sol-4-2-4" title="Copy heading and permalink for Task 2.3.c" aria-label="Copy heading and permalink for Task 2.3.c">🔗</a></div></article><div class="conclusion" id="section-1-1-sol-4-2-5">
+<div class="para" id="section-1-1-sol-4-2-5-1">
+<em class="emphasis">Conclusion:</em> A system of linear equations in two variables can have <span class="process-math">\(\underline{\hspace{4in}}\)</span> solutions.<div class="autopermalink" data-description="Paragraph"><a href="#section-1-1-sol-4-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="section-1-1-sol-4-2-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="section-1-1-sol-4-2-5-2-1">zero, one, or infinitely many<div class="autopermalink" data-description="Paragraph"><a href="#section-1-1-sol-4-2-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1"><a href="#section-1-1-sol-4-2-5-2" title="Copy heading and permalink for Answer 1" aria-label="Copy heading and permalink for Answer 1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Example 2.3"><a href="#section-1-1-sol-4-2" title="Copy heading and permalink for Example 2.3" aria-label="Copy heading and permalink for Example 2.3">🔗</a></div></article></section><section class="onepage" id="section-1-1-sol-5"><div class="para" id="section-1-1-sol-5-2">A linear equation in three variables, <span class="process-math">\(a_1x_1+a_2x_2+a_3x_3=b\text{,}\)</span> defines a plane in <span class="process-math">\(\mathbb{R}^3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#section-1-1-sol-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="section-1-1-sol-5-3"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="section-1-1-sol-5-3-1-1">How many solutions can a system of <em class="emphasis">two</em> linear equations in three variables have?<div class="autopermalink" data-description="Paragraph"><a href="#section-1-1-sol-5-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="section-1-1-sol-5-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="section-1-1-sol-5-3-2-1">Play around with drawing two planes in 3-space and seeing how they intersect. Can they never intersect? What about intersect in a finite number of points? What about intersect in infinitely many points?<div class="autopermalink" data-description="Paragraph"><a href="#section-1-1-sol-5-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.7.1"><a href="#section-1-1-sol-5-3-2" title="Copy heading and permalink for Hint 2.7.1" aria-label="Copy heading and permalink for Hint 2.7.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Example 2.7"><a href="#section-1-1-sol-5-3" title="Copy heading and permalink for Example 2.7" aria-label="Copy heading and permalink for Example 2.7">🔗</a></div></article><article class="example example-like" id="section-1-1-sol-5-4"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="section-1-1-sol-5-4-1-1">How many solutions can a system of <em class="emphasis">three</em> linear equations in three variables have?<div class="autopermalink" data-description="Paragraph"><a href="#section-1-1-sol-5-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="section-1-1-sol-5-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="section-1-1-sol-5-4-2-1">Play around with drawing three planes in 3-space and seeing how they intersect.  Can they never intersect? What about intersect in a finite number of points? What about intersect in infinitely many points?<div class="autopermalink" data-description="Paragraph"><a href="#section-1-1-sol-5-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.8.1"><a href="#section-1-1-sol-5-4-2" title="Copy heading and permalink for Hint 2.8.1" aria-label="Copy heading and permalink for Hint 2.8.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="3in"></div>
 <div class="autopermalink" data-description="Example 2.8"><a href="#section-1-1-sol-5-4" title="Copy heading and permalink for Example 2.8" aria-label="Copy heading and permalink for Example 2.8">🔗</a></div></article><div class="para" id="section-1-1-sol-5-5">
-<em class="emphasis">Conclusion:</em> Every system of linear equations, no matter the number of equations and number of variables has <span class="process-math">\(\underline{\text{zero, one, or infinitely many}}\)</span> solutions.<div class="autopermalink" data-description="Paragraph"><a href="#section-1-1-sol-5-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<em class="emphasis">Conclusion:</em> Every system of linear equations, no matter the number of equations and number of variables has <span class="process-math">\(\underline{\hspace{4in}}\)</span> solutions. <details id="section-1-1-sol-5-5-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="section-1-1-sol-5-5-3-1">zero, one, or infinitely many<div class="autopermalink" data-description="Paragraph"><a href="#section-1-1-sol-5-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1"><a href="#section-1-1-sol-5-5-3" title="Copy heading and permalink for Answer 1" aria-label="Copy heading and permalink for Answer 1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Paragraph"><a href="#section-1-1-sol-5-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><section class="onepage" id="section-1-1-sol-6"><div class="para" id="section-1-1-sol-6-2">As we saw in the previous examples, one way to solve a system of linear equations is by graphing. This is not practical for most examples, especially if we are working with four or more varialbes. A more useful approach to solving a linear system is to manipulate the equations through the use of <dfn class="terminology">row operations</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#section-1-1-sol-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="section-1-1-sol-6-3">
