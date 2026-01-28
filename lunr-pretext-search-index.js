@@ -1,9 +1,9 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "sec-1-1",
+  "id": "Section-1-1",
   "level": "1",
-  "url": "sec-1-1.html",
+  "url": "Section-1-1.html",
   "type": "Section",
   "number": "",
   "title": "1.1 Systems of Linear Equations",
@@ -12,7 +12,7 @@ var ptx_lunr_docs = [
 {
   "id": "section-1-1-sol-2-2",
   "level": "2",
-  "url": "sec-1-1.html#section-1-1-sol-2-2",
+  "url": "Section-1-1.html#section-1-1-sol-2-2",
   "type": "Objectives",
   "number": "",
   "title": "Topics",
@@ -21,7 +21,7 @@ var ptx_lunr_docs = [
 {
   "id": "section-1-1-sol-2-3",
   "level": "2",
-  "url": "sec-1-1.html#section-1-1-sol-2-3",
+  "url": "Section-1-1.html#section-1-1-sol-2-3",
   "type": "Objectives",
   "number": "",
   "title": "Goals",
@@ -30,7 +30,7 @@ var ptx_lunr_docs = [
 {
   "id": "section-1-1-sol-2-4",
   "level": "2",
-  "url": "sec-1-1.html#section-1-1-sol-2-4",
+  "url": "Section-1-1.html#section-1-1-sol-2-4",
   "type": "Definition",
   "number": "1.1",
   "title": "A Single Linear Equation.",
@@ -39,7 +39,7 @@ var ptx_lunr_docs = [
 {
   "id": "section-1-1-sol-3-4",
   "level": "2",
-  "url": "sec-1-1.html#section-1-1-sol-3-4",
+  "url": "Section-1-1.html#section-1-1-sol-3-4",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -48,7 +48,7 @@ var ptx_lunr_docs = [
 {
   "id": "section-1-1-sol-4-2",
   "level": "2",
-  "url": "sec-1-1.html#section-1-1-sol-4-2",
+  "url": "Section-1-1.html#section-1-1-sol-4-2",
   "type": "Example",
   "number": "1.3",
   "title": "",
@@ -57,7 +57,7 @@ var ptx_lunr_docs = [
 {
   "id": "section-1-1-sol-5-3",
   "level": "2",
-  "url": "sec-1-1.html#section-1-1-sol-5-3",
+  "url": "Section-1-1.html#section-1-1-sol-5-3",
   "type": "Example",
   "number": "1.7",
   "title": "",
@@ -66,7 +66,7 @@ var ptx_lunr_docs = [
 {
   "id": "section-1-1-sol-5-4",
   "level": "2",
-  "url": "sec-1-1.html#section-1-1-sol-5-4",
+  "url": "Section-1-1.html#section-1-1-sol-5-4",
   "type": "Example",
   "number": "1.8",
   "title": "",
@@ -75,7 +75,7 @@ var ptx_lunr_docs = [
 {
   "id": "section-1-1-sol-6-2",
   "level": "2",
-  "url": "sec-1-1.html#section-1-1-sol-6-2",
+  "url": "Section-1-1.html#section-1-1-sol-6-2",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -84,7 +84,7 @@ var ptx_lunr_docs = [
 {
   "id": "section-1-1-sol-6-3",
   "level": "2",
-  "url": "sec-1-1.html#section-1-1-sol-6-3",
+  "url": "Section-1-1.html#section-1-1-sol-6-3",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -93,7 +93,7 @@ var ptx_lunr_docs = [
 {
   "id": "section-1-1-sol-7-2",
   "level": "2",
-  "url": "sec-1-1.html#section-1-1-sol-7-2",
+  "url": "Section-1-1.html#section-1-1-sol-7-2",
   "type": "Example",
   "number": "1.9",
   "title": "",
@@ -102,7 +102,7 @@ var ptx_lunr_docs = [
 {
   "id": "section-1-1-sol-8-2",
   "level": "2",
-  "url": "sec-1-1.html#section-1-1-sol-8-2",
+  "url": "Section-1-1.html#section-1-1-sol-8-2",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -111,7 +111,7 @@ var ptx_lunr_docs = [
 {
   "id": "section-1-1-sol-8-3",
   "level": "2",
-  "url": "sec-1-1.html#section-1-1-sol-8-3",
+  "url": "Section-1-1.html#section-1-1-sol-8-3",
   "type": "Example",
   "number": "1.10",
   "title": "",
@@ -120,7 +120,7 @@ var ptx_lunr_docs = [
 {
   "id": "section-1-1-sol-9-2",
   "level": "2",
-  "url": "sec-1-1.html#section-1-1-sol-9-2",
+  "url": "Section-1-1.html#section-1-1-sol-9-2",
   "type": "Definition",
   "number": "1.11",
   "title": "Consistent.",
@@ -129,7 +129,7 @@ var ptx_lunr_docs = [
 {
   "id": "section-1-1-sol-9-3",
   "level": "2",
-  "url": "sec-1-1.html#section-1-1-sol-9-3",
+  "url": "Section-1-1.html#section-1-1-sol-9-3",
   "type": "Definition",
   "number": "1.12",
   "title": "Row Equivalence.",
@@ -138,16 +138,16 @@ var ptx_lunr_docs = [
 {
   "id": "section-1-1-sol-9-5",
   "level": "2",
-  "url": "sec-1-1.html#section-1-1-sol-9-5",
+  "url": "Section-1-1.html#section-1-1-sol-9-5",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Fundamental Questions "
 },
 {
-  "id": "sec-1-2",
+  "id": "Section-1-2",
   "level": "1",
-  "url": "sec-1-2.html",
+  "url": "Section-1-2.html",
   "type": "Section",
   "number": "",
   "title": "1.2 Row Reduction and Echelon Forms",
@@ -156,7 +156,7 @@ var ptx_lunr_docs = [
 {
   "id": "handout-1-2-sol-2",
   "level": "2",
-  "url": "sec-1-2.html#handout-1-2-sol-2",
+  "url": "Section-1-2.html#handout-1-2-sol-2",
   "type": "Objectives",
   "number": "",
   "title": "Topics",
@@ -165,7 +165,7 @@ var ptx_lunr_docs = [
 {
   "id": "handout-1-2-sol-3",
   "level": "2",
-  "url": "sec-1-2.html#handout-1-2-sol-3",
+  "url": "Section-1-2.html#handout-1-2-sol-3",
   "type": "Objectives",
   "number": "",
   "title": "Goals",
@@ -174,7 +174,7 @@ var ptx_lunr_docs = [
 {
   "id": "handout-1-2-sol-4",
   "level": "2",
-  "url": "sec-1-2.html#handout-1-2-sol-4",
+  "url": "Section-1-2.html#handout-1-2-sol-4",
   "type": "Definition",
   "number": "1.13",
   "title": "Echelon Form and Row Row Reduced Echelon Form.",
@@ -183,7 +183,7 @@ var ptx_lunr_docs = [
 {
   "id": "handout-1-2-sol-5",
   "level": "2",
-  "url": "sec-1-2.html#handout-1-2-sol-5",
+  "url": "Section-1-2.html#handout-1-2-sol-5",
   "type": "Example",
   "number": "1.14",
   "title": "",
@@ -192,7 +192,7 @@ var ptx_lunr_docs = [
 {
   "id": "handout-1-2-sol-6-2",
   "level": "2",
-  "url": "sec-1-2.html#handout-1-2-sol-6-2",
+  "url": "Section-1-2.html#handout-1-2-sol-6-2",
   "type": "Worksheet Exercise",
   "number": "1",
   "title": "",
@@ -201,7 +201,7 @@ var ptx_lunr_docs = [
 {
   "id": "handout-1-2-sol-6-3",
   "level": "2",
-  "url": "sec-1-2.html#handout-1-2-sol-6-3",
+  "url": "Section-1-2.html#handout-1-2-sol-6-3",
   "type": "Worksheet Exercise",
   "number": "2",
   "title": "",
@@ -210,7 +210,7 @@ var ptx_lunr_docs = [
 {
   "id": "handout-1-2-sol-6-4",
   "level": "2",
-  "url": "sec-1-2.html#handout-1-2-sol-6-4",
+  "url": "Section-1-2.html#handout-1-2-sol-6-4",
   "type": "Worksheet Exercise",
   "number": "3",
   "title": "",
@@ -219,7 +219,7 @@ var ptx_lunr_docs = [
 {
   "id": "handout-1-2-sol-6-5",
   "level": "2",
-  "url": "sec-1-2.html#handout-1-2-sol-6-5",
+  "url": "Section-1-2.html#handout-1-2-sol-6-5",
   "type": "Worksheet Exercise",
   "number": "4",
   "title": "",
@@ -228,7 +228,7 @@ var ptx_lunr_docs = [
 {
   "id": "handout-1-2-sol-6-6",
   "level": "2",
-  "url": "sec-1-2.html#handout-1-2-sol-6-6",
+  "url": "Section-1-2.html#handout-1-2-sol-6-6",
   "type": "Worksheet Exercise",
   "number": "5",
   "title": "",
@@ -237,7 +237,7 @@ var ptx_lunr_docs = [
 {
   "id": "handout-1-2-sol-7",
   "level": "2",
-  "url": "sec-1-2.html#handout-1-2-sol-7",
+  "url": "Section-1-2.html#handout-1-2-sol-7",
   "type": "Definition",
   "number": "1.15",
   "title": "Pivot Position and Pivot Column.",
@@ -246,7 +246,7 @@ var ptx_lunr_docs = [
 {
   "id": "handout-1-2-sol-8",
   "level": "2",
-  "url": "sec-1-2.html#handout-1-2-sol-8",
+  "url": "Section-1-2.html#handout-1-2-sol-8",
   "type": "Example",
   "number": "1.16",
   "title": "",
@@ -255,7 +255,7 @@ var ptx_lunr_docs = [
 {
   "id": "handout-1-2-sol-10",
   "level": "2",
-  "url": "sec-1-2.html#handout-1-2-sol-10",
+  "url": "Section-1-2.html#handout-1-2-sol-10",
   "type": "Example",
   "number": "1.17",
   "title": "",
@@ -264,7 +264,7 @@ var ptx_lunr_docs = [
 {
   "id": "handout-1-2-sol-11",
   "level": "2",
-  "url": "sec-1-2.html#handout-1-2-sol-11",
+  "url": "Section-1-2.html#handout-1-2-sol-11",
   "type": "Definition",
   "number": "1.18",
   "title": "Pivot Variables and Free Variables.",
@@ -273,25 +273,25 @@ var ptx_lunr_docs = [
 {
   "id": "handout-1-2-sol-12",
   "level": "2",
-  "url": "sec-1-2.html#handout-1-2-sol-12",
+  "url": "Section-1-2.html#handout-1-2-sol-12",
   "type": "Example",
   "number": "1.19",
   "title": "",
   "body": "  Determine the pivot variables and the free variables for the system represented below.       Notice that the pivots are in columns 1, 3, and 4. So the pivot variables are . Therefore, the free variables are .   "
 },
 {
-  "id": "handout-1-2-sol-13",
+  "id": "thm-inconsistent-system",
   "level": "2",
-  "url": "sec-1-2.html#handout-1-2-sol-13",
+  "url": "Section-1-2.html#thm-inconsistent-system",
   "type": "Theorem",
   "number": "1.20",
   "title": "Existence and Uniqueness of Solutions.",
   "body": " Existence and Uniqueness of Solutions  A linear system is consistent if and only if the last column of the augmented matrix does not have a pivot. Equivalently, the RREF of the augmented matrix does not contain a row of the form .  If a linear system is consistent, then:   It has a unique solution if and only if (iff) there are .  no free variables    Otherwise, it has many solutions parameterized by the free variables.  infinitely    "
 },
 {
-  "id": "sec-1-3",
+  "id": "Section-1-3",
   "level": "1",
-  "url": "sec-1-3.html",
+  "url": "Section-1-3.html",
   "type": "Section",
   "number": "",
   "title": "1.3 Vector Equations",
@@ -300,7 +300,7 @@ var ptx_lunr_docs = [
 {
   "id": "obj-1-3-topics",
   "level": "2",
-  "url": "sec-1-3.html#obj-1-3-topics",
+  "url": "Section-1-3.html#obj-1-3-topics",
   "type": "Objectives",
   "number": "",
   "title": "Topics",
@@ -309,7 +309,7 @@ var ptx_lunr_docs = [
 {
   "id": "obj-1-3",
   "level": "2",
-  "url": "sec-1-3.html#obj-1-3",
+  "url": "Section-1-3.html#obj-1-3",
   "type": "Objectives",
   "number": "",
   "title": "Goals",
@@ -318,7 +318,7 @@ var ptx_lunr_docs = [
 {
   "id": "fig-motivation-lines",
   "level": "2",
-  "url": "sec-1-3.html#fig-motivation-lines",
+  "url": "Section-1-3.html#fig-motivation-lines",
   "type": "Figure",
   "number": "1.21",
   "title": "",
@@ -327,7 +327,7 @@ var ptx_lunr_docs = [
 {
   "id": "Rn-2",
   "level": "2",
-  "url": "sec-1-3.html#Rn-2",
+  "url": "Section-1-3.html#Rn-2",
   "type": "Definition",
   "number": "1.22",
   "title": "",
@@ -336,7 +336,7 @@ var ptx_lunr_docs = [
 {
   "id": "fig-number-line",
   "level": "2",
-  "url": "sec-1-3.html#fig-number-line",
+  "url": "Section-1-3.html#fig-number-line",
   "type": "Figure",
   "number": "1.23",
   "title": "",
@@ -345,7 +345,7 @@ var ptx_lunr_docs = [
 {
   "id": "Rn-6",
   "level": "2",
-  "url": "sec-1-3.html#Rn-6",
+  "url": "Section-1-3.html#Rn-6",
   "type": "Example",
   "number": "1.24",
   "title": "",
@@ -354,7 +354,7 @@ var ptx_lunr_docs = [
 {
   "id": "def-linear-combination-span",
   "level": "2",
-  "url": "sec-1-3.html#def-linear-combination-span",
+  "url": "Section-1-3.html#def-linear-combination-span",
   "type": "Definition",
   "number": "1.26",
   "title": "",
@@ -363,7 +363,7 @@ var ptx_lunr_docs = [
 {
   "id": "fig-grid-combos",
   "level": "2",
-  "url": "sec-1-3.html#fig-grid-combos",
+  "url": "Section-1-3.html#fig-grid-combos",
   "type": "Figure",
   "number": "1.27",
   "title": "",
@@ -372,7 +372,7 @@ var ptx_lunr_docs = [
 {
   "id": "examples-2",
   "level": "2",
-  "url": "sec-1-3.html#examples-2",
+  "url": "Section-1-3.html#examples-2",
   "type": "Example",
   "number": "1.28",
   "title": "",
@@ -381,7 +381,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex-span",
   "level": "2",
-  "url": "sec-1-3.html#ex-span",
+  "url": "Section-1-3.html#ex-span",
   "type": "Example",
   "number": "1.29",
   "title": "",
@@ -390,7 +390,7 @@ var ptx_lunr_docs = [
 {
   "id": "fig-plane-span",
   "level": "2",
-  "url": "sec-1-3.html#fig-plane-span",
+  "url": "Section-1-3.html#fig-plane-span",
   "type": "Figure",
   "number": "1.30",
   "title": "",
@@ -399,25 +399,25 @@ var ptx_lunr_docs = [
 {
   "id": "ex-span-membership",
   "level": "2",
-  "url": "sec-1-3.html#ex-span-membership",
+  "url": "Section-1-3.html#ex-span-membership",
   "type": "Example",
   "number": "1.31",
   "title": "",
   "body": "  Is in the span of and ?     Similar to , we form the augmented matrix and determine if there are any solutions. Note the following:   It follows that the system is inconsistent . Therefore, it is impossible to express as a linear combination of and . Thus, .   "
 },
 {
-  "id": "sec-1-4",
+  "id": "Section-1-4",
   "level": "1",
-  "url": "sec-1-4.html",
+  "url": "Section-1-4.html",
   "type": "Section",
   "number": "",
   "title": "1.4 The Matrix Equation <span class=\"process-math\">\\(A \\vec{x} = \\vec{b}\\)<\/span>",
-  "body": " 1.4 The Matrix Equation   1.4 The Matrix Equation    Overview   “Mathematics is the art of giving the same name to different things.”  H. Poincaré   In this section we introduce another way of expressing a linear system that we will use throughout this course.   Topics   Matrix notation for systems of equations.  The matrix product .     Goals   Compute matrix–vector products.  Express linear systems as vector equations and matrix equations.  Characterize linear systems and sets of vectors using span, linear combinations, and pivots.    Below is some math notation that will be used frequently throughout the course.     symbol  meaning     belongs to     the set of vectors with real-valued elements     the set of real-valued matrices with rows and columns     Example: the notation means that is a vector with five real-valued elements.     Linear Combinations   Matrix Vector Product as a Linear Combination   Let be an matrix with columns and let . The matrix vector product  is the following linear combination of the columns of :   In particular, lies in the span of the columns of .      Write the product below as a linear combination of column vectors.         Simplify the product below.           Equivalent Formulations of a Linear System   Let be an matrix with columns , let , and let . The solutions to   are the same as the solutions to the vector equation   which are the same as the solutions to the linear system with augmented matrix      The Existence of Solutions for the Matrix Equation   The equation has a solution if and only if is a linear combination of the columns of .     Consistency for all and pivots   The equation is consistent for every if and only if every row of has a pivot.        For what vectors does the equation have a solution?          For what values of is the system consistent for every possible choice of vector ?         Summary: Four Equivalent Views of a Linear System  We now have four equivalent ways of expressing linear systems.    A system of equations:     An augmented matrix:     A vector equation:     A matrix equation:     Each representation gives us a different way to think about linear systems.    "
+  "body": " 1.4 The Matrix Equation   1.4 The Matrix Equation    Overview   “Mathematics is the art of giving the same name to different things.”  H. Poincaré   In this section we introduce another way of expressing a linear system that we will use throughout this course.   Topics   Matrix notation for systems of equations.  The matrix product .     Goals   Compute matrix–vector products.  Express linear systems as vector equations and matrix equations.  Characterize linear systems and sets of vectors using span, linear combinations, and pivots.    Below is some math notation that will be used frequently throughout the course.     symbol  meaning     belongs to     the set of vectors with real-valued elements     the set of real-valued matrices with rows and columns     Example: the notation means that is a vector with five real-valued elements.     Linear Combinations   Matrix Vector Product as a Linear Combination   Let be an matrix with columns and let . The matrix vector product  is the following linear combination of the columns of :   In particular, lies in the span of the columns of .      Write the product below as a linear combination of column vectors.              Simplify the product below.                Equivalent Formulations of a Linear System   Let be an matrix with columns , let , and let . The solutions to   are the same as the solutions to the vector equation   which are the same as the solutions to the linear system with augmented matrix      The Existence of Solutions for the Matrix Equation   The equation has a solution if and only if is a linear combination of the columns of .     Consistency for all and pivots   The equation is consistent for every if and only if every row of has a pivot.        For what vectors does the equation have a solution?     By , the system if and only if is a linear combination of the columns of . Therefore, we have that Unfortunately, this description of is not too informative as we do not know exactly how \"big\" that span is. (We will understand more about how \"big\" a span is when we learn about dimension in Chapter 2.)  Let's augment with and row reduce to determine if we encounter any problems. Note the following:    By , the system is consistent if and only if . This is the defining characteristic for which lead to having a solution.  We could stop now, as we have answered the question, but notice we can work with the equation to get a more explicit description for . Solving for , we see that . We can think of this single equation in three variables as a system of linear equations. With this view, we see that variable is a pivot variable (which is why we solved for it), and variables and are free variables. By free variables, we literally mean that and can take on any values in . To emphasize this, I usually set my free variables equal to other variables, typically . So, we have and . (Again, the renaming of the free variables is not necessary, but I like to do it. You are free to keep the free variables named and .)  Now, we can solve for our pivot variable in terms of the free variables. So we get . Putting this all together, we see that the vectors which make the system consistent are precisely the following: This form of our answer is called the parametric vector form which will be covered in the next section.  Note that at the beginning, we saw that had to live in the span of the columns of . Now, we have learned a more descriptive way of describing in terms of span; that is, we have that In fact, we have that This means that the original span was actually only 2-dimensional and not 3-dimensional as it at first appeared.         For what values of is the system consistent for every possible choice of vector ?     By , we see that needs to have a pivot in every row. Note that     It follows that will have a pivot in every row if and only if . Therefore, the values of which make the system consistent for every possible are .       Summary: Four Equivalent Views of a Linear System  We now have four equivalent ways of expressing linear systems.    A system of equations:     An augmented matrix:     A vector equation:     A matrix equation:     Each representation gives us a different way to think about linear systems.    "
 },
 {
   "id": "sec-1-4-matrix-equation-2-4",
   "level": "2",
-  "url": "sec-1-4.html#sec-1-4-matrix-equation-2-4",
+  "url": "Section-1-4.html#sec-1-4-matrix-equation-2-4",
   "type": "Objectives",
   "number": "",
   "title": "Topics",
@@ -426,7 +426,7 @@ var ptx_lunr_docs = [
 {
   "id": "sec-1-4-matrix-equation-2-5",
   "level": "2",
-  "url": "sec-1-4.html#sec-1-4-matrix-equation-2-5",
+  "url": "Section-1-4.html#sec-1-4-matrix-equation-2-5",
   "type": "Objectives",
   "number": "",
   "title": "Goals",
@@ -435,7 +435,7 @@ var ptx_lunr_docs = [
 {
   "id": "sec-1-4-matrix-equation-2-7",
   "level": "2",
-  "url": "sec-1-4.html#sec-1-4-matrix-equation-2-7",
+  "url": "Section-1-4.html#sec-1-4-matrix-equation-2-7",
   "type": "Table",
   "number": "1.32",
   "title": "",
@@ -444,7 +444,7 @@ var ptx_lunr_docs = [
 {
   "id": "def-matrix-vector-product",
   "level": "2",
-  "url": "sec-1-4.html#def-matrix-vector-product",
+  "url": "Section-1-4.html#def-matrix-vector-product",
   "type": "Definition",
   "number": "1.33",
   "title": "Matrix Vector Product as a Linear Combination.",
@@ -453,25 +453,25 @@ var ptx_lunr_docs = [
 {
   "id": "sec-1-4-matrix-equation-3-3",
   "level": "2",
-  "url": "sec-1-4.html#sec-1-4-matrix-equation-3-3",
+  "url": "Section-1-4.html#sec-1-4-matrix-equation-3-3",
   "type": "Example",
   "number": "1.34",
   "title": "",
-  "body": "  Write the product below as a linear combination of column vectors.      "
+  "body": "  Write the product below as a linear combination of column vectors.           "
 },
 {
   "id": "sec-1-4-matrix-equation-3-4",
   "level": "2",
-  "url": "sec-1-4.html#sec-1-4-matrix-equation-3-4",
+  "url": "Section-1-4.html#sec-1-4-matrix-equation-3-4",
   "type": "Example",
   "number": "1.35",
   "title": "",
-  "body": "  Simplify the product below.      "
+  "body": "  Simplify the product below.           "
 },
 {
   "id": "thm-same-solutions",
   "level": "2",
-  "url": "sec-1-4.html#thm-same-solutions",
+  "url": "Section-1-4.html#thm-same-solutions",
   "type": "Theorem",
   "number": "1.36",
   "title": "Equivalent Formulations of a Linear System.",
@@ -480,7 +480,7 @@ var ptx_lunr_docs = [
 {
   "id": "thm-existence-span",
   "level": "2",
-  "url": "sec-1-4.html#thm-existence-span",
+  "url": "Section-1-4.html#thm-existence-span",
   "type": "Theorem",
   "number": "1.37",
   "title": "The Existence of Solutions for the Matrix Equation.",
@@ -489,7 +489,7 @@ var ptx_lunr_docs = [
 {
   "id": "thm-consistency-rows-pivots",
   "level": "2",
-  "url": "sec-1-4.html#thm-consistency-rows-pivots",
+  "url": "Section-1-4.html#thm-consistency-rows-pivots",
   "type": "Theorem",
   "number": "1.38",
   "title": "Consistency for all <span class=\"process-math\">\\(\\vec{b}\\)<\/span> and pivots.",
@@ -498,25 +498,25 @@ var ptx_lunr_docs = [
 {
   "id": "sec-1-4-matrix-equation-5-1",
   "level": "2",
-  "url": "sec-1-4.html#sec-1-4-matrix-equation-5-1",
+  "url": "Section-1-4.html#sec-1-4-matrix-equation-5-1",
   "type": "Example",
   "number": "1.39",
   "title": "",
-  "body": "  For what vectors does the equation have a solution?    "
+  "body": "  For what vectors does the equation have a solution?     By , the system if and only if is a linear combination of the columns of . Therefore, we have that Unfortunately, this description of is not too informative as we do not know exactly how \"big\" that span is. (We will understand more about how \"big\" a span is when we learn about dimension in Chapter 2.)  Let's augment with and row reduce to determine if we encounter any problems. Note the following:    By , the system is consistent if and only if . This is the defining characteristic for which lead to having a solution.  We could stop now, as we have answered the question, but notice we can work with the equation to get a more explicit description for . Solving for , we see that . We can think of this single equation in three variables as a system of linear equations. With this view, we see that variable is a pivot variable (which is why we solved for it), and variables and are free variables. By free variables, we literally mean that and can take on any values in . To emphasize this, I usually set my free variables equal to other variables, typically . So, we have and . (Again, the renaming of the free variables is not necessary, but I like to do it. You are free to keep the free variables named and .)  Now, we can solve for our pivot variable in terms of the free variables. So we get . Putting this all together, we see that the vectors which make the system consistent are precisely the following: This form of our answer is called the parametric vector form which will be covered in the next section.  Note that at the beginning, we saw that had to live in the span of the columns of . Now, we have learned a more descriptive way of describing in terms of span; that is, we have that In fact, we have that This means that the original span was actually only 2-dimensional and not 3-dimensional as it at first appeared.   "
 },
 {
   "id": "sec-1-4-matrix-equation-6-1",
   "level": "2",
-  "url": "sec-1-4.html#sec-1-4-matrix-equation-6-1",
+  "url": "Section-1-4.html#sec-1-4-matrix-equation-6-1",
   "type": "Example",
   "number": "1.40",
   "title": "",
-  "body": "  For what values of is the system consistent for every possible choice of vector ?     "
+  "body": "  For what values of is the system consistent for every possible choice of vector ?     By , we see that needs to have a pivot in every row. Note that     It follows that will have a pivot in every row if and only if . Therefore, the values of which make the system consistent for every possible are .   "
 },
 {
-  "id": "sec-1-5",
+  "id": "Section-1-5",
   "level": "1",
-  "url": "sec-1-5.html",
+  "url": "Section-1-5.html",
   "type": "Section",
   "number": "",
   "title": "1.5 Solution Sets of Linear Systems",
@@ -525,7 +525,7 @@ var ptx_lunr_docs = [
 {
   "id": "sec-1-5-homogeneous-2-2",
   "level": "2",
-  "url": "sec-1-5.html#sec-1-5-homogeneous-2-2",
+  "url": "Section-1-5.html#sec-1-5-homogeneous-2-2",
   "type": "Objectives",
   "number": "",
   "title": "Topics",
@@ -534,7 +534,7 @@ var ptx_lunr_docs = [
 {
   "id": "sec-1-5-homogeneous-2-3",
   "level": "2",
-  "url": "sec-1-5.html#sec-1-5-homogeneous-2-3",
+  "url": "Section-1-5.html#sec-1-5-homogeneous-2-3",
   "type": "Objectives",
   "number": "",
   "title": "Goals",
@@ -543,7 +543,7 @@ var ptx_lunr_docs = [
 {
   "id": "def-homogeneous",
   "level": "2",
-  "url": "sec-1-5.html#def-homogeneous",
+  "url": "Section-1-5.html#def-homogeneous",
   "type": "Definition",
   "number": "1.41",
   "title": "Homogeneous and inhomogeneous systems.",
@@ -552,7 +552,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex-homogeneous-1",
   "level": "2",
-  "url": "sec-1-5.html#ex-homogeneous-1",
+  "url": "Section-1-5.html#ex-homogeneous-1",
   "type": "Example",
   "number": "1.42",
   "title": "Identify free variables and solution set.",
@@ -561,7 +561,7 @@ var ptx_lunr_docs = [
 {
   "id": "sec-1-5-homogeneous-4-2",
   "level": "2",
-  "url": "sec-1-5.html#sec-1-5-homogeneous-4-2",
+  "url": "Section-1-5.html#sec-1-5-homogeneous-4-2",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -570,7 +570,7 @@ var ptx_lunr_docs = [
 {
   "id": "sec-1-5-homogeneous-4-5",
   "level": "2",
-  "url": "sec-1-5.html#sec-1-5-homogeneous-4-5",
+  "url": "Section-1-5.html#sec-1-5-homogeneous-4-5",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -579,115 +579,115 @@ var ptx_lunr_docs = [
 {
   "id": "ex-nonhomogeneous-1",
   "level": "2",
-  "url": "sec-1-5.html#ex-nonhomogeneous-1",
+  "url": "Section-1-5.html#ex-nonhomogeneous-1",
   "type": "Example",
   "number": "1.43",
   "title": "Parametric vector form and geometric interpretation.",
   "body": " Parametric vector form and geometric interpretation   Write the parametric vector form of the solution and give a geometric interpretation.   (Note: the left-hand side is the same as in the homogeneous system example.)    "
 },
 {
-  "id": "sec-1-7",
+  "id": "Section-1-7",
   "level": "1",
-  "url": "sec-1-7.html",
+  "url": "Section-1-7.html",
   "type": "Section",
   "number": "",
   "title": "1.7 Linear Independence",
   "body": " 1.7 Linear Independence   1.7 Linear Independence    Topics and Objectives   Topics   Linear independence  Geometric interpretation of linearly independent vectors     Goals   Characterize a set of vectors and linear systems using the concept of linear independence.  Construct dependence relations between linearly dependent vectors.     Motivating Question: What is the smallest number of vectors needed in a parametric solution to a linear system?   A set of vectors in is called linearly independent if the vector equation has only the trivial solution  . The set is said to be linearly dependent if there exist weights , not all zero , such that    Let . Then some equivalent definitions of linear independence are  only has the trivial solution.  has a pivot in every column.         For each of the following sets, determine if the set is linearly independent or linearly dependent.                         Two Important Facts   Any set containing the zero vector is linearly dependent.    Suppose are vectors in with . Then the set is linearly dependent.      Example 1   For what values of are the vectors   linearly dependent?     "
 },
 {
-  "id": "sec-1-7-2-2-2",
+  "id": "Section-1-7-2-2-2",
   "level": "2",
-  "url": "sec-1-7.html#sec-1-7-2-2-2",
+  "url": "Section-1-7.html#Section-1-7-2-2-2",
   "type": "Objectives",
   "number": "",
   "title": "Topics",
   "body": " Topics   Linear independence  Geometric interpretation of linearly independent vectors   "
 },
 {
-  "id": "sec-1-7-2-2-3",
+  "id": "Section-1-7-2-2-3",
   "level": "2",
-  "url": "sec-1-7.html#sec-1-7-2-2-3",
+  "url": "Section-1-7.html#Section-1-7-2-2-3",
   "type": "Objectives",
   "number": "",
   "title": "Goals",
   "body": " Goals   Characterize a set of vectors and linear systems using the concept of linear independence.  Construct dependence relations between linearly dependent vectors.   "
 },
 {
-  "id": "sec-1-7-2-2-5",
+  "id": "Section-1-7-2-2-5",
   "level": "2",
-  "url": "sec-1-7.html#sec-1-7-2-2-5",
+  "url": "Section-1-7.html#Section-1-7-2-2-5",
   "type": "Definition",
   "number": "1.44",
   "title": "",
   "body": " A set of vectors in is called linearly independent if the vector equation has only the trivial solution  . The set is said to be linearly dependent if there exist weights , not all zero , such that   "
 },
 {
-  "id": "sec-1-7-2-3-1",
+  "id": "Section-1-7-2-3-1",
   "level": "2",
-  "url": "sec-1-7.html#sec-1-7-2-3-1",
+  "url": "Section-1-7.html#Section-1-7-2-3-1",
   "type": "Example",
   "number": "1.45",
   "title": "",
   "body": "  For each of the following sets, determine if the set is linearly independent or linearly dependent.                      "
 },
 {
-  "id": "sec-1-7-2-4-2",
+  "id": "Section-1-7-2-4-2",
   "level": "2",
-  "url": "sec-1-7.html#sec-1-7-2-4-2",
+  "url": "Section-1-7.html#Section-1-7-2-4-2",
   "type": "Theorem",
   "number": "1.46",
   "title": "",
   "body": " Any set containing the zero vector is linearly dependent.  "
 },
 {
-  "id": "sec-1-7-2-4-3",
+  "id": "Section-1-7-2-4-3",
   "level": "2",
-  "url": "sec-1-7.html#sec-1-7-2-4-3",
+  "url": "Section-1-7.html#Section-1-7-2-4-3",
   "type": "Theorem",
   "number": "1.47",
   "title": "",
   "body": " Suppose are vectors in with . Then the set is linearly dependent.  "
 },
 {
-  "id": "sec-1-7-2-5-2",
+  "id": "Section-1-7-2-5-2",
   "level": "2",
-  "url": "sec-1-7.html#sec-1-7-2-5-2",
+  "url": "Section-1-7.html#Section-1-7-2-5-2",
   "type": "Example",
   "number": "1.48",
   "title": "",
   "body": " For what values of are the vectors   linearly dependent?  "
 },
 {
-  "id": "sec-1-8",
+  "id": "Section-1-8",
   "level": "1",
-  "url": "sec-1-8.html",
+  "url": "Section-1-8.html",
   "type": "Section",
   "number": "",
   "title": "1.8 An Introduction to Linear Transformations",
   "body": " 1.8 An Introduction to Linear Transformations   1.8 An Introduction to Linear Transformations    Topics and Objectives   Topics   The definition of a linear transformation.  Interpreting matrix multiplication as a linear transformation.     Goals   Construct and interpret linear transformations in (e.g., view a linear transformation as a projection or a shear).  Characterize linear transformations using:  existence and uniqueness,  domain, codomain, and range.         Let be an matrix. Define a function   A function of this form is called a matrix transformation .   The domain of is .  The codomain (or target ) of is .  The vector is the image of under .  The set of all possible images is the range of .     This yields another interpretation of the equation :   as a system of linear equations,  as an augmented matrix,  as a vector equation,  as a matrix equation,  as a linear transformation equation.      Functions from Calculus (and their graphs)  Many familiar functions have domain and codomain . For example, the sine function can be described by the rule   In calculus we often visualize a function via its graph: the horizontal axis represents the domain and the vertical axis the codomain.   Graph of function on the Cartesian plane.  Graph of on the interval with axes labeled and and a light grid.    This is fine when both domain and codomain are . If the domain is and the codomain is , we would need five dimensions to draw the full graph—so a geometric graph is not possible.     Example 1: Working with a Matrix Transformation    Let   Consider the matrix transformation .    Compute .    Find so that .     Give a vector for which there is no with .  Equivalently: Give a not in the range of , i.e., not in the span of the columns of .        Linear Transformations and Superposition   A function is linear if for all and all scalars :  ,  .     By linearity, for any scalars and vectors ,   This is the principle of superposition . In particular, once we know , we can compute for any .   Every matrix transformation is linear.      Example 2: Geometric Actions in \\m{\\mathbb{R}^2}    Suppose . Give a brief geometric description of the action of in for each matrix.               for        Example 3: Geometric Actions in \\m{\\mathbb{R}^3}   Describe the effect of on vectors in .                Example 4: Building the Matrix from Basis Images    A linear transformation satisfies   What is the matrix that represents ?      "
 },
 {
-  "id": "sec-1-8-2-2-2",
+  "id": "Section-1-8-2-2-2",
   "level": "2",
-  "url": "sec-1-8.html#sec-1-8-2-2-2",
+  "url": "Section-1-8.html#Section-1-8-2-2-2",
   "type": "Objectives",
   "number": "",
   "title": "Topics",
   "body": " Topics   The definition of a linear transformation.  Interpreting matrix multiplication as a linear transformation.   "
 },
 {
-  "id": "sec-1-8-2-2-3",
+  "id": "Section-1-8-2-2-3",
   "level": "2",
-  "url": "sec-1-8.html#sec-1-8-2-2-3",
+  "url": "Section-1-8.html#Section-1-8-2-2-3",
   "type": "Objectives",
   "number": "",
   "title": "Goals",
   "body": " Goals   Construct and interpret linear transformations in (e.g., view a linear transformation as a projection or a shear).  Characterize linear transformations using:  existence and uniqueness,  domain, codomain, and range.      "
 },
 {
-  "id": "sec-1-8-2-2-4",
+  "id": "Section-1-8-2-2-4",
   "level": "2",
-  "url": "sec-1-8.html#sec-1-8-2-2-4",
+  "url": "Section-1-8.html#Section-1-8-2-2-4",
   "type": "Definition",
   "number": "1.49",
   "title": "",
@@ -696,34 +696,34 @@ var ptx_lunr_docs = [
 {
   "id": "ex-1",
   "level": "2",
-  "url": "sec-1-8.html#ex-1",
+  "url": "Section-1-8.html#ex-1",
   "type": "Example",
   "number": "1.50",
   "title": "",
   "body": "  Let   Consider the matrix transformation .    Compute .    Find so that .     Give a vector for which there is no with .  Equivalently: Give a not in the range of , i.e., not in the span of the columns of .    "
 },
 {
-  "id": "sec-1-8-2-5-2",
+  "id": "Section-1-8-2-5-2",
   "level": "2",
-  "url": "sec-1-8.html#sec-1-8-2-5-2",
+  "url": "Section-1-8.html#Section-1-8-2-5-2",
   "type": "Definition",
   "number": "1.51",
   "title": "",
   "body": " A function is linear if for all and all scalars :  ,  .    "
 },
 {
-  "id": "sec-1-8-2-5-4",
+  "id": "Section-1-8-2-5-4",
   "level": "2",
-  "url": "sec-1-8.html#sec-1-8-2-5-4",
+  "url": "Section-1-8.html#Section-1-8-2-5-4",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "principle of superposition "
 },
 {
-  "id": "sec-1-8-2-5-5",
+  "id": "Section-1-8-2-5-5",
   "level": "2",
-  "url": "sec-1-8.html#sec-1-8-2-5-5",
+  "url": "Section-1-8.html#Section-1-8-2-5-5",
   "type": "Fact",
   "number": "1.52",
   "title": "",
@@ -732,7 +732,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex-2",
   "level": "2",
-  "url": "sec-1-8.html#ex-2",
+  "url": "Section-1-8.html#ex-2",
   "type": "Example",
   "number": "1.53",
   "title": "",
@@ -741,7 +741,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex-3",
   "level": "2",
-  "url": "sec-1-8.html#ex-3",
+  "url": "Section-1-8.html#ex-3",
   "type": "Example",
   "number": "1.54",
   "title": "",
@@ -750,7 +750,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex-4",
   "level": "2",
-  "url": "sec-1-8.html#ex-4",
+  "url": "Section-1-8.html#ex-4",
   "type": "Example",
   "number": "1.55",
   "title": "",
