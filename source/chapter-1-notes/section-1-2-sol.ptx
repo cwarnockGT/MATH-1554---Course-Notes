@@ -228,7 +228,7 @@
     </statement>
     <solution>
         <p>
-            Notice that the pivots are in columns 1, 3, and 4. So the pivot variables are <m> x_1, x_3, \text{ and } x_5</m>. Therefore, the free variables are <m>x_2 \text{ and } x_5</m>.
+            Notice that the pivots are in columns 1, 3, and 4. So the pivot variables are <m> x_1, x_3, \text{ and } x_4</m>. Therefore, the free variables are <m>x_2 \text{ and } x_5</m>.
         </p>
     </solution>
   </example>
