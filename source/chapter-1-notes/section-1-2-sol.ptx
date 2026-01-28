@@ -234,7 +234,7 @@
   </example>
 
   <!-- Theorem: existence and uniqueness -->
-  <theorem>
+  <theorem xml:id="thm-inconsistent-system"> 
     <title>Existence and Uniqueness of Solutions</title>
       <p>
         A linear system is consistent if and only if the last column of the <strong>augmented</strong> matrix does not have a pivot.
