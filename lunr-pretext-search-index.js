@@ -755,6 +755,132 @@ var ptx_lunr_docs = [
   "number": "1.55",
   "title": "",
   "body": "  A linear transformation satisfies   What is the matrix that represents ?   "
+},
+{
+  "id": "Section-1-9",
+  "level": "1",
+  "url": "Section-1-9.html",
+  "type": "Section",
+  "number": "",
+  "title": "1.9 More on Linear Transformations",
+  "body": " 1.9 More on Linear Transformations   1.9 More on Linear Transformation   Topics and Objectives   Comic showing a humorous matrix transformation.   Image credit: https:\/\/xkcd.com\/184      Topics   The standard vectors and the standard matrix .  Two and three dimensional transformations in more detail.  Onto and one-to-one transformations.     Goals   Identify and construct linear transformations of a matrix.  Characterize linear transformations as onto and\/or one-to-one.  Solve linear systems represented as linear transformations.  Express linear transformations in other forms, such as matrix equations or vector equations.     The Standard Vectors   The standard vectors in are the vectors .  They are:   For example, in :       Properties of Standard Vectors   Note: If is an matrix with columns , then   So multiplying a matrix by gives column of .   Example   Compute:      The Standard Matrix of a Linear Transformation   Let be a linear transformation. Then there is a unique matrix such that   In fact, is an matrix, and its th column is . That is,     The matrix is the standard matrix for the linear transformation .    Rotations    What is the linear transformation defined by rotates vectors counterclockwise by angle ?    There is a long list of geometric transformations of in many linear algebra texts (reflections, rotations, contractions and expansions, shears, projections, and more). Several are included at the end of this section.    Onto Linear Transformations   Onto   A linear transformation is onto if for every there exists such that .    Onto is an existence property : for any , the system has a solution (where is the standard matrix of ).  Examples   A rotation on the plane is onto.  A projection in the plane is not onto.    Onto: Equivalent Statements   For a linear transformation with standard matrix , the following are equivalent:   is onto.  The columns of span .  The matrix has a pivot in every row (equivalently, pivotal columns).       One-to-One Linear Transformations   One-to-One   A linear transformation is one-to-one if for every there is at most one (possibly none) such that .    One-to-one is a uniqueness property; it does not assert existence for all .  Examples   A rotation on the plane is one-to-one.  A projection in the plane is not one-to-one.    One-to-One: Equivalent Statements   For a linear transformation with standard matrix , the following are equivalent:   is one-to-one.  The unique solution to is .  The columns of are linearly independent.  Every column of is pivotal (equivalently, has no free variables).       Example: Complete the Matrices    Complete the matrices below by entering numbers into the missing entries so that the stated properties are satisfied. If it isn't possible, state why.      is a standard matrix for a one-to-one linear transformation.      is a standard matrix for an onto linear transformation.      is a standard matrix of a linear transformation that is one-to-one and onto.       Define a linear transformation by   Is one-to-one? Is onto?      Two Dimensional Examples: Reflections  Below are many examples of linear transformations from to .   Reflections Through Coordinate Axes   transformation  image of unit square  standard matrix    reflection through -axis    Unit square reflected across the horizontal axis.  Relection across        reflection through -axis     Unit square reflected across the vertical axis.  Relection across       reflection through     Unit square reflected across diagonal line passing through (0,0) and (1,1).  Reflection across .       reflection through     Unit square reflected across the diagonal line passing through (0,0) and (1,-1).  Reflection across .         Two Dimensional Examples: Contractions and Expansions   Horizontal Scaling   transformation  image of unit square  standard matrix    Horizontal contraction     Unit square compressed horizontally toward the vertical axis.  Horizontal contraction by factor with .     ,     Horizontal expansion     Unit square stretched horizontally away from the vertical axis.  Horizontal expansion by factor with .     ,     Vertical contraction     Unit square compressed vertically toward the horizontal axis.  Vertical contraction by factor with .     ,     Vertical expansion     Unit square stretched vertically away from the horizontal axis.  Vertical expansion by factor with .     ,       Two Dimensional Examples: Shearing   Horizontal Scaling   transformation  image of unit square  standard matrix    Horizontal shear (left)     Unit square sheared left by a horizontal shift.  Horizontal shear with parameter .    ,    Horizontal shear (right)     Unit square sheared right by a horizontal shift.  Horizontal shear with parameter .    ,    Vertical shear (down)     Unit square sheared downward by a vertical shift.  Vertical shear with parameter .    ,    Vertical shear (up)     Unit square sheared upward by a vertical shift.  Vertical shear with parameter .    ,      Two Dimensional Examples: Projections   Projections in the Plane   transformation  image of unit square  standard matrix    Projection onto the -axis     Unit square flattened onto the horizontal axis.  Projection onto -axis.       Projection onto the -axis     Unit square flattened onto the vertical axis.  Projection onto -axis.         "
+},
+{
+  "id": "p-1-9-title-topics-objectives-3",
+  "level": "2",
+  "url": "Section-1-9.html#p-1-9-title-topics-objectives-3",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   The standard vectors and the standard matrix .  Two and three dimensional transformations in more detail.  Onto and one-to-one transformations.   "
+},
+{
+  "id": "p-1-9-title-topics-objectives-4",
+  "level": "2",
+  "url": "Section-1-9.html#p-1-9-title-topics-objectives-4",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals   Identify and construct linear transformations of a matrix.  Characterize linear transformations as onto and\/or one-to-one.  Solve linear systems represented as linear transformations.  Express linear transformations in other forms, such as matrix equations or vector equations.   "
+},
+{
+  "id": "def-standard-vectors",
+  "level": "2",
+  "url": "Section-1-9.html#def-standard-vectors",
+  "type": "Definition",
+  "number": "1.56",
+  "title": "The Standard Vectors.",
+  "body": " The Standard Vectors   The standard vectors in are the vectors .  They are:   For example, in :    "
+},
+{
+  "id": "ex-aei-column",
+  "level": "2",
+  "url": "Section-1-9.html#ex-aei-column",
+  "type": "Example",
+  "number": "1.57",
+  "title": "Example.",
+  "body": " Example   Compute:    "
+},
+{
+  "id": "thm-standard-matrix",
+  "level": "2",
+  "url": "Section-1-9.html#thm-standard-matrix",
+  "type": "Theorem",
+  "number": "1.58",
+  "title": "The Standard Matrix of a Linear Transformation.",
+  "body": " The Standard Matrix of a Linear Transformation   Let be a linear transformation. Then there is a unique matrix such that   In fact, is an matrix, and its th column is . That is,    "
+},
+{
+  "id": "handout-section-1-9-matrix-linear-transformation-3-7",
+  "level": "2",
+  "url": "Section-1-9.html#handout-section-1-9-matrix-linear-transformation-3-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "standard matrix "
+},
+{
+  "id": "ex-rotation-theta",
+  "level": "2",
+  "url": "Section-1-9.html#ex-rotation-theta",
+  "type": "Example",
+  "number": "1.59",
+  "title": "",
+  "body": "  What is the linear transformation defined by rotates vectors counterclockwise by angle ?   "
+},
+{
+  "id": "def-onto",
+  "level": "2",
+  "url": "Section-1-9.html#def-onto",
+  "type": "Definition",
+  "number": "1.60",
+  "title": "Onto.",
+  "body": " Onto   A linear transformation is onto if for every there exists such that .   "
+},
+{
+  "id": "thm-onto-equivalences",
+  "level": "2",
+  "url": "Section-1-9.html#thm-onto-equivalences",
+  "type": "Theorem",
+  "number": "1.61",
+  "title": "Onto: Equivalent Statements.",
+  "body": " Onto: Equivalent Statements   For a linear transformation with standard matrix , the following are equivalent:   is onto.  The columns of span .  The matrix has a pivot in every row (equivalently, pivotal columns).    "
+},
+{
+  "id": "def-one-to-one",
+  "level": "2",
+  "url": "Section-1-9.html#def-one-to-one",
+  "type": "Definition",
+  "number": "1.62",
+  "title": "One-to-One.",
+  "body": " One-to-One   A linear transformation is one-to-one if for every there is at most one (possibly none) such that .   "
+},
+{
+  "id": "thm-one-to-one-equivalences",
+  "level": "2",
+  "url": "Section-1-9.html#thm-one-to-one-equivalences",
+  "type": "Theorem",
+  "number": "1.63",
+  "title": "One-to-One: Equivalent Statements.",
+  "body": " One-to-One: Equivalent Statements   For a linear transformation with standard matrix , the following are equivalent:   is one-to-one.  The unique solution to is .  The columns of are linearly independent.  Every column of is pivotal (equivalently, has no free variables).    "
+},
+{
+  "id": "p-1-9-fill-in-matrices-2",
+  "level": "2",
+  "url": "Section-1-9.html#p-1-9-fill-in-matrices-2",
+  "type": "Example",
+  "number": "1.64",
+  "title": "",
+  "body": "  Complete the matrices below by entering numbers into the missing entries so that the stated properties are satisfied. If it isn't possible, state why.      is a standard matrix for a one-to-one linear transformation.      is a standard matrix for an onto linear transformation.      is a standard matrix of a linear transformation that is one-to-one and onto.    "
+},
+{
+  "id": "ex-linear-transform-3d-onto-oto",
+  "level": "2",
+  "url": "Section-1-9.html#ex-linear-transform-3d-onto-oto",
+  "type": "Example",
+  "number": "1.65",
+  "title": "",
+  "body": "  Define a linear transformation by   Is one-to-one? Is onto?   "
 }
 ]
 
