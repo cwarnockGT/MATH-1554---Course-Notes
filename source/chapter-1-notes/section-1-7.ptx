@@ -17,10 +17,10 @@
 
     <objectives workspace="0.5in">
       <title>Goals</title>
-      <ol>
+      <ul>
         <li>Characterize a set of vectors and linear systems using the concept of linear independence.</li>
         <li>Construct dependence relations between linearly dependent vectors.</li>
-      </ol>
+      </ul>
     </objectives>
 
 

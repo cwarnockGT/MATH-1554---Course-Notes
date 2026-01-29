@@ -1,6 +1,6 @@
 
 <handout xml:id="handout-section-1-9-matrix-linear-transformation" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Section 1.9: Matrix of a Linear Transformation</title>
+  <title>1.9 More on Linear Transformation</title>
 
   <page xml:id="p-1-9-title-topics-objectives">
     <title>Topics and Objectives</title>
@@ -26,14 +26,14 @@
 
     <objectives workspace="0.5in">
       <title>Goals</title>
-      <ol>
+      <ul>
         <li>Identify and construct linear transformations of a matrix.</li>
       <li>Characterize linear transformations as onto and/or one-to-one.</li>
       <li>Solve linear systems represented as linear transformations.</li>
       <li>
         Express linear transformations in other forms, such as matrix equations or vector equations.
       </li>
-      </ol>
+      </ul>
     </objectives>
 
     <definition xml:id="def-standard-vectors" workspace="0.5in">

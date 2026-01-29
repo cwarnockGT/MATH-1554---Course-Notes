@@ -18,11 +18,11 @@
 
     <objectives workspace="0.5in">
       <title>Goals</title>
-      <ol>
+      <ul>
         <li>Characterize a linear system by the number of solutions and consistency.</li>
         <li>Apply elementary row operations to solve linear systems.</li>
         <li>Express a system as an augmented matrix.</li>
-      </ol>
+      </ul>
     </objectives>
   
     <definition>
