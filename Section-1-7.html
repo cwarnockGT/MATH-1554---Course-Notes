@@ -191,7 +191,10 @@ eBookConfig.enable_chatcodes =  false;
         </label><label><input type="radio" name="papersize" value="letter">Letter
         </label>
 </form>
-<details class="print-options"><summary>Additional printing options</summary><div class="header-footer-options">
+<details class="print-options"><summary>Additional printing options</summary><div class="hide-solutions-options"><div class="hide-option">
+<label for="hide-solution-checkbox">Hide solutions</label><input type="checkbox" id="hide-solution-checkbox">
+</div></div>
+<div class="header-footer-options">
 <div class="header-option">
 <span class="title">Print headers</span><label>First page<input type="checkbox" id="print-first-page-header-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-header-checkbox" checked></label>
 </div>
@@ -240,7 +243,8 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 <div class="workspace" data-space="0.5in"></div>
 <div class="autopermalink" data-description="Objectives: Goals"><a href="#Section-1-7-2-2-3" title="Copy heading and permalink for Objectives: Goals" aria-label="Copy heading and permalink for Objectives: Goals">🔗</a></div></article><div class="para" id="Section-1-7-2-2-4">
-<em class="emphasis">Motivating Question:</em> What is the smallest number of vectors needed in a parametric solution to a linear system?<div class="autopermalink" data-description="Paragraph"><a href="#Section-1-7-2-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<em class="emphasis">Motivating Question:</em> What is the smallest number of vectors needed in a parametric solution to a linear system?<div class="workspace" data-space="0.5in"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Section-1-7-2-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="Section-1-7-2-2-5"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.44</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -275,28 +279,147 @@ c_1 \vec v_1 + c_2 \vec v_2 + \cdots + c_k \vec v_k = \vec 0
 <div class="introduction" id="Section-1-7-2-3-1-1"><div class="para" id="Section-1-7-2-3-1-1-1">For each of the following sets, determine if the set is linearly independent or linearly dependent.<div class="autopermalink" data-description="Paragraph"><a href="#Section-1-7-2-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
 <article class="task exercise-like" id="Section-1-7-2-3-1-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<span class="process-math">\(\left\{\begin{bmatrix}1 \\ 0 \\ 1\end{bmatrix}, \begin{bmatrix} 2 \\ 2 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 2 \\ 1 \end{bmatrix} \right\}\)</span><div class="workspace" data-space="2in"></div>
+<span class="process-math">\(\left\{\begin{bmatrix}1 \\ 0 \\ 1\end{bmatrix}, \begin{bmatrix} 2 \\ 2 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 2 \\ 1 \end{bmatrix} \right\}\)</span><div class="solutions"><details id="Section-1-7-2-3-1-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Section-1-7-2-3-1-2-2-1">
+<div class="para">We will check if the matrix having these vectors as columns has a pivot in every column. Note that</div>
+<div class="displaymath process-math" id="Section-1-7-2-3-1-2-2-1-1">
+\begin{equation*}
+A = \begin{bmatrix} 1 \amp 2 \amp 0 \\ 0 \amp 2 \amp 2 \\ 1 \amp 0 \amp 1 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 2 \amp 0 \\ 0 \amp 1 \amp 1 \\ 0 \amp -2 \amp 1 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 2 \amp 0 \\ 0 \amp 1 \amp 1 \\ 0 \amp 0 \amp 3 \end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(A\)</span> has a pivot in every column, the system <span class="process-math">\(A\vec x = \vec 0\)</span> has only the trivial solution. Therefore, there is no nontrivial linear combination of the vectors which results in <span class="process-math">\(\vec 0\text{,}\)</span> so the vectors are <em class="emphasis">linearly independent</em>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Section-1-7-2-3-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.45.a.1"><a href="#Section-1-7-2-3-1-2-2" title="Copy heading and permalink for Solution 1.45.a.1" aria-label="Copy heading and permalink for Solution 1.45.a.1">🔗</a></div>
+</div></details></div>
+<div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Task 1.45.a"><a href="#Section-1-7-2-3-1-2" title="Copy heading and permalink for Task 1.45.a" aria-label="Copy heading and permalink for Task 1.45.a">🔗</a></div></article><article class="task exercise-like" id="Section-1-7-2-3-1-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para" id="Section-1-7-2-3-1-3-1-1">
 <span class="process-math">\(\left\{\begin{bmatrix}1 \\ 2 \\ 1\end{bmatrix}, \begin{bmatrix} 2 \\ 4 \\ 2 \end{bmatrix}\right\}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Section-1-7-2-3-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="Section-1-7-2-3-1-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Section-1-7-2-3-1-3-2-1">
+<div class="para">Note that</div>
+<div class="displaymath process-math" id="Section-1-7-2-3-1-3-2-1-1">
+\begin{equation*}
+B = \begin{bmatrix} 1 \amp 2 \\ 2 \amp 4 \\ 1 \amp 2 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 2 \\ 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(B\)</span> has a free column (column 2), there <em class="emphasis">must</em> be a nontrivial solution to <span class="process-math">\(A\vec x = \vec 0\text{.}\)</span> Every one of these nontrivial solutions gives a nontrivial linear combination of the vectors which result in <span class="process-math">\(\vec 0\text{.}\)</span> For example, we can write all solutions to <span class="process-math">\(A\vec x = \vec 0\)</span> in parametric vector form as <span class="process-math">\(\vec x = t\begin{bmatrix} -2 \\ 1 \end{bmatrix}\text{.}\)</span> Choosing <span class="process-math">\(t = 1\text{,}\)</span> we see that</div>
+<div class="displaymath process-math" id="Section-1-7-2-3-1-3-2-1-9">
+\begin{equation*}
+\begin{bmatrix} 1 \amp 2 \\ 2 \amp 4 \\ 1 \amp 2 \end{bmatrix} \begin{bmatrix} -2 \\ 1 \end{bmatrix} = \vec 0 \quad \implies \quad -2\begin{bmatrix} 1 \\ 2 \\ 1 \end{bmatrix} + 1\begin{bmatrix} 2 \\ 4 \\ 2 \end{bmatrix} = \vec 0
+\end{equation*}
+</div>
+<div class="para">Therefore, the vectors are <em class="emphasis">linearly dependent</em>. Note, we can solve for either of the two vectors above and rewrite it in terms of the other. For example, we have that</div>
+<div class="displaymath process-math" id="Section-1-7-2-3-1-3-2-1-11">
+\begin{equation*}
+\begin{bmatrix} 2 \\ 4 \\ 2\end{bmatrix} = 2\begin{bmatrix} 1 \\ 2\\ 1\end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Rewriting one vector in terms of the others is <em class="emphasis">always</em> possible for any linearly dependent set. Now, for some linearly dependent set, you can rewrite any of the vectors in terms of the others, but for some sets, only certain vectors in the set can be rewritten in terms of the others. One thing that is true: You can <em class="emphasis">always</em> rewrite any vector that corresponds to a free column in terms of the other vectors.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Section-1-7-2-3-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.45.b.1"><a href="#Section-1-7-2-3-1-3-2" title="Copy heading and permalink for Solution 1.45.b.1" aria-label="Copy heading and permalink for Solution 1.45.b.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Task 1.45.b"><a href="#Section-1-7-2-3-1-3" title="Copy heading and permalink for Task 1.45.b" aria-label="Copy heading and permalink for Task 1.45.b">🔗</a></div></article><article class="task exercise-like" id="Section-1-7-2-3-1-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
 <div class="para" id="Section-1-7-2-3-1-4-1-1">
 <span class="process-math">\(\left\{\begin{bmatrix}1 \\ 0 \\ 1\end{bmatrix}, \begin{bmatrix} 2 \\ 1 \\ 3 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix} \right\}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Section-1-7-2-3-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="Section-1-7-2-3-1-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Section-1-7-2-3-1-4-2-1">
+<div class="para">Note that</div>
+<div class="displaymath process-math" id="Section-1-7-2-3-1-4-2-1-1">
+\begin{equation*}
+C = \begin{bmatrix} 1 \amp 2 \amp 0 \\ 0 \amp 1 \amp 1 \\ 1 \amp 3 \amp 1 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 2 \amp 0 \\ 0 \amp 1 \amp 1 \\ 0 \amp 1 \amp 1 \end{bmatrix} \sim \begin{bmatrix}  1 \amp 0 \amp -2 \\ 0 \amp 1 \amp 1 \\ 0 \amp 0 \amp 0 \end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(C\)</span> is missing a pivot in column 3, the vectors are <em class="emphasis">linearly dependent</em>. The solutions to <span class="process-math">\(A\vec x = \vec 0\)</span> are</div>
+<div class="displaymath process-math" id="Section-1-7-2-3-1-4-2-1-5">
+\begin{equation*}
+\vec x = t\begin{bmatrix} 2 \\ -1 \\ 1 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Choosing <span class="process-math">\(t = 1\text{,}\)</span> we see that</div>
+<div class="displaymath process-math" id="Section-1-7-2-3-1-4-2-1-7">
+\begin{equation*}
+\begin{bmatrix} 1 \amp 2 \amp 0 \\ 0 \amp 1 \amp 1 \\ 1 \amp 3 \amp 1 \end{bmatrix} \begin{bmatrix} 2 \amp -1 \amp 1 \end{bmatrix} = \vec 0 \quad \implies \quad 2\begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix} - 1\begin{bmatrix} 2 \\ 1 \\ 3 \end{bmatrix} + 1\begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix} = \vec 0\text{.}
+\end{equation*}
+</div>
+<div class="para">We can solve this equation for any of the vectors, so let’s solve it for the second vector and show that it can be expressed as a linear combination of the other two.</div>
+<div class="displaymath process-math" id="Section-1-7-2-3-1-4-2-1-8">
+\begin{equation*}
+\begin{bmatrix}2 \\ 1 \\ 3 \end{bmatrix} = 2\begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix} + 1\begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Section-1-7-2-3-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.45.c.1"><a href="#Section-1-7-2-3-1-4-2" title="Copy heading and permalink for Solution 1.45.c.1" aria-label="Copy heading and permalink for Solution 1.45.c.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Task 1.45.c"><a href="#Section-1-7-2-3-1-4" title="Copy heading and permalink for Task 1.45.c" aria-label="Copy heading and permalink for Task 1.45.c">🔗</a></div></article><div class="autopermalink" data-description="Example 1.45"><a href="#Section-1-7-2-3-1" title="Copy heading and permalink for Example 1.45" aria-label="Copy heading and permalink for Example 1.45">🔗</a></div></article></section><section class="onepage" id="Section-1-7-2-4"><article class="theorem theorem-like" id="Section-1-7-2-4-2"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.46</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4>Any set containing the zero vector <span class="process-math">\(\vec 0\)</span> is linearly dependent.<div class="workspace" data-space="2in"></div>
+</h4>Any set containing the zero vector <span class="process-math">\(\vec 0\)</span> is linearly dependent.<details id="Section-1-7-2-4-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="Section-1-7-2-4-2-2-1">
+<div class="para">Consider the set <span class="process-math">\(\{\vec 0, \vec v_1, \dots, \vec v_n\}\text{.}\)</span> Then the following is a nontrivial linear combination of these vector which results in <span class="process-math">\(\vec 0\text{.}\)</span>
+</div>
+<div class="displaymath process-math" id="Section-1-7-2-4-2-2-1-3">
+\begin{equation*}
+(1)\vec 0 + (0)\vec v_1 + \cdots + (0)\vec v_n = \vec 0
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Section-1-7-2-4-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.46.1"><a href="#Section-1-7-2-4-2-2" title="Copy heading and permalink for Solution 1.46.1" aria-label="Copy heading and permalink for Solution 1.46.1">🔗</a></div>
+</div></details><div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Theorem 1.46"><a href="#Section-1-7-2-4-2" title="Copy heading and permalink for Theorem 1.46" aria-label="Copy heading and permalink for Theorem 1.46">🔗</a></div></article><article class="theorem theorem-like" id="Section-1-7-2-4-3"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.47</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4>Suppose <span class="process-math">\(\vec v_1, \ldots, \vec v_k\)</span> are vectors in <span class="process-math">\(\mathbb{R}^n\)</span> with <span class="process-math">\(k &gt; n\text{.}\)</span> Then the set <span class="process-math">\(\{\vec v_1, \ldots, \vec v_k\}\)</span> is linearly dependent.<div class="workspace" data-space="2in"></div>
+</h4>Suppose <span class="process-math">\(\vec v_1, \ldots, \vec v_n\)</span> are vectors in <span class="process-math">\(\mathbb{R}^m\)</span> with <span class="process-math">\(n &gt; m\text{.}\)</span> Then the set <span class="process-math">\(\{\vec v_1, \ldots, \vec v_n\}\)</span> is linearly dependent.<details id="Section-1-7-2-4-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="Section-1-7-2-4-3-2-1">Note that the matrix <span class="process-math">\(A = \begin{bmatrix} \vec v_1 \amp \cdots \amp \vec v_k \end{bmatrix}\)</span> is an <span class="process-math">\(m \times n\)</span> matrix. Since <span class="process-math">\(n &gt; m\text{,}\)</span> this matrix has more columns than rows. Therefore, there <em class="emphasis">must</em> be a column that doesn’t contain a pivot. Thus, the vectors <em class="emphasis">must</em> be linearly dependent.<div class="autopermalink" data-description="Paragraph"><a href="#Section-1-7-2-4-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.47.1"><a href="#Section-1-7-2-4-3-2" title="Copy heading and permalink for Solution 1.47.1" aria-label="Copy heading and permalink for Solution 1.47.1">🔗</a></div>
+</div></details><div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Theorem 1.47"><a href="#Section-1-7-2-4-3" title="Copy heading and permalink for Theorem 1.47" aria-label="Copy heading and permalink for Theorem 1.47">🔗</a></div></article></section><section class="onepage" id="Section-1-7-2-5"><article class="example example-like" id="Section-1-7-2-5-2"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.48</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>For what values of <span class="process-math">\(h\)</span> are the vectors <span class="process-math">\(\begin{bmatrix} 1 \\ 1 \\ h \end{bmatrix},
 \begin{bmatrix} 1 \\ h \\ 1 \end{bmatrix},
-\begin{bmatrix} h \\ 1 \\ 1 \end{bmatrix}\)</span> linearly dependent?<div class="autopermalink" data-description="Example 1.48"><a href="#Section-1-7-2-5-2" title="Copy heading and permalink for Example 1.48" aria-label="Copy heading and permalink for Example 1.48">🔗</a></div></article></section><div class="autopermalink" data-description="Worksheet: 1.7 Linear Independence"><a href="#Section-1-7-2" title="Copy heading and permalink for Worksheet: 1.7 Linear Independence" aria-label="Copy heading and permalink for Worksheet: 1.7 Linear Independence">🔗</a></div></section><div class="autopermalink" data-description="Section: 1.7 Linear Independence"><a href="#Section-1-7" title="Copy heading and permalink for Section: 1.7 Linear Independence" aria-label="Copy heading and permalink for Section: 1.7 Linear Independence">🔗</a></div></section>
+\begin{bmatrix} h \\ 1 \\ 1 \end{bmatrix}\)</span> linearly dependent?<div class="solutions"><details id="Section-1-7-2-5-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="Section-1-7-2-5-2-2-1">Note that<div class="autopermalink" data-description="Paragraph"><a href="#Section-1-7-2-5-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="Section-1-7-2-5-2-2-2">
+<span class="process-math">\(\begin{eqnarray*} A = \begin{bmatrix} 1 \amp 1 \amp h \\ 1 \amp h \amp 1 \\ h \amp 1 \amp 1 \end{bmatrix} \amp {\Huge \sim} \amp \begin{bmatrix} 1 \amp 1 \amp h \\ 0 \amp h-1 \amp 1 - h \\ 0 \amp 1 - h \amp 1 - h^2 \end{bmatrix}\\ \amp \overset{R_3 + R_2 \rightarrow R_3}{\Huge \sim} \amp \begin{bmatrix} 1 \amp 1 \amp h \\ 0 \amp h-1 \amp 1-h \\ 0 \amp 0 \amp 2 - h - h^2 \end{bmatrix}\end{eqnarray*}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#Section-1-7-2-5-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Section-1-7-2-5-2-2-3">
+<div class="para">We see that the second column of <span class="process-math">\(A\)</span> will correspond to a free variable if</div>
+<div class="displaymath process-math" id="Section-1-7-2-5-2-2-3-2">
+\begin{equation*}
+1 - h = 0 \quad \implies \quad h = 1
+\end{equation*}
+</div>
+<div class="para">and the third column of <span class="process-math">\(A\)</span> will corresponds to a free variable if</div>
+<div class="displaymath process-math" id="Section-1-7-2-5-2-2-3-4">
+\begin{equation*}
+2 - h - h^2 = 0 \quad \implies \quad (2+h)(1-h) = 0 \quad \implies \quad h = -2,1
+\end{equation*}
+</div>
+<div class="para">Therefore, the values of <span class="process-math">\(h\)</span> which make the vectors linear dependent are <span class="process-math">\(h = -2, 1\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Section-1-7-2-5-2-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="Section-1-7-2-5-2-2-4">
+<div class="para">Let’s check. If <span class="process-math">\(h = -2\text{,}\)</span> the vectors are <span class="process-math">\(\begin{bmatrix} 1 \\ 1\\ -2 \end{bmatrix}, \begin{bmatrix} 1 \\ -2 \\ 1 \end{bmatrix}, \begin{bmatrix} -2 \\ 1 \\ 1\end{bmatrix}\)</span> which are linearly dependent since</div>
+<div class="displaymath process-math" id="Section-1-7-2-5-2-2-4-3">
+\begin{equation*}
+1 \begin{bmatrix} 1 \\ 1\\ -2 \end{bmatrix} + 1\begin{bmatrix} 1 \\ -2 \\ 1 \end{bmatrix}+ 1 \begin{bmatrix} -2 \\ 1 \\ 1\end{bmatrix} = \vec 0
+\end{equation*}
+</div>
+<div class="para">If <span class="process-math">\(h = 1\text{,}\)</span> the vectors are <span class="process-math">\(\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}, \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}, \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}\)</span> which are definitely linearly dependent since they are the same vector.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#Section-1-7-2-5-2-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.48.1"><a href="#Section-1-7-2-5-2-2" title="Copy heading and permalink for Solution 1.48.1" aria-label="Copy heading and permalink for Solution 1.48.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 1.48"><a href="#Section-1-7-2-5-2" title="Copy heading and permalink for Example 1.48" aria-label="Copy heading and permalink for Example 1.48">🔗</a></div></article></section><div class="autopermalink" data-description="Worksheet: 1.7 Linear Independence"><a href="#Section-1-7-2" title="Copy heading and permalink for Worksheet: 1.7 Linear Independence" aria-label="Copy heading and permalink for Worksheet: 1.7 Linear Independence">🔗</a></div></section><div class="autopermalink" data-description="Section: 1.7 Linear Independence"><a href="#Section-1-7" title="Copy heading and permalink for Section: 1.7 Linear Independence" aria-label="Copy heading and permalink for Section: 1.7 Linear Independence">🔗</a></div></section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="Section-1-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="Section-1-8.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

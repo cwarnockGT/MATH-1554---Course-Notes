@@ -592,7 +592,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "1.7 Linear Independence",
-  "body": " 1.7 Linear Independence   1.7 Linear Independence    Topics and Objectives   Topics   Linear independence  Geometric interpretation of linearly independent vectors     Goals   Characterize a set of vectors and linear systems using the concept of linear independence.  Construct dependence relations between linearly dependent vectors.     Motivating Question: What is the smallest number of vectors needed in a parametric solution to a linear system?   A set of vectors in is called linearly independent if the vector equation has only the trivial solution  . The set is said to be linearly dependent if there exist weights , not all zero , such that    Let . Then some equivalent definitions of linear independence are  only has the trivial solution.  has a pivot in every column.         For each of the following sets, determine if the set is linearly independent or linearly dependent.                         Two Important Facts   Any set containing the zero vector is linearly dependent.    Suppose are vectors in with . Then the set is linearly dependent.      Example 1   For what values of are the vectors   linearly dependent?     "
+  "body": " 1.7 Linear Independence   1.7 Linear Independence    Topics and Objectives   Topics   Linear independence  Geometric interpretation of linearly independent vectors     Goals   Characterize a set of vectors and linear systems using the concept of linear independence.  Construct dependence relations between linearly dependent vectors.     Motivating Question: What is the smallest number of vectors needed in a parametric solution to a linear system?   A set of vectors in is called linearly independent if the vector equation has only the trivial solution  . The set is said to be linearly dependent if there exist weights , not all zero , such that    Let . Then some equivalent definitions of linear independence are  only has the trivial solution.  has a pivot in every column.         For each of the following sets, determine if the set is linearly independent or linearly dependent.        We will check if the matrix having these vectors as columns has a pivot in every column. Note that Since has a pivot in every column, the system has only the trivial solution. Therefore, there is no nontrivial linear combination of the vectors which results in , so the vectors are linearly independent .           Note that Since has a free column (column 2), there must be a nontrivial solution to . Every one of these nontrivial solutions gives a nontrivial linear combination of the vectors which result in . For example, we can write all solutions to in parametric vector form as . Choosing , we see that Therefore, the vectors are linearly dependent . Note, we can solve for either of the two vectors above and rewrite it in terms of the other. For example, we have that . Rewriting one vector in terms of the others is always possible for any linearly dependent set. Now, for some linearly dependent set, you can rewrite any of the vectors in terms of the others, but for some sets, only certain vectors in the set can be rewritten in terms of the others. One thing that is true: You can always rewrite any vector that corresponds to a free column in terms of the other vectors.           Note that Since is missing a pivot in column 3, the vectors are linearly dependent . The solutions to are . Choosing , we see that . We can solve this equation for any of the vectors, so let's solve it for the second vector and show that it can be expressed as a linear combination of the other two.        Two Important Facts   Any set containing the zero vector is linearly dependent.   Consider the set . Then the following is a nontrivial linear combination of these vector which results in .      Suppose are vectors in with . Then the set is linearly dependent.   Note that the matrix is an matrix. Since , this matrix has more columns than rows. Therefore, there must be a column that doesn't contain a pivot. Thus, the vectors must be linearly dependent.       Example 1   For what values of are the vectors   linearly dependent?   Note that     We see that the second column of will correspond to a free variable if and the third column of will corresponds to a free variable if Therefore, the values of which make the vectors linear dependent are .  Let's check. If , the vectors are which are linearly dependent since If , the vectors are which are definitely linearly dependent since they are the same vector.      "
 },
 {
   "id": "Section-1-7-2-2-2",
@@ -628,7 +628,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.45",
   "title": "",
-  "body": "  For each of the following sets, determine if the set is linearly independent or linearly dependent.                      "
+  "body": "  For each of the following sets, determine if the set is linearly independent or linearly dependent.        We will check if the matrix having these vectors as columns has a pivot in every column. Note that Since has a pivot in every column, the system has only the trivial solution. Therefore, there is no nontrivial linear combination of the vectors which results in , so the vectors are linearly independent .           Note that Since has a free column (column 2), there must be a nontrivial solution to . Every one of these nontrivial solutions gives a nontrivial linear combination of the vectors which result in . For example, we can write all solutions to in parametric vector form as . Choosing , we see that Therefore, the vectors are linearly dependent . Note, we can solve for either of the two vectors above and rewrite it in terms of the other. For example, we have that . Rewriting one vector in terms of the others is always possible for any linearly dependent set. Now, for some linearly dependent set, you can rewrite any of the vectors in terms of the others, but for some sets, only certain vectors in the set can be rewritten in terms of the others. One thing that is true: You can always rewrite any vector that corresponds to a free column in terms of the other vectors.           Note that Since is missing a pivot in column 3, the vectors are linearly dependent . The solutions to are . Choosing , we see that . We can solve this equation for any of the vectors, so let's solve it for the second vector and show that it can be expressed as a linear combination of the other two.     "
 },
 {
   "id": "Section-1-7-2-4-2",
@@ -637,7 +637,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "1.46",
   "title": "",
-  "body": " Any set containing the zero vector is linearly dependent.  "
+  "body": " Any set containing the zero vector is linearly dependent.   Consider the set . Then the following is a nontrivial linear combination of these vector which results in .    "
 },
 {
   "id": "Section-1-7-2-4-3",
@@ -646,7 +646,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "1.47",
   "title": "",
-  "body": " Suppose are vectors in with . Then the set is linearly dependent.  "
+  "body": " Suppose are vectors in with . Then the set is linearly dependent.   Note that the matrix is an matrix. Since , this matrix has more columns than rows. Therefore, there must be a column that doesn't contain a pivot. Thus, the vectors must be linearly dependent.   "
 },
 {
   "id": "Section-1-7-2-5-2",
@@ -655,7 +655,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.48",
   "title": "",
-  "body": " For what values of are the vectors   linearly dependent?  "
+  "body": " For what values of are the vectors   linearly dependent?   Note that     We see that the second column of will correspond to a free variable if and the third column of will corresponds to a free variable if Therefore, the values of which make the vectors linear dependent are .  Let's check. If , the vectors are which are linearly dependent since If , the vectors are which are definitely linearly dependent since they are the same vector.   "
 },
 {
   "id": "Section-1-8",
