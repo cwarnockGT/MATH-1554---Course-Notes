@@ -881,6 +881,177 @@ var ptx_lunr_docs = [
   "number": "1.65",
   "title": "",
   "body": "  Define a linear transformation by   Is one-to-one? Is onto?   "
+},
+{
+  "id": "Section-2-1",
+  "level": "1",
+  "url": "Section-2-1.html",
+  "type": "Section",
+  "number": "",
+  "title": "2.1 Matrix Operations",
+  "body": " 2.1 Matrix Operations   2.1 Matrix Operations   Topics and Objectives   Topics   Identity and zero matrices  Matrix algebra (sums and products, scalar multiplies, matrix powers)  Transpose of a matrix     Goals    Apply matrix algebra, the matrix transpose, and the zero and identity matrices, to solve and analyze matrix equations.     Zero Matrix   A zero matrix is any matrix whose every entry is zero.      Identity Matrix   The  identity matrix has ones on the main diagonal and zeros elsewhere.      Note: Any matrix with dimensions is square . Zero matrices need not be square; identity matrices must be square.    Sums and Scalar Multiples  Suppose , and is the element of in row and column .    If and are matrices, then the elements of are .    If , then the elements of are .      If   what are the values of and ?      Properties of Sums and Scalar Multiples  Scalar multiples and matrix addition have the expected properties. If are scalars and are matrices, then:          Matrix Product via Columns   Let be an matrix and be an matrix. The product is an matrix, given by     Note: The dimensions of and determine whether is defined, and what its dimensions will be.   Diagram showing how matrix dimensions match in a product.  A visual guide to when is defined based on inner dimensions.     Row-Column Rule   Row-Column Rule for Matrix Multiplication   If has rows and has columns , then each element of is        Compute the following using the row-column method.       Properties and Warnings   Properties and Warnings  Let be matrices of sizes needed for the products to be defined, and suppose is .   Associative:   Left distributive:   Right distributive:   Identity:    Warnings:    Non-commutative: In general, .    Non-cancellation:  does not imply .    Zero divisors:  does not imply or .     The associative property is . If , then:   Schematically:    Flow diagram comparing two ways to multiply matrices.  Diagram showing two ways of getting from to , either by or by direct multiplication by .   The product can be obtained either by multiplying by , or by multiplying by and then by . This corresponds to composition of linear transformations .    Example: Non-Commutativity    Let   Give an example of a matrix such that .      The Transpose of a Matrix   Transpose   The transpose is the matrix whose columns are the rows of .       Compute:      Properties of Matrix Transpose                 Example: Which Operations Are Defined?    Define   Which of these operations are defined, and what are the dimensions of the result?               Matrix Powers  For any matrix and positive integer , is the product of copies of .     Compute for       Compute for       Additional Examples     True or False. If false, explain briefly.     For any and any , .      For any and in , .       "
+},
+{
+  "id": "p-2-1-overview-2",
+  "level": "2",
+  "url": "Section-2-1.html#p-2-1-overview-2",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   Identity and zero matrices  Matrix algebra (sums and products, scalar multiplies, matrix powers)  Transpose of a matrix   "
+},
+{
+  "id": "p-2-1-overview-3",
+  "level": "2",
+  "url": "Section-2-1.html#p-2-1-overview-3",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals    Apply matrix algebra, the matrix transpose, and the zero and identity matrices, to solve and analyze matrix equations.   "
+},
+{
+  "id": "def-zero-matrix",
+  "level": "2",
+  "url": "Section-2-1.html#def-zero-matrix",
+  "type": "Definition",
+  "number": "2.1",
+  "title": "Zero Matrix.",
+  "body": " Zero Matrix   A zero matrix is any matrix whose every entry is zero.    "
+},
+{
+  "id": "def-identity-matrix",
+  "level": "2",
+  "url": "Section-2-1.html#def-identity-matrix",
+  "type": "Definition",
+  "number": "2.2",
+  "title": "Identity Matrix.",
+  "body": " Identity Matrix   The  identity matrix has ones on the main diagonal and zeros elsewhere.    "
+},
+{
+  "id": "p-2-1-overview-7",
+  "level": "2",
+  "url": "Section-2-1.html#p-2-1-overview-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "square "
+},
+{
+  "id": "ex-sum-scalar-find-c-k",
+  "level": "2",
+  "url": "Section-2-1.html#ex-sum-scalar-find-c-k",
+  "type": "Example",
+  "number": "2.3",
+  "title": "",
+  "body": "  If   what are the values of and ?   "
+},
+{
+  "id": "def-matrix-multiplication-columns",
+  "level": "2",
+  "url": "Section-2-1.html#def-matrix-multiplication-columns",
+  "type": "Definition",
+  "number": "2.4",
+  "title": "Matrix Product via Columns.",
+  "body": " Matrix Product via Columns   Let be an matrix and be an matrix. The product is an matrix, given by    "
+},
+{
+  "id": "thm-row-column-rule",
+  "level": "2",
+  "url": "Section-2-1.html#thm-row-column-rule",
+  "type": "Theorem",
+  "number": "2.5",
+  "title": "Row-Column Rule for Matrix Multiplication.",
+  "body": " Row-Column Rule for Matrix Multiplication   If has rows and has columns , then each element of is    "
+},
+{
+  "id": "ex-row-column-compute",
+  "level": "2",
+  "url": "Section-2-1.html#ex-row-column-compute",
+  "type": "Example",
+  "number": "2.6",
+  "title": "",
+  "body": "  Compute the following using the row-column method.    "
+},
+{
+  "id": "p-2-1-properties-multiplication-2",
+  "level": "2",
+  "url": "Section-2-1.html#p-2-1-properties-multiplication-2",
+  "type": "Theorem",
+  "number": "2.7",
+  "title": "Properties and Warnings.",
+  "body": " Properties and Warnings  Let be matrices of sizes needed for the products to be defined, and suppose is .   Associative:   Left distributive:   Right distributive:   Identity:    Warnings:    Non-commutative: In general, .    Non-cancellation:  does not imply .    Zero divisors:  does not imply or .    "
+},
+{
+  "id": "ex-noncomm-with-A",
+  "level": "2",
+  "url": "Section-2-1.html#ex-noncomm-with-A",
+  "type": "Example",
+  "number": "2.8",
+  "title": "",
+  "body": "  Let   Give an example of a matrix such that .   "
+},
+{
+  "id": "def-transpose",
+  "level": "2",
+  "url": "Section-2-1.html#def-transpose",
+  "type": "Definition",
+  "number": "2.9",
+  "title": "Transpose.",
+  "body": " Transpose   The transpose is the matrix whose columns are the rows of .   "
+},
+{
+  "id": "ex-transpose-compute",
+  "level": "2",
+  "url": "Section-2-1.html#ex-transpose-compute",
+  "type": "Example",
+  "number": "2.10",
+  "title": "",
+  "body": "  Compute:    "
+},
+{
+  "id": "ex-transpose-properties-fill",
+  "level": "2",
+  "url": "Section-2-1.html#ex-transpose-properties-fill",
+  "type": "Theorem",
+  "number": "2.11",
+  "title": "Properties of Matrix Transpose.",
+  "body": " Properties of Matrix Transpose              "
+},
+{
+  "id": "ex-which-operations-defined",
+  "level": "2",
+  "url": "Section-2-1.html#ex-which-operations-defined",
+  "type": "Example",
+  "number": "2.12",
+  "title": "",
+  "body": "  Define   Which of these operations are defined, and what are the dimensions of the result?            "
+},
+{
+  "id": "p-2-1-matrix-powers-4",
+  "level": "2",
+  "url": "Section-2-1.html#p-2-1-matrix-powers-4",
+  "type": "Example",
+  "number": "2.13",
+  "title": "",
+  "body": "  Compute for    "
+},
+{
+  "id": "ex-compute-c-power",
+  "level": "2",
+  "url": "Section-2-1.html#ex-compute-c-power",
+  "type": "Example",
+  "number": "2.14",
+  "title": "",
+  "body": "  Compute for    "
+},
+{
+  "id": "ex-tf-identity-factorization",
+  "level": "2",
+  "url": "Section-2-1.html#ex-tf-identity-factorization",
+  "type": "Example",
+  "number": "2.15",
+  "title": "",
+  "body": "   True or False. If false, explain briefly.     For any and any , .      For any and in , .    "
 }
 ]
 
