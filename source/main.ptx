@@ -24,6 +24,8 @@
         \usepackage{tikz-3dplot} 
         \usepackage{tikz}
         \usetikzlibrary{arrows.meta}
+        \usetikzlibrary{shapes,snakes}   
+        \usetikzlibrary{arrows,automata}
         \pgfplotsset{compat=1.9}
 
         \definecolor{Black}{rgb}{0.0,0.0,0.0} % 
@@ -44,8 +46,7 @@
     
     <xi:include href="./introduction.ptx" />
     <xi:include href="./chapter-1.ptx" />
-    <!-- <xi:include href="./solutions.ptx" /> -->
-    <!-- <xi:include href="./chapter-2.ptx" /> -->
+    <xi:include href="./chapter-2.ptx" />
   </book>
 
 </pretext>
