@@ -200,7 +200,10 @@ eBookConfig.enable_chatcodes =  false;
         </label><label><input type="radio" name="papersize" value="letter">Letter
         </label>
 </form>
-<details class="print-options"><summary>Additional printing options</summary><div class="header-footer-options">
+<details class="print-options"><summary>Additional printing options</summary><div class="hide-solutions-options"><div class="hide-option">
+<label for="hide-solution-checkbox">Hide solutions</label><input type="checkbox" id="hide-solution-checkbox">
+</div></div>
+<div class="header-footer-options">
 <div class="header-option">
 <span class="title">Print headers</span><label>First page<input type="checkbox" id="print-first-page-header-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-header-checkbox" checked></label>
 </div>
@@ -318,6 +321,20 @@ A\vec e_i = \vec v_i, \text{ for } i=1,2,\ldots,n.
 \end{bmatrix}\vec e_2.
 \end{equation*}
 </div>
+<div class="solutions"><details id="ex-aei-column-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-aei-column-3-1">
+<div class="para">Note that</div>
+<div class="displaymath process-math" id="ex-aei-column-3-1-1">
+\begin{equation*}
+\begin{bmatrix}1 \amp 2 \amp 3 \\ 4 \amp 5 \amp 6 \\ 7 \amp 8 \amp 9 \end{bmatrix}\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} = 0\begin{bmatrix} 1 \\ 4 \\ 7 \end{bmatrix} + 1\begin{bmatrix} 2 \\ 5 \\ 8 \end{bmatrix} + 0\begin{bmatrix} 3 \\ 6 \\ 9 \end{bmatrix} = \begin{bmatrix} 2 \\ 5 \\ 8 \end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">which is the second column of <span class="process-math">\(A\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-aei-column-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.57.1"><a href="#ex-aei-column-3" title="Copy heading and permalink for Solution 1.57.1" aria-label="Copy heading and permalink for Solution 1.57.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Example 1.57: Example"><a href="#ex-aei-column" title="Copy heading and permalink for Example 1.57: Example" aria-label="Copy heading and permalink for Example 1.57: Example">🔗</a></div></article><article class="theorem theorem-like" id="thm-standard-matrix"><h4 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.58</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Standard Matrix of a Linear Transformation.</span>
@@ -347,12 +364,135 @@ T(\vec e_1) \amp T(\vec e_2) \amp \cdots \amp T(\vec e_n)
 </h4>
 <div class="para" id="ex-rotation-theta-1-1">What is the linear transformation <span class="process-math">\(T:\mathbb{R}^2 \to \mathbb{R}^2\)</span> defined by “rotates vectors counterclockwise by angle <span class="process-math">\(\theta\)</span>”?<div class="autopermalink" data-description="Paragraph"><a href="#ex-rotation-theta-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="ex-rotation-theta-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-rotation-theta-2-1">Let us determine <span class="process-math">\(A\)</span> such that <span class="process-math">\(T(\vec x) = A\vec x \)</span> is rotation by <span class="process-math">\(\theta\)</span> degrees counterclockwise. By <a href="Section-1-9.html#thm-standard-matrix" class="xref" data-knowl="./knowl/xref/thm-standard-matrix.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.58: The Standard Matrix of a Linear Transformation">Theorem 1.58</a>, we need to determine <span class="process-math">\(T\left(\begin{bmatrix} 1 \\ 0 \end{bmatrix}\right)\)</span> and <span class="process-math">\(T\left(\begin{bmatrix} 0 \\ 1 \end{bmatrix}\right)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-rotation-theta-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-rotation-theta-2-2">
+<div class="para">First, note that <span class="process-math">\(T\left(\begin{bmatrix} 1 \\ 0 \end{bmatrix}\right)\)</span> is the vector in <span class="process-math">\(\mathbb{R}^2\)</span> obtained by rotating the vector <span class="process-math">\(\begin{bmatrix} 1 \\ 0 \end{bmatrix}\text{,}\)</span> which points in the direction of <span class="process-math">\(0^\circ\text{,}\)</span> by <span class="process-math">\(\theta\)</span> degrees counterclockwise. The resulting vector would have terminal end at the point on the unit circle whose angle is <span class="process-math">\(\theta\text{.}\)</span> Using trigonometry, this point is <span class="process-math">\((\cos(\theta), \sin(\theta))\text{.}\)</span> Therefore, we have that</div>
+<div class="displaymath process-math" id="ex-rotation-theta-2-2-8">
+\begin{equation*}
+T\left(\begin{bmatrix}1 \\ 0 \end{bmatrix}\right) = \begin{bmatrix} \cos(\theta) \\ \sin(\theta) \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-rotation-theta-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-rotation-theta-2-3">
+<div class="para">Next, note that <span class="process-math">\(T\left(\begin{bmatrix} 0 \\ 1 \end{bmatrix}\right)\)</span> is the vector in <span class="process-math">\(\mathbb{R}^2\)</span> obtained by rotating the vector <span class="process-math">\(\begin{bmatrix} 0 \\ 1 \end{bmatrix}\text{,}\)</span> which points in the direction of <span class="process-math">\(90^\circ\text{,}\)</span> by <span class="process-math">\(\theta\)</span> degrees counterclockwise. The resulting vector would have terminal end at the point on the unit circle whose angle is <span class="process-math">\(90^\circ + \theta\text{.}\)</span> It follows that this terminal point is <span class="process-math">\((\cos(90^\circ + \theta), \sin(90^\circ + \theta))\text{.}\)</span> Using the sum rule for sine and cosine, we see that this terminal point can be expressed as <span class="process-math">\((-\sin(\theta), \cos(\theta))\text{.}\)</span> Therefore, we have that</div>
+<div class="displaymath process-math" id="ex-rotation-theta-2-3-9">
+\begin{equation*}
+T\left(\begin{bmatrix} 0 \\ 1 \end{bmatrix}\right) = \begin{bmatrix} -\sin(\theta) \\ \cos(\theta) \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-rotation-theta-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-rotation-theta-2-4">
+<div class="para">Thus, we have that the matrix <span class="process-math">\(A \)</span> so that <span class="process-math">\(T(\vec x) = A\vec x \)</span> results in rotating the vector <span class="process-math">\(\vec x\)</span> by <span class="process-math">\(\theta\)</span> degrees counterclockwise is</div>
+<div class="displaymath process-math" id="ex-rotation-theta-2-4-5">
+\begin{equation*}
+A = \begin{bmatrix} \cos(\theta) \amp -\sin(\theta) \\ \sin(\theta) \amp \cos(\theta) \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-rotation-theta-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-rotation-theta-2-5">
+<div class="para">Let’s choose "nice" values of <span class="process-math">\(\theta\)</span> to test out our matrix <span class="process-math">\(A\text{.}\)</span>
+</div>
+<ul class="disc" id="ex-rotation-theta-2-5-3">
+<li id="ex-rotation-theta-2-5-3-1">
+<div class="para logical" id="ex-rotation-theta-2-5-3-1-1">
+<div class="para">If <span class="process-math">\(\theta = 0^\circ\text{,}\)</span> then</div>
+<div class="displaymath process-math" id="ex-rotation-theta-2-5-3-1-1-2">
+\begin{equation*}
+A = \begin{bmatrix} \cos(0^\circ) \amp -\sin(0^\circ) \\ \sin(0^\circ) \amp \cos(0^\circ) \end{bmatrix} = \begin{bmatrix} 1 \amp 0 \\ 0 \amp 1 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Note that <span class="process-math">\(T(\vec x) = A\vec x = \vec x\)</span> for all <span class="process-math">\(\vec x \in \mathbb{R}^2\text{,}\)</span> so <span class="process-math">\(T\)</span> does not change any input vector <span class="process-math">\(\vec x\text{.}\)</span> This makes sense since rotating a vector by <span class="process-math">\(0^\circ\)</span> doesn’t change the vector.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-rotation-theta-2-5-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-rotation-theta-2-5-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-rotation-theta-2-5-3-2">
+<div class="para logical" id="ex-rotation-theta-2-5-3-2-1">
+<div class="para">If <span class="process-math">\(\theta = 180^\circ\text{,}\)</span> then</div>
+<div class="displaymath process-math" id="ex-rotation-theta-2-5-3-2-1-2">
+\begin{equation*}
+A = \begin{bmatrix} \cos(180^\circ) \amp -\sin(180^\circ) \\ \sin(180^\circ) \amp \cos(180^\circ) \end{bmatrix} = \begin{bmatrix} -1 \amp 0 \\ 0 \amp -1 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Note that <span class="process-math">\(T(\vec x) = A\vec x = -\vec x\)</span> for all <span class="process-math">\(\vec x \in \mathbb{R}^2\text{,}\)</span> so <span class="process-math">\(T\)</span> makes each vector <span class="process-math">\(\vec x\)</span> point in the opposite direction. This makes sense since rotating a vector by <span class="process-math">\(180^\circ\)</span> also makes vectors point in the opposite direction.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-rotation-theta-2-5-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-rotation-theta-2-5-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-rotation-theta-2-5-3-3">
+<div class="para logical" id="ex-rotation-theta-2-5-3-3-1">
+<div class="para">If <span class="process-math">\(\theta = 90^\circ\text{,}\)</span> then</div>
+<div class="displaymath process-math" id="ex-rotation-theta-2-5-3-3-1-2">
+\begin{equation*}
+A = \begin{bmatrix} \cos(90^\circ) \amp -\sin(90^\circ) \\ \sin(90^\circ) \amp \cos(90^\circ) \end{bmatrix} = \begin{bmatrix} 0 \amp -1 \\ 1 \amp 0 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">To see if <span class="process-math">\(T(\vec x) = A\vec x\)</span> actually does rotate vectors counterclockwise by <span class="process-math">\(90^\circ\text{,}\)</span> let’s calculate <span class="process-math">\(T(\vec x)\)</span> for some special <span class="process-math">\(\vec x \in \mathbb{R}^2\text{.}\)</span>
+</div>
+<ul class="circle" id="ex-rotation-theta-2-5-3-3-1-7">
+<li id="ex-rotation-theta-2-5-3-3-1-7-1">
+<div class="para" id="p-derived-ex-rotation-theta-2-5-3-3-1-7-1">
+<span class="process-math">\(\vec x\)</span> pointing in the direction of <span class="process-math">\(0^\circ\text{:}\)</span><div class="displaymath process-math" id="ex-rotation-theta-2-5-3-3-1-7-1-3">
+\begin{equation*}
+T\left(\begin{bmatrix} 1 \\ 0 \end{bmatrix}\right) = \begin{bmatrix} 0 \amp -1 \\ 1 \amp 0 \end{bmatrix}\begin{bmatrix} 1 \\ 0 \end{bmatrix} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}
+\end{equation*}
+</div>which points in the direction of <span class="process-math">\(90^\circ\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-rotation-theta-2-5-3-3-1-7-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-rotation-theta-2-5-3-3-1-7-2">
+<div class="para" id="p-derived-ex-rotation-theta-2-5-3-3-1-7-2">
+<span class="process-math">\(\vec x\)</span> pointing in the direction of <span class="process-math">\(90^\circ\text{:}\)</span><div class="displaymath process-math" id="ex-rotation-theta-2-5-3-3-1-7-2-3">
+\begin{equation*}
+T\left(\begin{bmatrix} 0 \\ 1 \end{bmatrix}\right) = \begin{bmatrix} 0 \amp -1 \\ 1 \amp 0 \end{bmatrix}\begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} -1 \\ 0 \end{bmatrix}
+\end{equation*}
+</div>which points in the direction of <span class="process-math">\(180^\circ\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-rotation-theta-2-5-3-3-1-7-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-rotation-theta-2-5-3-3-1-7-3">
+<div class="para" id="p-derived-ex-rotation-theta-2-5-3-3-1-7-3">
+<span class="process-math">\(\vec x\)</span> pointing in the direction of <span class="process-math">\(30^\circ\text{:}\)</span><div class="displaymath process-math" id="ex-rotation-theta-2-5-3-3-1-7-3-3">
+\begin{equation*}
+T\left(\begin{bmatrix} \frac{\sqrt{3}}{2} \\ \frac{1}{2} \end{bmatrix}\right) = \begin{bmatrix} 0 \amp -1 \\ 1 \amp 0 \end{bmatrix}\begin{bmatrix} \frac{\sqrt{3}}{2} \\ \frac{1}{2} \end{bmatrix} = \begin{bmatrix} -\frac{1}{2} \\ \frac{\sqrt{3}}{2} \end{bmatrix}
+\end{equation*}
+</div>which points in the direction of <span class="process-math">\(120^\circ\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-rotation-theta-2-5-3-3-1-7-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-rotation-theta-2-5-3-3-1-7-4">
+<div class="para" id="p-derived-ex-rotation-theta-2-5-3-3-1-7-4">
+<span class="process-math">\(\vec x\)</span> pointing in the direction of <span class="process-math">\(45^\circ\text{:}\)</span><div class="displaymath process-math" id="ex-rotation-theta-2-5-3-3-1-7-4-3">
+\begin{equation*}
+T\left(\begin{bmatrix} \frac{\sqrt{2}}{2} \\ \frac{\sqrt{2}}{2} \end{bmatrix}\right) = \begin{bmatrix} 0 \amp -1 \\ 1 \amp 0 \end{bmatrix}\begin{bmatrix} \frac{\sqrt{2}}{2} \\ \frac{\sqrt{2}}{2} \end{bmatrix} = \begin{bmatrix} -\frac{\sqrt{2}}{2} \\ \frac{\sqrt{2}}{2} \end{bmatrix}
+\end{equation*}
+</div>which points in the direction of <span class="process-math">\(135^\circ\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-rotation-theta-2-5-3-3-1-7-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">These four examples provide evidence supporting that <span class="process-math">\(T(\vec x) = A\vec x\)</span> is rotating vectors counterclockwise by <span class="process-math">\(90^\circ\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-rotation-theta-2-5-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-rotation-theta-2-5-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-rotation-theta-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.59.1"><a href="#ex-rotation-theta-2" title="Copy heading and permalink for Solution 1.59.1" aria-label="Copy heading and permalink for Solution 1.59.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Example 1.59"><a href="#ex-rotation-theta" title="Copy heading and permalink for Example 1.59" aria-label="Copy heading and permalink for Example 1.59">🔗</a></div></article><div class="para" id="p-1-9-rotation-example-3">There is a long list of geometric transformations of <span class="process-math">\(\mathbb{R}^2\)</span> in many linear algebra texts (reflections, rotations, contractions and expansions, shears, projections, and more). Several are included at the end of this section.<div class="autopermalink" data-description="Paragraph"><a href="#p-1-9-rotation-example-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><section class="onepage" id="onto"><article class="definition definition-like" id="def-onto"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.60</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Onto.</span>
 </h4>
-<div class="para" id="def-onto-2-1">A linear transformation <span class="process-math">\(T:\mathbb{R}^n \to \mathbb{R}^m\)</span> is <em class="emphasis">onto</em> if for every <span class="process-math">\(\vec b\in \mathbb{R}^m\)</span> there exists <span class="process-math">\(\vec x\in \mathbb{R}^n\)</span> such that <span class="process-math">\(T(\vec x)=\vec b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-onto-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="def-onto-2-1">A linear transformation <span class="process-math">\(T:\mathbb{R}^n \to \mathbb{R}^m\)</span> is <dfn class="terminology">onto</dfn> if for every <span class="process-math">\(\vec b\in \mathbb{R}^m\)</span> there exists <span class="process-math">\(\vec x\in \mathbb{R}^n\)</span> such that <span class="process-math">\(T(\vec x)=\vec b\text{.}\)</span> In otherwords, a linear transformation is onto if the <em class="emphasis">range</em> of <span class="process-math">\(T\)</span> equals the <em class="emphasis">codomain</em> of <span class="process-math">\(T\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-onto-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Definition 1.60: Onto"><a href="#def-onto" title="Copy heading and permalink for Definition 1.60: Onto" aria-label="Copy heading and permalink for Definition 1.60: Onto">🔗</a></div></article><div class="para" id="onto-3">Onto is an <em class="emphasis">existence property</em>: for any <span class="process-math">\(\vec b\in\mathbb{R}^m\text{,}\)</span> the system <span class="process-math">\(A\vec x=\vec b\)</span> has a solution (where <span class="process-math">\(A\)</span> is the standard matrix of <span class="process-math">\(T\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#onto-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -392,7 +532,7 @@ T(\vec e_1) \amp T(\vec e_2) \amp \cdots \amp T(\vec e_n)
 <div class="autopermalink" data-description="Theorem 1.61: Onto: Equivalent Statements"><a href="#thm-onto-equivalences" title="Copy heading and permalink for Theorem 1.61: Onto: Equivalent Statements" aria-label="Copy heading and permalink for Theorem 1.61: Onto: Equivalent Statements">🔗</a></div></article></section><section class="onepage" id="one-to-one"><article class="definition definition-like" id="def-one-to-one"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.62</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">One-to-One.</span>
 </h4>
-<div class="para" id="def-one-to-one-2-1">A linear transformation <span class="process-math">\(T:\mathbb{R}^n \to \mathbb{R}^m\)</span> is <em class="emphasis">one-to-one</em> if for every <span class="process-math">\(\vec b\in\mathbb{R}^m\)</span> there is at most one (possibly none) <span class="process-math">\(\vec x\in\mathbb{R}^n\)</span> such that <span class="process-math">\(T(\vec x)=\vec b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-one-to-one-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="def-one-to-one-2-1">A linear transformation <span class="process-math">\(T:\mathbb{R}^n \to \mathbb{R}^m\)</span> is <dfn class="terminology">one-to-one</dfn> if for every <span class="process-math">\(\vec b\in\mathbb{R}^m\)</span> there is at most one (possibly none) <span class="process-math">\(\vec x\in\mathbb{R}^n\)</span> such that <span class="process-math">\(T(\vec x)=\vec b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-one-to-one-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Definition 1.62: One-to-One"><a href="#def-one-to-one" title="Copy heading and permalink for Definition 1.62: One-to-One" aria-label="Copy heading and permalink for Definition 1.62: One-to-One">🔗</a></div></article><div class="para" id="one-to-one-3">One-to-one is a <em class="emphasis">uniqueness</em> property; it does not assert existence for all <span class="process-math">\(\vec b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#one-to-one-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -448,6 +588,13 @@ A=
 \end{bmatrix}.
 \end{equation*}
 </div>
+<div class="solutions"><details id="p-1-9-fill-in-matrices-2-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="p-1-9-fill-in-matrices-2-2-2-1">It is not possible to make <span class="process-math">\(A\)</span> the standard matrix for a one-to-one linear transformation since doing so would require <span class="process-math">\(A\)</span> to have a pivot in every column which cannot happen since the number of pivots is at most 2 (restricted by the number of rows). In fact, it is <em class="emphasis">never</em> possible for a <span class="process-math">\(2 \times 3\)</span> matrix to represent a one-to-one linear transformation. Geometrically, this means that no linear transformation from <span class="process-math">\(\mathbb{R}^3\)</span> to <span class="process-math">\(\mathbb{R}^2\)</span> can bo one-to-one. This should make sense to be impossible since there are more input vectors (3 dimensions worth) than output vectors (2 dimensions worth) so many input vectors will correspond to the same output vector.<div class="autopermalink" data-description="Paragraph"><a href="#p-1-9-fill-in-matrices-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="p-1-9-fill-in-matrices-2-2-2-2">In this example, no matter how you fill in the blanks, you will always have a pivot in each row of <span class="process-math">\(A\text{.}\)</span> Therefore, <span class="process-math">\(A\)</span> will definitely represent an <em class="emphasis">onto</em> linear transformation.<div class="autopermalink" data-description="Paragraph"><a href="#p-1-9-fill-in-matrices-2-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.64.a.1"><a href="#p-1-9-fill-in-matrices-2-2-2" title="Copy heading and permalink for Solution 1.64.a.1" aria-label="Copy heading and permalink for Solution 1.64.a.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="0.1in"></div>
 <div class="autopermalink" data-description="Task 1.64.a"><a href="#p-1-9-fill-in-matrices-2-2" title="Copy heading and permalink for Task 1.64.a" aria-label="Copy heading and permalink for Task 1.64.a">🔗</a></div></article><article class="task exercise-like" id="p-1-9-fill-in-matrices-2-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <span class="process-math">\(B\)</span> is a <span class="process-math">\(3\times 2\)</span> standard matrix for an onto linear transformation.<div class="displaymath process-math" id="p-1-9-fill-in-matrices-2-3-1-3">
@@ -460,6 +607,13 @@ B=
 \end{bmatrix}.
 \end{equation*}
 </div>
+<div class="solutions"><details id="p-1-9-fill-in-matrices-2-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="p-1-9-fill-in-matrices-2-3-2-1">It is not possible for <span class="process-math">\(B\)</span> to represent an onto linear transformation since doing so would require <span class="process-math">\(B\)</span> to have a pivot in every row, which is not possible since <span class="process-math">\(B\)</span> can have at most 2 pivots (restricted by the number of columns). In fact, <em class="emphasis">no</em> <span class="process-math">\(3 \times 2\)</span> matrix can ever represent an onto linear transformation since the most pivots such a matrix could have is 2, which means at least one of the rows will be missing a pivot. Geometrically, this is saying that no linear transformation from <span class="process-math">\(\mathbb{R}^2\)</span> to <span class="process-math">\(\mathbb{R}^3\)</span> can bo onto. This should make sense to be impossible since there are fewer input vectors (2 dimensions worth) than output vectors (3 dimensions worth) so how could you cover all the codomain.<div class="autopermalink" data-description="Paragraph"><a href="#p-1-9-fill-in-matrices-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="p-1-9-fill-in-matrices-2-3-2-2">In this example, there is a way to fill in the blanks to make <span class="process-math">\(B\)</span> represent a one-to-one linear transformation, but also a way to fill in the blanks so that <span class="process-math">\(B\)</span> represents a non one-to-one linear transformation.<div class="autopermalink" data-description="Paragraph"><a href="#p-1-9-fill-in-matrices-2-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.64.b.1"><a href="#p-1-9-fill-in-matrices-2-3-2" title="Copy heading and permalink for Solution 1.64.b.1" aria-label="Copy heading and permalink for Solution 1.64.b.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="0.1in"></div>
 <div class="autopermalink" data-description="Task 1.64.b"><a href="#p-1-9-fill-in-matrices-2-3" title="Copy heading and permalink for Task 1.64.b" aria-label="Copy heading and permalink for Task 1.64.b">🔗</a></div></article><article class="task exercise-like" id="p-1-9-fill-in-matrices-2-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
 <span class="process-math">\(C\)</span> is a <span class="process-math">\(3\times 3\)</span> standard matrix of a linear transformation that is one-to-one and onto.<div class="displaymath process-math" id="p-1-9-fill-in-matrices-2-4-1-3">
@@ -472,6 +626,19 @@ C=
 \end{bmatrix}.
 \end{equation*}
 </div>
+<div class="solutions"><details id="p-1-9-fill-in-matrices-2-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="p-1-9-fill-in-matrices-2-4-2-1">
+<div class="para">Note that in order for <span class="process-math">\(C\)</span> to represent a one-to-one linear transformation, we need <span class="process-math">\(C\)</span> to have a pivot in every column. The matrix</div>
+<div class="displaymath process-math" id="p-1-9-fill-in-matrices-2-4-2-1-3">
+\begin{equation*}
+C = \begin{bmatrix} 1 \amp 1 \amp 1 \\ 0 \amp 1 \amp 1 \\ 0 \amp 0 \amp 1 \end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">has a pivot in every columns. Note that <span class="process-math">\(C\)</span> also has a pivot in every row, so it also represents an onto linear transformation. In fact, every square matrix that has a pivot in every column <em class="emphasis">must</em> also have a pivot in every row. Therefore, for square matrices, the matrix will either represent a linaer transformation which is both one-to-one and onto OR will represent a linear transformation that is neither one-to-one nor onto.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#p-1-9-fill-in-matrices-2-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.64.c.1"><a href="#p-1-9-fill-in-matrices-2-4-2" title="Copy heading and permalink for Solution 1.64.c.1" aria-label="Copy heading and permalink for Solution 1.64.c.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="0.1in"></div>
 <div class="autopermalink" data-description="Task 1.64.c"><a href="#p-1-9-fill-in-matrices-2-4" title="Copy heading and permalink for Task 1.64.c" aria-label="Copy heading and permalink for Task 1.64.c">🔗</a></div></article><div class="autopermalink" data-description="Example 1.64"><a href="#p-1-9-fill-in-matrices-2" title="Copy heading and permalink for Example 1.64" aria-label="Copy heading and permalink for Example 1.64">🔗</a></div></article><article class="example example-like" id="ex-linear-transform-3d-onto-oto"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.65</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -485,6 +652,31 @@ T(x_1,x_2)=(3x_1+x_2,\; 5x_1+7x_2,\; x_1+3x_2).
 </div>
 <div class="para" id="ex-linear-transform-3d-onto-oto-1-3">Is <span class="process-math">\(T\)</span> one-to-one? Is <span class="process-math">\(T\)</span> onto?<div class="autopermalink" data-description="Paragraph"><a href="#ex-linear-transform-3d-onto-oto-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="ex-linear-transform-3d-onto-oto-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-linear-transform-3d-onto-oto-2-1">
+<div class="para">Note that</div>
+<div class="displaymath process-math" id="ex-linear-transform-3d-onto-oto-2-1-1">
+\begin{equation*}
+T\left(\begin{bmatrix}x_1 \\ x_2 \end{bmatrix}\right) = \begin{bmatrix} 3x_1 + x_2 \\ 5x_1 + 7x_2 \\ x_1 + 3x_2 \end{bmatrix} = \begin{bmatrix} 3 \amp 1 \\ 5 \amp 7 \\ 1 \amp 3 \end{bmatrix}\begin{bmatrix} x_1 \\ x_2 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus, the matrix that represent <span class="process-math">\(T\)</span> is</div>
+<div class="displaymath process-math" id="ex-linear-transform-3d-onto-oto-2-1-3">
+\begin{equation*}
+A = \begin{bmatrix} 3 \amp 1 \\ 5 \amp 7 \\ 1 \amp 3 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Note that</div>
+<div class="displaymath process-math" id="ex-linear-transform-3d-onto-oto-2-1-4">
+\begin{equation*}
+\begin{bmatrix} 3 \amp 1 \\ 5 \amp 7 \\ 1 \amp 3 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 3 \\ 5 \amp 7 \\ 3 \amp 1 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 3 \\ 0 \amp -8 \\ 0 \amp -8 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 3 \\ 0 \amp 1 \\ 0 \amp 0 \end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">has a pivot in each column, but not a pivot in each row. Therefore, <span class="process-math">\(T\)</span> is a linear transformation which is one-to-one, but not onto.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-linear-transform-3d-onto-oto-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.65.1"><a href="#ex-linear-transform-3d-onto-oto-2" title="Copy heading and permalink for Solution 1.65.1" aria-label="Copy heading and permalink for Solution 1.65.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Example 1.65"><a href="#ex-linear-transform-3d-onto-oto" title="Copy heading and permalink for Example 1.65" aria-label="Copy heading and permalink for Example 1.65">🔗</a></div></article></section><section class="onepage" id="reflections-transformations"><div class="para" id="reflections-transformations-2">Below are many examples of linear transformations from <span class="process-math">\(\mathbb{R}^2\)</span> to <span class="process-math">\(\mathbb{R}^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#reflections-transformations-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
