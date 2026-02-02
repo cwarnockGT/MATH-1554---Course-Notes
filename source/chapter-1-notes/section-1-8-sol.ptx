@@ -138,7 +138,7 @@
           <statement><p>Compute <m>T(\vec u)</m>.</p></statement>
           <solution>
             <p>
-                Note <me>T(\vec u) = A\vec u = \begin{bmatrix} 1 \amp 1 \\ 0 \amp 1 \\ 1 \amp 1 \end{bmatrix}\begin{bmatrix} 3 \\ 4 \end{bmatrix} = 3\begin{bmatrix} 1 \\ 0 \\ 1\end{bmatrix} + 4\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} = \begin{bmatrix} 7 \\ 4 \\ 7 \end{bmatrix}</me> So, <m>T(\vec u) = \begin{bmatrix} 7 \\ 4 \\ 8 \end{bmatrix}</m>. Another way of saying this is <m>\begin{bmatrix} 7 \\ 4 \\ 7 \end{bmatrix}</m> is the image of <m>\begin{bmatrix} 3 \\ 4 \end{bmatrix}</m> under <m>T</m>.
+                Note <me>T(\vec u) = A\vec u = \begin{bmatrix} 1 \amp 1 \\ 0 \amp 1 \\ 1 \amp 1 \end{bmatrix}\begin{bmatrix} 3 \\ 4 \end{bmatrix} = 3\begin{bmatrix} 1 \\ 0 \\ 1\end{bmatrix} + 4\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} = \begin{bmatrix} 7 \\ 4 \\ 7 \end{bmatrix}</me> So, <m>T(\vec u) = \begin{bmatrix} 7 \\ 4 \\ 7 \end{bmatrix}</m>. Another way of saying this is <m>\begin{bmatrix} 7 \\ 4 \\ 7 \end{bmatrix}</m> is the image of <m>\begin{bmatrix} 3 \\ 4 \end{bmatrix}</m> under <m>T</m>.
             </p>
         </solution>
         </task>
