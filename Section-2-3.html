@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>2.3 The Invertible Matrix Theorem</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="MATH 1554 Course Notes - Spring 2026">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.12';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.0d5f811896ddeac1.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.e2abc79debce15fd.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="Warnock_MATH1554CourseNotes" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="notes.html"><span class="title">MATH 1554 Course Notes - Spring 2026</span></a></h1>
+<p class="byline"></p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="embed-button" class="embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><div class="embed-popup hidden" id="embed-popup">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<div class="embed-code-container">
+<textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div>
+</div>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="Section-2-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\foo}{b^{ar}}
+\newcommand{\aug}{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Linear Equations in Linear Algebra</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-1-1.html" class="internal"><span class="title">1.1 Systems of Linear Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-1-1.html#section-1-1-sol" class="internal"><span class="title">1.1 Systems of Linear Equations</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-1-2.html" class="internal"><span class="title">1.2 Row Reduction and Echelon Forms</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="Section-1-2.html#handout-1-2-sol" class="internal"><span class="title">1.2 Row Reduction and Echelon Forms</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-1-3.html" class="internal"><span class="title">1.3 Vector Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-1-3.html#sec-1-3-vector-equations" class="internal"><span class="title">1.3 Vector Equations</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-1-4.html" class="internal"><span class="title">1.4 The Matrix Equation <span class="process-math">\(A \vec{x} = \vec{b}\)</span></span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-1-4.html#sec-1-4-matrix-equation" class="internal"><span class="title">1.4 The Matrix Equation <span class="process-math">\(A \vec{x} = \vec{b}\)</span></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-1-5.html" class="internal"><span class="title">1.5 Solution Sets of Linear Systems</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="Section-1-5.html#sec-1-5-homogeneous" class="internal"><span class="title">1.5 Homogeneous Systems and Parametric Vector Forms</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-1-7.html" class="internal"><span class="title">1.7 Linear Independence</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="Section-1-7.html#Section-1-7-2" class="internal"><span class="title">1.7 Linear Independence</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-1-8.html" class="internal"><span class="title">1.8 An Introduction to Linear Transformations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-1-8.html#Section-1-8-2" class="internal"><span class="title">1.8 An Introduction to Linear Transformations</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-1-9.html" class="internal"><span class="title">1.9 More on Linear Transformations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-1-9.html#handout-section-1-9-matrix-linear-transformation" class="internal"><span class="title">1.9 More on Linear Transformation</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="chapter-2.html" class="internal"><span class="codenumber">2</span> <span class="title">Matrix Algebra</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-2-1.html" class="internal"><span class="title">2.1 Matrix Operations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-2-1.html#handout-section-2-1-matrix-algebra" class="internal"><span class="title">2.1 Matrix Operations</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-2-2.html" class="internal"><span class="title">2.2 Matrix Inverses</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-2-2.html#handout-section-2-2-matrix-inverses" class="internal"><span class="title">2.2 Matrix Inverses</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="Section-2-3.html" class="internal"><span class="title">2.3 The Invertible Matrix Theorem</span></a></div>
+<ul class="structural toc-item-list active"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-2-3.html#handout-section-2-3-imt" class="internal"><span class="title">2.3 The Invertible Matrix Theorem</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<div class="print-preview-header">
+<h2 class="print-preview">Print preview</h2>
+<div class="print-controls">
+<div class="print-controls-toggles">
+<form class="papersize-select" id="papersize-select">
+<span class="name">Paper size</span><label><input type="radio" name="papersize" value="a4">A4
+        </label><label><input type="radio" name="papersize" value="letter">Letter
+        </label>
+</form>
+<details class="print-options"><summary>Additional printing options</summary><div class="header-footer-options">
+<div class="header-option">
+<span class="title">Print headers</span><label>First page<input type="checkbox" id="print-first-page-header-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-header-checkbox" checked></label>
+</div>
+<div class="footer-option">
+<span class="title">Print footers</span><label>First page<input type="checkbox" id="print-first-page-footer-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-footer-checkbox" checked></label>
+</div>
+</div>
+<div class="highlight-workspace-option">
+<label for="highlight-workspace-checkbox">Highlight workspace</label><input type="checkbox" id="highlight-workspace-checkbox">
+</div></details>
+</div>
+<button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
+</div>
+</div>
+<section class="section" id="Section-2-3"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">2.3 The Invertible Matrix Theorem</span>
+</h2>
+<section class="handout" id="handout-section-2-3-imt" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
+<span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">2.3 The Invertible Matrix Theorem</span><div class="print-links"><a href="?printpreview=handout-section-2-3-imt" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+</h3>
+<section class="onepage" id="p-2-3-intro-objectives"><blockquote class="blockquote" id="quote-synonym">
+<div class="para" id="quote-synonym-1">A synonym is a word you use when you can’t spell the other one.<div class="autopermalink" data-description="Paragraph"><a href="#quote-synonym-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<cite class="attribution">―<div class="para" id="quote-synonym-2-1">Baltasar Gracián<div class="autopermalink" data-description="Paragraph"><a href="#quote-synonym-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></cite><div class="autopermalink" data-description="Quotation"><a href="#quote-synonym" title="Copy heading and permalink for Quotation" aria-label="Copy heading and permalink for Quotation">🔗</a></div>
+</blockquote>
+<div class="para" id="p-2-3-intro-objectives-3">The theorem introduced in this section provides many equivalent ways of describing the same idea. Depending on the context, some formulations will be more convenient than others.<div class="autopermalink" data-description="Paragraph"><a href="#p-2-3-intro-objectives-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="objectives goal-like" id="obj-2-3-topics-goals"><h4 class="heading">
+<span class="type">Objectives<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Topics</span>
+</h4>
+<ul class="disc" id="obj-2-3-topics-goals-2"><li id="obj-2-3-topics-goals-2-1">
+<div class="para" id="p-derived-obj-2-3-topics-goals-2-1">The Invertible Matrix Theorem which is a synthesis of previously introduced concepts.</div>
+<div class="autopermalink" data-description="Objective"><a href="#obj-2-3-topics-goals-2-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li></ul>
+<div class="autopermalink" data-description="Objectives: Topics"><a href="#obj-2-3-topics-goals" title="Copy heading and permalink for Objectives: Topics" aria-label="Copy heading and permalink for Objectives: Topics">🔗</a></div></article><article class="objectives goal-like" id="p-2-3-intro-objectives-5"><h4 class="heading">
+<span class="type">Objectives<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Goals</span>
+</h4>
+<ul class="disc" id="p-2-3-intro-objectives-5-2">
+<li id="p-2-3-intro-objectives-5-2-1">
+<div class="para" id="p-derived-p-2-3-intro-objectives-5-2-1">Characterize the invertibility of a matrix using the Invertible Matrix Theorem.</div>
+<div class="autopermalink" data-description="Objective"><a href="#p-2-3-intro-objectives-5-2-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="p-2-3-intro-objectives-5-2-2">
+<div class="para" id="p-derived-p-2-3-intro-objectives-5-2-2">Construct and give examples of matrices that are or are not invertible.</div>
+<div class="autopermalink" data-description="Objective"><a href="#p-2-3-intro-objectives-5-2-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Objectives: Goals"><a href="#p-2-3-intro-objectives-5" title="Copy heading and permalink for Objectives: Goals" aria-label="Copy heading and permalink for Objectives: Goals">🔗</a></div></article><div class="para" id="p-2-3-intro-objectives-6">
+<em class="emphasis">Motivating Question</em>: When is a square matrix invertible? Let me count the ways!<div class="autopermalink" data-description="Paragraph"><a href="#p-2-3-intro-objectives-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="onepage" id="p-2-3-imt-statement"><div class="para" id="p-2-3-imt-statement-2">Invertible matrices enjoy a rich set of equivalent descriptions.<div class="autopermalink" data-description="Paragraph"><a href="#p-2-3-imt-statement-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-invertible-matrix-theorem"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.26</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Invertible Matrix Theorem (IMT).</span>
+</h4>
+<div class="para" id="thm-invertible-matrix-theorem-2-1">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(n\times n\)</span> matrix. The following statements are equivalent.<div class="autopermalink" data-description="Paragraph"><a href="#thm-invertible-matrix-theorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha ol-marker-1" id="thm-invertible-matrix-theorem-2-2">
+<li id="thm-invertible-matrix-theorem-2-2-1">
+<div class="para" id="p-derived-thm-invertible-matrix-theorem-2-2-1">
+<span class="process-math">\(A\)</span> is invertible.</div>
+<div class="autopermalink" data-description="Item a"><a href="#thm-invertible-matrix-theorem-2-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="thm-invertible-matrix-theorem-2-2-2">
+<div class="para" id="p-derived-thm-invertible-matrix-theorem-2-2-2">
+<span class="process-math">\(A\)</span> is row equivalent to <span class="process-math">\(I_n\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#thm-invertible-matrix-theorem-2-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+<li id="thm-invertible-matrix-theorem-2-2-3">
+<div class="para" id="p-derived-thm-invertible-matrix-theorem-2-2-3">
+<span class="process-math">\(A\)</span> has <span class="process-math">\(n\)</span> pivotal columns.</div>
+<div class="autopermalink" data-description="Item c"><a href="#thm-invertible-matrix-theorem-2-2-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+</li>
+<li id="thm-invertible-matrix-theorem-2-2-4">
+<div class="para" id="p-derived-thm-invertible-matrix-theorem-2-2-4">
+<span class="process-math">\(A\vec x=\vec 0\)</span> has <em class="emphasis">only</em> the trivial solution.</div>
+<div class="autopermalink" data-description="Item d"><a href="#thm-invertible-matrix-theorem-2-2-4" title="Copy heading and permalink for Item d" aria-label="Copy heading and permalink for Item d">🔗</a></div>
+</li>
+<li id="thm-invertible-matrix-theorem-2-2-5">
+<div class="para" id="p-derived-thm-invertible-matrix-theorem-2-2-5">The columns of <span class="process-math">\(A\)</span> are linearly independent.</div>
+<div class="autopermalink" data-description="Item e"><a href="#thm-invertible-matrix-theorem-2-2-5" title="Copy heading and permalink for Item e" aria-label="Copy heading and permalink for Item e">🔗</a></div>
+</li>
+<li id="thm-invertible-matrix-theorem-2-2-6">
+<div class="para" id="p-derived-thm-invertible-matrix-theorem-2-2-6">The linear transformation <span class="process-math">\(\vec x \mapsto A\vec x\)</span> is one-to-one.</div>
+<div class="autopermalink" data-description="Item f"><a href="#thm-invertible-matrix-theorem-2-2-6" title="Copy heading and permalink for Item f" aria-label="Copy heading and permalink for Item f">🔗</a></div>
+</li>
+<li id="thm-invertible-matrix-theorem-2-2-7">
+<div class="para" id="p-derived-thm-invertible-matrix-theorem-2-2-7">The equation <span class="process-math">\(A\vec x=\vec b\)</span> has a solution for all <span class="process-math">\(\vec b\in\mathbb{R}^n\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item g"><a href="#thm-invertible-matrix-theorem-2-2-7" title="Copy heading and permalink for Item g" aria-label="Copy heading and permalink for Item g">🔗</a></div>
+</li>
+<li id="thm-invertible-matrix-theorem-2-2-8">
+<div class="para" id="p-derived-thm-invertible-matrix-theorem-2-2-8">The columns of <span class="process-math">\(A\)</span> span <span class="process-math">\(\mathbb{R}^n\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item h"><a href="#thm-invertible-matrix-theorem-2-2-8" title="Copy heading and permalink for Item h" aria-label="Copy heading and permalink for Item h">🔗</a></div>
+</li>
+<li id="thm-invertible-matrix-theorem-2-2-9">
+<div class="para" id="p-derived-thm-invertible-matrix-theorem-2-2-9">The linear transformation <span class="process-math">\(\vec x \mapsto A\vec x\)</span> is onto.</div>
+<div class="autopermalink" data-description="Item i"><a href="#thm-invertible-matrix-theorem-2-2-9" title="Copy heading and permalink for Item i" aria-label="Copy heading and permalink for Item i">🔗</a></div>
+</li>
+<li id="thm-invertible-matrix-theorem-2-2-10">
+<div class="para" id="p-derived-thm-invertible-matrix-theorem-2-2-10">There is an <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(C\)</span> such that <span class="process-math">\(CA=I_n\text{.}\)</span> (<span class="process-math">\(A\)</span> has a left inverse.)</div>
+<div class="autopermalink" data-description="Item j"><a href="#thm-invertible-matrix-theorem-2-2-10" title="Copy heading and permalink for Item j" aria-label="Copy heading and permalink for Item j">🔗</a></div>
+</li>
+<li id="thm-invertible-matrix-theorem-2-2-11">
+<div class="para" id="p-derived-thm-invertible-matrix-theorem-2-2-11">There is an <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(D\)</span> such that <span class="process-math">\(AD=I_n\text{.}\)</span> (<span class="process-math">\(A\)</span> has a right inverse.)</div>
+<div class="autopermalink" data-description="Item k"><a href="#thm-invertible-matrix-theorem-2-2-11" title="Copy heading and permalink for Item k" aria-label="Copy heading and permalink for Item k">🔗</a></div>
+</li>
+<li id="thm-invertible-matrix-theorem-2-2-12">
+<div class="para" id="p-derived-thm-invertible-matrix-theorem-2-2-12">
+<span class="process-math">\(A^T\)</span> is invertible.</div>
+<div class="autopermalink" data-description="Item l"><a href="#thm-invertible-matrix-theorem-2-2-12" title="Copy heading and permalink for Item l" aria-label="Copy heading and permalink for Item l">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Theorem 2.26: The Invertible Matrix Theorem (IMT)"><a href="#thm-invertible-matrix-theorem" title="Copy heading and permalink for Theorem 2.26: The Invertible Matrix Theorem (IMT)" aria-label="Copy heading and permalink for Theorem 2.26: The Invertible Matrix Theorem (IMT)">🔗</a></div></article></section><section class="onepage" id="p-2-3-invertibility-composition"><div class="para" id="p-2-3-invertibility-composition-2">The diagram below provides another perspective on the role of the inverse matrix.<div class="autopermalink" data-description="Paragraph"><a href="#p-2-3-invertibility-composition-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;">
+<img src="generated/latex-image/img-invertibility-composition.svg" role="img" class="contained" alt="Diagram showing a transformation undone by its inverse."><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="img-invertibility-composition-description">Diagram shows <span class="process-math">\(\vec x\text{,}\)</span> transformed by multiplication by <span class="process-math">\(A\text{,}\)</span> and reversed by multiplication by <span class="process-math">\(A^{-1}\text{.}\)</span>
+</div></details>
+</div>
+<div class="para logical" id="p-2-3-invertibility-composition-4">
+<div class="para">The matrix inverse <span class="process-math">\(A^{-1}\)</span> transforms <span class="process-math">\(A\vec x\)</span> back to <span class="process-math">\(\vec x\text{,}\)</span> because</div>
+<div class="displaymath process-math" id="p-2-3-invertibility-composition-4-4">
+\begin{equation*}
+A^{-1}(A\vec x)=(A^{-1}A)\vec x=\vec x.
+\end{equation*}
+</div>
+<div class="workspace" data-space="0.5in"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#p-2-3-invertibility-composition-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="p-2-3-invertibility-composition-5">
+<div class="para">Some comments on IMT:</div>
+<ul class="disc" id="p-2-3-invertibility-composition-5-1">
+<li id="p-2-3-invertibility-composition-5-1-1">
+<div class="para" id="p-derived-p-2-3-invertibility-composition-5-1-1">The Invertible Matrix Theorem divides all square matrices into two classes: invertible and non-invertible.</div>
+<div class="autopermalink" data-description="Item"><a href="#p-2-3-invertibility-composition-5-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="p-2-3-invertibility-composition-5-1-2">
+<div class="para" id="p-derived-p-2-3-invertibility-composition-5-1-2">As the course progresses, additional equivalent conditions involving determinants, eigenvalues, and other concepts will be added.</div>
+<div class="autopermalink" data-description="Item"><a href="#p-2-3-invertibility-composition-5-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="p-2-3-invertibility-composition-5-1-3">
+<div class="para" id="p-derived-p-2-3-invertibility-composition-5-1-3">Note that items (j) and (k) of the Invertible Matrix Theorem lead directly to the following result.</div>
+<div class="autopermalink" data-description="Item"><a href="#p-2-3-invertibility-composition-5-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#p-2-3-invertibility-composition-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-left-right-inverses"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.27</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Left and Right Inverses.</span>
+</h4>
+<div class="para" id="thm-left-right-inverses-2-1">If <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are <span class="process-math">\(n\times n\)</span> matrices and <span class="process-math">\(AB=I\text{,}\)</span> then both matrices are invertible, with <span class="process-math">\(B=A^{-1}\)</span> and <span class="process-math">\(A=B^{-1}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-left-right-inverses-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="0.5in"></div>
+<div class="autopermalink" data-description="Theorem 2.27: Left and Right Inverses"><a href="#thm-left-right-inverses" title="Copy heading and permalink for Theorem 2.27: Left and Right Inverses" aria-label="Copy heading and permalink for Theorem 2.27: Left and Right Inverses">🔗</a></div></article></section><section class="onepage" id="p-2-3-example-completion"><article class="example example-like" id="ex-check-invertible"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.28</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="ex-check-invertible-1-1">Is <span class="process-math">\(A\)</span> invertible?<div class="autopermalink" data-description="Paragraph"><a href="#ex-check-invertible-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-check-invertible-1-2">
+\begin{equation*}
+A = \begin{bmatrix}
+1 \amp 0 \amp -2\\
+3 \amp 1 \amp -2\\
+-5 \amp -1 \amp 9
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Example 2.28"><a href="#ex-check-invertible" title="Copy heading and permalink for Example 2.28" aria-label="Copy heading and permalink for Example 2.28">🔗</a></div></article><article class="example example-like" id="ex-matrix-completion-singular"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.29</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="ex-matrix-completion-singular-1-1">If possible, fill in the missing entries so that each matrix is singular (not invertible). If it is not possible, explain why.<div class="autopermalink" data-description="Paragraph"><a href="#ex-matrix-completion-singular-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-matrix-completion-singular-1-2">
+\begin{equation*}
+\begin{bmatrix}
+1 \amp 0 \amp 1\\
+1 \amp  \amp 1\\
+0 \amp 0 \amp 1
+\end{bmatrix},
+\qquad
+\begin{bmatrix}
+1 \amp  \amp 1\\
+0 \amp 1 \amp 1\\
+0 \amp 0 \amp 1
+\end{bmatrix},
+\qquad
+\begin{bmatrix}
+1 \amp 0 \amp 0\\
+0 \amp 1 \amp 1\\
+0 \amp  \amp 1
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Example 2.29"><a href="#ex-matrix-completion-singular" title="Copy heading and permalink for Example 2.29" aria-label="Copy heading and permalink for Example 2.29">🔗</a></div></article></section><div class="autopermalink" data-description="Handout: 2.3 The Invertible Matrix Theorem"><a href="#handout-section-2-3-imt" title="Copy heading and permalink for Handout: 2.3 The Invertible Matrix Theorem" aria-label="Copy heading and permalink for Handout: 2.3 The Invertible Matrix Theorem">🔗</a></div></section><div class="autopermalink" data-description="Section: 2.3 The Invertible Matrix Theorem"><a href="#Section-2-3" title="Copy heading and permalink for Section: 2.3 The Invertible Matrix Theorem" aria-label="Copy heading and permalink for Section: 2.3 The Invertible Matrix Theorem">🔗</a></div></section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="Section-2-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

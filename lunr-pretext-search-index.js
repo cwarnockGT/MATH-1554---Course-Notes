@@ -1178,6 +1178,69 @@ var ptx_lunr_docs = [
   "number": "2.25",
   "title": "Invertibility and Row Equivalence.",
   "body": " Invertibility and Row Equivalence   A matrix is invertible if and only if it is row equivalent to the identity matrix. In this case, any sequence of elementary row operations that transforms into , when applied to , generates .   "
+},
+{
+  "id": "Section-2-3",
+  "level": "1",
+  "url": "Section-2-3.html",
+  "type": "Section",
+  "number": "",
+  "title": "2.3 The Invertible Matrix Theorem",
+  "body": " 2.3 The Invertible Matrix Theorem   2.3 The Invertible Matrix Theorem   Overview   A synonym is a word you use when you can't spell the other one.   Baltasar Gracián    The theorem introduced in this section provides many equivalent ways of describing the same idea. Depending on the context, some formulations will be more convenient than others.   Topics   The Invertible Matrix Theorem which is a synthesis of previously introduced concepts.     Goals   Characterize the invertibility of a matrix using the Invertible Matrix Theorem.  Construct and give examples of matrices that are or are not invertible.    Motivating Question : When is a square matrix invertible? Let me count the ways!    The Invertible Matrix Theorem  Invertible matrices enjoy a rich set of equivalent descriptions.   The Invertible Matrix Theorem (IMT)   Let be an matrix. The following statements are equivalent.   is invertible.  is row equivalent to .  has pivotal columns.  has only the trivial solution.  The columns of are linearly independent.  The linear transformation is one-to-one.  The equation has a solution for all .  The columns of span .  The linear transformation is onto.  There is an matrix such that . ( has a left inverse.)  There is an matrix such that . ( has a right inverse.)  is invertible.       Invertibility and Composition  The diagram below provides another perspective on the role of the inverse matrix.    Diagram showing a transformation undone by its inverse.  Diagram shows , transformed by multiplication by , and reversed by multiplication by .   The matrix inverse transforms back to , because   Some comments on IMT:  The Invertible Matrix Theorem divides all square matrices into two classes: invertible and non-invertible.  As the course progresses, additional equivalent conditions involving determinants, eigenvalues, and other concepts will be added.  Note that items (j) and (k) of the Invertible Matrix Theorem lead directly to the following result.     Left and Right Inverses   If and are matrices and , then both matrices are invertible, with and .        Is invertible?       If possible, fill in the missing entries so that each matrix is singular (not invertible). If it is not possible, explain why.       "
+},
+{
+  "id": "obj-2-3-topics-goals",
+  "level": "2",
+  "url": "Section-2-3.html#obj-2-3-topics-goals",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   The Invertible Matrix Theorem which is a synthesis of previously introduced concepts.   "
+},
+{
+  "id": "p-2-3-intro-objectives-5",
+  "level": "2",
+  "url": "Section-2-3.html#p-2-3-intro-objectives-5",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals   Characterize the invertibility of a matrix using the Invertible Matrix Theorem.  Construct and give examples of matrices that are or are not invertible.   "
+},
+{
+  "id": "thm-invertible-matrix-theorem",
+  "level": "2",
+  "url": "Section-2-3.html#thm-invertible-matrix-theorem",
+  "type": "Theorem",
+  "number": "2.26",
+  "title": "The Invertible Matrix Theorem (IMT).",
+  "body": " The Invertible Matrix Theorem (IMT)   Let be an matrix. The following statements are equivalent.   is invertible.  is row equivalent to .  has pivotal columns.  has only the trivial solution.  The columns of are linearly independent.  The linear transformation is one-to-one.  The equation has a solution for all .  The columns of span .  The linear transformation is onto.  There is an matrix such that . ( has a left inverse.)  There is an matrix such that . ( has a right inverse.)  is invertible.    "
+},
+{
+  "id": "thm-left-right-inverses",
+  "level": "2",
+  "url": "Section-2-3.html#thm-left-right-inverses",
+  "type": "Theorem",
+  "number": "2.27",
+  "title": "Left and Right Inverses.",
+  "body": " Left and Right Inverses   If and are matrices and , then both matrices are invertible, with and .   "
+},
+{
+  "id": "ex-check-invertible",
+  "level": "2",
+  "url": "Section-2-3.html#ex-check-invertible",
+  "type": "Example",
+  "number": "2.28",
+  "title": "",
+  "body": "  Is invertible?    "
+},
+{
+  "id": "ex-matrix-completion-singular",
+  "level": "2",
+  "url": "Section-2-3.html#ex-matrix-completion-singular",
+  "type": "Example",
+  "number": "2.29",
+  "title": "",
+  "body": "  If possible, fill in the missing entries so that each matrix is singular (not invertible). If it is not possible, explain why.    "
 }
 ]
 
