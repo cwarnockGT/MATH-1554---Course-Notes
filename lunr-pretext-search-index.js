@@ -1052,6 +1052,132 @@ var ptx_lunr_docs = [
   "number": "2.15",
   "title": "",
   "body": "   True or False. If false, explain briefly.     For any and any , .      For any and in , .    "
+},
+{
+  "id": "Section-2-2",
+  "level": "1",
+  "url": "Section-2-2.html",
+  "type": "Section",
+  "number": "",
+  "title": "2.2 Matrix Inverses",
+  "body": " 2.2 Matrix Inverses   2.2 Matrix Inverses    Overview   Your scientists were so preoccupied with whether or not they could, they didn't stop to think if they should.   Spielberg and Crichton, Jurassic Park , 1993 film    The algorithm we introduce in this section could be used to compute the inverse of an matrix. At the end of the lecture we'll discuss some of the problems with our algorithm and why it can be difficult to compute a matrix inverse.   Topics   Inverse of a matrix, its algebraic properties, and its relation to solving systems of linear equations.  Elementary matrices and their role in calculating the matrix inverse.     Goals   Apply the formal definition of an inverse, and its algebraic properties, to solve and analyze linear systems.  Compute the inverse of an matrix, and use it to solve linear systems.  Construct elementary matrices.    Motivating Question : Is there a matrix such that     The Matrix Inverse   Invertible (Non-singular) Matrix   A matrix is invertible (or non-singular ) if there exists a matrix such that   If such a matrix exists, we write .     Inverse Formula for a Matrix   The matrix is invertible if and only if . In that case,       Find the inverse of the matrix below. Check that it truly is the inverse.       Inverse and Solving Linear Systems   Inverse and Unique Solutions   A matrix has an inverse if and only if for every , the system has a unique solution. In this case,       Solve the linear system.       Properties of the Matrix Inverse  Let and be invertible matrices.   (non-commutative!)      Example   True or false: .      An Algorithm for Computing  If and , we can compute with the following algorithm:  Row reduce the augmented matrix .  If the reduction has the form , then is invertible and . Otherwise, is not invertible.     Example   Compute the inverse of       Why Does This Work?  Why does the previous algorithm work? We can think of our algorithm as simultaneously solving linear systems:   Each column of is .    Elementary Matrices  We can also justify the algorithm by using elementary matrices.   Elementary Matrix   An elementary matrix  is one that differs from by exactly one elementary row operation.    Recall the elementary row operations:   Swap rows  Multiply a row by a non-zero scalar  Add a multiple of one row to another   Each operation can be represented by matrix multiplication using an elementary matrix .    Example: Identify an Elementary Matrix   Example   Suppose   By inspection, what is ? How does it compare to ?    Returning to why the algorithm works, applying a sequence of row operations to to obtain can be written as:   Thus, is the inverse matrix we seek.   Invertibility and Row Equivalence   A matrix is invertible if and only if it is row equivalent to the identity matrix. In this case, any sequence of elementary row operations that transforms into , when applied to , generates .      Using the Inverse to Solve a Linear System  Some final thoughts:   We could use to solve a linear system . We would compute and then solve by multiplying appropriately.  As many textbooks point out, is seldom used in practice: computing it can take a long time and may be prone to numerical error.  So why did we learn how to compute ? Later in the course, we use elementary matrices and properties of to derive results.  A recurring theme: just because we can do something a certain way, doesn't mean we should .     "
+},
+{
+  "id": "obj-2-2-topics-goals",
+  "level": "2",
+  "url": "Section-2-2.html#obj-2-2-topics-goals",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   Inverse of a matrix, its algebraic properties, and its relation to solving systems of linear equations.  Elementary matrices and their role in calculating the matrix inverse.   "
+},
+{
+  "id": "p-2-2-intro-objectives-5",
+  "level": "2",
+  "url": "Section-2-2.html#p-2-2-intro-objectives-5",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals   Apply the formal definition of an inverse, and its algebraic properties, to solve and analyze linear systems.  Compute the inverse of an matrix, and use it to solve linear systems.  Construct elementary matrices.   "
+},
+{
+  "id": "def-invertible",
+  "level": "2",
+  "url": "Section-2-2.html#def-invertible",
+  "type": "Definition",
+  "number": "2.16",
+  "title": "Invertible (Non-singular) Matrix.",
+  "body": " Invertible (Non-singular) Matrix   A matrix is invertible (or non-singular ) if there exists a matrix such that   If such a matrix exists, we write .   "
+},
+{
+  "id": "thm-inverse-2x2-formula",
+  "level": "2",
+  "url": "Section-2-2.html#thm-inverse-2x2-formula",
+  "type": "Theorem",
+  "number": "2.17",
+  "title": "Inverse Formula for a <span class=\"process-math\">\\(2\\times 2\\)<\/span> Matrix.",
+  "body": " Inverse Formula for a Matrix   The matrix is invertible if and only if . In that case,    "
+},
+{
+  "id": "ex-inverse-2x2",
+  "level": "2",
+  "url": "Section-2-2.html#ex-inverse-2x2",
+  "type": "Example",
+  "number": "2.18",
+  "title": "",
+  "body": "  Find the inverse of the matrix below. Check that it truly is the inverse.    "
+},
+{
+  "id": "thm-inverse-iff-unique-solution",
+  "level": "2",
+  "url": "Section-2-2.html#thm-inverse-iff-unique-solution",
+  "type": "Theorem",
+  "number": "2.19",
+  "title": "Inverse and Unique Solutions.",
+  "body": " Inverse and Unique Solutions   A matrix has an inverse if and only if for every , the system has a unique solution. In this case,    "
+},
+{
+  "id": "ex-solve-system-with-inverse",
+  "level": "2",
+  "url": "Section-2-2.html#ex-solve-system-with-inverse",
+  "type": "Example",
+  "number": "2.20",
+  "title": "",
+  "body": "  Solve the linear system.    "
+},
+{
+  "id": "ex-abc-inverse-order",
+  "level": "2",
+  "url": "Section-2-2.html#ex-abc-inverse-order",
+  "type": "Example",
+  "number": "2.21",
+  "title": "Example.",
+  "body": " Example   True or false: .   "
+},
+{
+  "id": "ex-compute-inverse-3x3",
+  "level": "2",
+  "url": "Section-2-2.html#ex-compute-inverse-3x3",
+  "type": "Example",
+  "number": "2.22",
+  "title": "Example.",
+  "body": " Example   Compute the inverse of    "
+},
+{
+  "id": "def-elementary-matrix",
+  "level": "2",
+  "url": "Section-2-2.html#def-elementary-matrix",
+  "type": "Definition",
+  "number": "2.23",
+  "title": "Elementary Matrix.",
+  "body": " Elementary Matrix   An elementary matrix  is one that differs from by exactly one elementary row operation.   "
+},
+{
+  "id": "p-2-2-elementary-matrices-6",
+  "level": "2",
+  "url": "Section-2-2.html#p-2-2-elementary-matrices-6",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "elementary matrix "
+},
+{
+  "id": "ex-find-E-by-inspection",
+  "level": "2",
+  "url": "Section-2-2.html#ex-find-E-by-inspection",
+  "type": "Example",
+  "number": "2.24",
+  "title": "Example.",
+  "body": " Example   Suppose   By inspection, what is ? How does it compare to ?   "
+},
+{
+  "id": "thm-invertible-iff-row-equivalent-identity",
+  "level": "2",
+  "url": "Section-2-2.html#thm-invertible-iff-row-equivalent-identity",
+  "type": "Theorem",
+  "number": "2.25",
+  "title": "Invertibility and Row Equivalence.",
+  "body": " Invertibility and Row Equivalence   A matrix is invertible if and only if it is row equivalent to the identity matrix. In this case, any sequence of elementary row operations that transforms into , when applied to , generates .   "
 }
 ]
 
