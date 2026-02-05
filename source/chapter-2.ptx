@@ -7,6 +7,10 @@
       <xi:include href="./chapter-2-notes/section-2-1.ptx" />
   </section>
 
+  <section xml:id="Section-2-2">
+    <title>2.2 Matrix Inverses</title>
+      <xi:include href="./chapter-2-notes/section-2-2.ptx" />
+  </section>
 
 
 
