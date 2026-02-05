@@ -12,6 +12,11 @@
       <xi:include href="./chapter-2-notes/section-2-2.ptx" />
   </section>
 
+  <section xml:id="Section-2-3">
+    <title>2.3 The Invertible Matrix Theorem</title>
+      <xi:include href="./chapter-2-notes/section-2-3.ptx" />
+  </section>
+
 
 
 
