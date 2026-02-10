@@ -1241,6 +1241,105 @@ var ptx_lunr_docs = [
   "number": "2.29",
   "title": "",
   "body": "  If possible, fill in the missing entries so that each matrix is singular (not invertible). If it is not possible, explain why.    "
+},
+{
+  "id": "Section-2-5",
+  "level": "1",
+  "url": "Section-2-5.html",
+  "type": "Section",
+  "number": "",
+  "title": "2.5 <span class=\"process-math\">\\(LU\\)<\/span> Factorization",
+  "body": " 2.5 Factorization   2.5 Factorization   Overview   Topics   The factorization of a matrix.  Using factorization to solve a system.  Why the factorization works.     Goals   Compute an factorization of a matrix.  Apply factorization to solve systems of equations.  Determine whether a matrix has an factorization.    We have learned several techniques for solving the equation . We could solve using , but this requires computing the inverse of an matrix, which becomes difficult for large . Gaussian elimination is better, but still inefficient for large systems.  More efficient and numerically stable methods rely on matrix factorizations. A matrix factorization (or matrix decomposition ) is a factorization of a matrix into a product of matrices. Such factorizations help solve and reveal matrix structure. Several matrix factorizations appear throughout this course. In this section, we factor a matrix into lower and upper triangular matrices.  A rectangular matrix is upper triangular if whenever .   A rectangular matrix is lower triangular if whenever .   Can you have a matrix that is both upper and lower triangular?    The Factorization   Factorization   If is an matrix that can be row reduced to echelon form without row exchanges, then there exists matrices and such that , where   is a lower triangular matrix with ones on the diagonal.  is an echelon form of .       If is a matrix, then its LU factorization has the form:     How do we find and ? Suppose can be row reduced to echelon form without interchanging rows. Then   where the are elementary row-operation matrices. These matrices are lower triangular and invertible. For example,   Therefore:     Algorithm for Computing  To compute an LU factorization:  Reduce to an echelon form using only row replacement operations. So no row swapping or scaling.  Place entries in so that the same sequence of row operations reduce to .  Note, in MATH 1554, the only allowed row replacement operation can be written in the form . The number is what should go into the row and column of , so .    Compute the LU factorization of:         Compute the LU factorization of:       Using the Decomposition  How do we use factorization to help us solve ?  If , then the equation can be written , or equivalently, . Setting , we do the following:   Forward substitution to solve for in .  Backward substitution to solve for in .     Solve the linear system with:       "
+},
+{
+  "id": "obj-2-5-topics-goals",
+  "level": "2",
+  "url": "Section-2-5.html#obj-2-5-topics-goals",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   The factorization of a matrix.  Using factorization to solve a system.  Why the factorization works.   "
+},
+{
+  "id": "p-2-5-intro-objectives-3",
+  "level": "2",
+  "url": "Section-2-5.html#p-2-5-intro-objectives-3",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals   Compute an factorization of a matrix.  Apply factorization to solve systems of equations.  Determine whether a matrix has an factorization.   "
+},
+{
+  "id": "p-2-5-intro-objectives-5",
+  "level": "2",
+  "url": "Section-2-5.html#p-2-5-intro-objectives-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "matrix factorization matrix decomposition "
+},
+{
+  "id": "p-2-5-intro-objectives-6",
+  "level": "2",
+  "url": "Section-2-5.html#p-2-5-intro-objectives-6",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "upper triangular "
+},
+{
+  "id": "p-2-5-intro-objectives-8",
+  "level": "2",
+  "url": "Section-2-5.html#p-2-5-intro-objectives-8",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "lower triangular "
+},
+{
+  "id": "thm-lu-factorization",
+  "level": "2",
+  "url": "Section-2-5.html#thm-lu-factorization",
+  "type": "Theorem",
+  "number": "2.30",
+  "title": "<span class=\"process-math\">\\(LU\\)<\/span> Factorization.",
+  "body": " Factorization   If is an matrix that can be row reduced to echelon form without row exchanges, then there exists matrices and such that , where   is a lower triangular matrix with ones on the diagonal.  is an echelon form of .    "
+},
+{
+  "id": "ex-lu-form",
+  "level": "2",
+  "url": "Section-2-5.html#ex-lu-form",
+  "type": "Example",
+  "number": "2.31",
+  "title": "",
+  "body": "  If is a matrix, then its LU factorization has the form:    "
+},
+{
+  "id": "ex-compute-lu",
+  "level": "2",
+  "url": "Section-2-5.html#ex-compute-lu",
+  "type": "Example",
+  "number": "2.32",
+  "title": "",
+  "body": "  Compute the LU factorization of:    "
+},
+{
+  "id": "ex-compute-lu2",
+  "level": "2",
+  "url": "Section-2-5.html#ex-compute-lu2",
+  "type": "Example",
+  "number": "2.33",
+  "title": "",
+  "body": "  Compute the LU factorization of:    "
+},
+{
+  "id": "ex-solve-with-lu",
+  "level": "2",
+  "url": "Section-2-5.html#ex-solve-with-lu",
+  "type": "Example",
+  "number": "2.34",
+  "title": "",
+  "body": "  Solve the linear system with:    "
 }
 ]
 
