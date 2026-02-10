@@ -17,18 +17,10 @@
       <xi:include href="./chapter-2-notes/section-2-3.ptx" />
   </section>
 
-
-
-
-
-   <!-- <section xml:id="test">
-    <title>TEST</title>
-      <xi:include href="./chapter-1-notes/test.ptx" />
-  </section> -->
-
-
-
-  
+  <section xml:id="Section-2-5">
+    <title>2.5 <m>LU</m> Factorization</title>
+      <xi:include href="./chapter-2-notes/section-2-5.ptx" />
+  </section>
   
 
 </chapter>
