@@ -889,7 +889,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "2.1 Matrix Operations",
-  "body": " 2.1 Matrix Operations   2.1 Matrix Operations   Topics and Objectives   Topics   Identity and zero matrices  Matrix algebra (sums and products, scalar multiplies, matrix powers)  Transpose of a matrix     Goals    Apply matrix algebra, the matrix transpose, and the zero and identity matrices, to solve and analyze matrix equations.     Zero Matrix   A zero matrix is any matrix whose every entry is zero.      Identity Matrix   The  identity matrix has ones on the main diagonal and zeros elsewhere.      Note: Any matrix with dimensions is square . Zero matrices need not be square; identity matrices must be square.    Sums and Scalar Multiples  Suppose , and is the element of in row and column .    If and are matrices, then the elements of are .    If , then the elements of are .      If   what are the values of and ?      Properties of Sums and Scalar Multiples  Scalar multiples and matrix addition have the expected properties. If are scalars and are matrices, then:          Matrix Product via Columns   Let be an matrix and be an matrix. The product is an matrix, given by     Note: The dimensions of and determine whether is defined, and what its dimensions will be.   Diagram showing how matrix dimensions match in a product.  A visual guide to when is defined based on inner dimensions.     Row-Column Rule   Row-Column Rule for Matrix Multiplication   If has rows and has columns , then each element of is        Compute the following using the row-column method.       Properties and Warnings   Properties and Warnings  Let be matrices of sizes needed for the products to be defined, and suppose is .   Associative:   Left distributive:   Right distributive:   Identity:    Warnings:    Non-commutative: In general, .    Non-cancellation:  does not imply .    Zero divisors:  does not imply or .     The associative property is . If , then:   Schematically:    Flow diagram comparing two ways to multiply matrices.  Diagram showing two ways of getting from to , either by or by direct multiplication by .   The product can be obtained either by multiplying by , or by multiplying by and then by . This corresponds to composition of linear transformations .    Example: Non-Commutativity    Let   Give an example of a matrix such that .      The Transpose of a Matrix   Transpose   The transpose is the matrix whose columns are the rows of .       Compute:      Properties of Matrix Transpose                 Example: Which Operations Are Defined?    Define   Which of these operations are defined, and what are the dimensions of the result?               Matrix Powers  For any matrix and positive integer , is the product of copies of .     Compute for       Compute for       Additional Examples     True or False. If false, explain briefly.     For any and any , .      For any and in , .       "
+  "body": " 2.1 Matrix Operations   2.1 Matrix Operations   Topics and Objectives   Topics   Identity and zero matrices  Matrix algebra (sums and products, scalar multiplies, matrix powers)  Transpose of a matrix     Goals    Apply matrix algebra, the matrix transpose, and the zero and identity matrices, to solve and analyze matrix equations.     Zero Matrix   A zero matrix is any matrix whose every entry is zero.      Identity Matrix   The  identity matrix has ones on the main diagonal and zeros elsewhere.      Note: Any matrix with dimensions is square . Zero matrices need not be square; identity matrices must be square.    Sums and Scalar Multiples  Suppose , and is the element of in row and column .    If and are matrices, then the elements of are .    If , then the elements of are .      If   what are the values of and ?    Note that we can use rules (a) and (b) above to combine the left expression and get the following equation: Setting corresponding entries equal to one another, we see that and .      Properties of Sums and Scalar Multiples  Scalar multiples and matrix addition have the expected properties. If are scalars and are matrices, then:          Matrix Product via Columns   Let be an matrix and be an matrix. The product is an matrix, given by     Note: The dimensions of and determine whether is defined, and what its dimensions will be.   Diagram showing how matrix dimensions match in a product.  A visual guide to when is defined based on inner dimensions.     Row-Column Rule   Row-Column Rule for Matrix Multiplication   If has rows and has columns , then each element of is        Compute the following using the row-column method.     Note that   Note that this method is faster than using the original definition of matrix multiplication given in . For example, to compute the first column of using the original definition, we would compute the following:       Properties and Warnings   Properties and Warnings  Let be matrices of sizes needed for the products to be defined, and suppose is .   Associative:   Left distributive:   Right distributive:   Identity:    Warnings:    Non-commutative: In general, .    Non-cancellation:  does not imply .    Zero divisors:  does not imply or .     The associative property is . If , then:   Schematically:    Flow diagram comparing two ways to multiply matrices.  Diagram showing two ways of getting from to , either by or by direct multiplication by .   The product can be obtained either by multiplying by , or by multiplying by and then by . This corresponds to composition of linear transformations .    Example: Non-Commutativity    Let   Give an example of a matrix such that .    Honestly, pretty much any matrix you choose at random will work. For example, let and note that , while . Therefore, .      The Transpose of a Matrix   Transpose   The transpose is the matrix whose columns are the rows of .       Compute:     We have that      Properties of Matrix Transpose                 Example: Which Operations Are Defined?    Define   Which of these operations are defined, and what are the dimensions of the result?      Note that is a matrix while is a matrix. Therefore, the sum is not defined.       First, we can use Property (d) from to write . Since is a matrix, we have that is a matrix. Since is a matrix, we have that is also a matrix. Thus, the product is the product of a matrix with a matrix with a matrix. Since all inner dimensions match, this product is defined.  Let's calculate the product. One thing to note, even though matrix multiplication is not commutative, it is associative (see ), so we can either simplify the product by either computing (mutliplying and first) or by computing (multiplying and first). I choose whichever looks easier. It follows that        Note that is a matrix, is a matrix, is a matrix, and is a matrix. Therefore, all of the inner dimensions of the product match and results in a matrix. It follows that is defined.  We will simply this expression by making use of the associative property and simplifying by first multiplying and , then multiplying the resulting matrices. Note        Matrix Powers  For any matrix and positive integer , is the product of copies of .     Compute for            Compute for     As we saw in , you cannot distribute the exponent to the individual entries in the matrix. For diagonal matrices, you actually can. Note that . Therefore, we have that . We will see an application of this to diagonalizable matrices in Section 5.3.      Additional Examples     True or False. If false, explain briefly.     Let . Then for any matrix , we have .    Recall from that the Distributive Property applies to matrix mutliplication and addition. Therefore, we start with the distributive property to simply the product. By the multiplicative property of the identity matrix, we have that and and . Recall from our properties of matrix multipliation that we are allowed to commute scalars with matrix multiplication, just not matrices with matrix multiplication. Therefore, we can factor out the and rewrite . It follows that since is the zero matrix, which doesn't change anything when you add it to a term. Therefore, we see that this statement is TRUE.      Let . For any matrices and , we have .    Proceeding in a similar manner to the problem above, we see that . We can rewrite and . Also, since matrix addition is commutative, we can move the terms and to the end. This leaves us with . Note that if , then we could combine the middle terms into . However, from the warning in , we see that matrix multiplication is often not commutative. Therefore, we cannot replace with . This leads us to believe the statement is false.  We can prove it is false by giving a counterexample. Probably, pretty much anything we try will work since matrix commutation is very rare. Let and . Note that   however,   Therefore, since for these particular matrices, the statement must be FALSE.       "
 },
 {
   "id": "p-2-1-overview-2",
@@ -943,7 +943,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.3",
   "title": "",
-  "body": "  If   what are the values of and ?   "
+  "body": "  If   what are the values of and ?    Note that we can use rules (a) and (b) above to combine the left expression and get the following equation: Setting corresponding entries equal to one another, we see that and .   "
 },
 {
   "id": "def-matrix-multiplication-columns",
@@ -970,12 +970,12 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.6",
   "title": "",
-  "body": "  Compute the following using the row-column method.    "
+  "body": "  Compute the following using the row-column method.     Note that   Note that this method is faster than using the original definition of matrix multiplication given in . For example, to compute the first column of using the original definition, we would compute the following:    "
 },
 {
-  "id": "p-2-1-properties-multiplication-2",
+  "id": "thm-properties-multiplication",
   "level": "2",
-  "url": "Section-2-1.html#p-2-1-properties-multiplication-2",
+  "url": "Section-2-1.html#thm-properties-multiplication",
   "type": "Theorem",
   "number": "2.7",
   "title": "Properties and Warnings.",
@@ -988,7 +988,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.8",
   "title": "",
-  "body": "  Let   Give an example of a matrix such that .   "
+  "body": "  Let   Give an example of a matrix such that .    Honestly, pretty much any matrix you choose at random will work. For example, let and note that , while . Therefore, .   "
 },
 {
   "id": "def-transpose",
@@ -1006,12 +1006,12 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.10",
   "title": "",
-  "body": "  Compute:    "
+  "body": "  Compute:     We have that    "
 },
 {
-  "id": "ex-transpose-properties-fill",
+  "id": "thm-transpose-properties",
   "level": "2",
-  "url": "Section-2-1.html#ex-transpose-properties-fill",
+  "url": "Section-2-1.html#thm-transpose-properties",
   "type": "Theorem",
   "number": "2.11",
   "title": "Properties of Matrix Transpose.",
@@ -1024,16 +1024,16 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.12",
   "title": "",
-  "body": "  Define   Which of these operations are defined, and what are the dimensions of the result?            "
+  "body": "  Define   Which of these operations are defined, and what are the dimensions of the result?      Note that is a matrix while is a matrix. Therefore, the sum is not defined.       First, we can use Property (d) from to write . Since is a matrix, we have that is a matrix. Since is a matrix, we have that is also a matrix. Thus, the product is the product of a matrix with a matrix with a matrix. Since all inner dimensions match, this product is defined.  Let's calculate the product. One thing to note, even though matrix multiplication is not commutative, it is associative (see ), so we can either simplify the product by either computing (mutliplying and first) or by computing (multiplying and first). I choose whichever looks easier. It follows that        Note that is a matrix, is a matrix, is a matrix, and is a matrix. Therefore, all of the inner dimensions of the product match and results in a matrix. It follows that is defined.  We will simply this expression by making use of the associative property and simplifying by first multiplying and , then multiplying the resulting matrices. Note     "
 },
 {
-  "id": "p-2-1-matrix-powers-4",
+  "id": "ex-compute-a-power",
   "level": "2",
-  "url": "Section-2-1.html#p-2-1-matrix-powers-4",
+  "url": "Section-2-1.html#ex-compute-a-power",
   "type": "Example",
   "number": "2.13",
   "title": "",
-  "body": "  Compute for    "
+  "body": "  Compute for         "
 },
 {
   "id": "ex-compute-c-power",
@@ -1042,7 +1042,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.14",
   "title": "",
-  "body": "  Compute for    "
+  "body": "  Compute for     As we saw in , you cannot distribute the exponent to the individual entries in the matrix. For diagonal matrices, you actually can. Note that . Therefore, we have that . We will see an application of this to diagonalizable matrices in Section 5.3.   "
 },
 {
   "id": "ex-tf-identity-factorization",
@@ -1051,7 +1051,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.15",
   "title": "",
-  "body": "   True or False. If false, explain briefly.     For any and any , .      For any and in , .    "
+  "body": "   True or False. If false, explain briefly.     Let . Then for any matrix , we have .    Recall from that the Distributive Property applies to matrix mutliplication and addition. Therefore, we start with the distributive property to simply the product. By the multiplicative property of the identity matrix, we have that and and . Recall from our properties of matrix multipliation that we are allowed to commute scalars with matrix multiplication, just not matrices with matrix multiplication. Therefore, we can factor out the and rewrite . It follows that since is the zero matrix, which doesn't change anything when you add it to a term. Therefore, we see that this statement is TRUE.      Let . For any matrices and , we have .    Proceeding in a similar manner to the problem above, we see that . We can rewrite and . Also, since matrix addition is commutative, we can move the terms and to the end. This leaves us with . Note that if , then we could combine the middle terms into . However, from the warning in , we see that matrix multiplication is often not commutative. Therefore, we cannot replace with . This leads us to believe the statement is false.  We can prove it is false by giving a counterexample. Probably, pretty much anything we try will work since matrix commutation is very rare. Let and . Note that   however,   Therefore, since for these particular matrices, the statement must be FALSE.    "
 },
 {
   "id": "Section-2-2",
