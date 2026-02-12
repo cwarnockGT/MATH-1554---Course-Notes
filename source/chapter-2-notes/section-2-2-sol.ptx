@@ -49,6 +49,8 @@
       </ul>
       </objectives>
 
+      <p><nbsp/></p>
+
       <p><em>Motivating Question</em>: Is there a matrix <m>A</m> such that
       </p>
       <me>
@@ -58,6 +60,8 @@
           0 \amp -1 \amp 2
         \end{bmatrix}A = I_3\; ?
       </me>
+
+      <p><nbsp/></p>
   </page>
 
 
@@ -77,6 +81,8 @@
         </p>
       </statement>
     </definition>
+
+    <p><nbsp/></p>
 
     <theorem xml:id="thm-inverse-2x2-formula" workspace="0.2in">
       <title>Inverse Formula for a <m>2\times 2</m> Matrix</title>
@@ -114,6 +120,8 @@
       </solution>
     </theorem>
 
+    <p><nbsp/></p>
+
 
     <example xml:id="ex-inverse-2x2" workspace="true">
       <statement>
@@ -131,6 +139,8 @@
         </p>
       </solution>
     </example>
+
+    <p><nbsp/></p>
   </page>
 
 
@@ -154,6 +164,8 @@
       </solution>
     </theorem>
 
+    <p><nbsp/></p>
+
 
     <example xml:id="ex-solve-system-with-inverse" workspace="true">
       <statement>
@@ -172,6 +184,8 @@
         </p>
       </solution>
     </example>
+
+    <p><nbsp/></p>
   </page>
 
 
@@ -179,7 +193,7 @@
     <title>Properties of the Matrix Inverse</title>
 
     <p workspace="true">
-      Let <m>A</m> and <m>B</m> be invertible <m>n\times n</m> matrices.
+      Let <m>A</m> and <m>B</m> be invertible <m>n\times n</m> matrices. Then
     
       <ul>
       <li><m>(A^{-1})^{-1} = A</m></li>
@@ -187,6 +201,8 @@
       <li><m>(A^T)^{-1} = (A^{-1})^T</m></li>
     </ul>
     </p>
+
+
 
     <example xml:id="ex-abc-inverse-order" workspace="true">
       <statement>
@@ -201,6 +217,8 @@
         </p>
       </solution>
     </example>
+
+    <p><nbsp/></p>
   </page>
 
 
@@ -244,6 +262,8 @@
         </p>
       </solution>
     </example>
+
+    <p><nbsp/></p>
   </page>
 
 
@@ -264,6 +284,8 @@
     <p>
       Each column of <m>A^{-1}</m> is <m>A^{-1}\vec e_i=\vec x_i</m>.
     </p>
+
+    <p><nbsp/></p>
 
   </page>
 
@@ -295,6 +317,8 @@
             Let <m>A = \begin{bmatrix} 1 \amp 2 \\ 3 \amp 4 \end{bmatrix}</m>. For (a), note that multiplication by <m>E_1 = \begin{bmatrix} 0 \amp 1 \\ 1 \amp 0 \end{bmatrix}</m> on the left swaps the rows of <m>A</m>: <me>E_1A = \begin{bmatrix} 0 \amp 1 \\ 1 \amp 0 \end{bmatrix}\begin{bmatrix} 1 \amp 2 \\ 3 \amp 4 \end{bmatrix} = \begin{bmatrix} 3 \amp 4 \\ 1 \amp 2 \end{bmatrix}</me>. For (b), consider the matrix <m>E_2 = \begin{bmatrix} 1 \amp 0 \\ 0 \amp -2 \end{bmatrix}</m> which was chosen by performing the row operation <m>-2R_2 \rightarrow R_2</m> to the <m>2 \times 2</m> identity matrix. Note that multiplication by <m>E_2</m> to the left of <m>A</m> will accomplish the same row operation to <m>A</m>: <me>E_2A = \begin{bmatrix} 1 \amp 0 \\ 0 \amp -2 \end{bmatrix}\begin{bmatrix} 1 \amp 2 \\ 3 \amp 4 \end{bmatrix} = \begin{bmatrix} 1 \amp 2 \\ -6 \amp -8 \end{bmatrix}</me>. For (c), consider the matrix <m>E_3 = \begin{bmatrix} 1 \amp 0 \\ 3 \amp 1 \end{bmatrix}</m> which was chosen by performing the row operation <m>R_2 + 3R_1 \rightarrow R_2</m> to the <m>2 \times 2</m> identity matrix. Note that multiplication by <m>E_3</m> to the left of <m>A</m> will accomplish the same row operation to <m>A</m>: <me>E_3A = \begin{bmatrix} 1 \amp 0 \\ 3 \amp 1 \end{bmatrix}\begin{bmatrix} 1 \amp 2 \\ 3 \amp 4 \end{bmatrix} = \begin{bmatrix} 1 \amp 2 \\ 6 \amp 10 \end{bmatrix}</me>.
         </p>
     </solution>
+
+    <p><nbsp/></p>
   </page>
 
 
@@ -302,7 +326,6 @@
     <title>Example: Identify an Elementary Matrix</title>
 
     <example xml:id="ex-find-E-by-inspection" workspace="true">
-      <title>Example</title>
       <statement>
         <p>
           Suppose
@@ -332,6 +355,8 @@
       </solution>
     </example>
 
+    <p><nbsp/></p>
+
     <p>
       Returning to why the algorithm works, applying a sequence of row operations to <m>A</m> to obtain <m>I_n</m> can be written as:
     </p>
@@ -344,6 +369,8 @@
       Thus, <m>E_k \cdots E_3E_2E_1</m> is the inverse matrix we seek.
     </p>
 
+    <p><nbsp/></p>
+
     <theorem xml:id="thm-invertible-iff-row-equivalent-identity" workspace="true">
       <title>Invertibility and Row Equivalence</title>
       <statement>
@@ -354,6 +381,8 @@
         </p>
       </statement>
     </theorem>
+
+    <p><nbsp/></p>
 
   </page>
 

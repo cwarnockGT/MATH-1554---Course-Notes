@@ -24,6 +24,7 @@
     </ul>
     </objectives>
 
+    <p><nbsp/></p>
 
     <definition xml:id="def-zero-matrix" workspace="true">
       <title>Zero Matrix</title>
@@ -77,6 +78,8 @@
       Note: Any matrix with dimensions <m>n\times n</m> is <term>square</term>.
       Zero matrices need not be square; identity matrices must be square.
     </p>
+
+    <p><nbsp/></p>
   </page>
 
 
@@ -133,6 +136,8 @@
         </p>
       </solution>
     </example>
+
+    <p><nbsp/></p>
   </page>
 
 
@@ -151,6 +156,8 @@
       <li><m>(r+s)A = rA + sA</m></li>
       <li><m>r(sA) = (rs)A</m></li>
     </ol>
+
+    <p><nbsp/></p>
 
 
     <definition xml:id="def-matrix-multiplication-columns" workspace="true">
@@ -186,6 +193,8 @@
         A visual guide to when <m>AB</m> is defined based on inner dimensions.
       </description>
     </image>
+
+    <p><nbsp/></p>
   </page>
 
 
@@ -232,6 +241,8 @@
         </p>
       </solution>
     </example>
+
+    <p><nbsp/></p>
   </page>
 
 
@@ -264,6 +275,8 @@
             </li>
             </ol>
         </theorem>
+
+        <p><nbsp/></p>
 
     <p>
       The associative property is <m>(AB)C = A(BC)</m>. If <m>C=\vec x</m>, then:
@@ -307,6 +320,8 @@
       or by multiplying by <m>B</m> and then by <m>A</m>. This corresponds to
       <em>composition of linear transformations</em>.
     </p>
+
+    <p><nbsp/></p>
   </page>
 
 
@@ -334,6 +349,8 @@
         </p>
       </solution>
     </example>
+
+    <p><nbsp/></p>
   </page>
 
 
@@ -344,7 +361,7 @@
       <title>Transpose</title>
       <statement>
         <p>
-          The transpose <m>A^T</m> is the matrix whose columns are the rows of <m>A</m>.
+          The <term>transpose</term> <m>A^T</m> is the matrix whose columns are the rows of <m>A</m>.
         </p>
       </statement>
     </definition>
@@ -368,6 +385,8 @@
       </solution>
     </example>
 
+    <p><nbsp/></p>
+
     <theorem xml:id="thm-transpose-properties" workspace="true">
       <title>Properties of Matrix Transpose</title>
       <statement>
@@ -379,6 +398,8 @@
         </ol>
       </statement>
     </theorem>
+
+    <p><nbsp/></p>
   </page>
 
   <page xml:id="p-2-1-which-defined">
@@ -443,6 +464,8 @@
             </solution>
         </task>
     </example>
+
+    <p><nbsp/></p>
   </page>
 
   <page xml:id="p-2-1-matrix-powers">
@@ -468,6 +491,8 @@
         </solution>
     </example>
 
+    <p><nbsp/></p>
+
     <example xml:id="ex-compute-c-power" workspace="true">
       <statement>
         <p>Compute <m>B^8</m> for</p>
@@ -486,6 +511,8 @@
         </p>
       </solution>
     </example>
+
+    <p><nbsp/></p>
   </page>
 
 
