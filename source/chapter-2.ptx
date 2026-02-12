@@ -26,6 +26,11 @@
     <title>2.8 Subspaces</title>
       <xi:include href="./chapter-2-notes/section-2-8.ptx" />
   </section>
+
+  <section xml:id="Section-2-9">
+    <title>2.9 Dimension and Rank</title>
+      <xi:include href="./chapter-2-notes/section-2-9.ptx" />
+  </section>
   
 
 </chapter>
