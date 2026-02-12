@@ -889,7 +889,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "2.1 Matrix Operations",
-  "body": " 2.1 Matrix Operations   2.1 Matrix Operations   Topics and Objectives   Topics   Identity and zero matrices  Matrix algebra (sums and products, scalar multiplies, matrix powers)  Transpose of a matrix     Goals    Apply matrix algebra, the matrix transpose, and the zero and identity matrices, to solve and analyze matrix equations.     Zero Matrix   A zero matrix is any matrix whose every entry is zero.      Identity Matrix   The  identity matrix has ones on the main diagonal and zeros elsewhere.      Note: Any matrix with dimensions is square . Zero matrices need not be square; identity matrices must be square.    Sums and Scalar Multiples  Suppose , and is the element of in row and column .    If and are matrices, then the elements of are .    If , then the elements of are .      If   what are the values of and ?    Note that we can use rules (a) and (b) above to combine the left expression and get the following equation: Setting corresponding entries equal to one another, we see that and .      Properties of Sums and Scalar Multiples  Scalar multiples and matrix addition have the expected properties. If are scalars and are matrices, then:          Matrix Product via Columns   Let be an matrix and be an matrix. The product is an matrix, given by     Note: The dimensions of and determine whether is defined, and what its dimensions will be.   Diagram showing how matrix dimensions match in a product.  A visual guide to when is defined based on inner dimensions.     Row-Column Rule   Row-Column Rule for Matrix Multiplication   If has rows and has columns , then each element of is        Compute the following using the row-column method.     Note that   Note that this method is faster than using the original definition of matrix multiplication given in . For example, to compute the first column of using the original definition, we would compute the following:       Properties and Warnings   Properties and Warnings  Let be matrices of sizes needed for the products to be defined, and suppose is .   Associative:   Left distributive:   Right distributive:   Identity:    Warnings:    Non-commutative: In general, .    Non-cancellation:  does not imply .    Zero divisors:  does not imply or .     The associative property is . If , then:   Schematically:    Flow diagram comparing two ways to multiply matrices.  Diagram showing two ways of getting from to , either by or by direct multiplication by .   The product can be obtained either by multiplying by , or by multiplying by and then by . This corresponds to composition of linear transformations .    Example: Non-Commutativity    Let   Give an example of a matrix such that .    Honestly, pretty much any matrix you choose at random will work. For example, let and note that , while . Therefore, .      The Transpose of a Matrix   Transpose   The transpose is the matrix whose columns are the rows of .       Compute:     We have that      Properties of Matrix Transpose                 Example: Which Operations Are Defined?    Define   Which of these operations are defined, and what are the dimensions of the result?      Note that is a matrix while is a matrix. Therefore, the sum is not defined.       First, we can use Property (d) from to write . Since is a matrix, we have that is a matrix. Since is a matrix, we have that is also a matrix. Thus, the product is the product of a matrix with a matrix with a matrix. Since all inner dimensions match, this product is defined.  Let's calculate the product. One thing to note, even though matrix multiplication is not commutative, it is associative (see ), so we can either simplify the product by either computing (mutliplying and first) or by computing (multiplying and first). I choose whichever looks easier. It follows that        Note that is a matrix, is a matrix, is a matrix, and is a matrix. Therefore, all of the inner dimensions of the product match and results in a matrix. It follows that is defined.  We will simply this expression by making use of the associative property and simplifying by first multiplying and , then multiplying the resulting matrices. Note        Matrix Powers  For any matrix and positive integer , is the product of copies of .     Compute for            Compute for     As we saw in , you cannot distribute the exponent to the individual entries in the matrix. For diagonal matrices, you actually can. Note that . Therefore, we have that . We will see an application of this to diagonalizable matrices in Section 5.3.      Additional Examples     True or False. If false, explain briefly.     Let . Then for any matrix , we have .    Recall from that the Distributive Property applies to matrix mutliplication and addition. Therefore, we start with the distributive property to simply the product. By the multiplicative property of the identity matrix, we have that and and . Recall from our properties of matrix multipliation that we are allowed to commute scalars with matrix multiplication, just not matrices with matrix multiplication. Therefore, we can factor out the and rewrite . It follows that since is the zero matrix, which doesn't change anything when you add it to a term. Therefore, we see that this statement is TRUE.      Let . For any matrices and , we have .    Proceeding in a similar manner to the problem above, we see that . We can rewrite and . Also, since matrix addition is commutative, we can move the terms and to the end. This leaves us with . Note that if , then we could combine the middle terms into . However, from the warning in , we see that matrix multiplication is often not commutative. Therefore, we cannot replace with . This leads us to believe the statement is false.  We can prove it is false by giving a counterexample. Probably, pretty much anything we try will work since matrix commutation is very rare. Let and . Note that   however,   Therefore, since for these particular matrices, the statement must be FALSE.       "
+  "body": " 2.1 Matrix Operations   2.1 Matrix Operations   Topics and Objectives   Topics   Identity and zero matrices  Matrix algebra (sums and products, scalar multiplies, matrix powers)  Transpose of a matrix     Goals    Apply matrix algebra, the matrix transpose, and the zero and identity matrices, to solve and analyze matrix equations.      Zero Matrix   A zero matrix is any matrix whose every entry is zero.      Identity Matrix   The  identity matrix has ones on the main diagonal and zeros elsewhere.      Note: Any matrix with dimensions is square . Zero matrices need not be square; identity matrices must be square.     Sums and Scalar Multiples  Suppose , and is the element of in row and column .    If and are matrices, then the elements of are .    If , then the elements of are .      If   what are the values of and ?    Note that we can use rules (a) and (b) above to combine the left expression and get the following equation: Setting corresponding entries equal to one another, we see that and .       Properties of Sums and Scalar Multiples  Scalar multiples and matrix addition have the expected properties. If are scalars and are matrices, then:           Matrix Product via Columns   Let be an matrix and be an matrix. The product is an matrix, given by     Note: The dimensions of and determine whether is defined, and what its dimensions will be.   Diagram showing how matrix dimensions match in a product.  A visual guide to when is defined based on inner dimensions.      Row-Column Rule   Row-Column Rule for Matrix Multiplication   If has rows and has columns , then each element of is        Compute the following using the row-column method.     Note that   Note that this method is faster than using the original definition of matrix multiplication given in . For example, to compute the first column of using the original definition, we would compute the following:        Properties and Warnings   Properties and Warnings  Let be matrices of sizes needed for the products to be defined, and suppose is .   Associative:   Left distributive:   Right distributive:   Identity:    Warnings:    Non-commutative: In general, .    Non-cancellation:  does not imply .    Zero divisors:  does not imply or .      The associative property is . If , then:   Schematically:    Flow diagram comparing two ways to multiply matrices.  Diagram showing two ways of getting from to , either by or by direct multiplication by .   The product can be obtained either by multiplying by , or by multiplying by and then by . This corresponds to composition of linear transformations .     Example: Non-Commutativity    Let   Give an example of a matrix such that .    Honestly, pretty much any matrix you choose at random will work. For example, let and note that , while . Therefore, .       The Transpose of a Matrix   Transpose   The transpose  is the matrix whose columns are the rows of .       Compute:     We have that       Properties of Matrix Transpose                  Example: Which Operations Are Defined?    Define   Which of these operations are defined, and what are the dimensions of the result?      Note that is a matrix while is a matrix. Therefore, the sum is not defined.       First, we can use Property (d) from to write . Since is a matrix, we have that is a matrix. Since is a matrix, we have that is also a matrix. Thus, the product is the product of a matrix with a matrix with a matrix. Since all inner dimensions match, this product is defined.  Let's calculate the product. One thing to note, even though matrix multiplication is not commutative, it is associative (see ), so we can either simplify the product by either computing (mutliplying and first) or by computing (multiplying and first). I choose whichever looks easier. It follows that        Note that is a matrix, is a matrix, is a matrix, and is a matrix. Therefore, all of the inner dimensions of the product match and results in a matrix. It follows that is defined.  We will simply this expression by making use of the associative property and simplifying by first multiplying and , then multiplying the resulting matrices. Note         Matrix Powers  For any matrix and positive integer , is the product of copies of .     Compute for             Compute for     As we saw in , you cannot distribute the exponent to the individual entries in the matrix. For diagonal matrices, you actually can. Note that . Therefore, we have that . We will see an application of this to diagonalizable matrices in Section 5.3.       Additional Examples     True or False. If false, explain briefly.     Let . Then for any matrix , we have .    Recall from that the Distributive Property applies to matrix mutliplication and addition. Therefore, we start with the distributive property to simply the product. By the multiplicative property of the identity matrix, we have that and and . Recall from our properties of matrix multipliation that we are allowed to commute scalars with matrix multiplication, just not matrices with matrix multiplication. Therefore, we can factor out the and rewrite . It follows that since is the zero matrix, which doesn't change anything when you add it to a term. Therefore, we see that this statement is TRUE.      Let . For any matrices and , we have .    Proceeding in a similar manner to the problem above, we see that . We can rewrite and . Also, since matrix addition is commutative, we can move the terms and to the end. This leaves us with . Note that if , then we could combine the middle terms into . However, from the warning in , we see that matrix multiplication is often not commutative. Therefore, we cannot replace with . This leads us to believe the statement is false.  We can prove it is false by giving a counterexample. Probably, pretty much anything we try will work since matrix commutation is very rare. Let and . Note that   however,   Therefore, since for these particular matrices, the statement must be FALSE.       "
 },
 {
   "id": "p-2-1-overview-2",
@@ -928,9 +928,9 @@ var ptx_lunr_docs = [
   "body": " Identity Matrix   The  identity matrix has ones on the main diagonal and zeros elsewhere.    "
 },
 {
-  "id": "p-2-1-overview-7",
+  "id": "p-2-1-overview-8",
   "level": "2",
-  "url": "Section-2-1.html#p-2-1-overview-7",
+  "url": "Section-2-1.html#p-2-1-overview-8",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -997,7 +997,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "2.9",
   "title": "Transpose.",
-  "body": " Transpose   The transpose is the matrix whose columns are the rows of .   "
+  "body": " Transpose   The transpose  is the matrix whose columns are the rows of .   "
 },
 {
   "id": "ex-transpose-compute",
@@ -1060,7 +1060,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "2.2 Matrix Inverses",
-  "body": " 2.2 Matrix Inverses   2.2 Matrix Inverses    Overview   Your scientists were so preoccupied with whether or not they could, they didn't stop to think if they should.   Spielberg and Crichton, Jurassic Park , 1993 film    The algorithm we introduce in this section could be used to compute the inverse of an matrix. At the end of the lecture we'll discuss some of the problems with our algorithm and why it can be difficult to compute a matrix inverse.   Topics   Inverse of a matrix, its algebraic properties, and its relation to solving systems of linear equations.  Elementary matrices and their role in calculating the matrix inverse.     Goals   Apply the formal definition of an inverse, and its algebraic properties, to solve and analyze linear systems.  Compute the inverse of an matrix, and use it to solve linear systems.  Construct elementary matrices.    Motivating Question : Is there a matrix such that     The Matrix Inverse   Invertible (Non-singular) Matrix   An matrix is invertible (or non-singular ) if there exists a matrix such that   If such a matrix exists, we write .     Inverse Formula for a Matrix   The matrix is invertible if and only if . In that case,     In the solution, I give a proof of this theorem. You may find it interesting to try it for yourself before looking at the full proof. The idea is to start with a matrix for fixed with . Now, let for unknown . Set and determine what the unknowns are in terms of the known . You should end up solving a system of linear equations involving 4 equations in the 4 unknowns.    Here is a proof of the above formula. (Before reading, you may want to try it yourself. Look at the hint above.)  Let for fixed with . We are looking for a matrix so that , if such a matrix exists. Since is a matrix, it has four unknown entries. Let's call them , so we have . It follows that . Since we want , we can set the corresponding entries equal to arrive at the following system of linear equation: Note that we cannot have both and be zero, or else . Therefore, we can assume that at least one of them is nonzero, so let's suppose . Converting this into an augmented matrix and performing some row operations, we obtain Solving for , we see that . Solving for , we see that Solving for , we see that Lastly, solving for , we see that . It follows that .      Find the inverse of the matrix below. Check that it truly is the inverse.     First, note that , so is invertible. Using the formula, we have that . We can check this by verifying that or by verifying . Note that       Inverse and Solving Linear Systems   Inverse and Unique Solutions   A matrix has an inverse if and only if for every , the system has a unique solution. In this case,     Here is a proof of this theorem. If is invertible, then we can multiply both sides of the matrix equation by on the left to obtain the following:        Solve the linear system.     We can write the system as the following matrix equation . Since , the matrix is invertible. Using , we have Therefore, we find that the solution to the system is . Like always, it's a good idea to check that is a solution to the system.      Properties of the Matrix Inverse  Let and be invertible matrices.   (non-commutative!)       True or false: .    Note that . Therefore, the statement is true.      An Algorithm for Computing  If and , we can compute with the following algorithm:  Row reduce the augmented matrix .  If the reduction has the form , then is invertible and . Otherwise, is not invertible.      Compute the inverse of     Note the following:   Therefore, we have . Let's check: .      Why Does This Work?  Why does the previous algorithm work? We can think of our algorithm as simultaneously solving linear systems:   Each column of is .    Elementary Matrices  We can also justify the algorithm by using elementary matrices.   Elementary Matrix   An elementary matrix  is one that differs from by exactly one elementary row operation.    Recall the elementary row operations:   Swap rows  Multiply a row by a non-zero scalar  Add a multiple of one row to another   Each operation can be represented by matrix multiplication using an elementary matrix .   Let . For (a), note that multiplication by on the left swaps the rows of : . For (b), consider the matrix which was chosen by performing the row operation to the identity matrix. Note that multiplication by to the left of will accomplish the same row operation to : . For (c), consider the matrix which was chosen by performing the row operation to the identity matrix. Note that multiplication by to the left of will accomplish the same row operation to : .     Example: Identify an Elementary Matrix   Example   Suppose   By inspection, what is ? How does it compare to ?    Note that . Therefore, we have that .    Returning to why the algorithm works, applying a sequence of row operations to to obtain can be written as:   Thus, is the inverse matrix we seek.   Invertibility and Row Equivalence   A matrix is invertible if and only if it is row equivalent to the identity matrix. In this case, any sequence of elementary row operations that transforms into , when applied to , generates .      Using the Inverse to Solve a Linear System  Some final thoughts:   We could use to solve a linear system . We would compute and then solve by multiplying appropriately.  As many textbooks point out, is seldom used in practice: computing it can take a long time and may be prone to numerical error.  So why did we learn how to compute ? Later in the course, we use elementary matrices and properties of to derive results.  A recurring theme: just because we can do something a certain way, doesn't mean we should .     "
+  "body": " 2.2 Matrix Inverses   2.2 Matrix Inverses    Overview   Your scientists were so preoccupied with whether or not they could, they didn't stop to think if they should.   Spielberg and Crichton, Jurassic Park , 1993 film    The algorithm we introduce in this section could be used to compute the inverse of an matrix. At the end of the lecture we'll discuss some of the problems with our algorithm and why it can be difficult to compute a matrix inverse.   Topics   Inverse of a matrix, its algebraic properties, and its relation to solving systems of linear equations.  Elementary matrices and their role in calculating the matrix inverse.     Goals   Apply the formal definition of an inverse, and its algebraic properties, to solve and analyze linear systems.  Compute the inverse of an matrix, and use it to solve linear systems.  Construct elementary matrices.     Motivating Question : Is there a matrix such that      The Matrix Inverse   Invertible (Non-singular) Matrix   An matrix is invertible (or non-singular ) if there exists a matrix such that   If such a matrix exists, we write .      Inverse Formula for a Matrix   The matrix is invertible if and only if . In that case,     In the solution, I give a proof of this theorem. You may find it interesting to try it for yourself before looking at the full proof. The idea is to start with a matrix for fixed with . Now, let for unknown . Set and determine what the unknowns are in terms of the known . You should end up solving a system of linear equations involving 4 equations in the 4 unknowns.    Here is a proof of the above formula. (Before reading, you may want to try it yourself. Look at the hint above.)  Let for fixed with . We are looking for a matrix so that , if such a matrix exists. Since is a matrix, it has four unknown entries. Let's call them , so we have . It follows that . Since we want , we can set the corresponding entries equal to arrive at the following system of linear equation: Note that we cannot have both and be zero, or else . Therefore, we can assume that at least one of them is nonzero, so let's suppose . Converting this into an augmented matrix and performing some row operations, we obtain Solving for , we see that . Solving for , we see that Solving for , we see that Lastly, solving for , we see that . It follows that .       Find the inverse of the matrix below. Check that it truly is the inverse.     First, note that , so is invertible. Using the formula, we have that . We can check this by verifying that or by verifying . Note that        Inverse and Solving Linear Systems   Inverse and Unique Solutions   A matrix has an inverse if and only if for every , the system has a unique solution. In this case,     Here is a proof of this theorem. If is invertible, then we can multiply both sides of the matrix equation by on the left to obtain the following:         Solve the linear system.     We can write the system as the following matrix equation . Since , the matrix is invertible. Using , we have Therefore, we find that the solution to the system is . Like always, it's a good idea to check that is a solution to the system.       Properties of the Matrix Inverse  Let and be invertible matrices. Then   (non-commutative!)       True or false: .    Note that . Therefore, the statement is true.       An Algorithm for Computing  If and , we can compute with the following algorithm:  Row reduce the augmented matrix .  If the reduction has the form , then is invertible and . Otherwise, is not invertible.      Compute the inverse of     Note the following:   Therefore, we have . Let's check: .       Why Does This Work?  Why does the previous algorithm work? We can think of our algorithm as simultaneously solving linear systems:   Each column of is .     Elementary Matrices  We can also justify the algorithm by using elementary matrices.   Elementary Matrix   An elementary matrix  is one that differs from by exactly one elementary row operation.    Recall the elementary row operations:   Swap rows  Multiply a row by a non-zero scalar  Add a multiple of one row to another   Each operation can be represented by matrix multiplication using an elementary matrix .   Let . For (a), note that multiplication by on the left swaps the rows of : . For (b), consider the matrix which was chosen by performing the row operation to the identity matrix. Note that multiplication by to the left of will accomplish the same row operation to : . For (c), consider the matrix which was chosen by performing the row operation to the identity matrix. Note that multiplication by to the left of will accomplish the same row operation to : .      Example: Identify an Elementary Matrix    Suppose   By inspection, what is ? How does it compare to ?    Note that . Therefore, we have that .     Returning to why the algorithm works, applying a sequence of row operations to to obtain can be written as:   Thus, is the inverse matrix we seek.    Invertibility and Row Equivalence   A matrix is invertible if and only if it is row equivalent to the identity matrix. In this case, any sequence of elementary row operations that transforms into , when applied to , generates .       Using the Inverse to Solve a Linear System  Some final thoughts:   We could use to solve a linear system . We would compute and then solve by multiplying appropriately.  As many textbooks point out, is seldom used in practice: computing it can take a long time and may be prone to numerical error.  So why did we learn how to compute ? Later in the course, we use elementary matrices and properties of to derive results.  A recurring theme: just because we can do something a certain way, doesn't mean we should .     "
 },
 {
   "id": "obj-2-2-topics-goals",
@@ -1167,8 +1167,8 @@ var ptx_lunr_docs = [
   "url": "Section-2-2.html#ex-find-E-by-inspection",
   "type": "Example",
   "number": "2.24",
-  "title": "Example.",
-  "body": " Example   Suppose   By inspection, what is ? How does it compare to ?    Note that . Therefore, we have that .   "
+  "title": "",
+  "body": "  Suppose   By inspection, what is ? How does it compare to ?    Note that . Therefore, we have that .   "
 },
 {
   "id": "thm-invertible-iff-row-equivalent-identity",
@@ -1186,7 +1186,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "2.3 The Invertible Matrix Theorem",
-  "body": " 2.3 The Invertible Matrix Theorem   2.3 The Invertible Matrix Theorem   Overview   A synonym is a word you use when you can't spell the other one.   Baltasar Gracián    The theorem introduced in this section provides many equivalent ways of describing the same idea. Depending on the context, some formulations will be more convenient than others.   Topics   The Invertible Matrix Theorem which is a synthesis of previously introduced concepts.     Goals   Characterize the invertibility of a matrix using the Invertible Matrix Theorem.  Construct and give examples of matrices that are or are not invertible.    Motivating Question : When is a square matrix invertible? Let me count the ways!    The Invertible Matrix Theorem  Invertible matrices enjoy a rich set of equivalent descriptions.   The Invertible Matrix Theorem (IMT)   Let be an matrix. The following statements are equivalent.   is invertible.  is row equivalent to .  has pivotal columns.  has only the trivial solution.  The columns of are linearly independent.  The linear transformation is one-to-one.  The equation has a solution for all .  The columns of span .  The linear transformation is onto.  There is an matrix such that . ( has a left inverse.)  There is an matrix such that . ( has a right inverse.)  is invertible.       Invertibility and Composition  The diagram below provides another perspective on the role of the inverse matrix.    Diagram showing a transformation undone by its inverse.  Diagram shows , transformed by multiplication by , and reversed by multiplication by .   The matrix inverse transforms back to , because   Some comments on IMT:  The Invertible Matrix Theorem divides all square matrices into two classes: invertible and non-invertible.  As the course progresses, additional equivalent conditions involving determinants, eigenvalues, and other concepts will be added.  Note that items (j) and (k) of the Invertible Matrix Theorem lead directly to the following result.     Left and Right Inverses   If and are matrices and , then both matrices are invertible, with and .        Is invertible?       If possible, fill in the missing entries so that each matrix is singular (not invertible). If it is not possible, explain why.       "
+  "body": " 2.3 The Invertible Matrix Theorem   2.3 The Invertible Matrix Theorem   Overview   A synonym is a word you use when you can't spell the other one.   Baltasar Gracián    The theorem introduced in this section provides many equivalent ways of describing the same idea. Depending on the context, some formulations will be more convenient than others.   Topics   The Invertible Matrix Theorem which is a synthesis of previously introduced concepts.     Goals   Characterize the invertibility of a matrix using the Invertible Matrix Theorem.  Construct and give examples of matrices that are or are not invertible.     Motivating Question : When is a square matrix invertible? Let me count the ways!     The Invertible Matrix Theorem  Invertible matrices enjoy a rich set of equivalent descriptions.   The Invertible Matrix Theorem (IMT)   Let be an matrix. The following statements are equivalent.   is invertible.  is row equivalent to .  has pivotal columns.  has only the trivial solution.  The columns of are linearly independent.  The linear transformation is one-to-one.  The equation has a solution for all .  The columns of span .  The linear transformation is onto.  There is an matrix such that . ( has a left inverse.)  There is an matrix such that . ( has a right inverse.)  is invertible.        Invertibility and Composition  The diagram below provides another perspective on the role of the inverse matrix.    Diagram showing a transformation undone by its inverse.  Diagram shows , transformed by multiplication by , and reversed by multiplication by .   The matrix inverse transforms back to , because    Some comments on IMT:  The Invertible Matrix Theorem divides all square matrices into two classes: invertible and non-invertible.  As the course progresses, additional equivalent conditions involving determinants, eigenvalues, and other concepts will be added.  Note that items (j) and (k) of the Invertible Matrix Theorem lead directly to the following result.      Left and Right Inverses   If and are matrices and , then both matrices are invertible, with and .         Is invertible?     We can use IMT to determine if is invertible by showing that either makes at least one statement in the list true or makes at least one statement in the list false. Note that . We see that has a pivot in every column. Therefore, by IMT, must make every statment on the list true. In particular, we learn that is invertible.       For each matrix below, determine all values of so that the matrix is singular (not invertible). If there are no values of , explain why.          Note that . Thus, is missing a pivot if and only if . Therefore, is the only value of which makes singular.           Note that regardless of the value of , will have a pivot in each column. Therefore, no value of will make singular.           Note that . Thus, is missing a pivot in the third row if and only if . Therefore, is the only value of which makes singular.         "
 },
 {
   "id": "obj-2-3-topics-goals",
@@ -1231,7 +1231,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.28",
   "title": "",
-  "body": "  Is invertible?    "
+  "body": "  Is invertible?     We can use IMT to determine if is invertible by showing that either makes at least one statement in the list true or makes at least one statement in the list false. Note that . We see that has a pivot in every column. Therefore, by IMT, must make every statment on the list true. In particular, we learn that is invertible.   "
 },
 {
   "id": "ex-matrix-completion-singular",
@@ -1240,7 +1240,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.29",
   "title": "",
-  "body": "  If possible, fill in the missing entries so that each matrix is singular (not invertible). If it is not possible, explain why.    "
+  "body": "  For each matrix below, determine all values of so that the matrix is singular (not invertible). If there are no values of , explain why.          Note that . Thus, is missing a pivot if and only if . Therefore, is the only value of which makes singular.           Note that regardless of the value of , will have a pivot in each column. Therefore, no value of will make singular.           Note that . Thus, is missing a pivot in the third row if and only if . Therefore, is the only value of which makes singular.    "
 },
 {
   "id": "Section-2-5",
@@ -1475,6 +1475,141 @@ var ptx_lunr_docs = [
   "number": "2.46",
   "title": "",
   "body": "  Let    Give an example of a vector that is in .  Give an example of a vector that is not in .  Is the zero vector in ?  Is a subspace?    "
+},
+{
+  "id": "Section-2-9",
+  "level": "1",
+  "url": "Section-2-9.html",
+  "type": "Section",
+  "number": "",
+  "title": "2.9 Dimension and Rank",
+  "body": " 2.9 Dimension and Rank   2.9 Dimension and Rank   Overview   Topics   Coordinates relative to a basis.  Dimension of a subspace.  The rank of a matrix.     Goals   Calculate coordinates of a vector in a given basis.  Characterize subspaces using the concept of dimension.  Characterize matrices using rank, column space, and null space.  Apply the Rank, Basis, and Invertibility Theorems to describe matrices and subspaces.      Key idea: Many different bases may be chosen for a given subspace. The choice can dramatically affect coordinate representations.     Sketch in each coordinate system below.    Two coordinate systems showing different basis orientations.  Two grids with different bases; vectors and are drawn.        Coordinates Relative to a Basis   Coordinates Relative to a Basis   Let be a basis for a subspace . For any , the coordinates of relative to are the scalars such that   The coordinate vector of relative to is:        Let:   Verify that is in the span of , and compute .       Another Example of Coordinate Vector    Let   and .     Verify that is a basis for .      Determine if .      Compute .        Dimension   Dimension   The dimension of a nonzero subspace , written , is the number of vectors in any basis of . We define .      Dimension Is Well-Defined   Any two bases and of a nonzero subspace have the same number of vectors.     Some Examples:   .   has dimension .  is the number of free variables.  is the number of pivotal columns.       Rank   Rank   The rank of a matrix is the dimension of its column space.       Compute and , where        Rank, Basis, and Invertibility Theorems   Rank Theorem   If a matrix has columns, then       Basis Theorem   Any two bases for a subspace have the same dimension.      The Invertible Matrix Theorem (Continued) Theorem   Let be an matrix. The following are equivalent:   (a)   is invertible.  (m)   The columns of form a basis for .  (n)   .  (o)   .  (p)   .  (q)   .  (r)   .        Examples    For each part below, give an example of a matrix in RREF with the stated property, if possible.                                  "
+},
+{
+  "id": "obj-2-9-topics-goals",
+  "level": "2",
+  "url": "Section-2-9.html#obj-2-9-topics-goals",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   Coordinates relative to a basis.  Dimension of a subspace.  The rank of a matrix.   "
+},
+{
+  "id": "p-2-9-intro-objectives-3",
+  "level": "2",
+  "url": "Section-2-9.html#p-2-9-intro-objectives-3",
+  "type": "Objectives",
+  "number": "",
+  "title": "",
+  "body": " Goals   Calculate coordinates of a vector in a given basis.  Characterize subspaces using the concept of dimension.  Characterize matrices using rank, column space, and null space.  Apply the Rank, Basis, and Invertibility Theorems to describe matrices and subspaces.   "
+},
+{
+  "id": "p-2-9-intro-objectives-7",
+  "level": "2",
+  "url": "Section-2-9.html#p-2-9-intro-objectives-7",
+  "type": "Example",
+  "number": "2.47",
+  "title": "",
+  "body": "  Sketch in each coordinate system below.    Two coordinate systems showing different basis orientations.  Two grids with different bases; vectors and are drawn.    "
+},
+{
+  "id": "def-coordinates",
+  "level": "2",
+  "url": "Section-2-9.html#def-coordinates",
+  "type": "Definition",
+  "number": "2.48",
+  "title": "Coordinates Relative to a Basis.",
+  "body": " Coordinates Relative to a Basis   Let be a basis for a subspace . For any , the coordinates of relative to are the scalars such that   The coordinate vector of relative to is:    "
+},
+{
+  "id": "ex-coordinates",
+  "level": "2",
+  "url": "Section-2-9.html#ex-coordinates",
+  "type": "Example",
+  "number": "2.49",
+  "title": "",
+  "body": "  Let:   Verify that is in the span of , and compute .   "
+},
+{
+  "id": "ex-coordinates2",
+  "level": "2",
+  "url": "Section-2-9.html#ex-coordinates2",
+  "type": "Example",
+  "number": "2.50",
+  "title": "",
+  "body": "  Let   and .     Verify that is a basis for .      Determine if .      Compute .    "
+},
+{
+  "id": "def-dimension",
+  "level": "2",
+  "url": "Section-2-9.html#def-dimension",
+  "type": "Definition",
+  "number": "2.51",
+  "title": "Dimension.",
+  "body": " Dimension   The dimension of a nonzero subspace , written , is the number of vectors in any basis of . We define .   "
+},
+{
+  "id": "thm-dimension-basis",
+  "level": "2",
+  "url": "Section-2-9.html#thm-dimension-basis",
+  "type": "Theorem",
+  "number": "2.52",
+  "title": "Dimension Is Well-Defined.",
+  "body": " Dimension Is Well-Defined   Any two bases and of a nonzero subspace have the same number of vectors.   "
+},
+{
+  "id": "def-rank",
+  "level": "2",
+  "url": "Section-2-9.html#def-rank",
+  "type": "Definition",
+  "number": "2.53",
+  "title": "Rank.",
+  "body": " Rank   The rank of a matrix is the dimension of its column space.   "
+},
+{
+  "id": "ex-rank-computation",
+  "level": "2",
+  "url": "Section-2-9.html#ex-rank-computation",
+  "type": "Example",
+  "number": "2.54",
+  "title": "",
+  "body": "  Compute and , where    "
+},
+{
+  "id": "thm-rank-theorem",
+  "level": "2",
+  "url": "Section-2-9.html#thm-rank-theorem",
+  "type": "Theorem",
+  "number": "2.55",
+  "title": "Rank Theorem.",
+  "body": " Rank Theorem   If a matrix has columns, then    "
+},
+{
+  "id": "thm-basis-theorem",
+  "level": "2",
+  "url": "Section-2-9.html#thm-basis-theorem",
+  "type": "Theorem",
+  "number": "2.56",
+  "title": "Basis Theorem.",
+  "body": " Basis Theorem   Any two bases for a subspace have the same dimension.   "
+},
+{
+  "id": "thm-IMT-Cont-1",
+  "level": "2",
+  "url": "Section-2-9.html#thm-IMT-Cont-1",
+  "type": "Theorem",
+  "number": "2.57",
+  "title": "The Invertible Matrix Theorem (Continued) Theorem.",
+  "body": " The Invertible Matrix Theorem (Continued) Theorem   Let be an matrix. The following are equivalent:   (a)   is invertible.  (m)   The columns of form a basis for .  (n)   .  (o)   .  (p)   .  (q)   .  (r)   .    "
+},
+{
+  "id": "ex-rref-rank-questions",
+  "level": "2",
+  "url": "Section-2-9.html#ex-rref-rank-questions",
+  "type": "Example",
+  "number": "2.58",
+  "title": "",
+  "body": "  For each part below, give an example of a matrix in RREF with the stated property, if possible.                               "
 }
 ]
 
