@@ -23,6 +23,8 @@
     </ul>
     </objectives>
 
+    <p><nbsp/></p>
+
 
     <title>Homogeneous Systems</title>
 
@@ -36,10 +38,14 @@
       </statement>
     </definition>
 
+    <p><nbsp/></p>
+
     <p workspace="1in">
       Because homogeneous systems always have the <em>trivial solution</em> <m>\vec{x} = \vec{0}</m>,
       the interesting question is whether they have any <em>nontrivial</em> solutions.
     </p>
+
+    <p><nbsp/></p>
 
 
   </page>
@@ -82,6 +88,8 @@
         </solution>
     </example>
 
+    <p><nbsp/></p>
+
   </page>
 
   <!-- Page 4: Parametric Form (Homogeneous) -->
@@ -106,6 +114,8 @@
       for some vectors <m>\vec{v}_k, \ldots, \vec{v}_n</m>.
       This representation is called the <term>parametric vector form</term> of the solution set.
     </p>
+
+    <p><nbsp/></p>
 
   </page>
 

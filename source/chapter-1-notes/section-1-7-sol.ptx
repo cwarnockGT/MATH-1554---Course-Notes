@@ -23,11 +23,15 @@
       </ul>
     </objectives>
 
+    <p><nbsp/></p>
+
 
     <p workspace="0.5in">
       <em>Motivating Question:</em> What is the smallest number of vectors needed in a parametric solution
       to a linear system?
     </p>
+
+    <p><nbsp/></p>
 
     <definition>
       <statement>
@@ -50,12 +54,15 @@
       </statement>
     </definition>
 
+
     <p workspace="true"> Let <m>A = \begin{bmatrix} \vec v_1 \amp \cdots \amp \vec v_n \end{bmatrix}</m>. Then some equivalent definitions of linear independence are
         <ul>
             <li><m>A\vec x = \vec 0</m> only has the trivial solution.</li>
             <li><m>A</m> has a pivot in every column.</li>
         </ul>
     </p>
+
+    <p><nbsp/></p>
 
   </page>
 
@@ -108,6 +115,8 @@
           </task>
     </example>
 
+    <p><nbsp/></p>
+
   </page>
 
   <page>
@@ -123,6 +132,8 @@
         </p>
     </solution>
     </theorem>
+
+    <p><nbsp/></p>
     
 
     <theorem workspace="true">
@@ -138,6 +149,8 @@
         </p>
       </solution>      
     </theorem>
+
+    <p><nbsp/></p>
 
 
     

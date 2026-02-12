@@ -20,6 +20,8 @@
       </ul>
     </objectives>
 
+    <p><nbsp/></p>
+
 
     <p xml:id="motivation">
       We want to think about the <em>algebra</em> in linear algebra (systems of equations and their solution sets) 
@@ -68,6 +70,8 @@
     To better see this, we introduce <m>n</m>-dimensional space <m>\mathbb{R}^n</m> and the vectors that live in it.
     
   </p>
+
+  <p><nbsp/></p>
   </page>
 
   <page xml:id="Rn">
@@ -81,6 +85,8 @@
         </p>
       </statement>
         </definition>
+
+        <p><nbsp/></p>
 
     <p>
       When <m>n=1</m>, we get <m>\mathbb{R}^1=\mathbb{R}</m>, the number line.
@@ -106,6 +112,8 @@
         </latex-image>
       </image>
     </figure>
+
+    <p><nbsp/></p>
   
     <p>
       When <m>n=2</m>, we can think of <m>\mathbb{R}^2</m> as a plane. Each point is an ordered pair of real numbers: its 
@@ -145,6 +153,8 @@
         </p>
     </answer>
   </example>
+
+  <p><nbsp/></p>
 </page>
 
   <page xml:id="vector-algebra">
@@ -155,6 +165,7 @@
     <me>
       \vec v \;=\; \begin{bmatrix} 1\\ 2\\ 3 \end{bmatrix} \in \mathbb{R}^3.
     </me>
+    <p><nbsp/></p>
     <p>Suppose <m>c</m> is an arbitrary real number, written <m>c \in \mathbb{R}</m>, and let </p>
     <me>
       \vec u \;=\; \begin{bmatrix} u_1\\ u_2 \end{bmatrix} \in \mathbb{R}^2, 
@@ -220,6 +231,8 @@
         </p>
     </solution>
 
+    <p><nbsp/></p>
+
   </page>
 
   <page xml:id="lin-comb-span">
@@ -242,6 +255,8 @@
         </ol>
       </statement>
     </definition>
+
+    <p><nbsp/></p>
 
     <p>
       Any two vectors in <m>\mathbb{R}^2</m> that are not scalar multiples of one another span <m>\mathbb{R}^2</m>. 
@@ -286,6 +301,8 @@
       </image>
     </figure>
 
+    <p><nbsp/></p>
+
   </page>
 
   <page xml:id="examples">
@@ -321,6 +338,8 @@
         </p>
     </solution>
     </example>
+
+    <p><nbsp/></p>
     
 
     <example workspace="2in" xml:id="ex-span">
@@ -345,6 +364,8 @@
         </p>
     </solution>
     </example>
+
+    <p><nbsp/></p>
     
   </page>
 
@@ -401,6 +422,8 @@
         </latex-image>
       </image>
     </figure>
+
+    <p><nbsp/></p>
 
     <example xml:id="ex-span-membership">
       <statement>

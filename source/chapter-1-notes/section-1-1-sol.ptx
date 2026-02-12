@@ -25,6 +25,8 @@
       </ul>
     </objectives>
   
+    <p><nbsp/></p>
+
     <definition>
     <title>A Single Linear Equation</title>
       <statement>A <term>linear equation</term> has the form:
@@ -49,6 +51,7 @@
         <li><m>\dfrac{1}{x_1} + x_2 + x_3 = 4</m></li>
       </ul>
 </p>
+<p><nbsp/></p>
     
   </page>
 
@@ -87,6 +90,8 @@
         </ul>
       </p>
     </solution>
+
+    <p><nbsp/></p>
     
     <p workspace="1.5in">
       How many solutions can a system have?
@@ -244,6 +249,7 @@
       </answer>
     </conclusion>
 </example>
+<p><nbsp/></p>
   </page>
 
   <!-- Page 4: Three-dimensional case -->
@@ -288,7 +294,7 @@
         </p>
       </answer>
     </p>
-
+    <p><nbsp/></p>
     
   </page>
 
@@ -339,6 +345,7 @@
       </p>
     </solution>
     </example>
+    <p><nbsp/></p>
   </page>
 
   <!-- Page 7: Augmented matrices -->
@@ -365,6 +372,7 @@
 
       The vertical bar separates the coefficient matrix (for <m>x_1,x_2,x_3</m>) from the constants.
     </p>
+    <p><nbsp/></p>
 
     <example>
       <statement> 
@@ -417,6 +425,7 @@
       </p>
     </solution>
     </example>
+    <p><nbsp/></p>
   </page>
 
   <!-- Page 8: Consistency + Row equivalence (fill-in definitions) -->
@@ -430,6 +439,8 @@
       </statement>
     </definition>
 
+    <p><nbsp/></p>
+
     <definition workspace="1.5in">
       <title>Row Equivalence</title>
       <statement>
@@ -437,9 +448,13 @@
       </statement>
     </definition>
 
+    <p><nbsp/></p>
+
     <p workspace="0.5in">
       <em>Note</em>: If the augmented matrices of two linear systems are row equivalent, they have the same solution set.
     </p>
+
+    <p><nbsp/></p>
 
     <p workspace="2in">
       <term>Fundamental Questions</term>: Two questions that we will revisit many times throughout the course:

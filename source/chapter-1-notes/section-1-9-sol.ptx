@@ -36,6 +36,8 @@
       </ul>
     </objectives>
 
+    <p><nbsp/></p>
+
     <definition xml:id="def-standard-vectors" workspace="0.5in">
       <title>The Standard Vectors</title>
       <statement>
@@ -70,6 +72,8 @@
         </me>
       </statement>
     </definition>
+
+    <p><nbsp/></p>
 
   </page>
 
@@ -107,6 +111,8 @@
         </solution>
       </example>
 
+      <p><nbsp/></p>
+
     <theorem xml:id="thm-standard-matrix">
       <title>The Standard Matrix of a Linear Transformation</title>
       <statement>
@@ -138,6 +144,8 @@
     <p>
       The matrix <m>A</m> is the <term>standard matrix</term> for the linear transformation <m>T</m>.
     </p>
+
+    <p><nbsp/></p>
   </page>
 
 
@@ -203,10 +211,14 @@
       </solution>
     </example>
 
+    <p><nbsp/></p>
+
     <p>
       There is a long list of geometric transformations of <m>\mathbb{R}^2</m> in many linear algebra texts
       (reflections, rotations, contractions and expansions, shears, projections, and more). Several are included at the end of this section.
     </p>
+
+    <p><nbsp/></p>
 
   </page>
 
@@ -249,6 +261,8 @@
         </ol>
       </statement>
     </theorem>
+
+    <p><nbsp/></p>
   </page>
 
   <page xml:id="one-to-one">
@@ -289,6 +303,8 @@
         </ol>
       </statement>
     </theorem>
+
+    <p><nbsp/></p>
   </page>
 
 
@@ -366,6 +382,8 @@
           </task>
         </example>
 
+        <p><nbsp/></p>
+
     <example xml:id="ex-linear-transform-3d-onto-oto" workspace="true">
       <statement>
         <p>Define a linear transformation by</p>
@@ -382,6 +400,8 @@
         </p>
       </solution>
     </example>
+
+    <p><nbsp/></p>
   </page>
 
 

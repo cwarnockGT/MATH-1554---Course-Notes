@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <worksheet xml:id="handout-1-2-sol" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <page>
   <title>1.2 Row Reduction and Echelon Forms</title>
   <!-- Topics -->
     <objectives>
@@ -21,6 +22,8 @@
       </ul>
     </objectives>
 
+    <p><nbsp/></p>
+
   <!-- Definition: Echelon form and RREF -->
   <definition>
     <title>Echelon Form and Row Row Reduced Echelon Form</title>
@@ -39,6 +42,8 @@
     </statement>
   </definition>
 
+  <p><nbsp/></p>
+
   <!-- Example: matrix in echelon form -->
   <example>
       <statement>
@@ -46,30 +51,35 @@
       <p>
         <m>
           \begin{bmatrix}
-          0 \amp \blacksquare \amp \ast \amp \ast \amp \ast \amp \ast \amp \ast \amp \ast \amp \ast \amp \ast \\
-          0 \amp 0 \amp 0 \amp \blacksquare \amp \ast \amp \ast \amp \ast \amp \ast \amp \ast \amp \ast \\
-          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp \blacksquare \amp \ast \amp \ast \\
-          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp \blacksquare \amp \ast \\
-          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0
+          0 \amp \blacksquare \amp \ast   \amp \ast \amp \ast \amp \ast \amp \ast \amp \ast \\
+          0 \amp 0 \amp 0 \amp \blacksquare  \amp \ast \amp \ast \amp \ast \amp \ast \\
+          0 \amp 0 \amp 0 \amp 0  \amp 0 \amp \blacksquare \amp \ast \amp \ast \\
+          0 \amp 0 \amp 0 \amp 0  \amp 0 \amp 0 \amp \blacksquare \amp \ast \\
+          0 \amp 0 \amp 0 \amp 0  \amp 0  \amp 0 \amp 0 \amp 0
           \end{bmatrix}
-        </m> is in REF.
-      </p>
-      <p>
+        </m> is in REF and 
         <m>
           \begin{bmatrix}
-          0 \amp 1 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \\
-          0 \amp 0 \amp 0 \amp 1 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \\
-          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 0 \amp 0 \\
-          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 0 \\
-          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0
+          0 \amp 1 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \\
+          0 \amp 0 \amp 0 \amp 1 \amp 0 \amp 0 \amp 0 \amp 0 \\
+          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 0 \amp 0 \\
+          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 0 \\
+          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0
           \end{bmatrix}
         </m> is in RREF.
       </p>
     </statement>
   </example>
 
+  <p><nbsp/></p>
+</page>
+
+<page>
+  <title>Definitions of Pivot Position and Pivot Column</title>
+  
+  
   <!-- Exercise set: which are in RREF? -->
-  <exercisegroup cols="3" >
+  <exercisegroup cols="3">
     <introduction>
       <p>Determine whether each matrix is in RREF, REF, or neither.</p>
     </introduction>
@@ -113,6 +123,8 @@
         </exercise>
     </exercisegroup>
 
+    <p><nbsp/></p>
+
   <!-- Definition: pivot position / pivot column -->
   <definition workspace="0.2in">
     <title>Pivot Position and Pivot Column</title>
@@ -123,6 +135,8 @@
       </p>
       </statement>
   </definition>
+
+  <p><nbsp/></p>
 
   <!-- Guided task: compute RREF and identify pivot columns -->
   <example workspace="true">
@@ -157,6 +171,13 @@
     </solution>
   </example>
 
+  <p><nbsp/></p>
+</page>
+
+<page>
+<title>Row Reduction Algorithm</title>
+
+
   <!-- Algorithm: Row reduction -->
   <paragraphs workspace="0.2in">
     <title>Row Reduction Algorithm (Steps to RREF)</title>
@@ -171,6 +192,8 @@
       <li><strong>Continue:</strong> Repeat these steps for each subsequent row until the matrix is in RREF.</li>
     </ul>
   </paragraphs>
+
+  <p><nbsp/></p>
 
   <example workspace="true">
     <statement>
@@ -199,6 +222,12 @@
         </p>
     </solution>
   </example>
+  <p><nbsp/></p>
+</page>
+
+<page>
+<title>Pivot and Free Variables</title>
+
 
   <definition workspace="0.2in">
     <title>Pivot Variables and Free Variables</title>
@@ -209,6 +238,8 @@
       </p>
       </statement>
   </definition>
+
+  <p><nbsp/></p>
 
   <!-- Example: basic and free variables -->
   <example workspace="true">
@@ -232,6 +263,8 @@
         </p>
     </solution>
   </example>
+
+  <p><nbsp/></p>
 
   <!-- Theorem: existence and uniqueness -->
   <theorem xml:id="thm-inconsistent-system"> 
@@ -260,5 +293,6 @@
         
       </ol>
   </theorem>
+</page>
 
 </worksheet>
