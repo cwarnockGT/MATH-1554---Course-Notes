@@ -1340,6 +1340,141 @@ var ptx_lunr_docs = [
   "number": "2.34",
   "title": "",
   "body": "  Solve the linear system with:    "
+},
+{
+  "id": "Section-2-8",
+  "level": "1",
+  "url": "Section-2-8.html",
+  "type": "Section",
+  "number": "",
+  "title": "2.8 Subspaces",
+  "body": " 2.8 Subspaces   2.8 Subspaces   Overview   Topics   Subspaces, column space, and null space.  A basis for a subspace.     Goals   Determine whether a set is a subspace.  Determine whether a vector is in a particular subspace, or find a vector in that subspace.  Construct a basis for a subspace (e.g., a basis for ).    Motivating Question : Given a matrix , what is the set of vectors for which we can solve ?    Subset of   A subset of is any collection of vectors contained in .      Subspace   A subset of is a subspace if:   for any scalar and any .  for all .     Note that scalar closure implies the zero vector must be in .     Which of the following subsets could be subspaces of ?   A graphic showing three subsets of . The first is the unit square. The second is a line through the origin. The third is a line that does not pass throught the origin.        Examples of Subspaces    For each subset of given below, determine if it is a subspace of .                                          The Column Space and Null Space  Recall that for vectors , is the subspace consisting of all linear combinations of these vectors. Not only is the span of vectors an example of a subspace of , they are the only examples of subspace of .     Every subspace of can be written as the span of a finite number of vectors; that is, if is a subspace of , then there exists vectors so that .      Column Space and Null Space   Let be an matrix.   The column space of , , is the subspace of spanned by .  The null space of , , is the subspace of consisting of all solutions to .        Is in the column space of ?        Basis    Determine whether is in .        Definition of basis and Example   Basis   A basis for a subspace is a set of linearly independent vectors in that span .       Let    Find a matrix such that .  Construct a basis for .        Example: Basis for Column Space and Null Space    Construct a basis for and .        Another Example    Let    Give an example of a vector that is in .  Give an example of a vector that is not in .  Is the zero vector in ?  Is a subspace?       "
+},
+{
+  "id": "obj-2-8-topics-goals",
+  "level": "2",
+  "url": "Section-2-8.html#obj-2-8-topics-goals",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   Subspaces, column space, and null space.  A basis for a subspace.   "
+},
+{
+  "id": "p-2-8-objectives-3",
+  "level": "2",
+  "url": "Section-2-8.html#p-2-8-objectives-3",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals   Determine whether a set is a subspace.  Determine whether a vector is in a particular subspace, or find a vector in that subspace.  Construct a basis for a subspace (e.g., a basis for ).   "
+},
+{
+  "id": "def-subset-rn",
+  "level": "2",
+  "url": "Section-2-8.html#def-subset-rn",
+  "type": "Definition",
+  "number": "2.35",
+  "title": "Subset of <span class=\"process-math\">\\(\\mathbb{R}^n\\)<\/span>.",
+  "body": " Subset of   A subset of is any collection of vectors contained in .   "
+},
+{
+  "id": "def-subspace",
+  "level": "2",
+  "url": "Section-2-8.html#def-subspace",
+  "type": "Definition",
+  "number": "2.36",
+  "title": "Subspace.",
+  "body": " Subspace   A subset of is a subspace if:   for any scalar and any .  for all .    "
+},
+{
+  "id": "ex-subspace-pictures",
+  "level": "2",
+  "url": "Section-2-8.html#ex-subspace-pictures",
+  "type": "Example",
+  "number": "2.37",
+  "title": "",
+  "body": "  Which of the following subsets could be subspaces of ?   A graphic showing three subsets of . The first is the unit square. The second is a line through the origin. The third is a line that does not pass throught the origin.    "
+},
+{
+  "id": "p-2-8-subspace-examples-2",
+  "level": "2",
+  "url": "Section-2-8.html#p-2-8-subspace-examples-2",
+  "type": "Example",
+  "number": "2.38",
+  "title": "",
+  "body": "  For each subset of given below, determine if it is a subspace of .                                      "
+},
+{
+  "id": "thm-subspace-are-span",
+  "level": "2",
+  "url": "Section-2-8.html#thm-subspace-are-span",
+  "type": "Theorem",
+  "number": "2.39",
+  "title": "",
+  "body": "  Every subspace of can be written as the span of a finite number of vectors; that is, if is a subspace of , then there exists vectors so that .   "
+},
+{
+  "id": "def-col-null",
+  "level": "2",
+  "url": "Section-2-8.html#def-col-null",
+  "type": "Definition",
+  "number": "2.40",
+  "title": "Column Space and Null Space.",
+  "body": " Column Space and Null Space   Let be an matrix.   The column space of , , is the subspace of spanned by .  The null space of , , is the subspace of consisting of all solutions to .    "
+},
+{
+  "id": "ex-colspace-membership",
+  "level": "2",
+  "url": "Section-2-8.html#ex-colspace-membership",
+  "type": "Example",
+  "number": "2.41",
+  "title": "",
+  "body": "  Is in the column space of ?    "
+},
+{
+  "id": "ex-nullspace-membership",
+  "level": "2",
+  "url": "Section-2-8.html#ex-nullspace-membership",
+  "type": "Example",
+  "number": "2.42",
+  "title": "",
+  "body": "  Determine whether is in .    "
+},
+{
+  "id": "def-basis",
+  "level": "2",
+  "url": "Section-2-8.html#def-basis",
+  "type": "Definition",
+  "number": "2.43",
+  "title": "Basis.",
+  "body": " Basis   A basis for a subspace is a set of linearly independent vectors in that span .   "
+},
+{
+  "id": "ex-basis-subspace",
+  "level": "2",
+  "url": "Section-2-8.html#ex-basis-subspace",
+  "type": "Example",
+  "number": "2.44",
+  "title": "",
+  "body": "  Let    Find a matrix such that .  Construct a basis for .    "
+},
+{
+  "id": "ex-basis-col-null",
+  "level": "2",
+  "url": "Section-2-8.html#ex-basis-col-null",
+  "type": "Example",
+  "number": "2.45",
+  "title": "",
+  "body": "  Construct a basis for and .    "
+},
+{
+  "id": "ex-V-ab-equals-zero",
+  "level": "2",
+  "url": "Section-2-8.html#ex-V-ab-equals-zero",
+  "type": "Example",
+  "number": "2.46",
+  "title": "",
+  "body": "  Let    Give an example of a vector that is in .  Give an example of a vector that is not in .  Is the zero vector in ?  Is a subspace?    "
 }
 ]
 
