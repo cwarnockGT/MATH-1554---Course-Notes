@@ -441,7 +441,7 @@
 
     <p><nbsp/></p>
 
-    <definition workspace="1.5in">
+    <definition xml:id="def-row-equiv" workspace="1.5in">
       <title>Row Equivalence</title>
       <statement>
         Two matrices are <term>row equivalent</term> if a sequence of <em>row operations</em> transforms one matrix into the other.

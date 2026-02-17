@@ -8,6 +8,9 @@
     <macros>
       \newcommand{\foo}{b^{ar}}
       \newcommand{\aug}{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
+      \newcommand{\Nul}{\operatorname{Nul}}
+      \newcommand{\Col}{\operatorname{Col}}
+      \newcommand{\Span}{\operatorname{Span}}
     </macros>
 
     <latex-image-preamble>

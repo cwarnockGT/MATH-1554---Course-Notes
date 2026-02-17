@@ -83,7 +83,7 @@
             <p>
                 <me> \vec x = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \begin{bmatrix} 2t \\ -t \\ t \end{bmatrix} = t\begin{bmatrix} 2 \\ -1 \\ 1 \end{bmatrix}, t \in \mathbb{R}</me> 
             </p>
-            <p> Writing the solution set in terms of the parameter <m>t</m> is what is known as <term>parametric vector form</term>. This form gives an explicit and convenient way of writing down the solution set. It also gives insight into what is happening geometrically. Note that the vectors which satisfy the system are precisely <md>\vec x \in \textrm{Span}\left\{\begin{bmatrix} 2 \\ -1 \\ 1 \end{bmatrix}\right\}</md>. Since the solution set contains <m>\vec 0</m>, we see that the solution set is a line in <m>\mathbb{R}^3</m> which passes through the origin.
+            <p> Writing the solution set in terms of the parameter <m>t</m> is what is known as <term>parametric vector form</term>. This form gives an explicit and convenient way of writing down the solution set. It also gives insight into what is happening geometrically. Note that the vectors which satisfy the system are precisely <md>\vec x \in \operatorname{Span}\left\{\begin{bmatrix} 2 \\ -1 \\ 1 \end{bmatrix}\right\}</md>. Since the solution set contains <m>\vec 0</m>, we see that the solution set is a line in <m>\mathbb{R}^3</m> which passes through the origin.
             </p> 
         </solution>
     </example>
