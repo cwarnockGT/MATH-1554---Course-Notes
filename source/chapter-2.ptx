@@ -19,7 +19,7 @@
 
   <section xml:id="Section-2-5">
     <title>2.5 <m>LU</m> Factorization</title>
-      <xi:include href="./chapter-2-notes/section-2-5.ptx" />
+      <xi:include href="./chapter-2-notes/section-2-5-sol.ptx" />
   </section>
 
   <section xml:id="Section-2-8">
