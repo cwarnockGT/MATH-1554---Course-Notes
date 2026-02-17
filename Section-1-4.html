@@ -138,6 +138,9 @@ eBookConfig.enable_chatcodes =  false;
 <button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="Section-1-3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-1.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="Section-1-5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\foo}{b^{ar}}
 \newcommand{\aug}{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
+\newcommand{\Nul}{\operatorname{Nul}}
+\newcommand{\Col}{\operatorname{Col}}
+\newcommand{\Span}{\operatorname{Span}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -444,7 +447,7 @@ x_1 \vec{a}_1 + \cdots + x_n \vec{a}_n \;=\; \vec{b},
 <div class="para">By <a href="Section-1-4.html#thm-existence-span" class="xref" data-knowl="./knowl/xref/thm-existence-span.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 1.37: The Existence of Solutions for the Matrix Equation">Theorem 1.37</a>, the system <span class="process-math">\(A\vec x = \vec b\)</span> if and only if <span class="process-math">\(\vec b\)</span> is a linear combination of the columns of <span class="process-math">\(A\text{.}\)</span> Therefore, we have that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-existence-span.html" id="sec-1-4-matrix-equation-5-1-2-1-5">
 \begin{equation*}
-\vec b \in \textrm{Span}\left\{\begin{bmatrix} 1 \\ 2 \\ 0 \end{bmatrix}, \begin{bmatrix} 3 \\ 8 \\ 1 \end{bmatrix}, \begin{bmatrix} 4 \\ 4 \\ -2 \end{bmatrix}\right\}
+\vec b \in \operatorname{Span}\left\{\begin{bmatrix} 1 \\ 2 \\ 0 \end{bmatrix}, \begin{bmatrix} 3 \\ 8 \\ 1 \end{bmatrix}, \begin{bmatrix} 4 \\ 4 \\ -2 \end{bmatrix}\right\}
 \end{equation*}
 </div>
 <div class="para">Unfortunately, this description of <span class="process-math">\(\vec b\)</span> is not too informative as we do not know exactly how "big" that span is. (We will understand more about how "big" a span is when we learn about dimension in Chapter 2.)</div>
@@ -475,13 +478,13 @@ x_1 \vec{a}_1 + \cdots + x_n \vec{a}_n \;=\; \vec{b},
 <div class="para">Note that at the beginning, we saw that <span class="process-math">\(\vec b\)</span> had to live in the span of the columns of <span class="process-math">\(A\text{.}\)</span> Now, we have learned a more descriptive way of describing <span class="process-math">\(\vec b\)</span> in terms of span; that is, we have that</div>
 <div class="displaymath process-math" id="sec-1-4-matrix-equation-5-1-2-7-4">
 \begin{equation*}
-\vec b \in \textrm{Span}\left\{\begin{bmatrix} \frac{1}{2} \\ 1 \\ 0 \end{bmatrix}, \begin{bmatrix} -1 \\ 0 \\ 1 \end{bmatrix}\right\}
+\vec b \in \operatorname{Span}\left\{\begin{bmatrix} \frac{1}{2} \\ 1 \\ 0 \end{bmatrix}, \begin{bmatrix} -1 \\ 0 \\ 1 \end{bmatrix}\right\}
 \end{equation*}
 </div>
 <div class="para">In fact, we have that</div>
 <div class="displaymath process-math" id="sec-1-4-matrix-equation-5-1-2-7-5">
 \begin{equation*}
-\textrm{Span}\left\{\begin{bmatrix} \frac{1}{2} \\ 1 \\ 0 \end{bmatrix}, \begin{bmatrix} -1 \\ 0 \\ 1 \end{bmatrix}\right\} = \textrm{Span}\left\{\begin{bmatrix} 1 \\ 2 \\ 0 \end{bmatrix}, \begin{bmatrix} 3 \\ 8 \\ 1 \end{bmatrix}, \begin{bmatrix} 4 \\ 4 \\ -2 \end{bmatrix}\right\}
+\operatorname{Span}\left\{\begin{bmatrix} \frac{1}{2} \\ 1 \\ 0 \end{bmatrix}, \begin{bmatrix} -1 \\ 0 \\ 1 \end{bmatrix}\right\} = \operatorname{Span}\left\{\begin{bmatrix} 1 \\ 2 \\ 0 \end{bmatrix}, \begin{bmatrix} 3 \\ 8 \\ 1 \end{bmatrix}, \begin{bmatrix} 4 \\ 4 \\ -2 \end{bmatrix}\right\}
 \end{equation*}
 </div>
 <div class="para">This means that the original span was actually only 2-dimensional and not 3-dimensional as it at first appeared.</div>

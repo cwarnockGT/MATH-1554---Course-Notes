@@ -127,9 +127,9 @@ var ptx_lunr_docs = [
   "body": " Consistent  A linear system is consistent if it has at least one solution . Otherwise, it is inconsistent .  "
 },
 {
-  "id": "section-1-1-sol-9-4",
+  "id": "def-row-equiv",
   "level": "2",
-  "url": "Section-1-1.html#section-1-1-sol-9-4",
+  "url": "Section-1-1.html#def-row-equiv",
   "type": "Definition",
   "number": "1.12",
   "title": "Row Equivalence.",
@@ -1348,7 +1348,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "2.8 Subspaces",
-  "body": " 2.8 Subspaces   2.8 Subspaces   Overview   Topics   Subspaces, column space, and null space.  A basis for a subspace.     Goals   Determine whether a set is a subspace.  Determine whether a vector is in a particular subspace, or find a vector in that subspace.  Construct a basis for a subspace (e.g., a basis for ).    Motivating Question : Given a matrix , what is the set of vectors for which we can solve ?    Subset of   A subset of is any collection of vectors contained in .      Subspace   A subset of is a subspace if:   for any scalar and any .  for all .     Note that scalar closure implies the zero vector must be in .     Which of the following subsets could be subspaces of ?   A graphic showing three subsets of . The first is the unit square. The second is a line through the origin. The third is a line that does not pass throught the origin.        Examples of Subspaces    For each subset of given below, determine if it is a subspace of .                                          The Column Space and Null Space  Recall that for vectors , is the subspace consisting of all linear combinations of these vectors. Not only is the span of vectors an example of a subspace of , they are the only examples of subspace of .     Every subspace of can be written as the span of a finite number of vectors; that is, if is a subspace of , then there exists vectors so that .      Column Space and Null Space   Let be an matrix.   The column space of , , is the subspace of spanned by .  The null space of , , is the subspace of consisting of all solutions to .        Is in the column space of ?        Basis    Determine whether is in .        Definition of basis and Example   Basis   A basis for a subspace is a set of linearly independent vectors in that span .       Let    Find a matrix such that .  Construct a basis for .        Example: Basis for Column Space and Null Space    Construct a basis for and .        Another Example    Let    Give an example of a vector that is in .  Give an example of a vector that is not in .  Is the zero vector in ?  Is a subspace?       "
+  "body": " 2.8 Subspaces   2.8 Subspaces   Overview   Topics   Subspaces, column space, and null space.  A basis for a subspace.     Goals   Determine whether a set is a subspace.  Determine whether a vector is in a particular subspace, or find a vector in that subspace.  Construct a basis for a subspace (e.g., a basis for ).    Motivating Question : Given a matrix , what is the set of vectors for which we can solve ?    Subset of   A subset of is any collection of vectors contained in .      Subspace   A subset of is a subspace if:    for all .  for any scalar and any .     Note that scalar closure implies the zero vector must be in .     Which of the following subsets could be subspaces of ?   A graphic showing three subsets of . The first (a) is the unit square. The second (b) is a line through the origin. The third (c) is a line that does not pass throught the origin.     For (a), note that the unit square contains the vector , but does not contain the vector . Therefore, the unit square is NOT a subspace of .  For (b), first note that the line passes throught the origin, so the subset contains . Next, if is a nonzero vector on the line, we see that every vector on the line can be expressed as some multiple of . Therefore, the subset can be written as . It follows that the subset is closed under vector addition and scalar multiplication. Hence, a line passing throught the origin IS as subpace of .  For (c), note that the line does NOT pass through the origin. So the subset does NOT contain and is NOT a subspace of .       Examples of Subspaces    For each subset of given below, determine if it is a subspace of .          Note that . Also, we have that is closed under vector addition and scalar multiplication since every vector you choose in has to be since it is the only vector in . Thus, is a subspace of .           Note that , but . Therefore, is NOT closed under scalar multiplication, so is NOT a subspace of .           Note that , but . Thus, is not closed under vector addition, so is NOT a subspace of .           Since is the span of a set of vectors, we know that contains every possible linear combination of its vectors. Therefore, must contain and must be closed under vector addition and scalar multiplication. Hence, is a subspace of .        More Examples of Subspaces    The following subsets of are written in set-builder notation. For each, determine if it is a subspace of . Note that is the set of integers.          Note that , but since is not an integer. Therefore, is NOT closed under scalar multiplication, so is NOT a subspace of .           Note that . It follows that is a subspace of .           Note that . It follows that is a subspace of . In fact, the solution set of any homogeneous system is a subspace of . This subspace is called the nullspace (see ).           Note that , so is NOT a subspace of . In fact, the solution set of any inhomogeneous system is NOT a subspace of .        The Column Space and Null Space  Recall that for vectors , is the subspace consisting of all linear combinations of these vectors. Not only is the span of vectors an example of a subspace of , they are the only examples of subspace of .    Every subspace of can be written as the span of a finite number of vectors; that is, if is a subspace of , then there exists vectors so that .      Column Space and Null Space   Let be an matrix.   The column space of , , is the subspace of spanned by .  The null space of , , is the subspace of consisting of all solutions to .       Let be an matrix, and let be any matrix which is row equivalent to . Then  The subspaces and are most likely different. So, often, .  The subspaces and are always the same. So, it is always true that .         Is in the column space of ?     By , asking whether is equivalent to asking whether the matrix equation has a solution. By , we must augment with the matrix and cannot augment with . Note that . Since we do not have a pivot in the augmented column, the system is consistent. Hence, .  You can find a particular linear combination of the columns of which produce by continuing to solve the system.       Basis    Determine whether is in .     By , we are free to check whether or since . Note that . Thus, for any value of .  Let's determine if there are any other vectors in . Since we determine all solutions to . Since is already in RREF, we see that is a free variable and and are pivot variables. It follows that        Definition of basis and Example   Basis   A basis for a subspace is a set of linearly independent vectors in that span .    In MATH 1554, each basis will be a finite set of vectors. For every subspace other than the trivial subspace , there are infinitely many choices for the basis.  Be careful to NEVER include when writing your basis. Writing of the basis gives the entire subspace. A basis is NOT the entire subspace, but a finite set of building blocks used to build the space.     Let      Find at least three vectors which live in .    We have the following  since  since  since        Find a matrix such that .    Note that if , then , which is the defining characteristic of the vectors in . Therefore, .      Construct a basis for .    Note that the second, third, and fourth columns of correspond to free variables. Therefore, and are the free variables and is the pivot variables. It follows that   Therefore, we see that the three vectors span . Since they are linearly independent, they form a basis for . Thus, a basis for is the set of vectors . This basis is NOT unique. Note you can replace any of the three vectors with a nonzero multiple of itself. Also, you could replace one of them with suitable linear combination. For example, you could replace the middle vector with the first place the second and that would still yield a valid basis since the resulting three vectors would be linearly independent and span the space.        Example: Basis for Column Space and Null Space    Construct a basis for and .     First, note that we can express as the span of some vectors by finding all solutions to . It follows that Thus, a basis for is   By the definition of , we see that Note that the set containing the four column vectors of is NOT a basis since those vectors are NOT linearly independent. From , we see that Column 2 and Column 4 of are NOT pivot columns. Therefore, they are linearly dependent on the other columns of . It follows that the following set containing Column 1 and Column 2 of spans and is linearly independent, so it is a basis for .        Another Example    Let      Give an example of a vector that is in .    Note that since and since .      Give an example of a vector that is not in .    Note that since       Is the zero vector in ?    Yes, since .      Is a subspace of ?    From (a) and (b), we see that , but . Thus, is not closed under vector addition. Hence, is NOT a subspace of .       "
 },
 {
   "id": "obj-2-8-topics-goals",
@@ -1384,7 +1384,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "2.36",
   "title": "Subspace.",
-  "body": " Subspace   A subset of is a subspace if:   for any scalar and any .  for all .    "
+  "body": " Subspace   A subset of is a subspace if:    for all .  for any scalar and any .    "
 },
 {
   "id": "ex-subspace-pictures",
@@ -1393,7 +1393,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.37",
   "title": "",
-  "body": "  Which of the following subsets could be subspaces of ?   A graphic showing three subsets of . The first is the unit square. The second is a line through the origin. The third is a line that does not pass throught the origin.    "
+  "body": "  Which of the following subsets could be subspaces of ?   A graphic showing three subsets of . The first (a) is the unit square. The second (b) is a line through the origin. The third (c) is a line that does not pass throught the origin.     For (a), note that the unit square contains the vector , but does not contain the vector . Therefore, the unit square is NOT a subspace of .  For (b), first note that the line passes throught the origin, so the subset contains . Next, if is a nonzero vector on the line, we see that every vector on the line can be expressed as some multiple of . Therefore, the subset can be written as . It follows that the subset is closed under vector addition and scalar multiplication. Hence, a line passing throught the origin IS as subpace of .  For (c), note that the line does NOT pass through the origin. So the subset does NOT contain and is NOT a subspace of .   "
 },
 {
   "id": "p-2-8-subspace-examples-2",
@@ -1402,14 +1402,23 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.38",
   "title": "",
-  "body": "  For each subset of given below, determine if it is a subspace of .                                      "
+  "body": "  For each subset of given below, determine if it is a subspace of .          Note that . Also, we have that is closed under vector addition and scalar multiplication since every vector you choose in has to be since it is the only vector in . Thus, is a subspace of .           Note that , but . Therefore, is NOT closed under scalar multiplication, so is NOT a subspace of .           Note that , but . Thus, is not closed under vector addition, so is NOT a subspace of .           Since is the span of a set of vectors, we know that contains every possible linear combination of its vectors. Therefore, must contain and must be closed under vector addition and scalar multiplication. Hence, is a subspace of .    "
+},
+{
+  "id": "handout-section-2-8-subspaces-4-2",
+  "level": "2",
+  "url": "Section-2-8.html#handout-section-2-8-subspaces-4-2",
+  "type": "Example",
+  "number": "2.39",
+  "title": "",
+  "body": "  The following subsets of are written in set-builder notation. For each, determine if it is a subspace of . Note that is the set of integers.          Note that , but since is not an integer. Therefore, is NOT closed under scalar multiplication, so is NOT a subspace of .           Note that . It follows that is a subspace of .           Note that . It follows that is a subspace of . In fact, the solution set of any homogeneous system is a subspace of . This subspace is called the nullspace (see ).           Note that , so is NOT a subspace of . In fact, the solution set of any inhomogeneous system is NOT a subspace of .    "
 },
 {
   "id": "thm-subspace-are-span",
   "level": "2",
   "url": "Section-2-8.html#thm-subspace-are-span",
   "type": "Theorem",
-  "number": "2.39",
+  "number": "2.40",
   "title": "",
   "body": "  Every subspace of can be written as the span of a finite number of vectors; that is, if is a subspace of , then there exists vectors so that .   "
 },
@@ -1418,34 +1427,43 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#def-col-null",
   "type": "Definition",
-  "number": "2.40",
+  "number": "2.41",
   "title": "Column Space and Null Space.",
   "body": " Column Space and Null Space   Let be an matrix.   The column space of , , is the subspace of spanned by .  The null space of , , is the subspace of consisting of all solutions to .    "
+},
+{
+  "id": "thm-nul-same-col-dif",
+  "level": "2",
+  "url": "Section-2-8.html#thm-nul-same-col-dif",
+  "type": "Theorem",
+  "number": "2.42",
+  "title": "",
+  "body": "  Let be an matrix, and let be any matrix which is row equivalent to . Then  The subspaces and are most likely different. So, often, .  The subspaces and are always the same. So, it is always true that .     "
 },
 {
   "id": "ex-colspace-membership",
   "level": "2",
   "url": "Section-2-8.html#ex-colspace-membership",
   "type": "Example",
-  "number": "2.41",
+  "number": "2.43",
   "title": "",
-  "body": "  Is in the column space of ?    "
+  "body": "  Is in the column space of ?     By , asking whether is equivalent to asking whether the matrix equation has a solution. By , we must augment with the matrix and cannot augment with . Note that . Since we do not have a pivot in the augmented column, the system is consistent. Hence, .  You can find a particular linear combination of the columns of which produce by continuing to solve the system.   "
 },
 {
   "id": "ex-nullspace-membership",
   "level": "2",
   "url": "Section-2-8.html#ex-nullspace-membership",
   "type": "Example",
-  "number": "2.42",
+  "number": "2.44",
   "title": "",
-  "body": "  Determine whether is in .    "
+  "body": "  Determine whether is in .     By , we are free to check whether or since . Note that . Thus, for any value of .  Let's determine if there are any other vectors in . Since we determine all solutions to . Since is already in RREF, we see that is a free variable and and are pivot variables. It follows that    "
 },
 {
   "id": "def-basis",
   "level": "2",
   "url": "Section-2-8.html#def-basis",
   "type": "Definition",
-  "number": "2.43",
+  "number": "2.45",
   "title": "Basis.",
   "body": " Basis   A basis for a subspace is a set of linearly independent vectors in that span .   "
 },
@@ -1454,27 +1472,27 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#ex-basis-subspace",
   "type": "Example",
-  "number": "2.44",
+  "number": "2.46",
   "title": "",
-  "body": "  Let    Find a matrix such that .  Construct a basis for .    "
+  "body": "  Let      Find at least three vectors which live in .    We have the following  since  since  since        Find a matrix such that .    Note that if , then , which is the defining characteristic of the vectors in . Therefore, .      Construct a basis for .    Note that the second, third, and fourth columns of correspond to free variables. Therefore, and are the free variables and is the pivot variables. It follows that   Therefore, we see that the three vectors span . Since they are linearly independent, they form a basis for . Thus, a basis for is the set of vectors . This basis is NOT unique. Note you can replace any of the three vectors with a nonzero multiple of itself. Also, you could replace one of them with suitable linear combination. For example, you could replace the middle vector with the first place the second and that would still yield a valid basis since the resulting three vectors would be linearly independent and span the space.    "
 },
 {
   "id": "ex-basis-col-null",
   "level": "2",
   "url": "Section-2-8.html#ex-basis-col-null",
   "type": "Example",
-  "number": "2.45",
+  "number": "2.47",
   "title": "",
-  "body": "  Construct a basis for and .    "
+  "body": "  Construct a basis for and .     First, note that we can express as the span of some vectors by finding all solutions to . It follows that Thus, a basis for is   By the definition of , we see that Note that the set containing the four column vectors of is NOT a basis since those vectors are NOT linearly independent. From , we see that Column 2 and Column 4 of are NOT pivot columns. Therefore, they are linearly dependent on the other columns of . It follows that the following set containing Column 1 and Column 2 of spans and is linearly independent, so it is a basis for .    "
 },
 {
   "id": "ex-V-ab-equals-zero",
   "level": "2",
   "url": "Section-2-8.html#ex-V-ab-equals-zero",
   "type": "Example",
-  "number": "2.46",
+  "number": "2.48",
   "title": "",
-  "body": "  Let    Give an example of a vector that is in .  Give an example of a vector that is not in .  Is the zero vector in ?  Is a subspace?    "
+  "body": "  Let      Give an example of a vector that is in .    Note that since and since .      Give an example of a vector that is not in .    Note that since       Is the zero vector in ?    Yes, since .      Is a subspace of ?    From (a) and (b), we see that , but . Thus, is not closed under vector addition. Hence, is NOT a subspace of .    "
 },
 {
   "id": "Section-2-9",
@@ -1508,7 +1526,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#p-2-9-intro-objectives-7",
   "type": "Example",
-  "number": "2.47",
+  "number": "2.49",
   "title": "",
   "body": "  Sketch in each coordinate system below.    Two coordinate systems showing different basis orientations.  Two grids with different bases; vectors and are drawn.    "
 },
@@ -1517,7 +1535,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#def-coordinates",
   "type": "Definition",
-  "number": "2.48",
+  "number": "2.50",
   "title": "Coordinates Relative to a Basis.",
   "body": " Coordinates Relative to a Basis   Let be a basis for a subspace . For any , the coordinates of relative to are the scalars such that   The coordinate vector of relative to is:    "
 },
@@ -1526,7 +1544,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#ex-coordinates",
   "type": "Example",
-  "number": "2.49",
+  "number": "2.51",
   "title": "",
   "body": "  Let:   Verify that is in the span of , and compute .   "
 },
@@ -1535,7 +1553,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#ex-coordinates2",
   "type": "Example",
-  "number": "2.50",
+  "number": "2.52",
   "title": "",
   "body": "  Let   and .     Verify that is a basis for .      Determine if .      Compute .    "
 },
@@ -1544,7 +1562,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#def-dimension",
   "type": "Definition",
-  "number": "2.51",
+  "number": "2.53",
   "title": "Dimension.",
   "body": " Dimension   The dimension of a nonzero subspace , written , is the number of vectors in any basis of . We define .   "
 },
@@ -1553,7 +1571,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#thm-dimension-basis",
   "type": "Theorem",
-  "number": "2.52",
+  "number": "2.54",
   "title": "Dimension Is Well-Defined.",
   "body": " Dimension Is Well-Defined   Any two bases and of a nonzero subspace have the same number of vectors.   "
 },
@@ -1562,7 +1580,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#def-rank",
   "type": "Definition",
-  "number": "2.53",
+  "number": "2.55",
   "title": "Rank.",
   "body": " Rank   The rank of a matrix is the dimension of its column space.   "
 },
@@ -1571,7 +1589,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#ex-rank-computation",
   "type": "Example",
-  "number": "2.54",
+  "number": "2.56",
   "title": "",
   "body": "  Compute and , where    "
 },
@@ -1580,7 +1598,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#thm-rank-theorem",
   "type": "Theorem",
-  "number": "2.55",
+  "number": "2.57",
   "title": "Rank Theorem.",
   "body": " Rank Theorem   If a matrix has columns, then    "
 },
@@ -1589,7 +1607,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#thm-basis-theorem",
   "type": "Theorem",
-  "number": "2.56",
+  "number": "2.58",
   "title": "Basis Theorem.",
   "body": " Basis Theorem   Any two bases for a subspace have the same dimension.   "
 },
@@ -1598,7 +1616,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#thm-IMT-Cont-1",
   "type": "Theorem",
-  "number": "2.57",
+  "number": "2.59",
   "title": "The Invertible Matrix Theorem (Continued) Theorem.",
   "body": " The Invertible Matrix Theorem (Continued) Theorem   Let be an matrix. The following are equivalent:   (a)   is invertible.  (m)   The columns of form a basis for .  (n)   .  (o)   .  (p)   .  (q)   .  (r)   .    "
 },
@@ -1607,7 +1625,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#ex-rref-rank-questions",
   "type": "Example",
-  "number": "2.58",
+  "number": "2.60",
   "title": "",
   "body": "  For each part below, give an example of a matrix in RREF with the stated property, if possible.                               "
 },
