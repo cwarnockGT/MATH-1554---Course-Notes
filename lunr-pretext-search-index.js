@@ -1249,7 +1249,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "2.5 <span class=\"process-math\">\\(LU\\)<\/span> Factorization",
-  "body": " 2.5 Factorization   2.5 Factorization   Overview   Topics   The factorization of a matrix.  Using factorization to solve a system.  Why the factorization works.     Goals   Compute an factorization of a matrix.  Apply factorization to solve systems of equations.  Determine whether a matrix has an factorization.    We have learned several techniques for solving the equation . We could solve using , but this requires computing the inverse of an matrix, which becomes difficult for large . Gaussian elimination is better, but still inefficient for large systems.  More efficient and numerically stable methods rely on matrix factorizations. A matrix factorization (or matrix decomposition ) is a factorization of a matrix into a product of matrices. Such factorizations help solve and reveal matrix structure. Several matrix factorizations appear throughout this course. In this section, we factor a matrix into lower and upper triangular matrices.  A rectangular matrix is upper triangular if whenever .   A rectangular matrix is lower triangular if whenever .   Can you have a matrix that is both upper and lower triangular?    The Factorization   Factorization   If is an matrix that can be row reduced to echelon form without row exchanges, then there exists matrices and such that , where   is a lower triangular matrix with ones on the diagonal.  is an echelon form of .       If is a matrix, then its LU factorization has the form:     How do we find and ? Suppose can be row reduced to echelon form without interchanging rows. Then   where the are elementary row-operation matrices. These matrices are lower triangular and invertible. For example,   Therefore:     Algorithm for Computing  To compute an LU factorization:  Reduce to an echelon form using only row replacement operations. So no row swapping or scaling.  Place entries in so that the same sequence of row operations reduce to .  Note, in MATH 1554, the only allowed row replacement operation can be written in the form . The number is what should go into the row and column of , so .    Compute the LU factorization of:         Compute the LU factorization of:       Using the Decomposition  How do we use factorization to help us solve ?  If , then the equation can be written , or equivalently, . Setting , we do the following:   Forward substitution to solve for in .  Backward substitution to solve for in .     Solve the linear system with:       "
+  "body": " 2.5 Factorization   2.5 Factorization   Overview   Topics   The factorization of a matrix.  Using factorization to solve a system.  Why the factorization works.     Goals   Compute an factorization of a matrix.  Apply factorization to solve systems of equations.  Determine whether a matrix has an factorization.     We have learned several techniques for solving the equation . We could solve using , but this requires computing the inverse of an matrix, which becomes difficult for large . Gaussian elimination is better, but still inefficient for large systems.  More efficient and numerically stable methods rely on matrix factorizations. A matrix factorization (or matrix decomposition ) is a factorization of a matrix into a product of matrices. Such factorizations help solve and reveal matrix structure. Several matrix factorizations appear throughout this course. In this section, we factor a matrix into lower and upper triangular matrices.  A rectangular matrix is upper triangular if whenever .   A rectangular matrix is lower triangular if whenever .   Can you have a matrix that is both upper and lower triangular?   There are many matrices which are both, such as       The Factorization   Factorization   If is an matrix that can be row reduced to echelon form without row exchanges, then there exists matrices and such that , where   is a lower triangular matrix with ones on the diagonal.  is an echelon form of .       If is a matrix, then its LU factorization has the form:      How do we find and ? Suppose can be row reduced to echelon form without interchanging rows. Then   where the are elementary row-operation matrices. These matrices are lower triangular and invertible. For example,   Therefore:      Algorithm for Computing  To compute an LU factorization:  Reduce to an echelon form using only row replacement operations. So no row swapping or scaling.  Place entries in so that the same sequence of row operations reduce to .    Note, in MATH 1554, the only allowed row replacement operation can be written in the form . The number is what should go into the row and column of , so .   Caution 1: Note that is the opposite of the scalar used in the row replacement. This is because the formula has a negative sign built in.   Caution 2: Note that you are only guaranteed to find the correct if you are working from left to right and from top to bottom. So, start with the leftmost pivot column and use its pivot row to elimnate all nonzero entries below it. Then move to the next pivot column (from the left) and repeat.     Compute the LU factorization of:     First, let's determine the sizes of and . Since is an echelon form of , we know that has the same dimension as . Thus, is a matrix. Since is a square matrix that multiplies on the left, must be a matrix.  Now, we determine by row reducing to echelon form only using row replacements of the form . Each time we make one of these row replacements, we are finding an entry of , specifically we are finding that .  I tend to write down the form of with blanks in the lower portion and fill them in after each row replacement. So, I start the problem with the following written towards the bottom of the page:    Note the following row operations:    : Note that the row replacement could be written as , so we have that .      : Since we used the row operation , we have that .      : Since we used the row operation , we have that . Since the matrix is in echelon form, we have found .      Therefore, we have that . We can check by verifying that .         Compute the LU factorization of:     Note will be a matrix and will be a matrix. I start by writing the following near the bottom of the page:    Note the following row operations: Therefore, we have that and .   Note that if we were only interested getting to echelon form, then we could do ; however, since we are interested in -factorization we must pay attention to Caution 2 . Therefore, we must use Row 2 next since it is the next pivot column. Note the following: Thus, we have that and .   We are still not in echelon form, so we must do one more row operation. Therefore, . What about ? Well, we didn't need to do anything to Row 5, so can we put anything in that position? NO. Notice, that if you put a non-zero number in that position, say , then we are saying that we need to do the row replacement which would mess up our row of zeros at the bottom of the matrix, thus undoing our work in getting to echelon form. Therefore, we need to make NO change to Row 5, which is doing the row replacement , so must be .   Since the final matrix is in echelon form, we have found . However, there is still one more entry of to determine, . Do we have to put a zero there? NO. Note that whatever number is in that position, say , would result in the row replacement which actually doesn't change anything since Row 4 is a row consisting entirely of 's. Therefore, , where can be anything you wish. Thus, we have that One consequence of this is that the factorization of a matrix might not be unique. It is true that is unique; however, there could be many possible 's that work.       Using the Decomposition  How do we use factorization to help us solve ?  If , then the equation can be written , or equivalently, . Setting , we do the following:   Forward substitution to solve for in .  Backward substitution to solve for in .   Since is an invertible matrix, the system will always be consistent and have a unique solution. The system may be inconsistent. Since is in echelon form, we can quickly determine whether is inconsistent by checking if there is a nonzero entry in that corresponds to a row of zeros in .    Solve the linear system with:     We start with determining a vector so that . Note that Therefore, we have that .   Next, we determine so that . Note that Therefore, we have that is the solution to the system .      "
 },
 {
   "id": "obj-2-5-topics-goals",
@@ -1270,27 +1270,27 @@ var ptx_lunr_docs = [
   "body": " Goals   Compute an factorization of a matrix.  Apply factorization to solve systems of equations.  Determine whether a matrix has an factorization.   "
 },
 {
-  "id": "p-2-5-intro-objectives-5",
-  "level": "2",
-  "url": "Section-2-5.html#p-2-5-intro-objectives-5",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "matrix factorization matrix decomposition "
-},
-{
   "id": "p-2-5-intro-objectives-6",
   "level": "2",
   "url": "Section-2-5.html#p-2-5-intro-objectives-6",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
+  "body": "matrix factorization matrix decomposition "
+},
+{
+  "id": "p-2-5-intro-objectives-7",
+  "level": "2",
+  "url": "Section-2-5.html#p-2-5-intro-objectives-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
   "body": "upper triangular "
 },
 {
-  "id": "p-2-5-intro-objectives-8",
+  "id": "p-2-5-intro-objectives-9",
   "level": "2",
-  "url": "Section-2-5.html#p-2-5-intro-objectives-8",
+  "url": "Section-2-5.html#p-2-5-intro-objectives-9",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -1321,7 +1321,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.32",
   "title": "",
-  "body": "  Compute the LU factorization of:    "
+  "body": "  Compute the LU factorization of:     First, let's determine the sizes of and . Since is an echelon form of , we know that has the same dimension as . Thus, is a matrix. Since is a square matrix that multiplies on the left, must be a matrix.  Now, we determine by row reducing to echelon form only using row replacements of the form . Each time we make one of these row replacements, we are finding an entry of , specifically we are finding that .  I tend to write down the form of with blanks in the lower portion and fill them in after each row replacement. So, I start the problem with the following written towards the bottom of the page:    Note the following row operations:    : Note that the row replacement could be written as , so we have that .      : Since we used the row operation , we have that .      : Since we used the row operation , we have that . Since the matrix is in echelon form, we have found .      Therefore, we have that . We can check by verifying that .   "
 },
 {
   "id": "ex-compute-lu2",
@@ -1330,7 +1330,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.33",
   "title": "",
-  "body": "  Compute the LU factorization of:    "
+  "body": "  Compute the LU factorization of:     Note will be a matrix and will be a matrix. I start by writing the following near the bottom of the page:    Note the following row operations: Therefore, we have that and .   Note that if we were only interested getting to echelon form, then we could do ; however, since we are interested in -factorization we must pay attention to Caution 2 . Therefore, we must use Row 2 next since it is the next pivot column. Note the following: Thus, we have that and .   We are still not in echelon form, so we must do one more row operation. Therefore, . What about ? Well, we didn't need to do anything to Row 5, so can we put anything in that position? NO. Notice, that if you put a non-zero number in that position, say , then we are saying that we need to do the row replacement which would mess up our row of zeros at the bottom of the matrix, thus undoing our work in getting to echelon form. Therefore, we need to make NO change to Row 5, which is doing the row replacement , so must be .   Since the final matrix is in echelon form, we have found . However, there is still one more entry of to determine, . Do we have to put a zero there? NO. Note that whatever number is in that position, say , would result in the row replacement which actually doesn't change anything since Row 4 is a row consisting entirely of 's. Therefore, , where can be anything you wish. Thus, we have that One consequence of this is that the factorization of a matrix might not be unique. It is true that is unique; however, there could be many possible 's that work.   "
 },
 {
   "id": "ex-solve-with-lu",
@@ -1339,7 +1339,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.34",
   "title": "",
-  "body": "  Solve the linear system with:    "
+  "body": "  Solve the linear system with:     We start with determining a vector so that . Note that Therefore, we have that .   Next, we determine so that . Note that Therefore, we have that is the solution to the system .   "
 },
 {
   "id": "Section-2-8",
