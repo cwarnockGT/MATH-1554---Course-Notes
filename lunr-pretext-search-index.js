@@ -1610,6 +1610,114 @@ var ptx_lunr_docs = [
   "number": "2.58",
   "title": "",
   "body": "  For each part below, give an example of a matrix in RREF with the stated property, if possible.                               "
+},
+{
+  "id": "Section-3-1",
+  "level": "1",
+  "url": "Section-3-1.html",
+  "type": "Section",
+  "number": "",
+  "title": "3.1 Introduction to Determinants",
+  "body": " 3.1 Introduction to Determinants   3.1 Introduction to Determinants   Overview   Topics   The definition and computation of a determinant.  The determinant of triangular matrices.     Goals   Compute determinants of matrices using a cofactor expansion.  Apply theorems to compute determinants of matrices that have particular structures.      Determinant   Suppose is with entries . Then the determinant of , written or , is defined by the following recursive formula.   If , then and .  If , then    where is the submatrix obtained by deleting row and column of .       Compute .       More examples    Use the definition to compute        Use the definition to compute        Cofactors and Expansion   Cofactor   For an matrix , the cofactor is   The sign pattern alternates in a checkerboard:      Cofactor Expansion along Any Row or Column   The determinant of can be computed by expanding along any row or any column. For example, expanding down the -th column:     This gives a practical way to compute determinants more efficiently by choosing rows or columns with many zeros.    Example: A 4×4 Determinant    Use to compute the determinant of in an efficient manner.        Triangular Matrices   Determinant of a Triangular Matrix   If is triangular (upper or lower), then   the product of its diagonal entries.      Compute the determinant of the following triangular matrix.      A naive cofactor expansion for an matrix requires on the order of multiplications, which grows very quickly:  A matrix requires roughly multiplications.  A matrix requires approximately multiplications.    This doesn't mean that determinants are not useful.  We will briefly study more efficient methods for computing determinants.  We will learn some application of determinants, such as solving linear systems and calculating area\/volume of certain regions.  Determinants are used in multivariable calculus (e.g., Jacobians for change of variables in integrals).      "
+},
+{
+  "id": "obj-3-1-topics-goals",
+  "level": "2",
+  "url": "Section-3-1.html#obj-3-1-topics-goals",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   The definition and computation of a determinant.  The determinant of triangular matrices.   "
+},
+{
+  "id": "p-3-1-overview-3",
+  "level": "2",
+  "url": "Section-3-1.html#p-3-1-overview-3",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals   Compute determinants of matrices using a cofactor expansion.  Apply theorems to compute determinants of matrices that have particular structures.   "
+},
+{
+  "id": "def-determinant",
+  "level": "2",
+  "url": "Section-3-1.html#def-determinant",
+  "type": "Definition",
+  "number": "3.1",
+  "title": "Determinant.",
+  "body": " Determinant   Suppose is with entries . Then the determinant of , written or , is defined by the following recursive formula.   If , then and .  If , then    where is the submatrix obtained by deleting row and column of .   "
+},
+{
+  "id": "ex-det-2x2",
+  "level": "2",
+  "url": "Section-3-1.html#ex-det-2x2",
+  "type": "Example",
+  "number": "3.2",
+  "title": "",
+  "body": "  Compute .   "
+},
+{
+  "id": "ex-det-3x3",
+  "level": "2",
+  "url": "Section-3-1.html#ex-det-3x3",
+  "type": "Example",
+  "number": "3.3",
+  "title": "",
+  "body": "  Use the definition to compute    "
+},
+{
+  "id": "ex-det-3x3-2",
+  "level": "2",
+  "url": "Section-3-1.html#ex-det-3x3-2",
+  "type": "Example",
+  "number": "3.4",
+  "title": "",
+  "body": "  Use the definition to compute    "
+},
+{
+  "id": "def-cofactor",
+  "level": "2",
+  "url": "Section-3-1.html#def-cofactor",
+  "type": "Definition",
+  "number": "3.5",
+  "title": "Cofactor.",
+  "body": " Cofactor   For an matrix , the cofactor is   The sign pattern alternates in a checkerboard:    "
+},
+{
+  "id": "thm-cofactor-expansion-any-row-col",
+  "level": "2",
+  "url": "Section-3-1.html#thm-cofactor-expansion-any-row-col",
+  "type": "Theorem",
+  "number": "3.6",
+  "title": "Cofactor Expansion along Any Row or Column.",
+  "body": " Cofactor Expansion along Any Row or Column   The determinant of can be computed by expanding along any row or any column. For example, expanding down the -th column:    "
+},
+{
+  "id": "ex-det-4x4",
+  "level": "2",
+  "url": "Section-3-1.html#ex-det-4x4",
+  "type": "Example",
+  "number": "3.7",
+  "title": "",
+  "body": "  Use to compute the determinant of in an efficient manner.    "
+},
+{
+  "id": "thm-triangular-det",
+  "level": "2",
+  "url": "Section-3-1.html#thm-triangular-det",
+  "type": "Theorem",
+  "number": "3.8",
+  "title": "Determinant of a Triangular Matrix.",
+  "body": " Determinant of a Triangular Matrix   If is triangular (upper or lower), then   the product of its diagonal entries.   "
+},
+{
+  "id": "ex-triangular-large",
+  "level": "2",
+  "url": "Section-3-1.html#ex-triangular-large",
+  "type": "Example",
+  "number": "3.9",
+  "title": "",
+  "body": "  Compute the determinant of the following triangular matrix.    "
 }
 ]
 
