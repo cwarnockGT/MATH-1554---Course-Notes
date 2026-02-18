@@ -144,16 +144,17 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active"><li class="toc-item toc-chapter contains-active">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="chapter-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Linear Equations in Linear Algebra</span></a></div>
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-1-1.html" class="internal"><span class="title">1.1 Systems of Linear Equations</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="sec-1-1.html#section-1-1-sol" class="internal"><span class="title">1.1 Systems of Linear Equations</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="sec-1-1.html#section-1-1" class="internal"><span class="title">1.1 Systems of Linear Equations</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-1-2.html" class="internal"><span class="title">1.2 Row Reduction and Echelon Forms</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-1-2.html#handout-1-2-sol" class="internal"><span class="title">1.2 Row Reduction and Echelon Forms</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="sec-1-2.html#handout-1-2" class="internal"><span class="title">1.2 Row Reduction and Echelon Forms</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-1-3.html" class="internal"><span class="title">1.3 Vector Equations</span></a></div>
@@ -171,12 +172,16 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="sec-1-7.html" class="internal"><span class="title">1.7 Linear Independence</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-1-7.html#sec-1-7-2" class="internal"><span class="title">1.7 Linear Independence</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-1-8.html" class="internal"><span class="title">1.8 An Introduction to Linear Transformations</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="sec-1-8.html#sec-1-8-2" class="internal"><span class="title">1.8 An Introduction to Linear Transformations</span></a></div></li></ul>
-</li>
 </ul>
-</li></ul></nav></div>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="solutions.html" class="internal"><span class="codenumber">2</span> <span class="title">Solutions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-1-1-sol.html" class="internal"><span class="title">1.1 Systems of Linear Equations - Solutions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="sec-1-1-sol.html#section-1-1-sol" class="internal"><span class="title">1.1 Systems of Linear Equations - Solutions</span></a></div></li></ul>
+</li></ul>
+</li>
+</ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <div class="print-preview-header">
 <h2 class="print-preview">Print preview</h2>
@@ -187,10 +192,7 @@ eBookConfig.enable_chatcodes =  false;
         </label><label><input type="radio" name="papersize" value="letter">Letter
         </label>
 </form>
-<details class="print-options"><summary>Additional printing options</summary><div class="hide-solutions-options"><div class="hide-option">
-<label for="hide-solution-checkbox">Hide solutions</label><input type="checkbox" id="hide-solution-checkbox">
-</div></div>
-<div class="header-footer-options">
+<details class="print-options"><summary>Additional printing options</summary><div class="header-footer-options">
 <div class="header-option">
 <span class="title">Print headers</span><label>First page<input type="checkbox" id="print-first-page-header-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-header-checkbox" checked></label>
 </div>
@@ -248,7 +250,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="workspace" data-space="0.5in"></div>
 <div class="autopermalink" data-description="Objectives: Goals"><a href="#sec-1-4-matrix-equation-2-5" title="Copy heading and permalink for Objectives: Goals" aria-label="Copy heading and permalink for Objectives: Goals">🔗</a></div></article><div class="para" id="sec-1-4-matrix-equation-2-6">Below is some math notation that will be used frequently throughout the course.<div class="autopermalink" data-description="Paragraph"><a href="#sec-1-4-matrix-equation-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="table table-like" id="sec-1-4-matrix-equation-2-7"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.32<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Table 1.32"><a href="#sec-1-4-matrix-equation-2-7" title="Copy heading and permalink for Table 1.32" aria-label="Copy heading and permalink for Table 1.32">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like" id="sec-1-4-matrix-equation-2-7"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.30<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Table 1.30"><a href="#sec-1-4-matrix-equation-2-7" title="Copy heading and permalink for Table 1.30" aria-label="Copy heading and permalink for Table 1.30">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"><em class="emphasis">symbol</em></td>
 <td class="l m b0 r0 l0 t0 lines"><em class="emphasis">meaning</em></td>
@@ -269,7 +271,7 @@ eBookConfig.enable_chatcodes =  false;
 <em class="emphasis">Example:</em> the notation <span class="process-math">\(\vec{x} \in \mathbb{R}^{5}\)</span> means that <span class="process-math">\(\vec{x}\)</span> is a vector with five real-valued elements.<div class="workspace" data-space="0.3in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#sec-1-4-matrix-equation-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><section class="onepage" id="sec-1-4-matrix-equation-3"><article class="definition definition-like" id="def-matrix-vector-product"><h4 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.33</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Matrix Vector Product as a Linear Combination.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.31</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Matrix Vector Product as a Linear Combination.</span>
 </h4>
 <div class="para" id="def-matrix-vector-product-2-1">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(m \times n\)</span> matrix with columns <span class="process-math">\(\vec{a}_1,\dotsc,\vec{a}_n\)</span> and let <span class="process-math">\(\vec{x} \in \mathbb{R}^{n}\text{.}\)</span> The <dfn class="terminology">matrix vector product</dfn> <span class="process-math">\(A\vec{x}\)</span> is the following linear combination of the columns of <span class="process-math">\(A\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-matrix-vector-product-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -292,8 +294,8 @@ x_1 \vec{a}_1 + x_2 \vec{a}_2 + \cdots + x_n \vec{a}_n.
 <div class="para" id="def-matrix-vector-product-2-3">In particular, <span class="process-math">\(A\vec{x}\)</span> lies in the span of the columns of <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-matrix-vector-product-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space=".2in"></div>
-<div class="autopermalink" data-description="Definition 1.33: Matrix Vector Product as a Linear Combination"><a href="#def-matrix-vector-product" title="Copy heading and permalink for Definition 1.33: Matrix Vector Product as a Linear Combination" aria-label="Copy heading and permalink for Definition 1.33: Matrix Vector Product as a Linear Combination">🔗</a></div></article><article class="example example-like" id="sec-1-4-matrix-equation-3-3"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.34</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Definition 1.31: Matrix Vector Product as a Linear Combination"><a href="#def-matrix-vector-product" title="Copy heading and permalink for Definition 1.31: Matrix Vector Product as a Linear Combination" aria-label="Copy heading and permalink for Definition 1.31: Matrix Vector Product as a Linear Combination">🔗</a></div></article><article class="example example-like" id="sec-1-4-matrix-equation-3-3"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.32</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="sec-1-4-matrix-equation-3-3-1-1">Write the product below as a linear combination of column vectors.<div class="autopermalink" data-description="Paragraph"><a href="#sec-1-4-matrix-equation-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para" id="sec-1-4-matrix-equation-3-3-1-2"><div class="autopermalink" data-description="Paragraph"><a href="#sec-1-4-matrix-equation-3-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div> <span class="process-math">\(\begin{bmatrix}
@@ -303,15 +305,9 @@ x_1 \vec{a}_1 + x_2 \vec{a}_2 + \cdots + x_n \vec{a}_n.
 \begin{bmatrix}
 4 \\ 3 \\ 7
 \end{bmatrix}
-\;=\; \)</span><div class="solutions"><details id="sec-1-4-matrix-equation-3-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="sec-1-4-matrix-equation-3-3-2-1">
-<span class="process-math">\(= 4\begin{bmatrix}1 \\ 0 \end{bmatrix} + 3 \begin{bmatrix} 0 \\ -3 \end{bmatrix} + 7\begin{bmatrix} -1 \\ 3 \end{bmatrix} = \begin{bmatrix} 4 \\ 0 \end{bmatrix} + \begin{bmatrix} 0 \\ -9 \end{bmatrix} = \begin{bmatrix} -7 \\ 21 \end{bmatrix} = \begin{bmatrix} -3 \\ 12 \end{bmatrix}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-1-4-matrix-equation-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Solution 1.34.1"><a href="#sec-1-4-matrix-equation-3-3-2" title="Copy heading and permalink for Solution 1.34.1" aria-label="Copy heading and permalink for Solution 1.34.1">🔗</a></div>
-</div></details></div>
-<div class="workspace" data-space="2in"></div>
-<div class="autopermalink" data-description="Example 1.34"><a href="#sec-1-4-matrix-equation-3-3" title="Copy heading and permalink for Example 1.34" aria-label="Copy heading and permalink for Example 1.34">🔗</a></div></article><article class="example example-like" id="sec-1-4-matrix-equation-3-4"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.35</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+\;=\; \)</span><div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Example 1.32"><a href="#sec-1-4-matrix-equation-3-3" title="Copy heading and permalink for Example 1.32" aria-label="Copy heading and permalink for Example 1.32">🔗</a></div></article><article class="example example-like" id="sec-1-4-matrix-equation-3-4"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.33</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="sec-1-4-matrix-equation-3-4-1-1">Simplify the product below.<div class="autopermalink" data-description="Paragraph"><a href="#sec-1-4-matrix-equation-3-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para" id="sec-1-4-matrix-equation-3-4-1-2"><div class="autopermalink" data-description="Paragraph"><a href="#sec-1-4-matrix-equation-3-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div> <span class="process-math">\(\begin{bmatrix}
@@ -321,15 +317,9 @@ x_1 \vec{a}_1 + x_2 \vec{a}_2 + \cdots + x_n \vec{a}_n.
 \begin{bmatrix}
 x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5
 \end{bmatrix}
-\;=\;\)</span><div class="solutions"><details id="sec-1-4-matrix-equation-3-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="sec-1-4-matrix-equation-3-4-2-1">
-<span class="process-math">\(= x_1\begin{bmatrix} 1 \\ 0 \end{bmatrix} + x_2 \begin{bmatrix} 0 \\ 1 \end{bmatrix} + x_3\begin{bmatrix} 2 \\ 0 \end{bmatrix} + x_4\begin{bmatrix} 0 \\ 2 \end{bmatrix} + x_5\begin{bmatrix} 3 \\ 0 \end{bmatrix} = \begin{bmatrix} x_1 \amp \amp +2x_3 \amp \amp +3x_5 \\ \amp x_2 \amp \amp +2x_4 \amp \end{bmatrix}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-1-4-matrix-equation-3-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Solution 1.35.1"><a href="#sec-1-4-matrix-equation-3-4-2" title="Copy heading and permalink for Solution 1.35.1" aria-label="Copy heading and permalink for Solution 1.35.1">🔗</a></div>
-</div></details></div>
-<div class="workspace" data-space="2in"></div>
-<div class="autopermalink" data-description="Example 1.35"><a href="#sec-1-4-matrix-equation-3-4" title="Copy heading and permalink for Example 1.35" aria-label="Copy heading and permalink for Example 1.35">🔗</a></div></article></section><section class="onepage" id="sec-1-4-matrix-equation-4"><article class="theorem theorem-like" id="thm-same-solutions"><h4 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.36</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Equivalent Formulations of a Linear System.</span>
+\;=\;\)</span><div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Example 1.33"><a href="#sec-1-4-matrix-equation-3-4" title="Copy heading and permalink for Example 1.33" aria-label="Copy heading and permalink for Example 1.33">🔗</a></div></article></section><section class="onepage" id="sec-1-4-matrix-equation-4"><article class="theorem theorem-like" id="thm-same-solutions"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.34</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Equivalent Formulations of a Linear System.</span>
 </h4>
 <div class="para" id="thm-same-solutions-2-1">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(m \times n\)</span> matrix with columns <span class="process-math">\(\vec{a}_1,\dotsc,\vec{a}_n\text{,}\)</span> let <span class="process-math">\(\vec{x} \in \mathbb{R}^{n}\text{,}\)</span> and let <span class="process-math">\(\vec{b} \in \mathbb{R}^{m}\text{.}\)</span> The solutions to<div class="autopermalink" data-description="Paragraph"><a href="#thm-same-solutions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -355,20 +345,20 @@ x_1 \vec{a}_1 + \cdots + x_n \vec{a}_n \;=\; \vec{b},
 \end{equation*}
 </div>
 <div class="workspace" data-space="1in"></div>
-<div class="autopermalink" data-description="Theorem 1.36: Equivalent Formulations of a Linear System"><a href="#thm-same-solutions" title="Copy heading and permalink for Theorem 1.36: Equivalent Formulations of a Linear System" aria-label="Copy heading and permalink for Theorem 1.36: Equivalent Formulations of a Linear System">🔗</a></div></article><article class="theorem theorem-like" id="thm-existence-span"><h4 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.37</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Existence of Solutions for the Matrix Equation.</span>
+<div class="autopermalink" data-description="Theorem 1.34: Equivalent Formulations of a Linear System"><a href="#thm-same-solutions" title="Copy heading and permalink for Theorem 1.34: Equivalent Formulations of a Linear System" aria-label="Copy heading and permalink for Theorem 1.34: Equivalent Formulations of a Linear System">🔗</a></div></article><article class="theorem theorem-like" id="thm-existence-span"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.35</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Existence of Solutions for the Matrix Equation.</span>
 </h4>
 <div class="para" id="thm-existence-span-2-1">The equation <span class="process-math">\(A \vec{x} = \vec{b}\)</span> has a solution if and only if <span class="process-math">\(\vec{b}\)</span> is a linear combination of the columns of <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-existence-span-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="1in"></div>
-<div class="autopermalink" data-description="Theorem 1.37: The Existence of Solutions for the Matrix Equation"><a href="#thm-existence-span" title="Copy heading and permalink for Theorem 1.37: The Existence of Solutions for the Matrix Equation" aria-label="Copy heading and permalink for Theorem 1.37: The Existence of Solutions for the Matrix Equation">🔗</a></div></article><article class="theorem theorem-like" id="thm-consistency-rows-pivots"><h4 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.38</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Consistency for all <span class="process-math">\(\vec{b}\)</span> and pivots.</span>
+<div class="autopermalink" data-description="Theorem 1.35: The Existence of Solutions for the Matrix Equation"><a href="#thm-existence-span" title="Copy heading and permalink for Theorem 1.35: The Existence of Solutions for the Matrix Equation" aria-label="Copy heading and permalink for Theorem 1.35: The Existence of Solutions for the Matrix Equation">🔗</a></div></article><article class="theorem theorem-like" id="thm-consistency-rows-pivots"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.36</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Consistency for all <span class="process-math">\(\vec{b}\)</span> and pivots.</span>
 </h4>
 <div class="para" id="thm-consistency-rows-pivots-2-1">The equation <span class="process-math">\(A \vec{x} = \vec{b}\)</span> is consistent for every <span class="process-math">\(\vec{b}\)</span> if and only if every row of <span class="process-math">\(A\)</span> has a pivot.<div class="autopermalink" data-description="Paragraph"><a href="#thm-consistency-rows-pivots-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="1in"></div>
-<div class="autopermalink" data-description="Theorem 1.38: Consistency for all \vec{b} and pivots"><a href="#thm-consistency-rows-pivots" title="Copy heading and permalink for Theorem 1.38: Consistency for all \vec{b} and pivots" aria-label="Copy heading and permalink for Theorem 1.38: Consistency for all \vec{b} and pivots">🔗</a></div></article></section><section class="onepage" id="sec-1-4-matrix-equation-5"><article class="example example-like" id="sec-1-4-matrix-equation-5-1"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.39</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Theorem 1.36: Consistency for all \vec{b} and pivots"><a href="#thm-consistency-rows-pivots" title="Copy heading and permalink for Theorem 1.36: Consistency for all \vec{b} and pivots" aria-label="Copy heading and permalink for Theorem 1.36: Consistency for all \vec{b} and pivots">🔗</a></div></article></section><section class="onepage" id="sec-1-4-matrix-equation-5"><article class="example example-like" id="sec-1-4-matrix-equation-5-1"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.37</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="sec-1-4-matrix-equation-5-1-1-1">For what vectors <span class="process-math">\(\vec{b} = \begin{bmatrix} b_1 \\[2pt] b_2 \\[2pt] b_3 \end{bmatrix}\)</span> does the equation have a solution?<div class="autopermalink" data-description="Paragraph"><a href="#sec-1-4-matrix-equation-5-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -383,8 +373,8 @@ x_1 \vec{a}_1 + \cdots + x_n \vec{a}_n \;=\; \vec{b},
 \end{equation*}
 </div>
 <div class="workspace" data-space="5in"></div>
-<div class="autopermalink" data-description="Example 1.39"><a href="#sec-1-4-matrix-equation-5-1" title="Copy heading and permalink for Example 1.39" aria-label="Copy heading and permalink for Example 1.39">🔗</a></div></article></section><section class="onepage" id="sec-1-4-matrix-equation-6"><article class="example example-like" id="sec-1-4-matrix-equation-6-1"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.40</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Example 1.37"><a href="#sec-1-4-matrix-equation-5-1" title="Copy heading and permalink for Example 1.37" aria-label="Copy heading and permalink for Example 1.37">🔗</a></div></article></section><section class="onepage" id="sec-1-4-matrix-equation-6"><article class="example example-like" id="sec-1-4-matrix-equation-6-1"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.38</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="sec-1-4-matrix-equation-6-1-1-1">For what values of <span class="process-math">\(h\)</span> is the system <span class="process-math">\(A\vec{x} = \vec{b}\)</span> consistent for every possible choice of vector <span class="process-math">\(\vec{b}\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-1-4-matrix-equation-6-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -397,7 +387,7 @@ A \;=\; \begin{bmatrix}
 \end{bmatrix}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Example 1.40"><a href="#sec-1-4-matrix-equation-6-1" title="Copy heading and permalink for Example 1.40" aria-label="Copy heading and permalink for Example 1.40">🔗</a></div></article></section><section class="onepage" id="sec-1-4-matrix-equation-7"><div class="para" id="sec-1-4-matrix-equation-7-2">We now have four <em class="emphasis">equivalent</em> ways of expressing linear systems.<div class="autopermalink" data-description="Paragraph"><a href="#sec-1-4-matrix-equation-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 1.38"><a href="#sec-1-4-matrix-equation-6-1" title="Copy heading and permalink for Example 1.38" aria-label="Copy heading and permalink for Example 1.38">🔗</a></div></article></section><section class="onepage" id="sec-1-4-matrix-equation-7"><div class="para" id="sec-1-4-matrix-equation-7-2">We now have four <em class="emphasis">equivalent</em> ways of expressing linear systems.<div class="autopermalink" data-description="Paragraph"><a href="#sec-1-4-matrix-equation-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-1-4-matrix-equation-7-3-1-1">A system of equations:<div class="autopermalink" data-description="Paragraph"><a href="#sec-1-4-matrix-equation-7-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
