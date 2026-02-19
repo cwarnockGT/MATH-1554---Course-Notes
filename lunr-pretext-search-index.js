@@ -1736,6 +1736,96 @@ var ptx_lunr_docs = [
   "number": "3.9",
   "title": "",
   "body": "  Compute the determinant of the following triangular matrix.    "
+},
+{
+  "id": "Section-3-2",
+  "level": "1",
+  "url": "Section-3-2.html",
+  "type": "Section",
+  "number": "",
+  "title": "3.2 Properties of the Determinant",
+  "body": " 3.2 Properties of the Determinant   3.2 Properties of the Determinant   Overview   Topics   The relationships between row reductions, invertibility, and determinants.     Goals   Apply determinant properties (related to row reductions, transpose, and matrix products) to compute determinants efficiently.  Use determinants to determine whether a square matrix is invertible.     We have a method for computing determinants, but without the strategies in this section, the cofactor-expansion algorithm can be very inefficient. Row operations provide a more efficient method.    Row Operations and the Determinant   Let be a square matrix.   If a multiple of one row of is added to another to produce , then .  If two rows of are interchanged to produce , then .  If a row of is multiplied by a scalar to produce , then .        Example 1    Compute:        Compute:        Determinants and Invertibility    If is reduced to echelon form using row interchanges, then        For any matrices and , the following properties hold:   is invertible if and only if .  .  .        Additional Example    Determine the value of:        Use the determinant to find all values of for which the matrix is not invertible.       "
+},
+{
+  "id": "obj-3-2-topics-goals",
+  "level": "2",
+  "url": "Section-3-2.html#obj-3-2-topics-goals",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   The relationships between row reductions, invertibility, and determinants.   "
+},
+{
+  "id": "p-3-2-overview-3",
+  "level": "2",
+  "url": "Section-3-2.html#p-3-2-overview-3",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals   Apply determinant properties (related to row reductions, transpose, and matrix products) to compute determinants efficiently.  Use determinants to determine whether a square matrix is invertible.   "
+},
+{
+  "id": "thm-det-row-operations",
+  "level": "2",
+  "url": "Section-3-2.html#thm-det-row-operations",
+  "type": "Theorem",
+  "number": "3.10",
+  "title": "Row Operations and the Determinant.",
+  "body": " Row Operations and the Determinant   Let be a square matrix.   If a multiple of one row of is added to another to produce , then .  If two rows of are interchanged to produce , then .  If a row of is multiplied by a scalar to produce , then .    "
+},
+{
+  "id": "ex-3-2-rowops-example1",
+  "level": "2",
+  "url": "Section-3-2.html#ex-3-2-rowops-example1",
+  "type": "Example",
+  "number": "3.11",
+  "title": "",
+  "body": "  Compute:    "
+},
+{
+  "id": "ex-3-2-rowops-example2",
+  "level": "2",
+  "url": "Section-3-2.html#ex-3-2-rowops-example2",
+  "type": "Example",
+  "number": "3.12",
+  "title": "",
+  "body": "  Compute:    "
+},
+{
+  "id": "thm-det-prod-pivots",
+  "level": "2",
+  "url": "Section-3-2.html#thm-det-prod-pivots",
+  "type": "Theorem",
+  "number": "3.13",
+  "title": "",
+  "body": "  If is reduced to echelon form using row interchanges, then    "
+},
+{
+  "id": "thm-det-props",
+  "level": "2",
+  "url": "Section-3-2.html#thm-det-props",
+  "type": "Theorem",
+  "number": "3.14",
+  "title": "",
+  "body": "  For any matrices and , the following properties hold:   is invertible if and only if .  .  .    "
+},
+{
+  "id": "ex-3-2-det-power",
+  "level": "2",
+  "url": "Section-3-2.html#ex-3-2-det-power",
+  "type": "Example",
+  "number": "3.15",
+  "title": "",
+  "body": "  Determine the value of:    "
+},
+{
+  "id": "ex-3-2-lambda",
+  "level": "2",
+  "url": "Section-3-2.html#ex-3-2-lambda",
+  "type": "Example",
+  "number": "3.16",
+  "title": "",
+  "body": "  Use the determinant to find all values of for which the matrix is not invertible.    "
 }
 ]
 
