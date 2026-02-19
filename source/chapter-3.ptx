@@ -6,6 +6,12 @@
     <title>3.1 Introduction to Determinants</title>
       <xi:include href="./chapter-3-notes/section-3-1.ptx" />
   </section>
+
+  <section xml:id="Section-3-2">
+    <title>3.2 Properties of the Determinant</title>
+      <xi:include href="./chapter-3-notes/section-3-2.ptx" />
+  </section>
+  
   
 
 </chapter>

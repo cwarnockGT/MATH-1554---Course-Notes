@@ -11,6 +11,7 @@
       \newcommand{\Nul}{\operatorname{Nul}}
       \newcommand{\Col}{\operatorname{Col}}
       \newcommand{\Span}{\operatorname{Span}}
+      \renewcommand{\det}{\operatorname{det}}
     </macros>
 
     <latex-image-preamble>
