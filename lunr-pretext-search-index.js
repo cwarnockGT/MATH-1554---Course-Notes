@@ -1826,6 +1826,105 @@ var ptx_lunr_docs = [
   "number": "3.16",
   "title": "",
   "body": "  Use the determinant to find all values of for which the matrix is not invertible.    "
+},
+{
+  "id": "Section-3-3",
+  "level": "1",
+  "url": "Section-3-3.html",
+  "type": "Section",
+  "number": "",
+  "title": "3.3 Applications of the Determinant",
+  "body": " 3.3 Applications of the Determinant   3.3 Applications of Determinants   Overview   Topics   Relationships between area, volume, determinants, and linear transformations.  Cramer's Rule for linear systems.     Goals   Use determinants to compute the area of a parallelogram or the volume of a parallelepiped, possibly under a given linear transformation.  Use determinants and Cramer's Rule to solve systems of linear equations.     In , determinants measure the (signed) area of the parallelogram formed by two vectors.   Parallelogram in the plane spanned by two vectors.  Illustration of a parallelogram in spanned by two vectors forming a matrix whose determinant gives the signed area.   Area of the parallelogram .    Area from the Determinant   The area of the parallelogram spanned by the columns of a matrix is .     Volume from the Determinant   The volume of the parallelepiped spanned by the columns of an matrix is .       Examples of Determinant giving Volume    Calculate the area of the parallelogram determined by the points , , , and .       Calculate the area of the triangle determined by the points , , and .       Linear Transformations and Volume Scaling   Volume Scaling by a Linear Transformation   If is the linear transformation defined by , and is any closed shape in , then     Some observations:  Recall from Section 1.9 that the matrix corresponding to a shearing linear transformation has the from or . Since each of these matrices has determinant 1, we see that shearing does not change the area of a shape.  Note that can be any closed shape. This includes parallelograms, polygons, circles, or crazy blobs, as long as the edge of the shape is connected.       Find the area of the interior of the ellipse defined by the equation .       Cramer's Rule   Cramer's Rule   Let be an invertible matrix and let . Then the system has the unique solution whose entires are given by , where is the matrix formed by replacing the column of by .       Use Cramer's Rule to solve the system .      "
+},
+{
+  "id": "obj-3-3-topics-goals",
+  "level": "2",
+  "url": "Section-3-3.html#obj-3-3-topics-goals",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   Relationships between area, volume, determinants, and linear transformations.  Cramer's Rule for linear systems.   "
+},
+{
+  "id": "p-3-3-overview-3",
+  "level": "2",
+  "url": "Section-3-3.html#p-3-3-overview-3",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals   Use determinants to compute the area of a parallelogram or the volume of a parallelepiped, possibly under a given linear transformation.  Use determinants and Cramer's Rule to solve systems of linear equations.   "
+},
+{
+  "id": "thm-area-abs-det",
+  "level": "2",
+  "url": "Section-3-3.html#thm-area-abs-det",
+  "type": "Theorem",
+  "number": "3.17",
+  "title": "Area from the Determinant.",
+  "body": " Area from the Determinant   The area of the parallelogram spanned by the columns of a matrix is .   "
+},
+{
+  "id": "thm-volume-abs-det",
+  "level": "2",
+  "url": "Section-3-3.html#thm-volume-abs-det",
+  "type": "Theorem",
+  "number": "3.18",
+  "title": "Volume from the Determinant.",
+  "body": " Volume from the Determinant   The volume of the parallelepiped spanned by the columns of an matrix is .   "
+},
+{
+  "id": "ex-3-3-area-parallelogram",
+  "level": "2",
+  "url": "Section-3-3.html#ex-3-3-area-parallelogram",
+  "type": "Example",
+  "number": "3.19",
+  "title": "",
+  "body": "  Calculate the area of the parallelogram determined by the points , , , and .   "
+},
+{
+  "id": "ex-3-3-area-triangle",
+  "level": "2",
+  "url": "Section-3-3.html#ex-3-3-area-triangle",
+  "type": "Example",
+  "number": "3.20",
+  "title": "",
+  "body": "  Calculate the area of the triangle determined by the points , , and .   "
+},
+{
+  "id": "thm-linear-transform-volume-scale",
+  "level": "2",
+  "url": "Section-3-3.html#thm-linear-transform-volume-scale",
+  "type": "Theorem",
+  "number": "3.21",
+  "title": "Volume Scaling by a Linear Transformation.",
+  "body": " Volume Scaling by a Linear Transformation   If is the linear transformation defined by , and is any closed shape in , then    "
+},
+{
+  "id": "p-3-3-linear-transformations-5",
+  "level": "2",
+  "url": "Section-3-3.html#p-3-3-linear-transformations-5",
+  "type": "Example",
+  "number": "3.22",
+  "title": "",
+  "body": "  Find the area of the interior of the ellipse defined by the equation .   "
+},
+{
+  "id": "thm-cramers-rule",
+  "level": "2",
+  "url": "Section-3-3.html#thm-cramers-rule",
+  "type": "Theorem",
+  "number": "3.23",
+  "title": "Cramer’s Rule.",
+  "body": " Cramer's Rule   Let be an invertible matrix and let . Then the system has the unique solution whose entires are given by , where is the matrix formed by replacing the column of by .   "
+},
+{
+  "id": "handout-section-3-3-area-volume-determinants-5-4",
+  "level": "2",
+  "url": "Section-3-3.html#handout-section-3-3-area-volume-determinants-5-4",
+  "type": "Example",
+  "number": "3.24",
+  "title": "",
+  "body": "  Use Cramer's Rule to solve the system .   "
 }
 ]
 
