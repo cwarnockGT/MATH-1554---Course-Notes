@@ -11,6 +11,11 @@
     <title>3.2 Properties of the Determinant</title>
       <xi:include href="./chapter-3-notes/section-3-2.ptx" />
   </section>
+
+  <section xml:id="Section-3-3">
+    <title>3.3 Applications of the Determinant</title>
+      <xi:include href="./chapter-3-notes/section-3-3.ptx" />
+  </section>
   
   
 
