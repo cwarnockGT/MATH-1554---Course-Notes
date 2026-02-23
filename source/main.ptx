@@ -12,6 +12,7 @@
       \newcommand{\Col}{\operatorname{Col}}
       \newcommand{\Span}{\operatorname{Span}}
       \renewcommand{\det}{\operatorname{det}}
+      \newcommand{\rank}{\operatorname{rank}}
     </macros>
 
     <latex-image-preamble>

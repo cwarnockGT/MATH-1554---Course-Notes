@@ -136,7 +136,7 @@
     <p><nbsp/></p>
     
 
-    <theorem workspace="true">
+    <theorem workspace="true" xml:id="thm-lin-dep-too-many-vectors">
       <statement>
         Suppose <m>\vec v_1, \ldots, \vec v_n</m> are vectors in
         <m>\mathbb{R}^m</m> with <m>n &gt; m</m>. Then the set
