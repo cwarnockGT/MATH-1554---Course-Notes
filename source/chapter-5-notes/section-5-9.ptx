@@ -1,0 +1,226 @@
+<handout xml:id="handout-section-5-9-markov">
+  <title>5.9 Markov Chains</title>
+
+  <page xml:id="p-5-9-objectives">
+    <title>Overview</title>
+
+    <objectives xml:id="obj-5-9-topics-goals">
+      <title>Topics</title>
+      <ul>
+        <li>Markov chains</li>
+        <li>Steady-state vectors</li>
+        <li>Convergence</li>
+      </ul>
+    </objectives>
+
+    <objectives>
+      <title>Goals</title>
+      <ul>
+        <li>Construct stochastic matrices and probability vectors.</li>
+        <li>Model and solve real-world problems using Markov chains (e.g., compute steady-state vectors).</li>
+        <li>Determine whether a stochastic matrix is regular.</li>
+      </ul>
+    </objectives>
+
+    <p><nbsp/></p>
+
+    <example xml:id="ex-5-9-libraries" workspace="true">
+      <statement>
+        <p>A small town has two libraries, <m>A</m> and <m>B</m>.</p>
+
+        <ul>
+          <li>
+            For books checked out from <m>A</m>:
+            <ul>
+              <li>80% return to <m>A</m></li>
+              <li>20% return to <m>B</m></li>
+            </ul>
+          </li>
+          <li>
+            For books checked out from <m>B</m>:
+            <ul>
+              <li>30% return to <m>A</m></li>
+              <li>70% return to <m>B</m></li>
+            </ul>
+          </li>
+        </ul>
+
+        <p>
+          If both libraries have 1000 books today, how many books does each library have after 1 month?
+          After one year? After <m>n</m> months?
+        </p>
+
+
+
+        <image xml:id="img-library-markov" width="50%">
+          <latex-image>
+            <latex>
+\begin{tikzpicture}
+\begin{scope}[-&gt;,&gt;=stealth',shorten &gt;=1pt,auto,node distance=3cm,
+  thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
+   \node[main node] (1) {A};
+   \node[main node] (2) [right of=1] {B};
+   \path[every node/.style={font=\sffamily\small}]
+      (1) edge [bend right] node[below] {0.2} (2)
+          edge [loop above] node {0.8} (1)
+      (2) edge node [above] {0.3} (1)
+          edge [loop above] node {0.7} (2);
+\end{scope}
+\end{tikzpicture}
+            </latex>
+          </latex-image>
+          <shortdescription>Two-state Markov chain diagram with transitions between libraries.</shortdescription>
+          <description>
+            A directed graph showing two library states, <m>A</m> and <m>B</m>,
+            with transition probabilities 0.8, 0.2, 0.3, and 0.7 representing book returns.
+          </description>
+        </image>
+      </statement>
+    </example>
+  </page>
+
+
+  <page xml:id="p-5-9-markov-definitions">
+    <title>Markov Chains: Definitions</title>
+
+    <p workspace="1in">A few important definitions:
+
+    <ul >
+      <li>
+        A <em>probability vector</em> is a vector <m>\vec x</m> whose entries are nonnegative and sum to 1.
+      </li>
+      <li>
+        A <em>stochastic matrix</em> is a square matrix whose columns are probability vectors.
+      </li>
+      <li>
+        A <em>Markov chain</em> is a sequence <m>\vec x_k</m> satisfying
+        <m>\vec x_{k+1}=P\vec x_k</m> for a stochastic matrix <m>P</m>.
+      </li>
+      <li>
+        A <em>steady-state vector</em> for <m>P</m> is a vector <m>\vec q</m> such that
+        <m>P\vec q=\vec q</m>.
+      </li>
+    </ul>
+
+    </p>
+
+
+    <example xml:id="ex-5-9-steady" workspace="true">
+      <statement>
+        <p>Determine a steady-state vector for the stochastic matrix:</p>
+        <me>
+          \begin{bmatrix}
+            0.8 \amp 0.3\\
+            0.2 \amp 0.7
+          \end{bmatrix}
+        </me>
+      </statement>
+    </example>
+  </page>
+
+
+  <page xml:id="p-5-9-regular-matrices">
+    <title>Convergence and Regular Matrices</title>
+
+    <p>
+      We often want to know the long-term behavior of the system
+      <m>\vec x_{k+1}=P\vec x_k</m>.
+    </p>
+
+    <definition xml:id="def-regular-stochastic">
+      <title>Regular Stochastic Matrix</title>
+      <statement>
+        <p>
+          A stochastic matrix <m>P</m> is <term>regular</term> if some power <m>P^k</m>
+          has all entries strictly positive.
+        </p>
+      </statement>
+    </definition>
+
+    <p><nbsp/></p>
+
+    <theorem xml:id="thm-regular-converges" workspace="true">
+      <title>Convergence Theorem</title>
+      <statement>
+        <p>
+          If <m>P</m> is a <em>regular</em> stochastic matrix, then <m>P</m> has a unique steady-state
+          vector <m>\vec q</m>, and the sequence <m>\vec x_{k+1}=P\vec x_k</m> converges to
+          <m>\vec q</m> as <m>k\to\infty</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <p><nbsp/></p>
+
+    <p>
+      In <m>\mathbb{R}^2</m>, the stochastic vectors form the line segment between
+      <m>(1,0)</m> and <m>(0,1)</m>.  
+      A stochastic matrix maps stochastic vectors to stochastic vectors, and the iterates
+      <m>P^k\vec x_0</m> converge to the steady state.
+    </p>
+
+    <image xml:id="img-5-9-planar-stochastic" width="50%">
+      <latex-image>
+        <latex>
+\begin{tikzpicture}
+\draw[->] (-0.5,0) -- (4,0);
+\draw[->] (0,-0.5) -- (0,4);
+\draw (3,0) node[below]{1} -- (0,3) node[left]{1};
+\filldraw (2,1) circle(.1em) node[below left]{$\color{blue}\vec x_\infty$};
+\foreach \x/\y/\k in {3/0/0, 1/2/1, 2.5/0.5/2, 1.5/1.5/3}
+  \filldraw (\x,\y) circle(0.1em) node[above]{$\vec x_{\k}$};
+\draw (8,1) node{$P^k \to \begin{bmatrix} \vec x_\infty & \vec x_\infty \end{bmatrix}$};
+\end{tikzpicture}
+        </latex>
+      </latex-image>
+      <shortdescription>Diagram showing convergence of 2D stochastic vectors to a steady state.</shortdescription>
+      <description>
+        Illustration of several probability vectors in <m>\mathbb{R}^2</m>,
+        under repeated multiplication by a regular stochastic matrix,
+        converging to a steady-state vector.
+      </description>
+    </image>
+  </page>
+
+
+  <page xml:id="p-5-9-example3">
+    <title>Example 3: Car Rental Network</title>
+
+    <example xml:id="ex-5-9-cars" workspace="true">
+      <statement>
+        <p>
+          A rental company has three locations A, B, and C. Cars may be returned to any location.
+          The table gives the weekly rental/return pattern:
+        </p>
+
+        <table>
+          <tabular>
+            <row>
+              <cell></cell><cell></cell><cell>A</cell><cell>B</cell><cell>C</cell>
+            </row>
+            <row>
+              <cell rowspan="3">returned to</cell>
+              <cell>A</cell><cell>.8</cell><cell>.1</cell><cell>.2</cell>
+            </row>
+            <row>
+              <cell>B</cell><cell>.2</cell><cell>.6</cell><cell>.3</cell>
+            </row>
+            <row>
+              <cell>C</cell><cell>.0</cell><cell>.3</cell><cell>.5</cell>
+            </row>
+          </tabular>
+        </table>
+
+        <p>There are 10 cars at each location today.</p>
+
+        <ol marker="a">
+          <li>Construct the stochastic matrix <m>P</m>.</li>
+          <li>
+            Determine what happens to the distribution of cars after a long time.
+            (You may assume <m>P</m> is regular.)
+          </li>
+        </ol>
+      </statement>
+    </example>
+  </page>
+
