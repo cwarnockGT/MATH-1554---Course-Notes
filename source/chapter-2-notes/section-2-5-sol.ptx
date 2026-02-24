@@ -283,7 +283,7 @@
         </p>
         <p><nbsp/></p>
         <p>
-            Note that if we were only interested getting to echelon form, then we could do <m>R_4 - R_3 \rightarrow R_4</m>; however, since we are interested in <m>LU</m>-factorization we must pay attention to <xref ref="caution-row-replacement">Caution 2</xref>. Therefore, we must use Row 2 next since it is the next pivot column. Note the following:
+            Note that if we were only interested getting to echelon form, then we could do <m>R_4 - R_3 \rightarrow R_4</m>; however, since we are interested in <m>LU</m>-factorization we must pay attention to <xref ref="caution-row-replacement" text="custom">Caution 2</xref>. Therefore, we must use Row 2 next since it is the next pivot column. Note the following:
             <me>
                 \begin{bmatrix}
                             3 \amp -1 \amp 4 \amp 5\\

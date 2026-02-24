@@ -38,7 +38,7 @@
 
     <p>
       Area of the parallelogram
-      <m>\;=\;\det\!\begin{bmatrix} a \amp b\\ c \amp d \end{bmatrix}\;=\;ad-bc</m>.
+      <m>\;=\;\det\!\begin{bmatrix} a \amp c\\ b \amp d \end{bmatrix}\;=\;ad-bc</m>.
     </p>
 
     <p><nbsp/></p>
