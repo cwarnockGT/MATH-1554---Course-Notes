@@ -142,6 +142,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\Col}{\operatorname{Col}}
 \newcommand{\Span}{\operatorname{Span}}
 \renewcommand{\det}{\operatorname{det}}
+\newcommand{\rank}{\operatorname{rank}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -229,9 +230,16 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="Section-3-3.html" class="internal"><span class="title">3.3 Applications of the Determinant</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-3-3.html#handout-section-3-3-area-volume-determinants" class="internal"><span class="title">3.3 Applications of Determinants</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-3-3.html#handout-section-3-3-area-volume-determinants" class="internal"><span class="title">3.3 Applications of the Determinant</span></a></div></li></ul>
 </li>
 </ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-4.html" class="internal"><span class="codenumber">4</span> <span class="title">Vector Spaces</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-4-9.html" class="internal"><span class="title">4.9/5.9 Markov Chains</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-4-9.html#handout-section-4-9-markov" class="internal"><span class="title">4.9/5.9 Markov Chains</span></a></div></li></ul>
+</li></ul>
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
@@ -244,7 +252,10 @@ eBookConfig.enable_chatcodes =  false;
         </label><label><input type="radio" name="papersize" value="letter">Letter
         </label>
 </form>
-<details class="print-options"><summary>Additional printing options</summary><div class="header-footer-options">
+<details class="print-options"><summary>Additional printing options</summary><div class="hide-solutions-options"><div class="hide-option">
+<label for="hide-solution-checkbox">Hide solutions</label><input type="checkbox" id="hide-solution-checkbox">
+</div></div>
+<div class="header-footer-options">
 <div class="header-option">
 <span class="title">Print headers</span><label>First page<input type="checkbox" id="print-first-page-header-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-header-checkbox" checked></label>
 </div>
@@ -296,7 +307,7 @@ eBookConfig.enable_chatcodes =  false;
 <article class="definition definition-like" id="def-determinant"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Determinant.</span>
 </h4>
-<div class="para" id="def-determinant-2-1">Suppose <span class="process-math">\(A\)</span> is <span class="process-math">\(n\times n\)</span> with entries <span class="process-math">\(a_{ij}\text{.}\)</span> Then the <dfn class="terminology">determinant</dfn> of <span class="process-math">\(A\text{,}\)</span> written <span class="process-math">\(\det(A)\)</span> or <span class="process-math">\(\det A\text{,}\)</span> is defined by the following recursive formula.<div class="autopermalink" data-description="Paragraph"><a href="#def-determinant-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="def-determinant-2-1">Suppose <span class="process-math">\(A\)</span> is <span class="process-math">\(n\times n\)</span> with entries <span class="process-math">\(a_{ij}\text{.}\)</span> Then the <dfn class="terminology">determinant</dfn> of <span class="process-math">\(A\text{,}\)</span> written <span class="process-math">\(\det(A)\)</span> or <span class="process-math">\(\det A\)</span> or <span class="process-math">\(\left| A\right|\text{,}\)</span> is defined by the following recursive formula.<div class="autopermalink" data-description="Paragraph"><a href="#def-determinant-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <ul class="disc" id="def-determinant-2-2">
 <li id="def-determinant-2-2-1">
 <div class="para" id="p-derived-def-determinant-2-2-1">If <span class="process-math">\(n=1\text{,}\)</span> then <span class="process-math">\(A=[a_{11}]\)</span> and <span class="process-math">\(\operatorname{det}(A)=a_{11}\text{.}\)</span>
@@ -327,6 +338,18 @@ a_{11}\operatorname{det}(A_{11})
 </h4>
 <div class="para" id="ex-det-2x2-1-1">Compute <span class="process-math">\(\operatorname{det}\!\begin{bmatrix} a \amp b\\ c \amp d \end{bmatrix}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-det-2x2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="ex-det-2x2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-det-2x2-2-1">
+<div class="para">Using <a href="Section-3-1.html#def-determinant" class="xref" data-knowl="./knowl/xref/def-determinant.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.1: Determinant">Definition 3.1</a>, we have that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-determinant.html" id="ex-det-2x2-2-1-2">
+\begin{equation*}
+\det\left(\begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix}\right) = \begin{vmatrix} a \amp b \\ c \amp d \end{vmatrix} = a\det\left(\begin{bmatrix} d \end{bmatrix}\right) - b\det\left(\begin{bmatrix} c \end{bmatrix}\right) = ad - bc\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-det-2x2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.2.1"><a href="#ex-det-2x2-2" title="Copy heading and permalink for Solution 3.2.1" aria-label="Copy heading and permalink for Solution 3.2.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Example 3.2"><a href="#ex-det-2x2" title="Copy heading and permalink for Example 3.2" aria-label="Copy heading and permalink for Example 3.2">🔗</a></div></article><div class="para" id="p-3-1-overview-8"> <div class="autopermalink" data-description="Paragraph"><a href="#p-3-1-overview-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><section class="onepage" id="handout-section-3-1-determinants-3"><article class="example example-like" id="ex-det-3x3"><h4 class="heading">
@@ -344,6 +367,11 @@ a_{11}\operatorname{det}(A_{11})
 \end{bmatrix}.
 \end{equation*}
 </div>
+<div class="solutions"><details id="ex-det-3x3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-det-3x3-2-1">Using <a href="Section-3-1.html#def-determinant" class="xref" data-knowl="./knowl/xref/def-determinant.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.1: Determinant">Definition 3.1</a> and the result from <a href="Section-3-1.html#ex-det-2x2" class="xref" data-knowl="./knowl/xref/ex-det-2x2.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.2">Example 3.2</a>, we have<div class="autopermalink" data-description="Paragraph"><a href="#ex-det-3x3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<span class="process-math">\(\begin{eqnarray*} \begin{vmatrix} 1 \amp -5 \amp 2 \\ 2 \amp 4 \amp -1 \\ 0 \amp 3 \amp 0 \end{vmatrix} \amp = \amp 1\begin{vmatrix} 4 \amp -1 \\ 3 \amp 0 \end{vmatrix} - (-5)\begin{vmatrix}2 \amp -1 \\ 0 \amp 0 \end{vmatrix} + 2\begin{vmatrix} 2 \amp 4 \\ 0 \amp 3 \end{vmatrix} \\ \amp = \amp 1 \Big(4(0) - (-1)(3)\Big) + 5\Big(2(0) - (-1)(0)\Big)\\ \amp \ \amp \hspace{2in} + 2\Big(2(3) - 4(0)\Big) \\ \amp = \amp 1(3) + 5(0) + 2(6) \\ \amp = \amp 15. \end{eqnarray*}\)</span><div class="autopermalink" data-description="Solution 3.3.1"><a href="#ex-det-3x3-2" title="Copy heading and permalink for Solution 3.3.1" aria-label="Copy heading and permalink for Solution 3.3.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Example 3.3"><a href="#ex-det-3x3" title="Copy heading and permalink for Example 3.3" aria-label="Copy heading and permalink for Example 3.3">🔗</a></div></article><div class="para" id="handout-section-3-1-determinants-3-3"> <div class="autopermalink" data-description="Paragraph"><a href="#handout-section-3-1-determinants-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -362,6 +390,11 @@ a_{11}\operatorname{det}(A_{11})
 \end{bmatrix}.
 \end{equation*}
 </div>
+<div class="solutions"><details id="ex-det-3x3-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-det-3x3-2-2-1">Note that<div class="autopermalink" data-description="Paragraph"><a href="#ex-det-3x3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<span class="process-math">\(\begin{eqnarray*}\begin{vmatrix} 0 \amp 3 \amp 0 \\ 2 \amp 4 \amp -1\\ 1 \amp -5 \amp 2 \end{vmatrix} \amp = \amp 0\begin{vmatrix} 4 \amp -1 \\ -5 \amp 2 \end{vmatrix} - 3\begin{vmatrix} 2 \amp -1 \\ 1 \amp 2 \end{vmatrix} + 0\begin{vmatrix} 2 \amp 4 \\ 1 \amp -5 \end{vmatrix}\\ \amp = \amp 0 -3\Big(2(2) - (-1)(1)\Big) + 0 \\ \amp = \amp -15\end{eqnarray*}\)</span><div class="autopermalink" data-description="Solution 3.4.1"><a href="#ex-det-3x3-2-2" title="Copy heading and permalink for Solution 3.4.1" aria-label="Copy heading and permalink for Solution 3.4.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Example 3.4"><a href="#ex-det-3x3-2" title="Copy heading and permalink for Example 3.4" aria-label="Copy heading and permalink for Example 3.4">🔗</a></div></article><div class="para" id="handout-section-3-1-determinants-3-5"> <div class="autopermalink" data-description="Paragraph"><a href="#handout-section-3-1-determinants-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><section class="onepage" id="p-3-1-cofactors"><article class="definition definition-like" id="def-cofactor"><h4 class="heading">
@@ -417,6 +450,24 @@ A = \begin{bmatrix}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-det-4x4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="ex-det-4x4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-det-4x4-2-1">
+<div class="para">We will calculate the determinant by expanding along the first column. Note that</div>
+<div class="displaymath process-math" id="ex-det-4x4-2-1-1">
+\begin{equation*}
+\left| A \right| = 5\begin{vmatrix} 1 \amp 2 \amp 0 \\ -1 \amp 1 \amp 0 \\ 1 \amp 1 \amp 3 \end{vmatrix} - 0 + 0 - 0\text{.}
+\end{equation*}
+</div>
+<div class="para">To calculate the determinant of the remaining <span class="process-math">\(3 \times 3\)</span> matrix, we can expand over any row or column we choose. How about expanding over Column 3 since there are several 0’s. Note that</div>
+<div class="displaymath process-math" id="ex-det-4x4-2-1-3">
+\begin{equation*}
+\left| A \right| = 5\begin{vmatrix} 1 \amp 2 \amp 0 \\ -1 \amp 1 \amp 0 \\ 1 \amp 1 \amp 3 \end{vmatrix} = 5\left(0 - 0 + 3\begin{vmatrix} 1 \amp 2 \\ -1 \amp 1 \end{vmatrix}\right) = 5(3)(3) = 45.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-det-4x4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.7.1"><a href="#ex-det-4x4-2" title="Copy heading and permalink for Solution 3.7.1" aria-label="Copy heading and permalink for Solution 3.7.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Example 3.7"><a href="#ex-det-4x4" title="Copy heading and permalink for Example 3.7" aria-label="Copy heading and permalink for Example 3.7">🔗</a></div></article><div class="para" id="p-3-1-example-4x4-3"> <div class="autopermalink" data-description="Paragraph"><a href="#p-3-1-example-4x4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><section class="onepage" id="p-3-1-triangular"><article class="theorem theorem-like" id="thm-triangular-det"><h4 class="heading">
@@ -438,17 +489,22 @@ A = \begin{bmatrix}
 </div>
 <div class="displaymath process-math" id="ex-triangular-large-1-2">
 \begin{equation*}
-\begin{bmatrix}
-7 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \\
-\pi \amp 6 \amp 0 \amp 0 \amp 0  \amp 0 \amp 0 \\
-\pi^2 \amp \pi \amp 5 \amp 0 \amp 0 \amp 0 \amp 0  \\
-\pi^3 \amp \pi^2 \amp \pi \amp 4 \amp 0 \amp 0 \amp 0  \\
-\pi^4 \amp \pi^3 \amp \pi^2 \amp \pi \amp 3 \amp 0 \amp 0 \\
-\pi^5 \amp \pi^4 \amp \pi^3 \amp \pi^2 \amp \pi \amp 2 \amp 0\\
-\pi^6 \amp \pi^5 \amp \pi^4 \amp \pi^3 \amp \pi^2 \amp \pi \amp 1
+A = \begin{bmatrix}
+7 \amp \pi \amp \pi^2 \amp \pi^3 \amp \pi^4 \amp \pi^5 \amp \pi^6 \\
+0 \amp 6 \amp \pi \amp \pi^2 \amp \pi^3  \amp \pi^4 \amp \pi^5 \\
+0 \amp 0 \amp 5 \amp \pi \amp \pi^2 \amp \pi^3 \amp \pi^4  \\
+0 \amp 0 \amp 0 \amp 4 \amp \pi \amp \pi^2 \amp \pi^3  \\
+0 \amp 0 \amp 0 \amp 0 \amp 3 \amp \pi \amp \pi^2 \\
+0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 2 \amp \pi\\
+0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 1
 \end{bmatrix}.
 \end{equation*}
 </div>
+<div class="solutions"><details id="ex-triangular-large-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-triangular-large-2-1">By <a href="Section-3-1.html#thm-triangular-det" class="xref" data-knowl="./knowl/xref/thm-triangular-det.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.8: Determinant of a Triangular Matrix">Theorem 3.8</a>, we have that <span class="process-math">\(\left|A\right| = 7(6)(5)(4)(3)(2)(1) = 7! = 5040.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-triangular-large-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.9.1"><a href="#ex-triangular-large-2" title="Copy heading and permalink for Solution 3.9.1" aria-label="Copy heading and permalink for Solution 3.9.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Example 3.9"><a href="#ex-triangular-large" title="Copy heading and permalink for Example 3.9" aria-label="Copy heading and permalink for Example 3.9">🔗</a></div></article><div class="para" id="p-3-1-triangular-4"> <div class="autopermalink" data-description="Paragraph"><a href="#p-3-1-triangular-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>

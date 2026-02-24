@@ -640,9 +640,9 @@ var ptx_lunr_docs = [
   "body": " Any set containing the zero vector is linearly dependent.   Consider the set . Then the following is a nontrivial linear combination of these vector which results in .    "
 },
 {
-  "id": "Section-1-7-2-4-4",
+  "id": "thm-lin-dep-too-many-vectors",
   "level": "2",
-  "url": "Section-1-7.html#Section-1-7-2-4-4",
+  "url": "Section-1-7.html#thm-lin-dep-too-many-vectors",
   "type": "Theorem",
   "number": "1.47",
   "title": "",
@@ -1501,7 +1501,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "2.9 Dimension and Rank",
-  "body": " 2.9 Dimension and Rank   2.9 Dimension and Rank   Overview   Topics   Coordinates relative to a basis.  Dimension of a subspace.  The rank of a matrix.     Goals   Calculate coordinates of a vector in a given basis.  Characterize subspaces using the concept of dimension.  Characterize matrices using rank, column space, and null space.  Apply the Rank, Basis, and Invertibility Theorems to describe matrices and subspaces.      Key idea: Many different bases may be chosen for a given subspace. The choice can dramatically affect coordinate representations.     Sketch in each coordinate system below.    Two coordinate systems showing different basis orientations.  Two grids with different bases; vectors and are drawn.        Coordinates Relative to a Basis   Coordinates Relative to a Basis   Let be a basis for a subspace . For any , the coordinates of relative to are the scalars such that   The coordinate vector of relative to is:        Let:   Verify that is in the span of , and compute .       Another Example of Coordinate Vector    Let   and .     Verify that is a basis for .      Determine if .      Compute .        Dimension   Dimension   The dimension of a nonzero subspace , written , is the number of vectors in any basis of . We define .      Dimension Is Well-Defined   Any two bases and of a nonzero subspace have the same number of vectors.     Some Examples:   .   has dimension .  is the number of free variables.  is the number of pivotal columns.       Rank   Rank   The rank of a matrix is the dimension of its column space.       Compute and , where        Rank, Basis, and Invertibility Theorems   Rank Theorem   If a matrix has columns, then       Basis Theorem   Any two bases for a subspace have the same dimension.      The Invertible Matrix Theorem (Continued) Theorem   Let be an matrix. The following are equivalent:   (a)   is invertible.  (m)   The columns of form a basis for .  (n)   .  (o)   .  (p)   .  (q)   .  (r)   .        Examples    For each part below, give an example of a matrix in RREF with the stated property, if possible.                                  "
+  "body": " 2.9 Dimension and Rank   2.9 Dimension and Rank   Overview   Topics   Coordinates relative to a basis.  Dimension of a subspace.  The rank of a matrix.     Goals   Calculate coordinates of a vector in a given basis.  Characterize subspaces using the concept of dimension.  Characterize matrices using rank, column space, and null space.  Apply the Rank, Basis, and Invertibility Theorems to describe matrices and subspaces.      Key idea: Many different bases may be chosen for a given subspace. The choice can dramatically affect coordinate representations.     Sketch in each coordinate system below.    Two coordinate systems showing different basis orientations.  Two grids with different bases; vectors and are drawn.        Coordinates Relative to a Basis   Coordinates Relative to a Basis   Let be a basis for a subspace . For any , the coordinates of relative to are the scalars such that   The coordinate vector of relative to is:        Let:   Verify that is in the span of , and compute .    Let . Note that is a basis for since the vectors in both span and are linearly independent.  We determine if by seeing whether can be written as a linear combination of the basis vectors; that is, we need to find whether there exists so that . Note that Therefore, we have that . Since there were no free variables, we see that this is the ONLY way of expressing as a linear combination of the basis vectors. Therefore, The coordinate vector of relative to being a vector in is not a mistake. This must happen since the basis contains two vectors. If you chose a different basis for , say , then would still be a vector in , but would most likely be different.       Another Example of Coordinate Vector    Let   and .     Verify that is a basis for .    Note that the matrix has a pivot in each column. Therefore, the columns are linearly independent. Since the vectors in span and are linearly independent, is a basis for .      Determine if .    Note that . So, .      Compute .    Since , we have .        Dimension   Dimension   The dimension of a nonzero subspace , written , is the number of vectors in any basis of . We define .      Dimension Is Well-Defined   Any two bases and of a nonzero subspace have the same number of vectors.     Some Examples:   .   has dimension .  is the number of free variables.  is the number of pivotal columns.       Rank   Rank   The rank of a matrix is the dimension of its column space.       Compute and and find a basis for and , where     First, note that we can express the column space as the span of the columns of ; that is, . This does not mean that the set containing those five vectors forms a basis. In fact, we know from that no set containing five vectors from can form a basis. Since Columns 3 and 5 of do not correspond to pivot columns, they are linearly dependent on the other vectors and are not needed in the span. Therefore, we have that a basis for is . Thus, .  From , is equal to the number of free variables. Therefore, . We can find a basis for by finding two vectors which are linearly independent satisfy . You can attempt to find such vectors by guessing (strategically). If that fails, you can proceed to following our normal procedure. Note that we have already been given an echelon form of and can see that Columns 3 and 5 correspond to free variables. Solving for the pivot varialbes in terms of and yields , , and . It follows that . Thus, a basis for is .       Rank, Basis, and Invertibility Theorems   Rank Theorem   If a matrix has columns, then       Basis Theorem   Any two bases for a subspace have the same number of vectors. That common number of vectors is the dimension of the subspace.      The Invertible Matrix Theorem (Continued)   Let be an matrix. The following are equivalent:   (a)   is invertible.  (m)   The columns of form a basis for .  (n)   .  (o)   .  (p)   .  (q)   .  (r)   .        Examples    For each part below, give an example of a matrix in RREF with the stated property, if possible.          In order for , states that must have 3 pivots. Since only has two rows, it cannot have 3 pivots. Therefore, this is not possible.           In order for , the matrix must have 2 pivots. This is possible, for example . In this case, .           In order for , states that must have two free variables. Therefore, works. In this case, .           Recall from that . Therefore, should have no free variables, or equivalently, should have a pivot in every column. This is impossible for a matrix with more columns than rows. Therefore, there is no matrix such that .       "
 },
 {
   "id": "obj-2-9-topics-goals",
@@ -1546,7 +1546,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.51",
   "title": "",
-  "body": "  Let:   Verify that is in the span of , and compute .   "
+  "body": "  Let:   Verify that is in the span of , and compute .    Let . Note that is a basis for since the vectors in both span and are linearly independent.  We determine if by seeing whether can be written as a linear combination of the basis vectors; that is, we need to find whether there exists so that . Note that Therefore, we have that . Since there were no free variables, we see that this is the ONLY way of expressing as a linear combination of the basis vectors. Therefore, The coordinate vector of relative to being a vector in is not a mistake. This must happen since the basis contains two vectors. If you chose a different basis for , say , then would still be a vector in , but would most likely be different.   "
 },
 {
   "id": "ex-coordinates2",
@@ -1555,7 +1555,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.52",
   "title": "",
-  "body": "  Let   and .     Verify that is a basis for .      Determine if .      Compute .    "
+  "body": "  Let   and .     Verify that is a basis for .    Note that the matrix has a pivot in each column. Therefore, the columns are linearly independent. Since the vectors in span and are linearly independent, is a basis for .      Determine if .    Note that . So, .      Compute .    Since , we have .    "
 },
 {
   "id": "def-dimension",
@@ -1576,11 +1576,20 @@ var ptx_lunr_docs = [
   "body": " Dimension Is Well-Defined   Any two bases and of a nonzero subspace have the same number of vectors.   "
 },
 {
+  "id": "note-examples-dimension",
+  "level": "2",
+  "url": "Section-2-9.html#note-examples-dimension",
+  "type": "Note",
+  "number": "2.55",
+  "title": "",
+  "body": "Some Examples:   .   has dimension .  is the number of free variables.  is the number of pivotal columns.   "
+},
+{
   "id": "def-rank",
   "level": "2",
   "url": "Section-2-9.html#def-rank",
   "type": "Definition",
-  "number": "2.55",
+  "number": "2.56",
   "title": "Rank.",
   "body": " Rank   The rank of a matrix is the dimension of its column space.   "
 },
@@ -1589,16 +1598,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#ex-rank-computation",
   "type": "Example",
-  "number": "2.56",
+  "number": "2.57",
   "title": "",
-  "body": "  Compute and , where    "
+  "body": "  Compute and and find a basis for and , where     First, note that we can express the column space as the span of the columns of ; that is, . This does not mean that the set containing those five vectors forms a basis. In fact, we know from that no set containing five vectors from can form a basis. Since Columns 3 and 5 of do not correspond to pivot columns, they are linearly dependent on the other vectors and are not needed in the span. Therefore, we have that a basis for is . Thus, .  From , is equal to the number of free variables. Therefore, . We can find a basis for by finding two vectors which are linearly independent satisfy . You can attempt to find such vectors by guessing (strategically). If that fails, you can proceed to following our normal procedure. Note that we have already been given an echelon form of and can see that Columns 3 and 5 correspond to free variables. Solving for the pivot varialbes in terms of and yields , , and . It follows that . Thus, a basis for is .   "
 },
 {
   "id": "thm-rank-theorem",
   "level": "2",
   "url": "Section-2-9.html#thm-rank-theorem",
   "type": "Theorem",
-  "number": "2.57",
+  "number": "2.58",
   "title": "Rank Theorem.",
   "body": " Rank Theorem   If a matrix has columns, then    "
 },
@@ -1607,27 +1616,27 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#thm-basis-theorem",
   "type": "Theorem",
-  "number": "2.58",
+  "number": "2.59",
   "title": "Basis Theorem.",
-  "body": " Basis Theorem   Any two bases for a subspace have the same dimension.   "
+  "body": " Basis Theorem   Any two bases for a subspace have the same number of vectors. That common number of vectors is the dimension of the subspace.   "
 },
 {
   "id": "thm-IMT-Cont-1",
   "level": "2",
   "url": "Section-2-9.html#thm-IMT-Cont-1",
   "type": "Theorem",
-  "number": "2.59",
-  "title": "The Invertible Matrix Theorem (Continued) Theorem.",
-  "body": " The Invertible Matrix Theorem (Continued) Theorem   Let be an matrix. The following are equivalent:   (a)   is invertible.  (m)   The columns of form a basis for .  (n)   .  (o)   .  (p)   .  (q)   .  (r)   .    "
+  "number": "2.60",
+  "title": "The Invertible Matrix Theorem (Continued).",
+  "body": " The Invertible Matrix Theorem (Continued)   Let be an matrix. The following are equivalent:   (a)   is invertible.  (m)   The columns of form a basis for .  (n)   .  (o)   .  (p)   .  (q)   .  (r)   .    "
 },
 {
   "id": "ex-rref-rank-questions",
   "level": "2",
   "url": "Section-2-9.html#ex-rref-rank-questions",
   "type": "Example",
-  "number": "2.60",
+  "number": "2.61",
   "title": "",
-  "body": "  For each part below, give an example of a matrix in RREF with the stated property, if possible.                               "
+  "body": "  For each part below, give an example of a matrix in RREF with the stated property, if possible.          In order for , states that must have 3 pivots. Since only has two rows, it cannot have 3 pivots. Therefore, this is not possible.           In order for , the matrix must have 2 pivots. This is possible, for example . In this case, .           In order for , states that must have two free variables. Therefore, works. In this case, .           Recall from that . Therefore, should have no free variables, or equivalently, should have a pivot in every column. This is impossible for a matrix with more columns than rows. Therefore, there is no matrix such that .    "
 },
 {
   "id": "Section-3-1",
@@ -1636,7 +1645,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "3.1 Introduction to Determinants",
-  "body": " 3.1 Introduction to Determinants   3.1 Introduction to Determinants   Overview   Topics   The definition and computation of a determinant.  The determinant of triangular matrices.     Goals   Compute determinants of matrices using a cofactor expansion.  Apply theorems to compute determinants of matrices that have particular structures.      Determinant   Suppose is with entries . Then the determinant of , written or , is defined by the following recursive formula.   If , then and .  If , then    where is the submatrix obtained by deleting row and column of .       Compute .       More examples    Use the definition to compute        Use the definition to compute        Cofactors and Expansion   Cofactor   For an matrix , the cofactor is   The sign pattern alternates in a checkerboard:      Cofactor Expansion along Any Row or Column   The determinant of can be computed by expanding along any row or any column. For example, expanding down the -th column:     This gives a practical way to compute determinants more efficiently by choosing rows or columns with many zeros.    Example: A 4×4 Determinant    Use to compute the determinant of in an efficient manner.        Triangular Matrices   Determinant of a Triangular Matrix   If is triangular (upper or lower), then   the product of its diagonal entries.      Compute the determinant of the following triangular matrix.      A naive cofactor expansion for an matrix requires on the order of multiplications, which grows very quickly:  A matrix requires roughly multiplications.  A matrix requires approximately multiplications.    This doesn't mean that determinants are not useful.  We will briefly study more efficient methods for computing determinants.  We will learn some application of determinants, such as solving linear systems and calculating area\/volume of certain regions.  Determinants are used in multivariable calculus (e.g., Jacobians for change of variables in integrals).      "
+  "body": " 3.1 Introduction to Determinants   3.1 Introduction to Determinants   Overview   Topics   The definition and computation of a determinant.  The determinant of triangular matrices.     Goals   Compute determinants of matrices using a cofactor expansion.  Apply theorems to compute determinants of matrices that have particular structures.      Determinant   Suppose is with entries . Then the determinant of , written or or , is defined by the following recursive formula.   If , then and .  If , then    where is the submatrix obtained by deleting row and column of .       Compute .    Using , we have that .       More examples    Use the definition to compute     Using and the result from , we have        Use the definition to compute     Note that        Cofactors and Expansion   Cofactor   For an matrix , the cofactor is   The sign pattern alternates in a checkerboard:      Cofactor Expansion along Any Row or Column   The determinant of can be computed by expanding along any row or any column. For example, expanding down the -th column:     This gives a practical way to compute determinants more efficiently by choosing rows or columns with many zeros.    Example: A 4×4 Determinant    Use to compute the determinant of in an efficient manner.     We will calculate the determinant by expanding along the first column. Note that . To calculate the determinant of the remaining matrix, we can expand over any row or column we choose. How about expanding over Column 3 since there are several 0's. Note that        Triangular Matrices   Determinant of a Triangular Matrix   If is triangular (upper or lower), then   the product of its diagonal entries.      Compute the determinant of the following triangular matrix.     By , we have that      A naive cofactor expansion for an matrix requires on the order of multiplications, which grows very quickly:  A matrix requires roughly multiplications.  A matrix requires approximately multiplications.    This doesn't mean that determinants are not useful.  We will briefly study more efficient methods for computing determinants.  We will learn some application of determinants, such as solving linear systems and calculating area\/volume of certain regions.  Determinants are used in multivariable calculus (e.g., Jacobians for change of variables in integrals).      "
 },
 {
   "id": "obj-3-1-topics-goals",
@@ -1663,7 +1672,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "3.1",
   "title": "Determinant.",
-  "body": " Determinant   Suppose is with entries . Then the determinant of , written or , is defined by the following recursive formula.   If , then and .  If , then    where is the submatrix obtained by deleting row and column of .   "
+  "body": " Determinant   Suppose is with entries . Then the determinant of , written or or , is defined by the following recursive formula.   If , then and .  If , then    where is the submatrix obtained by deleting row and column of .   "
 },
 {
   "id": "ex-det-2x2",
@@ -1672,7 +1681,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.2",
   "title": "",
-  "body": "  Compute .   "
+  "body": "  Compute .    Using , we have that .   "
 },
 {
   "id": "ex-det-3x3",
@@ -1681,7 +1690,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.3",
   "title": "",
-  "body": "  Use the definition to compute    "
+  "body": "  Use the definition to compute     Using and the result from , we have    "
 },
 {
   "id": "ex-det-3x3-2",
@@ -1690,7 +1699,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.4",
   "title": "",
-  "body": "  Use the definition to compute    "
+  "body": "  Use the definition to compute     Note that    "
 },
 {
   "id": "def-cofactor",
@@ -1717,7 +1726,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.7",
   "title": "",
-  "body": "  Use to compute the determinant of in an efficient manner.    "
+  "body": "  Use to compute the determinant of in an efficient manner.     We will calculate the determinant by expanding along the first column. Note that . To calculate the determinant of the remaining matrix, we can expand over any row or column we choose. How about expanding over Column 3 since there are several 0's. Note that    "
 },
 {
   "id": "thm-triangular-det",
@@ -1735,7 +1744,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.9",
   "title": "",
-  "body": "  Compute the determinant of the following triangular matrix.    "
+  "body": "  Compute the determinant of the following triangular matrix.     By , we have that    "
 },
 {
   "id": "Section-3-2",
@@ -1834,7 +1843,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "3.3 Applications of the Determinant",
-  "body": " 3.3 Applications of the Determinant   3.3 Applications of Determinants   Overview   Topics   Relationships between area, volume, determinants, and linear transformations.  Cramer's Rule for linear systems.     Goals   Use determinants to compute the area of a parallelogram or the volume of a parallelepiped, possibly under a given linear transformation.  Use determinants and Cramer's Rule to solve systems of linear equations.     In , determinants measure the (signed) area of the parallelogram formed by two vectors.   Parallelogram in the plane spanned by two vectors.  Illustration of a parallelogram in spanned by two vectors forming a matrix whose determinant gives the signed area.   Area of the parallelogram .    Area from the Determinant   The area of the parallelogram spanned by the columns of a matrix is .     Volume from the Determinant   The volume of the parallelepiped spanned by the columns of an matrix is .       Examples of Determinant giving Volume    Calculate the area of the parallelogram determined by the points , , , and .       Calculate the area of the triangle determined by the points , , and .       Linear Transformations and Volume Scaling   Volume Scaling by a Linear Transformation   If is the linear transformation defined by , and is any closed shape in , then     Some observations:  Recall from Section 1.9 that the matrix corresponding to a shearing linear transformation has the from or . Since each of these matrices has determinant 1, we see that shearing does not change the area of a shape.  Note that can be any closed shape. This includes parallelograms, polygons, circles, or crazy blobs, as long as the edge of the shape is connected.       Find the area of the interior of the ellipse defined by the equation .       Cramer's Rule   Cramer's Rule   Let be an invertible matrix and let . Then the system has the unique solution whose entires are given by , where is the matrix formed by replacing the column of by .       Use Cramer's Rule to solve the system .      "
+  "body": " 3.3 Applications of the Determinant   3.3 Applications of the Determinant   Overview   Topics   Relationships between area, volume, determinants, and linear transformations.  Cramer's Rule for linear systems.     Goals   Use determinants to compute the area of a parallelogram or the volume of a parallelepiped, possibly under a given linear transformation.  Use determinants and Cramer's Rule to solve systems of linear equations.     In , determinants measure the (signed) area of the parallelogram formed by two vectors.   Parallelogram in the plane spanned by two vectors.  Illustration of a parallelogram in spanned by two vectors forming a matrix whose determinant gives the signed area.   Area of the parallelogram .    Area from the Determinant   The area of the parallelogram spanned by the columns of a matrix is .     Volume from the Determinant   The volume of the parallelepiped spanned by the columns of an matrix is .       Examples of Determinant giving Volume    Calculate the area of the parallelogram determined by the points , , , and .       Calculate the area of the triangle determined by the points , , and .       Linear Transformations and Volume Scaling   Volume Scaling by a Linear Transformation   If is the linear transformation defined by , and is any closed shape in , then     Some observations:  Recall from Section 1.9 that the matrix corresponding to a shearing linear transformation has the from or . Since each of these matrices has determinant 1, we see that shearing does not change the area of a shape.  Note that can be any closed shape. This includes parallelograms, polygons, circles, or crazy blobs, as long as the edge of the shape is connected.       Find the area of the interior of the ellipse defined by the equation .       Cramer's Rule   Cramer's Rule   Let be an invertible matrix and let . Then the system has the unique solution whose entires are given by , where is the matrix formed by replacing the column of by .       Use Cramer's Rule to solve the system .      "
 },
 {
   "id": "obj-3-3-topics-goals",
@@ -1925,6 +1934,96 @@ var ptx_lunr_docs = [
   "number": "3.24",
   "title": "",
   "body": "  Use Cramer's Rule to solve the system .   "
+},
+{
+  "id": "Section-4-9",
+  "level": "1",
+  "url": "Section-4-9.html",
+  "type": "Section",
+  "number": "",
+  "title": "4.9\/5.9 Markov Chains",
+  "body": " 4.9\/5.9 Markov Chains   4.9\/5.9 Markov Chains   Overview   Topics   Markov chains  Steady-state vectors  Convergence     Goals   Construct stochastic matrices and probability vectors.  Model and solve real-world problems using Markov chains (e.g., compute steady-state vectors).  Determine whether a stochastic matrix is regular.       A small town has two libraries, and .    After 1 month, among the books checked out from :   80% return to  20% return to     After 1 month, among the books checked out from :   30% return to  70% return to       Two-state Markov chain diagram with transitions between libraries with probabilities 0.8, 0.2, 0.3, and 0.7 representing book returns.   If both libraries have 1000 books today, how many books does each library have after 1 month?      Example 1 continued    Let and be the same libraries from .     Let be the vector which gives how many books are in libraries and after months. What are and ?      Find the matrix so that       How many books does each library contain after months; that is, what is ?      How many books does each library contain after months?      What if each library had started with books instead of books. What would be the new ?        Markov Chains: Definitions    A few important definitions:  A probability vector is a vector whose entries are nonnegative and sum to 1.  A stochastic matrix is a square matrix whose columns are probability vectors.  A Markov chain is a sequence satisfying for a stochastic matrix .  A steady-state vector for is a probability vector such that .         Determine a steady-state vector for the stochastic matrix:        Convergence and Regular Matrices   Regular Stochastic Matrix   A stochastic matrix is regular if some power has all entries strictly positive.      Convergence Theorem   If is a regular stochastic matrix, then has a unique steady-state vector , and the sequence converges to as .     In , the probability vectors form the line segment between and . A stochastic matrix maps probability vectors to probability vectors, and the iterates converge to the steady state.   Diagram showing convergence of 2D stochastic vectors to a steady state.  Illustration of several probability vectors in , under repeated multiplication by a regular stochastic matrix, converging to a steady-state vector.       Example 3: Car Rental Network    A rental company has three locations A, B, and C. Cars may be returned to any location. The table gives the weekly rental\/return pattern:    rented from    A B C    A .8 .1 .2    returned to B .2 .6 .3    C .0 .3 .5    There are 18 cars at each location today.     Construct the stochastic matrix . Is regular?      Determine what happens to the distribution of cars after a long time.       "
+},
+{
+  "id": "obj-4-9-topics-goals",
+  "level": "2",
+  "url": "Section-4-9.html#obj-4-9-topics-goals",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   Markov chains  Steady-state vectors  Convergence   "
+},
+{
+  "id": "p-4-9-objectives-3",
+  "level": "2",
+  "url": "Section-4-9.html#p-4-9-objectives-3",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals   Construct stochastic matrices and probability vectors.  Model and solve real-world problems using Markov chains (e.g., compute steady-state vectors).  Determine whether a stochastic matrix is regular.   "
+},
+{
+  "id": "ex-4-9-libraries",
+  "level": "2",
+  "url": "Section-4-9.html#ex-4-9-libraries",
+  "type": "Example",
+  "number": "4.1",
+  "title": "",
+  "body": "  A small town has two libraries, and .    After 1 month, among the books checked out from :   80% return to  20% return to     After 1 month, among the books checked out from :   30% return to  70% return to       Two-state Markov chain diagram with transitions between libraries with probabilities 0.8, 0.2, 0.3, and 0.7 representing book returns.   If both libraries have 1000 books today, how many books does each library have after 1 month?   "
+},
+{
+  "id": "handout-section-4-9-markov-3-2",
+  "level": "2",
+  "url": "Section-4-9.html#handout-section-4-9-markov-3-2",
+  "type": "Example",
+  "number": "4.2",
+  "title": "",
+  "body": "  Let and be the same libraries from .     Let be the vector which gives how many books are in libraries and after months. What are and ?      Find the matrix so that       How many books does each library contain after months; that is, what is ?      How many books does each library contain after months?      What if each library had started with books instead of books. What would be the new ?    "
+},
+{
+  "id": "p-4-9-markov-definitions-2",
+  "level": "2",
+  "url": "Section-4-9.html#p-4-9-markov-definitions-2",
+  "type": "Definition",
+  "number": "4.3",
+  "title": "",
+  "body": "  A few important definitions:  A probability vector is a vector whose entries are nonnegative and sum to 1.  A stochastic matrix is a square matrix whose columns are probability vectors.  A Markov chain is a sequence satisfying for a stochastic matrix .  A steady-state vector for is a probability vector such that .     "
+},
+{
+  "id": "ex-4-9-steady",
+  "level": "2",
+  "url": "Section-4-9.html#ex-4-9-steady",
+  "type": "Example",
+  "number": "4.4",
+  "title": "",
+  "body": "  Determine a steady-state vector for the stochastic matrix:    "
+},
+{
+  "id": "def-regular-stochastic",
+  "level": "2",
+  "url": "Section-4-9.html#def-regular-stochastic",
+  "type": "Definition",
+  "number": "4.5",
+  "title": "Regular Stochastic Matrix.",
+  "body": " Regular Stochastic Matrix   A stochastic matrix is regular if some power has all entries strictly positive.   "
+},
+{
+  "id": "thm-regular-converges",
+  "level": "2",
+  "url": "Section-4-9.html#thm-regular-converges",
+  "type": "Theorem",
+  "number": "4.6",
+  "title": "Convergence Theorem.",
+  "body": " Convergence Theorem   If is a regular stochastic matrix, then has a unique steady-state vector , and the sequence converges to as .   "
+},
+{
+  "id": "ex-4-9-cars",
+  "level": "2",
+  "url": "Section-4-9.html#ex-4-9-cars",
+  "type": "Example",
+  "number": "4.7",
+  "title": "",
+  "body": "  A rental company has three locations A, B, and C. Cars may be returned to any location. The table gives the weekly rental\/return pattern:    rented from    A B C    A .8 .1 .2    returned to B .2 .6 .3    C .0 .3 .5    There are 18 cars at each location today.     Construct the stochastic matrix . Is regular?      Determine what happens to the distribution of cars after a long time.    "
 }
 ]
 
