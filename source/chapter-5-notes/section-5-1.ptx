@@ -1,5 +1,5 @@
 <handout xml:id="handout-section-5-1-eigenvalues-eigenvectors">
-  <title>Section 5.1: Eigenvectors, Eigenvalues, and Eigenspaces</title>
+  <title>5.1 Eigenvectors, Eigenvalues, and Eigenspaces</title>
 
   <page xml:id="p-5-1-overview">
     <title>Overview</title>
@@ -24,7 +24,7 @@
 
     <p><nbsp/></p>
 
-    <definition xml:id="def-eigenvalue-eigenvector">
+    <definition xml:id="def-eigenvalue-eigenvector" workspace="0.5in">
       <title>Eigenvector and Eigenvalue</title>
       <statement>
         <p>
@@ -38,8 +38,6 @@
         </p>
       </statement>
     </definition>
-
-    <p><nbsp/></p>
 
     <p>
       Notes:
@@ -221,7 +219,7 @@
       <statement>
         <p>
           You cannot determine the eigenvalues of a matrix from its reduced row-echelon form.
-          Row operations (except very specific ones) generally change eigenvalues.
+          Row operations generally change eigenvalues.
         </p>
       </statement>
     </note>
@@ -236,13 +234,13 @@
                         1 \amp 1
                     \end{bmatrix},
                     </me>
-                whihc has eigenvalues <m>\lambda=2</m> and <m>\lambda=0</m>.
+                which has eigenvalues <m>\lambda=2</m> and <m>\lambda=0</m>.
             </p>
         </introduction> 
         <task workspace="2in">
             <statement>
                 <p>
-                    Find eigenvectors for each of eigenvalue of <m>A</m>.
+                    Find eigenvectors for each eigenvalue of <m>A</m>.
                 </p>
             </statement>
         </task>
@@ -254,13 +252,19 @@
             </statement>
         </task>
     </example>
+
+    <p><nbsp/></p>
   </page>
 
   <page>
     <title>One more Example</title> 
     <example workspace="true">
+      <statement> 
+        <p>
         Let <me>A = \begin{bmatrix} 4 \amp -1 \amp 6 \\ 2 \amp 1 \amp 5 \\ 2 \amp -1 \amp 8 \end{bmatrix}.</me> One of the eigenvalues of <m>A</m> is <m>\lambda = 2</m>. Find a basis for the <m>2</m>-eigenspace of <m>A</m>.
-    </example>
+        </p>
+        </statement>
+      </example>
   </page>
 
 </handout>

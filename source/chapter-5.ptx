@@ -3,7 +3,7 @@
   <title>Eigenvectors and Eigenvalues</title>
 
   <section xml:id="Section-5-9">
-    <title>4.9/5.9 Applications to Markov Chains</title>
+    <title>5.1 Eigenvectors, Eigenvalues, and Eigenspaces</title>
       <xi:include href="./chapter-5-notes/section-5-1.ptx" />
   </section>
 
