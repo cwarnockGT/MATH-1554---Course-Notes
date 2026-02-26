@@ -1753,7 +1753,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "3.2 Properties of the Determinant",
-  "body": " 3.2 Properties of the Determinant   3.2 Properties of the Determinant   Overview   Topics   The relationships between row reductions, invertibility, and determinants.     Goals   Apply determinant properties (related to row reductions, transpose, and matrix products) to compute determinants efficiently.  Use determinants to determine whether a square matrix is invertible.     We have a method for computing determinants, but without the strategies in this section, the cofactor-expansion algorithm can be very inefficient. Row operations provide a more efficient method.    Row Operations and the Determinant   Let be a square matrix.   If a multiple of one row of is added to another to produce , then .  If two rows of are interchanged to produce , then .  If a row of is multiplied by a scalar to produce , then .        Example 1    Compute:        Compute:        Determinants and Invertibility    If is reduced to echelon form using row interchanges, then        For any matrices and , the following properties hold:   is invertible if and only if .  .  .        Additional Example    Determine the value of:        Use the determinant to find all values of for which the matrix is not invertible.       "
+  "body": " 3.2 Properties of the Determinant   3.2 Properties of the Determinant   Overview   Topics   The relationships between row reductions, invertibility, and determinants.     Goals   Apply determinant properties (related to row reductions, transpose, and matrix products) to compute determinants efficiently.  Use determinants to determine whether a square matrix is invertible.     We have a method for computing determinants, but without the strategies in this section, the cofactor-expansion algorithm can be very inefficient. Row operations provide a more efficient method.    Row Operations and the Determinant   Let be a square matrix.   If a multiple of one row of is added to another to produce , then .  If two rows of are interchanged to produce , then .  If a row of is multiplied by a scalar to produce , then .      Let . Note that Below, we will use an example of each type of row operation to show how the determinant changes according to .   Consider the row replacement operation : . Note that     Consider swapping Row 1 and Row 2: . Note that .    Consider the row scaling operation : . Note that          Example 1    Compute:     Since the matrix does not have any zeros, we start by performing row operations to create some zeros below the pivots. Then we use cofactor expansion. Feel free to go all the way to echelon form if you want. . Instead of expanding over the first column, we could have expanded over the second row, which would have resulted in Instead of using cofactor expansion, we could have swapped Row 2 and Row 3, which would negate my determinant by , and then used . This would result in . Regardless of the path chosen to evaluate the determinant, we get the same answer.       Compute:     In this example, we will reduce the matrix all the way down to REF and then apply . Note that        Determinants and Invertibility    If is reduced to echelon form using row interchanges, then        For any matrices and , the following properties hold:   is invertible if and only if .  .  .        Additional Example    Determine the value of:     Since the determinant is multiplicative ( part (b)), we have the following:        Use the determinant to find all values of for which the matrix is not invertible.     First, note that can be written as We know from part (a) that is not invertible if and only if . Note that . Therefore, we have that the which make not invertible are precisely those which make , or equivalently, which make . Thus, the which make not invertible are .      "
 },
 {
   "id": "obj-3-2-topics-goals",
@@ -1789,7 +1789,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.11",
   "title": "",
-  "body": "  Compute:    "
+  "body": "  Compute:     Since the matrix does not have any zeros, we start by performing row operations to create some zeros below the pivots. Then we use cofactor expansion. Feel free to go all the way to echelon form if you want. . Instead of expanding over the first column, we could have expanded over the second row, which would have resulted in Instead of using cofactor expansion, we could have swapped Row 2 and Row 3, which would negate my determinant by , and then used . This would result in . Regardless of the path chosen to evaluate the determinant, we get the same answer.   "
 },
 {
   "id": "ex-3-2-rowops-example2",
@@ -1798,7 +1798,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.12",
   "title": "",
-  "body": "  Compute:    "
+  "body": "  Compute:     In this example, we will reduce the matrix all the way down to REF and then apply . Note that    "
 },
 {
   "id": "thm-det-prod-pivots",
@@ -1825,7 +1825,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.15",
   "title": "",
-  "body": "  Determine the value of:    "
+  "body": "  Determine the value of:     Since the determinant is multiplicative ( part (b)), we have the following:    "
 },
 {
   "id": "ex-3-2-lambda",
@@ -1834,7 +1834,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.16",
   "title": "",
-  "body": "  Use the determinant to find all values of for which the matrix is not invertible.    "
+  "body": "  Use the determinant to find all values of for which the matrix is not invertible.     First, note that can be written as We know from part (a) that is not invertible if and only if . Note that . Therefore, we have that the which make not invertible are precisely those which make , or equivalently, which make . Thus, the which make not invertible are .   "
 },
 {
   "id": "Section-3-3",
@@ -1843,7 +1843,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "3.3 Applications of the Determinant",
-  "body": " 3.3 Applications of the Determinant   3.3 Applications of the Determinant   Overview   Topics   Relationships between area, volume, determinants, and linear transformations.  Cramer's Rule for linear systems.     Goals   Use determinants to compute the area of a parallelogram or the volume of a parallelepiped, possibly under a given linear transformation.  Use determinants and Cramer's Rule to solve systems of linear equations.     In , determinants measure the (signed) area of the parallelogram formed by two vectors.   Parallelogram in the plane spanned by two vectors.  Illustration of a parallelogram in spanned by two vectors forming a matrix whose determinant gives the signed area.   Area of the parallelogram .    Area from the Determinant   The area of the parallelogram spanned by the columns of a matrix is .     Volume from the Determinant   The volume of the parallelepiped spanned by the columns of an matrix is .       Examples of Determinant giving Volume    Calculate the area of the parallelogram determined by the points , , , and .       Calculate the area of the triangle determined by the points , , and .       Linear Transformations and Volume Scaling   Volume Scaling by a Linear Transformation   If is the linear transformation defined by , and is any closed shape in , then     Some observations:  Recall from Section 1.9 that the matrix corresponding to a shearing linear transformation has the from or . Since each of these matrices has determinant 1, we see that shearing does not change the area of a shape.  Note that can be any closed shape. This includes parallelograms, polygons, circles, or crazy blobs, as long as the edge of the shape is connected.       Find the area of the interior of the ellipse defined by the equation .       Cramer's Rule   Cramer's Rule   Let be an invertible matrix and let . Then the system has the unique solution whose entires are given by , where is the matrix formed by replacing the column of by .       Use Cramer's Rule to solve the system .      "
+  "body": " 3.3 Applications of the Determinant   3.3 Applications of the Determinant   Overview   Topics   Relationships between area, volume, determinants, and linear transformations.  Cramer's Rule for linear systems.     Goals   Use determinants to compute the area of a parallelogram or the volume of a parallelepiped, possibly under a given linear transformation.  Use determinants and Cramer's Rule to solve systems of linear equations.     In , determinants measure the (signed) area of the parallelogram formed by two vectors.   Parallelogram in the plane spanned by two vectors.  Illustration of a parallelogram in spanned by two vectors forming a matrix whose determinant gives the signed area.   Area of the parallelogram .    Area from the Determinant   The area of the parallelogram spanned by the columns of a matrix is .     Volume from the Determinant   The volume of the parallelepiped spanned by the columns of an matrix is .       Examples of Determinant giving Volume    Calculate the area of the parallelogram determined by the points , , , and .    Below is the graph of the parallelogram in .    A drawing of the parallelogram in the plane.   Notice that the vector connects the point to the point . Also, the vector connects the point to the point . Using , we have that the area of the parallelogram is        Calculate the area of the triangle determined by the points , , and .    Note that applies to parallelograms, not triangles. However, every triangle is half of some parallelogram. For example, notice in the graph below how the described triangle (in blue) can be extended by adjoining a copy of the triangle (in red) to one of the three edges and forming a parallelogram.    A drawing of the described triangle in the plane, adjoined with a copy of the triange with points (0,3), (4,-1), and (7,4), forming a parallelogram.   It follows that the area of the triangle is half the area of the parallelogram. We see that vectors describe adjacent sides of the parallelogram. Therefore, we have that the area of the triangle is .       Linear Transformations and Volume Scaling   Volume Scaling by a Linear Transformation   If is the linear transformation defined by , and is any closed shape in , then     Some observations:  Recall from Section 1.9 that the matrix corresponding to a shearing linear transformation has the from or . Since each of these matrices has determinant 1, we see that shearing does not change the area of a shape.  Note that can be any closed shape. This includes parallelograms, polygons, circles, or crazy blobs, as long as the edge of the shape is connected.       Find the area of the interior of the ellipse defined by the equation .    Below, we have included a graph of the ellipse in the -plane.    A drawing of the described ellipse in the standard coordinate system.   It is difficult to find the area of this tilted ellipse using geometry. Instead, we will use . We start with a change of variables. Let and . Then, the equation for in terms of and becomes . Note that is the equation for the unit circle which has area .   In order to use , we need to identify a linear transformation which maps the ellipse in the -plane to the unit circle in the -plane. Therefore, we need to find a linear transformation which accepts a point on and returns a point on . Recalling the definition of and in terms of and , we see that needs to do the following: . It follows that . Therefore, is the linear transformation that maps to .   By , we have that . Since we know has area , we find that . Thus, the area of the ellipse is .       Cramer's Rule   Cramer's Rule   Let be an invertible matrix and let . Then the system has the unique solution whose entires are given by , where is the matrix formed by replacing the column of by .       Use Cramer's Rule to solve the system .    Let . Expanding down the first column of , we see that . Therefore, is invertible matrix, so the system has a unique solution and we can use Cramer's Rule.   We find by replacing the first column of with : . By expanding down the first column of , we see that . It follows that .   We find by replacing the second column of with : . Expanding across the third row yields . It follows that .   We find by replacing the third column of with : . Expanding across the third row yields . It follows that .   Therefore, we have that the solution vector is .      "
 },
 {
   "id": "obj-3-3-topics-goals",
@@ -1888,7 +1888,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.19",
   "title": "",
-  "body": "  Calculate the area of the parallelogram determined by the points , , , and .   "
+  "body": "  Calculate the area of the parallelogram determined by the points , , , and .    Below is the graph of the parallelogram in .    A drawing of the parallelogram in the plane.   Notice that the vector connects the point to the point . Also, the vector connects the point to the point . Using , we have that the area of the parallelogram is    "
 },
 {
   "id": "ex-3-3-area-triangle",
@@ -1897,7 +1897,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.20",
   "title": "",
-  "body": "  Calculate the area of the triangle determined by the points , , and .   "
+  "body": "  Calculate the area of the triangle determined by the points , , and .    Note that applies to parallelograms, not triangles. However, every triangle is half of some parallelogram. For example, notice in the graph below how the described triangle (in blue) can be extended by adjoining a copy of the triangle (in red) to one of the three edges and forming a parallelogram.    A drawing of the described triangle in the plane, adjoined with a copy of the triange with points (0,3), (4,-1), and (7,4), forming a parallelogram.   It follows that the area of the triangle is half the area of the parallelogram. We see that vectors describe adjacent sides of the parallelogram. Therefore, we have that the area of the triangle is .   "
 },
 {
   "id": "thm-linear-transform-volume-scale",
@@ -1915,7 +1915,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.22",
   "title": "",
-  "body": "  Find the area of the interior of the ellipse defined by the equation .   "
+  "body": "  Find the area of the interior of the ellipse defined by the equation .    Below, we have included a graph of the ellipse in the -plane.    A drawing of the described ellipse in the standard coordinate system.   It is difficult to find the area of this tilted ellipse using geometry. Instead, we will use . We start with a change of variables. Let and . Then, the equation for in terms of and becomes . Note that is the equation for the unit circle which has area .   In order to use , we need to identify a linear transformation which maps the ellipse in the -plane to the unit circle in the -plane. Therefore, we need to find a linear transformation which accepts a point on and returns a point on . Recalling the definition of and in terms of and , we see that needs to do the following: . It follows that . Therefore, is the linear transformation that maps to .   By , we have that . Since we know has area , we find that . Thus, the area of the ellipse is .   "
 },
 {
   "id": "thm-cramers-rule",
@@ -1933,7 +1933,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.24",
   "title": "",
-  "body": "  Use Cramer's Rule to solve the system .   "
+  "body": "  Use Cramer's Rule to solve the system .    Let . Expanding down the first column of , we see that . Therefore, is invertible matrix, so the system has a unique solution and we can use Cramer's Rule.   We find by replacing the first column of with : . By expanding down the first column of , we see that . It follows that .   We find by replacing the second column of with : . Expanding across the third row yields . It follows that .   We find by replacing the third column of with : . Expanding across the third row yields . It follows that .   Therefore, we have that the solution vector is .   "
 },
 {
   "id": "Section-4-9",
@@ -1942,7 +1942,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "4.9\/5.9 Markov Chains",
-  "body": " 4.9\/5.9 Markov Chains   4.9\/5.9 Markov Chains   Overview   Topics   Markov chains  Steady-state vectors  Convergence     Goals   Construct stochastic matrices and probability vectors.  Model and solve real-world problems using Markov chains (e.g., compute steady-state vectors).  Determine whether a stochastic matrix is regular.       A small town has two libraries, and .    After 1 month, among the books checked out from :   80% return to  20% return to     After 1 month, among the books checked out from :   30% return to  70% return to       Two-state Markov chain diagram with transitions between libraries with probabilities 0.8, 0.2, 0.3, and 0.7 representing book returns.   If both libraries have 1000 books today, how many books does each library have after 1 month?      Example 1 continued    Let and be the same libraries from .     Let be the vector which gives how many books are in libraries and after months. What are and ?      Find the matrix so that       How many books does each library contain after months; that is, what is ?      How many books does each library contain after months?      What if each library had started with books instead of books. What would be the new ?        Markov Chains: Definitions    A few important definitions:  A probability vector is a vector whose entries are nonnegative and sum to 1.  A stochastic matrix is a square matrix whose columns are probability vectors.  A Markov chain is a sequence satisfying for a stochastic matrix .  A steady-state vector for is a probability vector such that .         Determine a steady-state vector for the stochastic matrix:        Convergence and Regular Matrices   Regular Stochastic Matrix   A stochastic matrix is regular if some power has all entries strictly positive.      Convergence Theorem   If is a regular stochastic matrix, then has a unique steady-state vector , and the sequence converges to as .     In , the probability vectors form the line segment between and . A stochastic matrix maps probability vectors to probability vectors, and the iterates converge to the steady state.   Diagram showing convergence of 2D stochastic vectors to a steady state.  Illustration of several probability vectors in , under repeated multiplication by a regular stochastic matrix, converging to a steady-state vector.       Example 3: Car Rental Network    A rental company has three locations A, B, and C. Cars may be returned to any location. The table gives the weekly rental\/return pattern:    rented from    A B C    A .8 .1 .2    returned to B .2 .6 .3    C .0 .3 .5    There are 18 cars at each location today.     Construct the stochastic matrix . Is regular?      Determine what happens to the distribution of cars after a long time.       "
+  "body": " 4.9\/5.9 Markov Chains   4.9\/5.9 Markov Chains   Overview   Topics   Markov chains  Steady-state vectors  Convergence     Goals   Construct stochastic matrices and probability vectors.  Model and solve real-world problems using Markov chains (e.g., compute steady-state vectors).  Determine whether a stochastic matrix is regular.       A small town has two libraries, and .    After 1 month, among the books checked out from :   80% return to  20% return to     After 1 month, among the books checked out from :   30% return to  70% return to       Two-state Markov chain diagram with transitions between libraries with probabilities 0.8, 0.2, 0.3, and 0.7 representing book returns.   If both libraries have 1000 books today, how many books does each library have after 1 month?      Example 1 continued    Let and be the same libraries from .     Let be the vector which gives how many books are in libraries and after months. What are and ?      Find the matrix so that       How many books does each library contain after months; that is, what is ?      How many books does each library contain after months?      What if each library had started with books instead of books. What would be the new ?        Markov Chains: Definitions    A few important definitions:  A probability vector is a vector whose entries are nonnegative and sum to 1.  A stochastic matrix is a square matrix whose columns are probability vectors.  A Markov chain is a sequence satisfying for a stochastic matrix .  A steady-state vector for is a probability vector such that .         Determine a steady-state vector for the stochastic matrix:        Convergence and Regular Matrices   Regular Stochastic Matrix   A stochastic matrix is regular if some power has all entries strictly positive.      Convergence Theorem   If is a regular stochastic matrix, then has a unique steady-state vector , and the sequence converges to as .     In , the probability vectors form the line segment between and . A stochastic matrix maps probability vectors to probability vectors, and the iterates converge to the steady state.    Diagram showing convergence of 2D stochastic vectors to a steady state.  Illustration of several probability vectors in , under repeated multiplication by a regular stochastic matrix, converging to a steady-state vector.      Example 3: Car Rental Network    A rental company has three locations A, B, and C. Cars may be returned to any location. The table gives the weekly rental\/return pattern:    rented from    A B C    A .8 .1 .2    returned to B .2 .6 .3    C .0 .3 .5    There are 18 cars at each location today.     Construct the stochastic matrix . Is regular?      Determine what happens to the distribution of cars after a long time.       "
 },
 {
   "id": "obj-4-9-topics-goals",
@@ -2024,6 +2024,141 @@ var ptx_lunr_docs = [
   "number": "4.7",
   "title": "",
   "body": "  A rental company has three locations A, B, and C. Cars may be returned to any location. The table gives the weekly rental\/return pattern:    rented from    A B C    A .8 .1 .2    returned to B .2 .6 .3    C .0 .3 .5    There are 18 cars at each location today.     Construct the stochastic matrix . Is regular?      Determine what happens to the distribution of cars after a long time.    "
+},
+{
+  "id": "Section-5-9",
+  "level": "1",
+  "url": "Section-5-9.html",
+  "type": "Section",
+  "number": "",
+  "title": "5.1 Eigenvectors, Eigenvalues, and Eigenspaces",
+  "body": " 5.1 Eigenvectors, Eigenvalues, and Eigenspaces   5.1 Eigenvectors, Eigenvalues, and Eigenspaces   Overview   Topics   Eigenvectors, eigenvalues, and eigenspaces.  Eigenvalue theorems.     Goals   Verify that a given vector is an eigenvector of a matrix.  Verify that a given scalar is an eigenvalue of a matrix.  Construct the eigenspace for a given eigenvalue of a matrix.  Apply eigenvalue theorems (e.g., to characterize invertibility).      Eigenvector and Eigenvalue   Let . If there exists a nonzero vector and a scalar such that   then is an eigenvector of and is the corresponding eigenvalue .    Notes:   We consider only square matrices.  If , then:  for , vectors and point in the same direction;  for , they point in opposite directions.    Even when entries of and are real, can be complex (e.g., a rotation by counterclockwise in has no real eigenvalues).  Complex eigenvalues will be explored in Section 5.5.      Example 1    Which of the following are eigenvectors of   What are the corresponding eigenvalues?                            Example 2    Confirm that is an eigenvalue of        Eigenspaces   Eigenspace   Suppose . For an eigenvalue of , the set of all eigenvectors associated with together with the zero vector forms a subspace of called the -eigenspace of .     Note: The -eigenspace is precisely .     Construct a basis for the eigenspaces of        Eigenvalue Theorems   Eigenvalues of Triangular Matrices   The eigenvalues of a triangular (upper or lower) matrix are its diagonal entries.      Invertibility and the Eigenvalue 0   A matrix is invertible if and only if is not an eigenvalue of .      Stochastic Matrices   A (column-)stochastic matrix always has an eigenvalue equal to .      Distinct Eigenvalues Give Independent Eigenvectors   If are eigenvectors corresponding to distinct eigenvalues of , then is linearly independent.       Warning: Row Reduction and Eigenvalues   Warning   You cannot determine the eigenvalues of a matrix from its reduced row-echelon form. Row operations generally change eigenvalues.      Let which has eigenvalues and .     Find eigenvectors for each eigenvalue of .      Find the RREF of . What are it's eigenvalues?        One more Example    Let One of the eigenvalues of is . Find a basis for the -eigenspace of .      "
+},
+{
+  "id": "obj-5-1-topics-goals",
+  "level": "2",
+  "url": "Section-5-9.html#obj-5-1-topics-goals",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   Eigenvectors, eigenvalues, and eigenspaces.  Eigenvalue theorems.   "
+},
+{
+  "id": "p-5-1-overview-3",
+  "level": "2",
+  "url": "Section-5-9.html#p-5-1-overview-3",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals   Verify that a given vector is an eigenvector of a matrix.  Verify that a given scalar is an eigenvalue of a matrix.  Construct the eigenspace for a given eigenvalue of a matrix.  Apply eigenvalue theorems (e.g., to characterize invertibility).   "
+},
+{
+  "id": "def-eigenvalue-eigenvector",
+  "level": "2",
+  "url": "Section-5-9.html#def-eigenvalue-eigenvector",
+  "type": "Definition",
+  "number": "5.1",
+  "title": "Eigenvector and Eigenvalue.",
+  "body": " Eigenvector and Eigenvalue   Let . If there exists a nonzero vector and a scalar such that   then is an eigenvector of and is the corresponding eigenvalue .   "
+},
+{
+  "id": "ex-5-1-check-eigenvectors",
+  "level": "2",
+  "url": "Section-5-9.html#ex-5-1-check-eigenvectors",
+  "type": "Example",
+  "number": "5.2",
+  "title": "",
+  "body": "  Which of the following are eigenvectors of   What are the corresponding eigenvalues?                        "
+},
+{
+  "id": "ex-5-1-confirm-eigenvalue",
+  "level": "2",
+  "url": "Section-5-9.html#ex-5-1-confirm-eigenvalue",
+  "type": "Example",
+  "number": "5.3",
+  "title": "",
+  "body": "  Confirm that is an eigenvalue of    "
+},
+{
+  "id": "def-eigenspace",
+  "level": "2",
+  "url": "Section-5-9.html#def-eigenspace",
+  "type": "Definition",
+  "number": "5.4",
+  "title": "Eigenspace.",
+  "body": " Eigenspace   Suppose . For an eigenvalue of , the set of all eigenvectors associated with together with the zero vector forms a subspace of called the -eigenspace of .   "
+},
+{
+  "id": "ex-5-1-eigenspace-basis",
+  "level": "2",
+  "url": "Section-5-9.html#ex-5-1-eigenspace-basis",
+  "type": "Example",
+  "number": "5.5",
+  "title": "",
+  "body": "  Construct a basis for the eigenspaces of    "
+},
+{
+  "id": "thm-triangular-diagonal-are-eigs",
+  "level": "2",
+  "url": "Section-5-9.html#thm-triangular-diagonal-are-eigs",
+  "type": "Theorem",
+  "number": "5.6",
+  "title": "Eigenvalues of Triangular Matrices.",
+  "body": " Eigenvalues of Triangular Matrices   The eigenvalues of a triangular (upper or lower) matrix are its diagonal entries.   "
+},
+{
+  "id": "thm-invertible-iff-zero-not-eigenvalue",
+  "level": "2",
+  "url": "Section-5-9.html#thm-invertible-iff-zero-not-eigenvalue",
+  "type": "Theorem",
+  "number": "5.7",
+  "title": "Invertibility and the Eigenvalue 0.",
+  "body": " Invertibility and the Eigenvalue 0   A matrix is invertible if and only if is not an eigenvalue of .   "
+},
+{
+  "id": "thm-stochastic-has-one",
+  "level": "2",
+  "url": "Section-5-9.html#thm-stochastic-has-one",
+  "type": "Theorem",
+  "number": "5.8",
+  "title": "Stochastic Matrices.",
+  "body": " Stochastic Matrices   A (column-)stochastic matrix always has an eigenvalue equal to .   "
+},
+{
+  "id": "thm-distinct-eigenvalues-independent",
+  "level": "2",
+  "url": "Section-5-9.html#thm-distinct-eigenvalues-independent",
+  "type": "Theorem",
+  "number": "5.9",
+  "title": "Distinct Eigenvalues Give Independent Eigenvectors.",
+  "body": " Distinct Eigenvalues Give Independent Eigenvectors   If are eigenvectors corresponding to distinct eigenvalues of , then is linearly independent.   "
+},
+{
+  "id": "warn-row-reduction-eigs",
+  "level": "2",
+  "url": "Section-5-9.html#warn-row-reduction-eigs",
+  "type": "Note",
+  "number": "5.10",
+  "title": "Warning.",
+  "body": " Warning   You cannot determine the eigenvalues of a matrix from its reduced row-echelon form. Row operations generally change eigenvalues.   "
+},
+{
+  "id": "p-5-1-warning-3",
+  "level": "2",
+  "url": "Section-5-9.html#p-5-1-warning-3",
+  "type": "Example",
+  "number": "5.11",
+  "title": "",
+  "body": "  Let which has eigenvalues and .     Find eigenvectors for each eigenvalue of .      Find the RREF of . What are it's eigenvalues?    "
+},
+{
+  "id": "handout-section-5-1-eigenvalues-eigenvectors-8-2",
+  "level": "2",
+  "url": "Section-5-9.html#handout-section-5-1-eigenvalues-eigenvectors-8-2",
+  "type": "Example",
+  "number": "5.12",
+  "title": "",
+  "body": "  Let One of the eigenvalues of is . Find a basis for the -eigenspace of .   "
 }
 ]
 
