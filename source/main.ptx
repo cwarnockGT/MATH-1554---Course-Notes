@@ -54,7 +54,7 @@
     <xi:include href="./chapter-2.ptx" />
     <xi:include href="./chapter-3.ptx" />
     <xi:include href="./chapter-4.ptx" />
-    <!-- <xi:include href="./chapter-5.ptx" /> -->
+    <xi:include href="./chapter-5.ptx" />
   </book>
 
 </pretext>
