@@ -111,7 +111,7 @@
         <task>
           <statement>
             <p>
-              What if each library had started with <m>100</m> books instead of <m>1000</m> books. What would be the new <m>\vec x_0, \vec x_1, \vec x_2</m>?
+              What if each library had started with <m>100</m> books instead of <m>1000</m> books. What would be the new <m>\vec x_0, \vec x_1, \vec x_2</m>? Would <m>P</m> change?
             </p>
           </statement>
         </task>

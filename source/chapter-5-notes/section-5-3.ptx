@@ -1,0 +1,54 @@
+Put similar matrices stuff in here:
+
+<page xml:id="p-5-2-similar-matrices">
+    <title>Similar Matrices</title>
+
+    <definition xml:id="def-similar-matrices">
+      <title>Similarity</title>
+      <statement>
+        <p>
+          Two <m>n\times n</m> matrices <m>A</m> and <m>B</m> are <em>similar</em> if there exists an invertible matrix <m>P</m> such that
+        </p>
+        <me>
+          A=PBP^{-1}.
+        </me>
+      </statement>
+    </definition>
+
+    <p><nbsp/></p>
+
+    <theorem xml:id="thm-similar-same-charpoly">
+      <title>Characteristic Polynomial of Similar Matrices</title>
+      <statement>
+        <p>
+          If <m>A</m> and <m>B</m> are similar, then they have the same characteristic polynomial.
+        </p>
+      </statement>
+    </theorem>
+
+    <p><nbsp/></p>
+
+    <p>
+      Notes:
+    </p>
+    <ul>
+      <li>
+        Our textbook introduces similar matrices in Section 5.2; many exercises appear in Section 5.3.
+      </li>
+      <li>
+        Two matrices need not be similar to have the same eigenvalues. For example,
+        <me>
+          \begin{bmatrix}
+            0 \amp 1\\
+            0 \amp 0
+          \end{bmatrix}
+          \quad\text{and}\quad
+          \begin{bmatrix}
+            0 \amp 0\\
+            0 \amp 0
+          \end{bmatrix}
+        </me>
+        share eigenvalues but are not similar (nilpotent vs. zero).
+      </li>
+    </ul>
+  </page>

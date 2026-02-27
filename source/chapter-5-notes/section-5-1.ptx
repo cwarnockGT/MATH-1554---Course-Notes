@@ -45,11 +45,12 @@
     <ul>
       <li>We consider only square matrices.</li>
       <li>
-        If <m>\lambda\in\mathbb{R}</m>, then:
+        <p>If <m>\lambda\in\mathbb{R}</m>, then:
         <ul>
           <li>for <m>\lambda&gt;0</m>, vectors <m>A\vec v</m> and <m>\vec v</m> point in the same direction;</li>
           <li>for <m>\lambda&lt;0</m>, they point in opposite directions.</li>
         </ul>
+        </p>
       </li>
       <li>
         Even when entries of <m>A</m> and <m>\vec v</m> are real, <m>\lambda</m> can be complex (e.g., a rotation by <m>90^\circ</m> counterclockwise in <m>\mathbb{R}^2</m> has no real eigenvalues).
