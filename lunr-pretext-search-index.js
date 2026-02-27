@@ -1942,7 +1942,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "4.9\/5.9 Markov Chains",
-  "body": " 4.9\/5.9 Markov Chains   4.9\/5.9 Markov Chains   Overview   Topics   Markov chains  Steady-state vectors  Convergence     Goals   Construct stochastic matrices and probability vectors.  Model and solve real-world problems using Markov chains (e.g., compute steady-state vectors).  Determine whether a stochastic matrix is regular.       A small town has two libraries, and .    After 1 month, among the books checked out from :   80% return to  20% return to     After 1 month, among the books checked out from :   30% return to  70% return to       Two-state Markov chain diagram with transitions between libraries with probabilities 0.8, 0.2, 0.3, and 0.7 representing book returns.   If both libraries have 1000 books today, how many books does each library have after 1 month?      Example 1 continued    Let and be the same libraries from .     Let be the vector which gives how many books are in libraries and after months. What are and ?      Find the matrix so that       How many books does each library contain after months; that is, what is ?      How many books does each library contain after months?      What if each library had started with books instead of books. What would be the new ?        Markov Chains: Definitions    A few important definitions:  A probability vector is a vector whose entries are nonnegative and sum to 1.  A stochastic matrix is a square matrix whose columns are probability vectors.  A Markov chain is a sequence satisfying for a stochastic matrix .  A steady-state vector for is a probability vector such that .         Determine a steady-state vector for the stochastic matrix:        Convergence and Regular Matrices   Regular Stochastic Matrix   A stochastic matrix is regular if some power has all entries strictly positive.      Convergence Theorem   If is a regular stochastic matrix, then has a unique steady-state vector , and the sequence converges to as .     In , the probability vectors form the line segment between and . A stochastic matrix maps probability vectors to probability vectors, and the iterates converge to the steady state.    Diagram showing convergence of 2D stochastic vectors to a steady state.  Illustration of several probability vectors in , under repeated multiplication by a regular stochastic matrix, converging to a steady-state vector.      Example 3: Car Rental Network    A rental company has three locations A, B, and C. Cars may be returned to any location. The table gives the weekly rental\/return pattern:    rented from    A B C    A .8 .1 .2    returned to B .2 .6 .3    C .0 .3 .5    There are 18 cars at each location today.     Construct the stochastic matrix . Is regular?      Determine what happens to the distribution of cars after a long time.       "
+  "body": " 4.9\/5.9 Markov Chains   4.9\/5.9 Markov Chains   Overview   Topics   Markov chains  Steady-state vectors  Convergence     Goals   Construct stochastic matrices and probability vectors.  Model and solve real-world problems using Markov chains (e.g., compute steady-state vectors).  Determine whether a stochastic matrix is regular.       A small town has two libraries, and .    After 1 month, among the books checked out from :   80% return to  20% return to     After 1 month, among the books checked out from :   30% return to  70% return to       Two-state Markov chain diagram with transitions between libraries with probabilities 0.8, 0.2, 0.3, and 0.7 representing book returns.   If both libraries start with 1000 books today, how many books does each library have after 1 month?    After 1 month, Library will receive of the books that were in Library and of the books that were in Library . Therefore, we have that the number of books in Library after 1 month is: . After 1 month, Library will receive of the books that were in Library and of the books that were in Library . Therefore, we have that the number of books in Library after 1 month is: .      Example 1 continued    Let and be the same libraries from .     Let be the vector which gives how many books are in libraries and after months. What are and ?    We have and .      Find the matrix so that     Let be the matrix with the distribution probabilities from Library in column 1 and the distribution probabilities from Library in column 2; that is, let . Then we have that .      How many books does each library contain after months; that is, what is ?    Since multiplication by models the change from to , it follows that multiplication by should model the change from to . Therfore, we have that . Thus, after 2 months, Library will contain 1150 books and Library will contain 850 books.      How many books does each library contain after months?    Note that an alternative way to calculate is . If we wanted to calculate , we could do something similar, like . It follows that . In most examples, will be difficult to calculate for large . Usually, we are more interested in what happens in the long term, so we are interested in finding .      What if each library had started with books instead of books. Would change? What would be the new ?    Note that models the distribution of books and has nothing to do with the specific number of books. Therefore, would remain the same, regardless of how many books start off in Library and Library .  Since is one-tenth that of , the only change for would be scaling by a factor of ; that is, the new would be . Note that for either version of , the proportion of books in each library stays the same even if the actual number changes. Therefore, in general, it will be okay to simply determine how acts on vectors which keep track of proportion of books between the libraries instead of specific numbers.        Markov Chains: Definitions    A few important definitions:  A probability vector is a vector whose entries are nonnegative and sum to 1.  A stochastic matrix is a square matrix whose columns are probability vectors.  A Markov chain is a sequence satisfying for a stochastic matrix .  A steady-state vector for is a probability vector such that .       Suppose the Markov chain converges to the vector . Then we have that . Note that . Therefore, if the Markov chain converges to some vector , we have , so is a steady-state vector for .  As you might imagine, calculating the limit might be quite difficult. However, if we know that the Markov chain converges and we find that there is only a single steady-state vector for , then that unique steady-state vector must be the limit! This is how we will find the limit of a Markov chain.  One thing to note is that in the event where there is a unique steady-state vector (which will be most examples in MATH 1554), the choice of starting probabiility vector will NOT change the limit vector .      Determine a steady-state vector for the stochastic matrix:     We want to find a probability vector so that . We can rearrage this equation by subtracting from both sides and factoring to obtain the following equation: , where we rewrote as to make clear what is left over after factoring out . It follows that should be a probability vector that lives in . Note that . Since has only one free variable, we know that . Therefore, is spanned by a single nonzero vector. By inspecting the REF of given above, we see that is a nonzero vector in . Therefore, we have that . Note that is not a probability vector since its entries add to 5. We can modify by scaling it by a factor of which will result in a probability vector living in . Since this is the only way to create a probability vector in , we see that is the unique steady-state vector for . We can check that is a steady-state vector. Note that .  What does the steady-state vector tells us about the libraries in ? It tells us the proportional distribution of the books between the two libraries. Since the two libraries had a total of 2000 books between them, we see that the limit vector of the Markov chain is . Thus, after many months, we should expect Library to have 1200 books and Library to have 800 books.       Convergence and Regular Matrices   Regular Stochastic Matrix   A stochastic matrix is regular if some power has all entries strictly positive.      Convergence Theorem   If is a regular stochastic matrix, then has a unique steady-state vector , and the sequence converges to as .     In , the probability vectors form the line segment between and . A stochastic matrix maps probability vectors to probability vectors, and the iterates converge to the steady state.    Diagram showing convergence of 2D stochastic vectors to a steady state.  Illustration of several probability vectors in , under repeated multiplication by a regular stochastic matrix, converging to a steady-state vector.      Example 3: Car Rental Network    A rental company has three locations A, B, and C. Cars may be returned to any location. The table gives the weekly rental\/return pattern:    Three-state Markov chain diagram with transitions between rental companies. The probabilities are as follows: A to A is 0.8, A to B is 0.2, A to C is 0, B to A is 0.1, B to B is 0.6, B to C is 0.3, C to A is 0.2, C to B is 0.3, C to C is 0.5.  There are 18 cars at each location today.     Construct the stochastic matrix . Is regular?    We can build the following table describing how the cars move between the three rental companies.    rented from    A B C    A .8 .1 .2    returned to B .2 .6 .3    C .0 .3 .5    It follows that .      Determine what happens to the distribution of cars after a long time.    Again, we need to find a probability vector in Note that     Again, we have that only has a single free variable, so which means that will have a unique steady-state vector. We start by finding some nonzero vector in . Since is a free variable, we set . Then the second row gives . The first row gives . Letting , we see that . Since the entries of add to 27, we have that is the unique steady-state vector of . It follows that the limit vector is an appropriate multiple of . Since we started with a total of cars, we have that . Therefore, after a long time, Location A will have 22 cars, Location B will have 20 cars, and Location C will have 12 cars.       "
 },
 {
   "id": "obj-4-9-topics-goals",
@@ -1969,7 +1969,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "4.1",
   "title": "",
-  "body": "  A small town has two libraries, and .    After 1 month, among the books checked out from :   80% return to  20% return to     After 1 month, among the books checked out from :   30% return to  70% return to       Two-state Markov chain diagram with transitions between libraries with probabilities 0.8, 0.2, 0.3, and 0.7 representing book returns.   If both libraries have 1000 books today, how many books does each library have after 1 month?   "
+  "body": "  A small town has two libraries, and .    After 1 month, among the books checked out from :   80% return to  20% return to     After 1 month, among the books checked out from :   30% return to  70% return to       Two-state Markov chain diagram with transitions between libraries with probabilities 0.8, 0.2, 0.3, and 0.7 representing book returns.   If both libraries start with 1000 books today, how many books does each library have after 1 month?    After 1 month, Library will receive of the books that were in Library and of the books that were in Library . Therefore, we have that the number of books in Library after 1 month is: . After 1 month, Library will receive of the books that were in Library and of the books that were in Library . Therefore, we have that the number of books in Library after 1 month is: .   "
 },
 {
   "id": "handout-section-4-9-markov-3-2",
@@ -1978,7 +1978,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "4.2",
   "title": "",
-  "body": "  Let and be the same libraries from .     Let be the vector which gives how many books are in libraries and after months. What are and ?      Find the matrix so that       How many books does each library contain after months; that is, what is ?      How many books does each library contain after months?      What if each library had started with books instead of books. What would be the new ?    "
+  "body": "  Let and be the same libraries from .     Let be the vector which gives how many books are in libraries and after months. What are and ?    We have and .      Find the matrix so that     Let be the matrix with the distribution probabilities from Library in column 1 and the distribution probabilities from Library in column 2; that is, let . Then we have that .      How many books does each library contain after months; that is, what is ?    Since multiplication by models the change from to , it follows that multiplication by should model the change from to . Therfore, we have that . Thus, after 2 months, Library will contain 1150 books and Library will contain 850 books.      How many books does each library contain after months?    Note that an alternative way to calculate is . If we wanted to calculate , we could do something similar, like . It follows that . In most examples, will be difficult to calculate for large . Usually, we are more interested in what happens in the long term, so we are interested in finding .      What if each library had started with books instead of books. Would change? What would be the new ?    Note that models the distribution of books and has nothing to do with the specific number of books. Therefore, would remain the same, regardless of how many books start off in Library and Library .  Since is one-tenth that of , the only change for would be scaling by a factor of ; that is, the new would be . Note that for either version of , the proportion of books in each library stays the same even if the actual number changes. Therefore, in general, it will be okay to simply determine how acts on vectors which keep track of proportion of books between the libraries instead of specific numbers.    "
 },
 {
   "id": "p-4-9-markov-definitions-2",
@@ -1996,7 +1996,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "4.4",
   "title": "",
-  "body": "  Determine a steady-state vector for the stochastic matrix:    "
+  "body": "  Determine a steady-state vector for the stochastic matrix:     We want to find a probability vector so that . We can rearrage this equation by subtracting from both sides and factoring to obtain the following equation: , where we rewrote as to make clear what is left over after factoring out . It follows that should be a probability vector that lives in . Note that . Since has only one free variable, we know that . Therefore, is spanned by a single nonzero vector. By inspecting the REF of given above, we see that is a nonzero vector in . Therefore, we have that . Note that is not a probability vector since its entries add to 5. We can modify by scaling it by a factor of which will result in a probability vector living in . Since this is the only way to create a probability vector in , we see that is the unique steady-state vector for . We can check that is a steady-state vector. Note that .  What does the steady-state vector tells us about the libraries in ? It tells us the proportional distribution of the books between the two libraries. Since the two libraries had a total of 2000 books between them, we see that the limit vector of the Markov chain is . Thus, after many months, we should expect Library to have 1200 books and Library to have 800 books.   "
 },
 {
   "id": "def-regular-stochastic",
@@ -2023,21 +2023,21 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "4.7",
   "title": "",
-  "body": "  A rental company has three locations A, B, and C. Cars may be returned to any location. The table gives the weekly rental\/return pattern:    rented from    A B C    A .8 .1 .2    returned to B .2 .6 .3    C .0 .3 .5    There are 18 cars at each location today.     Construct the stochastic matrix . Is regular?      Determine what happens to the distribution of cars after a long time.    "
+  "body": "  A rental company has three locations A, B, and C. Cars may be returned to any location. The table gives the weekly rental\/return pattern:    Three-state Markov chain diagram with transitions between rental companies. The probabilities are as follows: A to A is 0.8, A to B is 0.2, A to C is 0, B to A is 0.1, B to B is 0.6, B to C is 0.3, C to A is 0.2, C to B is 0.3, C to C is 0.5.  There are 18 cars at each location today.     Construct the stochastic matrix . Is regular?    We can build the following table describing how the cars move between the three rental companies.    rented from    A B C    A .8 .1 .2    returned to B .2 .6 .3    C .0 .3 .5    It follows that .      Determine what happens to the distribution of cars after a long time.    Again, we need to find a probability vector in Note that     Again, we have that only has a single free variable, so which means that will have a unique steady-state vector. We start by finding some nonzero vector in . Since is a free variable, we set . Then the second row gives . The first row gives . Letting , we see that . Since the entries of add to 27, we have that is the unique steady-state vector of . It follows that the limit vector is an appropriate multiple of . Since we started with a total of cars, we have that . Therefore, after a long time, Location A will have 22 cars, Location B will have 20 cars, and Location C will have 12 cars.    "
 },
 {
-  "id": "Section-5-9",
+  "id": "Section-5-1",
   "level": "1",
-  "url": "Section-5-9.html",
+  "url": "Section-5-1.html",
   "type": "Section",
   "number": "",
   "title": "5.1 Eigenvectors, Eigenvalues, and Eigenspaces",
-  "body": " 5.1 Eigenvectors, Eigenvalues, and Eigenspaces   5.1 Eigenvectors, Eigenvalues, and Eigenspaces   Overview   Topics   Eigenvectors, eigenvalues, and eigenspaces.  Eigenvalue theorems.     Goals   Verify that a given vector is an eigenvector of a matrix.  Verify that a given scalar is an eigenvalue of a matrix.  Construct the eigenspace for a given eigenvalue of a matrix.  Apply eigenvalue theorems (e.g., to characterize invertibility).      Eigenvector and Eigenvalue   Let . If there exists a nonzero vector and a scalar such that   then is an eigenvector of and is the corresponding eigenvalue .    Notes:   We consider only square matrices.  If , then:  for , vectors and point in the same direction;  for , they point in opposite directions.    Even when entries of and are real, can be complex (e.g., a rotation by counterclockwise in has no real eigenvalues).  Complex eigenvalues will be explored in Section 5.5.      Example 1    Which of the following are eigenvectors of   What are the corresponding eigenvalues?                            Example 2    Confirm that is an eigenvalue of        Eigenspaces   Eigenspace   Suppose . For an eigenvalue of , the set of all eigenvectors associated with together with the zero vector forms a subspace of called the -eigenspace of .     Note: The -eigenspace is precisely .     Construct a basis for the eigenspaces of        Eigenvalue Theorems   Eigenvalues of Triangular Matrices   The eigenvalues of a triangular (upper or lower) matrix are its diagonal entries.      Invertibility and the Eigenvalue 0   A matrix is invertible if and only if is not an eigenvalue of .      Stochastic Matrices   A (column-)stochastic matrix always has an eigenvalue equal to .      Distinct Eigenvalues Give Independent Eigenvectors   If are eigenvectors corresponding to distinct eigenvalues of , then is linearly independent.       Warning: Row Reduction and Eigenvalues   Warning   You cannot determine the eigenvalues of a matrix from its reduced row-echelon form. Row operations generally change eigenvalues.      Let which has eigenvalues and .     Find eigenvectors for each eigenvalue of .      Find the RREF of . What are it's eigenvalues?        One more Example    Let One of the eigenvalues of is . Find a basis for the -eigenspace of .      "
+  "body": " 5.1 Eigenvectors, Eigenvalues, and Eigenspaces   5.1 Eigenvectors, Eigenvalues, and Eigenspaces   Overview   Topics   Eigenvectors, eigenvalues, and eigenspaces.  Eigenvalue theorems.     Goals   Verify that a given vector is an eigenvector of a matrix.  Verify that a given scalar is an eigenvalue of a matrix.  Construct the eigenspace for a given eigenvalue of a matrix.  Apply eigenvalue theorems (e.g., to characterize invertibility).      Eigenvector and Eigenvalue   Let . If there exists a nonzero vector and a scalar such that   then is an eigenvector of and is the corresponding eigenvalue .    Notes:   We consider only square matrices.   If , then:  for , vectors and point in the same direction;  for , they point in opposite directions.     Even when entries of and are real, can be complex (e.g., a rotation by counterclockwise in has no real eigenvalues).  Complex eigenvalues will be explored in Section 5.5.      Example 1    Which of the following are eigenvectors of   What are the corresponding eigenvalues?                            Example 2    Confirm that is an eigenvalue of        Eigenspaces   Eigenspace   Suppose . For an eigenvalue of , the set of all eigenvectors associated with together with the zero vector forms a subspace of called the -eigenspace of .     Note: The -eigenspace is precisely .     Construct a basis for the eigenspaces of        Eigenvalue Theorems   Eigenvalues of Triangular Matrices   The eigenvalues of a triangular (upper or lower) matrix are its diagonal entries.      Invertibility and the Eigenvalue 0   A matrix is invertible if and only if is not an eigenvalue of .      Stochastic Matrices   A (column-)stochastic matrix always has an eigenvalue equal to .      Distinct Eigenvalues Give Independent Eigenvectors   If are eigenvectors corresponding to distinct eigenvalues of , then is linearly independent.       Warning: Row Reduction and Eigenvalues   Warning   You cannot determine the eigenvalues of a matrix from its reduced row-echelon form. Row operations generally change eigenvalues.      Let which has eigenvalues and .     Find eigenvectors for each eigenvalue of .      Find the RREF of . What are it's eigenvalues?        One more Example    Let One of the eigenvalues of is . Find a basis for the -eigenspace of .      "
 },
 {
   "id": "obj-5-1-topics-goals",
   "level": "2",
-  "url": "Section-5-9.html#obj-5-1-topics-goals",
+  "url": "Section-5-1.html#obj-5-1-topics-goals",
   "type": "Objectives",
   "number": "",
   "title": "Topics",
@@ -2046,7 +2046,7 @@ var ptx_lunr_docs = [
 {
   "id": "p-5-1-overview-3",
   "level": "2",
-  "url": "Section-5-9.html#p-5-1-overview-3",
+  "url": "Section-5-1.html#p-5-1-overview-3",
   "type": "Objectives",
   "number": "",
   "title": "Goals",
@@ -2055,7 +2055,7 @@ var ptx_lunr_docs = [
 {
   "id": "def-eigenvalue-eigenvector",
   "level": "2",
-  "url": "Section-5-9.html#def-eigenvalue-eigenvector",
+  "url": "Section-5-1.html#def-eigenvalue-eigenvector",
   "type": "Definition",
   "number": "5.1",
   "title": "Eigenvector and Eigenvalue.",
@@ -2064,7 +2064,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex-5-1-check-eigenvectors",
   "level": "2",
-  "url": "Section-5-9.html#ex-5-1-check-eigenvectors",
+  "url": "Section-5-1.html#ex-5-1-check-eigenvectors",
   "type": "Example",
   "number": "5.2",
   "title": "",
@@ -2073,7 +2073,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex-5-1-confirm-eigenvalue",
   "level": "2",
-  "url": "Section-5-9.html#ex-5-1-confirm-eigenvalue",
+  "url": "Section-5-1.html#ex-5-1-confirm-eigenvalue",
   "type": "Example",
   "number": "5.3",
   "title": "",
@@ -2082,7 +2082,7 @@ var ptx_lunr_docs = [
 {
   "id": "def-eigenspace",
   "level": "2",
-  "url": "Section-5-9.html#def-eigenspace",
+  "url": "Section-5-1.html#def-eigenspace",
   "type": "Definition",
   "number": "5.4",
   "title": "Eigenspace.",
@@ -2091,7 +2091,7 @@ var ptx_lunr_docs = [
 {
   "id": "ex-5-1-eigenspace-basis",
   "level": "2",
-  "url": "Section-5-9.html#ex-5-1-eigenspace-basis",
+  "url": "Section-5-1.html#ex-5-1-eigenspace-basis",
   "type": "Example",
   "number": "5.5",
   "title": "",
@@ -2100,7 +2100,7 @@ var ptx_lunr_docs = [
 {
   "id": "thm-triangular-diagonal-are-eigs",
   "level": "2",
-  "url": "Section-5-9.html#thm-triangular-diagonal-are-eigs",
+  "url": "Section-5-1.html#thm-triangular-diagonal-are-eigs",
   "type": "Theorem",
   "number": "5.6",
   "title": "Eigenvalues of Triangular Matrices.",
@@ -2109,7 +2109,7 @@ var ptx_lunr_docs = [
 {
   "id": "thm-invertible-iff-zero-not-eigenvalue",
   "level": "2",
-  "url": "Section-5-9.html#thm-invertible-iff-zero-not-eigenvalue",
+  "url": "Section-5-1.html#thm-invertible-iff-zero-not-eigenvalue",
   "type": "Theorem",
   "number": "5.7",
   "title": "Invertibility and the Eigenvalue 0.",
@@ -2118,7 +2118,7 @@ var ptx_lunr_docs = [
 {
   "id": "thm-stochastic-has-one",
   "level": "2",
-  "url": "Section-5-9.html#thm-stochastic-has-one",
+  "url": "Section-5-1.html#thm-stochastic-has-one",
   "type": "Theorem",
   "number": "5.8",
   "title": "Stochastic Matrices.",
@@ -2127,7 +2127,7 @@ var ptx_lunr_docs = [
 {
   "id": "thm-distinct-eigenvalues-independent",
   "level": "2",
-  "url": "Section-5-9.html#thm-distinct-eigenvalues-independent",
+  "url": "Section-5-1.html#thm-distinct-eigenvalues-independent",
   "type": "Theorem",
   "number": "5.9",
   "title": "Distinct Eigenvalues Give Independent Eigenvectors.",
@@ -2136,7 +2136,7 @@ var ptx_lunr_docs = [
 {
   "id": "warn-row-reduction-eigs",
   "level": "2",
-  "url": "Section-5-9.html#warn-row-reduction-eigs",
+  "url": "Section-5-1.html#warn-row-reduction-eigs",
   "type": "Note",
   "number": "5.10",
   "title": "Warning.",
@@ -2145,7 +2145,7 @@ var ptx_lunr_docs = [
 {
   "id": "p-5-1-warning-3",
   "level": "2",
-  "url": "Section-5-9.html#p-5-1-warning-3",
+  "url": "Section-5-1.html#p-5-1-warning-3",
   "type": "Example",
   "number": "5.11",
   "title": "",
@@ -2154,11 +2154,137 @@ var ptx_lunr_docs = [
 {
   "id": "handout-section-5-1-eigenvalues-eigenvectors-8-2",
   "level": "2",
-  "url": "Section-5-9.html#handout-section-5-1-eigenvalues-eigenvectors-8-2",
+  "url": "Section-5-1.html#handout-section-5-1-eigenvalues-eigenvectors-8-2",
   "type": "Example",
   "number": "5.12",
   "title": "",
   "body": "  Let One of the eigenvalues of is . Find a basis for the -eigenspace of .   "
+},
+{
+  "id": "Section-5-2",
+  "level": "1",
+  "url": "Section-5-2.html",
+  "type": "Section",
+  "number": "",
+  "title": "5.2 The Characteristic Equation",
+  "body": " 5.2 The Characteristic Equation   5.2 The Characteristic Equation   Overview   Topics   The characteristic polynomial of a matrix  Algebraic and geometric multiplicity of eigenvalues  Similar matrices     Goals   Construct the characteristic polynomial of a matrix and use it to identify eigenvalues and their multiplicities.  Characterize the long-term behaviour of dynamical systems using eigenvalue decompositions.     Recall:   is an eigenvalue of if and only if is not invertible .  Therefore, to calculate the eigenvalues of , we can need to find all so that    The quantity is the characteristic polynomial of .  The equation is the characterisitc equation of .  The roots of the characteristic polynomial are the eigenvalues of .      Characteristic Polynomial of a 2×2 Matrix    Find the characteristic polynomial of   Then determine the eigenvalues of .       Let   Express the characteristic equation of in terms of . What is the equation when is singular?       Algebraic Multiplicity   Algebraic Multiplicity   The algebraic multiplicity of an eigenvalue is its multiplicity as a root of the characteristic polynomial.      Compute the algebraic multiplicities of the eigenvalues for        Geometric Multiplicity   Geometric Multiplicity   The geometric multiplicity of an eigenvalue is the dimension of .      Geometric multiplicity is always at least 1. It can be smaller than algebraic multiplicity.  Basic example: has only eigenvalue . Its algebraic multiplicity is 2, but its geometric multiplicity is 1.      Compute the geometric multiplicities of the eigenvalues for          For each part below, give an example of a matrix withe the stated properties, if possible.     The only eigenvalue is , but the geometric multiplicity of is one.      The only eigenvalues are and . The algebraic multiplicity of is three and the geometric multiplicity of is three.      Exactly three eigenvalues, all with geometric multiplicity equal to 1.        Example: Eigenvalues and a 2-State Markov Chain    Consider the Markov Chain given by     Two-state Markov chain with symmetric transition probabilities.  Nodes A and B with transitions 0.6 for staying and 0.4 for switching; matrix .   In the parts below, we will use eigenvalues to describe the long-term behavior of the system.     Find the eigenvalues of and corresponding eigenvectors.      Use the eigenvalues and eigenvectors to determine what tends to as .        Additional Examples (if time permits)   True or False: A row replacement operation on a matrix does not change its eigenvalues.      For what values of does the matrix have one real eigenvalue with algebraic multiplicity 2?       "
+},
+{
+  "id": "obj-5-2-topics-goals",
+  "level": "2",
+  "url": "Section-5-2.html#obj-5-2-topics-goals",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   The characteristic polynomial of a matrix  Algebraic and geometric multiplicity of eigenvalues  Similar matrices   "
+},
+{
+  "id": "p-5-2-overview-3",
+  "level": "2",
+  "url": "Section-5-2.html#p-5-2-overview-3",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals   Construct the characteristic polynomial of a matrix and use it to identify eigenvalues and their multiplicities.  Characterize the long-term behaviour of dynamical systems using eigenvalue decompositions.   "
+},
+{
+  "id": "def-characteristic",
+  "level": "2",
+  "url": "Section-5-2.html#def-characteristic",
+  "type": "Definition",
+  "number": "5.13",
+  "title": "",
+  "body": " The quantity is the characteristic polynomial of .  The equation is the characterisitc equation of .  The roots of the characteristic polynomial are the eigenvalues of .  "
+},
+{
+  "id": "ex-5-2-charpoly-specific",
+  "level": "2",
+  "url": "Section-5-2.html#ex-5-2-charpoly-specific",
+  "type": "Example",
+  "number": "5.14",
+  "title": "",
+  "body": "  Find the characteristic polynomial of   Then determine the eigenvalues of .   "
+},
+{
+  "id": "ex-5-2-charpoly-2x2-general",
+  "level": "2",
+  "url": "Section-5-2.html#ex-5-2-charpoly-2x2-general",
+  "type": "Example",
+  "number": "5.15",
+  "title": "",
+  "body": "  Let   Express the characteristic equation of in terms of . What is the equation when is singular?   "
+},
+{
+  "id": "def-algebraic-multiplicity",
+  "level": "2",
+  "url": "Section-5-2.html#def-algebraic-multiplicity",
+  "type": "Definition",
+  "number": "5.16",
+  "title": "Algebraic Multiplicity.",
+  "body": " Algebraic Multiplicity   The algebraic multiplicity of an eigenvalue is its multiplicity as a root of the characteristic polynomial.   "
+},
+{
+  "id": "ex-5-2-alg-mult-compute",
+  "level": "2",
+  "url": "Section-5-2.html#ex-5-2-alg-mult-compute",
+  "type": "Example",
+  "number": "5.17",
+  "title": "",
+  "body": "  Compute the algebraic multiplicities of the eigenvalues for    "
+},
+{
+  "id": "def-geometric-multiplicity",
+  "level": "2",
+  "url": "Section-5-2.html#def-geometric-multiplicity",
+  "type": "Definition",
+  "number": "5.18",
+  "title": "Geometric Multiplicity.",
+  "body": " Geometric Multiplicity   The geometric multiplicity of an eigenvalue is the dimension of .   "
+},
+{
+  "id": "ex-5-2-geom-mult-compute",
+  "level": "2",
+  "url": "Section-5-2.html#ex-5-2-geom-mult-compute",
+  "type": "Example",
+  "number": "5.19",
+  "title": "",
+  "body": "  Compute the geometric multiplicities of the eigenvalues for    "
+},
+{
+  "id": "ex-5-2-only-zero-eig-gm1",
+  "level": "2",
+  "url": "Section-5-2.html#ex-5-2-only-zero-eig-gm1",
+  "type": "Example",
+  "number": "5.20",
+  "title": "",
+  "body": "  For each part below, give an example of a matrix withe the stated properties, if possible.     The only eigenvalue is , but the geometric multiplicity of is one.      The only eigenvalues are and . The algebraic multiplicity of is three and the geometric multiplicity of is three.      Exactly three eigenvalues, all with geometric multiplicity equal to 1.    "
+},
+{
+  "id": "ex-5-2-markov-eigs",
+  "level": "2",
+  "url": "Section-5-2.html#ex-5-2-markov-eigs",
+  "type": "Example",
+  "number": "5.21",
+  "title": "",
+  "body": "  Consider the Markov Chain given by     Two-state Markov chain with symmetric transition probabilities.  Nodes A and B with transitions 0.6 for staying and 0.4 for switching; matrix .   In the parts below, we will use eigenvalues to describe the long-term behavior of the system.     Find the eigenvalues of and corresponding eigenvectors.      Use the eigenvalues and eigenvectors to determine what tends to as .    "
+},
+{
+  "id": "ex-5-2-true-false",
+  "level": "2",
+  "url": "Section-5-2.html#ex-5-2-true-false",
+  "type": "Example",
+  "number": "5.22",
+  "title": "",
+  "body": " True or False: A row replacement operation on a matrix does not change its eigenvalues.  "
+},
+{
+  "id": "ex-5-2-parameterized-eig",
+  "level": "2",
+  "url": "Section-5-2.html#ex-5-2-parameterized-eig",
+  "type": "Example",
+  "number": "5.23",
+  "title": "",
+  "body": "  For what values of does the matrix have one real eigenvalue with algebraic multiplicity 2?    "
 }
 ]
 
