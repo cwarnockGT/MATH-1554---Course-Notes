@@ -133,7 +133,7 @@
 
     <p workspace="0.3in">
       <ol>
-        <li>Geometric multiplicity is always at least 1. It can be smaller than algebraic multiplicity.</li>
+        <li>The geometric multiplicity of an eigenvalue <m>\lambda</m> is always between 1 and the algebraic multiplicity of <m>\lambda</m>. It can <em>never</em> be 0 nor be greater than the algebraic mutliplicy.</li>
         <li>
           Basic example:
           <me>

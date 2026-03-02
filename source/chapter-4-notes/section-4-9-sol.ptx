@@ -171,7 +171,7 @@
         A <term>stochastic matrix</term> is a square matrix whose columns are probability vectors.
       </li>
       <li>
-        A <term>Markov chain</term> is a sequence <m>\vec x_k</m> satisfying
+        A <term>Markov chain</term> is a sequence of probability vectors <m>\vec x_k</m> satisfying
         <m>\vec x_{k+1}=P\vec x_k</m> for a stochastic matrix <m>P</m>.
       </li>
       <li>
@@ -370,7 +370,7 @@
                   </row>
                 </tabular>
               </table>
-              It follows that <me>P = \begin{bmatrix} 0.8 \amp 0.1 \amp 0.2 \\ 0.2 \amp 0.6 \amp 0.3 \\ 0 \amp 0.3 \amp 0.5 \end{bmatrix}</me>.
+              It follows that <me>P = \begin{bmatrix} 0.8 \amp 0.1 \amp 0.2 \\ 0.2 \amp 0.6 \amp 0.3 \\ 0 \amp 0.3 \amp 0.5 \end{bmatrix}</me>. Since <m>P</m> has at least one entry which is 0, it is not clear whether <m>P</m> is regular or not. By <xref ref="def-regular-stochastic"/>, in order to show <m>P</m> is regular, we need to show that some power of <m>P</m> has no entries which are 0. Note that <me>P^2 = \begin{bmatrix} 0.8 \amp 0.1 \amp 0.2 \\ 0.2 \amp 0.6 \amp 0.3 \\ 0 \amp 0.3 \amp 0.5 \end{bmatrix}\begin{bmatrix} 0.8 \amp 0.1 \amp 0.2 \\ 0.2 \amp 0.6 \amp 0.3 \\ 0 \amp 0.3 \amp 0.5 \end{bmatrix} = \begin{bmatrix} 0.66 \amp 0.2 \amp 0.29 \\ 0.28 \amp 0.47 \amp 0.37 \\ 0.06 \amp 0.33 \amp 0.34 \end{bmatrix}. </me> Since every entry of <m>P^2</m> is positive, we have that <m>P</m> is regular. Therefore, <xref ref="thm-regular-converges"/> guarantees that <m>P</m> has a unique steady-state vector.
             </p>
           </solution>
           </task>
