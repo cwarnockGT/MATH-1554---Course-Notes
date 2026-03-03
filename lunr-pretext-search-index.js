@@ -2032,7 +2032,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "5.1 Eigenvectors, Eigenvalues, and Eigenspaces",
-  "body": " 5.1 Eigenvectors, Eigenvalues, and Eigenspaces   5.1 Eigenvectors, Eigenvalues, and Eigenspaces   Overview   Topics   Eigenvectors, eigenvalues, and eigenspaces.  Eigenvalue theorems.     Goals   Verify that a given vector is an eigenvector of a matrix.  Verify that a given scalar is an eigenvalue of a matrix.  Construct the eigenspace for a given eigenvalue of a matrix.  Apply eigenvalue theorems (e.g., to characterize invertibility).      Eigenvector and Eigenvalue   Let . If there exists a nonzero vector and a scalar such that   then is an eigenvector of and is the corresponding eigenvalue .    Notes:   We consider only square matrices.   If , then:  for , vectors and point in the same direction;  for , they point in opposite directions.     Even when entries of and are real, can be complex (e.g., a rotation by counterclockwise in has no real eigenvalues).  Complex eigenvalues will be explored in Section 5.5.      Example 1    Which of the following are eigenvectors of   What are the corresponding eigenvalues?          Note that . Since , we have that is an eigenvector of corresponding to an eigenvalue of .           Note that . Since , we have that is an eigenvector of corresponding to an eigenvalue of . Note that it is okay if the result of is . That does not break the definition of eigenvector. The problems is when .           Since , forbids from being an eigenvector. The reason why is that for every single , thus making every single real number an eigenvalue of no matter the square matrix . We don't want this to happen since we want eigenvalues to be rare. That is why we forbid from being considered an eigenvector.        Example 2    Confirm that is an eigenvalue of     To show that is an eigenvalue of , we need to find a nonzero vector so that . Subtracting from both sides and factoring yields . Therefore, every which satisfies must live in .  Note: This should look very similar to the process for finding steady-state vectors for stochastic matrices. See . This is because steady-state vectors of a stochastic matrix are actually just probability eigenvectors of which correspond to an eigenvalue of .  Note that . By observation, we see that is a nonzero vector in Since only had a single free varible, we know that is 1-dimensional. Thus, we have that the eigenvectors of which correspond to an eigenvalue of are the nonzero vectors in .  Let's check this for a particular nonzero vector in . Let Note that . Thus, is an eigenvector of corresponding to an eigenvalue of .       Eigenspaces   Eigenspace   Suppose . For an eigenvalue of , the set of all eigenvectors associated with together with the zero vector forms a subspace of called the -eigenspace of .     Note: The -eigenspace is precisely .     Construct a basis for the eigenspaces of     Similar to the solution of , for each suspected eigenvalue , we need to find a nonzero vector in .   Note that . By observation, we see that . Since had a single free variable, we have that . Therefore, the is 1-dimensional, so is a basis for . Furthermore, .  Before moving on to the next eigenvalue, it is always a good idea to double-check that really is an eigenvector of corresponding to . Note that , which confirms that is an eigenvector of corresponding to an eigenvalue of .   Note that . By observation, we see that . Since had a single free variable, we have that . Therefore, the is 1-dimensional, so is a basis for . Furthermore, .  Again, it is wise to double check that is an eigenvector for corresponding to . Note that , which confirms that is an eigenvector for corresponding to an eigenvalue of .       Eigenvalue Theorems   Eigenvalues of Triangular Matrices   The eigenvalues of a triangular (upper or lower) matrix are its diagonal entries.      Invertibility and the Eigenvalue 0   A matrix is invertible if and only if is not an eigenvalue of .      Stochastic Matrices   A (column-)stochastic matrix always has an eigenvalue equal to .      Distinct Eigenvalues Give Independent Eigenvectors   If are eigenvectors corresponding to distinct eigenvalues of , then is linearly independent.       Warning: Row Reduction and Eigenvalues   Warning   You cannot determine the eigenvalues of a matrix from its reduced row-echelon form. Row operations generally change eigenvalues.      Let which has eigenvalues and .     Find eigenvectors for each eigenvalue of .     Note that . By inspection, we see that is an eigenvector of corresponding to an eigenvalue of . Furthermore, we have that    Note that . By inspection, we see that is an eigenvector of corresponding to an eigenvalue of . Furthermore, we have that   These calculations confirm what we saw in .      Find the RREF of . What are it's eigenvalues?    Note that . From , we see that the eigenalues of are . Note that is an eigenvalue of , but is not an eigenvalue of .        One more Example    Let One of the eigenvalues of is . Find a basis for the -eigenspace of .    Note that . Since has two free variables, we have that . Therefore, is two-dimensional, so we need to find two linearly independent vectors in in order to find a basis for the eigenspace. You could find two such vectors by guessing, which isn't necessarily easy but does become easier with time. Or, you could find two vectors by using our typical process of setting and which yield and . Either way, we find that a basis for is . You should double-check that these two vectors are linearly independent and belong to . It follows that       "
+  "body": " 5.1 Eigenvectors, Eigenvalues, and Eigenspaces   5.1 Eigenvectors, Eigenvalues, and Eigenspaces   Overview   Topics   Eigenvectors, eigenvalues, and eigenspaces.  Eigenvalue theorems.     Goals   Verify that a given vector is an eigenvector of a matrix.  Verify that a given scalar is an eigenvalue of a matrix.  Construct the eigenspace for a given eigenvalue of a matrix.  Apply eigenvalue theorems (e.g., to characterize invertibility).      Eigenvector and Eigenvalue   Let . If there exists a nonzero vector and a scalar such that   then is an eigenvector of and is the corresponding eigenvalue .    Notes:   We consider only square matrices.   If , then:  for , vectors and point in the same direction;  for , they point in opposite directions.     Even when entries of and are real, can be complex (e.g., a rotation by counterclockwise in has no real eigenvalues).  Complex eigenvalues will be explored in Section 5.5.      Example 1    Which of the following are eigenvectors of   What are the corresponding eigenvalues?          Note that . Since , we have that is an eigenvector of corresponding to an eigenvalue of .           Note that . Since , we have that is an eigenvector of corresponding to an eigenvalue of . Note that it is okay if the result of is . That does not break the definition of eigenvector. The problems is when .           Since , forbids from being an eigenvector. The reason why is that for every single , thus making every single real number an eigenvalue of no matter the square matrix . We don't want this to happen since we want eigenvalues to be rare. That is why we forbid from being considered an eigenvector.        Example 2    Confirm that is an eigenvalue of     To show that is an eigenvalue of , we need to find a nonzero vector so that . Subtracting from both sides and factoring yields . Therefore, every which satisfies must live in .  Note: This should look very similar to the process for finding steady-state vectors for stochastic matrices. See . This is because steady-state vectors of a stochastic matrix are actually just probability eigenvectors of which correspond to an eigenvalue of .  Note that . By observation, we see that is a nonzero vector in Since only had a single free varible, we know that is 1-dimensional. Thus, we have that the eigenvectors of which correspond to an eigenvalue of are the nonzero vectors in .  Let's check this for a particular nonzero vector in . Let Note that . Thus, is an eigenvector of corresponding to an eigenvalue of .       Eigenspaces   Eigenspace   Suppose . For an eigenvalue of , the set of all eigenvectors associated with together with the zero vector forms a subspace of called the -eigenspace of .     Note: The -eigenspace is precisely .     Construct a basis for the eigenspaces of     Similar to the solution of , for each suspected eigenvalue , we need to find a nonzero vector in .   Note that . By observation, we see that . Since had a single free variable, we have that . Therefore, the is 1-dimensional, so is a basis for . Furthermore, .  Before moving on to the next eigenvalue, it is always a good idea to double-check that really is an eigenvector of corresponding to . Note that , which confirms that is an eigenvector of corresponding to an eigenvalue of .   Note that . By observation, we see that . Since had a single free variable, we have that . Therefore, the is 1-dimensional, so is a basis for . Furthermore, .  Again, it is wise to double check that is an eigenvector for corresponding to . Note that , which confirms that is an eigenvector for corresponding to an eigenvalue of .       Eigenvalue Theorems   Eigenvalues of Triangular Matrices   The eigenvalues of a triangular (upper or lower) matrix are its diagonal entries.      Invertibility and the Eigenvalue 0   A matrix is invertible if and only if is not an eigenvalue of .      Stochastic Matrices   A (column-)stochastic matrix always has an eigenvalue equal to .      Distinct Eigenvalues Give Independent Eigenvectors   If are eigenvectors corresponding to distinct eigenvalues of , then is linearly independent.       Warning: Row Reduction and Eigenvalues   Warning   You cannot determine the eigenvalues of a matrix from its reduced row-echelon form. Row operations generally change eigenvalues.      Let which has eigenvalues and .     Find eigenvectors for each eigenvalue of .     Note that . By inspection, we see that is an eigenvector of corresponding to an eigenvalue of . Furthermore, we have that    Note that . By inspection, we see that is an eigenvector of corresponding to an eigenvalue of . Furthermore, we have that   These calculations confirm what we saw in .      Find the RREF of . What are it's eigenvalues?    Note that . From , we see that the eigenalues of are . Note that is an eigenvalue of , but is not an eigenvalue of .        One more Example   Converse of   The converse of is the following:  If are linearly independent eigenvectors of , then must correspond to different eigenvalues.  This statement is false . See below.      Let One of the eigenvalues of is . Find a basis for the -eigenspace of .    Note that . Since has two free variables, we have that . Therefore, is two-dimensional, so we need to find two linearly independent vectors in in order to find a basis for the eigenspace. You could find two such vectors by guessing, which isn't necessarily easy but does become easier with time. Or, you could find two vectors by using our typical process of setting and which yield and . Either way, we find that a basis for is . You should double-check that these two vectors are linearly independent and belong to . It follows that       "
 },
 {
   "id": "obj-5-1-topics-goals",
@@ -2152,11 +2152,20 @@ var ptx_lunr_docs = [
   "body": "  Let which has eigenvalues and .     Find eigenvectors for each eigenvalue of .     Note that . By inspection, we see that is an eigenvector of corresponding to an eigenvalue of . Furthermore, we have that    Note that . By inspection, we see that is an eigenvector of corresponding to an eigenvalue of . Furthermore, we have that   These calculations confirm what we saw in .      Find the RREF of . What are it's eigenvalues?    Note that . From , we see that the eigenalues of are . Note that is an eigenvalue of , but is not an eigenvalue of .    "
 },
 {
-  "id": "handout-section-5-1-eigenvalues-eigenvectors-8-2",
+  "id": "note-conv-lin-ind-eigs",
   "level": "2",
-  "url": "Section-5-1.html#handout-section-5-1-eigenvalues-eigenvectors-8-2",
-  "type": "Example",
+  "url": "Section-5-1.html#note-conv-lin-ind-eigs",
+  "type": "Note",
   "number": "5.12",
+  "title": "Converse of Theorem 5.9.",
+  "body": " Converse of   The converse of is the following:  If are linearly independent eigenvectors of , then must correspond to different eigenvalues.  This statement is false . See below.   "
+},
+{
+  "id": "ex-2-dim-eigenspace",
+  "level": "2",
+  "url": "Section-5-1.html#ex-2-dim-eigenspace",
+  "type": "Example",
+  "number": "5.13",
   "title": "",
   "body": "  Let One of the eigenvalues of is . Find a basis for the -eigenspace of .    Note that . Since has two free variables, we have that . Therefore, is two-dimensional, so we need to find two linearly independent vectors in in order to find a basis for the eigenspace. You could find two such vectors by guessing, which isn't necessarily easy but does become easier with time. Or, you could find two vectors by using our typical process of setting and which yield and . Either way, we find that a basis for is . You should double-check that these two vectors are linearly independent and belong to . It follows that    "
 },
@@ -2167,7 +2176,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "5.2 The Characteristic Equation",
-  "body": " 5.2 The Characteristic Equation   5.2 The Characteristic Equation   Overview   Topics   The characteristic polynomial of a matrix  Algebraic and geometric multiplicity of eigenvalues  Similar matrices     Goals   Construct the characteristic polynomial of a matrix and use it to identify eigenvalues and their multiplicities.  Characterize the long-term behaviour of dynamical systems using eigenvalue decompositions.     Recall:   is an eigenvalue of if and only if is not invertible .  Therefore, to calculate the eigenvalues of , we can need to find all so that    The quantity is the characteristic polynomial of .  The equation is the characterisitc equation of .  The roots of the characteristic polynomial are the eigenvalues of .      Characteristic Polynomial of a 2×2 Matrix    Find the characteristic polynomial of   Then determine the eigenvalues of .       Let   Express the characteristic equation of in terms of . What is the equation when is singular?       Algebraic Multiplicity   Algebraic Multiplicity   The algebraic multiplicity of an eigenvalue is its multiplicity as a root of the characteristic polynomial.      Compute the algebraic multiplicities of the eigenvalues for        Geometric Multiplicity   Geometric Multiplicity   The geometric multiplicity of an eigenvalue is the dimension of .      The geometric multiplicity of an eigenvalue is always between 1 and the algebraic multiplicity of . It can never be 0 nor be greater than the algebraic mutliplicy.  Basic example: has only eigenvalue . Its algebraic multiplicity is 2, but its geometric multiplicity is 1.      Compute the geometric multiplicities of the eigenvalues for          For each part below, give an example of a matrix withe the stated properties, if possible.     The only eigenvalue is , but the geometric multiplicity of is one.      The only eigenvalues are and . The algebraic multiplicity of is three and the geometric multiplicity of is three.      Exactly three eigenvalues, all with geometric multiplicity equal to 1.        Example: Eigenvalues and a 2-State Markov Chain    Consider the Markov Chain given by     Two-state Markov chain with symmetric transition probabilities.  Nodes A and B with transitions 0.6 for staying and 0.4 for switching; matrix .   In the parts below, we will use eigenvalues to describe the long-term behavior of the system.     Find the eigenvalues of and corresponding eigenvectors.      Use the eigenvalues and eigenvectors to determine what tends to as .        Additional Examples (if time permits)   True or False: A row replacement operation on a matrix does not change its eigenvalues.      For what values of does the matrix have one real eigenvalue with algebraic multiplicity 2?       "
+  "body": " 5.2 The Characteristic Equation   5.2 The Characteristic Equation   Overview   Topics   The characteristic polynomial of a matrix  Algebraic and geometric multiplicity of eigenvalues     Goals   Construct the characteristic polynomial of a matrix and use it to identify eigenvalues and their multiplicities.  Characterize the long-term behaviour of dynamical systems using eigenvalue decompositions.      Similar matrices are introduced in Section 5.2, but are not used until Section 5.3. We will wait to introduce them in Section 5.3.    Recall:   is an eigenvalue of if and only if is not invertible .  Therefore, to calculate the eigenvalues of , we can need to find all so that    The quantity is the characteristic polynomial of .  The equation is the characteristic equation of .  The roots of the characteristic polynomial are the eigenvalues of .      Characteristic Polynomial of a 2×2 Matrix    Find the characteristic polynomial of   Then determine the eigenvalues of .    Note that   Therefore, the characteristic polynomial of is . We know from that the roots of this polynomial are the eigenvalues of . Since the polynomial doesn't factor nicely, we use the quadratic formula to find the eigenvalues: . Therefore, the eigenvalues of are and .       Let   Express the characteristic equation of in terms of . What is the equation when is singular?    Note that   We see that the constant term of the characteristic polynomial is . Furthermore, the linear coefficient is , where is the trace of and is the sum of its diagonal elements. When is singular, we have , so the characteristic polynomial is , which has a factor of . Therefore, we see that is an eigenvalue of .  Suppose and are the eigenvalues of . Then, we have that . It follows that is the sum of the eigenvalues of and is the product of the eigenvalues of . This is no coincidence and is true for all matrices.       Algebraic Multiplicity    Let be an matrix with eigenvalues . Then, and .      Algebraic Multiplicity   The algebraic multiplicity of an eigenvalue is its multiplicity as a root of the characteristic polynomial.      Compute the algebraic multiplicities of the eigenvalues for     Note that   It follows that is an eigenvalue of with algebraic multiplicity equal to 1 and is an eigenvalue of with algebraic multiplicity equal to 1. Since the characteristic polynomials has a factor of , we see that is an eigenvalue of with algebraic multiplicity equal to 2.       Geometric Multiplicity   Geometric Multiplicity   The geometric multiplicity of an eigenvalue is the dimension of .      The geometric multiplicity of an eigenvalue is always between 1 and the algebraic multiplicity of . It can never be 0 nor be greater than the algebraic mutliplicy.  Basic example: has only eigenvalue . Its algebraic multiplicity is 2, but its geometric multiplicity is 1.      Compute the geometric multiplicities of the eigenvalues for     As we saw in , the eigenvalues of are (with algebraic multiplicity = 1), (with algebraic multiplicity = 1), and (with algebraic multiplicity = 2). For , we see that which has a single free variable. Thus, the geometric multiplicity of is 1 (which is actually forced since the geometric multiplicity has to be between 1 and the algebraic multiplicity which was also 1 for this eigenvalue). By similar reasoning, we see that the geometric multiplicity of is 1.  Now consider . The algebraic multiplicity of is 2. Therefore, the geometric multiplicity could be 1 or 2. Note that which has a single free variable. Therefore, the geometric multiplicity for is 1, not 2.         For each part below, give an example of a matrix withe the stated properties, if possible.     The only eigenvalue is , but the geometric multiplicity of is one.    For simplicity, we will attempt to form an upper triangular matrix with the properties. This makes things easier since we know that the eigenvalues of a triangular matrix are exactly the entries on the diagonal. Therefore, each diagonal element of our upper triangular matrix needs to be 0. This leads us to where the blank entries are undecided. So far, we have guaranteed that every eigenvalue of is . Now, we need to force to have geometric multiplicity equal to 1. This means that the matrix needs to have exactly one free variable. Note that, as is, Column 1 of already corresponds to a free variable. Thus, we need to make sure that Columns 2, 3, 4, and 5 are pivot columns. To do that, we need to put nonzero entries directly above the diagonal entry. This give the matrix . We can fill in the remaining entries with whatever we want and will still have the required properties.      The only eigenvalues are and . The algebraic multiplicity of is three and the geometric multiplicity of is three.    We can proceed in a similar manner to . Since has algebraic multiplicity 3, we must list it three times on the diagonal. We can fill in the remaining two entries on the diagonal with the other eigenvalue . This gives us . Note that is supposed to have the geometric multiplicity of to be 3. Unfortunately, the algebraic multiplicity of is 2. So it is impossible to have the geometric multiplicity of to be 3 since the geometric multiplicity of an eigenvalue can never exceed its algebraic multiplicity. It follows that creating a matrix with the desired properties is impossible. It would require at least a matrix.      Exactly three eigenvalues, all with geometric multiplicity equal to 1.    Note that the two matrices below both satisfy the requirement and have eigenvalues . .        Example: Eigenvalues and a 2-State Markov Chain    Consider the Markov Chain given by     Two-state Markov chain with symmetric transition probabilities.  Nodes A and B with transitions 0.6 for staying and 0.4 for switching; matrix .   In the parts below, we will use eigenvalues to describe the long-term behavior of the system.     Find the eigenvalues of and corresponding eigenvectors.    Note that and . It follows by the result in that the characteristic polynomial of is . Setting the characteristic polynomial equal to 0, multiplying both sides by 5, and factoring yields: . Therefore, the eigenvalues of are and . (We knew that had to be an eigenvalue of since is a stochastic matrix.)  For , note that . It follows that a nonzero vector in is . Furthermore, since had a single free variable, we have that .  For , note that . It follows that a nonzero vector in is . Furthermore, since had a single free variable, we have that .      Use the eigenvalues and eigenvectors to determine what tends to as .    Note that , where and are eigenvectors corresponding to and , respectively. Note that , where we replaced with and replaced with since and are eigenvectors of . Similarly, we have that , and in general, since and are eigenvectors of . Similarly, we have that . Therefore, we have that .        Additional Examples (if time permits)   True or False: A row replacement operation on a matrix does not change its eigenvalues.   False. Note that the matrix has eigenvalues (check this), but doing the row replacement yields the matrix , which has eigenvalues .       For what values of does the matrix have one real eigenvalue with algebraic multiplicity 2?     Note that the characteristic polynomial of is   Since we want to have a single eigenvalue with algebraic multiplicity 2, we want the characteristic polynomial of to be of the form . Therefore, setting the linear coefficients of the two polynomials equal, we find . Setting the constants of the two polynomials equal, we see that   Therefore, if , then will have a single real eigenvalue with algebraic multiplicity 2.      "
 },
 {
   "id": "obj-5-2-topics-goals",
@@ -2176,7 +2185,7 @@ var ptx_lunr_docs = [
   "type": "Objectives",
   "number": "",
   "title": "Topics",
-  "body": " Topics   The characteristic polynomial of a matrix  Algebraic and geometric multiplicity of eigenvalues  Similar matrices   "
+  "body": " Topics   The characteristic polynomial of a matrix  Algebraic and geometric multiplicity of eigenvalues   "
 },
 {
   "id": "p-5-2-overview-3",
@@ -2188,38 +2197,56 @@ var ptx_lunr_docs = [
   "body": " Goals   Construct the characteristic polynomial of a matrix and use it to identify eigenvalues and their multiplicities.  Characterize the long-term behaviour of dynamical systems using eigenvalue decompositions.   "
 },
 {
+  "id": "p-5-2-overview-5",
+  "level": "2",
+  "url": "Section-5-2.html#p-5-2-overview-5",
+  "type": "Note",
+  "number": "5.14",
+  "title": "",
+  "body": " Similar matrices are introduced in Section 5.2, but are not used until Section 5.3. We will wait to introduce them in Section 5.3.  "
+},
+{
   "id": "def-characteristic",
   "level": "2",
   "url": "Section-5-2.html#def-characteristic",
   "type": "Definition",
-  "number": "5.13",
+  "number": "5.15",
   "title": "",
-  "body": " The quantity is the characteristic polynomial of .  The equation is the characterisitc equation of .  The roots of the characteristic polynomial are the eigenvalues of .  "
+  "body": " The quantity is the characteristic polynomial of .  The equation is the characteristic equation of .  The roots of the characteristic polynomial are the eigenvalues of .  "
 },
 {
   "id": "ex-5-2-charpoly-specific",
   "level": "2",
   "url": "Section-5-2.html#ex-5-2-charpoly-specific",
   "type": "Example",
-  "number": "5.14",
+  "number": "5.16",
   "title": "",
-  "body": "  Find the characteristic polynomial of   Then determine the eigenvalues of .   "
+  "body": "  Find the characteristic polynomial of   Then determine the eigenvalues of .    Note that   Therefore, the characteristic polynomial of is . We know from that the roots of this polynomial are the eigenvalues of . Since the polynomial doesn't factor nicely, we use the quadratic formula to find the eigenvalues: . Therefore, the eigenvalues of are and .   "
 },
 {
   "id": "ex-5-2-charpoly-2x2-general",
   "level": "2",
   "url": "Section-5-2.html#ex-5-2-charpoly-2x2-general",
   "type": "Example",
-  "number": "5.15",
+  "number": "5.17",
   "title": "",
-  "body": "  Let   Express the characteristic equation of in terms of . What is the equation when is singular?   "
+  "body": "  Let   Express the characteristic equation of in terms of . What is the equation when is singular?    Note that   We see that the constant term of the characteristic polynomial is . Furthermore, the linear coefficient is , where is the trace of and is the sum of its diagonal elements. When is singular, we have , so the characteristic polynomial is , which has a factor of . Therefore, we see that is an eigenvalue of .  Suppose and are the eigenvalues of . Then, we have that . It follows that is the sum of the eigenvalues of and is the product of the eigenvalues of . This is no coincidence and is true for all matrices.   "
+},
+{
+  "id": "thm-det-prod-eigs",
+  "level": "2",
+  "url": "Section-5-2.html#thm-det-prod-eigs",
+  "type": "Theorem",
+  "number": "5.18",
+  "title": "",
+  "body": "  Let be an matrix with eigenvalues . Then, and .   "
 },
 {
   "id": "def-algebraic-multiplicity",
   "level": "2",
   "url": "Section-5-2.html#def-algebraic-multiplicity",
   "type": "Definition",
-  "number": "5.16",
+  "number": "5.19",
   "title": "Algebraic Multiplicity.",
   "body": " Algebraic Multiplicity   The algebraic multiplicity of an eigenvalue is its multiplicity as a root of the characteristic polynomial.   "
 },
@@ -2228,16 +2255,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-5-2.html#ex-5-2-alg-mult-compute",
   "type": "Example",
-  "number": "5.17",
+  "number": "5.20",
   "title": "",
-  "body": "  Compute the algebraic multiplicities of the eigenvalues for    "
+  "body": "  Compute the algebraic multiplicities of the eigenvalues for     Note that   It follows that is an eigenvalue of with algebraic multiplicity equal to 1 and is an eigenvalue of with algebraic multiplicity equal to 1. Since the characteristic polynomials has a factor of , we see that is an eigenvalue of with algebraic multiplicity equal to 2.   "
 },
 {
   "id": "def-geometric-multiplicity",
   "level": "2",
   "url": "Section-5-2.html#def-geometric-multiplicity",
   "type": "Definition",
-  "number": "5.18",
+  "number": "5.21",
   "title": "Geometric Multiplicity.",
   "body": " Geometric Multiplicity   The geometric multiplicity of an eigenvalue is the dimension of .   "
 },
@@ -2246,45 +2273,45 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-5-2.html#ex-5-2-geom-mult-compute",
   "type": "Example",
-  "number": "5.19",
+  "number": "5.22",
   "title": "",
-  "body": "  Compute the geometric multiplicities of the eigenvalues for    "
+  "body": "  Compute the geometric multiplicities of the eigenvalues for     As we saw in , the eigenvalues of are (with algebraic multiplicity = 1), (with algebraic multiplicity = 1), and (with algebraic multiplicity = 2). For , we see that which has a single free variable. Thus, the geometric multiplicity of is 1 (which is actually forced since the geometric multiplicity has to be between 1 and the algebraic multiplicity which was also 1 for this eigenvalue). By similar reasoning, we see that the geometric multiplicity of is 1.  Now consider . The algebraic multiplicity of is 2. Therefore, the geometric multiplicity could be 1 or 2. Note that which has a single free variable. Therefore, the geometric multiplicity for is 1, not 2.   "
 },
 {
   "id": "ex-5-2-only-zero-eig-gm1",
   "level": "2",
   "url": "Section-5-2.html#ex-5-2-only-zero-eig-gm1",
   "type": "Example",
-  "number": "5.20",
+  "number": "5.23",
   "title": "",
-  "body": "  For each part below, give an example of a matrix withe the stated properties, if possible.     The only eigenvalue is , but the geometric multiplicity of is one.      The only eigenvalues are and . The algebraic multiplicity of is three and the geometric multiplicity of is three.      Exactly three eigenvalues, all with geometric multiplicity equal to 1.    "
+  "body": "  For each part below, give an example of a matrix withe the stated properties, if possible.     The only eigenvalue is , but the geometric multiplicity of is one.    For simplicity, we will attempt to form an upper triangular matrix with the properties. This makes things easier since we know that the eigenvalues of a triangular matrix are exactly the entries on the diagonal. Therefore, each diagonal element of our upper triangular matrix needs to be 0. This leads us to where the blank entries are undecided. So far, we have guaranteed that every eigenvalue of is . Now, we need to force to have geometric multiplicity equal to 1. This means that the matrix needs to have exactly one free variable. Note that, as is, Column 1 of already corresponds to a free variable. Thus, we need to make sure that Columns 2, 3, 4, and 5 are pivot columns. To do that, we need to put nonzero entries directly above the diagonal entry. This give the matrix . We can fill in the remaining entries with whatever we want and will still have the required properties.      The only eigenvalues are and . The algebraic multiplicity of is three and the geometric multiplicity of is three.    We can proceed in a similar manner to . Since has algebraic multiplicity 3, we must list it three times on the diagonal. We can fill in the remaining two entries on the diagonal with the other eigenvalue . This gives us . Note that is supposed to have the geometric multiplicity of to be 3. Unfortunately, the algebraic multiplicity of is 2. So it is impossible to have the geometric multiplicity of to be 3 since the geometric multiplicity of an eigenvalue can never exceed its algebraic multiplicity. It follows that creating a matrix with the desired properties is impossible. It would require at least a matrix.      Exactly three eigenvalues, all with geometric multiplicity equal to 1.    Note that the two matrices below both satisfy the requirement and have eigenvalues . .    "
 },
 {
   "id": "ex-5-2-markov-eigs",
   "level": "2",
   "url": "Section-5-2.html#ex-5-2-markov-eigs",
   "type": "Example",
-  "number": "5.21",
+  "number": "5.24",
   "title": "",
-  "body": "  Consider the Markov Chain given by     Two-state Markov chain with symmetric transition probabilities.  Nodes A and B with transitions 0.6 for staying and 0.4 for switching; matrix .   In the parts below, we will use eigenvalues to describe the long-term behavior of the system.     Find the eigenvalues of and corresponding eigenvectors.      Use the eigenvalues and eigenvectors to determine what tends to as .    "
+  "body": "  Consider the Markov Chain given by     Two-state Markov chain with symmetric transition probabilities.  Nodes A and B with transitions 0.6 for staying and 0.4 for switching; matrix .   In the parts below, we will use eigenvalues to describe the long-term behavior of the system.     Find the eigenvalues of and corresponding eigenvectors.    Note that and . It follows by the result in that the characteristic polynomial of is . Setting the characteristic polynomial equal to 0, multiplying both sides by 5, and factoring yields: . Therefore, the eigenvalues of are and . (We knew that had to be an eigenvalue of since is a stochastic matrix.)  For , note that . It follows that a nonzero vector in is . Furthermore, since had a single free variable, we have that .  For , note that . It follows that a nonzero vector in is . Furthermore, since had a single free variable, we have that .      Use the eigenvalues and eigenvectors to determine what tends to as .    Note that , where and are eigenvectors corresponding to and , respectively. Note that , where we replaced with and replaced with since and are eigenvectors of . Similarly, we have that , and in general, since and are eigenvectors of . Similarly, we have that . Therefore, we have that .    "
 },
 {
   "id": "ex-5-2-true-false",
   "level": "2",
   "url": "Section-5-2.html#ex-5-2-true-false",
   "type": "Example",
-  "number": "5.22",
+  "number": "5.25",
   "title": "",
-  "body": " True or False: A row replacement operation on a matrix does not change its eigenvalues.  "
+  "body": " True or False: A row replacement operation on a matrix does not change its eigenvalues.   False. Note that the matrix has eigenvalues (check this), but doing the row replacement yields the matrix , which has eigenvalues .   "
 },
 {
   "id": "ex-5-2-parameterized-eig",
   "level": "2",
   "url": "Section-5-2.html#ex-5-2-parameterized-eig",
   "type": "Example",
-  "number": "5.23",
+  "number": "5.26",
   "title": "",
-  "body": "  For what values of does the matrix have one real eigenvalue with algebraic multiplicity 2?    "
+  "body": "  For what values of does the matrix have one real eigenvalue with algebraic multiplicity 2?     Note that the characteristic polynomial of is   Since we want to have a single eigenvalue with algebraic multiplicity 2, we want the characteristic polynomial of to be of the form . Therefore, setting the linear coefficients of the two polynomials equal, we find . Setting the constants of the two polynomials equal, we see that   Therefore, if , then will have a single real eigenvalue with algebraic multiplicity 2.   "
 }
 ]
 
