@@ -321,7 +321,21 @@
 
   <page>
     <title>One more Example</title> 
-    <example workspace="true">
+    <note xml:id="note-conv-lin-ind-eigs">
+      <title>Converse of <xref ref="thm-distinct-eigenvalues-independent"/></title>
+      <statement>
+        <p>
+          The converse of <xref ref="thm-distinct-eigenvalues-independent"/> is the following:
+        </p> 
+        <p> If <m>\{\vec v_1, \vec v_2, \dots, \vec v_k\}</m> are linearly independent eigenvectors of <m>A</m>, then <m>\vec v_1, \vec v_2, \dots, \vec v_k</m> must correspond to different eigenvalues.
+        </p>
+        <p>
+          This statement is <em>false</em>. See <xref ref="ex-2-dim-eigenspace"/> below.
+        </p>
+      </statement>
+    </note>
+
+    <example workspace="true" xml:id="ex-2-dim-eigenspace">
       <statement> 
         <p>
         Let <me>A = \begin{bmatrix} 4 \amp -1 \amp 6 \\ 2 \amp 1 \amp 6 \\ 2 \amp -1 \amp 8 \end{bmatrix}.</me> One of the eigenvalues of <m>A</m> is <m>\lambda = 2</m>. Find a basis for the <m>2</m>-eigenspace of <m>A</m>.
