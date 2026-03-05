@@ -6,10 +6,15 @@
 
     <p>
       <em>Motivation:</em> It can be useful to take large powers of matrices, for example <m>A^k</m> for large <m>k</m>.
-      <br/>
-      <em>But:</em> Multiplying two <m>n\times n</m> matrices requires roughly <m>n^3</m> computations.
-      Is there a more efficient way to compute <m>A^k</m>?
     </p>
+    <p>
+      <em>But:</em> Multiplying two <m>n\times n</m> matrices requires roughly <m>n^3</m> computations.
+    </p>
+    <p>
+      <em>Question:</em> Is there a more efficient way to compute <m>A^k</m>?
+    </p>
+
+    <p><nbsp/></p>
 
     <objectives xml:id="obj-5-3-topics-goals">
       <title>Topics</title>
@@ -27,10 +32,9 @@
         <li>Apply diagonalization to compute matrix powers.</li>
       </ul>
     </objectives>
-  </page>
 
-  <page xml:id="p-5-3-similar-matrices">
-    <title>Similar Matrices</title>
+    <p><nbsp/></p>
+
 
     <definition xml:id="def-similar-matrices">
       <title>Similarity</title>
@@ -44,17 +48,17 @@
       Matrix similarity is an <em>equivalence relation</em> meaning:
       <ul>
         <li>
-          <p>
+          <p workspace="true">
             <em>Reflexive Property</em>: Every matrix <m>A</m> is similar to itself.
           </p>
         </li>
         <li>
-          <p>
+          <p workspace="true">
             <em>Symmetric Property</em>: If <m>A</m> is similar to <m>B</m>, then <m>B</m> is similar to <m>A</m>.
           </p>
         </li>
         <li>
-          <p>
+          <p workspace="true">
             <em>Transitive Property</em>: If <m>A</m> is similar to <m>B</m> and <m>B</m> is similar to <m>C</m>, then <m>A</m> is similar to <m>C</m>.
           </p>
         </li>
@@ -63,7 +67,11 @@
 
     <p><nbsp/></p>
 
-    <theorem xml:id="thm-similar-same-charpoly">
+  </page>
+
+  <page>
+
+    <theorem xml:id="thm-similar-same-charpoly" workspace="true">
       <title>Characteristic Polynomial of Similar Matrices</title>
       <statement>
         <p>
@@ -77,7 +85,7 @@
     <p>
       Notes: 
       <ul>
-        <li>Similar matrices have exactly the same eigenvalues, with each having the same algebraic and geometric multiplicities.</li>
+        <li>Similar matrices have exactly the same eigenvalues with exactly the same algebraic multiplicity for each eigenvalue and exactly the same geometric multiplicity for each eigenvalue.</li>
         <li>The converse of <xref ref="thm-similar-same-charpoly"/> is not true; that is, just because two matrices have the same characterisitc polynomial, that does not mean that they are similar. For example,
         <me>
           \begin{bmatrix}
@@ -90,7 +98,8 @@
             0 \amp 0
           \end{bmatrix}
         </me>
-        have the same characteristic polynomial, but are not similar.</li>
+        have the same characteristic polynomial, but are not similar because the eigenvalue <m>\lambda = 0</m> does not have the same geometric multiplicty for each matrix.</li>
+      </ul>
     </p>
 
     <p><nbsp/></p>
@@ -104,6 +113,7 @@
     </example>
 
     <p><nbsp/></p>
+
     
   </page>
 
@@ -131,6 +141,8 @@
 
     <p><nbsp/></p>
 
+
+
     <p>
       If <m>A</m> is diagonal, then <m>A^k</m> is easy to compute by raising diagonal entries to the <m>k</m>-th power.
     </p>
@@ -142,11 +154,11 @@
       </statement>
     </example>
 
-    <p workspace="1in">
+    <p workspace="1.5in">
       Is this as easy to do if <m>A</m> is <em>not</em> diagonal?
     </p>
 
-    <p workspace="1in">
+    <p workspace="1.5in">
       What about if <m>A</m> is <em>similar</em> to a diagonal matrix?
     </p>
 
@@ -176,7 +188,7 @@
   <page xml:id="p-5-3-diagonalization-theorem">
     <title>Characterizing Diagonalizability</title>
 
-    <theorem xml:id="thm-diagonalizable-iff-n-lin-ind-eigenvectors">
+    <theorem xml:id="thm-diagonalizable-iff-n-lin-ind-eigenvectors" workspace="true">
       <title>Diagonalization Criterion</title>
       <statement>
         <p>
@@ -202,6 +214,48 @@
 
     <p><nbsp/></p>
 
+    <theorem xml:id="thm-diagonalizable-multiplicity-conditions" workspace="true">
+      <title>Algebraic vs. Geometric Multiplicity</title>
+      <statement>
+        <p>Suppose:</p>
+        <ul>
+          <li><m>A</m> is <m>n\times n</m>,</li>
+          <li><m>A</m> has distinct eigenvalues <m>\lambda_1,\ldots,\lambda_k</m> with <m>k\le n</m>,</li>
+          <li><m>a_i</m> is the algebraic multiplicity of <m>\lambda_i</m>,</li>
+          <li><m>d_i</m> is the geometric multiplicity (dimension of the <m>\lambda_i</m>-eigenspace).</li>
+        </ul>
+        <p>Then:</p>
+        <ol>
+          <li><m>d_i \le a_i</m> for all <m>i</m>.</li>
+          <li>
+            <m>A</m> is diagonalizable <m> \ \iff \ \sum_i d_i = n \ \iff \ d_i=a_i</m> for all <m>i</m>.
+          </li>
+          <li>
+            <m>A</m> is diagonalizable <m>\iff</m> the eigenvectors for all eigenvalues together form a basis of <m>\mathbb{R}^n</m>.
+          </li>
+        </ol>
+      </statement>
+    </theorem>
+
+    <p><nbsp/></p>
+
+    <theorem xml:id="thm-n-distinct-eigs-implies-diagonalizable" workspace="true">
+      <title>Diagonalization with Distinct Eigenvalues</title>
+      <statement>
+        <p>
+          If <m>A</m> is <m>n\times n</m> and has <m>n</m> distinct eigenvalues, then <m>A</m> is diagonalizable.
+        </p>
+      </statement>
+    </theorem>
+
+    
+
+    <p><nbsp/></p>
+
+  </page>
+
+  <page>
+
 
         <example xml:id="ex-5-3-diagonalize-1" workspace="true">
       <statement>
@@ -215,6 +269,7 @@
       </statement>
     </example>
 
+    <p><nbsp/></p>
     
   </page>
 
@@ -234,46 +289,6 @@
       </statement>
     </example>
 
-  </page>
-
-
-  <page xml:id="p-5-3-distinct-eigenvalues">
-    <title>Distinct Eigenvalues</title>
-
-    <theorem xml:id="thm-diagonalizable-multiplicity-conditions" workspace="true">
-      <title>Algebraic vs. Geometric Multiplicity</title>
-      <statement>
-        <p>Suppose:</p>
-        <ul>
-          <li><m>A</m> is <m>n\times n</m>,</li>
-          <li><m>A</m> has distinct eigenvalues <m>\lambda_1,\ldots,\lambda_k</m> with <m>k\le n</m>,</li>
-          <li><m>a_i</m> is the algebraic multiplicity of <m>\lambda_i</m>,</li>
-          <li><m>d_i</m> is the geometric multiplicity (dimension of the <m>\lambda_i</m>-eigenspace).</li>
-        </ul>
-        <p>Then:</p>
-        <ol>
-          <li><m>d_i \le a_i</m> for all <m>i</m>.</li>
-          <li>
-            <m>A</m> is diagonalizable <m>\Leftrightarrow \sum_i d_i = n \Leftrightarrow d_i=a_i</m> for all <m>i</m>.
-          </li>
-          <li>
-            <m>A</m> is diagonalizable <m>\Leftrightarrow</m> the eigenvectors for all eigenvalues together form a basis of <m>\mathbb{R}^n</m>.
-          </li>
-        </ol>
-      </statement>
-    </theorem>
-
-    <p><nbsp/></p>
-
-    <theorem xml:id="thm-n-distinct-eigs-implies-diagonalizable" workspace="true">
-      <title>Diagonalization with Distinct Eigenvalues</title>
-      <statement>
-        <p>
-          If <m>A</m> is <m>n\times n</m> and has <m>n</m> distinct eigenvalues, then <m>A</m> is diagonalizable.
-        </p>
-      </statement>
-    </theorem>
-
     <p><nbsp/></p>
 
   </page>
@@ -284,11 +299,10 @@
     <title>Example 3: Build P and D</title>
 
     <example xml:id="ex-5-3-construct-PD" workspace="true">
-      <title>Example 3</title>
       <statement>
         <p>
           The eigenvalues of <m>A</m> are <m>\lambda=3,1</m>. If possible, construct <m>P</m> and <m>D</m> such that
-          <m>AP=PD</m> (equivalently, <m>A=PDP^{-1}</m>).
+          <m>A=PDP^{-1}</m>. Verify by checking that <m>AP = PD</m>.
         </p>
         <me>
           A=\begin{bmatrix}
@@ -299,78 +313,35 @@
         </me>
       </statement>
     </example>
+
+    <p><nbsp/></p>
+
   </page>
 
+   <page xml:id="p-5-3-example-4">
+    <title>Example 3: Build P and D</title>
 
-  <page xml:id="p-5-3-basis-of-eigenvectors">
-    <title>Basis of Eigenvectors</title>
-
-    <example xml:id="ex-5-3-basis-coordinates-1" workspace="true">
-      <title>Change of Basis and Coordinates</title>
+    <example xml:id="ex-5-3-diagonalize-3-by-3" workspace="true">
       <statement>
         <p>
-          Express
-          <m>\vec x_0=\begin{bmatrix}4\\5\end{bmatrix}</m> as a linear combination of
-          <m>\vec v_1=\begin{bmatrix}1\\1\end{bmatrix}</m> and
-          <m>\vec v_2=\begin{bmatrix}1\\-1\end{bmatrix}</m>, and find the coordinates of
-          <m>\vec x_0</m> in the basis <m>\mathcal{B}=\{\vec v_1,\vec v_2\}</m>.
+          Diagonalize the following matrix, if possible.
         </p>
-
-        <p>
-          <m>[\vec x_0]_{\mathcal{B}}=\ \square</m>
-        </p>
-
-        <p>
-          Let <m>P=[\vec v_1\ \vec v_2]</m> and <m>D=\begin{bmatrix}1 \amp 0\\ 0 \amp -1\end{bmatrix}</m>. Find
-          <m>[A^k\vec x_0]_{\mathcal{B}}</m> where <m>A=PDP^{-1}</m>, for <m>k=1,2,\ldots</m>.
-        </p>
-
-        <p>
-          <m>[A^k\vec x_0]_{\mathcal{B}}=\ \square</m>
-        </p>
+        <me>
+          A=\begin{bmatrix}
+            2 \amp 4 \amp 3\\
+            -4 \amp -6 \amp -3\\
+            3 \amp 3 \amp 1
+          \end{bmatrix}.
+        </me>
       </statement>
     </example>
+
+    <p><nbsp/></p>
+    
   </page>
 
 
-  <page xml:id="p-5-3-basis-of-eigenvectors-2">
-    <title>Basis of Eigenvectors – Part 2</title>
-
-    <example xml:id="ex-5-3-basis-coordinates-2" workspace="true">
-      <title>Different Eigenvalues</title>
-      <statement>
-        <p>
-          With the same <m>\vec x_0,\vec v_1,\vec v_2,P</m> as before, let
-          <m>D=\begin{bmatrix}1 \amp 0\\ 0 \amp -\tfrac12\end{bmatrix}</m>. Find
-          <m>[A^k\vec x_0]_{\mathcal{B}}</m> where <m>A=PDP^{-1}</m>, for <m>k=1,2,\ldots</m>.
-        </p>
-        <p>
-          <m>[A^k\vec x_0]_{\mathcal{B}}=\ \square</m>
-        </p>
-      </statement>
-    </example>
-  </page>
-
-
-  <page xml:id="p-5-3-basis-of-eigenvectors-3">
-    <title>Basis of Eigenvectors – Part 3</title>
-
-    <example xml:id="ex-5-3-basis-coordinates-3" workspace="true">
-      <title>Growing Eigenvalues</title>
-      <statement>
-        <p>
-          With the same <m>\vec x_0,\vec v_1,\vec v_2,P</m> as before, let
-          <m>D=\begin{bmatrix}2 \amp 0\\ 0 \amp \tfrac32\end{bmatrix}</m>. Find
-          <m>[A^k\vec x_0]_{\mathcal{B}}</m> where <m>A=PDP^{-1}</m>, for <m>k=1,2,\ldots</m>.
-        </p>
-        <p>
-          <m>[A^k\vec x_0]_{\mathcal{B}}=\ \square</m>
-        </p>
-      </statement>
-    </example>
-  </page>
-
-    <page xml:id="p-5-3-fibonacci-example">
+  <page xml:id="p-5-3-fibonacci-example">
     <title>Additional Example (if time permits)</title>
 
     <example xml:id="ex-5-3-fibonacci" workspace="true">
