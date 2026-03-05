@@ -140,7 +140,6 @@
   \draw[help lines] (-4, -4) grid (4, 4);
   \draw[-{Stealth[length=4pt]}, thick] (-4,0) -- (4,0);
   \draw[-{Stealth[length=4pt]}, thick] (0,-4) -- (0,4);
-  % Instructor/reader can add a plotted point at (3,2) and a vector from (0,0) to (3,2)
 \end{tikzpicture}
           </tex>
         </latex-image>
