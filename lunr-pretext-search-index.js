@@ -2312,6 +2312,159 @@ var ptx_lunr_docs = [
   "number": "5.26",
   "title": "",
   "body": "  For what values of does the matrix have one real eigenvalue with algebraic multiplicity 2?     Note that the characteristic polynomial of is   Since we want to have a single eigenvalue with algebraic multiplicity 2, we want the characteristic polynomial of to be of the form . Therefore, setting the linear coefficients of the two polynomials equal, we find . Setting the constants of the two polynomials equal, we see that   Therefore, if , then will have a single real eigenvalue with algebraic multiplicity 2.   "
+},
+{
+  "id": "Section-5-3",
+  "level": "1",
+  "url": "Section-5-3.html",
+  "type": "Section",
+  "number": "",
+  "title": "5.3 Diagonalization",
+  "body": " 5.3 Diagonalization     Overview   Motivation: It can be useful to take large powers of matrices, for example for large .   But: Multiplying two matrices requires roughly computations.   Question: Is there a more efficient way to compute ?    Topics   Similar matrices  Diagonal, similar, and diagonalizable matrices  Diagonalizing matrices     Goals   Determine whether a matrix can be diagonalized, and if possible diagonalize a square matrix.  Apply diagonalization to compute matrix powers.      Similarity   Two matrices and are similar if there exists an invertible matrix such that    Matrix similarity is an equivalence relation meaning:    Reflexive Property : Every matrix is similar to itself.     Symmetric Property : If is similar to , then is similar to .     Transitive Property : If is similar to and is similar to , then is similar to .         Characteristic Polynomial of Similar Matrices   If and are similar, then they have the same characteristic polynomial.     Notes:  Similar matrices have exactly the same eigenvalues with exactly the same algebraic multiplicity for each eigenvalue and exactly the same geometric multiplicity for each eigenvalue.  The converse of is not true; that is, just because two matrices have the same characterisitc polynomial, that does not mean that they are similar. For example, have the same characteristic polynomial, but are not similar because the eigenvalue does not have the same geometric multiplicty for each matrix.       True or false: If is similar to the identity matrix, then is equal to the identity matrix.       Diagonal Matrices   Diagonal Matrix   A matrix is diagonal if the only nonzero entries (if any) lie on the main diagonal. In this course, we work only with square diagonal matrices.    Examples of diagonal matrices:    If is diagonal, then is easy to compute by raising diagonal entries to the -th power.   Example: Powers of a Diagonal Matrix   Let . Compute and .    Is this as easy to do if is not diagonal?  What about if is similar to a diagonal matrix?    Diagonalization   Diagonalizable Matrix   A matrix is diagonalizable if it is similar to a diagonal matrix ; that is, there exists an invertible matrix such that        Characterizing Diagonalizability   Diagonalization Criterion   A matrix is diagonalizable if and only if has linearly independent eigenvectors. Equivalently,   where are linearly independent eigenvectors and are the corresponding eigenvalues (in order).      Algebraic vs. Geometric Multiplicity   Suppose:   is ,  has distinct eigenvalues with ,  is the algebraic multiplicity of ,  is the geometric multiplicity (dimension of the -eigenspace).   Then:   for all .   is diagonalizable for all .   is diagonalizable the eigenvectors for all eigenvalues together form a basis of .       Diagonalization with Distinct Eigenvalues   If is and has distinct eigenvalues, then is diagonalizable.         Diagonalize if possible:        Example 2: Diagonalize if Possible    Diagonalize if possible:        Example 3: Build P and D    The eigenvalues of are . If possible, construct and such that . Verify by checking that .        Example 3: Build P and D    Diagonalize the following matrix, if possible.        Additional Example (if time permits)   Diagonalization and a Famous Sequence   Note that   generates a well-known sequence of numbers. Use diagonalization to find a matrix expression that gives the -th number in this sequence.      "
+},
+{
+  "id": "obj-5-3-topics-goals",
+  "level": "2",
+  "url": "Section-5-3.html#obj-5-3-topics-goals",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   Similar matrices  Diagonal, similar, and diagonalizable matrices  Diagonalizing matrices   "
+},
+{
+  "id": "p-5-3-overview-7",
+  "level": "2",
+  "url": "Section-5-3.html#p-5-3-overview-7",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals   Determine whether a matrix can be diagonalized, and if possible diagonalize a square matrix.  Apply diagonalization to compute matrix powers.   "
+},
+{
+  "id": "def-similar-matrices",
+  "level": "2",
+  "url": "Section-5-3.html#def-similar-matrices",
+  "type": "Definition",
+  "number": "5.27",
+  "title": "Similarity.",
+  "body": " Similarity   Two matrices and are similar if there exists an invertible matrix such that   "
+},
+{
+  "id": "thm-similar-same-charpoly",
+  "level": "2",
+  "url": "Section-5-3.html#thm-similar-same-charpoly",
+  "type": "Theorem",
+  "number": "5.28",
+  "title": "Characteristic Polynomial of Similar Matrices.",
+  "body": " Characteristic Polynomial of Similar Matrices   If and are similar, then they have the same characteristic polynomial.   "
+},
+{
+  "id": "handout-section-5-3-diagonalization-2-5",
+  "level": "2",
+  "url": "Section-5-3.html#handout-section-5-3-diagonalization-2-5",
+  "type": "Example",
+  "number": "5.29",
+  "title": "",
+  "body": "  True or false: If is similar to the identity matrix, then is equal to the identity matrix.   "
+},
+{
+  "id": "def-diagonal-matrix",
+  "level": "2",
+  "url": "Section-5-3.html#def-diagonal-matrix",
+  "type": "Definition",
+  "number": "5.30",
+  "title": "Diagonal Matrix.",
+  "body": " Diagonal Matrix   A matrix is diagonal if the only nonzero entries (if any) lie on the main diagonal. In this course, we work only with square diagonal matrices.   "
+},
+{
+  "id": "ex-5-3-powers-diagonal",
+  "level": "2",
+  "url": "Section-5-3.html#ex-5-3-powers-diagonal",
+  "type": "Example",
+  "number": "5.31",
+  "title": "Example: Powers of a Diagonal Matrix.",
+  "body": " Example: Powers of a Diagonal Matrix   Let . Compute and .   "
+},
+{
+  "id": "def-diagonalizable",
+  "level": "2",
+  "url": "Section-5-3.html#def-diagonalizable",
+  "type": "Definition",
+  "number": "5.32",
+  "title": "Diagonalizable Matrix.",
+  "body": " Diagonalizable Matrix   A matrix is diagonalizable if it is similar to a diagonal matrix ; that is, there exists an invertible matrix such that    "
+},
+{
+  "id": "thm-diagonalizable-iff-n-lin-ind-eigenvectors",
+  "level": "2",
+  "url": "Section-5-3.html#thm-diagonalizable-iff-n-lin-ind-eigenvectors",
+  "type": "Theorem",
+  "number": "5.33",
+  "title": "Diagonalization Criterion.",
+  "body": " Diagonalization Criterion   A matrix is diagonalizable if and only if has linearly independent eigenvectors. Equivalently,   where are linearly independent eigenvectors and are the corresponding eigenvalues (in order).   "
+},
+{
+  "id": "thm-diagonalizable-multiplicity-conditions",
+  "level": "2",
+  "url": "Section-5-3.html#thm-diagonalizable-multiplicity-conditions",
+  "type": "Theorem",
+  "number": "5.34",
+  "title": "Algebraic vs. Geometric Multiplicity.",
+  "body": " Algebraic vs. Geometric Multiplicity   Suppose:   is ,  has distinct eigenvalues with ,  is the algebraic multiplicity of ,  is the geometric multiplicity (dimension of the -eigenspace).   Then:   for all .   is diagonalizable for all .   is diagonalizable the eigenvectors for all eigenvalues together form a basis of .    "
+},
+{
+  "id": "thm-n-distinct-eigs-implies-diagonalizable",
+  "level": "2",
+  "url": "Section-5-3.html#thm-n-distinct-eigs-implies-diagonalizable",
+  "type": "Theorem",
+  "number": "5.35",
+  "title": "Diagonalization with Distinct Eigenvalues.",
+  "body": " Diagonalization with Distinct Eigenvalues   If is and has distinct eigenvalues, then is diagonalizable.   "
+},
+{
+  "id": "ex-5-3-diagonalize-1",
+  "level": "2",
+  "url": "Section-5-3.html#ex-5-3-diagonalize-1",
+  "type": "Example",
+  "number": "5.36",
+  "title": "",
+  "body": "  Diagonalize if possible:    "
+},
+{
+  "id": "ex-5-3-diagonalize-2",
+  "level": "2",
+  "url": "Section-5-3.html#ex-5-3-diagonalize-2",
+  "type": "Example",
+  "number": "5.37",
+  "title": "",
+  "body": "  Diagonalize if possible:    "
+},
+{
+  "id": "ex-5-3-construct-PD",
+  "level": "2",
+  "url": "Section-5-3.html#ex-5-3-construct-PD",
+  "type": "Example",
+  "number": "5.38",
+  "title": "",
+  "body": "  The eigenvalues of are . If possible, construct and such that . Verify by checking that .    "
+},
+{
+  "id": "ex-5-3-diagonalize-3-by-3",
+  "level": "2",
+  "url": "Section-5-3.html#ex-5-3-diagonalize-3-by-3",
+  "type": "Example",
+  "number": "5.39",
+  "title": "",
+  "body": "  Diagonalize the following matrix, if possible.    "
+},
+{
+  "id": "ex-5-3-fibonacci",
+  "level": "2",
+  "url": "Section-5-3.html#ex-5-3-fibonacci",
+  "type": "Example",
+  "number": "5.40",
+  "title": "Diagonalization and a Famous Sequence.",
+  "body": " Diagonalization and a Famous Sequence   Note that   generates a well-known sequence of numbers. Use diagonalization to find a matrix expression that gives the -th number in this sequence.   "
 }
 ]
 
