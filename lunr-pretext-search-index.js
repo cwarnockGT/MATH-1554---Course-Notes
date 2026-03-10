@@ -1518,7 +1518,7 @@ var ptx_lunr_docs = [
   "url": "Section-2-9.html#p-2-9-intro-objectives-3",
   "type": "Objectives",
   "number": "",
-  "title": "",
+  "title": "Goals",
   "body": " Goals   Calculate coordinates of a vector in a given basis.  Characterize subspaces using the concept of dimension.  Characterize matrices using rank, column space, and null space.  Apply the Rank, Basis, and Invertibility Theorems to describe matrices and subspaces.   "
 },
 {
@@ -2320,7 +2320,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "5.3 Diagonalization",
-  "body": " 5.3 Diagonalization   5.3 Diagonalization   Overview   Motivation: It can be useful to take large powers of matrices, for example for large .   But: Multiplying two matrices requires roughly computations.   Question: Is there a more efficient way to compute ?    Topics   Similar matrices  Diagonal, similar, and diagonalizable matrices  Diagonalizing matrices     Goals   Determine whether a matrix can be diagonalized, and if possible diagonalize a square matrix.  Apply diagonalization to compute matrix powers.      Similarity   Two matrices and are similar if there exists an invertible matrix such that    Matrix similarity is an equivalence relation meaning:    Reflexive Property : Every matrix is similar to itself.   Proof: Let be any matrix and let . Then . Thus, is similar to .      Symmetric Property : If is similar to , then is similar to .   Proof: Suppose for some invertible matrix . By multiplying both sides of the equation by on the left and on the right we get . Letting , we have that , so is similar to .      Transitive Property : If is similar to and is similar to , then is similar to .   Proof: Suppose and . Then we have that , so is similar to .          Characteristic Polynomial of Similar Matrices   If and are similar, then they have the same characteristic polynomial.    Recall that and are the characteristic polynomials of and , respectively. Since and are similar, we have that for some invertible matrix . Note the following:     Thus, , so and have the same characteristic polynomial.     Notes:  Similar matrices have exactly the same eigenvalues with exactly the same algebraic multiplicity for each eigenvalue and exactly the same geometric multiplicity for each eigenvalue.  The converse of is not true; that is, just because two matrices have the same characterisitc polynomial, that does not mean that they are similar. For example, have the same characteristic polynomial, but are not similar because the eigenvalue does not have the same geometric multiplicty for each matrix.       True or false: If is similar to the identity matrix, then is equal to the identity matrix.    If is similar to , then there exists an invertible matrix so that . Thus, must be the identity matrix.       Diagonal Matrices   Diagonal Matrix   A matrix is diagonal if the only nonzero entries (if any) lie on the main diagonal. In this course, we work only with square diagonal matrices.    Examples of diagonal matrices:    If is diagonal, then is easy to compute by raising diagonal entries to the -th power.   Example: Powers of a Diagonal Matrix    Let . Compute and .    Note that . It follows that       Is this as easy to do if is not diagonal?    Let . Then . There is no apparant pattern like there is when is diagonal.      What about if is similar to a diagonal matrix?    Suppose for some invertible matrix and some diagonal matrix . Note that . It follows that . Therefore, if we know that is similar to a diagonal matrix, then we can calculate power of much faster than expected.        Diagonalization   Diagonalizable Matrix   A matrix is diagonalizable if it is similar to a diagonal matrix ; that is, there exists an invertible matrix such that      First, let's identify . Since is diagonal, every entry not on the diagonal must be zero. Therefore, to identify , we need to identify the entries on the diagonal. By , and must have the same characteristic polynomial. Thus, they must have the same eigenvalues. Since is diagonal, it is both upper and lower triangular. Therefore, by , the eigenvalues of are the entries on the diagonal. Hence, the eigenvalues of must be the diagonal entries of . So, if the eigenvalues of are (listing repeated eigenvalues the appropriate number of times), then    Caution 1 : The above reasoning assumes that the matrix has real eigenvalues (counting multiplicity). What if has fewer than eigenvalues. For example, if , then has ZERO real eigenvalues (check this). If has fewer than eigenvalues, then we WILL NOT be able to fill all the missing entries of . We couldn't just fill the gaps with 0's because that would imply that had more 0 eigenvalues than . Therefore, in the case where has fewer than eigenvalues; that is, when the algebraic multiplicities of the eigenvalues add up to less than , then it is IMPOSSIBLE to form . Thus, would NOT be diagonalizable.   Assuming we can find , we now need to find . Let . Then, we can rearrange the equation my multiplying by on the right of both sides to get . Note that and . Since , we can set corresponding columns equal to each other to find . Since (else would not be invertible) we have that the columns must be eigenvectors of corresponding to !   Caution 2 : Note that would fail to be invertible if the columns were linearly independent. Therefore, we must have that the vectors are linearly independent. Are we guaranteed to be able to find linearly independent eigenvectors? This is only possible if every eigenspace is as big as it is supposed to be. For example, if the eigenvalue has algebraic multiplicity 3, then we expect the -eigenspace to be 3-dimensional. If it is not, then it is impossible for us to find 3 linearly independent eigenvectors corresponding to . Therefore, it would be impossible to form since must contain linearly independent vectors to match with the  's which are on the diagonal of . Recall that the dimension of the eigenspace is the geometric multiplicity. Therefore, we are unable to find an invertible when any eigenvalue has geometric multiplicity less than its algebraic multiplicity. If that happens for any of the eigenvalues, then is NOT diagonalizable.      Characterizing Diagonalizability   Diagonalization Criterion   A matrix is diagonalizable if and only if has linearly independent eigenvectors. Equivalently,   where are linearly independent eigenvectors and are the corresponding eigenvalues (in order).      Algebraic vs. Geometric Multiplicity   Suppose:   is ,  has distinct eigenvalues with ,  is the algebraic multiplicity of ,  is the geometric multiplicity (dimension of the -eigenspace).   Then:   for all .   is diagonalizable for all .   is diagonalizable the eigenvectors for all eigenvalues together form a basis of .       Diagonalization with Distinct Eigenvalues   If is and has distinct eigenvalues, then is diagonalizable.         Diagonalize if possible:        Example 2: Diagonalize if Possible    Diagonalize if possible:        Example 3: Build P and D    The eigenvalues of are . If possible, construct and such that . Verify by checking that .        Example 3: Build P and D    Diagonalize the following matrix, if possible.        Additional Example (if time permits)   Diagonalization and a Famous Sequence   Note that   generates a well-known sequence of numbers. Use diagonalization to find a matrix expression that gives the -th number in this sequence.      "
+  "body": " 5.3 Diagonalization   5.3 Diagonalization   Overview   Motivation: It can be useful to take large powers of matrices, for example for large .   But: Multiplying two matrices requires roughly computations.   Question: Is there a more efficient way to compute ?    Topics   Similar matrices  Diagonal, similar, and diagonalizable matrices  Diagonalizing matrices     Goals   Determine whether a matrix can be diagonalized, and if possible diagonalize a square matrix.  Apply diagonalization to compute matrix powers.      Similarity   Two matrices and are similar if there exists an invertible matrix such that    Matrix similarity is an equivalence relation meaning:    Reflexive Property : Every matrix is similar to itself.   Proof: Let be any matrix and let . Then . Thus, is similar to .      Symmetric Property : If is similar to , then is similar to .   Proof: Suppose for some invertible matrix . By multiplying both sides of the equation by on the left and on the right we get . Letting , we have that , so is similar to .      Transitive Property : If is similar to and is similar to , then is similar to .   Proof: Suppose and . Then we have that , so is similar to .          Characteristic Polynomial of Similar Matrices   If and are similar, then they have the same characteristic polynomial.    Recall that and are the characteristic polynomials of and , respectively. Since and are similar, we have that for some invertible matrix . Note the following:     Thus, , so and have the same characteristic polynomial.     Notes:  Similar matrices have exactly the same eigenvalues with exactly the same algebraic multiplicity for each eigenvalue and exactly the same geometric multiplicity for each eigenvalue.  The converse of is not true; that is, just because two matrices have the same characterisitc polynomial, that does not mean that they are similar. For example, have the same characteristic polynomial, but are not similar because the eigenvalue does not have the same geometric multiplicty for each matrix.       True or false: If is similar to the identity matrix, then is equal to the identity matrix.    If is similar to , then there exists an invertible matrix so that . Thus, must be the identity matrix.       Diagonal Matrices   Diagonal Matrix   A matrix is diagonal if the only nonzero entries (if any) lie on the main diagonal. In this course, we work only with square diagonal matrices.    Examples of diagonal matrices:    If is diagonal, then is easy to compute by raising diagonal entries to the -th power.   Example: Powers of a Diagonal Matrix    Let . Compute and .    Note that . It follows that       Is this as easy to do if is not diagonal?    Let . Then . There is no apparant pattern like there is when is diagonal.      What about if is similar to a diagonal matrix?    Suppose for some invertible matrix and some diagonal matrix . Note that . It follows that . Therefore, if we know that is similar to a diagonal matrix, then we can calculate power of much faster than expected.        Diagonalization   Diagonalizable Matrix   A matrix is diagonalizable if it is similar to a diagonal matrix ; that is, there exists an invertible matrix such that      First, let's identify . Since is diagonal, every entry not on the diagonal must be zero. Therefore, to identify , we need to identify the entries on the diagonal. By , and must have the same characteristic polynomial. Thus, they must have the same eigenvalues. Since is diagonal, it is both upper and lower triangular. Therefore, by , the eigenvalues of are the entries on the diagonal. Hence, the eigenvalues of must be the diagonal entries of . So, if the eigenvalues of are (listing repeated eigenvalues the appropriate number of times), then    Caution 1 : The above reasoning assumes that the matrix has real eigenvalues (counting multiplicity). What if has fewer than eigenvalues. For example, if , then has ZERO real eigenvalues (check this). If has fewer than eigenvalues, then we WILL NOT be able to fill all the missing entries of . We couldn't just fill the gaps with 0's because that would imply that had more 0 eigenvalues than . Therefore, in the case where has fewer than eigenvalues; that is, when the algebraic multiplicities of the eigenvalues add up to less than , then it is IMPOSSIBLE to form . Thus, would NOT be diagonalizable.   Assuming we can find , we now need to find . Let . Then, we can rearrange the equation my multiplying by on the right of both sides to get . Note that and . Since , we can set corresponding columns equal to each other to find . Since (else would not be invertible) we have that the columns must be eigenvectors of corresponding to !   Caution 2 : Note that would fail to be invertible if the columns were linearly independent. Therefore, we must have that the vectors are linearly independent. Are we guaranteed to be able to find linearly independent eigenvectors? This is only possible if every eigenspace is as big as it is supposed to be. For example, if the eigenvalue has algebraic multiplicity 3, then we expect the -eigenspace to be 3-dimensional. If it is not, then it is impossible for us to find 3 linearly independent eigenvectors corresponding to . Therefore, it would be impossible to form since must contain linearly independent vectors to match with the  's which are on the diagonal of . Recall that the dimension of the eigenspace is the geometric multiplicity. Therefore, we are unable to find an invertible when any eigenvalue has geometric multiplicity less than its algebraic multiplicity. If that happens for any of the eigenvalues, then is NOT diagonalizable.      Characterizing Diagonalizability   Diagonalization Criterion   A matrix is diagonalizable if and only if has linearly independent eigenvectors. Equivalently,   where are linearly independent eigenvectors and are the corresponding eigenvalues (in order).      Algebraic vs. Geometric Multiplicity   Suppose:   is ,  has distinct eigenvalues with ,  is the algebraic multiplicity of ,  is the geometric multiplicity (dimension of the -eigenspace).   Then:   for all .   is diagonalizable for all .   is diagonalizable the eigenvectors for all eigenvalues together form a basis of .       Diagonalization with Distinct Eigenvalues   If is and has distinct eigenvalues, then is diagonalizable.         Diagonalize if possible:     First, note that by we have that the eigenvalues of are with algebraic multiplicity 2. Since we have two eigenvalues (counting algebraic multiplicity) and since is a matrix, we know that we can form .  Next, we need to check if we can form which, by , requires that the geometric multiplicity of is the same as the algebraic multiplicity, so 2. Note that which only has a single free variable. It follows that the geometric multiplicity of is only 1. More precisely, we have that . Notice, this does not give enough linearly independent eigenvectors to form . Therefore, is not diagonalizable.       Example 2: Diagonalize if Possible    Diagonalize if possible:     Again, we can use to see that the eigenvalues of are and with both having algebraic multiplicty of 1. By , we know that must be diagonalizable. Let's find linearly independent eigenvectors corresponding to each eigenvalue.  For , we see that It follows that .  For , we see that It follows that .  Since we have found 2 linearly independent eigenvectors, one corresponding to and one corresponding to , we can form and . Let . Note that there are many correct choices for . The only criteria for is that the first column contains an eigenvector corresponding to the first eigenvalue listed in and the second column contains an eigenvector corresponding to the second eigenvalue listed in . You don't have to use the eigenvectors found above. Also, you are free to swap the order of the eigenvalues in , this would just require that you also switch the columns of .  We can check our solution by calculating . For a matrix, this isn't so bad. However, if the matrices were or higher, calculating could be annoying. So, instead of checking , it is equivalent to check as long as is invertible (which it better be). Note that and . Since and since is diagonal and is invertible, our choice of and is a valid diagonalization of .       Example 3: Build P and D    The eigenvalues of are . If possible, construct and such that . Verify by checking that .     We are given that and are the eigenvalues of . If both have algebraic multiplicity of 1, then is NOT diagonalizable since doesn't have enough eigenvalues. Let's calculate the geometric multiplicities of each eigenvalue and see if that sheds some light on the algebraic multiplicities.  For , note that which has two free variables. It follows that . Thus, the geometric multiplicity of is 2, which means the algebraic multiplicity of is 2 as well.  For , note that . It follows that .  Thus, we have that is a possible diagonalization of . As mentioned in previous examples, this is not the only possible diagonalization of . You could swap around the eigenvalues on the diagonal of and the corresponding eigenvectors in or you could replace some of the eigenvectors in with other eigenvectors corresponding to the same eigenvalue as the previous and still linearly independent to the other columns. For example, the following is another possible diagonalization of : . Checking, we see that and . Since , this is a valid diagonalization of .       Example 3: Build P and D    Diagonalize the following matrix, if possible.     First, we find the eigenvalues of . Note that     Exanding across Row 2 yeilds:     It follows that the eigenvalues of are with algebraic multiplicity of 2 and with algebraic multiplicity of 1. Since is a matrix and we found eigenvalues (counting multiplicites), we can form . Now let's see if we can form .  For , note that which only has a single free variable. Therefore, the eigenvalue has algebraic multiplicity of 2 but geometric multiplicity of 1. Thus, is NOT diagonalizable.       Additional Example (if time permits)   Diagonalization and a Famous Sequence   Note that   generates a well-known sequence of numbers. Use diagonalization to find a matrix expression that gives the -th number in this sequence.    Solution will be posted by Wednesday (3\/11) night.      "
 },
 {
   "id": "obj-5-3-topics-goals",
@@ -2428,7 +2428,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "5.36",
   "title": "",
-  "body": "  Diagonalize if possible:    "
+  "body": "  Diagonalize if possible:     First, note that by we have that the eigenvalues of are with algebraic multiplicity 2. Since we have two eigenvalues (counting algebraic multiplicity) and since is a matrix, we know that we can form .  Next, we need to check if we can form which, by , requires that the geometric multiplicity of is the same as the algebraic multiplicity, so 2. Note that which only has a single free variable. It follows that the geometric multiplicity of is only 1. More precisely, we have that . Notice, this does not give enough linearly independent eigenvectors to form . Therefore, is not diagonalizable.   "
 },
 {
   "id": "ex-5-3-diagonalize-2",
@@ -2437,7 +2437,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "5.37",
   "title": "",
-  "body": "  Diagonalize if possible:    "
+  "body": "  Diagonalize if possible:     Again, we can use to see that the eigenvalues of are and with both having algebraic multiplicty of 1. By , we know that must be diagonalizable. Let's find linearly independent eigenvectors corresponding to each eigenvalue.  For , we see that It follows that .  For , we see that It follows that .  Since we have found 2 linearly independent eigenvectors, one corresponding to and one corresponding to , we can form and . Let . Note that there are many correct choices for . The only criteria for is that the first column contains an eigenvector corresponding to the first eigenvalue listed in and the second column contains an eigenvector corresponding to the second eigenvalue listed in . You don't have to use the eigenvectors found above. Also, you are free to swap the order of the eigenvalues in , this would just require that you also switch the columns of .  We can check our solution by calculating . For a matrix, this isn't so bad. However, if the matrices were or higher, calculating could be annoying. So, instead of checking , it is equivalent to check as long as is invertible (which it better be). Note that and . Since and since is diagonal and is invertible, our choice of and is a valid diagonalization of .   "
 },
 {
   "id": "ex-5-3-construct-PD",
@@ -2446,7 +2446,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "5.38",
   "title": "",
-  "body": "  The eigenvalues of are . If possible, construct and such that . Verify by checking that .    "
+  "body": "  The eigenvalues of are . If possible, construct and such that . Verify by checking that .     We are given that and are the eigenvalues of . If both have algebraic multiplicity of 1, then is NOT diagonalizable since doesn't have enough eigenvalues. Let's calculate the geometric multiplicities of each eigenvalue and see if that sheds some light on the algebraic multiplicities.  For , note that which has two free variables. It follows that . Thus, the geometric multiplicity of is 2, which means the algebraic multiplicity of is 2 as well.  For , note that . It follows that .  Thus, we have that is a possible diagonalization of . As mentioned in previous examples, this is not the only possible diagonalization of . You could swap around the eigenvalues on the diagonal of and the corresponding eigenvectors in or you could replace some of the eigenvectors in with other eigenvectors corresponding to the same eigenvalue as the previous and still linearly independent to the other columns. For example, the following is another possible diagonalization of : . Checking, we see that and . Since , this is a valid diagonalization of .   "
 },
 {
   "id": "ex-5-3-diagonalize-3-by-3",
@@ -2455,7 +2455,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "5.39",
   "title": "",
-  "body": "  Diagonalize the following matrix, if possible.    "
+  "body": "  Diagonalize the following matrix, if possible.     First, we find the eigenvalues of . Note that     Exanding across Row 2 yeilds:     It follows that the eigenvalues of are with algebraic multiplicity of 2 and with algebraic multiplicity of 1. Since is a matrix and we found eigenvalues (counting multiplicites), we can form . Now let's see if we can form .  For , note that which only has a single free variable. Therefore, the eigenvalue has algebraic multiplicity of 2 but geometric multiplicity of 1. Thus, is NOT diagonalizable.   "
 },
 {
   "id": "ex-5-3-fibonacci",
@@ -2464,7 +2464,160 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "5.40",
   "title": "Diagonalization and a Famous Sequence.",
-  "body": " Diagonalization and a Famous Sequence   Note that   generates a well-known sequence of numbers. Use diagonalization to find a matrix expression that gives the -th number in this sequence.   "
+  "body": " Diagonalization and a Famous Sequence   Note that   generates a well-known sequence of numbers. Use diagonalization to find a matrix expression that gives the -th number in this sequence.    Solution will be posted by Wednesday (3\/11) night.   "
+},
+{
+  "id": "Section-5-5",
+  "level": "1",
+  "url": "Section-5-5.html",
+  "type": "Section",
+  "number": "",
+  "title": "5.5 Complex Eigenvalues",
+  "body": " 5.5 Complex Eigenvalues   5.5 Complex Eigenvalues   Overview   Topics   Complex numbers: addition, multiplication, complex conjugate  Complex eigenvalues and eigenvectors  Eigenvalue theorems     Goals   Use eigenvalues to identify the rotation and dilation of a linear transform.  Recognize rotation–dilation matrices.  Find complex eigenvalues and eigenvectors of a real matrix.  Apply theorems to characterize matrices with complex eigenvalues.       Consider the linear transformation which rotates vectors counterclockwise by 90 .     Find the matrix so that .      Find the characteristic polynomial of .      What are the eigenvalues of ?         Complex Numbes   The complex numbers are denoted by , where     We can identify with via .   We can add and multiply complex numbers by treating as variable and simplifying powers of appropriately.    Let and let . Calculate the following:     Sum of complex numbers:       Product of complex numbers:         Complex Conjugate, Absolute Value, and Polar Form   Complex Conjugate   The conjugate of is .      Absolute Value (Modulus)   The absolute value (modulus) of is .       The polar form of a complex number is , where and is the argument.       Given , compute , , and the polar form of .        Conjugate Properties   Let and ., Then we have the following properties:    (for a real matrix )        Conjugation reflects points across the real axis.    Diagram showing complex conjugation as reflection over real axis.  The point at angle reflects to at angle across the real axis.      Euler’s Formula and Products in Polar Form  Suppose has angle and has angle ; that is, let and . Note that Therefore, the product has modulus and has angle .    Angles in polar form for complex numbers and their product.  Vectors representing , , and their product with angles adding: .      Complex Numbers and Polynomials   Fundamental Theorem of Algebra   Every polynomial of degree has exactly complex roots, counting multiplicity.      Conjugate Pairs for Real Coefficients    If is a root of a real polynomial , then the conjugate is also a root of .  If is an eigenvalue of a real matrix with eigenvector , then is an eigenvalue of with eigenvector .        Four eigenvalues of a real matrix are , , , and . What are the other eigenvalues?       Rotation–Dilation Matrices and Eigenvalues    The matrix that rotates vectors by about the origin and then scales by is   Find the eigenvalues of and one eigenvector for each eigenvalue.       General Rotation–Dilation Form  The previous example is a special case of the real rotation–dilation matrix .    Compute the eigenvalues of   and express them in the polar form .       Finding Complex Eigenpairs    Find the complex eigenvalues and an associated complex eigenvector for each eigenvalue of       "
+},
+{
+  "id": "obj-5-5-topics-goals",
+  "level": "2",
+  "url": "Section-5-5.html#obj-5-5-topics-goals",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   Complex numbers: addition, multiplication, complex conjugate  Complex eigenvalues and eigenvectors  Eigenvalue theorems   "
+},
+{
+  "id": "p-5-5-overview-3",
+  "level": "2",
+  "url": "Section-5-5.html#p-5-5-overview-3",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals   Use eigenvalues to identify the rotation and dilation of a linear transform.  Recognize rotation–dilation matrices.  Find complex eigenvalues and eigenvectors of a real matrix.  Apply theorems to characterize matrices with complex eigenvalues.   "
+},
+{
+  "id": "p-5-5-overview-5",
+  "level": "2",
+  "url": "Section-5-5.html#p-5-5-overview-5",
+  "type": "Example",
+  "number": "5.41",
+  "title": "",
+  "body": "  Consider the linear transformation which rotates vectors counterclockwise by 90 .     Find the matrix so that .      Find the characteristic polynomial of .      What are the eigenvalues of ?    "
+},
+{
+  "id": "def-complex-numbers",
+  "level": "2",
+  "url": "Section-5-5.html#def-complex-numbers",
+  "type": "Definition",
+  "number": "5.42",
+  "title": "Complex Numbes.",
+  "body": " Complex Numbes   The complex numbers are denoted by , where    "
+},
+{
+  "id": "ex-5-5-add-mul",
+  "level": "2",
+  "url": "Section-5-5.html#ex-5-5-add-mul",
+  "type": "Example",
+  "number": "5.43",
+  "title": "",
+  "body": "  Let and let . Calculate the following:     Sum of complex numbers:       Product of complex numbers:     "
+},
+{
+  "id": "def-conjugate",
+  "level": "2",
+  "url": "Section-5-5.html#def-conjugate",
+  "type": "Definition",
+  "number": "5.44",
+  "title": "Complex Conjugate.",
+  "body": " Complex Conjugate   The conjugate of is .   "
+},
+{
+  "id": "def-abs",
+  "level": "2",
+  "url": "Section-5-5.html#def-abs",
+  "type": "Definition",
+  "number": "5.45",
+  "title": "Absolute Value (Modulus).",
+  "body": " Absolute Value (Modulus)   The absolute value (modulus) of is .   "
+},
+{
+  "id": "def-polar-form",
+  "level": "2",
+  "url": "Section-5-5.html#def-polar-form",
+  "type": "Definition",
+  "number": "5.46",
+  "title": "",
+  "body": "  The polar form of a complex number is , where and is the argument.   "
+},
+{
+  "id": "ex-5-5-conj-mod-polar",
+  "level": "2",
+  "url": "Section-5-5.html#ex-5-5-conj-mod-polar",
+  "type": "Example",
+  "number": "5.47",
+  "title": "",
+  "body": "  Given , compute , , and the polar form of .   "
+},
+{
+  "id": "thm-conjugate-properties",
+  "level": "2",
+  "url": "Section-5-5.html#thm-conjugate-properties",
+  "type": "Theorem",
+  "number": "5.48",
+  "title": "Conjugate Properties.",
+  "body": " Conjugate Properties   Let and ., Then we have the following properties:    (for a real matrix )      "
+},
+{
+  "id": "thm-fta",
+  "level": "2",
+  "url": "Section-5-5.html#thm-fta",
+  "type": "Theorem",
+  "number": "5.49",
+  "title": "Fundamental Theorem of Algebra.",
+  "body": " Fundamental Theorem of Algebra   Every polynomial of degree has exactly complex roots, counting multiplicity.   "
+},
+{
+  "id": "thm-conjugate-roots",
+  "level": "2",
+  "url": "Section-5-5.html#thm-conjugate-roots",
+  "type": "Theorem",
+  "number": "5.50",
+  "title": "Conjugate Pairs for Real Coefficients.",
+  "body": " Conjugate Pairs for Real Coefficients    If is a root of a real polynomial , then the conjugate is also a root of .  If is an eigenvalue of a real matrix with eigenvector , then is an eigenvalue of with eigenvector .    "
+},
+{
+  "id": "ex-5-5-complete-eigs",
+  "level": "2",
+  "url": "Section-5-5.html#ex-5-5-complete-eigs",
+  "type": "Example",
+  "number": "5.51",
+  "title": "",
+  "body": "  Four eigenvalues of a real matrix are , , , and . What are the other eigenvalues?   "
+},
+{
+  "id": "ex-5-5-rot-dil-eigs",
+  "level": "2",
+  "url": "Section-5-5.html#ex-5-5-rot-dil-eigs",
+  "type": "Example",
+  "number": "5.52",
+  "title": "",
+  "body": "  The matrix that rotates vectors by about the origin and then scales by is   Find the eigenvalues of and one eigenvector for each eigenvalue.   "
+},
+{
+  "id": "ex-5-5-C-eigs-polar-1",
+  "level": "2",
+  "url": "Section-5-5.html#ex-5-5-C-eigs-polar-1",
+  "type": "Example",
+  "number": "5.53",
+  "title": "",
+  "body": "  Compute the eigenvalues of   and express them in the polar form .   "
+},
+{
+  "id": "ex-5-5-complex-eigs",
+  "level": "2",
+  "url": "Section-5-5.html#ex-5-5-complex-eigs",
+  "type": "Example",
+  "number": "5.54",
+  "title": "",
+  "body": "  Find the complex eigenvalues and an associated complex eigenvector for each eigenvalue of    "
 }
 ]
 
