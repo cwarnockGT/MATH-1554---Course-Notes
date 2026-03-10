@@ -13,7 +13,7 @@
       </ul>
     </objectives>
     <objectives>
-      <p><em>Goals</em></p>
+      <title>Goals</title>
       <ul>
         <li>Calculate coordinates of a vector in a given basis.</li>
         <li>Characterize subspaces using the concept of dimension.</li>

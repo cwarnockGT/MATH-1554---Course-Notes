@@ -17,6 +17,11 @@
       <xi:include href="./chapter-5-notes/section-5-3-sol.ptx" />
   </section>
 
+  <section xml:id="Section-5-5">
+    <title>5.5 Complex Eigenvalues</title>
+      <xi:include href="./chapter-5-notes/section-5-5.ptx" />
+  </section>
+
 
   
   

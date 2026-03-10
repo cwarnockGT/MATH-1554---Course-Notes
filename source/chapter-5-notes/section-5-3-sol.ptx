@@ -332,12 +332,20 @@
       <statement>
         <p>Diagonalize if possible:</p>
         <me>
-          \begin{bmatrix}
+          A = \begin{bmatrix}
             3 \amp 1\\
             0 \amp 3
           \end{bmatrix}.
         </me>
       </statement>
+      <solution>
+        <p>
+          First, note that by <xref ref="thm-triangular-diagonal-are-eigs"/> we have that the eigenvalues of <m>A</m> are <m>\lambda = 3</m> with algebraic multiplicity 2. Since we have two eigenvalues (counting algebraic multiplicity) and since <m>A</m> is a <m>2 \times 2</m> matrix, we know that we can form <m>D</m>.
+        </p>
+        <p>
+          Next, we need to check if we can form <m>P</m> which, by <xref ref="thm-diagonalizable-multiplicity-conditions"/>, requires that the geometric multiplicity of <m>\lambda = 3</m> is the same as the algebraic multiplicity, so 2. Note that <me>A - 3I = \begin{bmatrix} 0 \amp 1 \\ 0 \amp 0 \end{bmatrix}</me> which only has a single free variable. It follows that the geometric multiplicity of <m>\lambda = 3</m> is only 1. More precisely, we have that <me>3\text{-eigenspace}(A) = \Nul(A - 3I) = \Span\left\{\begin{bmatrix} 1 \\ 0 \end{bmatrix}\right\}</me>. Notice, this does not give enough linearly independent eigenvectors to form <m>P</m>. Therefore, <m>A</m> is not diagonalizable.
+        </p>
+      </solution>
     </example>
 
     <p><nbsp/></p>
@@ -352,12 +360,29 @@
       <statement>
         <p>Diagonalize if possible:</p>
         <me>
-          \begin{bmatrix}
+          A = \begin{bmatrix}
             2 \amp 6\\
             0 \amp -1
           \end{bmatrix}.
         </me>
       </statement>
+      <solution>
+        <p>
+          Again, we can use <xref ref="thm-triangular-diagonal-are-eigs"/> to see that the eigenvalues of <m>A</m> are <m>\lambda_1 = 2</m> and <m>\lambda_2 = -1</m> with both having algebraic multiplicty of 1. By <xref ref="thm-distinct-eigenvalues-independent"/>, we know that <m>A</m> must be diagonalizable. Let's find linearly independent eigenvectors corresponding to each eigenvalue.
+        </p>
+        <p>
+          For <m>\lambda_1 = 2</m>, we see that <me>A - 2I = \begin{bmatrix} 0 \amp 6 \\ 0 \amp -3 \end{bmatrix} \sim \begin{bmatrix} 0 \amp 1 \\ 0 \amp 0 \end{bmatrix}.</me> It follows that <me>2\text{-eigenspace}(A) = \Nul(A - 2I) = \Span\left\{\begin{bmatrix} 1 \\ 0 \end{bmatrix}\right\}</me>.
+        </p>
+        <p>
+          For <m>\lambda_2 = -1</m>, we see that <me>A - (-1)I = \begin{bmatrix} 3 \amp 6 \\ 0 \amp 0 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 2 \\ 0 \amp 0 \end{bmatrix}.</me> It follows that <me>-1\text{-eigenspace}(A) = \Nul(A - (-1)I) = \Span\left\{\begin{bmatrix} 2 \\ -1 \end{bmatrix}\right\}</me>.
+        </p>
+        <p>
+          Since we have found 2 linearly independent eigenvectors, one corresponding to <m>\lambda_1 = 2</m> and one corresponding to <m>\lambda_2 = -1</m>, we can form <m>D</m> and <m>P</m>. Let <me>D = \begin{bmatrix} 2 \amp 0 \\ 0 \amp -1 \end{bmatrix} \quad \text{and} \quad P = \begin{bmatrix} 1 \amp 2 \\ 0 \amp -1 \end{bmatrix}</me>. Note that there are many correct choices for <m>P</m>. The only criteria for <m>P</m> is that the first column contains an eigenvector corresponding to the first eigenvalue listed in <m>D</m> and the second column contains an eigenvector corresponding to the second eigenvalue listed in <m>D</m>. You don't have to use the eigenvectors found above. Also, you are free to swap the order of the eigenvalues in <m>D</m>, this would just require that you also switch the columns of <m>P</m>.
+        </p>
+        <p>
+          We can check our solution by calculating <m>A = PDP^{-1}</m>. For a <m>2 \times 2</m> matrix, this isn't so bad. However, if the matrices were <m>3 \times 3</m> or higher, calculating <m>P^{-1}</m> could be annoying. So, instead of checking <m>A = PDP^{-1}</m>, it is equivalent to check <m>AP = PD</m> as long as <m>P</m> is invertible (which it better be). Note that <me>AP = \begin{bmatrix} 2 \amp 6 \\ 0 \amp -1 \end{bmatrix} \begin{bmatrix} 1 \amp 2 \\ 0 \amp -1 \end{bmatrix} = \begin{bmatrix} 2 \amp -2 \\ 0 \amp 1 \end{bmatrix}</me> and <me>PD = \begin{bmatrix} 1 \amp 2 \\ 0 \amp -1 \end{bmatrix} \begin{bmatrix} 2 \amp 0 \\ 0 \amp -1 \end{bmatrix} = \begin{bmatrix} 2 \amp -2 \\ 0 \amp 1 \end{bmatrix}</me>. Since <m>AP = PD</m> and since <m>D</m> is diagonal and <m>P</m> is invertible, our choice of <m>D</m> and <m>P</m> is a valid diagonalization of <m>A</m>.
+        </p>
+      </solution>
     </example>
 
     <p><nbsp/></p>
@@ -383,6 +408,20 @@
           \end{bmatrix}.
         </me>
       </statement>
+      <solution>
+        <p>
+          We are given that <m>\lambda_1 = 3</m> and <m>\lambda_2 = 1</m> are the eigenvalues of <m>A</m>. If both have algebraic multiplicity of 1, then <m>A</m> is NOT diagonalizable since <m>A</m> doesn't have enough eigenvalues. Let's calculate the geometric multiplicities of each eigenvalue and see if that sheds some light on the algebraic multiplicities.
+        </p>
+        <p>
+          For <m>\lambda_1 = 3</m>, note that <me>A - 3I = \begin{bmatrix} 4 \amp 4 \amp 16 \\ 2 \amp 2 \amp 8 \\ -2 \amp -2 \amp -8 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 1 \amp 4 \\ 0 \amp 0 \amp 0 \\ 0 \amp 0 \amp 0 \end{bmatrix}</me> which has two free variables. It follows that <me>3\text{-eigenspace}(A) = \Nul(A - 3I) = \Span\left\{\begin{bmatrix} 1 \\ -1 \\ 0 \end{bmatrix}, \begin{bmatrix} -4 \\ 0 \\ 1 \end{bmatrix}\right\}</me>. Thus, the geometric multiplicity of <m>\lambda_1 = 3</m> is 2, which means the algebraic multiplicity of <m>\lambda_1 = 3</m> is 2 as well.
+        </p>
+        <p>
+          For <m>\lambda_2 = 1</m>, note that <me>A - I = \begin{bmatrix} 6 \amp 4 \amp 16 \\ 2 \amp 4 \amp 8 \\ -2 \amp -2 \amp -6 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 1 \amp 3 \\ 1 \amp 2 \amp 4 \\ 3 \amp 2 \amp 8 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp 2 \\ 0 \amp 1 \amp 1 \\ 0 \amp 0 \amp 0 \end{bmatrix}</me>. It follows that <me>1\text{-eigenspace}(A) = \Nul(A - I) = \Span\left\{\begin{bmatrix} 2 \\ 1 \\ -1 \end{bmatrix}\right\}</me>.
+        </p>
+        <p>
+          Thus, we have that <me>D = \begin{bmatrix} 3 \amp 0 \amp 0 \\ 0 \amp 3 \amp 0 \\ 0 \amp 0 \amp 1 \end{bmatrix} \quad \text{and} \quad P = \begin{bmatrix} 1 \amp -4 \amp 2 \\ -1 \amp 0 \amp 1 \\ 0 \amp 1 \amp -1 \end{bmatrix}</me> is a possible diagonalization of <m>A</m>. As mentioned in previous examples, this is not the only possible diagonalization of <m>A</m>. You could swap around the eigenvalues on the diagonal of <m>D</m> and the corresponding eigenvectors in <m>P</m> or you could replace some of the eigenvectors in <m>P</m> with other eigenvectors corresponding to the same eigenvalue as the previous and still linearly independent to the other columns. For example, the following is another possible diagonalization of <m>A</m>: <me>D = \begin{bmatrix} 3 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 3 \end{bmatrix} \quad \text{and} \quad P = \begin{bmatrix} -3 \amp 6 \amp 2 \\ -1 \amp 3 \amp 2 \\ 1 \amp -3 \amp -1 \end{bmatrix}</me>. Checking, we see that <me>AP = \begin{bmatrix} 7 \amp 4 \amp 16 \\ 2 \amp 5 \amp 8 \\ -2 \amp -2 \amp -5 \end{bmatrix}\begin{bmatrix} -3 \amp 6 \amp 2 \\ -1 \amp 3 \amp 2 \\ 1 \amp -3 \amp -1 \end{bmatrix} = \begin{bmatrix} -9 \amp 6 \amp 6 \\ -3 \amp 3 \amp 6 \\ 3 \amp -3 \amp -3 \end{bmatrix}</me> and <me>PD = \begin{bmatrix} -3 \amp 6 \amp 2 \\ -1 \amp 3 \amp 2 \\ 1 \amp -3 \amp -1 \end{bmatrix}\begin{bmatrix} 3 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 3 \end{bmatrix} = \begin{bmatrix} -9 \amp 6 \amp 6 \\ -3 \amp 3 \amp 6 \\ 3 \amp -3 \amp -3 \end{bmatrix}</me>. Since <m>AP = PD</m>, this is a valid diagonalization of <m>A</m>.
+        </p>
+      </solution>
     </example>
 
     <p><nbsp/></p>
@@ -405,6 +444,23 @@
           \end{bmatrix}.
         </me>
       </statement>
+      <solution>
+        <p>
+          First, we find the eigenvalues of <m>A</m>. Note that </p> 
+          <p>
+          <m>\begin{eqnarray*}\det(A - \lambda I) \amp = \amp \begin{vmatrix} 2 - \lambda \amp 4 \amp 3 \\ -4 \amp -6 - \lambda \amp -3 \\ 3 \amp 3 \amp 1 - \lambda \end{vmatrix} \\ \amp \overset{R_2 + R_1 \rightarrow R_2}{=} \amp \begin{vmatrix} 2 - \lambda \amp 4 \amp 3 \\ -2 - \lambda \amp -2 - \lambda \amp 0 \\ 3 \amp 3 \amp 1 - \lambda \end{vmatrix}\end{eqnarray*}</m>
+          </p> 
+          <p> Exanding across Row 2 yeilds:</p> 
+          <p>
+            <m>\begin{eqnarray*}\det(A -\lambda I) \amp = \amp -(-2-\lambda)\begin{vmatrix} 4 \amp 3 \\ 3 \amp 1-\lambda \end{vmatrix} + (-2-\lambda)\begin{vmatrix} 2-\lambda \amp 3 \\ 3 \amp 1-\lambda \end{vmatrix} \\ \amp = \amp (-2-\lambda)[-(4(1-\lambda) - 9) + ((2-\lambda)(1-\lambda) - 9)] \\ \amp = \amp (-2-\lambda)[\lambda^2 + \lambda -2] \\ \amp = \amp -(\lambda + 2)(\lambda + 2)(\lambda-1) \\ \amp = \amp -(\lambda + 2)^2(\lambda - 1)\end{eqnarray*}</m> 
+        </p>
+        <p>
+          It follows that the eigenvalues of <m>A</m> are <m>\lambda_1 = -2</m> with algebraic multiplicity of 2 and <m>\lambda_2 = 1</m> with algebraic multiplicity of 1. Since <m>A</m> is a <m>3 \times 3</m> matrix and we found <m>3</m> eigenvalues (counting multiplicites), we can form <m>D</m>. Now let's see if we can form <m>P</m>.
+        </p>
+        <p>
+          For <m>\lambda_1 = -2</m>, note that <me>A - (-2)I = \begin{bmatrix} 4 \amp 4 \amp 3 \\ -4 \amp -4 \amp -3 \\ 3 \amp 3 \amp 3 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 1 \amp 1 \\ 1 \amp 1 \amp 0 \\ 0 \amp 0 \amp 0 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 1 \amp 1 \\ 0 \amp 0 \amp -1 \\ 0 \amp 0 \amp 0 \end{bmatrix}</me> which only has a single free variable. Therefore, the eigenvalue <m>\lambda_1 = -2</m> has algebraic multiplicity of 2 but geometric multiplicity of 1. Thus, <m>A</m> is NOT diagonalizable.
+        </p>
+      </solution>
     </example>
 
     <p><nbsp/></p>
@@ -439,6 +495,11 @@
           <m>n</m>-th number in this sequence.
         </p>
       </statement>
+      <solution>
+        <p>
+          Solution will be posted by Wednesday (3/11) night.
+        </p>
+      </solution>
     </example>
   </page>
 
