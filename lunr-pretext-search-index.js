@@ -2618,6 +2618,204 @@ var ptx_lunr_docs = [
   "number": "5.54",
   "title": "",
   "body": "  Find the complex eigenvalues and an associated complex eigenvector for each eigenvalue of    "
+},
+{
+  "id": "Section-6-1",
+  "level": "1",
+  "url": "Section-6-1.html",
+  "type": "Section",
+  "number": "",
+  "title": "6.1 Dot Product, Length, and Orthogonality",
+  "body": " 6.1 Dot Product, Length, and Orthogonality   6.1 Dot Product, Length, and Orthogonality   Overview   Topics   Dot product of vectors  Magnitude of vectors and distances in  Orthogonal vectors and complements  Angles between vectors     Goals   Compute (a) dot products, (b) magnitudes, (c) distances in , and (d) angles between vectors.  Apply theorems involving orthogonal complements, row\/column space, and their relationships to linear systems.    Motivating Question  For a matrix , which vectors are orthogonal to all the rows of ? To the columns of ?    Dot Product   The dot product of two vectors is:       For what values of is ?        Properties of the Dot Product   Basic Identities of the Dot Product   Let and .   (Symmetry) .  (Linearity) .  (Scalars) .  (Positivity) , and it equals 0 if and only if .       Length (Magnitude)   The length , or magnitude , of is       Compute where .   Sketch of the point (1,3,2) in 3-space.         Example: Length of a Sum    Let , , and . Compute .     For any vector and scalar ,    Unit Vector   A vector of length 1 is called a unit vector .    Examples of unit vectors:      Distance in   Distance   For , the distance between them is       Compute the distance between and .      Orthogonal Vectors   Two vectors are orthogonal if .  This is equivalent to     The zero vector is orthogonal to every vector in .    Example: Orthogonal Subspace in    Sketch the set of all vectors orthogonal to .   Sketch of the vector v in coordinate plane.        Orthogonal Complement   If is a subspace of , a vector is orthogonal to if for every . The set of all such vectors is the orthogonal complement :       Suppose . Find .      Example: Plane Orthogonal to a Line in    Let be the line spanned by . Since is 1-dimensional, its orthogonal complement is a plane. Find an equation for the plane .   Graph of a line L in 3-space passing through the origin and the point (1,-1,2).        Row Space   The row space is the subspace spanned by the rows of a matrix .    Facts:   .  A basis for is given by the pivot rows of .  In general, and are unrelated spaces.      Row Space    Describe in terms of an orthogonal subspace.   if and only if .  This means is to each row of .  Therefore is of .   .      The Four Subspaces   For any :   is the orthogonal complement of .  is the orthogonal complement of .     This geometric structure is often shown using overlapping regions representing the four fundamental subspaces.   Visual representation of the four subspaces from the Four Subspace Theorem       Angles Between Vectors   Dot Product and Angle   The dot product satisfies   Thus, if , then either one vector is zero or the vectors are orthogonal.      Find the angle between and . Note that is a unit vector.      "
+},
+{
+  "id": "obj-6-1-topics-goals",
+  "level": "2",
+  "url": "Section-6-1.html#obj-6-1-topics-goals",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   Dot product of vectors  Magnitude of vectors and distances in  Orthogonal vectors and complements  Angles between vectors   "
+},
+{
+  "id": "p-6-1-overview-3",
+  "level": "2",
+  "url": "Section-6-1.html#p-6-1-overview-3",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals   Compute (a) dot products, (b) magnitudes, (c) distances in , and (d) angles between vectors.  Apply theorems involving orthogonal complements, row\/column space, and their relationships to linear systems.   "
+},
+{
+  "id": "def-dot-product",
+  "level": "2",
+  "url": "Section-6-1.html#def-dot-product",
+  "type": "Definition",
+  "number": "6.1",
+  "title": "Dot Product.",
+  "body": " Dot Product   The dot product of two vectors is:    "
+},
+{
+  "id": "ex-6-1-dot-zero",
+  "level": "2",
+  "url": "Section-6-1.html#ex-6-1-dot-zero",
+  "type": "Example",
+  "number": "6.2",
+  "title": "",
+  "body": "  For what values of is ?    "
+},
+{
+  "id": "thm-dot-identities",
+  "level": "2",
+  "url": "Section-6-1.html#thm-dot-identities",
+  "type": "Theorem",
+  "number": "6.3",
+  "title": "Basic Identities of the Dot Product.",
+  "body": " Basic Identities of the Dot Product   Let and .   (Symmetry) .  (Linearity) .  (Scalars) .  (Positivity) , and it equals 0 if and only if .    "
+},
+{
+  "id": "def-length",
+  "level": "2",
+  "url": "Section-6-1.html#def-length",
+  "type": "Definition",
+  "number": "6.4",
+  "title": "Length (Magnitude).",
+  "body": " Length (Magnitude)   The length , or magnitude , of is    "
+},
+{
+  "id": "ex-6-1-length-op",
+  "level": "2",
+  "url": "Section-6-1.html#ex-6-1-length-op",
+  "type": "Example",
+  "number": "6.5",
+  "title": "",
+  "body": "  Compute where .   Sketch of the point (1,3,2) in 3-space.     "
+},
+{
+  "id": "ex-6-1-length-sum",
+  "level": "2",
+  "url": "Section-6-1.html#ex-6-1-length-sum",
+  "type": "Example",
+  "number": "6.6",
+  "title": "",
+  "body": "  Let , , and . Compute .   "
+},
+{
+  "id": "def-unit-vector",
+  "level": "2",
+  "url": "Section-6-1.html#def-unit-vector",
+  "type": "Definition",
+  "number": "6.7",
+  "title": "Unit Vector.",
+  "body": " Unit Vector   A vector of length 1 is called a unit vector .   "
+},
+{
+  "id": "def-distance",
+  "level": "2",
+  "url": "Section-6-1.html#def-distance",
+  "type": "Definition",
+  "number": "6.8",
+  "title": "Distance.",
+  "body": " Distance   For , the distance between them is    "
+},
+{
+  "id": "ex-6-1-distance",
+  "level": "2",
+  "url": "Section-6-1.html#ex-6-1-distance",
+  "type": "Example",
+  "number": "6.9",
+  "title": "",
+  "body": "  Compute the distance between and .   "
+},
+{
+  "id": "def-orthogonal",
+  "level": "2",
+  "url": "Section-6-1.html#def-orthogonal",
+  "type": "Definition",
+  "number": "6.10",
+  "title": "Orthogonal Vectors.",
+  "body": " Orthogonal Vectors   Two vectors are orthogonal if .  This is equivalent to    "
+},
+{
+  "id": "ex-6-1-orth-subspace",
+  "level": "2",
+  "url": "Section-6-1.html#ex-6-1-orth-subspace",
+  "type": "Example",
+  "number": "6.11",
+  "title": "",
+  "body": "  Sketch the set of all vectors orthogonal to .   Sketch of the vector v in coordinate plane.     "
+},
+{
+  "id": "def-orth-complement",
+  "level": "2",
+  "url": "Section-6-1.html#def-orth-complement",
+  "type": "Definition",
+  "number": "6.12",
+  "title": "Orthogonal Complement.",
+  "body": " Orthogonal Complement   If is a subspace of , a vector is orthogonal to if for every . The set of all such vectors is the orthogonal complement :    "
+},
+{
+  "id": "ex-6-1-col-row-orth",
+  "level": "2",
+  "url": "Section-6-1.html#ex-6-1-col-row-orth",
+  "type": "Example",
+  "number": "6.13",
+  "title": "",
+  "body": "  Suppose . Find .   "
+},
+{
+  "id": "ex-6-1-line-plane",
+  "level": "2",
+  "url": "Section-6-1.html#ex-6-1-line-plane",
+  "type": "Example",
+  "number": "6.14",
+  "title": "",
+  "body": "  Let be the line spanned by . Since is 1-dimensional, its orthogonal complement is a plane. Find an equation for the plane .   Graph of a line L in 3-space passing through the origin and the point (1,-1,2).     "
+},
+{
+  "id": "def-row-space",
+  "level": "2",
+  "url": "Section-6-1.html#def-row-space",
+  "type": "Definition",
+  "number": "6.15",
+  "title": "Row Space.",
+  "body": " Row Space   The row space is the subspace spanned by the rows of a matrix .   "
+},
+{
+  "id": "ex-6-1-null-row",
+  "level": "2",
+  "url": "Section-6-1.html#ex-6-1-null-row",
+  "type": "Example",
+  "number": "6.16",
+  "title": "",
+  "body": "  Describe in terms of an orthogonal subspace.   if and only if .  This means is to each row of .  Therefore is of .   .    "
+},
+{
+  "id": "thm-four-subspaces",
+  "level": "2",
+  "url": "Section-6-1.html#thm-four-subspaces",
+  "type": "Theorem",
+  "number": "6.17",
+  "title": "The Four Subspaces.",
+  "body": " The Four Subspaces   For any :   is the orthogonal complement of .  is the orthogonal complement of .    "
+},
+{
+  "id": "thm-angle",
+  "level": "2",
+  "url": "Section-6-1.html#thm-angle",
+  "type": "Theorem",
+  "number": "6.18",
+  "title": "Dot Product and Angle.",
+  "body": " Dot Product and Angle   The dot product satisfies   Thus, if , then either one vector is zero or the vectors are orthogonal.   "
+},
+{
+  "id": "ex-6-1-angles",
+  "level": "2",
+  "url": "Section-6-1.html#ex-6-1-angles",
+  "type": "Example",
+  "number": "6.19",
+  "title": "",
+  "body": "  Find the angle between and . Note that is a unit vector.   "
 }
 ]
 
