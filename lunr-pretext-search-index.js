@@ -2816,6 +2816,168 @@ var ptx_lunr_docs = [
   "number": "6.19",
   "title": "",
   "body": "  Find the angle between and . Note that is a unit vector.   "
+},
+{
+  "id": "Section-6-2",
+  "level": "1",
+  "url": "Section-6-2.html",
+  "type": "Section",
+  "number": "",
+  "title": "6.2 Orthogonal Sets, Orthogonal Bases, and Projections",
+  "body": " 6.2 Orthogonal Sets, Orthogonal Bases, and Projections   6.2 Orthogonal Sets, Orthogonal Bases, and Projections   Overview   Topics   Orthogonal sets of vectors  Orthogonal bases and projections     Goals    Apply orthogonality concepts to:   compute orthogonal projections and distances,  express a vector as a linear combination of orthogonal vectors,  characterize bases for subspaces of ,  construct orthonormal bases.      Motivating Question  What are the special properties of the following basis for ?     Orthogonal Set   A set of vectors is an orthogonal set if whenever .      Fill in missing entries so that is an orthogonal set:        Orthogonal Sets Are Linearly Independent   Linear Independence of Orthogonal Sets   If is an orthogonal set of vectors, then:   Furthermore, if all the vectors are nonzero, then the set is linearly independent.      Expansion in an Orthogonal Basis   If is an orthogonal basis for a subspace , then any can be written:   where        Example: Expansion in an Orthogonal Basis    Let and let be the subspace of that is orthogonal to .     Check that forms an orthogonal basis for .      Verify that .      Compute the expansion of in the basis .        Orthogonal Projections   Orthogonal Projection   For a nonzero vector and vector , the orthogonal projection of onto is:       Diagram showing projection of vector onto a line.  Visualization of as the closest point in the span of to .     Let be a nonzero vector. Then, the vector is orthogonal to . Furthermore, .      Let and . Write as the sum of two orthogonal vectors, one in and one orthogonal to .       Example: Projection onto a Line    Let be the line spanned by .     Find the projection of onto the line .      How close is to the line ?       Orthonormal Basis   An orthonormal basis for a subspace is an orthogonal basis in which each vector has length 1.  If is orthonormal and , then   and       Let . Find the missing entries in an orthonormal basis:        Orthogonal Matrices   Orthogonal Matrix   An orthogonal matrix is a square matrix whose columns are orthonormal.      An matrix has orthonormal columns if and only if .    Can have orthonormal columns if ?    Mapping Properties of Orthogonal Matrices   If is an orthogonal matrix, then:   Preserves length:  .   Preserves angles:  .  Preserves orthogonality.      Example   Compute the length of       "
+},
+{
+  "id": "obj-6-2-topics-goals",
+  "level": "2",
+  "url": "Section-6-2.html#obj-6-2-topics-goals",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   Orthogonal sets of vectors  Orthogonal bases and projections   "
+},
+{
+  "id": "p-6-2-overview-3",
+  "level": "2",
+  "url": "Section-6-2.html#p-6-2-overview-3",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals    Apply orthogonality concepts to:   compute orthogonal projections and distances,  express a vector as a linear combination of orthogonal vectors,  characterize bases for subspaces of ,  construct orthonormal bases.     "
+},
+{
+  "id": "def-orthogonal-set",
+  "level": "2",
+  "url": "Section-6-2.html#def-orthogonal-set",
+  "type": "Definition",
+  "number": "6.20",
+  "title": "Orthogonal Set.",
+  "body": " Orthogonal Set   A set of vectors is an orthogonal set if whenever .   "
+},
+{
+  "id": "ex-6-2-complete-orth-set",
+  "level": "2",
+  "url": "Section-6-2.html#ex-6-2-complete-orth-set",
+  "type": "Example",
+  "number": "6.21",
+  "title": "",
+  "body": "  Fill in missing entries so that is an orthogonal set:    "
+},
+{
+  "id": "thm-orth-li",
+  "level": "2",
+  "url": "Section-6-2.html#thm-orth-li",
+  "type": "Theorem",
+  "number": "6.22",
+  "title": "Linear Independence of Orthogonal Sets.",
+  "body": " Linear Independence of Orthogonal Sets   If is an orthogonal set of vectors, then:   Furthermore, if all the vectors are nonzero, then the set is linearly independent.   "
+},
+{
+  "id": "thm-orth-expansion",
+  "level": "2",
+  "url": "Section-6-2.html#thm-orth-expansion",
+  "type": "Theorem",
+  "number": "6.23",
+  "title": "Expansion in an Orthogonal Basis.",
+  "body": " Expansion in an Orthogonal Basis   If is an orthogonal basis for a subspace , then any can be written:   where    "
+},
+{
+  "id": "ex-6-2-expansion",
+  "level": "2",
+  "url": "Section-6-2.html#ex-6-2-expansion",
+  "type": "Example",
+  "number": "6.24",
+  "title": "",
+  "body": "  Let and let be the subspace of that is orthogonal to .     Check that forms an orthogonal basis for .      Verify that .      Compute the expansion of in the basis .    "
+},
+{
+  "id": "def-projection",
+  "level": "2",
+  "url": "Section-6-2.html#def-projection",
+  "type": "Definition",
+  "number": "6.25",
+  "title": "Orthogonal Projection.",
+  "body": " Orthogonal Projection   For a nonzero vector and vector , the orthogonal projection of onto is:    "
+},
+{
+  "id": "thm-projection-ortho",
+  "level": "2",
+  "url": "Section-6-2.html#thm-projection-ortho",
+  "type": "Theorem",
+  "number": "6.26",
+  "title": "",
+  "body": "  Let be a nonzero vector. Then, the vector is orthogonal to . Furthermore, .   "
+},
+{
+  "id": "ex-6-2-ortho",
+  "level": "2",
+  "url": "Section-6-2.html#ex-6-2-ortho",
+  "type": "Example",
+  "number": "6.27",
+  "title": "",
+  "body": "  Let and . Write as the sum of two orthogonal vectors, one in and one orthogonal to .   "
+},
+{
+  "id": "ex-6-2-projection",
+  "level": "2",
+  "url": "Section-6-2.html#ex-6-2-projection",
+  "type": "Example",
+  "number": "6.28",
+  "title": "",
+  "body": "  Let be the line spanned by .     Find the projection of onto the line .      How close is to the line ?    "
+},
+{
+  "id": "def-orthonormal-basis",
+  "level": "2",
+  "url": "Section-6-2.html#def-orthonormal-basis",
+  "type": "Definition",
+  "number": "6.29",
+  "title": "Orthonormal Basis.",
+  "body": " Orthonormal Basis   An orthonormal basis for a subspace is an orthogonal basis in which each vector has length 1.  If is orthonormal and , then   and    "
+},
+{
+  "id": "ex-6-2-orthonormal-complete",
+  "level": "2",
+  "url": "Section-6-2.html#ex-6-2-orthonormal-complete",
+  "type": "Example",
+  "number": "6.30",
+  "title": "",
+  "body": "  Let . Find the missing entries in an orthonormal basis:    "
+},
+{
+  "id": "def-orthogonal-matrix",
+  "level": "2",
+  "url": "Section-6-2.html#def-orthogonal-matrix",
+  "type": "Definition",
+  "number": "6.31",
+  "title": "Orthogonal Matrix.",
+  "body": " Orthogonal Matrix   An orthogonal matrix is a square matrix whose columns are orthonormal.   "
+},
+{
+  "id": "thm-orthonormal-columns",
+  "level": "2",
+  "url": "Section-6-2.html#thm-orthonormal-columns",
+  "type": "Theorem",
+  "number": "6.32",
+  "title": "",
+  "body": "  An matrix has orthonormal columns if and only if .   "
+},
+{
+  "id": "thm-orthogonal-maps",
+  "level": "2",
+  "url": "Section-6-2.html#thm-orthogonal-maps",
+  "type": "Theorem",
+  "number": "6.33",
+  "title": "Mapping Properties of Orthogonal Matrices.",
+  "body": " Mapping Properties of Orthogonal Matrices   If is an orthogonal matrix, then:   Preserves length:  .   Preserves angles:  .  Preserves orthogonality.    "
+},
+{
+  "id": "ex-6-2-length-after-U",
+  "level": "2",
+  "url": "Section-6-2.html#ex-6-2-length-after-U",
+  "type": "Example",
+  "number": "6.34",
+  "title": "Example.",
+  "body": " Example   Compute the length of    "
 }
 ]
 
