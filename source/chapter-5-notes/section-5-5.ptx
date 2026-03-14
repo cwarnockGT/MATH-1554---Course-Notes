@@ -159,7 +159,7 @@
           Let <m>x,y\in\mathbb{C}</m> and <m>\vec v\in\mathbb{C}^n</m>., Then we have the following properties:
           <ul>
             <li><m>\overline{(x+y)}=\overline{x}+\overline{y}</m></li>
-            <li><m>\overline{(xy)}=\overline{x}\overline{y}</m></li>
+            <li><m>\overline{(xy)}=\overline{x} \ \overline{y}</m></li>
             <li><m>\overline{A\vec v}=A\,\overline{\vec v}</m> (for a real matrix <m>A</m>)</li>
             <li><m>\operatorname{Im}(x\overline{x})=0</m></li>
           </ul>

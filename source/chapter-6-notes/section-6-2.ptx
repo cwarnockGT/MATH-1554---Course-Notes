@@ -1,0 +1,360 @@
+<handout xml:id="handout-section-6-2-orthogonal-sets">
+  <title>6.2 Orthogonal Sets, Orthogonal Bases, and Projections</title>
+
+  <page xml:id="p-6-2-overview">
+    <title>Overview</title>
+
+    <objectives xml:id="obj-6-2-topics-goals">
+      <title>Topics</title>
+      <ul>
+        <li>Orthogonal sets of vectors</li>
+        <li>Orthogonal bases and projections</li>
+      </ul>
+    </objectives>
+
+    <objectives>
+      <title>Goals</title>
+      <ul>
+        <li>
+          <p>Apply orthogonality concepts to:</p>
+          <ul>
+            <li>compute orthogonal projections and distances,</li>
+            <li>express a vector as a linear combination of orthogonal vectors,</li>
+            <li>characterize bases for subspaces of <m>\mathbb{R}^n</m>,</li>
+            <li>construct orthonormal bases.</li>
+          </ul>
+        </li>
+      </ul>
+    </objectives>
+
+      <p><em>Motivating Question</em></p>
+      <p>
+        What are the special properties of the following basis for <m>\mathbb{R}^3</m>?
+      </p>
+
+      <me>
+        \frac{1}{\sqrt{11}}\begin{bmatrix}3\\1\\1\end{bmatrix},\quad
+        \frac{1}{\sqrt{6}}\begin{bmatrix}-1\\2\\1\end{bmatrix},\quad
+        \frac{1}{\sqrt{66}}\begin{bmatrix}-1\\-4\\7\end{bmatrix}
+      </me>
+
+    <p><nbsp/></p>
+
+    <definition xml:id="def-orthogonal-set">
+      <title>Orthogonal Set</title>
+      <statement>
+        <p>
+          A set of vectors <m>\{\vec u_1,\dots,\vec u_p\}</m> is an
+          <term>orthogonal set</term> if <m>\vec u_j\cdot\vec u_k=0</m> whenever
+          <m>j\ne k</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <example xml:id="ex-6-2-complete-orth-set" workspace="true">
+      <statement>
+        <p>
+          Fill in missing entries so that <m>\{\vec u_1,\vec u_2,\vec u_3\}</m> is an orthogonal set:
+        </p>
+
+        <me>
+          \vec u_1 = \begin{bmatrix}4\\0\\1\end{bmatrix},\qquad
+          \vec u_2 = \begin{bmatrix}-2\\0\\ \phantom{1} \end{bmatrix},\qquad
+          \vec u_3 = \begin{bmatrix} \phantom{-1} \\ \phantom{1} \\ \phantom{1} \end{bmatrix}
+        </me>
+      </statement>
+    </example>
+
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-6-2-li-orthogonal">
+    <title>Orthogonal Sets Are Linearly Independent</title>
+
+    <theorem xml:id="thm-orth-li">
+      <title>Linear Independence of Orthogonal Sets</title>
+      <statement>
+        <p>
+          If <m>\{\vec u_1,\dots,\vec u_p\}</m> is an orthogonal set of vectors, then:
+        </p>
+
+        <me>
+          \left\lVert c_1\vec u_1 + \cdots + c_p\vec u_p\right\rVert^2
+          = c_1^2\lVert\vec u_1\rVert^2 + \cdots + c_p^2\lVert\vec u_p\rVert^2.
+        </me>
+
+        <p>
+          Furthermore, if all the vectors <m>\vec u_1</m> are nonzero, then the set is linearly independent.
+        </p>
+      </statement>
+    </theorem>
+
+    <p><nbsp/></p>
+
+    <theorem xml:id="thm-orth-expansion">
+      <title>Expansion in an Orthogonal Basis</title>
+      <statement>
+        <p>
+          If <m>\{\vec u_1,\dots,\vec u_p\}</m> is an orthogonal basis for a subspace <m>W</m>,
+          then any <m>\vec w\in W</m> can be written:
+        </p>
+
+        <me>
+          \vec w = c_1\vec u_1 + \cdots + c_p\vec u_p,
+        </me>
+
+        <p>
+          where
+        </p>
+
+        <me>
+          c_q = \frac{\vec w\cdot\vec u_q}{\vec u_q\cdot\vec u_q}.
+        </me>
+      </statement>
+    </theorem>
+
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-6-2-expansion-example">
+    <title>Example: Expansion in an Orthogonal Basis</title>
+
+    <example xml:id="ex-6-2-expansion" workspace="true">
+      <introduction>
+        <p>
+          Let
+        <me>
+          \vec x=\begin{bmatrix}1\\1\\1\end{bmatrix},\qquad
+          \vec u=\begin{bmatrix}1\\-2\\1\end{bmatrix},\qquad
+          \vec v=\begin{bmatrix}-1\\0\\1\end{bmatrix},\qquad
+          \vec s=\begin{bmatrix}3\\-4\\1\end{bmatrix}.
+        </me>
+            and let <m>W</m> be the subspace of <m>\mathbb{R}^3</m> that is orthogonal to <m>\vec x</m>.
+        </p>
+        </introduction>
+        <task workspace="true">
+            <statement>
+                <p>
+                    Check that <m>\mathcal{B} = \left\{\vec u,\vec v\right\}</m> forms an orthogonal basis for <m>W</m>.
+                </p>
+            </statement>
+        </task>
+        <task workspace="true">
+            <statement>
+                <p>
+                    Verify that <m>\vec s \in W</m>.
+                </p>
+            </statement>
+        </task>
+        <task workspace="true">
+            <statement>
+                <p>
+                    Compute the expansion of <m>\vec s</m> in the basis <m>\mathcal{B}</m>.
+                </p>
+            </statement>
+        </task>
+    </example>
+
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-6-2-projections">
+    <title>Orthogonal Projections</title>
+
+    <definition xml:id="def-projection">
+      <title>Orthogonal Projection</title>
+      <statement>
+        <p>
+          For a nonzero vector <m>\vec u</m> and vector <m>\vec v</m>,
+          the <term>orthogonal projection of <m>\vec v</m> onto <m>\vec u</m></term> is:
+        </p>
+        <me>
+          \proj_{\vec u}(\vec v) = \frac{\vec v\cdot\vec u}{\vec u\cdot\vec u}\vec u.
+        </me>
+      </statement>
+    </definition>
+
+    <image xml:id="img-6-2-projection" width="70%">
+      <latex-image>
+        <latex>
+\begin{tikzpicture}[scale=.8]
+  \draw[dashed,gray] (-1,0) -- (5,0) node[below right]{Span$\{\vec u\}$};
+  \draw[-&gt;,DarkBlue,thick] (0,0) -- (4,0) node[below]{$\vec u$};
+  \draw[-&gt;,DarkRed,thick] (0,0) -- (2,2) node[above]{$\vec v$};
+  \draw[-&gt;,black,very thick] (0,0) -- (2,0) node[midway,below]{proj$_{\vec u}\vec v$};
+  \draw[-&gt;,gray,thick] (2,0) -- (2,2) node[midway,right]{$\vec w$};
+\end{tikzpicture}
+        </latex>
+      </latex-image>
+      <shortdescription>Diagram showing projection of vector onto a line.</shortdescription>
+      <description>
+        Visualization of <m>\operatorname{proj}_{\vec u}(\vec v)</m> as the closest point in the span of <m>\vec u</m> to <m>\vec v</m>.
+      </description>
+    </image>
+
+    <theorem xml:id="thm-projection-ortho" workspace="0.5in">
+        <statement>
+            <p>
+                Let <m>\vec u</m> be a nonzero vector. Then, the vector <m>\vec w=\vec v - \operatorname{proj}_{\vec u}(\vec v)</m> is orthogonal to <m>\vec u</m>. Furthermore, 
+                <me>\|\vec v\|^2 = \|\proj_{\vec u}{\vec v}\|^2 + \|\vec w\|^2</me>.
+            </p>
+        </statement>
+    </theorem>
+
+    <example xml:id="ex-6-2-ortho" workspace="true">
+        <statement>
+            <p>
+                Let <m>\vec y = \begin{bmatrix} 7 \\ 6 \end{bmatrix}</m> and <m>\vec u = \begin{bmatrix} 4 \\ 2 \end{bmatrix}</m>. Write <m>\vec y</m> as the sum of two orthogonal vectors, one in <m>\Span\{\vec u\}</m> and one orthogonal to <m>\vec u</m>.
+            </p>
+        </statement>
+    </example>
+    
+    <p><nbsp/></p>
+
+  </page>
+
+
+  <page xml:id="p-6-2-projection-example">
+    <title>Example: Projection onto a Line</title>
+
+    <example xml:id="ex-6-2-projection" workspace="true">
+        <introduction>
+            <p>
+            Let <m>L</m> be the line spanned by <m>\vec u=\begin{bmatrix}1\\1\\1\\1\end{bmatrix}</m>.
+            </p>
+        </introduction>
+        <task workspace="true">
+            <statement>
+                <p>
+                    Find the projection of <m>\vec v = \begin{bmatrix} -3 \\ 5 \\ 6 \\ -4 \end{bmatrix}</m> onto the line <m>L</m>.
+                </p>
+            </statement>
+        </task>
+        <task workspace="true">
+            <statement>
+                <p>
+                    How close is <m>\vec v</m> to the line <m>L</m>?
+                </p>
+            </statement>
+        </task>
+    </example>
+
+    <p><nbsp/></p>
+
+    <definition xml:id="def-orthonormal-basis">
+      <title>Orthonormal Basis</title>
+      <statement>
+        <p>
+          An <term>orthonormal basis</term> for a subspace <m>W</m> is an orthogonal basis
+          in which each vector has length 1.
+        </p>
+
+        <p>
+          If <m>\{\vec u_1,\dots,\vec u_p\}</m> is orthonormal and <m>\vec w\in W</m>, then
+        </p>
+
+        <me>
+          \vec w = (\vec w\cdot\vec u_1)\vec u_1 + \cdots + (\vec w\cdot\vec u_p)\vec u_p,
+        </me>
+
+        <p>and</p>
+
+        <me>
+          \|\vec w\| = 
+          \sqrt{
+            (\vec w\cdot\vec u_1)^2 + \cdots + (\vec w\cdot\vec u_p)^2
+          }.
+        </me>
+      </statement>
+    </definition>
+
+
+    <example xml:id="ex-6-2-orthonormal-complete" workspace="true">
+      <statement>
+        <p>
+          Let <m>W = \Span\left\{\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}\right\}^\perp</m>.
+          Find the missing entries in an orthonormal basis:
+        </p>
+
+        <me>
+          u=\frac{1}{\sqrt{\phantom{-1}}}
+          \begin{bmatrix}1\\0\\ \phantom{-1} \end{bmatrix},
+          \qquad
+          v=\frac{1}{\sqrt{\phantom{-1}}}
+          \begin{bmatrix} \phantom{-1} \\ \phantom{-1} \\ \phantom{-1}  \end{bmatrix}
+        </me>
+      </statement>
+    </example>
+
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-6-2-orthogonal-matrices">
+    <title>Orthogonal Matrices</title>
+
+    <definition xml:id="def-orthogonal-matrix">
+      <title>Orthogonal Matrix</title>
+      <statement>
+        <p>
+          An <term>orthogonal matrix</term> is a <em>square</em> matrix whose columns are orthonormal.
+        </p>
+      </statement>
+    </definition>
+
+    <theorem xml:id="thm-orthonormal-columns">
+        <statement>
+            <p>
+                An <m>m \times n</m> matrix <m>U</m> has orthonormal columns if and only if <m>U^TU = I_n</m>. 
+            </p>
+        </statement>
+    </theorem>
+    
+
+    <p workspace="1in">
+      Can <m>U</m> have orthonormal columns if <m>n&gt;m</m>?
+    </p>
+
+    <p><nbsp/></p>
+
+    <theorem xml:id="thm-orthogonal-maps" workspace="1in">
+      <title>Mapping Properties of Orthogonal Matrices</title>
+      <statement>
+        <p>If <m>U</m> is an orthogonal matrix, then:</p>
+
+        <ol>
+          <li><em>Preserves length:</em> <m>\| U\vec x\| = \|\vec x\|</m>.</li>
+          <li>
+            <em>Preserves angles:</em>
+            <m>(U\vec x)\cdot(U\vec y)=\vec x\cdot\vec y</m>.
+          </li>
+          <li><em>Preserves orthogonality.</em></li> 
+        </ol>
+      </statement>
+    </theorem>
+
+    <example xml:id="ex-6-2-length-after-U" workspace="2in">
+      <title>Example</title>
+      <statement>
+        <p>Compute the length of</p>
+
+        <me>
+          \begin{bmatrix}
+            \frac12 \amp \frac{2}{\sqrt{14}}\\
+            \frac12 \amp \frac{1}{\sqrt{14}}\\
+            \frac12 \amp \frac{-3}{\sqrt{14}}\\
+            \frac12 \amp 0
+          \end{bmatrix}
+          \begin{bmatrix}
+            \sqrt{5}\\
+            -2
+          \end{bmatrix}.
+        </me>
+      </statement>
+    </example>
+  </page>
+
+</handout>

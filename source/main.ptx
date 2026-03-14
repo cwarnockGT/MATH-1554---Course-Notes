@@ -13,6 +13,7 @@
       \newcommand{\Span}{\operatorname{Span}}
       \renewcommand{\det}{\operatorname{det}}
       \newcommand{\rank}{\operatorname{rank}}
+      \newcommand{\proj}{\operatorname{proj}}
     </macros>
 
     <latex-image-preamble>
