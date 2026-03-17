@@ -140,6 +140,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\aug}{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
 \newcommand{\Nul}{\operatorname{Nul}}
 \newcommand{\Col}{\operatorname{Col}}
+\newcommand{\Row}{\operatorname{Row}}
 \newcommand{\Span}{\operatorname{Span}}
 \renewcommand{\det}{\operatorname{det}}
 \newcommand{\rank}{\operatorname{rank}}
@@ -287,7 +288,15 @@ eBookConfig.enable_chatcodes =  false;
         </label><label><input type="radio" name="papersize" value="letter">Letter
         </label>
 </form>
-<details class="print-options"><summary>Additional printing options</summary><div class="header-footer-options">
+<details class="print-options"><summary>Additional printing options</summary><div class="hide-solutions-options">
+<div class="hide-option">
+<label for="hide-answer-checkbox">Hide answers</label><input type="checkbox" id="hide-answer-checkbox">
+</div>
+<div class="hide-option">
+<label for="hide-solution-checkbox">Hide solutions</label><input type="checkbox" id="hide-solution-checkbox">
+</div>
+</div>
+<div class="header-footer-options">
 <div class="header-option">
 <span class="title">Print headers</span><label>First page<input type="checkbox" id="print-first-page-header-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-header-checkbox" checked></label>
 </div>
@@ -371,6 +380,20 @@ eBookConfig.enable_chatcodes =  false;
 \vec v=\begin{bmatrix}4\\2\\1\\-3\end{bmatrix}.
 \end{equation*}
 </div>
+<div class="solutions"><details id="ex-6-1-dot-zero-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-6-1-dot-zero-2-1">
+<div class="para">Note that</div>
+<div class="displaymath process-math" id="ex-6-1-dot-zero-2-1-1">
+\begin{equation*}
+\vec u \cdot \vec v = -1(4) + 3(2) + k(1) + 2(-3) = -4 + 6 + k - 6 = k - 4\text{.}
+\end{equation*}
+</div>
+<div class="para">It follows that <span class="process-math">\(\vec u \cdot \vec v = 0\)</span> if and only if <span class="process-math">\(k = 4\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-6-1-dot-zero-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.2.1"><a href="#ex-6-1-dot-zero-2" title="Copy heading and permalink for Solution 6.2.1" aria-label="Copy heading and permalink for Solution 6.2.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Example 6.2"><a href="#ex-6-1-dot-zero" title="Copy heading and permalink for Example 6.2" aria-label="Copy heading and permalink for Example 6.2">🔗</a></div></article><div class="para" id="p-6-1-overview-9"> <div class="autopermalink" data-description="Paragraph"><a href="#p-6-1-overview-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><section class="onepage" id="p-6-1-properties"><article class="theorem theorem-like" id="thm-dot-identities"><h4 class="heading">
@@ -416,6 +439,24 @@ eBookConfig.enable_chatcodes =  false;
 </h4>
 <div class="para" id="ex-6-1-length-op-1-1">Compute <span class="process-math">\(\lVert\overrightarrow{OP}\rVert\)</span> where <span class="process-math">\(P=(1,3,2)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-6-1-length-op-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sec-6-1-ex-magnitude.svg" role="img" class="contained" alt="Sketch of the point (1,3,2) in 3-space."></div>
+<div class="solutions"><details id="ex-6-1-length-op-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-6-1-length-op-2-1">
+<div class="para">Note that</div>
+<div class="displaymath process-math" id="ex-6-1-length-op-2-1-1">
+\begin{equation*}
+\overrightarrow{OP} = \begin{bmatrix} 1 \\ 3 \\ 2 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">It follows that</div>
+<div class="displaymath process-math" id="ex-6-1-length-op-2-1-2">
+\begin{equation*}
+\|\overrightarrow{OP}\| = \sqrt{1^2 + 3^2 + 2^2} = \sqrt{14}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-6-1-length-op-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.5.1"><a href="#ex-6-1-length-op-2" title="Copy heading and permalink for Solution 6.5.1" aria-label="Copy heading and permalink for Solution 6.5.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Example 6.5"><a href="#ex-6-1-length-op" title="Copy heading and permalink for Example 6.5" aria-label="Copy heading and permalink for Example 6.5">🔗</a></div></article><div class="para" id="p-6-1-properties-6"> <div class="autopermalink" data-description="Paragraph"><a href="#p-6-1-properties-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><section class="onepage" id="p-6-1-example-sum-length"><article class="example example-like" id="ex-6-1-length-sum"><h4 class="heading">
@@ -423,12 +464,30 @@ eBookConfig.enable_chatcodes =  false;
 </h4>
 <div class="para" id="ex-6-1-length-sum-1-1">Let <span class="process-math">\(\lVert\vec u\rVert=5\text{,}\)</span> <span class="process-math">\(\lVert\vec v\rVert=\sqrt{3}\text{,}\)</span> and <span class="process-math">\(\vec u\cdot\vec v=-1\text{.}\)</span> Compute <span class="process-math">\(\lVert\vec u+\vec v\rVert\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-6-1-length-sum-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="ex-6-1-length-sum-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-6-1-length-sum-2-1">
+<div class="para">Using <a href="Section-6-1.html#def-length" class="xref" data-knowl="./knowl/xref/def-length.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.4: Length (Magnitude)">Definition 6.4</a>, see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-length.html" id="ex-6-1-length-sum-2-1-2">
+\begin{equation*}
+\|\vec u + \vec v \| = \sqrt{(\vec u + \vec v)(\vec u + \vec v)} = \sqrt{(\vec u \cdot \vec u) + (\vec u \cdot \vec v) + (\vec v \cdot \vec u) + (\vec v \cdot \vec v)}\text{.}
+\end{equation*}
+</div>
+<div class="para">Note that squaring both sides of the equation <span class="process-math">\(\|\vec u \| = \sqrt{\vec u \cdot \vec u}\)</span> yields <span class="process-math">\(\|\vec u\|^2 = \vec u \cdot \vec u\text{.}\)</span> Also, note that the dot product is commutative. Thus, we have that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-length.html" id="ex-6-1-length-sum-2-1-5">
+\begin{equation*}
+\|\vec u + \vec v\| = \sqrt{\|\vec u\|^2 + 2\vec u \cdot \vec v + \|\vec v\|^2} = \sqrt{5^2 + 2(-1) + \sqrt{3}^2} = \sqrt{26}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-6-1-length-sum-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.6.1"><a href="#ex-6-1-length-sum-2" title="Copy heading and permalink for Solution 6.6.1" aria-label="Copy heading and permalink for Solution 6.6.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Example 6.6"><a href="#ex-6-1-length-sum" title="Copy heading and permalink for Example 6.6" aria-label="Copy heading and permalink for Example 6.6">🔗</a></div></article><div class="para" id="p-6-1-example-sum-length-3"> <div class="autopermalink" data-description="Paragraph"><a href="#p-6-1-example-sum-length-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="p-6-1-example-sum-length-4">For any vector <span class="process-math">\(\vec v\)</span> and scalar <span class="process-math">\(c\text{,}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#p-6-1-example-sum-length-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="p-6-1-example-sum-length-5">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-length.html" id="p-6-1-example-sum-length-5">
 \begin{equation*}
 \| c\vec v\| = \lvert c\rvert\|\vec v\|.
 \end{equation*}
@@ -440,7 +499,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Definition 6.7: Unit Vector"><a href="#def-unit-vector" title="Copy heading and permalink for Definition 6.7: Unit Vector" aria-label="Copy heading and permalink for Definition 6.7: Unit Vector">🔗</a></div></article><div class="para" id="p-6-1-example-sum-length-7">Examples of unit vectors:<div class="autopermalink" data-description="Paragraph"><a href="#p-6-1-example-sum-length-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="p-6-1-example-sum-length-8">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-length.html" id="p-6-1-example-sum-length-8">
 \begin{equation*}
 \vec e_1=\begin{bmatrix}1\\0\end{bmatrix},\quad
 \vec y=\frac{1}{\sqrt{5}}\begin{bmatrix}1\\2\end{bmatrix},\quad
@@ -463,28 +522,71 @@ eBookConfig.enable_chatcodes =  false;
 </h4>
 <div class="para" id="ex-6-1-distance-1-1">Compute the distance between <span class="process-math">\(\vec u=\begin{bmatrix}7\\1\end{bmatrix}\)</span> and <span class="process-math">\(\vec v=\begin{bmatrix}3\\2\end{bmatrix}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-6-1-distance-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="ex-6-1-distance-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-6-1-distance-2-1">
+<div class="para">Note that</div>
+<div class="displaymath process-math" id="ex-6-1-distance-2-1-1">
+\begin{equation*}
+\operatorname{dist}(\vec u, \vec v) = \|\vec u - \vec v\| = \left\|\begin{bmatrix} 4 \\ -1 \end{bmatrix}\right\| = \sqrt{4^2 + (-1)^2} = \sqrt{17}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-6-1-distance-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.9.1"><a href="#ex-6-1-distance-2" title="Copy heading and permalink for Solution 6.9.1" aria-label="Copy heading and permalink for Solution 6.9.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Example 6.9"><a href="#ex-6-1-distance" title="Copy heading and permalink for Example 6.9" aria-label="Copy heading and permalink for Example 6.9">🔗</a></div></article><div class="para" id="p-6-1-distance-4"> <div class="autopermalink" data-description="Paragraph"><a href="#p-6-1-distance-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-orthogonal"><h4 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Orthogonal Vectors.</span>
 </h4>
-<div class="para" id="def-orthogonal-2-1">Two vectors <span class="process-math">\(\vec u,\vec w\)</span> are <dfn class="terminology">orthogonal</dfn> if <span class="process-math">\(\vec u\cdot\vec w=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-orthogonal-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="def-orthogonal-2-1">Two vectors <span class="process-math">\(\vec u,\vec v\)</span> are <dfn class="terminology">orthogonal</dfn> if <span class="process-math">\(\vec u\cdot\vec v=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-orthogonal-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para" id="def-orthogonal-2-2">This is equivalent to<div class="autopermalink" data-description="Paragraph"><a href="#def-orthogonal-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="def-orthogonal-2-3">
 \begin{equation*}
-\| \vec u+\vec w\|^2
-= \|\vec u\|^2 + \|\vec w\|^2.
+\| \vec u+\vec v\|^2
+= \|\vec u\|^2 + \|\vec v\|^2.
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Definition 6.10: Orthogonal Vectors"><a href="#def-orthogonal" title="Copy heading and permalink for Definition 6.10: Orthogonal Vectors" aria-label="Copy heading and permalink for Definition 6.10: Orthogonal Vectors">🔗</a></div></article><div class="para" id="p-6-1-distance-6">The zero vector is orthogonal to every vector in <span class="process-math">\(\mathbb{R}^n\text{.}\)</span><div class="workspace" data-space="2in"></div>
+<details id="def-orthogonal-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="def-orthogonal-3-1">
+<div class="para">Proof: The equivalent statement, known as the Pythagorean Theorem, is true since</div>
+<div class="displaymath process-math" id="def-orthogonal-3-1-1">
+\begin{equation*}
+\|\vec u + \vec v\|^2 = (\vec u + \vec v)(\vec u + \vec v) = \|\vec u\|^2 + \|\vec v\|^2 + 2\vec u \cdot \vec v = \|\vec u\|^2 + \|\vec v\|^2
+\end{equation*}
+</div>
+<div class="para">since <span class="process-math">\(\vec u \cdot \vec v = 0\)</span> because the vectors are orthogonal.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-orthogonal-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.10.1"><a href="#def-orthogonal-3" title="Copy heading and permalink for Solution 6.10.1" aria-label="Copy heading and permalink for Solution 6.10.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Definition 6.10: Orthogonal Vectors"><a href="#def-orthogonal" title="Copy heading and permalink for Definition 6.10: Orthogonal Vectors" aria-label="Copy heading and permalink for Definition 6.10: Orthogonal Vectors">🔗</a></div></article><div class="para" id="p-6-1-distance-6">The zero vector is orthogonal to every vector in <span class="process-math">\(\mathbb{R}^n\text{.}\)</span><div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#p-6-1-distance-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><section class="onepage" id="p-6-1-orthogonal-subspace"><article class="example example-like" id="ex-6-1-orth-subspace"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="ex-6-1-orth-subspace-1-1">Sketch the set of all vectors orthogonal to <span class="process-math">\(\vec v=\begin{bmatrix}3\\2\end{bmatrix}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-6-1-orth-subspace-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sec-6-1-ex-vector.svg" role="img" class="contained" alt="Sketch of the vector v in coordinate plane."></div>
+<div class="solutions"><details id="ex-6-1-orth-subspace-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-6-1-orth-subspace-2-1">
+<div class="para">Let <span class="process-math">\(\vec x = \begin{bmatrix} x_1 \\ x_2 \end{bmatrix}\text{.}\)</span> Note that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-orth-complement.html" id="ex-6-1-orth-subspace-2-1-2">
+\begin{equation*}
+\vec v \cdot \vec x = 0 \quad \implies \quad 3x_1 + 2x_2 = 0\text{.}
+\end{equation*}
+</div>
+<div class="para">Therefore, geometrically, we can describe the set of all vectors which are orthogonal to <span class="process-math">\(\vec v\)</span> as the line <span class="process-math">\(3x_1 + 2x_2 = 0\text{.}\)</span> Algebraically, the set of vectors which are orthogonal to <span class="process-math">\(\vec v\)</span> is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-orth-complement.html" id="ex-6-1-orth-subspace-2-1-6">
+\begin{equation*}
+\Nul(\begin{bmatrix} 3 \\ 2 \end{bmatrix}) = \Span\left\{\begin{bmatrix} 2 \\ -3 \end{bmatrix}\right\}\text{.}
+\end{equation*}
+</div>
+<div class="para">It is no coincidence that this set is a subspace. (See <a href="Section-6-1.html#def-orth-complement" class="xref" data-knowl="./knowl/xref/def-orth-complement.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.12: Orthogonal Complement">Definition 6.12</a>.)</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-6-1-orth-subspace-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.11.1"><a href="#ex-6-1-orth-subspace-2" title="Copy heading and permalink for Solution 6.11.1" aria-label="Copy heading and permalink for Solution 6.11.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="0.5in"></div>
 <div class="autopermalink" data-description="Example 6.11"><a href="#ex-6-1-orth-subspace" title="Copy heading and permalink for Example 6.11" aria-label="Copy heading and permalink for Example 6.11">🔗</a></div></article><div class="para" id="p-6-1-orthogonal-subspace-3"> <div class="autopermalink" data-description="Paragraph"><a href="#p-6-1-orthogonal-subspace-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -498,18 +600,75 @@ eBookConfig.enable_chatcodes =  false;
 W^\perp=\{\vec z\in\mathbb{R}^n:\vec z\cdot\vec w=0 \;\text{for all}\; \vec w\in W\}.
 \end{equation*}
 </div>
+<div class="para logical" id="def-orth-complement-2-3">
+<div class="para">The set <span class="process-math">\(W^\perp\)</span> is also a subspace of <span class="process-math">\(\mathbb{R}^n\text{.}\)</span> Furthermore, we have that</div>
+<div class="displaymath process-math" id="def-orth-complement-2-3-3">
+\begin{equation*}
+\dim(W) + \dim(W^\perp) = n\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-orth-complement-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" data-description="Definition 6.12: Orthogonal Complement"><a href="#def-orth-complement" title="Copy heading and permalink for Definition 6.12: Orthogonal Complement" aria-label="Copy heading and permalink for Definition 6.12: Orthogonal Complement">🔗</a></div></article><article class="example example-like" id="ex-6-1-col-row-orth"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="ex-6-1-col-row-orth-1-1">Suppose <span class="process-math">\(A=\begin{bmatrix}1 \amp 3\\ 2 \amp 6\end{bmatrix}\text{.}\)</span> Find <span class="process-math">\(\Nul(A)^\perp\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-6-1-col-row-orth-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="ex-6-1-col-row-orth-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-6-1-col-row-orth-2-1">
+<div class="para">NOte that</div>
+<div class="displaymath process-math" id="ex-6-1-col-row-orth-2-1-1">
+\begin{equation*}
+A = \begin{bmatrix} 1 \amp 3 \\ 2 \amp 6 \end{bmatrix} \sim \ begin{bmatrix} 1 \amp 3 \\ 0 \amp 0 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">It follows that</div>
+<div class="displaymath process-math" id="ex-6-1-col-row-orth-2-1-2">
+\begin{equation*}
+\Nul(A) = \Span\left\{\begin{bmatrix} -3 \\ 1 \end{bmatrix}\right}\text{.}
+\end{equation*}
+</div>
+<div class="para">Note that <span class="process-math">\(\vec x = \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} \in \Nul(A)^\perp\)</span> if and only if <span class="process-math">\(\vec x\)</span> is orthogonal to every vector in <span class="process-math">\(\Nul(A)\text{.}\)</span> Since every vector in <span class="process-math">\(\Nul(A)\)</span> is a multiple of <span class="process-math">\(\vec v = \begin{bmatrix} -3 \\ 1 \end{bmatrix}\text{,}\)</span> we have that <span class="process-math">\(\vec x\)</span> is orthogonal to every vector of <span class="process-math">\(\Nul(A)\)</span> as long as it is orthogonal to <span class="process-math">\(\vec v\text{.}\)</span> Note that</div>
+<div class="displaymath process-math" id="ex-6-1-col-row-orth-2-1-11">
+\begin{equation*}
+\vec x \cdot \vec v = 0 \quad \implies \quad -3x_1 + x_2 = 0 \text{.}
+\end{equation*}
+</div>
+<div class="para">It follows that <span class="process-math">\(\vec x = t\begin{bmatrix} 1 \\ 3 \end{bmatrix}\)</span> for <span class="process-math">\(t \in \mathbb{R}\text{.}\)</span> Thus,</div>
+<div class="displaymath process-math" id="ex-6-1-col-row-orth-2-1-14">
+\begin{equation*}
+\Nul(A)^\perp = \Span\left\{\begin{bmatrix} 1 \\ 3 \end{bmatrix}\right}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-6-1-col-row-orth-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.13.1"><a href="#ex-6-1-col-row-orth-2" title="Copy heading and permalink for Solution 6.13.1" aria-label="Copy heading and permalink for Solution 6.13.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="1in"></div>
 <div class="autopermalink" data-description="Example 6.13"><a href="#ex-6-1-col-row-orth" title="Copy heading and permalink for Example 6.13" aria-label="Copy heading and permalink for Example 6.13">🔗</a></div></article></section><section class="onepage" id="p-6-1-plane-example"><article class="example example-like" id="ex-6-1-line-plane"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="ex-6-1-line-plane-1-1">Let <span class="process-math">\(L\)</span> be the line spanned by <span class="process-math">\(\vec v=\begin{bmatrix}1\\-1\\2\end{bmatrix}\text{.}\)</span> Since <span class="process-math">\(L\)</span> is 1-dimensional, its orthogonal complement <span class="process-math">\(L^\perp\)</span> is a plane. Find an equation for the plane <span class="process-math">\(L^\perp\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-6-1-line-plane-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sec-6-1-ex-ortho-subspace.svg" role="img" class="contained" alt="Graph of a line L in 3-space passing through the origin and the point (1,-1,2)."></div>
-<div class="workspace" data-space="0.8in"></div>
+<div class="solutions"><details id="ex-6-1-line-plane-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-6-1-line-plane-2-1">
+<div class="para">First, note that by <a href="Section-6-1.html#def-orth-complement" class="xref" data-knowl="./knowl/xref/def-orth-complement.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.12: Orthogonal Complement">Definition 6.12</a>, we have that <span class="process-math">\(\dim(L^\perp) = 3 - \dim(L) = 2\text{.}\)</span> Thus, the space <span class="process-math">\(L^\perp\)</span> really is a plane in <span class="process-math">\(\mathbb{R}^3\text{.}\)</span> Let <span class="process-math">\(\vec x = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} \in \mathbb{R}^3\text{.}\)</span> Note that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-orth-complement.html" id="ex-6-1-line-plane-2-1-6">
+\begin{equation*}
+\vec v \cdot \vec x = 0 \quad \implies \quad x_1 - x_2 + 2x_3 = 0\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus, we have that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-orth-complement.html" id="ex-6-1-line-plane-2-1-7">
+\begin{equation*}
+L^\perp = \Nul\left(\begin{bmatrix} 1 \amp -1 \amp 2 \end{bmatrix}\right) = \Span\left\{\begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}, \begin{bmatrix} 2 \\ 0 \\ -1 \end{bmatrix}\right\}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-6-1-line-plane-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.14.1"><a href="#ex-6-1-line-plane-2" title="Copy heading and permalink for Solution 6.14.1" aria-label="Copy heading and permalink for Solution 6.14.1">🔗</a></div>
+</div></details></div>
+<div class="workspace" data-space="0.5in"></div>
 <div class="autopermalink" data-description="Example 6.14"><a href="#ex-6-1-line-plane" title="Copy heading and permalink for Example 6.14" aria-label="Copy heading and permalink for Example 6.14">🔗</a></div></article><div class="para" id="p-6-1-plane-example-3"> <div class="autopermalink" data-description="Paragraph"><a href="#p-6-1-plane-example-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-row-space"><h4 class="heading">
@@ -540,26 +699,46 @@ W^\perp=\{\vec z\in\mathbb{R}^n:\vec z\cdot\vec w=0 \;\text{for all}\; \vec w\in
 </div></section><section class="onepage" id="p-6-1-rowA"><article class="example example-like" id="ex-6-1-null-row"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="ex-6-1-null-row-1-1">Describe <span class="process-math">\(\Nul(A)\)</span> in terms of an orthogonal subspace.<div class="autopermalink" data-description="Paragraph"><a href="#ex-6-1-null-row-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-6-1-null-row-1-1">Describe <span class="process-math">\(\Nul(A) \subseteq \mathbb{R}^n\)</span> in terms of an orthogonal subspace.<div class="autopermalink" data-description="Paragraph"><a href="#ex-6-1-null-row-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <ol class="lower-alpha lower-alpha-level-1" id="ex-6-1-null-row-1-2">
 <li id="ex-6-1-null-row-1-2-1">
 <div class="para" id="p-derived-ex-6-1-null-row-1-2-1">
-<span class="process-math">\(\vec x\in\Nul(A)\)</span> if and only if <span class="process-math">\(\underline{\hspace{2in}}\text{.}\)</span>
+<span class="process-math">\(\vec x\in\Nul(A)\)</span> if and only if <span class="process-math">\(\underline{\hspace{2in}}\text{.}\)</span> <details id="ex-6-1-null-row-1-2-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="ex-6-1-null-row-1-2-1-3-1">
+<span class="process-math">\(A\vec x = \vec 0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-6-1-null-row-1-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer a.1"><a href="#ex-6-1-null-row-1-2-1-3" title="Copy heading and permalink for Answer a.1" aria-label="Copy heading and permalink for Answer a.1">🔗</a></div>
+</div></details>
 </div>
 <div class="autopermalink" data-description="Item a"><a href="#ex-6-1-null-row-1-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
 </li>
 <li id="ex-6-1-null-row-1-2-2">
-<div class="para" id="p-derived-ex-6-1-null-row-1-2-2">This means <span class="process-math">\(\vec x\)</span> is <span class="process-math">\(\underline{\hspace{2in}}\)</span> to each row of <span class="process-math">\(A\text{.}\)</span>
+<div class="para" id="p-derived-ex-6-1-null-row-1-2-2">This means <span class="process-math">\(\vec x\)</span> is <span class="process-math">\(\underline{\hspace{2in}}\)</span> to each row of <span class="process-math">\(A\text{.}\)</span> <details id="ex-6-1-null-row-1-2-2-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="ex-6-1-null-row-1-2-2-4-1">orthogonal<div class="autopermalink" data-description="Paragraph"><a href="#ex-6-1-null-row-1-2-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer b.1"><a href="#ex-6-1-null-row-1-2-2-4" title="Copy heading and permalink for Answer b.1" aria-label="Copy heading and permalink for Answer b.1">🔗</a></div>
+</div></details>
 </div>
 <div class="autopermalink" data-description="Item b"><a href="#ex-6-1-null-row-1-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 <li id="ex-6-1-null-row-1-2-3">
-<div class="para" id="p-derived-ex-6-1-null-row-1-2-3">Therefore <span class="process-math">\(\operatorname{Row}(A)\)</span> is <span class="process-math">\(\underline{\hspace{3in}}\)</span> of <span class="process-math">\(\Nul(A)\text{.}\)</span>
+<div class="para" id="p-derived-ex-6-1-null-row-1-2-3">Therefore <span class="process-math">\(\operatorname{Row}(A)\)</span> is <span class="process-math">\(\underline{\hspace{3in}}\)</span> of <span class="process-math">\(\Nul(A)\text{.}\)</span> <details id="ex-6-1-null-row-1-2-3-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="ex-6-1-null-row-1-2-3-4-1">the orthogonal complement<div class="autopermalink" data-description="Paragraph"><a href="#ex-6-1-null-row-1-2-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer c.1"><a href="#ex-6-1-null-row-1-2-3-4" title="Copy heading and permalink for Answer c.1" aria-label="Copy heading and permalink for Answer c.1">🔗</a></div>
+</div></details>
 </div>
 <div class="autopermalink" data-description="Item c"><a href="#ex-6-1-null-row-1-2-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
 </li>
 <li id="ex-6-1-null-row-1-2-4">
-<div class="para" id="p-derived-ex-6-1-null-row-1-2-4"><span class="process-math">\(\dim(\operatorname{Row}(A))+\dim(\Nul(A))=\underline{\hspace{1in}}\text{.}\)</span></div>
+<div class="para" id="p-derived-ex-6-1-null-row-1-2-4">
+<span class="process-math">\(\dim(\operatorname{Row}(A))+\dim(\Nul(A))=\underline{\hspace{1in}}\text{.}\)</span> <details id="ex-6-1-null-row-1-2-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="ex-6-1-null-row-1-2-4-2-1">
+<span class="process-math">\(n\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-6-1-null-row-1-2-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer d.1"><a href="#ex-6-1-null-row-1-2-4-2" title="Copy heading and permalink for Answer d.1" aria-label="Copy heading and permalink for Answer d.1">🔗</a></div>
+</div></details>
+</div>
 <div class="autopermalink" data-description="Item d"><a href="#ex-6-1-null-row-1-2-4" title="Copy heading and permalink for Item d" aria-label="Copy heading and permalink for Item d">🔗</a></div>
 </li>
 </ol>
@@ -570,14 +749,24 @@ W^\perp=\{\vec z\in\mathbb{R}^n:\vec z\cdot\vec w=0 \;\text{for all}\; \vec w\in
 <div class="para" id="thm-four-subspaces-2-1">For any <span class="process-math">\(A\in\mathbb{R}^{m\times n}\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-four-subspaces-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <ul class="disc" id="thm-four-subspaces-2-2">
 <li id="thm-four-subspaces-2-2-1">
-<div class="para" id="p-derived-thm-four-subspaces-2-2-1">
-<span class="process-math">\(\Nul(A)\)</span> is the orthogonal complement of <span class="process-math">\(\operatorname{Row}(A)\text{.}\)</span>
+<div class="para" id="thm-four-subspaces-2-2-1-1">
+<span class="process-math">\(\Nul(A)\)</span> is the orthogonal complement of <span class="process-math">\(\operatorname{Row}(A)\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-four-subspaces-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="thm-four-subspaces-2-2-1-2">
+\begin{equation*}
+\Row(A)^\perp = \Nul(A) \quad \text{and} \quad \Nul(A)^\perp = \Row(A)
+\end{equation*}
 </div>
 <div class="autopermalink" data-description="Item"><a href="#thm-four-subspaces-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="thm-four-subspaces-2-2-2">
-<div class="para" id="p-derived-thm-four-subspaces-2-2-2">
-<span class="process-math">\(\Nul(A^T)\)</span> is the orthogonal complement of <span class="process-math">\(\operatorname{Col}(A)\text{.}\)</span>
+<div class="para" id="thm-four-subspaces-2-2-2-1">
+<span class="process-math">\(\Nul(A^T)\)</span> is the orthogonal complement of <span class="process-math">\(\operatorname{Col}(A)\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-four-subspaces-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="thm-four-subspaces-2-2-2-2">
+\begin{equation*}
+\Col(A)^\perp = \Nul(A^T) \quad \text{and} \quad \Nul(A^T)^\perp = \Col(A)
+\end{equation*}
 </div>
 <div class="autopermalink" data-description="Item"><a href="#thm-four-subspaces-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
@@ -604,6 +793,35 @@ W^\perp=\{\vec z\in\mathbb{R}^n:\vec z\cdot\vec w=0 \;\text{for all}\; \vec w\in
 </h4>
 <div class="para" id="ex-6-1-angles-1-1">Find the angle between <span class="process-math">\(\vec v = \begin{bmatrix} 3 \\ 4 \end{bmatrix}\)</span> and <span class="process-math">\(\vec u = \begin{bmatrix} \dfrac{3 - 4\sqrt{3}}{10} \\ \dfrac{4 + 3\sqrt{3}}{10} \end{bmatrix}\text{.}\)</span> Note that <span class="process-math">\(\vec u\)</span> is a unit vector.<div class="autopermalink" data-description="Paragraph"><a href="#ex-6-1-angles-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="ex-6-1-angles-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-6-1-angles-2-1">
+<div class="para">Note that</div>
+<div class="displaymath process-math" id="ex-6-1-angles-2-1-1">
+\begin{align*}
+\vec v \cdot \vec u \amp = 3\left(\dfrac{3 - 4\sqrt{3}}{10}\right) + 4\left(\dfrac{4 + 3\sqrt{3}}{10}\right)\\
+\amp = \dfrac{9 - 12\sqrt{3} + 16 + 12\sqrt{3}}{10}\\
+\amp = \dfrac{25}{10}\\
+\amp = \dfrac{5}{2}\text{.}
+\end{align*}
+</div>
+<div class="para">Also, note that <span class="process-math">\(\|\vec v\| = \sqrt{3^2 + 4^2} = 5\text{.}\)</span> Since <span class="process-math">\(\vec u\)</span> is a unit vector, we have that <span class="process-math">\(\|\vec u \| = 1\text{.}\)</span> Therefore, we have</div>
+<div class="displaymath process-math" id="ex-6-1-angles-2-1-5">
+\begin{equation*}
+\cos(\theta) = \dfrac{\vec v \cdot \vec u}{\|\vec v\|\|\vec u\|} = \dfrac{\frac{5}{2}}{5} = \dfrac{1}{2},
+\end{equation*}
+</div>
+<div class="para">so</div>
+<div class="displaymath process-math" id="ex-6-1-angles-2-1-6">
+\begin{equation*}
+\theta = \operatorname{cos}^{-1}\left(\frac{1}{2}\right) = \frac{\pi}{3} = 60^\circ\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus, there is a <span class="process-math">\(60^\circ\)</span> angle between <span class="process-math">\(\vec v\)</span> and <span class="process-math">\(\vec u\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-6-1-angles-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.19.1"><a href="#ex-6-1-angles-2" title="Copy heading and permalink for Solution 6.19.1" aria-label="Copy heading and permalink for Solution 6.19.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Example 6.19"><a href="#ex-6-1-angles" title="Copy heading and permalink for Example 6.19" aria-label="Copy heading and permalink for Example 6.19">🔗</a></div></article></section><div class="autopermalink" data-description="Handout: 6.1 Dot Product, Length, and Orthogonality"><a href="#handout-section-6-1-dotproduct" title="Copy heading and permalink for Handout: 6.1 Dot Product, Length, and Orthogonality" aria-label="Copy heading and permalink for Handout: 6.1 Dot Product, Length, and Orthogonality">🔗</a></div></section><div class="autopermalink" data-description="Section: 6.1 Dot Product, Length, and Orthogonality"><a href="#Section-6-1" title="Copy heading and permalink for Section: 6.1 Dot Product, Length, and Orthogonality" aria-label="Copy heading and permalink for Section: 6.1 Dot Product, Length, and Orthogonality">🔗</a></div></section>
 </div>
