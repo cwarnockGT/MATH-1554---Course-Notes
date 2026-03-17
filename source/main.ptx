@@ -10,6 +10,7 @@
       \newcommand{\aug}{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
       \newcommand{\Nul}{\operatorname{Nul}}
       \newcommand{\Col}{\operatorname{Col}}
+      \newcommand{\Row}{\operatorname{Row}}
       \newcommand{\Span}{\operatorname{Span}}
       \renewcommand{\det}{\operatorname{det}}
       \newcommand{\rank}{\operatorname{rank}}

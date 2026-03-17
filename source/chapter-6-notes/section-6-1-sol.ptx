@@ -59,6 +59,11 @@
           \vec v=\begin{bmatrix}4\\2\\1\\-3\end{bmatrix}.
         </me>
       </statement>
+      <solution>
+        <p>
+            Note that <me>\vec u \cdot \vec v = -1(4) + 3(2) + k(1) + 2(-3) = -4 + 6 + k - 6 = k - 4</me>. It follows that <m>\vec u \cdot \vec v = 0</m> if and only if <m>k = 4</m>.
+        </p>
+      </solution>
     </example>
 
     <p><nbsp/></p>
@@ -129,6 +134,11 @@
             </latex-image>
         </image>
       </statement>
+      <solution>
+        <p>
+            Note that <me>\overrightarrow{OP} = \begin{bmatrix} 1 \\ 3 \\ 2 \end{bmatrix}</me>. It follows that <me>\|\overrightarrow{OP}\| = \sqrt{1^2 + 3^2 + 2^2} = \sqrt{14}</me>.
+        </p>
+      </solution>
     </example>
 
     <p><nbsp/></p>
@@ -146,6 +156,11 @@
           and <m>\vec u\cdot\vec v=-1</m>. Compute <m>\lVert\vec u+\vec v\rVert</m>.
         </p>
       </statement>
+      <solution>
+        <p>
+            Using <xref ref="def-length"/>, see that <me>\|\vec u + \vec v \| = \sqrt{(\vec u + \vec v)(\vec u + \vec v)} = \sqrt{(\vec u \cdot \vec u) + (\vec u \cdot \vec v) + (\vec v \cdot \vec u) + (\vec v \cdot \vec v)}</me>. Note that squaring both sides of the equation <m>\|\vec u \| = \sqrt{\vec u \cdot \vec u}</m> yields <m>\|\vec u\|^2 = \vec u \cdot \vec u</m>. Also, note that the dot product is commutative. Thus, we have that <me>\|\vec u + \vec v\| = \sqrt{\|\vec u\|^2 + 2\vec u \cdot \vec v + \|\vec v\|^2} = \sqrt{5^2 + 2(-1) + \sqrt{3}^2} = \sqrt{26}</me>.
+        </p>
+      </solution>
     </example>
 
     <p><nbsp/></p>
@@ -201,6 +216,11 @@
           <m>\vec v=\begin{bmatrix}3\\2\end{bmatrix}</m>.
         </p>
       </statement>
+      <solution>
+        <p>
+            Note that <me>\operatorname{dist}(\vec u, \vec v) = \|\vec u - \vec v\| = \left\|\begin{bmatrix} 4 \\ -1 \end{bmatrix}\right\| = \sqrt{4^2 + (-1)^2} = \sqrt{17}.</me>
+        </p>
+      </solution>
     </example>
 
     <p><nbsp/></p>
@@ -209,17 +229,22 @@
       <title>Orthogonal Vectors</title>
       <statement>
         <p>
-          Two vectors <m>\vec u,\vec w</m> are <term>orthogonal</term> if
-          <m>\vec u\cdot\vec w=0</m>.  
+          Two vectors <m>\vec u,\vec v</m> are <term>orthogonal</term> if
+          <m>\vec u\cdot\vec v=0</m>.  
         </p>
         <p>
           This is equivalent to
         </p>
         <me>
-          \| \vec u+\vec w\|^2
-          = \|\vec u\|^2 + \|\vec w\|^2.
+          \| \vec u+\vec v\|^2
+          = \|\vec u\|^2 + \|\vec v\|^2.
         </me>
       </statement>
+        <solution>
+        <p>
+            Proof: The equivalent statement, known as the Pythagorean Theorem, is true since <me>\|\vec u + \vec v\|^2 = (\vec u + \vec v)(\vec u + \vec v) = \|\vec u\|^2 + \|\vec v\|^2 + 2\vec u \cdot \vec v = \|\vec u\|^2 + \|\vec v\|^2</me> since <m>\vec u \cdot \vec v = 0</m> because the vectors are orthogonal.
+        </p>
+        </solution>
     </definition>
 
     <p workspace="true">
@@ -251,6 +276,11 @@
             </latex-image>
         </image>
       </statement>
+      <solution>
+        <p>
+            Let <m>\vec x = \begin{bmatrix} x_1 \\ x_2 \end{bmatrix}</m>. Note that <me> \vec v \cdot \vec x = 0 \quad \implies \quad 3x_1 + 2x_2 = 0</me>. Therefore, geometrically, we can describe the set of all vectors which are orthogonal to <m>\vec v</m> as the line <m>3x_1 + 2x_2 = 0</m>. Algebraically, the set of vectors which are orthogonal to <m>\vec v</m> is given by <me>\Nul(\begin{bmatrix} 3 \\ 2 \end{bmatrix}) = \Span\left\{\begin{bmatrix} 2 \\ -3 \end{bmatrix}\right\}</me>. It is no coincidence that this set is a subspace. (See <xref ref="def-orth-complement"/>.)
+        </p>
+      </solution>
     </example>
 
     <p><nbsp/></p>
@@ -267,7 +297,7 @@
           W^\perp=\{\vec z\in\mathbb{R}^n:\vec z\cdot\vec w=0 \;\text{for all}\; \vec w\in W\}.
         </me>
         <p>
-            The set <m>W^\perp</m> is also a subspace of <m>\mathbb{R}^n</m>. Furthermore we have that <me>\dim(W) + \dim(W^\perp) = n</me>.
+            The set <m>W^\perp</m> is also a subspace of <m>\mathbb{R}^n</m>. Furthermore, we have that <me>\dim(W) + \dim(W^\perp) = n</me>.
         </p>
       </statement>
     </definition>
@@ -278,6 +308,11 @@
           Suppose <m>A=\begin{bmatrix}1 \amp 3\\ 2 \amp 6\end{bmatrix}</m>. Find <m>\Nul(A)^\perp</m>.
         </p>
       </statement>
+      <solution>
+        <p>
+            NOte that <me>A = \begin{bmatrix} 1 \amp 3 \\ 2 \amp 6 \end{bmatrix} \sim \ begin{bmatrix} 1 \amp 3 \\ 0 \amp 0 \end{bmatrix}</me>. It follows that <me>\Nul(A) = \Span\left\{\begin{bmatrix} -3 \\ 1 \end{bmatrix}\right}</me>. Note that <m>\vec x = \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} \in \Nul(A)^\perp</m> if and only if <m>\vec x</m> is orthogonal to every vector in <m>\Nul(A)</m>. Since every vector in <m>\Nul(A)</m> is a multiple of <m>\vec v = \begin{bmatrix} -3 \\ 1 \end{bmatrix}</m>, we have that <m>\vec x</m> is orthogonal to every vector of <m>\Nul(A)</m> as long as it is orthogonal to <m>\vec v</m>. Note that <me>\vec x \cdot \vec v = 0 \quad \implies \quad -3x_1 + x_2 = 0 </me>. It follows that <m>\vec x = t\begin{bmatrix} 1 \\ 3 \end{bmatrix}</m> for <m>t \in \mathbb{R}</m>. Thus, <me>\Nul(A)^\perp = \Span\left\{\begin{bmatrix} 1 \\ 3 \end{bmatrix}\right}</me>. 
+        </p>
+      </solution>
     </example>
 
   </page>
@@ -286,7 +321,7 @@
   <page xml:id="p-6-1-plane-example">
     <title>Example: Plane Orthogonal to a Line in <m>\mathbb{R}^3</m></title>
 
-    <example xml:id="ex-6-1-line-plane" workspace="0.8in">
+    <example xml:id="ex-6-1-line-plane" workspace="0.5in">
       <statement>
         <p>
           Let <m>L</m> be the line spanned by <m>\vec v=\begin{bmatrix}1\\-1\\2\end{bmatrix}</m>.
@@ -339,6 +374,11 @@
             </latex-image>
         </image>
       </statement>
+      <solution>
+        <p>
+            First, note that by <xref ref="def-orth-complement"/>, we have that <m>\dim(L^\perp) = 3 - \dim(L) = 2</m>. Thus, the space <m>L^\perp</m> really is a plane in <m>\mathbb{R}^3</m>. Let <m>\vec x = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} \in \mathbb{R}^3</m>. Note that <me>\vec v \cdot \vec x = 0 \quad \implies \quad x_1 - x_2 + 2x_3 = 0</me>. Thus, we have that <me>L^\perp = \Nul\left(\begin{bmatrix} 1 \amp -1 \amp 2 \end{bmatrix}\right) = \Span\left\{\begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}, \begin{bmatrix} 2 \\ 0 \\ -1 \end{bmatrix}\right\}</me>.
+        </p>
+      </solution>
     </example>
 
     <p><nbsp/></p>
@@ -369,19 +409,44 @@
     <example xml:id="ex-6-1-null-row" workspace="1in">
       <statement>
         <p>
-          Describe <m>\Nul(A)</m> in terms of an orthogonal subspace.
+          Describe <m>\Nul(A) \subseteq \mathbb{R}^n</m> in terms of an orthogonal subspace.
         </p>
 
         <ol>
-          <li><m>\vec x\in\Nul(A)</m> if and only if <m>\underline{\hspace{2in}}</m>.</li>
+          <li>
+            <m>\vec x\in\Nul(A)</m> if and only if <m>\underline{\hspace{2in}}</m>. 
+            <answer>
+                <p>
+                    <m>A\vec x = \vec 0</m>
+                </p>
+          </answer>
+        </li>
+          
           <li>
             This means <m>\vec x</m> is <m>\underline{\hspace{2in}}</m> to each row of <m>A</m>.
+            <answer>
+                <p>
+                    orthogonal
+                </p>
+          </answer>
           </li>
+          
           <li>
             Therefore <m>\operatorname{Row}(A)</m> is <m>\underline{\hspace{3in}}</m> of <m>\Nul(A)</m>.
+            <answer>
+                <p>
+                    the orthogonal complement
+                </p>
+          </answer>
           </li>
+          
           <li>
             <m>\dim(\operatorname{Row}(A))+\dim(\Nul(A))=\underline{\hspace{1in}}</m>.
+            <answer>
+                <p>
+                    <m>n</m>
+                </p>
+          </answer>
           </li>
         </ol>
       </statement>
@@ -394,8 +459,8 @@
           For any <m>A\in\mathbb{R}^{m\times n}</m>:
         </p>
         <ul>
-          <li><m>\Nul(A)</m> is the orthogonal complement of <m>\operatorname{Row}(A)</m>.</li>
-          <li><m>\Nul(A^T)</m> is the orthogonal complement of <m>\operatorname{Col}(A)</m>.</li>
+          <li><p><m>\Nul(A)</m> is the orthogonal complement of <m>\operatorname{Row}(A)</m>:</p> <me>\Row(A)^\perp = \Nul(A) \quad \text{and} \quad \Nul(A)^\perp = \Row(A)</me></li>
+          <li><p><m>\Nul(A^T)</m> is the orthogonal complement of <m>\operatorname{Col}(A)</m>:</p> <me>\Col(A)^\perp = \Nul(A^T) \quad \text{and} \quad \Nul(A^T)^\perp = \Col(A)</me></li>
         </ul>
       </statement>
     </theorem>
@@ -456,6 +521,11 @@
           Find the angle between <m>\vec v = \begin{bmatrix} 3 \\ 4 \end{bmatrix}</m> and <m>\vec u = \begin{bmatrix} \dfrac{3 - 4\sqrt{3}}{10} \\ \dfrac{4 + 3\sqrt{3}}{10} \end{bmatrix}</m>. Note that <m>\vec u</m> is a unit vector.
         </p>
       </statement>
+      <solution>
+        <p>
+            Note that <md> <mrow>\vec v \cdot \vec u \amp = 3\left(\dfrac{3 - 4\sqrt{3}}{10}\right) + 4\left(\dfrac{4 + 3\sqrt{3}}{10}\right)</mrow> <mrow> \amp = \dfrac{9 - 12\sqrt{3} + 16 + 12\sqrt{3}}{10}</mrow> <mrow> \amp = \dfrac{25}{10}</mrow> <mrow> \amp = \dfrac{5}{2}</mrow></md>. Also, note that <m>\|\vec v\| = \sqrt{3^2 + 4^2} = 5</m>. Since <m>\vec u</m> is a unit vector, we have that <m>\|\vec u \| = 1</m>. Therefore, we have <me>\cos(\theta) = \dfrac{\vec v \cdot \vec u}{\|\vec v\|\|\vec u\|} = \dfrac{\frac{5}{2}}{5} = \dfrac{1}{2},</me> so <me>\theta = \operatorname{cos}^{-1}\left(\frac{1}{2}\right) = \frac{\pi}{3} = 60^\circ</me>. Thus, there is a <m>60^\circ</m> angle between <m>\vec v</m> and <m>\vec u</m>.
+        </p>
+      </solution>
     </example>
   </page>
 
