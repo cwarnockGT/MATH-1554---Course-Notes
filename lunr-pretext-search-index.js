@@ -2473,7 +2473,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "5.5 Complex Eigenvalues",
-  "body": " 5.5 Complex Eigenvalues   5.5 Complex Eigenvalues   Overview   Topics   Complex numbers: addition, multiplication, complex conjugate  Complex eigenvalues and eigenvectors  Eigenvalue theorems     Goals   Use eigenvalues to identify the rotation and dilation of a linear transform.  Recognize rotation–dilation matrices.  Find complex eigenvalues and eigenvectors of a real matrix.  Apply theorems to characterize matrices with complex eigenvalues.       Consider the linear transformation which rotates vectors counterclockwise by 90 .     Find the matrix so that .      Find the characteristic polynomial of .      What are the eigenvalues of ?         Complex Numbes   The complex numbers are denoted by , where     We can identify with via .   We can add and multiply complex numbers by treating as variable and simplifying powers of appropriately.    Let and let . Calculate the following:     Sum of complex numbers:       Product of complex numbers:         Complex Conjugate, Absolute Value, and Polar Form   Complex Conjugate   The conjugate of is .      Absolute Value (Modulus)   The absolute value (modulus) of is .       The polar form of a complex number is , where and is the argument.       Given , compute , , and the polar form of .        Conjugate Properties   Let and ., Then we have the following properties:    (for a real matrix )        Conjugation reflects points across the real axis.    Diagram showing complex conjugation as reflection over real axis.  The point at angle reflects to at angle across the real axis.      Euler’s Formula and Products in Polar Form  Suppose has angle and has angle ; that is, let and . Note that Therefore, the product has modulus and has angle .    Angles in polar form for complex numbers and their product.  Vectors representing , , and their product with angles adding: .      Complex Numbers and Polynomials   Fundamental Theorem of Algebra   Every polynomial of degree has exactly complex roots, counting multiplicity.      Conjugate Pairs for Real Coefficients    If is a root of a real polynomial , then the conjugate is also a root of .  If is an eigenvalue of a real matrix with eigenvector , then is an eigenvalue of with eigenvector .        Four eigenvalues of a real matrix are , , , and . What are the other eigenvalues?       Rotation–Dilation Matrices and Eigenvalues    The matrix that rotates vectors by about the origin and then scales by is   Find the eigenvalues of and one eigenvector for each eigenvalue.       General Rotation–Dilation Form  The previous example is a special case of the real rotation–dilation matrix .    Compute the eigenvalues of   and express them in the polar form .       Finding Complex Eigenpairs    Find the complex eigenvalues and an associated complex eigenvector for each eigenvalue of       "
+  "body": " 5.5 Complex Eigenvalues   5.5 Complex Eigenvalues   Overview   Topics   Complex numbers: addition, multiplication, complex conjugate  Complex eigenvalues and eigenvectors  Eigenvalue theorems     Goals   Use eigenvalues to identify the rotation and dilation of a linear transform.  Recognize rotation–dilation matrices.  Find complex eigenvalues and eigenvectors of a real matrix.  Apply theorems to characterize matrices with complex eigenvalues.       Consider the linear transformation which rotates vectors counterclockwise by 90 .     Find the matrix so that .    Note that and . Therefore, we have that .      Find the characteristic polynomial of .    Note that .      What are the eigenvalues of ?    Note that the quadratic equation has no real roots since trying to solve the equation yields and is not a real number. If we want to \"fix\" this, we can define and say that and are the two Complex roots of the polynomial .         Complex Numbes   The complex numbers are denoted by , where     We can identify with via .   We can add and multiply complex numbers by treating as variable and simplifying powers of appropriately.    Let and let . Calculate the following:     Sum of complex numbers:     Note that .      Product of complex numbers:     Using the distributive property, we have . Since , we have that . Therefore, .        Complex Conjugate, Absolute Value, and Polar Form   Complex Conjugate   The conjugate of is .      Absolute Value (Modulus)   The absolute value (modulus) of is .       The polar form of a complex number is , where and is the argument.    Note that Euler's formula was used which says . This is a beautiful result that can be proven using the Power Series for the three functions involved.       Given , compute , , and the polar form of .    Note that the conjuage of is . The modulus of is . To find the polar form of , we first find the angle . Note that . Therefore, we have that .        Conjugate Properties   Let and ., Then we have the following properties:    (for a real matrix )        Conjugation reflects points across the real axis.    Diagram showing complex conjugation as reflection over real axis.  The point at angle reflects to at angle across the real axis.      Euler’s Formula and Products in Polar Form  Suppose has angle and has angle ; that is, let and . Note that Therefore, the product has modulus and has angle .    Angles in polar form for complex numbers and their product.  Vectors representing , , and their product with angles adding: .      Complex Numbers and Polynomials   Fundamental Theorem of Algebra   Every polynomial of degree has exactly complex roots, counting multiplicity.      Conjugate Pairs for Real Coefficients    If is a root of a real polynomial , then the conjugate is also a root of .  If is an eigenvalue of a real matrix with eigenvector , then is an eigenvalue of with eigenvector .        Four eigenvalues of a real matrix are , , , and . What are the other eigenvalues?    By and , we know that has 7 eigenvalues, counting multiplicites. We have been told 4 of them. Note that for each complex eigenvalues, it's complex conjugate must also be an eigenvalue. Therefore, we have that the eigenvalues are , and and and are the 7 eigenvalues of .       Rotation–Dilation Matrices and Eigenvalues    The matrix that rotates vectors by about the origin and then scales by is   Find the eigenvalues of and one eigenvector for each eigenvalue.    Note that . Using the quadratic formula, we find the eigenvalues of are . Let and . Note that these are conjuage pairs as suggested by .  Note that can be written in polar form as . We see that gives the scaling factor of and gives the rotation factor of .  Now, let's find at least one eigenvector for each eigenvalue. For , we have . At first glance, might not appear to have a free variable. Hopefully it does, or else we made an error somewhere. Note that we can still use row operations on even though it contains complex numbers. This, hopefully, will expose the dependency of the columns. Note that . Now, we see that . Let's check that . Note that and , so .  By , we have that is an eigenvector for .       General Rotation–Dilation Form  The previous example is a special case of the real rotation–dilation matrix .    Compute the eigenvalues of   and express them in the polar form .    Note that . Solving for the eigenvalues, we see that . Therefore, and are the two eigenvalues of . Writing these in polar form, we have that . Similar to the eigenvalues found in , we see that is the scaling factor of and is the rotation factor of .       Finding Complex Eigenpairs    Find the complex eigenvalues and an associated complex eigenvector for each eigenvalue of     Note that . Using the quadratic formula, we see that the eigenvalues of are .  Let . Then we have that . It follows that is an eigenvector corresponding to . Check this.  Let . By , we see that is an eigenvector corresponding to .      "
 },
 {
   "id": "obj-5-5-topics-goals",
@@ -2500,7 +2500,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "5.41",
   "title": "",
-  "body": "  Consider the linear transformation which rotates vectors counterclockwise by 90 .     Find the matrix so that .      Find the characteristic polynomial of .      What are the eigenvalues of ?    "
+  "body": "  Consider the linear transformation which rotates vectors counterclockwise by 90 .     Find the matrix so that .    Note that and . Therefore, we have that .      Find the characteristic polynomial of .    Note that .      What are the eigenvalues of ?    Note that the quadratic equation has no real roots since trying to solve the equation yields and is not a real number. If we want to \"fix\" this, we can define and say that and are the two Complex roots of the polynomial .    "
 },
 {
   "id": "def-complex-numbers",
@@ -2518,7 +2518,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "5.43",
   "title": "",
-  "body": "  Let and let . Calculate the following:     Sum of complex numbers:       Product of complex numbers:     "
+  "body": "  Let and let . Calculate the following:     Sum of complex numbers:     Note that .      Product of complex numbers:     Using the distributive property, we have . Since , we have that . Therefore, .    "
 },
 {
   "id": "def-conjugate",
@@ -2545,7 +2545,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "5.46",
   "title": "",
-  "body": "  The polar form of a complex number is , where and is the argument.   "
+  "body": "  The polar form of a complex number is , where and is the argument.    Note that Euler's formula was used which says . This is a beautiful result that can be proven using the Power Series for the three functions involved.   "
 },
 {
   "id": "ex-5-5-conj-mod-polar",
@@ -2554,7 +2554,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "5.47",
   "title": "",
-  "body": "  Given , compute , , and the polar form of .   "
+  "body": "  Given , compute , , and the polar form of .    Note that the conjuage of is . The modulus of is . To find the polar form of , we first find the angle . Note that . Therefore, we have that .   "
 },
 {
   "id": "thm-conjugate-properties",
@@ -2590,7 +2590,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "5.51",
   "title": "",
-  "body": "  Four eigenvalues of a real matrix are , , , and . What are the other eigenvalues?   "
+  "body": "  Four eigenvalues of a real matrix are , , , and . What are the other eigenvalues?    By and , we know that has 7 eigenvalues, counting multiplicites. We have been told 4 of them. Note that for each complex eigenvalues, it's complex conjugate must also be an eigenvalue. Therefore, we have that the eigenvalues are , and and and are the 7 eigenvalues of .   "
 },
 {
   "id": "ex-5-5-rot-dil-eigs",
@@ -2599,7 +2599,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "5.52",
   "title": "",
-  "body": "  The matrix that rotates vectors by about the origin and then scales by is   Find the eigenvalues of and one eigenvector for each eigenvalue.   "
+  "body": "  The matrix that rotates vectors by about the origin and then scales by is   Find the eigenvalues of and one eigenvector for each eigenvalue.    Note that . Using the quadratic formula, we find the eigenvalues of are . Let and . Note that these are conjuage pairs as suggested by .  Note that can be written in polar form as . We see that gives the scaling factor of and gives the rotation factor of .  Now, let's find at least one eigenvector for each eigenvalue. For , we have . At first glance, might not appear to have a free variable. Hopefully it does, or else we made an error somewhere. Note that we can still use row operations on even though it contains complex numbers. This, hopefully, will expose the dependency of the columns. Note that . Now, we see that . Let's check that . Note that and , so .  By , we have that is an eigenvector for .   "
 },
 {
   "id": "ex-5-5-C-eigs-polar-1",
@@ -2608,7 +2608,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "5.53",
   "title": "",
-  "body": "  Compute the eigenvalues of   and express them in the polar form .   "
+  "body": "  Compute the eigenvalues of   and express them in the polar form .    Note that . Solving for the eigenvalues, we see that . Therefore, and are the two eigenvalues of . Writing these in polar form, we have that . Similar to the eigenvalues found in , we see that is the scaling factor of and is the rotation factor of .   "
 },
 {
   "id": "ex-5-5-complex-eigs",
@@ -2617,7 +2617,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "5.54",
   "title": "",
-  "body": "  Find the complex eigenvalues and an associated complex eigenvector for each eigenvalue of    "
+  "body": "  Find the complex eigenvalues and an associated complex eigenvector for each eigenvalue of     Note that . Using the quadratic formula, we see that the eigenvalues of are .  Let . Then we have that . It follows that is an eigenvector corresponding to . Check this.  Let . By , we see that is an eigenvector corresponding to .   "
 },
 {
   "id": "Section-6-1",
