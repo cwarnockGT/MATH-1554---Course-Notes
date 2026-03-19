@@ -1,0 +1,457 @@
+<handout xml:id="handout-section-6-2-orthogonal-sets">
+  <title>6.2 Orthogonal Sets, Orthogonal Bases, and Projections</title>
+
+  <page xml:id="p-6-2-overview">
+    <title>Overview</title>
+
+    <objectives xml:id="obj-6-2-topics-goals">
+      <title>Topics</title>
+      <ul>
+        <li>Orthogonal sets of vectors</li>
+        <li>Orthogonal bases and projections</li>
+      </ul>
+    </objectives>
+
+    <objectives>
+      <title>Goals</title>
+      <ul>
+        <li>
+          <p>Apply orthogonality concepts to:</p>
+          <ul>
+            <li>compute orthogonal projections and distances,</li>
+            <li>express a vector as a linear combination of orthogonal vectors,</li>
+            <li>characterize bases for subspaces of <m>\mathbb{R}^n</m>,</li>
+            <li>construct orthonormal bases.</li>
+          </ul>
+        </li>
+      </ul>
+    </objectives>
+
+      <p><em>Motivating Question</em></p>
+      <p>
+        What are the special properties of the following basis for <m>\mathbb{R}^3</m>?
+      </p>
+
+      <me>
+        \frac{1}{\sqrt{11}}\begin{bmatrix}3\\1\\1\end{bmatrix},\quad
+        \frac{1}{\sqrt{6}}\begin{bmatrix}-1\\2\\1\end{bmatrix},\quad
+        \frac{1}{\sqrt{66}}\begin{bmatrix}-1\\-4\\7\end{bmatrix}
+      </me>
+
+    <p><nbsp/></p>
+
+    <definition xml:id="def-orthogonal-set">
+      <title>Orthogonal Set</title>
+      <statement>
+        <p>
+          A set of vectors <m>\{\vec u_1,\dots,\vec u_p\}</m> is an
+          <term>orthogonal set</term> if <m>\vec u_j\cdot\vec u_k=0</m> whenever
+          <m>j\ne k</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <example xml:id="ex-6-2-complete-orth-set" workspace="true">
+      <statement>
+        <p>
+          Fill in missing entries so that <m>\{\vec u_1,\vec u_2,\vec u_3\}</m> is an orthogonal set:
+        </p>
+
+        <me>
+          \vec u_1 = \begin{bmatrix}4\\0\\1\end{bmatrix},\qquad
+          \vec u_2 = \begin{bmatrix}-2\\0\\ \phantom{1} \end{bmatrix},\qquad
+          \vec u_3 = \begin{bmatrix} \phantom{-1} \\ \phantom{1} \\ \phantom{1} \end{bmatrix}
+        </me>
+      </statement>
+      <solution>
+        <p>
+            Let <m>a</m> represent the missing element in <m>\vec u_2</m>. It follows that <me>0 = \vec u_1 \cdot \vec u_2 = \begin{bmatrix} 4 \\ 0 \\ 1 \end{bmatrix}\cdot \begin{bmatrix} -2 \\ 0 \\ a \end{bmatrix} = -8 + a \quad \implies \quad a = 8</me>.
+        </p>
+        <p>
+            To find <m>\vec u_3</m>, we need to find a vector that is orthogonal to both <m>\vec u_1</m> and <m>\vec u_2</m>. Note that <m>\vec v_3 = \vec 0</m> works since the zero vector is orthogonal to every vector. Usually, we are interested in finding vectors that are linearly independent so that they will form a basis for our space, so let's find a vector <m>\vec u_3</m> other than the zero vector. Let <m>\vec u_3 = \begin{bmatrix}x_1 \\ x_2 \\ x_3 \end{bmatrix}</m> and note that <me>\vec u_1 \cdot \vec u_3 = 0 \quad \implies \quad 4x_1 + 0x_2 + 1x_3 = 0 </me> and <me>\vec u_2 \cdot \vec u_3 = 0 \quad \implies \quad -2x_1 + 0x_2 + 8x_3 = 0</me>. It follows that <m>\vec u_3</m> can be any vector in <m>\Nul(A)</m>, where <m>A = \begin{bmatrix} 4 \amp 0 \amp 1 \\ -2 \amp 0 \amp 8 \end{bmatrix}</m>. Feel free to find a non-zero vector in <m>\Nul(A)</m> by row reducing <m>A</m> and following the normal process. Or, you might be able to observe that <me>\vec u_3 = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} \in \Nul(A)</me>, which makes it a fine choice for the third vector in the orthogonal set.
+        </p>
+      </solution>
+    </example>
+
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-6-2-li-orthogonal">
+    <title>Orthogonal Sets Are Linearly Independent</title>
+
+    <theorem xml:id="thm-orth-li">
+      <title>Linear Independence of Orthogonal Sets</title>
+      <statement>
+        <p>
+          If <m>\{\vec u_1,\dots,\vec u_p\}</m> is an orthogonal set of vectors, then:
+        </p>
+
+        <me>
+          \left\lVert c_1\vec u_1 + \cdots + c_p\vec u_p\right\rVert^2
+          = c_1^2\lVert\vec u_1\rVert^2 + \cdots + c_p^2\lVert\vec u_p\rVert^2.
+        </me>
+
+        <p>
+          Furthermore, if all the vectors <m>\vec u_1</m> are nonzero, then the set is linearly independent.
+        </p>
+      </statement>
+    </theorem>
+
+    <p><nbsp/></p>
+
+    <theorem xml:id="thm-orth-expansion">
+      <title>Expansion in an Orthogonal Basis</title>
+      <statement>
+        <p>
+          If <m>\{\vec u_1,\dots,\vec u_p\}</m> is an orthogonal basis for a subspace <m>W</m>,
+          then any <m>\vec w\in W</m> can be written:
+        </p>
+
+        <me>
+          \vec w = c_1\vec u_1 + \cdots + c_p\vec u_p,
+        </me>
+
+        <p>
+          where
+        </p>
+
+        <me>
+          c_k = \frac{\vec w\cdot\vec u_k}{\vec u_k\cdot\vec u_k}.
+        </me>
+      </statement>
+      <solution>
+        <p>
+            Proof: Suppose <m>\{\vec u_1,\dots,\vec u_p\}</m> is an orthogonal basis for a subspace <m>W</m>. Then, we know that <m>\vec u_i \cdot \vec u_j = 0</m> for each <m>i \neq j</m> (since this is an orthogonal set) and <m>\vec u_i \cdot \vec u_i \neq 0</m> (since <m>\vec u_i \neq \vec 0</m>). Let <m>\vec w \in W</m>. Then, <m>\vec w</m> can be expressed uniquely as a linear combination of the basis vectors; that is <me>\vec w = c_1\vec u_1 + c_2\vec u_2 + \cdots + c_p\vec u_p</me> for a unique choice of <m>c_1, c_2 ,\dots, c_p</m>. Note what happens if we dot product both sides of the above equation with <m>\vec u_k</m> for some <m>k \in \{1,2,\dots, p\}</m>: <md> <mrow> \vec w \cdot \vec u_k \amp = (c_1\vec u_1 + \cdots + c_k\vec u_k + \cdots + c_p\vec u_p) \cdot \vec u_k </mrow> <mrow> \vec u_k \cdot \vec w \amp = c_1(\vec u_1 \cdot \vec u_k) + \cdots + c_k(\vec u_k \cdot \vec u_k) + \cdots + c_p(\vec u_p \cdot u_k) </mrow> <mrow> \vec w \cdot \vec u_k \amp = c_1(0) + \cdots + c_{k-1}(0) + c_k(\vec u_k \cdot \vec u_k) + c_{k+1}(0) + \cdots + c_p(0)</mrow></md> It follows that <me> \vec w \cdot \vec u_k = c_k(\vec u_k \cdot \vec u_k)</me>. Since <m>\vec u_k \cdot \vec u_k \neq 0</m>, we divide both sides by that quantity to get <me>c_k = \dfrac{\vec w \cdot \vec u_k}{\vec u_k \cdot \vec u_k}</me>.
+        </p>
+    </solution>
+    </theorem>
+    
+
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-6-2-expansion-example">
+    <title>Example: Expansion in an Orthogonal Basis</title>
+
+    <example xml:id="ex-6-2-expansion" workspace="true">
+      <introduction>
+        <p>
+          Let
+        <me>
+          \vec x=\begin{bmatrix}1\\1\\1\end{bmatrix},\qquad
+          \vec u=\begin{bmatrix}1\\-2\\1\end{bmatrix},\qquad
+          \vec v=\begin{bmatrix}-1\\0\\1\end{bmatrix},\qquad
+          \vec s=\begin{bmatrix}3\\-4\\1\end{bmatrix}.
+        </me>
+            and let <m>W</m> be the subspace of <m>\mathbb{R}^3</m> that is orthogonal to <m>\vec x</m>.
+        </p>
+        </introduction>
+        <task workspace="true">
+            <statement>
+                <p>
+                    Check that <m>\mathcal{B} = \left\{\vec u,\vec v\right\}</m> forms an orthogonal basis for <m>W</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    First, we show that <m>\mathcal{B}</m> is an orthogonal <em>set</em>. Note that <me> \vec u \cdot \vec v = \begin{bmatrix} 1 \\ -2 \\ 1 \end{bmatrix} \cdot \begin{bmatrix} -1 \\ 0 \\ 1 \end{bmatrix} = -1 + 0 + 1 = 0</me>. Therefore, <m>\vec u</m> and <m>\vec v</m> are orthogonal, so <m>\mathcal{B}</m> is an orthogonal set.
+                </p>
+                <p>
+                    Next, we show that <m>\mathcal{B}</m> is a basis for <m>W</m>. From the description of <m>W</m>, we see that <m>W = \Span\{\vec x\}^\perp</m>. Using the two results given in <xref ref="def-orth-complement"/>, we see that <md><mrow>\dim(W) + \dim(W^\perp) \amp = \dim(\mathbb{R}^3)</mrow> <mrow>\dim(W) + \dim(\Span\{\vec x\}) \amp = 3</mrow> <mrow>\dim(W) \amp = 3-\dim(\Span\{\vec x\})</mrow> <mrow>\dim(W) \amp = 2</mrow></md>. Therefore, a basis for <m>W</m> must contain two linearly independent vectors that live in <m>W</m>. We can see that <m>\vec u</m> and <m>\vec v</m> since they are not multiples of one another. Another way to see this is that non-zero orthogonal vectors are always linearly independent. Lastly, we need to show that <m>\vec u</m> and <m>\vec v</m> actually live in <m>W</m>. Note that <me>\vec u \cdot \vec x = 1 -2 + 1 = 0 \quad \text{and} \quad \vec v \cdot \vec x = -1 + 0 + 1 = 0</me> Thus, <m>\vec u</m> is orthogonal to <m>\vec x</m> and <m>\vec v</m> is orthogonal to <m>\vec x</m>. Hence, <m>\vec u, \vec v \in W</m>, so <m>\mathcal{B}</m> is a basis for <m>W</m>. Since <m>\mathcal{B}</m> was also an orthogonal set, it is an <em>orthogonal basis</em> for <m>W</m>.
+                </p>
+            </solution>
+        </task>
+        <task workspace="true">
+            <statement>
+                <p>
+                    Verify that <m>\vec s \in W</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Note that <m>\vec s \cdot \vec x = 3 - 4 + 1 = 0</m>, so <m>\vec s</m> is orthogonal to <m>\vec x</m>. Thus, <m>\vec s \in W</m>.
+                </p>
+            </solution>
+        </task>
+        <task workspace="true">
+            <statement>
+                <p>
+                    Compute the expansion of <m>\vec s</m> in the basis <m>\mathcal{B}</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Since <m>\vec s \in W</m> and since <m>\mathcal{B} = \{\vec u, \vec v\}</m> is a basis for <m>W</m>, we know there exists a unique choice of <m>c_1,c_2 \in \mathbb{R}</m> so that <me>\vec s = c_1\vec u + c_2 \vec v</me>. Since <m>\mathcal{B}</m> is an <em>orthogonal</em> basis for <m>W</m>, we can use <xref ref="thm-orth-expansion"/> to find <me>c_1 = \dfrac{\vec s \cdot \vec u}{\vec u \cdot \vec u} = \dfrac{3 + 8 + 1}{1 + 4 + 1} = \dfrac{12}{6} = 2</me> and <me>c_2 = \dfrac{\vec s \cdot \vec v}{\vec v \cdot \vec v} = \dfrac{-3 + 0 + 1}{1 + 0 + 1} = \dfrac{-2}{2} = -1</me>. Therefore, we have that <me>\vec s = 2\vec u - \vec v</me>, which can be easily checked.
+                </p>
+            </solution>
+        </task>
+    </example>
+
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-6-2-projections">
+    <title>Orthogonal Projections</title>
+
+    <definition xml:id="def-projection">
+      <title>Orthogonal Projection</title>
+      <statement>
+        <p>
+          For a nonzero vector <m>\vec u</m> and vector <m>\vec v</m>,
+          the <term>orthogonal projection of <m>\vec v</m> onto <m>\vec u</m></term> is:
+        </p>
+        <me>
+          \proj_{\vec u}(\vec v) = \frac{\vec v\cdot\vec u}{\vec u\cdot\vec u}\vec u.
+        </me>
+      </statement>
+    </definition>
+
+    <image xml:id="img-6-2-projection" width="70%">
+      <latex-image>
+        <latex>
+\begin{tikzpicture}[scale=.8]
+  \draw[dashed,gray] (-1,0) -- (5,0) node[below right]{Span$\{\vec u\}$};
+  \draw[-&gt;,DarkBlue,thick] (0,0) -- (4,0) node[below]{$\vec u$};
+  \draw[-&gt;,DarkRed,thick] (0,0) -- (2,2) node[above]{$\vec v$};
+  \draw[-&gt;,black,very thick] (0,0) -- (2,0) node[midway,below]{proj$_{\vec u}\vec v$};
+  \draw[-&gt;,gray,thick] (2,0) -- (2,2) node[midway,right]{$\vec w$};
+\end{tikzpicture}
+        </latex>
+      </latex-image>
+      <shortdescription>Diagram showing projection of vector onto a line.</shortdescription>
+      <description>
+        Visualization of <m>\operatorname{proj}_{\vec u}(\vec v)</m> as the closest point in the span of <m>\vec u</m> to <m>\vec v</m>.
+      </description>
+    </image>
+
+    <theorem xml:id="thm-projection-ortho" workspace="0.5in">
+        <statement>
+            <p>
+                Let <m>\vec u</m> be a nonzero vector. Then, the vector <m>\proj_{\vec u}\vec v</m> is the vector in <m>\Span\{\vec u\}</m> which is closest to <m>\vec v</m>. Also, the vector <m>\vec w=\vec v - \operatorname{proj}_{\vec u}(\vec v)</m> is orthogonal to <m>\vec u</m>. Furthermore, 
+                <me>\|\vec v\|^2 = \|\proj_{\vec u}{\vec v}\|^2 + \|\vec w\|^2</me>.
+            </p>
+        </statement>
+    </theorem>
+
+    <example xml:id="ex-6-2-ortho" workspace="true">
+        <statement>
+            <p>
+                Let <m>\vec y = \begin{bmatrix} 7 \\ 6 \end{bmatrix}</m> and <m>\vec u = \begin{bmatrix} 4 \\ 2 \end{bmatrix}</m>. Write <m>\vec y</m> as the sum of two orthogonal vectors, one in <m>\Span\{\vec u\}</m> and one orthogonal to <m>\vec u</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                We want to find vectors <m>\vec v_1 \in \Span\{\vec u\}</m> and <m>\vec v_2 \in \Span\{\vec u\}^\perp</m> so that <m>\vec y = \vec v_1 + \vec v_2</m>. Note that this is exactly what projection will give me. We have that <me>\vec v_1 = \proj_{\vec u}(\vec y) = \dfrac{\vec y \cdot \vec u}{\vec u \cdot \vec u}\vec u = \dfrac{28 + 12}{16 + 4}\begin{bmatrix} 4 \\ 2 \end{bmatrix} = \begin{bmatrix} 8 \\ 4 \end{bmatrix} \in \Span\{\vec u\}</me>. From <xref ref="thm-projection-ortho"/>, we see that <m>\vec v_1</m> is the vector in <m>\Span\{\vec u\}</m> which is closest to <m>\vec y</m>. To find <m>\vec v_2 \in \Span\{\vec u\}^\perp</m>, we use <xref ref="thm-projection-ortho"/> and find that <me>\vec v_2 = \vec y - \vec v_1 = \begin{bmatrix} 7 \\ 6 \end{bmatrix} - \begin{bmatrix} 8 \\ 4 \end{bmatrix} = \begin{bmatrix} -1 \\ 2 \end{bmatrix}</me>. We see that <m>\vec v_2 \cdot \vec u = 0</m>. Therefore, <me>\vec y = \vec v_1 + \vec v_2 = \begin{bmatrix} 8 \\ 4 \end{bmatrix} + \begin{bmatrix} -1 \\ 2 \end{bmatrix}</me> is a decomposition of <m>\vec y</m> into two vectors, one living in <m>\Span\{\vec u\}</m> and the other living in <m>\Span\{\vec u\}^\perp</m>. We will see in <xref ref="thm-orth-decomposition"/> that this decomposition is unique.
+            </p>
+        </solution>
+    </example>
+    
+    <p><nbsp/></p>
+
+  </page>
+
+
+  <page xml:id="p-6-2-projection-example">
+    <title>Example: Projection onto a Line</title>
+
+    <example xml:id="ex-6-2-projection" workspace="true">
+        <introduction>
+            <p>
+            Let <m>L</m> be the line spanned by <m>\vec u=\begin{bmatrix}1\\1\\1\\1\end{bmatrix}</m>.
+            </p>
+        </introduction>
+        <task workspace="true">
+            <statement>
+                <p>
+                    Find the projection of <m>\vec v = \begin{bmatrix} -3 \\ 5 \\ 6 \\ -4 \end{bmatrix}</m> onto the line <m>L</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                   Note that <me>\proj_L\vec v = \proj_{\vec u}\vec v = \dfrac{-3 + 5 + 6 - 4}{1 + 1 + 1 + 1}\begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix} = \vec u</me>. There isn't anything too special about <m>\proj_{\vec u}\vec v = \vec u</m>. Now, if we had instead gotten <m>\proj_{\vec u}\vec v = \vec v</m>, then we would learn that <m>\vec v \in \Span\{\vec u\}</m>, so <m>\vec v</m> is the vector in <m>\Span\{\vec u\}</m> which is closest to <m>\vec v</m>.
+                </p>
+            </solution>
+        </task>
+        <task workspace="true">
+            <statement>
+                <p>
+                    How close is <m>\vec v</m> to the line <m>L</m>?
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Note that the vector <m>\vec w = \vec v - \proj_{\vec u}\vec v</m> keeps track of how far away <m>\vec v</m> is from the line <m>\Span\{\vec u\}</m>. It follows that the distance <m>\vec v</m> is from <m>L</m> is given by <me>\|\vec v - \proj_{\vec u}\vec v\| = \left\|\begin{bmatrix} -4 \\ 4 \\ 5 \\ -5 \end{bmatrix}\right\| = \sqrt{16 + 16 + 25 + 25} = \sqrt{82}</me>.
+                </p>
+            </solution>
+        </task>
+    </example>
+
+    <p><nbsp/></p>
+
+    <definition xml:id="def-orthonormal-basis">
+      <title>Orthonormal Basis</title>
+      <statement>
+        <p>
+          An <term>orthonormal basis</term> for a subspace <m>W</m> is an orthogonal basis
+          in which each vector has length 1.
+        </p>
+
+        <p>
+          If <m>\{\vec u_1,\dots,\vec u_p\}</m> is orthonormal and <m>\vec w\in W</m>, then
+        </p>
+
+        <me>
+          \vec w = (\vec w\cdot\vec u_1)\vec u_1 + \cdots + (\vec w\cdot\vec u_p)\vec u_p,
+        </me>
+
+        <p>and</p>
+
+        <me>
+          \|\vec w\| = 
+          \sqrt{
+            (\vec w\cdot\vec u_1)^2 + \cdots + (\vec w\cdot\vec u_p)^2
+          }.
+        </me>
+      </statement>
+      <solution>
+        <p>
+            Note that the first result is a direct corollary of <xref ref="thm-orth-expansion"/> since for each <m>k \in \{1,2, \dots, p\}</m>, we have that <m>\vec u_k \cdot \vec u_k = 1</m> since <m>\vec u_k</m> is a unit vector.
+        </p>
+      </solution>
+    </definition>
+
+
+    <example xml:id="ex-6-2-orthonormal-complete" workspace="true">
+      <statement>
+        <p>
+          Let <m>W = \Span\left\{\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}\right\}^\perp</m>.
+          Find the missing entries in an orthonormal basis:
+        </p>
+
+        <me>
+          u=\frac{1}{\sqrt{\phantom{-1}}}
+          \begin{bmatrix}1\\0\\ \phantom{-1} \end{bmatrix},
+          \qquad
+          v=\frac{1}{\sqrt{\phantom{-1}}}
+          \begin{bmatrix} \phantom{-1} \\ \phantom{-1} \\ \phantom{-1}  \end{bmatrix}
+        </me>
+      </statement>
+      <solution>
+        <p>
+            Let <m>\vec x = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}</m>. In order for <m>\vec u \cdot \vec x = 0</m>, we see that the missing entry must be <m>-1</m>. Since the vector <m>\begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix}</m> has magnitude <m>\sqrt{2}</m>, we see that <me>\vec u = \dfrac{1}{\sqrt{2}}\begin{bmatrix}1 \\ 0 \\ -1 \end{bmatrix}</me>. We need to choose <m>\vec v</m> so that it is orthogonal to <m>\vec x</m> (which verifies that <m>\vec v \in W</m>) and orthogonal to <m>\vec u</m> (since we want an orthonormal basis). By observation, we see that the vector <m>\begin{bmatrix} 1 \\ -2 \\ 1 \end{bmatrix}</m> satisfies the orthogonality conditions. Since that vector has length <m>\sqrt{6}</m>, we choose <me>\vec v = \dfrac{1}{\sqrt{6}}\begin{bmatrix} 1 \\ -2 \\ 1\end{bmatrix}</me>.
+        </p>
+      </solution>
+    </example>
+
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-6-2-orthogonal-matrices">
+    <title>Orthogonal Matrices</title>
+
+    <definition xml:id="def-orthogonal-matrix">
+      <title>Orthogonal Matrix</title>
+      <statement>
+        <p>
+          An <term>orthogonal matrix</term> is a <em>square</em> matrix whose columns are orthonormal.
+        </p>
+      </statement>
+    </definition>
+
+    <theorem xml:id="thm-orthonormal-columns">
+        <statement>
+            <p>
+                An <m>m \times n</m> matrix <m>U</m> has orthonormal columns if and only if <m>U^TU = I_n</m>. 
+            </p>
+        </statement>
+    </theorem>
+    
+
+    <p workspace="1in">
+      Can <m>U</m> have orthonormal columns if <m>n&gt;m</m>?
+    </p>
+    <solution>
+        <p>
+            Suppose <m>U</m> has more columns than rows. The, we know that <m>U</m> <em>cannot</em> have a pivot in each column. Therefore, the columns of <m>U</m> are linearly <em>dependent</em>. The only way they can form an orthogonal set is if the columns corresponding to free variables are the zero vector. However, this makes it impossible for each column to have length 1. Therefore, a matrix with more columns than rows can <em>never</em> have orthonormal columns.
+        </p>
+    </solution>
+
+    <p><nbsp/></p>
+
+    <theorem xml:id="thm-orthogonal-maps" workspace="1in">
+      <title>Mapping Properties of Orthogonal Matrices</title>
+      <statement>
+        <p>If <m>U</m> is an orthogonal matrix, then:</p>
+
+        <ol>
+            <li>
+                <em>Preserves angles:</em>
+                <m>(U\vec x)\cdot(U\vec y)=\vec x\cdot\vec y</m>.
+                <solution>
+                    <p>
+                        Using the defintion of dot product (<xref ref="def-dot-product"/>), we see that <me>(U\vec x)\cdot (U\vec y) = (U\vec x)^T(U\vec y) = \vec x^T U^TU\vec y</me>. By <xref ref="thm-orthonormal-columns"/>, we see that <m>U^TU = I_n</m>. Therefore, <me>(U\vec x)\cdot(U\vec y) = \vec x^TU^TU\vec y = \vec x^T\vec y = \vec x \cdot \vec y</me>.
+                    </p>
+                </solution>
+            </li>
+            <li>
+                <em>Preserves length:</em> <m>\| U\vec x\| = \|\vec x\|</m>.
+                <solution>
+                    <p>
+                        This is a direct consequence of using <xref ref="def-length"/> and the above result with <m>(U\vec x)</m> and itself.
+                    </p>
+                </solution>
+            </li>
+          
+            <li>
+                <em>Preserves orthogonality.</em>
+                <solution>
+                    <p>
+                        This is direct consequence of <xref ref="thm-angle"/> and (a) above.
+                    </p>
+                </solution>
+            </li> 
+        </ol>
+      </statement>
+    </theorem>
+
+    <example xml:id="ex-6-2-length-after-U" workspace="2in">
+      <title>Example</title>
+      <statement>
+        <p>Compute the length of</p>
+
+        <me>
+          \begin{bmatrix}
+            \frac12 \amp \frac{2}{\sqrt{14}}\\
+            \frac12 \amp \frac{1}{\sqrt{14}}\\
+            \frac12 \amp \frac{-3}{\sqrt{14}}\\
+            \frac12 \amp 0
+          \end{bmatrix}
+          \begin{bmatrix}
+            \sqrt{5}\\
+            -2
+          \end{bmatrix}.
+        </me>
+      </statement>
+      <solution>
+        <p>
+            Note that the matrix <m>U = \begin{bmatrix}
+            \frac12 \amp \frac{2}{\sqrt{14}}\\
+            \frac12 \amp \frac{1}{\sqrt{14}}\\
+            \frac12 \amp \frac{-3}{\sqrt{14}}\\
+            \frac12 \amp 0
+          \end{bmatrix}</m> is a matrix with orthonormal columns. Therefore, we can use <xref ref="thm-orthogonal-maps"/>(b) to find that <me>\left\|\begin{bmatrix}
+            \frac12 \amp \frac{2}{\sqrt{14}}\\
+            \frac12 \amp \frac{1}{\sqrt{14}}\\
+            \frac12 \amp \frac{-3}{\sqrt{14}}\\
+            \frac12 \amp 0
+          \end{bmatrix} \begin{bmatrix} \sqrt{5} \\ -2 \end{bmatrix}\right\| = \left\|\begin{bmatrix}\sqrt{5} \\ -2 \end{bmatrix}\right\| = \sqrt{5 + 4} = 3.</me>
+        </p>
+      </solution>
+    </example>
+  </page>
+
+</handout>

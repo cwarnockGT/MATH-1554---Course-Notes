@@ -297,7 +297,7 @@
           W^\perp=\{\vec z\in\mathbb{R}^n:\vec z\cdot\vec w=0 \;\text{for all}\; \vec w\in W\}.
         </me>
         <p>
-            The set <m>W^\perp</m> is also a subspace of <m>\mathbb{R}^n</m>. Furthermore, we have that <me>\dim(W) + \dim(W^\perp) = n</me>.
+            The set <m>W^\perp</m> is also a subspace of <m>\mathbb{R}^n</m>. We have that <me>\dim(W) + \dim(W^\perp) = n</me>. Furthermore, for any subspace <m>W</m>, we have that <m>\left(W^\perp\right)^\perp = W</m>.
         </p>
       </statement>
     </definition>
@@ -509,9 +509,17 @@
           \vec a\cdot\vec b=\lVert\vec a\rVert\,\lVert\vec b\rVert\cos\theta.
         </me>
         <p>
-          Thus, if <m>\vec a\cdot\vec b=0</m>, then either one vector is zero or the vectors are orthogonal.
+          Thus, if <m>\vec a\cdot\vec b=0</m>, then either one vector is the zero vector or the vectors are orthogonal.
         </p>
       </statement>
+      <solution>
+        <p>
+          Proof: We will prove this theorem for vectors in <m>\mathbb{R}^2</m>. A similar argument can be made for two vectors in <m>\mathbb{R}^n</m> by considering them in the plane (or line) which they span.
+        </p>
+        <p>
+          First, note that if either <m>\vec a = \vec 0</m> or <m>\vec b = \vec 0</m>, then the equation is true since both the left side and right side are 0. Now suppose <m>\vec a \neq \vec 0</m> and <m>\vec b \neq \vec 0</m>. Then, we know that <m>\|\vec a\| \neq 0</m> and <m>\|\vec b\| \neq 0</m>. Let's consider the <em>unit</em> vectors <m>\vec u_1 = \frac{\vec a}{\|\vec a\|}</m> and <m>\vec u_2 = \frac{\vec b}{\|\vec b\|}</m>. Since both <m>\vec u_1</m> and <m>\vec u_2</m> are unit vectors in <m>\mathbb{R}^2</m>, they both lie on the unit circle. Note that rotating both vectors by the same angle will <em>not</em> change the angle between them. So, let's rotate the vectors so that <m>\vec u_1</m> lies on the positive <m>x</m>-axis. (This is similar to choosing a new reference frame in physics). Then, <m>\vec u_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}</m> and <m>\vec u_2 = \begin{bmatrix} \cos \theta \\ \sin \theta \end{bmatrix}</m>, where <m>\theta</m> is the angle between <m>\vec u_1</m> and <m>\vec u_2</m>. In this reference frame, we have that <me>\vec u_1 \cdot \vec u_2 = \begin{bmatrix} 1 \\ 0 \end{bmatrix} \cdot \begin{bmatrix} \cos \theta \\ \sin \theta \end{bmatrix} = \cos\theta</me>. By replacing <m>\vec u_1</m> and <m>\vec u_2</m> with their definitions in terms of <m>\vec a</m> and <m>\vec b</m>, we see that <me>\dfrac{\vec a}{\|\vec a\|} \cdot \dfrac{\vec b}{\|\vec b\|} = \cos \theta \quad \implies \quad \vec a \cdot \vec b = \|\vec a\|\|\vec b\|\cos \theta</me>.
+        </p>
+      </solution>
     </theorem>
 
 
