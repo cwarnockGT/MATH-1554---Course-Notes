@@ -2978,6 +2978,96 @@ var ptx_lunr_docs = [
   "number": "6.34",
   "title": "Example.",
   "body": " Example   Compute the length of    "
+},
+{
+  "id": "Section-6-3",
+  "level": "1",
+  "url": "Section-6-3.html",
+  "type": "Section",
+  "number": "",
+  "title": "6.3 Orthogonal Projections",
+  "body": " 6.3 Orthogonal Projections   6.3 Orthogonal Projections   Overview   Topics   Orthogonal projections and their properties  Best approximations     Goals    Apply orthogonality and projections to:   compute projections and distances,  express vectors using orthogonal decompositions,  construct best approximations.      Motivating Question  For the matrix and vector , which vector is closest to ?     Orthogonal Decomposition   If is a subspace of , then each has a unique decomposition:   where and . In fact, if is any orthogonal basis for , then   The vector is called the orthogonal projection of onto and can be written .  We have that .       Example 1    Let be an orthonormal basis of and let .  For any , write the orthogonal decomposition: , with and .       Given   construct the decomposition , where is the orthogonal projection of onto .       Best Approximation Theorem   Best Approximation Theorem   Let and . If is the orthogonal projection of onto , then for every with ,   Thus, is the unique closest vector in to .       Using the same vectors as :   compute the distance from to .       Another Example    Find the distance from to the subspace , where .       True\/False Questions    Indicate whether each statement is true or false. If true, explain why. If false, give a counterexample.     If is orthogonal to and , then is orthogonal to .      If , then .      If , where and , then is the orthogonal projection of onto .       "
+},
+{
+  "id": "obj-6-3-topics-goals",
+  "level": "2",
+  "url": "Section-6-3.html#obj-6-3-topics-goals",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   Orthogonal projections and their properties  Best approximations   "
+},
+{
+  "id": "p-6-3-overview-3",
+  "level": "2",
+  "url": "Section-6-3.html#p-6-3-overview-3",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals    Apply orthogonality and projections to:   compute projections and distances,  express vectors using orthogonal decompositions,  construct best approximations.     "
+},
+{
+  "id": "thm-orth-decomposition",
+  "level": "2",
+  "url": "Section-6-3.html#thm-orth-decomposition",
+  "type": "Theorem",
+  "number": "6.35",
+  "title": "Orthogonal Decomposition.",
+  "body": " Orthogonal Decomposition   If is a subspace of , then each has a unique decomposition:   where and . In fact, if is any orthogonal basis for , then   The vector is called the orthogonal projection of onto and can be written .  We have that .   "
+},
+{
+  "id": "ex-6-3-orth-decomp-5d",
+  "level": "2",
+  "url": "Section-6-3.html#ex-6-3-orth-decomp-5d",
+  "type": "Example",
+  "number": "6.36",
+  "title": "",
+  "body": "  Let be an orthonormal basis of and let .  For any , write the orthogonal decomposition: , with and .   "
+},
+{
+  "id": "ex-6-3-example2a",
+  "level": "2",
+  "url": "Section-6-3.html#ex-6-3-example2a",
+  "type": "Example",
+  "number": "6.37",
+  "title": "",
+  "body": "  Given   construct the decomposition , where is the orthogonal projection of onto .   "
+},
+{
+  "id": "thm-best-approx",
+  "level": "2",
+  "url": "Section-6-3.html#thm-best-approx",
+  "type": "Theorem",
+  "number": "6.38",
+  "title": "Best Approximation Theorem.",
+  "body": " Best Approximation Theorem   Let and . If is the orthogonal projection of onto , then for every with ,   Thus, is the unique closest vector in to .   "
+},
+{
+  "id": "ex-6-3-example2b",
+  "level": "2",
+  "url": "Section-6-3.html#ex-6-3-example2b",
+  "type": "Example",
+  "number": "6.39",
+  "title": "",
+  "body": "  Using the same vectors as :   compute the distance from to .   "
+},
+{
+  "id": "ex-6-3-example3",
+  "level": "2",
+  "url": "Section-6-3.html#ex-6-3-example3",
+  "type": "Example",
+  "number": "6.40",
+  "title": "",
+  "body": "  Find the distance from to the subspace , where .   "
+},
+{
+  "id": "handout-section-6-3-projections-6-2",
+  "level": "2",
+  "url": "Section-6-3.html#handout-section-6-3-projections-6-2",
+  "type": "Example",
+  "number": "6.41",
+  "title": "",
+  "body": "  Indicate whether each statement is true or false. If true, explain why. If false, give a counterexample.     If is orthogonal to and , then is orthogonal to .      If , then .      If , where and , then is the orthogonal projection of onto .    "
 }
 ]
 
