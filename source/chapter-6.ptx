@@ -12,6 +12,11 @@
       <xi:include href="./chapter-6-notes/section-6-2.ptx" />
   </section>
 
+  <section xml:id="Section-6-3">
+    <title>6.3 Orthogonal Projections</title>
+      <xi:include href="./chapter-6-notes/section-6-3.ptx" />
+  </section>
+
   
   
 
