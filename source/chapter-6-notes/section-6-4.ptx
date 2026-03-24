@@ -48,7 +48,7 @@
           <mrow>\vec v_p \amp = \vec x_p - \frac{\vec x_p\cdot\vec v_1}{\vec v_1\cdot\vec v_1}\vec v_1 - \cdots - \frac{\vec x_p \cdot \vec v_{p-1}}{\vec v_{p-1} \cdot \vec v_{p-1}}\vec v_{p-1}.</mrow>
         </md>
         <p>
-          Then <m>\{\vec v_1,\dots,\vec v_p\}</m> is an orthogonal basis for <m>W</m>. Additionally, <me>\Span\left\{\vec v_1, \dots, \vec v_k\right\} = \Span\left\{\vec x_1, \dots, \vec x_k\right\} \qquad \text{for <m>1 \leq k \leq p</m>}</me>
+          Then <m>\{\vec v_1,\dots,\vec v_p\}</m> is an orthogonal basis for <m>W</m>. Additionally, <me>W_k = \Span\left\{\vec v_1, \dots, \vec v_k\right\} = \Span\left\{\vec x_1, \dots, \vec x_k\right\} \qquad \text{for $1 \leq k \leq p$}</me>. Thus, we see that each vector <m>\vec v_k</m> is formed by starting with <m>\vec x_k</m> and then removing the orthogonal projection of <m>\vec x_k</m> onto <m>W_{k-1}</m>; that is, <me>\vec v_k = \vec x_k - \proj_{W_{k-1}}\vec x_k = \vec x_k - \proj_{\vec v_1}\vec x_k - \cdots - \proj_{\vec v_{k-1}}\vec x_k</me>.
         </p>
       </statement>
     </theorem>
@@ -107,7 +107,7 @@
       </latex-image>
       <shortdescription>Geometric view of Gram–Schmidt orthogonalization.</shortdescription>
       <description>
-        Vectors <m>\vec x_1,\vec x_2,\vec x_3</m> are processed to produce orthogonal vectors
+        Vectors <m>\vec x_1,\vec x_2,\vec x_3</m> are used to produce orthogonal vectors
         <m>\vec v_1,\vec v_2,\vec v_3</m> via subtraction of projections.
       </description>
     </image>
@@ -125,6 +125,7 @@
       </statement>
     </example>
 
+
   </page>
 
 
@@ -133,7 +134,7 @@
      <example xml:id="ex-6-4-orth-basis" workspace="true">
       <statement>
         <p>
-          The vectors below span a subspace <m>W\subset\mathbb{R}^4</m>. Construct an orthogonal basis.
+          The vectors below span a subspace <m>W\subseteq\mathbb{R}^4</m>. Construct an orthogonal basis for <m>W</m>.
         </p>
         <me>
           \vec x_1=\begin{bmatrix}1\\1\\1\\1\end{bmatrix},\quad
@@ -148,45 +149,10 @@
   </page>
 
 
-  
-
-
-  <page xml:id="p-6-4-orthonormal">
-    <title>Orthonormal Bases</title>
-
-    <definition xml:id="def-orthonormal">
-      <title>Orthonormal Basis</title>
-      <statement>
-        <p>
-          A set of vectors is an <em>orthonormal basis</em> if the vectors are mutually orthogonal and all have
-          length 1.
-        </p>
-      </statement>
-    </definition>
-
-    <p><nbsp/></p>
-
-    <example xml:id="ex-6-4-orthonormalize" workspace="true">
-      <title>Example</title>
-      <statement>
-        <p>
-          The vectors below form an orthogonal basis for a subspace <m>W</m>. Construct an
-          orthonormal basis for <m>W</m>.
-        </p>
-
-        <me>
-          \vec v_1=\begin{bmatrix}3\\2\\0\end{bmatrix},\quad
-          \vec v_2=\begin{bmatrix}-2\\3\\1\end{bmatrix}.
-        </me>
-      </statement>
-    </example>
-  </page>
-
-
   <page xml:id="p-6-4-qr-factorization">
     <title>The QR Factorization</title>
 
-    <theorem xml:id="thm-qr">
+    <theorem xml:id="thm-qr" workspace="1in">
       <title>QR Factorization</title>
       <statement>
         <p>
@@ -201,25 +167,13 @@
         <p>where:</p>
 
         <ul>
-          <li><m>Q</m> is <m>m\times n</m> with orthonormal columns spanning <m>\operatorname{Col}(A)</m>,</li>
-          <li><m>R</m> is <m>n\times n</m>, upper triangular, with positive diagonal entries.</li>
+          <li><m>Q</m> is <m>m\times n</m> whose columns are an orthonormal basis for <m>\Col(A)</m>,</li>
+          <li><m>R</m> is <m>n\times n</m>, upper triangular, with positive entries on its diagonal, and the length of the <m>j^\text{th}</m> column of <m>R</m> is equal to the length of the <m>j^\text{th}</m> column of <m>A</m>.</li>
         </ul>
       </statement>
     </theorem>
 
-    <p><nbsp/></p>
-
-    <p>
-      We omit here the dependent-columns case; students need not know the general criteria for existence.
-    </p>
-  </page>
-
-
-  <page xml:id="p-6-4-example-qr">
-    <title>Example: QR Factorization</title>
-
     <example xml:id="ex-6-4-qr-example" workspace="true">
-      <title>Example</title>
       <statement>
         <p>
           Compute the QR decomposition of:
@@ -230,6 +184,26 @@
             3 \amp -2\\
             2 \amp 3\\
             0 \amp 1
+          \end{bmatrix}.
+        </me>
+      </statement>
+    </example>
+
+  </page>
+
+  <page>
+    <example>
+      <statement>
+        <p>
+          Compute the QR decomposition of:
+        </p>
+
+        <me>
+          A=\begin{bmatrix}
+            1 \amp 0 \amp 0 \\
+            1 \amp 1 \amp 0 \\
+            1 \amp 1 \amp 1 \\
+            1 \amp 1 \amp 1
           \end{bmatrix}.
         </me>
       </statement>

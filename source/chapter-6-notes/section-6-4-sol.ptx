@@ -1,0 +1,276 @@
+<handout xml:id="handout-section-6-4-gram-schmidt">
+  <title>6.4 Gram–Schmidt and QR Decomposition</title>
+
+  <page xml:id="p-6-4-overview">
+    <title>Overview</title>
+
+    <objectives xml:id="obj-6-4-topics-goals">
+      <title>Topics</title>
+      <ul>
+        <li>The Gram–Schmidt Process</li>
+        <li>The QR decomposition</li>
+      </ul>
+      </objectives>
+
+      <objectives>
+      <title>Goals</title>
+      <ul>
+        <li>Apply Gram–Schmidt and QR decomposition to construct orthogonal or orthonormal bases.</li>
+        <li>Compute the QR factorization of a matrix.</li>
+      </ul>
+      </objectives>
+
+      <p><em>Motivating Question</em></p>
+      <p>
+        Identify an orthogonal basis for the subspace spanned by:
+      </p>
+
+      <me>
+        \vec x_1=\begin{bmatrix}1\\1\\1\\1\end{bmatrix},\quad
+        \vec x_2=\begin{bmatrix}0\\1\\1\\1\end{bmatrix},\quad
+        \vec x_3=\begin{bmatrix}0\\0\\1\\1\end{bmatrix}.
+      </me>
+
+      <p><nbsp/></p>
+
+      <theorem xml:id="thm-gram-schmidt">
+      <title>The Gram–Schmidt Process</title>
+      <statement>
+        <p>
+          Given a basis <m>\{\vec x_1,\dots,\vec x_p\}</m> for a subspace <m>W \subseteq \mathbb{R}^n</m>, define:
+        </p>
+        <md>
+          <mrow>\vec v_1 \amp =\vec x_1,</mrow>
+          <mrow>\vec v_2 \amp = \vec x_2 - \frac{\vec x_2\cdot\vec v_1}{\vec v_1\cdot\vec v_1}\vec v_1,</mrow>
+          <mrow>\vec v_3 \amp = \vec x_3 - \frac{\vec x_3\cdot\vec v_1}{\vec v_1\cdot\vec v_1}\vec v_1
+                     - \frac{\vec x_3\cdot\vec v_2}{\vec v_2\cdot\vec v_2}\vec v_2,</mrow>
+          <mrow>\amp \vdots</mrow>
+          <mrow>\vec v_p \amp = \vec x_p - \frac{\vec x_p\cdot\vec v_1}{\vec v_1\cdot\vec v_1}\vec v_1 - \cdots - \frac{\vec x_p \cdot \vec v_{p-1}}{\vec v_{p-1} \cdot \vec v_{p-1}}\vec v_{p-1}.</mrow>
+        </md>
+        <p>
+          Then <m>\{\vec v_1,\dots,\vec v_p\}</m> is an orthogonal basis for <m>W</m>. Additionally, <me>W_k = \Span\left\{\vec v_1, \dots, \vec v_k\right\} = \Span\left\{\vec x_1, \dots, \vec x_k\right\} \qquad \text{for $1 \leq k \leq p$}</me>. Thus, we see that each vector <m>\vec v_k</m> is formed by starting with <m>\vec x_k</m> and then removing the orthogonal projection of <m>\vec x_k</m> onto <m>W_{k-1}</m>; that is, <me>\vec v_k = \vec x_k - \proj_{W_{k-1}}\vec x_k = \vec x_k - \proj_{\vec v_1}\vec x_k - \cdots - \proj_{\vec v_{k-1}}\vec x_k</me>.
+        </p>
+      </statement>
+    </theorem>
+
+   
+  </page>
+
+
+  <page xml:id="p-6-4-gs-geometry">
+    <title>Geometric Interpretation</title>
+
+    <image xml:id="img-6-4-gs-geom" width="80%">
+      <latex-image>
+        <latex>
+\tdplotsetmaincoords{70}{40}
+\begin{tikzpicture}[scale=1.5,
+    axis/.style={->,black,-stealth}, 
+    vectorP/.style={-stealth,black, thick},
+    vectorV/.style={-stealth,DarkBlue,very thick},
+    vectorX/.style={-stealth,DarkRed,very thick},
+    dsline/.style={black,dashed},
+    perpline/.style={DarkBlue, thin},
+    tdplot_main_coords
+    ]
+
+  % plane
+  \filldraw[draw=DarkBlue!20,fill=DarkBlue!05]
+    (-1,-2,0) -- (3,-2,0) -- (3,4,0) -- (-1,4,0) -- cycle;
+
+  \coordinate (O) at (0,0,0);
+  \coordinate (X1) at (2,0,0);
+  \coordinate (X2) at (1,2.6,0);
+  \coordinate (X3) at (1.9,1,1.8);
+  \coordinate (P) at (1.9,1,0);
+  \coordinate (P2) at (1,0,0);
+
+  \draw[vectorX] (O)--(X1) node[below]{$\vec x_1=\vec v_1$};
+  \draw[vectorX] (O)--(X2) node[right]{$\vec x_2$};
+  \draw[vectorX] (O)--(X3) node[right]{$\vec x_3$};
+
+  \draw[vectorV] (O)--(0,2.6,0) node[above]{$\vec v_2$};
+  \draw[vectorV] (O)--(0,0,1.8) node[above]{$\vec v_3$};
+
+  \draw[vectorP] (O)--(P) node[right]{proj$_{W_2}\vec x_3$};
+  \draw[vectorP] (O)--(P2) node[below left]{proj$_{W_1}\vec x_2$};
+
+  \draw[dsline] (P)--(X3);
+  \draw[dsline] (P2)--(X2);
+
+  \draw[dsline] (-3,0,0)--(4,0,0) node[below]{$W_1$};
+
+  \draw[DarkBlue] (.5,-1.8,0) node[above]{$W_2$};
+
+\end{tikzpicture}
+        </latex>
+      </latex-image>
+      <shortdescription>Geometric view of Gram–Schmidt orthogonalization.</shortdescription>
+      <description>
+        Vectors <m>\vec x_1,\vec x_2,\vec x_3</m> are used to produce orthogonal vectors
+        <m>\vec v_1,\vec v_2,\vec v_3</m> via subtraction of projections.
+      </description>
+    </image>
+
+    <p workspace="1in">
+      Gram–Schmidt successively removes the components of each vector in the span of earlier ones.
+    </p>
+
+
+    <example workspace="true" xml:id="ex-6-4-2vec">
+      <statement>
+        <p>
+          Let <m>W = \Span\left\{\begin{bmatrix} 3 \\ 0 \\ -1 \end{bmatrix}, \begin{bmatrix} 8 \\ 5 \\ -6 \end{bmatrix} \right\}</m>. Find an orthogonal basis for <m>W</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+            Let <m>\vec x_1 = \begin{bmatrix} 3 \\ 0 \\ -1 \end{bmatrix}</m> and <m>\vec x_2 = \begin{bmatrix} 8 \\ 5 \\ -6 \end{bmatrix}</m>. Using <xref ref="thm-gram-schmidt"/>, we have that 
+            <md>
+                <mrow>\vec v_1 \amp = \vec x_1 = \begin{bmatrix} 3 \\ 0 \\ -1 \end{bmatrix}</mrow>
+            </md>
+            and
+            <md>
+                <mrow>\vec v_2 \amp = \vec x_2 - \proj_{\vec v_1}\vec x_2 </mrow>
+                <mrow> \amp = \begin{bmatrix} 8 \\ 5 \\ -6 \end{bmatrix} - \dfrac{8(3) + 5(0) -6(-1)}{3^2 + 0^2 + (-1)^2}\begin{bmatrix} 3 \\ 0 \\ -1 \end{bmatrix}</mrow>
+                <mrow> \amp = \begin{bmatrix}8 \\ 5 \\ -6 \end{bmatrix} - 3\begin{bmatrix} 3 \\ 0 \\ -1 \end{bmatrix}</mrow>
+                <mrow> \amp = \begin{bmatrix} -1 \\ 5 \\ -3 \end{bmatrix}</mrow>
+            </md>
+            Note that <m>\vec v_1, \vec v_2 \in W</m> and <m>\vec v_1 \cdot \vec v_2 = 0</m>, so <m>\left\{\vec v_1, \vec v_2\right\}</m> is an orthogonal basis for <m>W</m>.
+        </p>
+      </solution>
+    </example>
+
+
+  </page>
+
+
+  <page xml:id="p-6-4-gram-schmidt">
+
+     <example xml:id="ex-6-4-orth-basis" workspace="true">
+      <statement>
+        <p>
+          The vectors below span a subspace <m>W\subseteq\mathbb{R}^4</m>. Construct an orthogonal basis for <m>W</m>.
+        </p>
+        <me>
+          \vec x_1=\begin{bmatrix}1\\1\\1\\1\end{bmatrix},\quad
+          \vec x_2=\begin{bmatrix}0\\1\\1\\1\end{bmatrix},\quad
+          \vec x_3=\begin{bmatrix}0\\0\\1\\1\end{bmatrix}.
+        </me>
+      </statement>
+      <solution>
+        <p>
+          First, note that 
+          <md>
+            <mrow>\vec v_1 \amp = \vec x_1 = \begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix},</mrow>
+          </md>
+          Then, we have that
+          <md>
+            <mrow>\vec v_2 \amp = \vec x_2 - \proj_{\vec v_1}\vec x_2</mrow>
+            <mrow> \amp = \begin{bmatrix} 0 \\ 1 \\ 1 \\ 1 \end{bmatrix} - \dfrac{0(1) + 1(1) + 1(1) + 1(1)}{1^2 + 1^2 + 1^2 + 1^2}\begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix}</mrow>
+            <mrow> \amp = \begin{bmatrix} \frac{-3}{4} \\ \frac{1}{4} \\ \frac{1}{4} \\ \frac{1}{4} \end{bmatrix}</mrow>
+            <mrow> \amp = \dfrac{1}{4}\begin{bmatrix}-3 \\ 1 \\ 1 \\ 1 \end{bmatrix}.</mrow>
+          </md>
+          Note that scaling <m>\vec v_2</m> will not change its orthogonality with <m>\vec v_1</m>. So, in order to make future projections easier, let's scale the current <m>\vec v_2</m> by 4 to obtain <me>\vec v_2' = 4\vec v_2 = \begin{bmatrix} -3 \\ 1 \\ 1 \\ 1 \end{bmatrix}</me>, which is still orthogonal to <m>\vec v_1</m>.
+          Next, we have that 
+          <md>
+            <mrow>\vec v_3 \amp = \vec x_3 - \proj_{\vec v_1}\vec x_3 - \proj_{\vec v_2'}\vec x_3</mrow>
+            <mrow> \amp = \begin{bmatrix} 0 \\ 0 \\ 1 \\ 1 \end{bmatrix} - \dfrac{2}{4}\begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix} - \dfrac{0(-3) + 0(1) + 1(1) + 1(1)}{(-3)^2 + 1^2 + 1^2 + 1^2}\begin{bmatrix}-3 \\ 1 \\ 1 \\ 1 \end{bmatrix} </mrow>
+            <mrow> \amp = \begin{bmatrix} 0 \\ -\frac{2}{3} \\ \frac{1}{3} \\ \frac{1}{3} \end{bmatrix}</mrow>
+            <mrow> \amp = \dfrac{1}{3}\begin{bmatrix} 0 \\ -2 \\ 1 \\ 1 \end{bmatrix}</mrow>
+          </md>
+          Again, we can scale <m>\vec v_3</m> to obtain the a nicer vector <m>\vec v_3'</m> which is still orthogonal to <m>\vec v_1</m> and <m>\vec v_2</m>: <me>\vec v_3' = 3\vec v_3 = \begin{bmatrix} 0 \\ -2 \\ 1 \\ 1 \end{bmatrix}</me>. Thus, <me>\mathcal{B} = \left\{\vec v_1, \vec v_2', \vec v_3'\right\} = \left\{\begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix}, \begin{bmatrix} -3 \\ 1 \\ 1\\ 1 \end{bmatrix}, \begin{bmatrix} 0 \\ -2 \\ 1\\ 1 \end{bmatrix}\right\}</me> is an orthogonal basis for <m>W</m>. Note that there was nothing forcing us to start the process with <m>\vec v_1 = \vec x_1</m>. If instead we started with <m>\vec v_1 = \vec x_3</m> and then used <m>\vec x_2</m> followed by <m>\vec x_1</m>, we would have obtained the following orthogonal basis for <m>W</m> <me>\mathcal{C} = \left\{\begin{bmatrix} 0 \\ 0 \\ 1 \\ 1 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}\right\}</me>, which is a "nicer" orthogonal basis for <m>W</m>, especially if planning to use <xref ref="thm-orth-expansion"/>.
+        </p>
+      </solution>
+    </example>
+    
+
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-6-4-qr-factorization">
+    <title>The QR Factorization</title>
+
+    <theorem xml:id="thm-qr" workspace="1in">
+      <title>QR Factorization</title>
+      <statement>
+        <p>
+          If <m>A</m> is an <m>m\times n</m> matrix with linearly independent columns, then <m>A</m> has
+          a QR factorization:
+        </p>
+
+        <me>
+          A = QR,
+        </me>
+
+        <p>where:</p>
+
+        <ul>
+          <li><m>Q</m> is <m>m\times n</m> whose columns are an orthonormal basis for <m>\Col(A)</m>,</li>
+          <li><m>R</m> is <m>n\times n</m>, upper triangular, with positive entries on its diagonal, and the length of the <m>j^\text{th}</m> column of <m>R</m> is equal to the length of the <m>j^\text{th}</m> column of <m>A</m>.</li>
+        </ul>
+      </statement>
+    </theorem>
+
+    <example xml:id="ex-6-4-qr-example" workspace="true">
+      <statement>
+        <p>
+          Compute the QR decomposition of:
+        </p>
+
+        <me>
+          A=\begin{bmatrix}
+            3 \amp -2\\
+            2 \amp 3\\
+            0 \amp 1
+          \end{bmatrix}.
+        </me>
+      </statement>
+      <solution>
+        <p>
+          Note from <xref ref="ex-6-4-2vec"/> that <m>\left\{\begin{bmatrix} 3 \\ 0 \\ -1 \end{bmatrix}, \begin{bmatrix} -1 \\ 5 \\ -3 \end{bmatrix}\right\}</m> is an orthogonal basis for <m>\Col(A)</m>. Normalizing the vectors results in the following orthonormal basis for <m>\Col(A)</m>: <me>\left\{\dfrac{1}{\sqrt{13}}\begin{bmatrix} 3 \\ 2 \\ 0 \end{bmatrix}, \dfrac{1}{\sqrt{14}}\begin{bmatrix}-2 \\ 3 \\ 1 \end{bmatrix}\right\}</me> We let these be the columns of <m>Q</m>, so <me>Q = \begin{bmatrix} \frac{3}{\sqrt{13}} \amp \frac{-2}{\sqrt{14}} \\ \frac{2}{\sqrt{13}} \amp \frac{3}{\sqrt{14}} \\ 0 \amp \frac{1}{\sqrt{14}} \end{bmatrix}</me>. To find <m>R</m>, we calculate <m>R = Q^TA</m>. Note that <md>
+            <mrow>R \amp = Q^TA</mrow>
+            <mrow> \amp = \begin{bmatrix} \frac{3}{\sqrt{13}} \amp \frac{2}{\sqrt{13}} \amp 0 \\ \frac{-2}{\sqrt{14}} \amp \frac{3}{\sqrt{14}} \amp \frac{1}{\sqrt{14}} \end{bmatrix} \begin{bmatrix} 3 \amp -2 \\ 2 \amp 3 \\ 0 \amp 1 \end{bmatrix}</mrow>
+            <mrow> \amp = \begin{bmatrix} \frac{9 + 4 + 0}{\sqrt{13}} \amp \frac{-6 + 6 + 0}{\sqrt{13}} \\ \frac{-6 + 6 + 0}{\sqrt{14}} \amp \frac{4 + 9 + 1}{\sqrt{14}} \end{bmatrix}</mrow>
+            <mrow> \amp = \begin{bmatrix} \frac{13}{\sqrt{13}} \amp 0 \\ 0 \amp \frac{14}{\sqrt{14}} \end{bmatrix}</mrow>
+            <mrow> \amp = \begin{bmatrix} \sqrt{13} \amp 0 \\ 0 \amp \sqrt{14} \end{bmatrix}.</mrow>
+          </md> 
+          Note that <m>R</m> has all the desired properties: it is <m>2 \times 2</m>, upper triangular, has positive entries on the diagonal, and <m>\|\vec a_1\| = \|\vec r_1\|</m> and <m>\|\vec a_2\| = \|\vec r_2\|</m> where <m>\vec a_i</m> and <m>\vec r_i</m> are the columns of <m>A</m> and <m>R</m>, respectively.
+        </p>
+      </solution>
+    </example>
+
+  </page>
+
+  <page>
+    <example>
+      <statement>
+        <p>
+          Compute the QR decomposition of:
+        </p>
+
+        <me>
+          A=\begin{bmatrix}
+            1 \amp 0 \amp 0 \\
+            1 \amp 1 \amp 0 \\
+            1 \amp 1 \amp 1 \\
+            1 \amp 1 \amp 1
+          \end{bmatrix}.
+        </me>
+      </statement>
+      <solution>
+        <p>
+          Using <m>\mathcal{B}</m> from <xref ref="ex-6-4-orth-basis"/> and normalizing the vectors, we set <me>Q = \begin{bmatrix} \frac{1}{2} \amp \frac{-3}{\sqrt{12}} \amp 0 \\ \frac{1}{2} \amp \frac{1}{\sqrt{12}} \amp \frac{-2}{\sqrt{6}} \\ \frac{1}{2} \amp \frac{1}{\sqrt{12}} \amp \frac{1}{\sqrt{6}} \\ \frac{1}{2} \amp \frac{1}{\sqrt{12}} \amp \frac{1}{\sqrt{6}} \end{bmatrix}</me>. It follows that 
+          <md>
+            <mrow>R \amp = Q^TA </mrow>
+            <mrow> \amp = \begin{bmatrix} \frac{1}{2} \amp \frac{1}{2} \amp \frac{1}{2} \amp \frac{1}{2} \\ \frac{-3}{\sqrt{12}} \amp \frac{1}{\sqrt{12}} \amp \frac{1}{\sqrt{12}} \amp \frac{1}{\sqrt{12}} \\ 0 \amp \frac{-2}{\sqrt{6}} \amp \frac{1}{\sqrt{6}} \amp \frac{1}{\sqrt{6}} \end{bmatrix} \begin{bmatrix} 1 \amp 0 \amp 0 \\ 1 \amp 1 \amp 0 \\ 1 \amp 1 \amp 1 \\ 1 \amp 1 \amp 1 \end{bmatrix}</mrow>
+            <mrow> \amp = \begin{bmatrix} 2 \amp \frac{3}{2} \amp 1 \\ 0 \amp \frac{3}{\sqrt{12}} \amp \frac{2}{\sqrt{12}} \\ 0 \amp 0 \amp \frac{2}{\sqrt{6}} \end{bmatrix}.</mrow>
+          </md>
+          Again, we can check that <m>R</m> has all the expected properties: it is <m>3 \times 3</m>, upper triangular, positive entries on the diagonal, and <m>\|\vec a_1\| = \|\vec r_1\|, \|\vec a_2\| = \|\vec r_2\|,</m> and <m>\|\vec a_3 \| = \|\vec r_3 \|</m>.
+        </p>
+      </solution>
+    </example>
+  </page>
+
+</handout>
