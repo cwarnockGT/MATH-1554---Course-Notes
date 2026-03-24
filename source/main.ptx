@@ -15,6 +15,7 @@
       \renewcommand{\det}{\operatorname{det}}
       \newcommand{\rank}{\operatorname{rank}}
       \newcommand{\proj}{\operatorname{proj}}
+      \newcommand{\dist}{\operatorname{dist}}
     </macros>
 
     <latex-image-preamble>

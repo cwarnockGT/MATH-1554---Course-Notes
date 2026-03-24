@@ -291,16 +291,21 @@
 
     <p><nbsp/></p>
 
-    <definition xml:id="def-orthonormal-basis">
+    <definition xml:id="def-orthonormal-basis" workspace="0.5in">
       <title>Orthonormal Basis</title>
       <statement>
         <p>
           An <term>orthonormal basis</term> for a subspace <m>W</m> is an orthogonal basis
           in which each vector has length 1.
         </p>
+      </statement>
+    </definition>
 
+    <theorem xml:id="thm-orthonomal-basis" workspace="1in">
+      <title>Expansion in an Orthonormal Basis</title>
+      <statement>
         <p>
-          If <m>\{\vec u_1,\dots,\vec u_p\}</m> is orthonormal and <m>\vec w\in W</m>, then
+          If <m>\{\vec u_1,\dots,\vec u_p\}</m> is orthonormal basis for <m>W</m> and <m>\vec w\in W</m>, then
         </p>
 
         <me>
@@ -318,17 +323,21 @@
       </statement>
       <solution>
         <p>
-            Note that the first result is a direct corollary of <xref ref="thm-orth-expansion"/> since for each <m>k \in \{1,2, \dots, p\}</m>, we have that <m>\vec u_k \cdot \vec u_k = 1</m> since <m>\vec u_k</m> is a unit vector.
+            Proof: The first result is a direct corollary of <xref ref="thm-orth-expansion"/> since for each <m>k \in \{1,2, \dots, p\}</m>, we have that <m>\vec u_k \cdot \vec u_k = 1</m> because <m>\vec u_k</m> is a unit vector.
         </p>
       </solution>
-    </definition>
+    </theorem>
+
+  </page>
+
+  <page>
 
 
     <example xml:id="ex-6-2-orthonormal-complete" workspace="true">
       <statement>
         <p>
           Let <m>W = \Span\left\{\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}\right\}^\perp</m>.
-          Find the missing entries in an orthonormal basis:
+          Find the missing entries in an orthonormal basis for <m>W</m>:
         </p>
 
         <me>
@@ -338,10 +347,17 @@
           v=\frac{1}{\sqrt{\phantom{-1}}}
           \begin{bmatrix} \phantom{-1} \\ \phantom{-1} \\ \phantom{-1}  \end{bmatrix}
         </me>
+
+        <p>
+          Then, express <m>\vec w = \begin{bmatrix} 3 \\ 6 \\ -9 \end{bmatrix} \in W</m> as a linear combination of <m>\vec u</m> and <m>\vec v</m>.
+        </p>
       </statement>
       <solution>
         <p>
             Let <m>\vec x = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}</m>. In order for <m>\vec u \cdot \vec x = 0</m>, we see that the missing entry must be <m>-1</m>. Since the vector <m>\begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix}</m> has magnitude <m>\sqrt{2}</m>, we see that <me>\vec u = \dfrac{1}{\sqrt{2}}\begin{bmatrix}1 \\ 0 \\ -1 \end{bmatrix}</me>. We need to choose <m>\vec v</m> so that it is orthogonal to <m>\vec x</m> (which verifies that <m>\vec v \in W</m>) and orthogonal to <m>\vec u</m> (since we want an orthonormal basis). By observation, we see that the vector <m>\begin{bmatrix} 1 \\ -2 \\ 1 \end{bmatrix}</m> satisfies the orthogonality conditions. Since that vector has length <m>\sqrt{6}</m>, we choose <me>\vec v = \dfrac{1}{\sqrt{6}}\begin{bmatrix} 1 \\ -2 \\ 1\end{bmatrix}</me>.
+        </p>
+        <p>
+          By <xref ref="thm-orthonomal-basis"/>, we have that <me>\vec w = (\vec w \cdot \vec u) \vec u + (\vec w \cdot \vec v) \vec v = \dfrac{12}{\sqrt{2}}\vec u - \dfrac{18}{\sqrt{6}}\vec v</me>. Checking, we see that <me>\begin{bmatrix} 3 \\ 6 \\ -9 \end{bmatrix} = \dfrac{12}{\sqrt{2}}\left(\dfrac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix}\right) - \dfrac{18}{\sqrt{6}}\left(\dfrac{1}{\sqrt{6}}\begin{bmatrix} 1 \\ -2 \\ 1 \end{bmatrix}\right) = 6\begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix} - 3 \begin{bmatrix} 1 \\ -2 \\ 1\end{bmatrix}</me>
         </p>
       </solution>
     </example>

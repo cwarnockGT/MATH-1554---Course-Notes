@@ -1,0 +1,276 @@
+<handout xml:id="handout-section-6-3-projections">
+  <title>6.3 Orthogonal Projections</title>
+
+  <page xml:id="p-6-3-overview">
+    <title>Overview</title>
+
+
+    <objectives xml:id="obj-6-3-topics-goals">
+      <title>Topics</title>
+      <ul>
+        <li>Orthogonal projections and their properties</li>
+        <li>Best approximations</li>
+      </ul>
+      </objectives>
+
+    <objectives>
+      <title>Goals</title>
+      <ul>
+        <li>
+          <p>Apply orthogonality and projections to:</p>
+          <ul>
+            <li>compute projections and distances,</li>
+            <li>express vectors using orthogonal decompositions,</li>
+            <li>construct best approximations.</li>
+
+          </ul>
+        </li>
+      </ul>
+      </objectives>
+
+      <p><em>Motivating Question</em></p>
+      <p>
+        For the matrix <m>A</m> and vector <m>\vec b</m>, which vector <m>\widehat b \in \Col(A)</m> is closest to <m>\vec b</m>?
+      </p>
+
+      <me>
+        A=\begin{bmatrix}
+          1 \amp 2\\
+          3 \amp 0\\
+          -4 \amp -2
+        \end{bmatrix},
+        \qquad
+        \vec b=\begin{bmatrix}1\\1\\1\end{bmatrix}.
+      </me>
+
+      <p><nbsp/></p>
+
+      <theorem xml:id="thm-orth-decomposition">
+      <title>Orthogonal Decomposition</title>
+      <statement>
+        <p>
+          If <m>W</m> is a subspace of <m>\mathbb{R}^n</m>, then each <m>\vec y\in\mathbb{R}^n</m> has a
+          <em>unique</em> decomposition:
+        </p>
+        <me>
+          \vec y = \widehat y + w^\perp
+        </me>
+        <p>
+            where <m>\widehat y \in W</m> and <m>w^\perp \in W^\perp</m>. In fact, if <m>\{\vec u_1,\dots,\vec u_p\}</m> is any <em>orthogonal basis</em> for <m>W</m>, then
+        </p>
+        <md>
+          <mrow>\widehat y \amp = \proj_W \vec y </mrow> 
+          <mrow> \amp = \proj_{\vec u_1}\vec y + \cdots + \proj_{\vec u_p}\vec y</mrow> 
+          <mrow> \amp = \frac{\vec y\cdot\vec u_1}{\vec u_1\cdot\vec u_1}\vec u_1 + \cdots + \frac{\vec y\cdot\vec u_p}{\vec u_p\cdot\vec u_p}\vec u_p </mrow>
+        </md>
+        <p>
+          The vector <m>\widehat y</m> is called the <em>orthogonal projection</em> of
+          <m>\vec y</m> onto <m>W</m> and can be written <m>\widehat y = \proj_{W}\vec y</m>.
+        </p>
+        <p>
+            We have that <m>w^\perp = \vec y - \widehat y</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <p><nbsp/></p>
+
+  </page>
+
+
+  <page xml:id="p-6-3-example1">
+    <title>Example 1</title>
+
+    <example xml:id="ex-6-3-orth-decomp-5d" workspace="1in">
+      <statement>
+        <p>
+          Let <m>\{\vec u_1,\dots,\vec u_5\}</m> be an orthonormal basis of <m>\mathbb{R}^5</m> and let <m>W=\operatorname{Span}\{\vec u_1,\vec u_2\}</m>.
+        </p>
+        <p>
+          For any <m>\vec y\in\mathbb{R}^5</m>, write the orthogonal decomposition:
+          <m>\vec y=\widehat y + w^\perp</m>,
+          with <m>\widehat y\in W</m> and <m>w^\perp\in W^\perp</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+            Since <m>left\{\vec u_1, \dots \vec u_5\}</m> is an orthonormal basis for <m>\mathbb{R}^5</m>, we have <me>\vec y = c_1 \vec u_1 + c_2\vec u_2 + c_3\vec u_3 + c_4\vec u_4 + c_5 \vec u_5</me>, where <m>c_i = \vec y \cdot \vec u_i</m> by <xref ref="thm-orthonomal-basis"/>. Note that <m>\{\vec u_1, \vec u_2\}</m> is an orthonormal basis for <m>W</m>, so by <xref ref="thm-orth-decomposition"/>, we have <me>\widehat y = \proj_{\vec u_1}\vec y + \proj_{\vec u_2}\vec y = (\vec y \cdot \vec u_1)\vec u_1 + (\vec y \cdot \vec u_2)\vec u_2 \in W</me>. It follows that <me>\vec w^\perp = \vec y - \widehat y = (\vec y \cdot \vec u_3) \vec u_3 + (\vec y \cdot \vec u_4)\vec u_4 + (\vec y \cdot \vec u_5)\vec u_5 \in W^\perp</me>.
+        </p>
+      </solution>
+    </example>
+
+    <p><nbsp/></p>
+
+
+    <example xml:id="ex-6-3-example2a" workspace="2in">
+      <statement>
+        <p>Given</p>
+        <me>
+          \vec y=\begin{bmatrix}-1\\2\\6\end{bmatrix},\quad
+          \vec u_1=\begin{bmatrix}3\\-1\\2\end{bmatrix},\quad
+          \vec u_2=\begin{bmatrix}1\\-1\\-2\end{bmatrix},
+        </me>
+        <p>
+          construct the decomposition <m>\vec y = \widehat y + w^\perp</m>, where <m>\widehat y</m> is the orthogonal projection of <m>\vec y</m> onto
+          <m>W=\operatorname{Span}\{\vec u_1,\vec u_2\}</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+            Note that <m>\mathcal{B} = \left\{\vec u_1, \vec u_2\right\}</m> is an <em>orthogonal</em> basis for <m>W</m> since <m>\vec u_1 \cdot \vec u_2 = 0</m>. Therefore, <md >
+                <mrow>\widehat y \amp = \proj_W\vec y </mrow>
+                <mrow> \amp = \proj_{\vec u_1}\vec y + \proj_{\vec u_2}\vec y</mrow>
+                <mrow> \amp = \dfrac{\vec y \cdot \vec u_1}{\vec u_1 \cdot \vec u_1} \vec u_1 + \dfrac{\vec y \cdot \vec u_2}{\vec u_2 \cdot \vec u_2}\vec u_2</mrow>
+                <mrow> \amp = \dfrac{7}{14}\begin{bmatrix} 3 \\ -1 \\ 2 \end{bmatrix} - \dfrac{15}{6}\begin{bmatrix} 1 \\ -1 \\ -2 \end{bmatrix}</mrow>
+                <mrow> \amp = \begin{bmatrix} -1 \\ 2 \\ 6 \end{bmatrix}</mrow>
+                <mrow> \amp = \vec y</mrow>
+            </md>
+            Note that <m>\widehat y = \vec y</m>. What does this mean? Since <m>\widehat y</m> must be a vector in <m>W</m>, it must be the case that <m>\vec y \in W</m>. Hopefully, it makes sense that for any vector already in <m>W</m>, say <m>\vec w \in W</m>, we will have <m>\widehat w = \proj_W \vec w = \vec w</m>. In this example, we have <me>w^\perp = \vec y - \widehat y = \vec 0</me>. Recall that in general we should have that <m>\widehat y \cdot w^\perp = 0</m>. This is definitely true here. 
+        </p>
+      </solution>
+    </example>
+
+     <p><nbsp/></p>
+
+  </page>
+
+
+  <page xml:id="p-6-3-best-approx">
+    <title>Best Approximation Theorem</title>
+
+    <theorem xml:id="thm-best-approx" workspace="0.5in">
+      <title>Best Approximation Theorem</title>
+      <statement>
+        <p>
+          Let <m>W\subseteq\mathbb{R}^n</m> and <m>\vec y\in\mathbb{R}^n</m>.
+          If <m>\widehat y</m> is the orthogonal projection of <m>\vec y</m> onto <m>W</m>; that is <m>\widehat y = \proj_W\vec y</m>, then
+          for every <m>\vec w\in W</m> with <m>\vec w\ne \widehat y</m>,
+        </p>
+
+        <me>
+          \lVert\vec y-\widehat y\rVert &lt; \lVert\vec y-\vec w\rVert.
+        </me>
+
+        <p>
+          Thus, <m>\widehat y</m> is the <em>unique</em> closest vector in <m>W</m> to <m>\vec y</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <definition xml:id="def-dist-W">
+        <statement>
+            <p>
+                Let <m>W \subset \mathbb{R}^n</m> and <m>\vec y \in \mathbb{R}^n</m>. The <term>distance of a vector <m>\vec y</m> from a subspace <m>W</m></term>, denoted <m>\dist(\vec y, W)</m>, is the minimum distance between <m>\vec y</m> and a vector <m>\vec w \in W</m>; that is, <me>\dist(\vec y, W) = \operatorname{min}\left\{\dist(\vec y, \vec w) : w \in W\right\}</me>. By <xref ref="thm-best-approx"/>, we see that the vector in <m>W</m> which is closest to <m>\vec y</m> is <m>\widehat y = \proj_W\vec y</m>. Therefore, <me>\dist(\vec y, W) = \dist(\vec y, \widehat y)</me>.
+            </p>
+        </statement>
+    </definition>
+
+    <p><nbsp/></p>
+
+    <example xml:id="ex-6-3-example2b" workspace="true">
+      <statement>
+        <p>Using the same vectors as <xref ref="ex-6-3-example2a"/>:</p>
+
+        <me>
+          \vec y=\begin{bmatrix}-1\\2\\6\end{bmatrix},\quad
+          \vec u_1=\begin{bmatrix}3\\-1\\2\end{bmatrix},\quad
+          \vec u_2=\begin{bmatrix}1\\-1\\-2\end{bmatrix},
+        </me>
+
+        <p>
+          compute the distance from <m>\vec y</m> to
+          <m>W=\operatorname{Span}\{\vec u_1,\vec u_2\}</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+            Recall form <xref ref="ex-6-3-example2a"/>, we have that <m>\widehat y = \vec y</m>. Therefore, we have that <me>\dist(\vec y, W) = \dist(\vec y, \widehat y) = \dist(\vec y, \vec y) = 0</me>, which makes sense since <m>\vec y \in W</m>.
+        </p>
+      </solution>
+    </example>
+
+    <p><nbsp/></p>
+  </page>
+
+  <page>
+    <title>Another Example</title>
+
+    <example xml:id="ex-6-3-example3" workspace="true">
+        <statement>
+            <p>
+                Find the distance from <m>\vec y</m> to the subspace <m>W = \Span\{\vec v_1, \vec v_2, \vec v_3\}</m>, where <me>\vec y = \begin{bmatrix} 11 \\ 1 \\ -2 \\ 6 \end{bmatrix}, \qquad \vec v_1 = \begin{bmatrix} 1 \\ 1 \\ 0 \\ -1 \end{bmatrix}, \qquad \vec v_2 = \begin{bmatrix} 1 \\ 0 \\ 1 \\ 1 \end{bmatrix}, \qquad \vec v_3 = \begin{bmatrix} 0 \\ -1 \\ 1 \\ -1\end{bmatrix}</me>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                First, we find <m>\widehat y</m>. Note that <m>\left\{\vec v_1, \vec v_2, \vec v_3\right\}</m> is an orthogonal basis for <m>W</m>. Check this. It follows that 
+                <md>
+                    <mrow>\widehat y \amp = \proj_W\vec y  </mrow>
+                    <mrow> \amp = \proj_{\vec v_1}\vec y + \proj_{\vec v_2}\vec y + \proj_{\vec v_3}\vec y </mrow>
+                    <mrow> \amp = \dfrac{\vec y \cdot \vec v_1}{\vec v_1 \cdot \vec v_1}\vec v_1 + \dfrac{\vec y \cdot \vec v_2}{\vec v_2 \cdot \vec v_2}\vec v_2 + \dfrac{\vec y \cdot \vec v_3}{\vec v_3 \cdot \vec v_3}\vec v_3 </mrow>
+                    <mrow> \amp = 2\begin{bmatrix} 1 \\ 1 \\ 0 \\ -1 \end{bmatrix} + 5\begin{bmatrix} 1 \\ 0 \\ 1 \\ 1 \end{bmatrix} - 3\begin{bmatrix} 0 \\ -1 \\ 1 \\ -1 \end{bmatrix} </mrow>
+                    <mrow> \amp = \begin{bmatrix} 7 \\ 5 \\ 2 \\ 6 \end{bmatrix}</mrow>
+                </md>
+                Note that in this example <m>\widehat y \neq \vec y</m>. Therefore, <m>\vec y \not \in W</m>, so there is a nonzero distance between <m>\vec y</m> and <m>W</m>. It follows that <me>\dist(\vec y, W) = \dist(\vec y, \widehat y) = \|\vec y - \widehat y\| = \left\|\begin{bmatrix} 4 \\ -4 \\ -4 \\ 0 \end{bmatrix}\right\| = \sqrt{48}</me>.
+            </p>
+        </solution>
+    </example>
+
+    <p><nbsp/></p>
+  </page>
+
+  <page>
+    <title>True/False Questions</title>
+    <example>
+        <introduction>
+            <p>
+                Indicate whether each statement is true or false. If true, explain why. If false, give a counterexample.
+            </p>
+        </introduction>
+        <task workspace="true">
+            <statement>
+                <p>
+                    If <m>\vec x</m> is orthogonal to <m>\vec v</m> and <m>\vec w</m>, then <m>\vec x</m> is orthogonal to <m>\vec v - \vec w</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    This is true. One way to prove this is by direct calculation. Since <m>\vec x</m> is orthogonal to <m>\vec v</m> and <m>\vec w</m>, we have that <m>\vec x \cdot \vec v = 0</m> and <m>\vec x \cdot \vec w = 0</m>. It follows that <me>\vec x \cdot (\vec v - \vec w) = \vec x \cdot \vec v - \vec x \cdot \vec w = 0 - 0 = 0</me>. Thus, <m>\vec x</m> is orthogonal to <m>\vec v - \vec w</m>.
+                </p>
+                <p>
+                    Another way to prove this is to strictly use theory. Note that if <m>\vec v</m> and <m>\vec w</m> are orthogonal to <m>\vec x</m>, then <m>\vec v, \vec w \in \Span\{\vec x\}^\perp</m>. Since <m>\Span\{\vec x \}^\perp</m> is a subspace, it is closed under linear combinations, so <m>\vec v - \vec w \in \Span\{\vec x\}^\perp</m>. Thus, <m>\vec x</m> is also orthogonal to <m>\vec v - \vec w</m>.
+                </p>
+            </solution>
+        </task>
+        <task workspace="true">
+            <statement>
+                <p>
+                    If <m>\proj_{W}{\vec y} = \vec y</m>, then <m>\vec y \in W</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    This is true. By very definition, <m>\proj_W\vec y \in W</m>, so if <m>\vec y = \proj_W\vec y</m>, then <m>\vec y \in W</m>.
+                </p>
+            </solution>
+        </task>
+        <task workspace="true">
+            <statement>
+                <p>
+                    If <m>\vec y = \vec u_1 + \vec v_1</m>, where <m>\vec u_1 \in W</m> and <m>\vec v_1 \in W^\perp</m>, then <m>\vec u_1</m> is the orthogonal projection of <m>\vec y</m> onto <m>W</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    This is true. By <xref ref="thm-orth-decomposition"/>, we have <m>\vec y = \widehat y + w^\perp</m>, where <m>\widehat y \in W</m> and <m>w^\perp \in W^\perp</m> are <em>uniquely</em> chosen. Thus, we must have that <me>\vec u_1 = \widehat y = \proj_W \vec y</me>.
+                </p>
+                <p>
+                    We can see this more explicitly using the transitive property and properties of subspace and orthogonal complements. Note that <me>\vec y = \vec u_1 + \vec u_2 \quad \text{and} \quad \vec y = \widehat y + w^\perp</me>. Therefore, we have that <me>\vec u_1 + \vec v_1 = \widehat y + w^\perp \quad \implies \quad \vec u_1 - \widehat y = w^\perp - \vec v_1</me>. Since <m>w^\perp, \vec v_1 \in W^\perp</m> and since <m>W^\perp</m> is closed under linear combinations (it is a subspace), we have that <m>\vec u_1 - \widehat y = w^\perp - \vec v_1\in W^\perp</m>. We also know that <m>\vec u_1 - \widehat y \in W</m> since each vector is in <m>W</m>. It follows that the vector <m>\vec u_1 - \widehat y</m> is a vector that is in both <m>W</m> and <m>W^\perp</m>, which means that it is a vector in <m>W</m> that is also orthogonal to every vector in <m>W</m>, including itself. The only vector orthogonal to itself is <m>\vec 0</m>. Thus, <me>\vec u_1 - \widehat y = \vec 0 \quad \implies \quad \vec u_1 = \vec y = \proj_W\vec y</me>.
+                </p>
+            </solution>
+        </task>
+    </example>
+    
+  </page>
+
+</handout>
