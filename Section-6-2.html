@@ -145,6 +145,7 @@ eBookConfig.enable_chatcodes =  false;
 \renewcommand{\det}{\operatorname{det}}
 \newcommand{\rank}{\operatorname{rank}}
 \newcommand{\proj}{\operatorname{proj}}
+\newcommand{\dist}{\operatorname{dist}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -639,7 +640,7 @@ c_2 = \dfrac{\vec s \cdot \vec v}{\vec v \cdot \vec v} = \dfrac{-3 + 0 + 1}{1 + 
 \vec y = \vec v_1 + \vec v_2 = \begin{bmatrix} 8 \\ 4 \end{bmatrix} + \begin{bmatrix} -1 \\ 2 \end{bmatrix}
 \end{equation*}
 </div>
-<div class="para">is a decomposition of <span class="process-math">\(\vec y\)</span> into two vectors, one living in <span class="process-math">\(\Span\{\vec u\}\)</span> and the other living in <span class="process-math">\(\Span\{\vec u\}^\perp\text{.}\)</span> We will see in <a href="Section-6-3.html#thm-orth-decomposition" class="xref" data-knowl="./knowl/xref/thm-orth-decomposition.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.35: Orthogonal Decomposition">Theorem 6.35</a> that this decomposition is unique.</div>
+<div class="para">is a decomposition of <span class="process-math">\(\vec y\)</span> into two vectors, one living in <span class="process-math">\(\Span\{\vec u\}\)</span> and the other living in <span class="process-math">\(\Span\{\vec u\}^\perp\text{.}\)</span> We will see in <a href="Section-6-3.html#thm-orth-decomposition" class="xref" data-knowl="./knowl/xref/thm-orth-decomposition.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.36: Orthogonal Decomposition">Theorem 6.36</a> that this decomposition is unique.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-6-2-ortho-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Solution 6.27.1"><a href="#ex-6-2-ortho-2" title="Copy heading and permalink for Solution 6.27.1" aria-label="Copy heading and permalink for Solution 6.27.1">🔗</a></div>
@@ -691,16 +692,21 @@ c_2 = \dfrac{\vec s \cdot \vec v}{\vec v \cdot \vec v} = \dfrac{-3 + 0 + 1}{1 + 
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.29</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Orthonormal Basis.</span>
 </h4>
 <div class="para" id="def-orthonormal-basis-2-1">An <dfn class="terminology">orthonormal basis</dfn> for a subspace <span class="process-math">\(W\)</span> is an orthogonal basis in which each vector has length 1.<div class="autopermalink" data-description="Paragraph"><a href="#def-orthonormal-basis-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="def-orthonormal-basis-2-2">If <span class="process-math">\(\{\vec u_1,\dots,\vec u_p\}\)</span> is orthonormal and <span class="process-math">\(\vec w\in W\text{,}\)</span> then<div class="autopermalink" data-description="Paragraph"><a href="#def-orthonormal-basis-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="def-orthonormal-basis-2-3">
+<div class="workspace" data-space="0.5in"></div>
+<div class="autopermalink" data-description="Definition 6.29: Orthonormal Basis"><a href="#def-orthonormal-basis" title="Copy heading and permalink for Definition 6.29: Orthonormal Basis" aria-label="Copy heading and permalink for Definition 6.29: Orthonormal Basis">🔗</a></div></article><article class="theorem theorem-like" id="thm-orthonomal-basis"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.30</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Expansion in an Orthonormal Basis.</span>
+</h4>
+<div class="para" id="thm-orthonomal-basis-2-1">If <span class="process-math">\(\{\vec u_1,\dots,\vec u_p\}\)</span> is orthonormal basis for <span class="process-math">\(W\)</span> and <span class="process-math">\(\vec w\in W\text{,}\)</span> then<div class="autopermalink" data-description="Paragraph"><a href="#thm-orthonomal-basis-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="thm-orthonomal-basis-2-2">
 \begin{equation*}
 \vec w = (\vec w\cdot\vec u_1)\vec u_1 + \cdots + (\vec w\cdot\vec u_p)\vec u_p,
 \end{equation*}
 </div>
-<div class="para" id="def-orthonormal-basis-2-4">and<div class="autopermalink" data-description="Paragraph"><a href="#def-orthonormal-basis-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="thm-orthonomal-basis-2-3">and<div class="autopermalink" data-description="Paragraph"><a href="#thm-orthonomal-basis-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="def-orthonormal-basis-2-5">
+<div class="displaymath process-math" id="thm-orthonomal-basis-2-4">
 \begin{equation*}
 \|\vec w\| = 
 \sqrt{
@@ -708,14 +714,15 @@ c_2 = \dfrac{\vec s \cdot \vec v}{\vec v \cdot \vec v} = \dfrac{-3 + 0 + 1}{1 + 
 }.
 \end{equation*}
 </div>
-<details id="def-orthonormal-basis-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="def-orthonormal-basis-3-1">Note that the first result is a direct corollary of <a href="Section-6-2.html#thm-orth-expansion" class="xref" data-knowl="./knowl/xref/thm-orth-expansion.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.23: Expansion in an Orthogonal Basis">Theorem 6.23</a> since for each <span class="process-math">\(k \in \{1,2, \dots, p\}\text{,}\)</span> we have that <span class="process-math">\(\vec u_k \cdot \vec u_k = 1\)</span> since <span class="process-math">\(\vec u_k\)</span> is a unit vector.<div class="autopermalink" data-description="Paragraph"><a href="#def-orthonormal-basis-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<details id="thm-orthonomal-basis-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="thm-orthonomal-basis-3-1">Proof: The first result is a direct corollary of <a href="Section-6-2.html#thm-orth-expansion" class="xref" data-knowl="./knowl/xref/thm-orth-expansion.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.23: Expansion in an Orthogonal Basis">Theorem 6.23</a> since for each <span class="process-math">\(k \in \{1,2, \dots, p\}\text{,}\)</span> we have that <span class="process-math">\(\vec u_k \cdot \vec u_k = 1\)</span> because <span class="process-math">\(\vec u_k\)</span> is a unit vector.<div class="autopermalink" data-description="Paragraph"><a href="#thm-orthonomal-basis-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 6.29.1"><a href="#def-orthonormal-basis-3" title="Copy heading and permalink for Solution 6.29.1" aria-label="Copy heading and permalink for Solution 6.29.1">🔗</a></div>
-</div></details><div class="autopermalink" data-description="Definition 6.29: Orthonormal Basis"><a href="#def-orthonormal-basis" title="Copy heading and permalink for Definition 6.29: Orthonormal Basis" aria-label="Copy heading and permalink for Definition 6.29: Orthonormal Basis">🔗</a></div></article><article class="example example-like" id="ex-6-2-orthonormal-complete"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.30</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Solution 6.30.1"><a href="#thm-orthonomal-basis-3" title="Copy heading and permalink for Solution 6.30.1" aria-label="Copy heading and permalink for Solution 6.30.1">🔗</a></div>
+</div></details><div class="workspace" data-space="1in"></div>
+<div class="autopermalink" data-description="Theorem 6.30: Expansion in an Orthonormal Basis"><a href="#thm-orthonomal-basis" title="Copy heading and permalink for Theorem 6.30: Expansion in an Orthonormal Basis" aria-label="Copy heading and permalink for Theorem 6.30: Expansion in an Orthonormal Basis">🔗</a></div></article></section><section class="onepage" id="handout-section-6-2-orthogonal-sets-7"><article class="example example-like" id="ex-6-2-orthonormal-complete"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.31</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="ex-6-2-orthonormal-complete-1-1">Let <span class="process-math">\(W = \Span\left\{\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}\right\}^\perp\text{.}\)</span> Find the missing entries in an orthonormal basis:<div class="autopermalink" data-description="Paragraph"><a href="#ex-6-2-orthonormal-complete-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-6-2-orthonormal-complete-1-1">Let <span class="process-math">\(W = \Span\left\{\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}\right\}^\perp\text{.}\)</span> Find the missing entries in an orthonormal basis for <span class="process-math">\(W\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-6-2-orthonormal-complete-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="displaymath process-math" id="ex-6-2-orthonormal-complete-1-2">
 \begin{equation*}
@@ -725,6 +732,8 @@ u=\frac{1}{\sqrt{\phantom{-1}}}
 v=\frac{1}{\sqrt{\phantom{-1}}}
 \begin{bmatrix} \phantom{-1} \\ \phantom{-1} \\ \phantom{-1}  \end{bmatrix}
 \end{equation*}
+</div>
+<div class="para" id="ex-6-2-orthonormal-complete-1-3">Then, express <span class="process-math">\(\vec w = \begin{bmatrix} 3 \\ 6 \\ -9 \end{bmatrix} \in W\)</span> as a linear combination of <span class="process-math">\(\vec u\)</span> and <span class="process-math">\(\vec v\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-6-2-orthonormal-complete-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions"><details id="ex-6-2-orthonormal-complete-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
 <div class="para logical" id="ex-6-2-orthonormal-complete-2-1">
@@ -742,21 +751,36 @@ v=\frac{1}{\sqrt{\phantom{-1}}}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-6-2-orthonormal-complete-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 6.30.1"><a href="#ex-6-2-orthonormal-complete-2" title="Copy heading and permalink for Solution 6.30.1" aria-label="Copy heading and permalink for Solution 6.30.1">🔗</a></div>
+<div class="para logical" id="ex-6-2-orthonormal-complete-2-2">
+<div class="para">By <a href="Section-6-2.html#thm-orthonomal-basis" class="xref" data-knowl="./knowl/xref/thm-orthonomal-basis.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.30: Expansion in an Orthonormal Basis">Theorem 6.30</a>, we have that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-orthonomal-basis.html" id="ex-6-2-orthonormal-complete-2-2-2">
+\begin{equation*}
+\vec w = (\vec w \cdot \vec u) \vec u + (\vec w \cdot \vec v) \vec v = \dfrac{12}{\sqrt{2}}\vec u - \dfrac{18}{\sqrt{6}}\vec v\text{.}
+\end{equation*}
+</div>
+<div class="para">Checking, we see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-orthonomal-basis.html" id="ex-6-2-orthonormal-complete-2-2-3">
+\begin{equation*}
+\begin{bmatrix} 3 \\ 6 \\ -9 \end{bmatrix} = \dfrac{12}{\sqrt{2}}\left(\dfrac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix}\right) - \dfrac{18}{\sqrt{6}}\left(\dfrac{1}{\sqrt{6}}\begin{bmatrix} 1 \\ -2 \\ 1 \end{bmatrix}\right) = 6\begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix} - 3 \begin{bmatrix} 1 \\ -2 \\ 1\end{bmatrix}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-6-2-orthonormal-complete-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.31.1"><a href="#ex-6-2-orthonormal-complete-2" title="Copy heading and permalink for Solution 6.31.1" aria-label="Copy heading and permalink for Solution 6.31.1">🔗</a></div>
 </div></details></div>
 <div class="workspace" data-space="2in"></div>
-<div class="autopermalink" data-description="Example 6.30"><a href="#ex-6-2-orthonormal-complete" title="Copy heading and permalink for Example 6.30" aria-label="Copy heading and permalink for Example 6.30">🔗</a></div></article><div class="para" id="p-6-2-projection-example-6"> <div class="autopermalink" data-description="Paragraph"><a href="#p-6-2-projection-example-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 6.31"><a href="#ex-6-2-orthonormal-complete" title="Copy heading and permalink for Example 6.31" aria-label="Copy heading and permalink for Example 6.31">🔗</a></div></article><div class="para" id="handout-section-6-2-orthogonal-sets-7-2"> <div class="autopermalink" data-description="Paragraph"><a href="#handout-section-6-2-orthogonal-sets-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><section class="onepage" id="p-6-2-orthogonal-matrices"><article class="definition definition-like" id="def-orthogonal-matrix"><h4 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.31</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Orthogonal Matrix.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.32</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Orthogonal Matrix.</span>
 </h4>
 <div class="para" id="def-orthogonal-matrix-2-1">An <dfn class="terminology">orthogonal matrix</dfn> is a <em class="emphasis">square</em> matrix whose columns are orthonormal.<div class="autopermalink" data-description="Paragraph"><a href="#def-orthogonal-matrix-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 6.31: Orthogonal Matrix"><a href="#def-orthogonal-matrix" title="Copy heading and permalink for Definition 6.31: Orthogonal Matrix" aria-label="Copy heading and permalink for Definition 6.31: Orthogonal Matrix">🔗</a></div></article><article class="theorem theorem-like" id="thm-orthonormal-columns"><h4 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.32</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Definition 6.32: Orthogonal Matrix"><a href="#def-orthogonal-matrix" title="Copy heading and permalink for Definition 6.32: Orthogonal Matrix" aria-label="Copy heading and permalink for Definition 6.32: Orthogonal Matrix">🔗</a></div></article><article class="theorem theorem-like" id="thm-orthonormal-columns"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.33</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="thm-orthonormal-columns-1-1">An <span class="process-math">\(m \times n\)</span> matrix <span class="process-math">\(U\)</span> has orthonormal columns if and only if <span class="process-math">\(U^TU = I_n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-orthonormal-columns-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 6.32"><a href="#thm-orthonormal-columns" title="Copy heading and permalink for Theorem 6.32" aria-label="Copy heading and permalink for Theorem 6.32">🔗</a></div></article><div class="para" id="p-6-2-orthogonal-matrices-4">Can <span class="process-math">\(U\)</span> have orthonormal columns if <span class="process-math">\(n&gt;m\text{?}\)</span><div class="workspace" data-space="1in"></div>
+<div class="autopermalink" data-description="Theorem 6.33"><a href="#thm-orthonormal-columns" title="Copy heading and permalink for Theorem 6.33" aria-label="Copy heading and permalink for Theorem 6.33">🔗</a></div></article><div class="para" id="p-6-2-orthogonal-matrices-4">Can <span class="process-math">\(U\)</span> have orthonormal columns if <span class="process-math">\(n&gt;m\text{?}\)</span><div class="workspace" data-space="1in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#p-6-2-orthogonal-matrices-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="p-6-2-orthogonal-matrices-5" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
@@ -766,7 +790,7 @@ v=\frac{1}{\sqrt{\phantom{-1}}}
 </div></details><div class="para" id="p-6-2-orthogonal-matrices-6"> <div class="autopermalink" data-description="Paragraph"><a href="#p-6-2-orthogonal-matrices-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="thm-orthogonal-maps"><h4 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.33</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Mapping Properties of Orthogonal Matrices.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.34</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Mapping Properties of Orthogonal Matrices.</span>
 </h4>
 <div class="para" id="thm-orthogonal-maps-2-1">If <span class="process-math">\(U\)</span> is an orthogonal matrix, then:<div class="autopermalink" data-description="Paragraph"><a href="#thm-orthogonal-maps-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <ol class="lower-alpha lower-alpha-level-1" id="thm-orthogonal-maps-2-2">
@@ -780,7 +804,7 @@ v=\frac{1}{\sqrt{\phantom{-1}}}
 (U\vec x)\cdot (U\vec y) = (U\vec x)^T(U\vec y) = \vec x^T U^TU\vec y\text{.}
 \end{equation*}
 </div>
-<div class="para">By <a href="Section-6-2.html#thm-orthonormal-columns" class="xref" data-knowl="./knowl/xref/thm-orthonormal-columns.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.32">Theorem 6.32</a>, we see that <span class="process-math">\(U^TU = I_n\text{.}\)</span> Therefore,</div>
+<div class="para">By <a href="Section-6-2.html#thm-orthonormal-columns" class="xref" data-knowl="./knowl/xref/thm-orthonormal-columns.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.33">Theorem 6.33</a>, we see that <span class="process-math">\(U^TU = I_n\text{.}\)</span> Therefore,</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-dot-product.html ./knowl/xref/thm-orthonormal-columns.html" id="thm-orthogonal-maps-2-2-1-3-1-5">
 \begin{equation*}
 (U\vec x)\cdot(U\vec y) = \vec x^TU^TU\vec y = \vec x^T\vec y = \vec x \cdot \vec y\text{.}
@@ -815,8 +839,8 @@ v=\frac{1}{\sqrt{\phantom{-1}}}
 </li>
 </ol>
 <div class="workspace" data-space="1in"></div>
-<div class="autopermalink" data-description="Theorem 6.33: Mapping Properties of Orthogonal Matrices"><a href="#thm-orthogonal-maps" title="Copy heading and permalink for Theorem 6.33: Mapping Properties of Orthogonal Matrices" aria-label="Copy heading and permalink for Theorem 6.33: Mapping Properties of Orthogonal Matrices">🔗</a></div></article><article class="example example-like" id="ex-6-2-length-after-U"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.34</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Example.</span>
+<div class="autopermalink" data-description="Theorem 6.34: Mapping Properties of Orthogonal Matrices"><a href="#thm-orthogonal-maps" title="Copy heading and permalink for Theorem 6.34: Mapping Properties of Orthogonal Matrices" aria-label="Copy heading and permalink for Theorem 6.34: Mapping Properties of Orthogonal Matrices">🔗</a></div></article><article class="example example-like" id="ex-6-2-length-after-U"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.35</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Example.</span>
 </h4>
 <div class="para" id="ex-6-2-length-after-U-2-1">Compute the length of<div class="autopermalink" data-description="Paragraph"><a href="#ex-6-2-length-after-U-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -841,7 +865,7 @@ v=\frac{1}{\sqrt{\phantom{-1}}}
 \frac12 \amp \frac{1}{\sqrt{14}}\\
 \frac12 \amp \frac{-3}{\sqrt{14}}\\
 \frac12 \amp 0
-\end{bmatrix}\)</span> is a matrix with orthonormal columns. Therefore, we can use <a href="Section-6-2.html#thm-orthogonal-maps" class="xref" data-knowl="./knowl/xref/thm-orthogonal-maps.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.33: Mapping Properties of Orthogonal Matrices">Theorem 6.33</a>(b) to find that</div>
+\end{bmatrix}\)</span> is a matrix with orthonormal columns. Therefore, we can use <a href="Section-6-2.html#thm-orthogonal-maps" class="xref" data-knowl="./knowl/xref/thm-orthogonal-maps.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.34: Mapping Properties of Orthogonal Matrices">Theorem 6.34</a>(b) to find that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-orthogonal-maps.html" id="ex-6-2-length-after-U-3-1-3">
 \begin{equation*}
 \left\|\begin{bmatrix}
@@ -854,10 +878,10 @@ v=\frac{1}{\sqrt{\phantom{-1}}}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-6-2-length-after-U-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 6.34.1"><a href="#ex-6-2-length-after-U-3" title="Copy heading and permalink for Solution 6.34.1" aria-label="Copy heading and permalink for Solution 6.34.1">🔗</a></div>
+<div class="autopermalink" data-description="Solution 6.35.1"><a href="#ex-6-2-length-after-U-3" title="Copy heading and permalink for Solution 6.35.1" aria-label="Copy heading and permalink for Solution 6.35.1">🔗</a></div>
 </div></details></div>
 <div class="workspace" data-space="2in"></div>
-<div class="autopermalink" data-description="Example 6.34: Example"><a href="#ex-6-2-length-after-U" title="Copy heading and permalink for Example 6.34: Example" aria-label="Copy heading and permalink for Example 6.34: Example">🔗</a></div></article></section><div class="autopermalink" data-description="Handout: 6.2 Orthogonal Sets, Orthogonal Bases, and Projections"><a href="#handout-section-6-2-orthogonal-sets" title="Copy heading and permalink for Handout: 6.2 Orthogonal Sets, Orthogonal Bases, and Projections" aria-label="Copy heading and permalink for Handout: 6.2 Orthogonal Sets, Orthogonal Bases, and Projections">🔗</a></div></section><div class="autopermalink" data-description="Section: 6.2 Orthogonal Sets, Orthogonal Bases, and Projections"><a href="#Section-6-2" title="Copy heading and permalink for Section: 6.2 Orthogonal Sets, Orthogonal Bases, and Projections" aria-label="Copy heading and permalink for Section: 6.2 Orthogonal Sets, Orthogonal Bases, and Projections">🔗</a></div></section>
+<div class="autopermalink" data-description="Example 6.35: Example"><a href="#ex-6-2-length-after-U" title="Copy heading and permalink for Example 6.35: Example" aria-label="Copy heading and permalink for Example 6.35: Example">🔗</a></div></article></section><div class="autopermalink" data-description="Handout: 6.2 Orthogonal Sets, Orthogonal Bases, and Projections"><a href="#handout-section-6-2-orthogonal-sets" title="Copy heading and permalink for Handout: 6.2 Orthogonal Sets, Orthogonal Bases, and Projections" aria-label="Copy heading and permalink for Handout: 6.2 Orthogonal Sets, Orthogonal Bases, and Projections">🔗</a></div></section><div class="autopermalink" data-description="Section: 6.2 Orthogonal Sets, Orthogonal Bases, and Projections"><a href="#Section-6-2" title="Copy heading and permalink for Section: 6.2 Orthogonal Sets, Orthogonal Bases, and Projections" aria-label="Copy heading and permalink for Section: 6.2 Orthogonal Sets, Orthogonal Bases, and Projections">🔗</a></div></section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="Section-6-1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="Section-6-3.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

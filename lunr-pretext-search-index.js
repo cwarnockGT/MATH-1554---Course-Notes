@@ -2824,7 +2824,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "6.2 Orthogonal Sets, Orthogonal Bases, and Projections",
-  "body": " 6.2 Orthogonal Sets, Orthogonal Bases, and Projections   6.2 Orthogonal Sets, Orthogonal Bases, and Projections   Overview   Topics   Orthogonal sets of vectors  Orthogonal bases and projections     Goals    Apply orthogonality concepts to:   compute orthogonal projections and distances,  express a vector as a linear combination of orthogonal vectors,  characterize bases for subspaces of ,  construct orthonormal bases.      Motivating Question  What are the special properties of the following basis for ?     Orthogonal Set   A set of vectors is an orthogonal set if whenever .      Fill in missing entries so that is an orthogonal set:     Let represent the missing element in . It follows that .  To find , we need to find a vector that is orthogonal to both and . Note that works since the zero vector is orthogonal to every vector. Usually, we are interested in finding vectors that are linearly independent so that they will form a basis for our space, so let's find a vector other than the zero vector. Let and note that and . It follows that can be any vector in , where . Feel free to find a non-zero vector in by row reducing and following the normal process. Or, you might be able to observe that , which makes it a fine choice for the third vector in the orthogonal set.       Orthogonal Sets Are Linearly Independent   Linear Independence of Orthogonal Sets   If is an orthogonal set of vectors, then:   Furthermore, if all the vectors are nonzero, then the set is linearly independent.      Expansion in an Orthogonal Basis   If is an orthogonal basis for a subspace , then any can be written:   where     Proof: Suppose is an orthogonal basis for a subspace . Then, we know that for each (since this is an orthogonal set) and (since ). Let . Then, can be expressed uniquely as a linear combination of the basis vectors; that is for a unique choice of . Note what happens if we dot product both sides of the above equation with for some : It follows that . Since , we divide both sides by that quantity to get .       Example: Expansion in an Orthogonal Basis    Let and let be the subspace of that is orthogonal to .     Check that forms an orthogonal basis for .    First, we show that is an orthogonal set . Note that . Therefore, and are orthogonal, so is an orthogonal set.  Next, we show that is a basis for . From the description of , we see that . Using the two results given in , we see that . Therefore, a basis for must contain two linearly independent vectors that live in . We can see that and since they are not multiples of one another. Another way to see this is that non-zero orthogonal vectors are always linearly independent. Lastly, we need to show that and actually live in . Note that Thus, is orthogonal to and is orthogonal to . Hence, , so is a basis for . Since was also an orthogonal set, it is an orthogonal basis for .      Verify that .    Note that , so is orthogonal to . Thus, .      Compute the expansion of in the basis .    Since and since is a basis for , we know there exists a unique choice of so that . Since is an orthogonal basis for , we can use to find and . Therefore, we have that , which can be easily checked.        Orthogonal Projections   Orthogonal Projection   For a nonzero vector and vector , the orthogonal projection of onto is:       Diagram showing projection of vector onto a line.  Visualization of as the closest point in the span of to .     Let be a nonzero vector. Then, the vector is the vector in which is closest to . Also, the vector is orthogonal to . Furthermore, .      Let and . Write as the sum of two orthogonal vectors, one in and one orthogonal to .    We want to find vectors and so that . Note that this is exactly what projection will give me. We have that . From , we see that is the vector in which is closest to . To find , we use and find that . We see that . Therefore, is a decomposition of into two vectors, one living in and the other living in . We will see in that this decomposition is unique.       Example: Projection onto a Line    Let be the line spanned by .     Find the projection of onto the line .    Note that . There isn't anything too special about . Now, if we had instead gotten , then we would learn that , so is the vector in which is closest to .      How close is to the line ?    Note that the vector keeps track of how far away is from the line . It follows that the distance is from is given by .       Orthonormal Basis   An orthonormal basis for a subspace is an orthogonal basis in which each vector has length 1.  If is orthonormal and , then   and     Note that the first result is a direct corollary of since for each , we have that since is a unit vector.      Let . Find the missing entries in an orthonormal basis:     Let . In order for , we see that the missing entry must be . Since the vector has magnitude , we see that . We need to choose so that it is orthogonal to (which verifies that ) and orthogonal to (since we want an orthonormal basis). By observation, we see that the vector satisfies the orthogonality conditions. Since that vector has length , we choose .       Orthogonal Matrices   Orthogonal Matrix   An orthogonal matrix is a square matrix whose columns are orthonormal.      An matrix has orthonormal columns if and only if .    Can have orthonormal columns if ?   Suppose has more columns than rows. The, we know that  cannot have a pivot in each column. Therefore, the columns of are linearly dependent . The only way they can form an orthogonal set is if the columns corresponding to free variables are the zero vector. However, this makes it impossible for each column to have length 1. Therefore, a matrix with more columns than rows can never have orthonormal columns.     Mapping Properties of Orthogonal Matrices   If is an orthogonal matrix, then:    Preserves angles:  .  Using the defintion of dot product ( ), we see that . By , we see that . Therefore, .     Preserves length:  .  This is a direct consequence of using and the above result with and itself.     Preserves orthogonality.   This is direct consequence of and (a) above.        Example   Compute the length of     Note that the matrix is a matrix with orthonormal columns. Therefore, we can use (b) to find that       "
+  "body": " 6.2 Orthogonal Sets, Orthogonal Bases, and Projections   6.2 Orthogonal Sets, Orthogonal Bases, and Projections   Overview   Topics   Orthogonal sets of vectors  Orthogonal bases and projections     Goals    Apply orthogonality concepts to:   compute orthogonal projections and distances,  express a vector as a linear combination of orthogonal vectors,  characterize bases for subspaces of ,  construct orthonormal bases.      Motivating Question  What are the special properties of the following basis for ?     Orthogonal Set   A set of vectors is an orthogonal set if whenever .      Fill in missing entries so that is an orthogonal set:     Let represent the missing element in . It follows that .  To find , we need to find a vector that is orthogonal to both and . Note that works since the zero vector is orthogonal to every vector. Usually, we are interested in finding vectors that are linearly independent so that they will form a basis for our space, so let's find a vector other than the zero vector. Let and note that and . It follows that can be any vector in , where . Feel free to find a non-zero vector in by row reducing and following the normal process. Or, you might be able to observe that , which makes it a fine choice for the third vector in the orthogonal set.       Orthogonal Sets Are Linearly Independent   Linear Independence of Orthogonal Sets   If is an orthogonal set of vectors, then:   Furthermore, if all the vectors are nonzero, then the set is linearly independent.      Expansion in an Orthogonal Basis   If is an orthogonal basis for a subspace , then any can be written:   where     Proof: Suppose is an orthogonal basis for a subspace . Then, we know that for each (since this is an orthogonal set) and (since ). Let . Then, can be expressed uniquely as a linear combination of the basis vectors; that is for a unique choice of . Note what happens if we dot product both sides of the above equation with for some : It follows that . Since , we divide both sides by that quantity to get .       Example: Expansion in an Orthogonal Basis    Let and let be the subspace of that is orthogonal to .     Check that forms an orthogonal basis for .    First, we show that is an orthogonal set . Note that . Therefore, and are orthogonal, so is an orthogonal set.  Next, we show that is a basis for . From the description of , we see that . Using the two results given in , we see that . Therefore, a basis for must contain two linearly independent vectors that live in . We can see that and since they are not multiples of one another. Another way to see this is that non-zero orthogonal vectors are always linearly independent. Lastly, we need to show that and actually live in . Note that Thus, is orthogonal to and is orthogonal to . Hence, , so is a basis for . Since was also an orthogonal set, it is an orthogonal basis for .      Verify that .    Note that , so is orthogonal to . Thus, .      Compute the expansion of in the basis .    Since and since is a basis for , we know there exists a unique choice of so that . Since is an orthogonal basis for , we can use to find and . Therefore, we have that , which can be easily checked.        Orthogonal Projections   Orthogonal Projection   For a nonzero vector and vector , the orthogonal projection of onto is:       Diagram showing projection of vector onto a line.  Visualization of as the closest point in the span of to .     Let be a nonzero vector. Then, the vector is the vector in which is closest to . Also, the vector is orthogonal to . Furthermore, .      Let and . Write as the sum of two orthogonal vectors, one in and one orthogonal to .    We want to find vectors and so that . Note that this is exactly what projection will give me. We have that . From , we see that is the vector in which is closest to . To find , we use and find that . We see that . Therefore, is a decomposition of into two vectors, one living in and the other living in . We will see in that this decomposition is unique.       Example: Projection onto a Line    Let be the line spanned by .     Find the projection of onto the line .    Note that . There isn't anything too special about . Now, if we had instead gotten , then we would learn that , so is the vector in which is closest to .      How close is to the line ?    Note that the vector keeps track of how far away is from the line . It follows that the distance is from is given by .       Orthonormal Basis   An orthonormal basis for a subspace is an orthogonal basis in which each vector has length 1.     Expansion in an Orthonormal Basis   If is orthonormal basis for and , then   and     Proof: The first result is a direct corollary of since for each , we have that because is a unit vector.        Let . Find the missing entries in an orthonormal basis for :   Then, express as a linear combination of and .    Let . In order for , we see that the missing entry must be . Since the vector has magnitude , we see that . We need to choose so that it is orthogonal to (which verifies that ) and orthogonal to (since we want an orthonormal basis). By observation, we see that the vector satisfies the orthogonality conditions. Since that vector has length , we choose .  By , we have that . Checking, we see that        Orthogonal Matrices   Orthogonal Matrix   An orthogonal matrix is a square matrix whose columns are orthonormal.      An matrix has orthonormal columns if and only if .    Can have orthonormal columns if ?   Suppose has more columns than rows. The, we know that  cannot have a pivot in each column. Therefore, the columns of are linearly dependent . The only way they can form an orthogonal set is if the columns corresponding to free variables are the zero vector. However, this makes it impossible for each column to have length 1. Therefore, a matrix with more columns than rows can never have orthonormal columns.     Mapping Properties of Orthogonal Matrices   If is an orthogonal matrix, then:    Preserves angles:  .  Using the defintion of dot product ( ), we see that . By , we see that . Therefore, .     Preserves length:  .  This is a direct consequence of using and the above result with and itself.     Preserves orthogonality.   This is direct consequence of and (a) above.        Example   Compute the length of     Note that the matrix is a matrix with orthonormal columns. Therefore, we can use (b) to find that       "
 },
 {
   "id": "obj-6-2-topics-goals",
@@ -2932,23 +2932,32 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "6.29",
   "title": "Orthonormal Basis.",
-  "body": " Orthonormal Basis   An orthonormal basis for a subspace is an orthogonal basis in which each vector has length 1.  If is orthonormal and , then   and     Note that the first result is a direct corollary of since for each , we have that since is a unit vector.   "
+  "body": " Orthonormal Basis   An orthonormal basis for a subspace is an orthogonal basis in which each vector has length 1.   "
+},
+{
+  "id": "thm-orthonomal-basis",
+  "level": "2",
+  "url": "Section-6-2.html#thm-orthonomal-basis",
+  "type": "Theorem",
+  "number": "6.30",
+  "title": "Expansion in an Orthonormal Basis.",
+  "body": " Expansion in an Orthonormal Basis   If is orthonormal basis for and , then   and     Proof: The first result is a direct corollary of since for each , we have that because is a unit vector.   "
 },
 {
   "id": "ex-6-2-orthonormal-complete",
   "level": "2",
   "url": "Section-6-2.html#ex-6-2-orthonormal-complete",
   "type": "Example",
-  "number": "6.30",
+  "number": "6.31",
   "title": "",
-  "body": "  Let . Find the missing entries in an orthonormal basis:     Let . In order for , we see that the missing entry must be . Since the vector has magnitude , we see that . We need to choose so that it is orthogonal to (which verifies that ) and orthogonal to (since we want an orthonormal basis). By observation, we see that the vector satisfies the orthogonality conditions. Since that vector has length , we choose .   "
+  "body": "  Let . Find the missing entries in an orthonormal basis for :   Then, express as a linear combination of and .    Let . In order for , we see that the missing entry must be . Since the vector has magnitude , we see that . We need to choose so that it is orthogonal to (which verifies that ) and orthogonal to (since we want an orthonormal basis). By observation, we see that the vector satisfies the orthogonality conditions. Since that vector has length , we choose .  By , we have that . Checking, we see that    "
 },
 {
   "id": "def-orthogonal-matrix",
   "level": "2",
   "url": "Section-6-2.html#def-orthogonal-matrix",
   "type": "Definition",
-  "number": "6.31",
+  "number": "6.32",
   "title": "Orthogonal Matrix.",
   "body": " Orthogonal Matrix   An orthogonal matrix is a square matrix whose columns are orthonormal.   "
 },
@@ -2957,7 +2966,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-6-2.html#thm-orthonormal-columns",
   "type": "Theorem",
-  "number": "6.32",
+  "number": "6.33",
   "title": "",
   "body": "  An matrix has orthonormal columns if and only if .   "
 },
@@ -2966,7 +2975,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-6-2.html#thm-orthogonal-maps",
   "type": "Theorem",
-  "number": "6.33",
+  "number": "6.34",
   "title": "Mapping Properties of Orthogonal Matrices.",
   "body": " Mapping Properties of Orthogonal Matrices   If is an orthogonal matrix, then:    Preserves angles:  .  Using the defintion of dot product ( ), we see that . By , we see that . Therefore, .     Preserves length:  .  This is a direct consequence of using and the above result with and itself.     Preserves orthogonality.   This is direct consequence of and (a) above.      "
 },
@@ -2975,7 +2984,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-6-2.html#ex-6-2-length-after-U",
   "type": "Example",
-  "number": "6.34",
+  "number": "6.35",
   "title": "Example.",
   "body": " Example   Compute the length of     Note that the matrix is a matrix with orthonormal columns. Therefore, we can use (b) to find that    "
 },
@@ -2986,7 +2995,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "6.3 Orthogonal Projections",
-  "body": " 6.3 Orthogonal Projections   6.3 Orthogonal Projections   Overview   Topics   Orthogonal projections and their properties  Best approximations     Goals    Apply orthogonality and projections to:   compute projections and distances,  express vectors using orthogonal decompositions,  construct best approximations.      Motivating Question  For the matrix and vector , which vector is closest to ?     Orthogonal Decomposition   If is a subspace of , then each has a unique decomposition:   where and . In fact, if is any orthogonal basis for , then   The vector is called the orthogonal projection of onto and can be written .  We have that .       Example 1    Let be an orthonormal basis of and let .  For any , write the orthogonal decomposition: , with and .       Given   construct the decomposition , where is the orthogonal projection of onto .       Best Approximation Theorem   Best Approximation Theorem   Let and . If is the orthogonal projection of onto , then for every with ,   Thus, is the unique closest vector in to .       Using the same vectors as :   compute the distance from to .       Another Example    Find the distance from to the subspace , where .       True\/False Questions    Indicate whether each statement is true or false. If true, explain why. If false, give a counterexample.     If is orthogonal to and , then is orthogonal to .      If , then .      If , where and , then is the orthogonal projection of onto .       "
+  "body": " 6.3 Orthogonal Projections   6.3 Orthogonal Projections   Overview   Topics   Orthogonal projections and their properties  Best approximations     Goals    Apply orthogonality and projections to:   compute projections and distances,  express vectors using orthogonal decompositions,  construct best approximations.      Motivating Question  For the matrix and vector , which vector is closest to ?     Orthogonal Decomposition   If is a subspace of , then each has a unique decomposition:   where and . In fact, if is any orthogonal basis for , then   The vector is called the orthogonal projection of onto and can be written .  We have that .       Example 1    Let be an orthonormal basis of and let .  For any , write the orthogonal decomposition: , with and .    Since is an orthonormal basis for , we have , where by . Note that is an orthonormal basis for , so by , we have . It follows that .       Given   construct the decomposition , where is the orthogonal projection of onto .    Note that is an orthogonal basis for since . Therefore, Note that . What does this mean? Since must be a vector in , it must be the case that . Hopefully, it makes sense that for any vector already in , say , we will have . In this example, we have . Recall that in general we should have that . This is definitely true here.       Best Approximation Theorem   Best Approximation Theorem   Let and . If is the orthogonal projection of onto ; that is , then for every with ,   Thus, is the unique closest vector in to .      Let and . The distance of a vector from a subspace , denoted , is the minimum distance between and a vector ; that is, . By , we see that the vector in which is closest to is . Therefore, .       Using the same vectors as :   compute the distance from to .    Recall form , we have that . Therefore, we have that , which makes sense since .       Another Example    Find the distance from to the subspace , where .    First, we find . Note that is an orthogonal basis for . Check this. It follows that Note that in this example . Therefore, , so there is a nonzero distance between and . It follows that .       True\/False Questions    Indicate whether each statement is true or false. If true, explain why. If false, give a counterexample.     If is orthogonal to and , then is orthogonal to .    This is true. One way to prove this is by direct calculation. Since is orthogonal to and , we have that and . It follows that . Thus, is orthogonal to .  Another way to prove this is to strictly use theory. Note that if and are orthogonal to , then . Since is a subspace, it is closed under linear combinations, so . Thus, is also orthogonal to .      If , then .    This is true. By very definition, , so if , then .      If , where and , then is the orthogonal projection of onto .    This is true. By , we have , where and are uniquely chosen. Thus, we must have that .  We can see this more explicitly using the transitive property and properties of subspace and orthogonal complements. Note that . Therefore, we have that . Since and since is closed under linear combinations (it is a subspace), we have that . We also know that since each vector is in . It follows that the vector is a vector that is in both and , which means that it is a vector in that is also orthogonal to every vector in , including itself. The only vector orthogonal to itself is . Thus, .       "
 },
 {
   "id": "obj-6-3-topics-goals",
@@ -3011,7 +3020,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-6-3.html#thm-orth-decomposition",
   "type": "Theorem",
-  "number": "6.35",
+  "number": "6.36",
   "title": "Orthogonal Decomposition.",
   "body": " Orthogonal Decomposition   If is a subspace of , then each has a unique decomposition:   where and . In fact, if is any orthogonal basis for , then   The vector is called the orthogonal projection of onto and can be written .  We have that .   "
 },
@@ -3020,54 +3029,63 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-6-3.html#ex-6-3-orth-decomp-5d",
   "type": "Example",
-  "number": "6.36",
+  "number": "6.37",
   "title": "",
-  "body": "  Let be an orthonormal basis of and let .  For any , write the orthogonal decomposition: , with and .   "
+  "body": "  Let be an orthonormal basis of and let .  For any , write the orthogonal decomposition: , with and .    Since is an orthonormal basis for , we have , where by . Note that is an orthonormal basis for , so by , we have . It follows that .   "
 },
 {
   "id": "ex-6-3-example2a",
   "level": "2",
   "url": "Section-6-3.html#ex-6-3-example2a",
   "type": "Example",
-  "number": "6.37",
+  "number": "6.38",
   "title": "",
-  "body": "  Given   construct the decomposition , where is the orthogonal projection of onto .   "
+  "body": "  Given   construct the decomposition , where is the orthogonal projection of onto .    Note that is an orthogonal basis for since . Therefore, Note that . What does this mean? Since must be a vector in , it must be the case that . Hopefully, it makes sense that for any vector already in , say , we will have . In this example, we have . Recall that in general we should have that . This is definitely true here.   "
 },
 {
   "id": "thm-best-approx",
   "level": "2",
   "url": "Section-6-3.html#thm-best-approx",
   "type": "Theorem",
-  "number": "6.38",
+  "number": "6.39",
   "title": "Best Approximation Theorem.",
-  "body": " Best Approximation Theorem   Let and . If is the orthogonal projection of onto , then for every with ,   Thus, is the unique closest vector in to .   "
+  "body": " Best Approximation Theorem   Let and . If is the orthogonal projection of onto ; that is , then for every with ,   Thus, is the unique closest vector in to .   "
+},
+{
+  "id": "def-dist-W",
+  "level": "2",
+  "url": "Section-6-3.html#def-dist-W",
+  "type": "Definition",
+  "number": "6.40",
+  "title": "",
+  "body": "  Let and . The distance of a vector from a subspace , denoted , is the minimum distance between and a vector ; that is, . By , we see that the vector in which is closest to is . Therefore, .   "
 },
 {
   "id": "ex-6-3-example2b",
   "level": "2",
   "url": "Section-6-3.html#ex-6-3-example2b",
   "type": "Example",
-  "number": "6.39",
+  "number": "6.41",
   "title": "",
-  "body": "  Using the same vectors as :   compute the distance from to .   "
+  "body": "  Using the same vectors as :   compute the distance from to .    Recall form , we have that . Therefore, we have that , which makes sense since .   "
 },
 {
   "id": "ex-6-3-example3",
   "level": "2",
   "url": "Section-6-3.html#ex-6-3-example3",
   "type": "Example",
-  "number": "6.40",
+  "number": "6.42",
   "title": "",
-  "body": "  Find the distance from to the subspace , where .   "
+  "body": "  Find the distance from to the subspace , where .    First, we find . Note that is an orthogonal basis for . Check this. It follows that Note that in this example . Therefore, , so there is a nonzero distance between and . It follows that .   "
 },
 {
   "id": "handout-section-6-3-projections-6-2",
   "level": "2",
   "url": "Section-6-3.html#handout-section-6-3-projections-6-2",
   "type": "Example",
-  "number": "6.41",
+  "number": "6.43",
   "title": "",
-  "body": "  Indicate whether each statement is true or false. If true, explain why. If false, give a counterexample.     If is orthogonal to and , then is orthogonal to .      If , then .      If , where and , then is the orthogonal projection of onto .    "
+  "body": "  Indicate whether each statement is true or false. If true, explain why. If false, give a counterexample.     If is orthogonal to and , then is orthogonal to .    This is true. One way to prove this is by direct calculation. Since is orthogonal to and , we have that and . It follows that . Thus, is orthogonal to .  Another way to prove this is to strictly use theory. Note that if and are orthogonal to , then . Since is a subspace, it is closed under linear combinations, so . Thus, is also orthogonal to .      If , then .    This is true. By very definition, , so if , then .      If , where and , then is the orthogonal projection of onto .    This is true. By , we have , where and are uniquely chosen. Thus, we must have that .  We can see this more explicitly using the transitive property and properties of subspace and orthogonal complements. Note that . Therefore, we have that . Since and since is closed under linear combinations (it is a subspace), we have that . We also know that since each vector is in . It follows that the vector is a vector that is in both and , which means that it is a vector in that is also orthogonal to every vector in , including itself. The only vector orthogonal to itself is . Thus, .    "
 }
 ]
 
