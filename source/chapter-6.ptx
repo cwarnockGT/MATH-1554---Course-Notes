@@ -19,7 +19,7 @@
 
   <section xml:id="Section-6-4">
     <title>6.4 Gram–Schmidt and QR Decomposition</title>
-      <xi:include href="./chapter-6-notes/section-6-4-sol.ptx" />
+      <xi:include href="./chapter-6-notes/section-6-4.ptx" />
   </section>
 
   
