@@ -33,60 +33,34 @@
 
       <p><nbsp/></p>
 
-    <example xml:id="ex-6-4-orth-basis" workspace="true">
+      <theorem xml:id="thm-gram-schmidt">
+      <title>The Gram–Schmidt Process</title>
       <statement>
         <p>
-          The vectors below span a subspace <m>W\subset\mathbb{R}^4</m>. Construct an orthogonal basis.
+          Given a basis <m>\{\vec x_1,\dots,\vec x_p\}</m> for a subspace <m>W \subseteq \mathbb{R}^n</m>, define:
         </p>
-        <me>
-          \vec x_1=\begin{bmatrix}1\\1\\1\\1\end{bmatrix},\quad
-          \vec x_2=\begin{bmatrix}0\\1\\1\\1\end{bmatrix},\quad
-          \vec x_3=\begin{bmatrix}0\\0\\1\\1\end{bmatrix}.
-        </me>
-      </statement>
-    </example>
-  </page>
-
-
-  <page xml:id="p-6-4-gram-schmidt">
-    <title>The Gram–Schmidt Process</title>
-
-    <theorem xml:id="thm-gram-schmidt">
-      <title>The Gram–Schmidt Construction</title>
-      <statement>
+        <md>
+          <mrow>\vec v_1 \amp =\vec x_1,</mrow>
+          <mrow>\vec v_2 \amp = \vec x_2 - \frac{\vec x_2\cdot\vec v_1}{\vec v_1\cdot\vec v_1}\vec v_1,</mrow>
+          <mrow>\vec v_3 \amp = \vec x_3 - \frac{\vec x_3\cdot\vec v_1}{\vec v_1\cdot\vec v_1}\vec v_1
+                     - \frac{\vec x_3\cdot\vec v_2}{\vec v_2\cdot\vec v_2}\vec v_2,</mrow>
+          <mrow>\amp \vdots</mrow>
+          <mrow>\vec v_p \amp = \vec x_p - \frac{\vec x_p\cdot\vec v_1}{\vec v_1\cdot\vec v_1}\vec v_1 - \cdots - \frac{\vec x_p \cdot \vec v_{p-1}}{\vec v_{p-1} \cdot \vec v_{p-1}}\vec v_{p-1}.</mrow>
+        </md>
         <p>
-          Given a basis <m>\{\vec x_1,\dots,\vec x_p\}</m> for a subspace <m>W</m>, define:
-        </p>
-        <me>
-          \vec v_1=\vec x_1,
-        </me>
-        <me>
-          \vec v_2 = \vec x_2 - \frac{\vec x_2\cdot\vec v_1}{\vec v_1\cdot\vec v_1}\vec v_1,
-        </me>
-        <me>
-          \vec v_3 = \vec x_3 - \frac{\vec x_3\cdot\vec v_1}{\vec v_1\cdot\vec v_1}\vec v_1
-                     - \frac{\vec x_3\cdot\vec v_2}{\vec v_2\cdot\vec v_2}\vec v_2,
-        </me>
-        <p>and so on.</p>
-        <me>
-          \vec v_p = \vec x_p - \sum_{k=1}^{p-1}
-          \frac{\vec x_p\cdot\vec v_k}{\vec v_k\cdot\vec v_k}\vec v_k.
-        </me>
-
-        <p>
-          Then <m>\{\vec v_1,\dots,\vec v_p\}</m> is an orthogonal basis for <m>W</m>.
+          Then <m>\{\vec v_1,\dots,\vec v_p\}</m> is an orthogonal basis for <m>W</m>. Additionally, <me>\Span\left\{\vec v_1, \dots, \vec v_k\right\} = \Span\left\{\vec x_1, \dots, \vec x_k\right\} \qquad \text{for <m>1 \leq k \leq p</m>}</me>
         </p>
       </statement>
     </theorem>
 
-    <p><nbsp/></p>
+   
   </page>
 
 
   <page xml:id="p-6-4-gs-geometry">
     <title>Geometric Interpretation</title>
 
-    <image xml:id="img-6-4-gs-geom">
+    <image xml:id="img-6-4-gs-geom" width="80%">
       <latex-image>
         <latex>
 \tdplotsetmaincoords{70}{40}
@@ -109,6 +83,7 @@
   \coordinate (X2) at (1,2.6,0);
   \coordinate (X3) at (1.9,1,1.8);
   \coordinate (P) at (1.9,1,0);
+  \coordinate (P2) at (1,0,0);
 
   \draw[vectorX] (O)--(X1) node[below]{$\vec x_1=\vec v_1$};
   \draw[vectorX] (O)--(X2) node[right]{$\vec x_2$};
@@ -118,8 +93,10 @@
   \draw[vectorV] (O)--(0,0,1.8) node[above]{$\vec v_3$};
 
   \draw[vectorP] (O)--(P) node[right]{proj$_{W_2}\vec x_3$};
+  \draw[vectorP] (O)--(P2) node[below left]{proj$_{W_1}\vec x_2$};
 
   \draw[dsline] (P)--(X3);
+  \draw[dsline] (P2)--(X2);
 
   \draw[dsline] (-3,0,0)--(4,0,0) node[below]{$W_1$};
 
@@ -135,10 +112,43 @@
       </description>
     </image>
 
-    <p>
+    <p workspace="1in">
       Gram–Schmidt successively removes the components of each vector in the span of earlier ones.
     </p>
+
+
+    <example workspace="true">
+      <statement>
+        <p>
+          Let <m>W = \Span\left\{\begin{bmatrix} 3 \\ 0 \\ -1 \end{bmatrix}, \begin{bmatrix} 8 \\ 5 \\ -6 \end{bmatrix} \right\}</m>. Find an orthogonal basis for <m>W</m>.
+        </p>
+      </statement>
+    </example>
+
   </page>
+
+
+  <page xml:id="p-6-4-gram-schmidt">
+
+     <example xml:id="ex-6-4-orth-basis" workspace="true">
+      <statement>
+        <p>
+          The vectors below span a subspace <m>W\subset\mathbb{R}^4</m>. Construct an orthogonal basis.
+        </p>
+        <me>
+          \vec x_1=\begin{bmatrix}1\\1\\1\\1\end{bmatrix},\quad
+          \vec x_2=\begin{bmatrix}0\\1\\1\\1\end{bmatrix},\quad
+          \vec x_3=\begin{bmatrix}0\\0\\1\\1\end{bmatrix}.
+        </me>
+      </statement>
+    </example>
+    
+
+    <p><nbsp/></p>
+  </page>
+
+
+  
 
 
   <page xml:id="p-6-4-orthonormal">
