@@ -43,6 +43,7 @@
       </statement>
     </definition>
 
+
     <note>
         <statement>
             <p>
@@ -129,7 +130,19 @@
 
 
   <page xml:id="p-6-5-geometry">
-    <title>Geometric Interpretation</title>
+
+    <example xml:id="ex-6-5-geom-thought" workspace="true">
+      <title>Reflection Questions</title>
+      <statement>
+        <ol>
+          <li>If <m>\vec b\in\operatorname{Col}(A)</m>, then <m>\widehat x</m> is …</li>
+          <li>
+            In general, we seek <m>\widehat x</m> so that
+            <m>A\widehat x = \widehat b</m>, where <m>\widehat b</m> is …
+          </li>
+        </ol>
+      </statement>
+    </example>
 
     <image xml:id="img-6-5-geometry">
       <latex-image>
@@ -175,25 +188,19 @@
       </description>
     </image>
 
-    <p>The vector <m>A\widehat x</m> is closer to <m>\vec b</m> than any other <m>A\vec x</m>.</p>
-
-    <example xml:id="ex-6-5-geom-thought" workspace="true">
-      <title>Reflection Questions</title>
-      <statement>
-        <ol>
-          <li>If <m>\vec b\in\operatorname{Col}(A)</m>, then <m>\widehat x</m> is …</li>
-          <li>
-            In general, we seek <m>\widehat x</m> so that
-            <m>A\widehat x = \widehat b</m>, where <m>\widehat b</m> is …
-          </li>
-        </ol>
-      </statement>
-    </example>
-  </page>
-
-
-  <page xml:id="p-6-5-normal-eq">
-    <title>Normal Equations</title>
+    <p workspace = "2in">
+      <ul>
+        <li>
+          Note that if <m>\widehat x</m> is a least squares solution to <m>A\vec x = \vec b</m>, then <m>\vec b - A\widehat x</m> is orthogonal to <m>\underline{\hspace{2in}}</m>.
+        </li>
+        <li>
+          Then, we have that <m>\vec b - A\widehat x</m> lives in <m>\underline{\hspace{2in}}</m>
+        </li>
+        <li>
+          Therefore, the least squares solution <m>\widehat x</m> is a solution to the matrix equation <m>\underline{\hspace{3in}}</m>
+        </li>
+      </ul>
+    </p>
 
     <theorem xml:id="thm-normal-equations">
       <title>Normal Equations for Least Squares</title>
@@ -215,7 +222,6 @@
     <title>Example: Solving via Normal Equations</title>
 
     <example xml:id="ex-6-5-normal" workspace="true">
-      <title>Example</title>
       <statement>
         <p>Compute the least squares solution of <m>A\vec x=\vec b</m>, where</p>
         <me>
@@ -262,15 +268,7 @@
       </statement>
     </theorem>
 
-    <p><nbsp/></p>
-  </page>
-
-
-  <page xml:id="p-6-5-example-orth-cols">
-    <title>Example: Columns Already Orthogonal</title>
-
     <example xml:id="ex-6-5-orth-cols" workspace="true">
-      <title>Example</title>
       <statement>
         <p>Compute the least squares solution:</p>
         <me>
@@ -285,10 +283,10 @@
             -1\\2\\1\\6
           \end{bmatrix}.
         </me>
-
-        <p>Hint: the columns of <m>A</m> are orthogonal.</p>
       </statement>
     </example>
+
+    <p><nbsp/></p>
   </page>
 
 
@@ -313,15 +311,7 @@
       </statement>
     </theorem>
 
-    <p><nbsp/></p>
-  </page>
-
-
-  <page xml:id="p-6-5-example-qr">
-    <title>Example: Least Squares via QR</title>
-
     <example xml:id="ex-6-5-qr-ls" workspace="true">
-      <title>Example 3</title>
       <statement>
         <p>Solve <m>A\vec x=\vec b</m> in the least squares sense, where</p>
 
@@ -336,10 +326,10 @@
           \qquad
           \vec b=\begin{bmatrix}
             3\\5\\7\\-3
-          \end{bmatrix}.
+          \end{bmatrix}
         </me>
 
-        <p>Given QR factorization:</p>
+        <p>given the QR factorization:</p>
 
         <me>
           A = \tfrac12
@@ -360,51 +350,5 @@
     </example>
   </page>
 
-
-  <page xml:id="p-6-5-qr-backsub">
-    <title>Back Substitution</title>
-
-    <example xml:id="ex-6-5-backsub" workspace="true">
-      <title>Complete the QR Solution</title>
-      <statement>
-        <p>Compute <m>Q^T\vec b</m>:</p>
-
-        <me>
-          Q^T\vec b
-          =
-          \tfrac12
-          \begin{bmatrix}
-            1 \amp 1 \amp 1 \amp 1\\
-            1 \amp -1 \amp -1 \amp 1\\
-            1 \amp -1 \amp 1 \amp -1
-          \end{bmatrix}
-          \begin{bmatrix}
-            3\\5\\7\\-3
-          \end{bmatrix}
-          =
-          \begin{bmatrix}
-            \square\\ -6\\ 4
-          </begin{bmatrix}.
-        </me>
-
-        <p>Then solve <m>R\vec x = Q^T\vec b</m>:</p>
-
-        <me>
-          \begin{bmatrix}
-            2 \amp 4 \amp 5\\
-            0 \amp 2 \amp 3\\
-            0 \amp 0 \amp 2
-          \end{bmatrix}
-          \begin{bmatrix}
-            x_1\\x_2\\x_3
-          \end{bmatrix}
-          =
-          \begin{bmatrix}
-            \square\\ -6\\ 4
-          \end{bmatrix}.
-        </me>
-      </statement>
-    </example>
-  </page>
 
 </handout>
