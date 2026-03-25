@@ -1,0 +1,410 @@
+<handout xml:id="handout-section-6-5-least-squares">
+  <title>6.5 Least-Squares Problems</title>
+
+  <page xml:id="p-6-5-overview">
+    <title>Overview</title>
+
+    <objectives xml:id="obj-6-5-topics-goals">
+      <title>Topics</title>
+      <ul>
+        <li>Least squares problems</li>
+        <li>Methods for solving least squares problems</li>
+      </ul>
+      </objectives>
+
+      <objectives workspace="0.5in">
+      <title>Goals</title>
+      <ul>
+        <li>
+          Compute general solutions and least squares errors using both:
+          <ul>
+            <li>the normal equations</li>
+            <li>the QR decomposition</li>
+          </ul>
+        </li>
+      </ul>
+      </objectives>
+
+      <p><nbsp/></p>
+
+      <definition xml:id="def-least-squares" workspace="0.5in">
+      <title>Least Squares Solution</title>
+      <statement>
+        <p>
+          Let <m>A</m> be an <m>m\times n</m> matrix. A vector <m>\widehat x</m> is a
+          <em>least squares solution</em> to <m>A\vec x=\vec b</m> if
+        </p>
+        <me>
+          \lVert\vec b - A\widehat x\rVert
+          \le
+          \lVert\vec b - A\vec x\rVert
+          \quad \text{for all } \vec x\in\mathbb{R}^n.
+        </me>
+      </statement>
+    </definition>
+
+    <note>
+        <statement>
+            <p>
+                If <m>A \vec x = \vec b</m> corresponds to a consistent system, then a vector <m>\vec v</m> so that <m>A\vec v = \vec b</m> is a <em>least squares solution</em> to <m>A\vec x = \vec b</m> and we have that <me>\|\vec b - A\vec v\| = 0 \leq \|\vec b - A\vec x\|</me> for all <m>\vec x \in \mathbb{R}^n</m>.
+            </p>
+            <p>
+                If <m>A \vec x = \vec b</m> corresponds to an inconsistent system, then there is no vector <m>\vec v</m> so that <m>A\vec v = \vec b</m>. Then, a <em>least squares solution</em> <m>\widehat x</m> is a vector so that <m>A\widehat x</m> is <em>as close as possible</em> to <m>\vec b</m>. Since <m>A\widehat x</m> must be a vector in <m>\Col(A)</m>, we see by <xref ref="thm-best-approx"/> that <m>\widehat b = \proj_{\Col(A)}\vec b</m> is the vector in <m>\Col(A)</m> that is as close as possible to <m>\vec b</m>. Thus, the <em>least squares solutions</em> are solutions to the equation <m>A\vec x = \widehat b</m>.
+            </p>
+        </statement>
+    </note>
+
+    <p><nbsp/></p>
+
+  </page>
+
+
+  <page xml:id="p-6-5-def-ls">
+    <title>Least Squares Solution</title>
+
+    <example xml:id="ex-6-5-inconsistent" workspace="true">
+      <title>Data Fit Example</title>
+      <intoduction>
+        <p>
+            Suppose we want to construct a line of the form <m>y=mx+b</m> that best fits the data below.
+        </p>
+        <image xml:id="img-6-5-scatter">
+          <latex-image>
+            <latex>
+\begin{tikzpicture}
+  \draw[gray] (0,0) grid (3,3); 
+  \draw[->] (-.5,0) -- (3.5,0) node[below]{$x$};
+  \draw[->] (0,-.5) -- (0,3.5) node[left]{$y$};
+  \foreach \x/\y in {0/0.5,1/1,2/2.5,3/3}
+    \filldraw (\x,\y) circle (.2em); 
+\end{tikzpicture}
+            </latex>
+          </latex-image>
+          <shortdescription>Scatter plot of four data points.</shortdescription>
+          <description>
+            A 2D scatter plot showing four measured points used for linear least squares fitting.
+          </description>
+        </image>
+
+    </introduction>
+    <task workspace="1in">
+        <statement>
+            <p>
+                Find a system of equations <m>A\vec x = \vec b</m> that can be used to solve for <m>m</m> and <m>b</m>.
+            </p>
+        </statement>
+    </task>
+    <task workspace="0.5in">
+        <statement>
+            <p>
+                Is the system found in (a) consistent?
+            </p>
+        </statement>
+    </task>
+    <task workspace="3in">
+        <statement>
+            <p>
+                Find the vector <m>\widehat b = \proj_{\Col(A)}\vec b</m>.
+            </p>
+        </statement>
+    </task>
+    <task workspace="1in">
+        <statement>
+            <p>
+                Find the <em>least squares solution</em> to <m>A\vec x = \vec b</m>.
+            </p>
+        </statement>
+    </task>
+    <task workspace="1in">
+        <statement>
+            <p>
+                What does the least squares solution found in (d) mean?
+            </p>
+        </statement>
+    </task>
+    </example>
+
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-6-5-geometry">
+    <title>Geometric Interpretation</title>
+
+    <image xml:id="img-6-5-geometry">
+      <latex-image>
+        <latex>
+\tdplotsetmaincoords{74}{20}
+\begin{tikzpicture}[scale=2.4,
+  axis/.style={->,black,-stealth}, 
+  vectorY/.style={-stealth,DarkBlue,very thick},
+  vectorH/.style={-stealth,black,very thick},
+  vectorV/.style={-stealth,DarkRed,very thick},
+  dsline/.style={black,dashed},
+  perpline/.style={black, thin},
+  tdplot_main_coords
+  ]
+
+  \coordinate (O) at (0,0,0);
+  \coordinate (Y) at (1,0,1);
+  \coordinate (H) at (1,0,0);
+  \coordinate (V) at (1.2,1.3,0);
+  \coordinate (C) at (-.3,-1,0);
+
+  \filldraw[draw=DarkBlue!40,fill=DarkBlue!08]
+    (-1,-1,0)--(2,-1,0)--(2,1.5,0)--(-1,1.5,0)--cycle;
+
+  \draw[vectorY] (O)--(Y) node[above]{$\vec b$};
+  \draw[vectorH] (O)--(H) node[below]{$A\widehat x$};
+  \draw[vectorV] (O)--(V) node[below]{$A\vec x$};
+
+  \draw[dsline] (Y)--(H);
+  \draw[dsline,DarkRed] (Y)--(V);
+
+  \draw[perpline] (0.85,0.0,0.15)--(1.00,0.0,0.15);
+  \draw[perpline] (0.85,0.0,0.15)--(0.85,0.0,0.00);
+
+  \draw (C) node[above]{Col$(A)$};
+\end{tikzpicture}
+        </latex>
+      </latex-image>
+      <shortdescription>Geometric interpretation of least squares projection.</shortdescription>
+      <description>
+        The projection <m>A\widehat x</m> is the closest point in <m>\operatorname{Col}(A)</m>
+        to the vector <m>\vec b</m>.
+      </description>
+    </image>
+
+    <p>The vector <m>A\widehat x</m> is closer to <m>\vec b</m> than any other <m>A\vec x</m>.</p>
+
+    <example xml:id="ex-6-5-geom-thought" workspace="true">
+      <title>Reflection Questions</title>
+      <statement>
+        <ol>
+          <li>If <m>\vec b\in\operatorname{Col}(A)</m>, then <m>\widehat x</m> is …</li>
+          <li>
+            In general, we seek <m>\widehat x</m> so that
+            <m>A\widehat x = \widehat b</m>, where <m>\widehat b</m> is …
+          </li>
+        </ol>
+      </statement>
+    </example>
+  </page>
+
+
+  <page xml:id="p-6-5-normal-eq">
+    <title>Normal Equations</title>
+
+    <theorem xml:id="thm-normal-equations">
+      <title>Normal Equations for Least Squares</title>
+      <statement>
+        <p>
+          Least squares solutions of <m>A\vec x=\vec b</m> are precisely the solutions of
+        </p>
+        <me>
+          A^T A\vec x = A^T\vec b.
+        </me>
+      </statement>
+    </theorem>
+
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-6-5-example-normal">
+    <title>Example: Solving via Normal Equations</title>
+
+    <example xml:id="ex-6-5-normal" workspace="true">
+      <title>Example</title>
+      <statement>
+        <p>Compute the least squares solution of <m>A\vec x=\vec b</m>, where</p>
+        <me>
+          A=\begin{bmatrix}
+            4 \amp 0\\
+            0 \amp 2\\
+            1 \amp 1
+          \end{bmatrix},
+          \qquad
+          \vec b=\begin{bmatrix}
+            2\\0\\11
+          \end{bmatrix}.
+        </me>
+
+        <p>Compute <m>A^TA</m>, <m>A^T\vec b</m>, and solve.</p>
+      </statement>
+    </example>
+  </page>
+
+
+  <page xml:id="p-6-5-unique-ls">
+    <title>Conditions for Unique Least Squares Solutions</title>
+
+    <theorem xml:id="thm-ls-unique">
+      <title>Unique Least Squares Solutions</title>
+      <statement>
+        <p>
+          For an <m>m\times n</m> matrix <m>A</m>, the following are equivalent:
+        </p>
+
+        <ol>
+          <li>For every <m>\vec b</m>, the equation <m>A\vec x=\vec b</m> has a unique least squares solution.</li>
+          <li>The columns of <m>A</m> are linearly independent.</li>
+          <li><m>A^TA</m> is invertible.</li>
+        </ol>
+
+        <p>
+          When these hold,
+        </p>
+
+        <me>
+          \widehat x = (A^TA)^{-1}A^T\vec b.
+        </me>
+      </statement>
+    </theorem>
+
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-6-5-example-orth-cols">
+    <title>Example: Columns Already Orthogonal</title>
+
+    <example xml:id="ex-6-5-orth-cols" workspace="true">
+      <title>Example</title>
+      <statement>
+        <p>Compute the least squares solution:</p>
+        <me>
+          A=\begin{bmatrix}
+            1 \amp -6\\
+            1 \amp -2\\
+            1 \amp 1\\
+            1 \amp 7
+          \end{bmatrix},
+          \qquad
+          \vec b=\begin{bmatrix}
+            -1\\2\\1\\6
+          \end{bmatrix}.
+        </me>
+
+        <p>Hint: the columns of <m>A</m> are orthogonal.</p>
+      </statement>
+    </example>
+  </page>
+
+
+  <page xml:id="p-6-5-ls-qr">
+    <title>Least Squares Using QR</title>
+
+    <theorem xml:id="thm-ls-using-qr">
+      <title>Least Squares via QR Factorization</title>
+      <statement>
+        <p>
+          If <m>A=QR</m> is a QR decomposition of an <m>m\times n</m> matrix <m>A</m>, then for
+          any <m>\vec b</m> the least squares solution of <m>A\vec x=\vec b</m> satisfies:
+        </p>
+
+        <me>
+          R\widehat x = Q^T\vec b.
+        </me>
+
+        <p>
+          Since <m>R</m> is upper triangular, this is solved by back substitution.
+        </p>
+      </statement>
+    </theorem>
+
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-6-5-example-qr">
+    <title>Example: Least Squares via QR</title>
+
+    <example xml:id="ex-6-5-qr-ls" workspace="true">
+      <title>Example 3</title>
+      <statement>
+        <p>Solve <m>A\vec x=\vec b</m> in the least squares sense, where</p>
+
+        <me>
+          A=
+          \begin{bmatrix}
+            1 \amp 3 \amp 5\\
+            1 \amp 1 \amp 0\\
+            1 \amp 1 \amp 2\\
+            1 \amp 3 \amp 3
+          \end{bmatrix},
+          \qquad
+          \vec b=\begin{bmatrix}
+            3\\5\\7\\-3
+          \end{bmatrix}.
+        </me>
+
+        <p>Given QR factorization:</p>
+
+        <me>
+          A = \tfrac12
+          \begin{bmatrix}
+            1 \amp 1 \amp 1\\
+            1 \amp -1 \amp -1\\
+            1 \amp -1 \amp 1\\
+            1 \amp 1 \amp -1
+          \end{bmatrix}
+          \begin{bmatrix}
+            2 \amp 4 \amp 5\\
+            0 \amp 2 \amp 3\\
+            0 \amp 0 \amp 2
+          \end{bmatrix}.
+        </me>
+
+      </statement>
+    </example>
+  </page>
+
+
+  <page xml:id="p-6-5-qr-backsub">
+    <title>Back Substitution</title>
+
+    <example xml:id="ex-6-5-backsub" workspace="true">
+      <title>Complete the QR Solution</title>
+      <statement>
+        <p>Compute <m>Q^T\vec b</m>:</p>
+
+        <me>
+          Q^T\vec b
+          =
+          \tfrac12
+          \begin{bmatrix}
+            1 \amp 1 \amp 1 \amp 1\\
+            1 \amp -1 \amp -1 \amp 1\\
+            1 \amp -1 \amp 1 \amp -1
+          \end{bmatrix}
+          \begin{bmatrix}
+            3\\5\\7\\-3
+          \end{bmatrix}
+          =
+          \begin{bmatrix}
+            \square\\ -6\\ 4
+          </begin{bmatrix}.
+        </me>
+
+        <p>Then solve <m>R\vec x = Q^T\vec b</m>:</p>
+
+        <me>
+          \begin{bmatrix}
+            2 \amp 4 \amp 5\\
+            0 \amp 2 \amp 3\\
+            0 \amp 0 \amp 2
+          \end{bmatrix}
+          \begin{bmatrix}
+            x_1\\x_2\\x_3
+          \end{bmatrix}
+          =
+          \begin{bmatrix}
+            \square\\ -6\\ 4
+          \end{bmatrix}.
+        </me>
+      </statement>
+    </example>
+  </page>
+
+</handout>
