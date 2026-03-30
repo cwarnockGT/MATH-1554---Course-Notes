@@ -12,22 +12,23 @@
       </ul>
       </objectives>
 
-      <objectives workspace="0.5in">
+      <objectives workspace="0.2in">
       <title>Goals</title>
       <ul>
         <li>
-          Compute general solutions and least squares errors using both:
+          <p>Compute general solutions and least squares errors using both:
           <ul>
             <li>the normal equations</li>
             <li>the QR decomposition</li>
           </ul>
+        </p>
         </li>
       </ul>
       </objectives>
 
       <p><nbsp/></p>
 
-      <definition xml:id="def-least-squares" workspace="0.5in">
+      <definition xml:id="def-least-squares" workspace="0.2in">
       <title>Least Squares Solution</title>
       <statement>
         <p>
@@ -47,10 +48,49 @@
     <note>
         <statement>
             <p>
-                If <m>A \vec x = \vec b</m> corresponds to a consistent system, then a vector <m>\vec v</m> so that <m>A\vec v = \vec b</m> is a <em>least squares solution</em> to <m>A\vec x = \vec b</m> and we have that <me>\|\vec b - A\vec v\| = 0 \leq \|\vec b - A\vec x\|</me> for all <m>\vec x \in \mathbb{R}^n</m>.
+                Suppose <m>A \vec x = \vec b</m> is a <em>consistent</em> system.
+                <ul>
+                  <li>
+                    <p>
+                      Then there exists at least one vector <m>\vec v</m> so that <m>\underline{\hspace{1.5in}}</m>.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      This vector <m>\widehat x =  \vec v</m> is a <em>least squares solution</em> to <m>A\vec x = \vec b</m> and we have that <me>\underline{\hspace{0.5in}} = \|\vec b - A\widehat\| \leq \|\vec b - A\vec x\|</me> for all <m>\vec x \in \mathbb{R}^n</m>.
+                    </p>
+                  </li>
+                </ul>  
             </p>
             <p>
-                If <m>A \vec x = \vec b</m> corresponds to an inconsistent system, then there is no vector <m>\vec v</m> so that <m>A\vec v = \vec b</m>. Then, a <em>least squares solution</em> <m>\widehat x</m> is a vector so that <m>A\widehat x</m> is <em>as close as possible</em> to <m>\vec b</m>. Since <m>A\widehat x</m> must be a vector in <m>\Col(A)</m>, we see by <xref ref="thm-best-approx"/> that <m>\widehat b = \proj_{\Col(A)}\vec b</m> is the vector in <m>\Col(A)</m> that is as close as possible to <m>\vec b</m>. Thus, the <em>least squares solutions</em> are solutions to the equation <m>A\vec x = \widehat b</m>.
+                Now, suppose  <m>A \vec x = \vec b</m> is an <em>inconsistent</em> system.
+                <ul>
+                  <li>
+                    <p>
+                      Then there is no vector <m>\vec v</m> so that <m>\underline{\hspace{1.5in}}</m>.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      So, a <em>least squares solution</em> <m>\widehat x</m> is a vector so that <m>A\widehat x</m> is <m>\underline{\hspace{3in}}</m> to <m>\vec b</m>.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Recall that <m>A\vec x</m> is always a vector in <m>\underline{\hspace{1in}}</m>.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      By <xref ref="thm-best-approx"/>, we have that <m>\widehat b = \underline{\hspace{2in}}</m> is the vector in <m>\Col(A)</m> that is as close as possible to <m>\vec b</m>.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Thus, the <em>least squares solutions</em> to <m>A\vec x = \vec b</m> are the vectors <m>\widehat x</m> which are solutions to the equation <m>\underline{\hspace{1.5in}}</m>.
+                    </p>
+                  </li>
+                </ul>     
             </p>
         </statement>
     </note>
@@ -63,63 +103,30 @@
   <page xml:id="p-6-5-def-ls">
     <title>Least Squares Solution</title>
 
-    <example xml:id="ex-6-5-inconsistent" workspace="true">
-      <title>Data Fit Example</title>
-      <intoduction>
+    <example xml:id="ex-6-5-inconsistent" >
+      <introduction>
         <p>
-            Suppose we want to construct a line of the form <m>y=mx+b</m> that best fits the data below.
+            Consider the system <m>A\vec x = \vec b</m> for <me>A = \begin{bmatrix} 4 \amp 0 \\ 0 \amp 2 \\ 1 \amp 1 \end{bmatrix} \quad \text{and} \quad \vec b = \begin{bmatrix} 2 \\ 0 \\ 11 \end{bmatrix}</me>.
         </p>
-        <image xml:id="img-6-5-scatter">
-          <latex-image>
-            <latex>
-\begin{tikzpicture}
-  \draw[gray] (0,0) grid (3,3); 
-  \draw[->] (-.5,0) -- (3.5,0) node[below]{$x$};
-  \draw[->] (0,-.5) -- (0,3.5) node[left]{$y$};
-  \foreach \x/\y in {0/0.5,1/1,2/2.5,3/3}
-    \filldraw (\x,\y) circle (.2em); 
-\end{tikzpicture}
-            </latex>
-          </latex-image>
-          <shortdescription>Scatter plot of four data points.</shortdescription>
-          <description>
-            A 2D scatter plot showing four measured points used for linear least squares fitting.
-          </description>
-        </image>
-
     </introduction>
-    <task workspace="1in">
+    <task workspace="2in">
         <statement>
             <p>
-                Find a system of equations <m>A\vec x = \vec b</m> that can be used to solve for <m>m</m> and <m>b</m>.
+                Is the system consistent?
             </p>
         </statement>
     </task>
-    <task workspace="0.5in">
+    <task workspace="6in">
         <statement>
             <p>
-                Is the system found in (a) consistent?
+                Find the vector <m>\widehat b = \proj_{\Col(A)}\vec b</m>. 
             </p>
         </statement>
     </task>
-    <task workspace="3in">
-        <statement>
-            <p>
-                Find the vector <m>\widehat b = \proj_{\Col(A)}\vec b</m>.
-            </p>
-        </statement>
-    </task>
-    <task workspace="1in">
+    <task workspace="2in">
         <statement>
             <p>
                 Find the <em>least squares solution</em> to <m>A\vec x = \vec b</m>.
-            </p>
-        </statement>
-    </task>
-    <task workspace="1in">
-        <statement>
-            <p>
-                What does the least squares solution found in (d) mean?
             </p>
         </statement>
     </task>
@@ -130,21 +137,8 @@
 
 
   <page xml:id="p-6-5-geometry">
-
-    <example xml:id="ex-6-5-geom-thought" workspace="true">
-      <title>Reflection Questions</title>
-      <statement>
-        <ol>
-          <li>If <m>\vec b\in\operatorname{Col}(A)</m>, then <m>\widehat x</m> is …</li>
-          <li>
-            In general, we seek <m>\widehat x</m> so that
-            <m>A\widehat x = \widehat b</m>, where <m>\widehat b</m> is …
-          </li>
-        </ol>
-      </statement>
-    </example>
-
-    <image xml:id="img-6-5-geometry">
+    <note workspace="1in">
+    <image xml:id="img-6-5-geometry" width = "60%">
       <latex-image>
         <latex>
 \tdplotsetmaincoords{74}{20}
@@ -188,33 +182,46 @@
       </description>
     </image>
 
-    <p workspace = "2in">
+    <p>
       <ul>
         <li>
-          Note that if <m>\widehat x</m> is a least squares solution to <m>A\vec x = \vec b</m>, then <m>\vec b - A\widehat x</m> is orthogonal to <m>\underline{\hspace{2in}}</m>.
+          Note that if <m>\widehat x</m> is a least squares solution to <m>A\vec x = \vec b</m>, then <m>\vec b - A\widehat x</m> is orthogonal to every vector in <m>\underline{\hspace{2in}}</m>.
         </li>
         <li>
-          Then, we have that <m>\vec b - A\widehat x</m> lives in <m>\underline{\hspace{2in}}</m>
+          Then, we have that <m>\vec b - A\widehat x</m> lives in <m>\underline{\hspace{2in}}</m>.
         </li>
         <li>
-          Therefore, the least squares solution <m>\widehat x</m> is a solution to the matrix equation <m>\underline{\hspace{3in}}</m>
+          <p>
+            By the <xref ref="thm-four-subspaces" text="custom">Four Subspace Theorem</xref>, we have that <m>\vec b - A\widehat x</m> lives in <m>\underline{\hspace{2in}}</m>.
+          </p>
+        </li>
+        <li>
+          Therefore, we have that <m>\underline{\hspace{1in}}\left(\vec b - A\widehat x\right) = \underline{\hspace{1in}}</m>.
+        </li>
+        <li>
+          <p>
+            It follows that <m>\underline{\hspace{2in}}</m>.
+          </p>
         </li>
       </ul>
     </p>
+  </note>
 
-    <theorem xml:id="thm-normal-equations">
+    <theorem xml:id="thm-normal-equations" workspace="1in">
       <title>Normal Equations for Least Squares</title>
       <statement>
         <p>
           Least squares solutions of <m>A\vec x=\vec b</m> are precisely the solutions of
         </p>
         <me>
-          A^T A\vec x = A^T\vec b.
+          A^T A\vec x = A^T\vec b,
         </me>
+        <p>
+          refered to as the <em>normal equations</em>.
+        </p>
       </statement>
     </theorem>
 
-    <p><nbsp/></p>
   </page>
 
 
@@ -223,7 +230,7 @@
 
     <example xml:id="ex-6-5-normal" workspace="true">
       <statement>
-        <p>Compute the least squares solution of <m>A\vec x=\vec b</m>, where</p>
+        <p>Use the normal equations to find the least squares solution of <m>A\vec x=\vec b</m>, where</p>
         <me>
           A=\begin{bmatrix}
             4 \amp 0\\
@@ -235,17 +242,17 @@
             2\\0\\11
           \end{bmatrix}.
         </me>
-
-        <p>Compute <m>A^TA</m>, <m>A^T\vec b</m>, and solve.</p>
       </statement>
     </example>
+
+    <p><nbsp/></p>
   </page>
 
 
   <page xml:id="p-6-5-unique-ls">
     <title>Conditions for Unique Least Squares Solutions</title>
 
-    <theorem xml:id="thm-ls-unique">
+    <theorem xml:id="thm-ls-unique" workspace="0.5in">
       <title>Unique Least Squares Solutions</title>
       <statement>
         <p>
@@ -270,7 +277,7 @@
 
     <example xml:id="ex-6-5-orth-cols" workspace="true">
       <statement>
-        <p>Compute the least squares solution:</p>
+        <p>Compute the least squares solution to <m>A\vec x = \vec b</m>, where</p>
         <me>
           A=\begin{bmatrix}
             1 \amp -6\\
@@ -290,10 +297,10 @@
   </page>
 
 
-  <page xml:id="p-6-5-ls-qr">
+  <page xml:id="p-6-5-ls-qr" >
     <title>Least Squares Using QR</title>
 
-    <theorem xml:id="thm-ls-using-qr">
+    <theorem xml:id="thm-ls-using-qr" workspace="0.5in">
       <title>Least Squares via QR Factorization</title>
       <statement>
         <p>
@@ -304,16 +311,12 @@
         <me>
           R\widehat x = Q^T\vec b.
         </me>
-
-        <p>
-          Since <m>R</m> is upper triangular, this is solved by back substitution.
-        </p>
       </statement>
     </theorem>
 
     <example xml:id="ex-6-5-qr-ls" workspace="true">
       <statement>
-        <p>Solve <m>A\vec x=\vec b</m> in the least squares sense, where</p>
+        <p>Compute the least squares tolustio to  <m>A\vec x=\vec b</m>, where</p>
 
         <me>
           A=
