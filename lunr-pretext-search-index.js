@@ -3167,6 +3167,123 @@ var ptx_lunr_docs = [
   "number": "6.49",
   "title": "",
   "body": "  Compute the QR decomposition of:    "
+},
+{
+  "id": "Section-6-5",
+  "level": "1",
+  "url": "Section-6-5.html",
+  "type": "Section",
+  "number": "",
+  "title": "6.5 Least-Squares Problems",
+  "body": " 6.5 Least-Squares Problems   6.5 Least-Squares Problems   Overview   Topics   Least squares problems  Methods for solving least squares problems     Goals    Compute general solutions and least squares errors using both:  the normal equations  the QR decomposition         Least Squares Solution   Let be an matrix. A vector is a least squares solution to if       Suppose is a consistent system.   Then there exists at least one vector so that .    This vector is a least squares solution to and we have that for all .     Now, suppose is an inconsistent system.   Then there is no vector so that .    So, a least squares solution  is a vector so that is to .    Recall that is always a vector in .    By , we have that is the vector in that is as close as possible to .    Thus, the least squares solutions to are the vectors which are solutions to the equation .          Least Squares Solution    Consider the system for .     Is the system consistent?      Find the vector .      Find the least squares solution to .           Geometric interpretation of least squares projection.  The projection is the closest point in to the vector .     Note that if is a least squares solution to , then is orthogonal to every vector in .  Then, we have that lives in .   By the Four Subspace Theorem , we have that lives in .   Therefore, we have that .   It follows that .       Normal Equations for Least Squares   Least squares solutions of are precisely the solutions of   refered to as the normal equations .      Example: Solving via Normal Equations    Use the normal equations to find the least squares solution of , where        Conditions for Unique Least Squares Solutions   Unique Least Squares Solutions   For an matrix , the following are equivalent:   For every , the equation has a unique least squares solution.  The columns of are linearly independent.  is invertible.   When these hold,       Compute the least squares solution to , where        Least Squares Using QR   Least Squares via QR Factorization   If is a QR decomposition of an matrix , then for any the least squares solution of satisfies:       Compute the least squares tolustio to , where   given the QR factorization:       "
+},
+{
+  "id": "obj-6-5-topics-goals",
+  "level": "2",
+  "url": "Section-6-5.html#obj-6-5-topics-goals",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   Least squares problems  Methods for solving least squares problems   "
+},
+{
+  "id": "p-6-5-overview-3",
+  "level": "2",
+  "url": "Section-6-5.html#p-6-5-overview-3",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals    Compute general solutions and least squares errors using both:  the normal equations  the QR decomposition      "
+},
+{
+  "id": "def-least-squares",
+  "level": "2",
+  "url": "Section-6-5.html#def-least-squares",
+  "type": "Definition",
+  "number": "6.50",
+  "title": "Least Squares Solution.",
+  "body": " Least Squares Solution   Let be an matrix. A vector is a least squares solution to if    "
+},
+{
+  "id": "p-6-5-overview-6",
+  "level": "2",
+  "url": "Section-6-5.html#p-6-5-overview-6",
+  "type": "Note",
+  "number": "6.51",
+  "title": "",
+  "body": "  Suppose is a consistent system.   Then there exists at least one vector so that .    This vector is a least squares solution to and we have that for all .     Now, suppose is an inconsistent system.   Then there is no vector so that .    So, a least squares solution  is a vector so that is to .    Recall that is always a vector in .    By , we have that is the vector in that is as close as possible to .    Thus, the least squares solutions to are the vectors which are solutions to the equation .      "
+},
+{
+  "id": "ex-6-5-inconsistent",
+  "level": "2",
+  "url": "Section-6-5.html#ex-6-5-inconsistent",
+  "type": "Example",
+  "number": "6.52",
+  "title": "",
+  "body": "  Consider the system for .     Is the system consistent?      Find the vector .      Find the least squares solution to .    "
+},
+{
+  "id": "p-6-5-geometry-1",
+  "level": "2",
+  "url": "Section-6-5.html#p-6-5-geometry-1",
+  "type": "Note",
+  "number": "6.53",
+  "title": "",
+  "body": "   Geometric interpretation of least squares projection.  The projection is the closest point in to the vector .     Note that if is a least squares solution to , then is orthogonal to every vector in .  Then, we have that lives in .   By the Four Subspace Theorem , we have that lives in .   Therefore, we have that .   It follows that .     "
+},
+{
+  "id": "thm-normal-equations",
+  "level": "2",
+  "url": "Section-6-5.html#thm-normal-equations",
+  "type": "Theorem",
+  "number": "6.54",
+  "title": "Normal Equations for Least Squares.",
+  "body": " Normal Equations for Least Squares   Least squares solutions of are precisely the solutions of   refered to as the normal equations .   "
+},
+{
+  "id": "ex-6-5-normal",
+  "level": "2",
+  "url": "Section-6-5.html#ex-6-5-normal",
+  "type": "Example",
+  "number": "6.55",
+  "title": "",
+  "body": "  Use the normal equations to find the least squares solution of , where    "
+},
+{
+  "id": "thm-ls-unique",
+  "level": "2",
+  "url": "Section-6-5.html#thm-ls-unique",
+  "type": "Theorem",
+  "number": "6.56",
+  "title": "Unique Least Squares Solutions.",
+  "body": " Unique Least Squares Solutions   For an matrix , the following are equivalent:   For every , the equation has a unique least squares solution.  The columns of are linearly independent.  is invertible.   When these hold,    "
+},
+{
+  "id": "ex-6-5-orth-cols",
+  "level": "2",
+  "url": "Section-6-5.html#ex-6-5-orth-cols",
+  "type": "Example",
+  "number": "6.57",
+  "title": "",
+  "body": "  Compute the least squares solution to , where    "
+},
+{
+  "id": "thm-ls-using-qr",
+  "level": "2",
+  "url": "Section-6-5.html#thm-ls-using-qr",
+  "type": "Theorem",
+  "number": "6.58",
+  "title": "Least Squares via QR Factorization.",
+  "body": " Least Squares via QR Factorization   If is a QR decomposition of an matrix , then for any the least squares solution of satisfies:    "
+},
+{
+  "id": "ex-6-5-qr-ls",
+  "level": "2",
+  "url": "Section-6-5.html#ex-6-5-qr-ls",
+  "type": "Example",
+  "number": "6.59",
+  "title": "",
+  "body": "  Compute the least squares tolustio to , where   given the QR factorization:    "
 }
 ]
 
