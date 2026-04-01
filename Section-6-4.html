@@ -301,7 +301,10 @@ eBookConfig.enable_chatcodes =  false;
         </label><label><input type="radio" name="papersize" value="letter">Letter
         </label>
 </form>
-<details class="print-options"><summary>Additional printing options</summary><div class="header-footer-options">
+<details class="print-options"><summary>Additional printing options</summary><div class="hide-solutions-options"><div class="hide-option">
+<label for="hide-solution-checkbox">Hide solutions</label><input type="checkbox" id="hide-solution-checkbox">
+</div></div>
+<div class="header-footer-options">
 <div class="header-option">
 <span class="title">Print headers</span><label>First page<input type="checkbox" id="print-first-page-header-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-header-checkbox" checked></label>
 </div>
@@ -398,13 +401,36 @@ W_k = \Span\left\{\vec v_1, \dots, \vec v_k\right\} = \Span\left\{\vec x_1, \dot
 <div class="para" id="p-6-4-gs-geometry-3">Gram–Schmidt successively removes the components of each vector in the span of earlier ones.<div class="workspace" data-space="1in"></div>
 <div class="autopermalink" data-description="Paragraph"><a href="#p-6-4-gs-geometry-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="example example-like" id="p-6-4-gs-geometry-4"><h4 class="heading">
+<article class="example example-like" id="ex-6-4-2vec"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.45</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="p-6-4-gs-geometry-4-1-1">Let <span class="process-math">\(W = \Span\left\{\begin{bmatrix} 3 \\ 0 \\ -1 \end{bmatrix}, \begin{bmatrix} 8 \\ 5 \\ -6 \end{bmatrix} \right\}\text{.}\)</span> Find an orthogonal basis for <span class="process-math">\(W\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#p-6-4-gs-geometry-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-6-4-2vec-1-1">Let <span class="process-math">\(W = \Span\left\{\begin{bmatrix} 3 \\ 0 \\ -1 \end{bmatrix}, \begin{bmatrix} 8 \\ 5 \\ -6 \end{bmatrix} \right\}\text{.}\)</span> Find an orthogonal basis for <span class="process-math">\(W\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-6-4-2vec-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="ex-6-4-2vec-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-6-4-2vec-2-1">
+<div class="para">Let <span class="process-math">\(\vec x_1 = \begin{bmatrix} 3 \\ 0 \\ -1 \end{bmatrix}\)</span> and <span class="process-math">\(\vec x_2 = \begin{bmatrix} 8 \\ 5 \\ -6 \end{bmatrix}\text{.}\)</span> Using <a href="Section-6-4.html#thm-gram-schmidt" class="xref" data-knowl="./knowl/xref/thm-gram-schmidt.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.44: The Gram–Schmidt Process">Theorem 6.44</a>, we have that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-gram-schmidt.html" id="ex-6-4-2vec-2-1-4">
+\begin{align*}
+\vec v_1 \amp = \vec x_1 = \begin{bmatrix} 3 \\ 0 \\ -1 \end{bmatrix}
+\end{align*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-gram-schmidt.html" id="ex-6-4-2vec-2-1-5">
+\begin{align*}
+\vec v_2 \amp = \vec x_2 - \proj_{\vec v_1}\vec x_2 \\
+\amp = \begin{bmatrix} 8 \\ 5 \\ -6 \end{bmatrix} - \dfrac{8(3) + 5(0) -6(-1)}{3^2 + 0^2 + (-1)^2}\begin{bmatrix} 3 \\ 0 \\ -1 \end{bmatrix}\\
+\amp = \begin{bmatrix}8 \\ 5 \\ -6 \end{bmatrix} - 3\begin{bmatrix} 3 \\ 0 \\ -1 \end{bmatrix}\\
+\amp = \begin{bmatrix} -1 \\ 5 \\ -3 \end{bmatrix}
+\end{align*}
+</div>
+<div class="para">Note that <span class="process-math">\(\vec v_1, \vec v_2 \in W\)</span> and <span class="process-math">\(\vec v_1 \cdot \vec v_2 = 0\text{,}\)</span> so <span class="process-math">\(\left\{\vec v_1, \vec v_2\right\}\)</span> is an orthogonal basis for <span class="process-math">\(W\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-6-4-2vec-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.45.1"><a href="#ex-6-4-2vec-2" title="Copy heading and permalink for Solution 6.45.1" aria-label="Copy heading and permalink for Solution 6.45.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
-<div class="autopermalink" data-description="Example 6.45"><a href="#p-6-4-gs-geometry-4" title="Copy heading and permalink for Example 6.45" aria-label="Copy heading and permalink for Example 6.45">🔗</a></div></article></section><section class="onepage" id="p-6-4-gram-schmidt"><article class="example example-like" id="ex-6-4-orth-basis"><h4 class="heading">
+<div class="autopermalink" data-description="Example 6.45"><a href="#ex-6-4-2vec" title="Copy heading and permalink for Example 6.45" aria-label="Copy heading and permalink for Example 6.45">🔗</a></div></article></section><section class="onepage" id="p-6-4-gram-schmidt"><article class="example example-like" id="ex-6-4-orth-basis"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.46</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para" id="ex-6-4-orth-basis-1-1">The vectors below span a subspace <span class="process-math">\(W\subseteq\mathbb{R}^4\text{.}\)</span> Construct an orthogonal basis for <span class="process-math">\(W\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-6-4-orth-basis-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -416,6 +442,63 @@ W_k = \Span\left\{\vec v_1, \dots, \vec v_k\right\} = \Span\left\{\vec x_1, \dot
 \vec x_3=\begin{bmatrix}0\\0\\1\\1\end{bmatrix}.
 \end{equation*}
 </div>
+<div class="solutions"><details id="ex-6-4-orth-basis-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-6-4-orth-basis-2-1">
+<div class="para">First, note that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-orth-expansion.html" id="ex-6-4-orth-basis-2-1-1">
+\begin{align*}
+\vec v_1 \amp = \vec x_1 = \begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix},
+\end{align*}
+</div>
+<div class="para">Then, we have that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-orth-expansion.html" id="ex-6-4-orth-basis-2-1-2">
+\begin{align*}
+\vec v_2 \amp = \vec x_2 - \proj_{\vec v_1}\vec x_2\\
+\amp = \begin{bmatrix} 0 \\ 1 \\ 1 \\ 1 \end{bmatrix} - \dfrac{0(1) + 1(1) + 1(1) + 1(1)}{1^2 + 1^2 + 1^2 + 1^2}\begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix}\\
+\amp = \begin{bmatrix} \frac{-3}{4} \\ \frac{1}{4} \\ \frac{1}{4} \\ \frac{1}{4} \end{bmatrix}\\
+\amp = \dfrac{1}{4}\begin{bmatrix}-3 \\ 1 \\ 1 \\ 1 \end{bmatrix}.
+\end{align*}
+</div>
+<div class="para">Note that scaling <span class="process-math">\(\vec v_2\)</span> will not change its orthogonality with <span class="process-math">\(\vec v_1\text{.}\)</span> So, in order to make future projections easier, let’s scale the current <span class="process-math">\(\vec v_2\)</span> by 4 to obtain</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-orth-expansion.html" id="ex-6-4-orth-basis-2-1-6">
+\begin{equation*}
+\vec v_2' = 4\vec v_2 = \begin{bmatrix} -3 \\ 1 \\ 1 \\ 1 \end{bmatrix}\text{,}
+\end{equation*}
+</div>
+<div class="para">which is still orthogonal to <span class="process-math">\(\vec v_1\text{.}\)</span> Next, we have that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-orth-expansion.html" id="ex-6-4-orth-basis-2-1-8">
+\begin{align*}
+\vec v_3 \amp = \vec x_3 - \proj_{\vec v_1}\vec x_3 - \proj_{\vec v_2'}\vec x_3\\
+\amp = \begin{bmatrix} 0 \\ 0 \\ 1 \\ 1 \end{bmatrix} - \dfrac{2}{4}\begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix} - \dfrac{0(-3) + 0(1) + 1(1) + 1(1)}{(-3)^2 + 1^2 + 1^2 + 1^2}\begin{bmatrix}-3 \\ 1 \\ 1 \\ 1 \end{bmatrix} \\
+\amp = \begin{bmatrix} 0 \\ -\frac{2}{3} \\ \frac{1}{3} \\ \frac{1}{3} \end{bmatrix}\\
+\amp = \dfrac{1}{3}\begin{bmatrix} 0 \\ -2 \\ 1 \\ 1 \end{bmatrix}
+\end{align*}
+</div>
+<div class="para">Again, we can scale <span class="process-math">\(\vec v_3\)</span> to obtain the a nicer vector <span class="process-math">\(\vec v_3'\)</span> which is still orthogonal to <span class="process-math">\(\vec v_1\)</span> and <span class="process-math">\(\vec v_2\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-orth-expansion.html" id="ex-6-4-orth-basis-2-1-13">
+\begin{equation*}
+\vec v_3' = 3\vec v_3 = \begin{bmatrix} 0 \\ -2 \\ 1 \\ 1 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-orth-expansion.html" id="ex-6-4-orth-basis-2-1-14">
+\begin{equation*}
+\mathcal{B} = \left\{\vec v_1, \vec v_2', \vec v_3'\right\} = \left\{\begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix}, \begin{bmatrix} -3 \\ 1 \\ 1\\ 1 \end{bmatrix}, \begin{bmatrix} 0 \\ -2 \\ 1\\ 1 \end{bmatrix}\right\}
+\end{equation*}
+</div>
+<div class="para">is an orthogonal basis for <span class="process-math">\(W\text{.}\)</span> Note that there was nothing forcing us to start the process with <span class="process-math">\(\vec v_1 = \vec x_1\text{.}\)</span> If instead we started with <span class="process-math">\(\vec v_1 = \vec x_3\)</span> and then used <span class="process-math">\(\vec x_2\)</span> followed by <span class="process-math">\(\vec x_1\text{,}\)</span> we would have obtained the following orthogonal basis for <span class="process-math">\(W\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-orth-expansion.html" id="ex-6-4-orth-basis-2-1-21">
+\begin{equation*}
+\mathcal{C} = \left\{\begin{bmatrix} 0 \\ 0 \\ 1 \\ 1 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}\right\}\text{,}
+\end{equation*}
+</div>
+<div class="para">which is a "nicer" orthogonal basis for <span class="process-math">\(W\text{,}\)</span> especially if planning to use <a href="Section-6-2.html#thm-orth-expansion" class="xref" data-knowl="./knowl/xref/thm-orth-expansion.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.23: Expansion in an Orthogonal Basis">Theorem 6.23</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-6-4-orth-basis-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.46.1"><a href="#ex-6-4-orth-basis-2" title="Copy heading and permalink for Solution 6.46.1" aria-label="Copy heading and permalink for Solution 6.46.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Example 6.46"><a href="#ex-6-4-orth-basis" title="Copy heading and permalink for Example 6.46" aria-label="Copy heading and permalink for Example 6.46">🔗</a></div></article><div class="para" id="p-6-4-gram-schmidt-2"> <div class="autopermalink" data-description="Paragraph"><a href="#p-6-4-gram-schmidt-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><section class="onepage" id="p-6-4-qr-factorization"><article class="theorem theorem-like" id="thm-qr"><h4 class="heading">
@@ -458,6 +541,36 @@ A=\begin{bmatrix}
 \end{bmatrix}.
 \end{equation*}
 </div>
+<div class="solutions"><details id="ex-6-4-qr-example-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-6-4-qr-example-2-1">
+<div class="para">Note from <a href="Section-6-4.html#ex-6-4-2vec" class="xref" data-knowl="./knowl/xref/ex-6-4-2vec.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 6.45">Example 6.45</a> that <span class="process-math">\(\left\{\begin{bmatrix} 3 \\ 0 \\ -1 \end{bmatrix}, \begin{bmatrix} -1 \\ 5 \\ -3 \end{bmatrix}\right\}\)</span> is an orthogonal basis for <span class="process-math">\(\Col(A)\text{.}\)</span> Normalizing the vectors results in the following orthonormal basis for <span class="process-math">\(\Col(A)\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-6-4-2vec.html" id="ex-6-4-qr-example-2-1-5">
+\begin{equation*}
+\left\{\dfrac{1}{\sqrt{13}}\begin{bmatrix} 3 \\ 2 \\ 0 \end{bmatrix}, \dfrac{1}{\sqrt{14}}\begin{bmatrix}-2 \\ 3 \\ 1 \end{bmatrix}\right\}
+\end{equation*}
+</div>
+<div class="para">We let these be the columns of <span class="process-math">\(Q\text{,}\)</span> so</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-6-4-2vec.html" id="ex-6-4-qr-example-2-1-7">
+\begin{equation*}
+Q = \begin{bmatrix} \frac{3}{\sqrt{13}} \amp \frac{-2}{\sqrt{14}} \\ \frac{2}{\sqrt{13}} \amp \frac{3}{\sqrt{14}} \\ 0 \amp \frac{1}{\sqrt{14}} \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">To find <span class="process-math">\(R\text{,}\)</span> we calculate <span class="process-math">\(R = Q^TA\text{.}\)</span> Note that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-6-4-2vec.html" id="ex-6-4-qr-example-2-1-10">
+\begin{align*}
+R \amp = Q^TA\\
+\amp = \begin{bmatrix} \frac{3}{\sqrt{13}} \amp \frac{2}{\sqrt{13}} \amp 0 \\ \frac{-2}{\sqrt{14}} \amp \frac{3}{\sqrt{14}} \amp \frac{1}{\sqrt{14}} \end{bmatrix} \begin{bmatrix} 3 \amp -2 \\ 2 \amp 3 \\ 0 \amp 1 \end{bmatrix}\\
+\amp = \begin{bmatrix} \frac{9 + 4 + 0}{\sqrt{13}} \amp \frac{-6 + 6 + 0}{\sqrt{13}} \\ \frac{-6 + 6 + 0}{\sqrt{14}} \amp \frac{4 + 9 + 1}{\sqrt{14}} \end{bmatrix}\\
+\amp = \begin{bmatrix} \frac{13}{\sqrt{13}} \amp 0 \\ 0 \amp \frac{14}{\sqrt{14}} \end{bmatrix}\\
+\amp = \begin{bmatrix} \sqrt{13} \amp 0 \\ 0 \amp \sqrt{14} \end{bmatrix}.
+\end{align*}
+</div>
+<div class="para">Note that <span class="process-math">\(R\)</span> has all the desired properties: it is <span class="process-math">\(2 \times 2\text{,}\)</span> upper triangular, has positive entries on the diagonal, and <span class="process-math">\(\|\vec a_1\| = \|\vec r_1\|\)</span> and <span class="process-math">\(\|\vec a_2\| = \|\vec r_2\|\)</span> where <span class="process-math">\(\vec a_i\)</span> and <span class="process-math">\(\vec r_i\)</span> are the columns of <span class="process-math">\(A\)</span> and <span class="process-math">\(R\text{,}\)</span> respectively.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-6-4-qr-example-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.48.1"><a href="#ex-6-4-qr-example-2" title="Copy heading and permalink for Solution 6.48.1" aria-label="Copy heading and permalink for Solution 6.48.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Example 6.48"><a href="#ex-6-4-qr-example" title="Copy heading and permalink for Example 6.48" aria-label="Copy heading and permalink for Example 6.48">🔗</a></div></article></section><section class="onepage" id="handout-section-6-4-gram-schmidt-6"><article class="example example-like" id="handout-section-6-4-gram-schmidt-6-1"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.49</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -474,6 +587,28 @@ A=\begin{bmatrix}
 \end{bmatrix}.
 \end{equation*}
 </div>
+<div class="solutions"><details id="handout-section-6-4-gram-schmidt-6-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="handout-section-6-4-gram-schmidt-6-1-2-1">
+<div class="para">Using <span class="process-math">\(\mathcal{B}\)</span> from <a href="Section-6-4.html#ex-6-4-orth-basis" class="xref" data-knowl="./knowl/xref/ex-6-4-orth-basis.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 6.46">Example 6.46</a> and normalizing the vectors, we set</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-6-4-orth-basis.html" id="handout-section-6-4-gram-schmidt-6-1-2-1-3">
+\begin{equation*}
+Q = \begin{bmatrix} \frac{1}{2} \amp \frac{-3}{\sqrt{12}} \amp 0 \\ \frac{1}{2} \amp \frac{1}{\sqrt{12}} \amp \frac{-2}{\sqrt{6}} \\ \frac{1}{2} \amp \frac{1}{\sqrt{12}} \amp \frac{1}{\sqrt{6}} \\ \frac{1}{2} \amp \frac{1}{\sqrt{12}} \amp \frac{1}{\sqrt{6}} \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">It follows that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-6-4-orth-basis.html" id="handout-section-6-4-gram-schmidt-6-1-2-1-4">
+\begin{align*}
+R \amp = Q^TA \\
+\amp = \begin{bmatrix} \frac{1}{2} \amp \frac{1}{2} \amp \frac{1}{2} \amp \frac{1}{2} \\ \frac{-3}{\sqrt{12}} \amp \frac{1}{\sqrt{12}} \amp \frac{1}{\sqrt{12}} \amp \frac{1}{\sqrt{12}} \\ 0 \amp \frac{-2}{\sqrt{6}} \amp \frac{1}{\sqrt{6}} \amp \frac{1}{\sqrt{6}} \end{bmatrix} \begin{bmatrix} 1 \amp 0 \amp 0 \\ 1 \amp 1 \amp 0 \\ 1 \amp 1 \amp 1 \\ 1 \amp 1 \amp 1 \end{bmatrix}\\
+\amp = \begin{bmatrix} 2 \amp \frac{3}{2} \amp 1 \\ 0 \amp \frac{3}{\sqrt{12}} \amp \frac{2}{\sqrt{12}} \\ 0 \amp 0 \amp \frac{2}{\sqrt{6}} \end{bmatrix}.
+\end{align*}
+</div>
+<div class="para">Again, we can check that <span class="process-math">\(R\)</span> has all the expected properties: it is <span class="process-math">\(3 \times 3\text{,}\)</span> upper triangular, positive entries on the diagonal, and <span class="process-math">\(\|\vec a_1\| = \|\vec r_1\|, \|\vec a_2\| = \|\vec r_2\|,\)</span> and <span class="process-math">\(\|\vec a_3 \| = \|\vec r_3 \|\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-6-4-gram-schmidt-6-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.49.1"><a href="#handout-section-6-4-gram-schmidt-6-1-2" title="Copy heading and permalink for Solution 6.49.1" aria-label="Copy heading and permalink for Solution 6.49.1">🔗</a></div>
+</div></details></div>
 <div class="autopermalink" data-description="Example 6.49"><a href="#handout-section-6-4-gram-schmidt-6-1" title="Copy heading and permalink for Example 6.49" aria-label="Copy heading and permalink for Example 6.49">🔗</a></div></article></section><div class="autopermalink" data-description="Handout: 6.4 Gram–Schmidt and QR Decomposition"><a href="#handout-section-6-4-gram-schmidt" title="Copy heading and permalink for Handout: 6.4 Gram–Schmidt and QR Decomposition" aria-label="Copy heading and permalink for Handout: 6.4 Gram–Schmidt and QR Decomposition">🔗</a></div></section><div class="autopermalink" data-description="Section: 6.4 Gram–Schmidt and QR Decomposition"><a href="#Section-6-4" title="Copy heading and permalink for Section: 6.4 Gram–Schmidt and QR Decomposition" aria-label="Copy heading and permalink for Section: 6.4 Gram–Schmidt and QR Decomposition">🔗</a></div></section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">

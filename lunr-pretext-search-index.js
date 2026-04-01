@@ -3094,7 +3094,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "6.4 Gram–Schmidt and QR Decomposition",
-  "body": " 6.4 Gram–Schmidt and QR Decomposition   6.4 Gram–Schmidt and QR Decomposition   Overview   Topics   The Gram–Schmidt Process  The QR decomposition     Goals   Apply Gram–Schmidt and QR decomposition to construct orthogonal or orthonormal bases.  Compute the QR factorization of a matrix.    Motivating Question  Identify an orthogonal basis for the subspace spanned by:     The Gram–Schmidt Process   Given a basis for a subspace , define:   Then is an orthogonal basis for . Additionally, . Thus, we see that each vector is formed by starting with and then removing the orthogonal projection of onto ; that is, .      Geometric Interpretation    Geometric view of Gram–Schmidt orthogonalization.  Vectors are used to produce orthogonal vectors via subtraction of projections.   Gram–Schmidt successively removes the components of each vector in the span of earlier ones.    Let . Find an orthogonal basis for .        The vectors below span a subspace . Construct an orthogonal basis for .        The QR Factorization   QR Factorization   If is an matrix with linearly independent columns, then has a QR factorization:   where:   is whose columns are an orthonormal basis for ,  is , upper triangular, with positive entries on its diagonal, and the length of the column of is equal to the length of the column of .       Compute the QR decomposition of:         Compute the QR decomposition of:       "
+  "body": " 6.4 Gram–Schmidt and QR Decomposition   6.4 Gram–Schmidt and QR Decomposition   Overview   Topics   The Gram–Schmidt Process  The QR decomposition     Goals   Apply Gram–Schmidt and QR decomposition to construct orthogonal or orthonormal bases.  Compute the QR factorization of a matrix.    Motivating Question  Identify an orthogonal basis for the subspace spanned by:     The Gram–Schmidt Process   Given a basis for a subspace , define:   Then is an orthogonal basis for . Additionally, . Thus, we see that each vector is formed by starting with and then removing the orthogonal projection of onto ; that is, .      Geometric Interpretation    Geometric view of Gram–Schmidt orthogonalization.  Vectors are used to produce orthogonal vectors via subtraction of projections.   Gram–Schmidt successively removes the components of each vector in the span of earlier ones.    Let . Find an orthogonal basis for .    Let and . Using , we have that and Note that and , so is an orthogonal basis for .        The vectors below span a subspace . Construct an orthogonal basis for .     First, note that Then, we have that Note that scaling will not change its orthogonality with . So, in order to make future projections easier, let's scale the current by 4 to obtain , which is still orthogonal to . Next, we have that Again, we can scale to obtain the a nicer vector which is still orthogonal to and : . Thus, is an orthogonal basis for . Note that there was nothing forcing us to start the process with . If instead we started with and then used followed by , we would have obtained the following orthogonal basis for  , which is a \"nicer\" orthogonal basis for , especially if planning to use .       The QR Factorization   QR Factorization   If is an matrix with linearly independent columns, then has a QR factorization:   where:   is whose columns are an orthonormal basis for ,  is , upper triangular, with positive entries on its diagonal, and the length of the column of is equal to the length of the column of .       Compute the QR decomposition of:     Note from that is an orthogonal basis for . Normalizing the vectors results in the following orthonormal basis for : We let these be the columns of , so . To find , we calculate . Note that Note that has all the desired properties: it is , upper triangular, has positive entries on the diagonal, and and where and are the columns of and , respectively.        Compute the QR decomposition of:     Using from and normalizing the vectors, we set . It follows that Again, we can check that has all the expected properties: it is , upper triangular, positive entries on the diagonal, and and .      "
 },
 {
   "id": "obj-6-4-topics-goals",
@@ -3124,13 +3124,13 @@ var ptx_lunr_docs = [
   "body": " The Gram–Schmidt Process   Given a basis for a subspace , define:   Then is an orthogonal basis for . Additionally, . Thus, we see that each vector is formed by starting with and then removing the orthogonal projection of onto ; that is, .   "
 },
 {
-  "id": "p-6-4-gs-geometry-4",
+  "id": "ex-6-4-2vec",
   "level": "2",
-  "url": "Section-6-4.html#p-6-4-gs-geometry-4",
+  "url": "Section-6-4.html#ex-6-4-2vec",
   "type": "Example",
   "number": "6.45",
   "title": "",
-  "body": "  Let . Find an orthogonal basis for .   "
+  "body": "  Let . Find an orthogonal basis for .    Let and . Using , we have that and Note that and , so is an orthogonal basis for .   "
 },
 {
   "id": "ex-6-4-orth-basis",
@@ -3139,7 +3139,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "6.46",
   "title": "",
-  "body": "  The vectors below span a subspace . Construct an orthogonal basis for .    "
+  "body": "  The vectors below span a subspace . Construct an orthogonal basis for .     First, note that Then, we have that Note that scaling will not change its orthogonality with . So, in order to make future projections easier, let's scale the current by 4 to obtain , which is still orthogonal to . Next, we have that Again, we can scale to obtain the a nicer vector which is still orthogonal to and : . Thus, is an orthogonal basis for . Note that there was nothing forcing us to start the process with . If instead we started with and then used followed by , we would have obtained the following orthogonal basis for  , which is a \"nicer\" orthogonal basis for , especially if planning to use .   "
 },
 {
   "id": "thm-qr",
@@ -3157,7 +3157,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "6.48",
   "title": "",
-  "body": "  Compute the QR decomposition of:    "
+  "body": "  Compute the QR decomposition of:     Note from that is an orthogonal basis for . Normalizing the vectors results in the following orthonormal basis for : We let these be the columns of , so . To find , we calculate . Note that Note that has all the desired properties: it is , upper triangular, has positive entries on the diagonal, and and where and are the columns of and , respectively.   "
 },
 {
   "id": "handout-section-6-4-gram-schmidt-6-1",
@@ -3166,7 +3166,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "6.49",
   "title": "",
-  "body": "  Compute the QR decomposition of:    "
+  "body": "  Compute the QR decomposition of:     Using from and normalizing the vectors, we set . It follows that Again, we can check that has all the expected properties: it is , upper triangular, positive entries on the diagonal, and and .   "
 },
 {
   "id": "Section-6-5",
