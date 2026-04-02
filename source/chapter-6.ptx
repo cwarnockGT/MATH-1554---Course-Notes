@@ -26,6 +26,11 @@
     <title>6.5 Least-Squares Problems</title>
       <xi:include href="./chapter-6-notes/section-6-5.ptx" />
   </section>
+
+  <section xml:id="Section-6-6">
+    <title>6.6 Applications to Linear Models</title>
+      <xi:include href="./chapter-6-notes/section-6-6.ptx" />
+  </section>
   
 
 </chapter>

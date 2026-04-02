@@ -1,0 +1,420 @@
+<handout xml:id="handout-section-6-5-least-squares">
+  <title>6.5 Least-Squares Problems</title>
+
+  <page xml:id="p-6-5-overview">
+    <title>Overview</title>
+
+    <objectives xml:id="obj-6-5-topics-goals">
+      <title>Topics</title>
+      <ul>
+        <li>Least squares problems</li>
+        <li>Methods for solving least squares problems</li>
+      </ul>
+      </objectives>
+
+      <objectives workspace="0.2in">
+      <title>Goals</title>
+      <ul>
+        <li>
+          <p>Compute general solutions and least squares errors using both:
+          <ul>
+            <li>the normal equations</li>
+            <li>the QR decomposition</li>
+          </ul>
+        </p>
+        </li>
+      </ul>
+      </objectives>
+
+      <p><nbsp/></p>
+
+      <definition xml:id="def-least-squares" workspace="0.2in">
+      <title>Least Squares Solution</title>
+      <statement>
+        <p>
+          Let <m>A</m> be an <m>m\times n</m> matrix. A vector <m>\widehat x</m> is a
+          <em>least squares solution</em> to <m>A\vec x=\vec b</m> if
+        </p>
+        <me>
+          \lVert\vec b - A\widehat x\rVert
+          \le
+          \lVert\vec b - A\vec x\rVert
+          \quad \text{for all } \vec x\in\mathbb{R}^n.
+        </me>
+      </statement>
+    </definition>
+
+
+    <note>
+        <statement>
+            <p>
+                Suppose <m>A \vec x = \vec b</m> is a <em>consistent</em> system.
+                <ul>
+                  <li>
+                    <p>
+                      Then there exists at least one vector <m>\vec v</m> so that <m>\underline{\hspace{1.5in}}</m>.
+                    </p>
+                    <answer>
+                        <p>
+                            <m>A\vec v = \vec b</m>
+                        </p>
+                    </answer>
+                  </li>
+                  
+                  <li>
+                    <p>
+                      This vector <m>\widehat x =  \vec v</m> is a <em>least squares solution</em> to <m>A\vec x = \vec b</m> and we have that <me>\underline{\hspace{0.5in}} = \|\vec b - A\widehat\| \leq \|\vec b - A\vec x\|</me> for all <m>\vec x \in \mathbb{R}^n</m>.
+                    </p>
+                    <answer>
+                        <p>
+                            <m>0</m>
+                        </p>
+                    </answer>
+                  </li>
+                </ul>  
+            </p>
+            <p>
+                Now, suppose  <m>A \vec x = \vec b</m> is an <em>inconsistent</em> system.
+                <ul>
+                  <li>
+                    <p>
+                      Then there is no vector <m>\vec v</m> so that <m>\underline{\hspace{1.5in}}</m>.
+                    </p>
+                    <answer>
+                        <p>
+                            <m>A\vec v = \vec b</m>
+                        </p>
+                    </answer>
+                  </li>
+                  <li>
+                    <p>
+                      So, a <em>least squares solution</em> <m>\widehat x</m> is a vector so that <m>A\widehat x</m> is <m>\underline{\hspace{3in}}</m> to <m>\vec b</m>.
+                    </p>
+                    <answer>
+                        <p>
+                            as close as possible
+                        </p>
+                    </answer>
+                  </li>
+                  <li>
+                    <p>
+                      Recall that <m>A\vec x</m> is always a vector in <m>\underline{\hspace{1in}}</m>.
+                    </p>
+                    <answer>
+                        <p>
+                            <m>\Col(A)</m>
+                        </p>
+                    </answer>
+                  </li>
+                  <li>
+                    <p>
+                      By <xref ref="thm-best-approx"/>, we have that <m>\widehat b = \underline{\hspace{2in}}</m> is the vector in <m>\Col(A)</m> that is as close as possible to <m>\vec b</m>.
+                    </p>
+                    <answer>
+                        <p>
+                            <m>\proj_{\Col(A)}\vec b</m>
+                        </p>
+                    </answer>
+                  </li>
+                  <li>
+                    <p>
+                      Thus, the <em>least squares solutions</em> to <m>A\vec x = \vec b</m> are the vectors <m>\widehat x</m> which are solutions to the equation <m>\underline{\hspace{1.5in}}</m>.
+                    </p>
+                    <answer>
+                        <p>
+                            <m>A\vec x = \widehat b = \proj_{\Col(A)}\vec b</m>
+                        </p>
+                    </answer>
+                  </li>
+                </ul>     
+            </p>
+        </statement>
+    </note>
+
+    <p><nbsp/></p>
+
+  </page>
+
+
+  <page xml:id="p-6-5-def-ls">
+    <title>Least Squares Solution</title>
+
+    <example xml:id="ex-6-5-inconsistent" >
+      <introduction>
+        <p>
+            Consider the system <m>A\vec x = \vec b</m> for <me>A = \begin{bmatrix} 4 \amp 0 \\ 0 \amp 2 \\ 1 \amp 1 \end{bmatrix} \quad \text{and} \quad \vec b = \begin{bmatrix} 2 \\ 0 \\ 11 \end{bmatrix}</me>.
+        </p>
+    </introduction>
+    <task workspace="2in">
+        <statement>
+            <p>
+                Is the system consistent?
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Note that <me>\begin{bmatrix} 4 \amp 0 \amp \rvert \amp 2 \\ 0 \amp 2 \amp \rvert \amp 0 \\ 1 \amp 1 \amp \rvert \amp 11 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp \rvert \amp \frac{1}{2} \\ 0 \amp 1 \amp \rvert \amp 0 \\ 1 \amp 1 \amp \rvert \amp 11 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp \rvert \amp \frac{1}{2} \\ 0 \amp 1 \amp \rvert \amp 0 \\ 0 \amp 0 \amp \rvert \amp \frac{21}{2}\end{bmatrix}</me>. Therefore, there is no solution and the system is inconsistent.
+            </p>
+        </solution>
+    </task>
+    <task workspace="6in">
+        <statement>
+            <p>
+                Find the vector <m>\widehat b = \proj_{\Col(A)}\vec b</m>. 
+            </p>
+        </statement>
+        <solution>
+            <p>
+                In order to project onto <m>\Col(A)</m>, we need an orthogonal basis of <m>\Col(A)</m>. Since the columns of <m>A</m> are <em>not</em> orthogonal, we start by using the Gram-Schmidt Process. If we assign the columns of <m>A</m> as <m>\vec x_1</m> and <m>\vec x_2</m>, respectively, then we have that<md>
+                    <mrow>\vec v_1 \amp = \vec x_1 = \begin{bmatrix} 4 \\ 0 \\ 1 \end{bmatrix}</mrow> 
+                    <mrow>\vec v_2 \amp = \vec x_2 - \proj_{\vec v_1}\vec x_2 = \begin{bmatrix} 0 \\2 \\ 1 \end{bmatrix} - \dfrac{1}{17}\begin{bmatrix} 4 \\ 0 \\ 1 \end{bmatrix} = \dfrac{1}{17}\begin{bmatrix}-4 \\ 34 \\ 16\end{bmatrix}</mrow>
+                </md>
+                We will use <m>\vec v_2' = 17\vec v_2 = \begin{bmatrix} -4 \\ 34 \\ 16 \end{bmatrix}</m> in place of <m>\vec v_2</m>. So, <m>\left\{\vec v_1, \vec v_2'\right\}</m> is an orthogonal basis for <m>\Col(A).</m>. Therefore, we have that
+                <md>
+                    <mrow>\widehat b \amp = \proj_{\Col(A)}\vec b</mrow>
+                    <mrow> \amp = \proj_{\vec v_1}\vec b + \proj_{\vec v_2'}\vec b</mrow> 
+                    <mrow> \amp = \dfrac{19}{17}\begin{bmatrix} 4 \\ 0 \\ 1 \end{bmatrix} + \dfrac{2}{17}\begin{bmatrix} -4 \\ 34 \\ 16 \end{bmatrix}</mrow>
+                    <mrow> \amp = \dfrac{1}{17}\begin{bmatrix} 76 - 8 \\ 0 + 68 \\ 19 + 32 \end{bmatrix}</mrow>
+                    <mrow> \amp = \begin{bmatrix} 4 \\ 4 \\ 3 \end{bmatrix}</mrow>
+                </md>
+                So, <m>\widehat b = \begin{bmatrix} 4 \\ 4 \\ 3 \end{bmatrix}</m> is the vector in <m>\Col(A)</m> which is as close as possible to <m>\vec b</m>.
+            </p>
+        </solution>
+    </task>
+    <task workspace="2in">
+        <statement>
+            <p>
+                Find the <em>least squares solution</em> to <m>A\vec x = \vec b</m>.
+            </p>
+        </statement>
+        <solution>
+            <p>
+                We will solve the equation <m>A\vec x = \widehat b</m>. Note that <me>\begin{bmatrix} 4 \amp 0 \rvert \amp 4 \\ 0 \amp 2 \amp \rvert \amp 4 \\ 1 \amp 1 \amp \rvert \amp 3 \end{bmatrix}
+            </p>
+        </solution>
+    </task>
+    </example>
+
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-6-5-geometry">
+    <note workspace="1in">
+    <image xml:id="img-6-5-geometry" width = "60%">
+      <latex-image>
+        <latex>
+\tdplotsetmaincoords{74}{20}
+\begin{tikzpicture}[scale=2.4,
+  axis/.style={->,black,-stealth}, 
+  vectorY/.style={-stealth,DarkBlue,very thick},
+  vectorH/.style={-stealth,black,very thick},
+  vectorV/.style={-stealth,DarkRed,very thick},
+  dsline/.style={black,dashed},
+  perpline/.style={black, thin},
+  tdplot_main_coords
+  ]
+
+  \coordinate (O) at (0,0,0);
+  \coordinate (Y) at (1,0,1);
+  \coordinate (H) at (1,0,0);
+  \coordinate (V) at (1.2,1.3,0);
+  \coordinate (C) at (-.3,-1,0);
+
+  \filldraw[draw=DarkBlue!40,fill=DarkBlue!08]
+    (-1,-1,0)--(2,-1,0)--(2,1.5,0)--(-1,1.5,0)--cycle;
+
+  \draw[vectorY] (O)--(Y) node[above]{$\vec b$};
+  \draw[vectorH] (O)--(H) node[below]{$A\widehat x$};
+  \draw[vectorV] (O)--(V) node[below]{$A\vec x$};
+
+  \draw[dsline] (Y)--(H);
+  \draw[dsline,DarkRed] (Y)--(V);
+
+  \draw[perpline] (0.85,0.0,0.15)--(1.00,0.0,0.15);
+  \draw[perpline] (0.85,0.0,0.15)--(0.85,0.0,0.00);
+
+  \draw (C) node[above]{Col$(A)$};
+\end{tikzpicture}
+        </latex>
+      </latex-image>
+      <shortdescription>Geometric interpretation of least squares projection.</shortdescription>
+      <description>
+        The projection <m>A\widehat x</m> is the closest point in <m>\operatorname{Col}(A)</m>
+        to the vector <m>\vec b</m>.
+      </description>
+    </image>
+
+    <p>
+      <ul>
+        <li>
+          Note that if <m>\widehat x</m> is a least squares solution to <m>A\vec x = \vec b</m>, then <m>\vec b - A\widehat x</m> is orthogonal to every vector in <m>\underline{\hspace{2in}}</m>.
+        </li>
+        <li>
+          Then, we have that <m>\vec b - A\widehat x</m> lives in <m>\underline{\hspace{2in}}</m>.
+        </li>
+        <li>
+          <p>
+            By the <xref ref="thm-four-subspaces" text="custom">Four Subspace Theorem</xref>, we have that <m>\vec b - A\widehat x</m> lives in <m>\underline{\hspace{2in}}</m>.
+          </p>
+        </li>
+        <li>
+          Therefore, we have that <m>\underline{\hspace{1in}}\left(\vec b - A\widehat x\right) = \underline{\hspace{1in}}</m>.
+        </li>
+        <li>
+          <p>
+            It follows that <m>\underline{\hspace{2in}}</m>.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </note>
+
+    <theorem xml:id="thm-normal-equations" workspace="1in">
+      <title>Normal Equations for Least Squares</title>
+      <statement>
+        <p>
+          Least squares solutions of <m>A\vec x=\vec b</m> are precisely the solutions of
+        </p>
+        <me>
+          A^T A\vec x = A^T\vec b,
+        </me>
+        <p>
+          refered to as the <em>normal equations</em>.
+        </p>
+      </statement>
+    </theorem>
+
+  </page>
+
+
+  <page xml:id="p-6-5-example-normal">
+    <title>Example: Solving via Normal Equations</title>
+
+    <example xml:id="ex-6-5-normal" workspace="true">
+      <statement>
+        <p>Use the normal equations to find the least squares solution of <m>A\vec x=\vec b</m>, where</p>
+        <me>
+          A=\begin{bmatrix}
+            4 \amp 0\\
+            0 \amp 2\\
+            1 \amp 1
+          \end{bmatrix},
+          \qquad
+          \vec b=\begin{bmatrix}
+            2\\0\\11
+          \end{bmatrix}.
+        </me>
+      </statement>
+    </example>
+
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-6-5-unique-ls">
+    <title>Conditions for Unique Least Squares Solutions</title>
+
+    <theorem xml:id="thm-ls-unique" workspace="0.5in">
+      <title>Unique Least Squares Solutions</title>
+      <statement>
+        <p>
+          For an <m>m\times n</m> matrix <m>A</m>, the following are equivalent:
+        </p>
+
+        <ol>
+          <li>For every <m>\vec b</m>, the equation <m>A\vec x=\vec b</m> has a unique least squares solution.</li>
+          <li>The columns of <m>A</m> are linearly independent.</li>
+          <li><m>A^TA</m> is invertible.</li>
+        </ol>
+
+        <p>
+          When these hold,
+        </p>
+
+        <me>
+          \widehat x = (A^TA)^{-1}A^T\vec b.
+        </me>
+      </statement>
+    </theorem>
+
+    <example xml:id="ex-6-5-orth-cols" workspace="true">
+      <statement>
+        <p>Compute the least squares solution to <m>A\vec x = \vec b</m>, where</p>
+        <me>
+          A=\begin{bmatrix}
+            1 \amp -6\\
+            1 \amp -2\\
+            1 \amp 1\\
+            1 \amp 7
+          \end{bmatrix},
+          \qquad
+          \vec b=\begin{bmatrix}
+            -1\\2\\1\\6
+          \end{bmatrix}.
+        </me>
+      </statement>
+    </example>
+
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-6-5-ls-qr" >
+    <title>Least Squares Using QR</title>
+
+    <theorem xml:id="thm-ls-using-qr" workspace="0.5in">
+      <title>Least Squares via QR Factorization</title>
+      <statement>
+        <p>
+          If <m>A=QR</m> is a QR decomposition of an <m>m\times n</m> matrix <m>A</m>, then for
+          any <m>\vec b</m> the least squares solution of <m>A\vec x=\vec b</m> satisfies:
+        </p>
+
+        <me>
+          R\widehat x = Q^T\vec b.
+        </me>
+      </statement>
+    </theorem>
+
+    <example xml:id="ex-6-5-qr-ls" workspace="true">
+      <statement>
+        <p>Compute the least squares tolustio to  <m>A\vec x=\vec b</m>, where</p>
+
+        <me>
+          A=
+          \begin{bmatrix}
+            1 \amp 3 \amp 5\\
+            1 \amp 1 \amp 0\\
+            1 \amp 1 \amp 2\\
+            1 \amp 3 \amp 3
+          \end{bmatrix},
+          \qquad
+          \vec b=\begin{bmatrix}
+            3\\5\\7\\-3
+          \end{bmatrix}
+        </me>
+
+        <p>given the QR factorization:</p>
+
+        <me>
+          A = \tfrac12
+          \begin{bmatrix}
+            1 \amp 1 \amp 1\\
+            1 \amp -1 \amp -1\\
+            1 \amp -1 \amp 1\\
+            1 \amp 1 \amp -1
+          \end{bmatrix}
+          \begin{bmatrix}
+            2 \amp 4 \amp 5\\
+            0 \amp 2 \amp 3\\
+            0 \amp 0 \amp 2
+          \end{bmatrix}.
+        </me>
+
+      </statement>
+    </example>
+  </page>
+
+
+</handout>
