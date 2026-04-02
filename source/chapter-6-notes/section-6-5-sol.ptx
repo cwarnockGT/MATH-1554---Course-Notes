@@ -189,7 +189,7 @@
         </statement>
         <solution>
             <p>
-                We will solve the equation <m>A\vec x = \widehat b</m>. Note that <me>\begin{bmatrix} 4 \amp 0 \rvert \amp 4 \\ 0 \amp 2 \amp \rvert \amp 4 \\ 1 \amp 1 \amp \rvert \amp 3 \end{bmatrix}
+                We will solve the equation <m>A\vec x = \widehat b</m>. Note that <me>\begin{bmatrix} 4 \amp 0 \amp \rvert \amp 4 \\ 0 \amp 2 \amp \rvert \amp 4 \\ 1 \amp 1 \amp \rvert \amp 3 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp \rvert \amp 1 \\ 0 \amp 1 \amp \rvert \amp 2 \\ 1 \amp 1 \amp \rvert \amp 3 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp \rvert \amp 1 \\ 0 \amp 1 \amp \rvert \amp 2 \\ 0 \amp 0 \amp \rvert \amp 0 \end{bmatrix}</me>. Thus, the least-squares solution is <m>\widehat x = \begin{bmatrix} 1 \\ 2 \end{bmatrix}</m>. Notice the error from our least-squares solution is <me>\|\vec b - A\widehat x\| = \|\vec b - \widehat b\| = \left\|\begin{bmatrix} 2 \\ 0 \\ 11 \end{bmatrix} - \begin{bmatrix} 4 \\ 4 \\ 3 \end{bmatrix}\right\| = \sqrt{4 + 16 + 64} = \sqrt{84}.</me>
             </p>
         </solution>
     </task>
@@ -248,23 +248,54 @@
     <p>
       <ul>
         <li>
-          Note that if <m>\widehat x</m> is a least squares solution to <m>A\vec x = \vec b</m>, then <m>\vec b - A\widehat x</m> is orthogonal to every vector in <m>\underline{\hspace{2in}}</m>.
+          <p> 
+            Note that if <m>\widehat x</m> is a least squares solution to <m>A\vec x = \vec b</m>, then <m>\vec b - A\widehat x</m> is orthogonal to every vector in <m>\underline{\hspace{2in}}</m>.
+          </p>
+          <answer>
+            <p>
+              <m>\Col(A)</m>
+            </p>
+          </answer>
         </li>
         <li>
-          Then, we have that <m>\vec b - A\widehat x</m> lives in <m>\underline{\hspace{2in}}</m>.
+          <p> 
+            Then, we have that <m>\vec b - A\widehat x</m> lives in <m>\underline{\hspace{2in}}</m>.
+          </p>
+          <answer>
+            <p>
+              <m>\Col(A)^\perp</m>
+            </p>
+          </answer>
         </li>
         <li>
           <p>
             By the <xref ref="thm-four-subspaces" text="custom">Four Subspace Theorem</xref>, we have that <m>\vec b - A\widehat x</m> lives in <m>\underline{\hspace{2in}}</m>.
           </p>
+          <answer>
+            <p>
+              <m>\Nul(A^T)</m>
+            </p>
+          </answer>
         </li>
         <li>
-          Therefore, we have that <m>\underline{\hspace{1in}}\left(\vec b - A\widehat x\right) = \underline{\hspace{1in}}</m>.
+          <p> 
+            Therefore, we have that <m>\underline{\hspace{1in}}\left(\vec b - A\widehat x\right) = \underline{\hspace{1in}}</m>.
+          </p>
+          <answer>
+            <p>
+              <m>A^T\left(\vec b - A\widehat x\right) = \vec 0</m>
+            </p>
+          </answer>
         </li>
         <li>
           <p>
             It follows that <m>\underline{\hspace{2in}}</m>.
           </p>
+          <answer>
+            <p>
+              <m>A^TA\widehat x = A^T\vec b</m>
+            </p>
+          </answer>
         </li>
       </ul>
     </p>
@@ -293,7 +324,7 @@
 
     <example xml:id="ex-6-5-normal" workspace="true">
       <statement>
-        <p>Use the normal equations to find the least squares solution of <m>A\vec x=\vec b</m>, where</p>
+        <p>Use the normal equations to find the least-squares solution of <m>A\vec x=\vec b</m>, where</p>
         <me>
           A=\begin{bmatrix}
             4 \amp 0\\
@@ -306,6 +337,18 @@
           \end{bmatrix}.
         </me>
       </statement>
+      <solution>
+        <p>
+          Note that <me>A^TA = \begin{bmatrix} 4 \amp 0 \amp 1 \\ 0 \amp 2 \amp 1 \end{bmatrix}\begin{bmatrix} 4 \amp 0 \\ 0 \amp 2 \\ 1 \amp 1 \end{bmatrix} = \begin{bmatrix} 17 \amp 1 \\ 1 \amp 5 \end{bmatrix}</me> and <me>A^T\vec b = \begin{bmatrix} 4 \amp 0 \amp 1 \\ 0 \amp 2 \amp 1 \end{bmatrix}\begin{bmatrix} 2 \\ 0 \\ 11 \end{bmatrix} = \begin{bmatrix} 19 \\ 11 \end{bmatrix}</me>. Therefore, then normal equations are <me>A^TA\widehat x = A^T\vec b \quad \implies \quad \begin{bmatrix} 17 \amp 1 \\ 1 \amp 5 \end{bmatrix}\widehat x = \begin{bmatrix} 19 \\ 11 \end{bmatrix}</me>. Note that 
+          <md>
+            <mrow>\begin{bmatrix} 17 \amp 1 \amp \rvert \amp 19 \\ 1 \amp 5 \amp \rvert \amp 11 \end{bmatrix} \amp \sim \begin{bmatrix} 1 \amp 5 \amp \rvert \amp 11 \\ 17 \amp 1 \amp \rvert \amp 19 \end{bmatrix}</mrow> 
+            <mrow> \amp \sim \begin{bmatrix} 1 \amp 5 \amp \rvert \amp 11 \\ 0 \amp -84 \amp \rvert \amp -168 \end{bmatrix}</mrow>
+            <mrow> \amp \sim \begin{bmatrix} 1 \amp 5 \amp \rvert \amp 11 \\ 0 \amp 1 \amp \rvert \amp 2 \end{bmatrix}</mrow>
+            <mrow> \amp \sim \begin{bmatrix} 1 \amp 0 \amp \rvert \amp 1 \\ 0 \amp 1 \amp \rvert \amp 2 \end{bmatrix}</mrow>
+          </md>
+          It follows that the least-squares solution is <m>\widehat x = \begin{bmatrix} 1 \\ 2 \end{bmatrix}</m>, which agrees with our answer from <xref ref="ex-6-5-inconsistent"/>.
+          </p>
+      </solution>
     </example>
 
     <p><nbsp/></p>
@@ -354,6 +397,14 @@
           \end{bmatrix}.
         </me>
       </statement>
+      <solution>
+        <p>
+          Since the columns of <m>A</m> are linearly independent, we know by <xref ref="thm-ls-unique"/> there is a unique least-squares solution to <m>A\vec x = \vec b</m>. Note that the columns of <m>A</m> are already orthogonal. Therefore, this problem wouldn't be so bad to use our original method to finding a least-squares solution like in <xref ref="ex-6-5-inconsistent"/>. We will instead use the normal equations which is usually the fastest way, especially when the columns of <m>A</m> are <em>not</em> orthogonal.
+        </p>
+        <p>
+          Note that <me>A^TA = \begin{bmatrix} 1 \amp 1 \amp 1 \amp 1 \\ -6 \amp -2 \amp 1 \amp 7 \end{bmatrix}\begin{bmatrix} 1 \amp -6 \\ 1 \amp -2 \\ 1 \amp 1 \\ 1 \amp 7 \end{bmatrix} = \begin{bmatrix} 4 \amp 0 \\ 0 \amp 90 \end{bmatrix}</me> and <me>A^T\vec b = \begin{bmatrix} 1 \amp 1 \amp 1 \amp 1 \\ -6 \amp -2 \amp 1 \amp 7 \end{bmatrix}\begin{bmatrix}-1 \\ 2 \\ 1 \\ 6 \end{bmatrix} = \begin{bmatrix} 8 \\ 45 \end{bmatrix}</me>. (The reason <m>A^TA</m> is diagonal is because the columns of <m>A</m> are orthogonal.) It follows that <me>\begin{bmatrix} 4 \amp 0 \amp \rvert \amp 8 \\ 0 \amp 90 \amp \rvert \amp 45 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp \rvert \amp 2 \\ 0 \amp 1 \amp \rvert \amp \frac{1}{2}\end{bmatrix}</me>, so the least square solution is <me>\widehat x = \begin{bmatrix} 2 \\ \frac{1}{2}\end{bmatrix}</me>.
+        </p>
+      </solution>
     </example>
 
     <p><nbsp/></p>
@@ -379,7 +430,7 @@
 
     <example xml:id="ex-6-5-qr-ls" workspace="true">
       <statement>
-        <p>Compute the least squares tolustio to  <m>A\vec x=\vec b</m>, where</p>
+        <p>Compute the least squares solution to  <m>A\vec x=\vec b</m>, where</p>
 
         <me>
           A=
@@ -398,7 +449,7 @@
         <p>given the QR factorization:</p>
 
         <me>
-          A = \tfrac12
+          A = \dfrac{1}{2}
           \begin{bmatrix}
             1 \amp 1 \amp 1\\
             1 \amp -1 \amp -1\\
@@ -413,6 +464,32 @@
         </me>
 
       </statement>
+      <solution>
+        <p>
+          Note that we are given <me>Q = \tfrac12
+          \begin{bmatrix}
+            1 \amp 1 \amp 1\\
+            1 \amp -1 \amp -1\\
+            1 \amp -1 \amp 1\\
+            1 \amp 1 \amp -1
+          \end{bmatrix} \quad \text{and} \quad R = \begin{bmatrix}
+            2 \amp 4 \amp 5\\
+            0 \amp 2 \amp 3\\
+            0 \amp 0 \amp 2
+          \end{bmatrix}</me>. We have <me>Q^T\vec b = \dfrac{1}{2}\begin{bmatrix} 1 \amp 1 \amp 1 \amp 1 \\ 1 \amp -1 \amp -1 \amp 1 \\ 1 \amp -1 \amp 1 \amp -1 \end{bmatrix}\begin{bmatrix} 3 \\ 5 \\ 7 \\ -3 \end{bmatrix} = \begin{bmatrix} 6 \\ -6 \\ 4 \end{bmatrix}</me>. Therefore, by <xref ref="thm-ls-using-qr"/>, the least-squares solution to <m>A\vec x = \vec b</m> is the vector <m>\widehat x</m> so that <me>\begin{bmatrix}
+            2 \amp 4 \amp 5\\
+            0 \amp 2 \amp 3\\
+            0 \amp 0 \amp 2
+          \end{bmatrix}\widehat x = \begin{bmatrix} 6 \\ -6 \\ 4 \end{bmatrix}</me>. If <m>R</m> was a <m>2 \times 2</m> matrix, then I usually find its inverse and multiply that to both sides. When <m>R</m> is <m>3 \times 3</m> or greater, then I usually solve it by Row Operations. Note that <md>
+            <mrow> \begin{bmatrix} 2 \amp 4 \amp 5 \amp \rvert \amp 6 \\ 0 \amp 2 \amp 3 \amp \rvert \amp -6 \\ 0 \amp 0 \amp 2 \amp \rvert \amp 4 \end{bmatrix} \amp \sim \begin{bmatrix} 2 \amp 4 \amp 5 \amp \rvert \amp 6 \\ 0 \amp 2 \amp 3 \amp \rvert \amp -6 \\ 0 \amp 0 \amp 1 \amp \rvert \amp 2 \end{bmatrix}</mrow>
+            <mrow> \amp \sim \begin{bmatrix} 2 \amp 4 \amp 0 \amp \rvert \amp -4 \\ 0 \amp 2 \amp 0 \amp \rvert \amp -12 \\ 0 \amp 0 \amp 1 \amp \rvert \amp 2 \end{bmatrix}</mrow>
+            <mrow> \amp \sim \begin{bmatrix} 2 \amp 4 \amp 0 \amp \rvert \amp -4 \\ 0 \amp 1 \amp 0 \amp \rvert \amp -6 \\ 0 \amp 0 \amp 1 \amp \rvert \amp 2 \end{bmatrix}</mrow>
+            <mrow> \amp \sim \begin{bmatrix} 2 \amp 0 \amp 0 \amp \rvert \amp 20 \\ 0 \amp 1 \amp 0 \amp \rvert \amp -6 \\ 0 \amp 0 \amp 1 \amp \rvert \amp 2 \end{bmatrix}</mrow>
+            <mrow> \amp \sim \begin{bmatrix} 1 \amp 0 \amp 0 \amp \rvert \amp 10 \\ 0 \amp 1 \amp 0 \amp \rvert \amp -6 \\ 0 \amp 0 \amp 1 \amp \rvert \amp 2 \end{bmatrix}</mrow>
+          </md>
+          Thus, the least-squares solution is <me>\widehat x = \begin{bmatrix} 10 \\ -6 \\ 2\end{bmatrix}</me>.
+        </p>
+        </solution>
     </example>
   </page>
 
