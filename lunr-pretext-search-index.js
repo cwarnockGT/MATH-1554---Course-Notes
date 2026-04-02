@@ -3175,7 +3175,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "6.5 Least-Squares Problems",
-  "body": " 6.5 Least-Squares Problems   6.5 Least-Squares Problems   Overview   Topics   Least squares problems  Methods for solving least squares problems     Goals    Compute general solutions and least squares errors using both:  the normal equations  the QR decomposition         Least Squares Solution   Let be an matrix. A vector is a least squares solution to if       Suppose is a consistent system.   Then there exists at least one vector so that .    This vector is a least squares solution to and we have that for all .     Now, suppose is an inconsistent system.   Then there is no vector so that .    So, a least squares solution  is a vector so that is to .    Recall that is always a vector in .    By , we have that is the vector in that is as close as possible to .    Thus, the least squares solutions to are the vectors which are solutions to the equation .          Least Squares Solution    Consider the system for .     Is the system consistent?      Find the vector .      Find the least squares solution to .           Geometric interpretation of least squares projection.  The projection is the closest point in to the vector .     Note that if is a least squares solution to , then is orthogonal to every vector in .  Then, we have that lives in .   By the Four Subspace Theorem , we have that lives in .   Therefore, we have that .   It follows that .       Normal Equations for Least Squares   Least squares solutions of are precisely the solutions of   refered to as the normal equations .      Example: Solving via Normal Equations    Use the normal equations to find the least squares solution of , where        Conditions for Unique Least Squares Solutions   Unique Least Squares Solutions   For an matrix , the following are equivalent:   For every , the equation has a unique least squares solution.  The columns of are linearly independent.  is invertible.   When these hold,       Compute the least squares solution to , where        Least Squares Using QR   Least Squares via QR Factorization   If is a QR decomposition of an matrix , then for any the least squares solution of satisfies:       Compute the least squares tolustio to , where   given the QR factorization:       "
+  "body": " 6.5 Least-Squares Problems   6.5 Least-Squares Problems   Overview   Topics   Least squares problems  Methods for solving least squares problems     Goals    Compute general solutions and least squares errors using both:  the normal equations  the QR decomposition         Least Squares Solution   Let be an matrix. A vector is a least squares solution to if       Suppose is a consistent system.   Then there exists at least one vector so that .         This vector is a least squares solution to and we have that for all .          Now, suppose is an inconsistent system.   Then there is no vector so that .         So, a least squares solution  is a vector so that is to .   as close as possible     Recall that is always a vector in .         By , we have that is the vector in that is as close as possible to .         Thus, the least squares solutions to are the vectors which are solutions to the equation .               Least Squares Solution    Consider the system for .     Is the system consistent?    Note that . Therefore, there is no solution and the system is inconsistent.      Find the vector .    In order to project onto , we need an orthogonal basis of . Since the columns of are not orthogonal, we start by using the Gram-Schmidt Process. If we assign the columns of as and , respectively, then we have that We will use in place of . So, is an orthogonal basis for . Therefore, we have that So, is the vector in which is as close as possible to .      Find the least squares solution to .    We will solve the equation . Note that . Thus, the least-squares solution is . Notice the error from our least-squares solution is            Geometric interpretation of least squares projection.  The projection is the closest point in to the vector .      Note that if is a least squares solution to , then is orthogonal to every vector in .         Then, we have that lives in .         By the Four Subspace Theorem , we have that lives in .         Therefore, we have that .         It follows that .            Normal Equations for Least Squares   Least squares solutions of are precisely the solutions of   refered to as the normal equations .      Example: Solving via Normal Equations    Use the normal equations to find the least-squares solution of , where     Note that and . Therefore, then normal equations are . Note that It follows that the least-squares solution is , which agrees with our answer from .       Conditions for Unique Least Squares Solutions   Unique Least Squares Solutions   For an matrix , the following are equivalent:   For every , the equation has a unique least squares solution.  The columns of are linearly independent.  is invertible.   When these hold,       Compute the least squares solution to , where     Since the columns of are linearly independent, we know by there is a unique least-squares solution to . Note that the columns of are already orthogonal. Therefore, this problem wouldn't be so bad to use our original method to finding a least-squares solution like in . We will instead use the normal equations which is usually the fastest way, especially when the columns of are not orthogonal.  Note that and . (The reason is diagonal is because the columns of are orthogonal.) It follows that , so the least square solution is .       Least Squares Using QR   Least Squares via QR Factorization   If is a QR decomposition of an matrix , then for any the least squares solution of satisfies:       Compute the least squares solution to , where   given the QR factorization:     Note that we are given . We have . Therefore, by , the least-squares solution to is the vector so that . If was a matrix, then I usually find its inverse and multiply that to both sides. When is or greater, then I usually solve it by Row Operations. Note that Thus, the least-squares solution is .      "
 },
 {
   "id": "obj-6-5-topics-goals",
@@ -3211,7 +3211,7 @@ var ptx_lunr_docs = [
   "type": "Note",
   "number": "6.51",
   "title": "",
-  "body": "  Suppose is a consistent system.   Then there exists at least one vector so that .    This vector is a least squares solution to and we have that for all .     Now, suppose is an inconsistent system.   Then there is no vector so that .    So, a least squares solution  is a vector so that is to .    Recall that is always a vector in .    By , we have that is the vector in that is as close as possible to .    Thus, the least squares solutions to are the vectors which are solutions to the equation .      "
+  "body": "  Suppose is a consistent system.   Then there exists at least one vector so that .         This vector is a least squares solution to and we have that for all .          Now, suppose is an inconsistent system.   Then there is no vector so that .         So, a least squares solution  is a vector so that is to .   as close as possible     Recall that is always a vector in .         By , we have that is the vector in that is as close as possible to .         Thus, the least squares solutions to are the vectors which are solutions to the equation .           "
 },
 {
   "id": "ex-6-5-inconsistent",
@@ -3220,7 +3220,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "6.52",
   "title": "",
-  "body": "  Consider the system for .     Is the system consistent?      Find the vector .      Find the least squares solution to .    "
+  "body": "  Consider the system for .     Is the system consistent?    Note that . Therefore, there is no solution and the system is inconsistent.      Find the vector .    In order to project onto , we need an orthogonal basis of . Since the columns of are not orthogonal, we start by using the Gram-Schmidt Process. If we assign the columns of as and , respectively, then we have that We will use in place of . So, is an orthogonal basis for . Therefore, we have that So, is the vector in which is as close as possible to .      Find the least squares solution to .    We will solve the equation . Note that . Thus, the least-squares solution is . Notice the error from our least-squares solution is     "
 },
 {
   "id": "p-6-5-geometry-1",
@@ -3229,7 +3229,7 @@ var ptx_lunr_docs = [
   "type": "Note",
   "number": "6.53",
   "title": "",
-  "body": "   Geometric interpretation of least squares projection.  The projection is the closest point in to the vector .     Note that if is a least squares solution to , then is orthogonal to every vector in .  Then, we have that lives in .   By the Four Subspace Theorem , we have that lives in .   Therefore, we have that .   It follows that .     "
+  "body": "   Geometric interpretation of least squares projection.  The projection is the closest point in to the vector .      Note that if is a least squares solution to , then is orthogonal to every vector in .         Then, we have that lives in .         By the Four Subspace Theorem , we have that lives in .         Therefore, we have that .         It follows that .          "
 },
 {
   "id": "thm-normal-equations",
@@ -3247,7 +3247,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "6.55",
   "title": "",
-  "body": "  Use the normal equations to find the least squares solution of , where    "
+  "body": "  Use the normal equations to find the least-squares solution of , where     Note that and . Therefore, then normal equations are . Note that It follows that the least-squares solution is , which agrees with our answer from .   "
 },
 {
   "id": "thm-ls-unique",
@@ -3265,7 +3265,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "6.57",
   "title": "",
-  "body": "  Compute the least squares solution to , where    "
+  "body": "  Compute the least squares solution to , where     Since the columns of are linearly independent, we know by there is a unique least-squares solution to . Note that the columns of are already orthogonal. Therefore, this problem wouldn't be so bad to use our original method to finding a least-squares solution like in . We will instead use the normal equations which is usually the fastest way, especially when the columns of are not orthogonal.  Note that and . (The reason is diagonal is because the columns of are orthogonal.) It follows that , so the least square solution is .   "
 },
 {
   "id": "thm-ls-using-qr",
@@ -3283,7 +3283,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "6.59",
   "title": "",
-  "body": "  Compute the least squares tolustio to , where   given the QR factorization:    "
+  "body": "  Compute the least squares solution to , where   given the QR factorization:     Note that we are given . We have . Therefore, by , the least-squares solution to is the vector so that . If was a matrix, then I usually find its inverse and multiply that to both sides. When is or greater, then I usually solve it by Row Operations. Note that Thus, the least-squares solution is .   "
 },
 {
   "id": "Section-6-6",

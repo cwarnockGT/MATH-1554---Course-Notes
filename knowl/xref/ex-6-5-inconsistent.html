@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.52</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="introduction"><div class="para logical">
+<div class="para">Consider the system <span class="process-math">\(A\vec x = \vec b\)</span> for</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A = \begin{bmatrix} 4 \amp 0 \\ 0 \amp 2 \\ 1 \amp 1 \end{bmatrix} \quad \text{and} \quad \vec b = \begin{bmatrix} 2 \\ 0 \\ 11 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-6-5-inconsistent-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para">Is the system consistent?<div class="autopermalink" data-description="Paragraph"><a href="#ex-6-5-inconsistent-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Note that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix} 4 \amp 0 \amp \rvert \amp 2 \\ 0 \amp 2 \amp \rvert \amp 0 \\ 1 \amp 1 \amp \rvert \amp 11 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp \rvert \amp \frac{1}{2} \\ 0 \amp 1 \amp \rvert \amp 0 \\ 1 \amp 1 \amp \rvert \amp 11 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp \rvert \amp \frac{1}{2} \\ 0 \amp 1 \amp \rvert \amp 0 \\ 0 \amp 0 \amp \rvert \amp \frac{21}{2}\end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Therefore, there is no solution and the system is inconsistent.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-6-5-inconsistent-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.52.a.1"><a href="#ex-6-5-inconsistent-2-2" title="Copy heading and permalink for Solution 6.52.a.1" aria-label="Copy heading and permalink for Solution 6.52.a.1">🔗</a></div>
+</div></details></div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Task 6.52.a"><a href="#ex-6-5-inconsistent-2" title="Copy heading and permalink for Task 6.52.a" aria-label="Copy heading and permalink for Task 6.52.a">🔗</a></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para">Find the vector <span class="process-math">\(\widehat b = \proj_{\Col(A)}\vec b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-6-5-inconsistent-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">In order to project onto <span class="process-math">\(\Col(A)\text{,}\)</span> we need an orthogonal basis of <span class="process-math">\(\Col(A)\text{.}\)</span> Since the columns of <span class="process-math">\(A\)</span> are <em class="emphasis">not</em> orthogonal, we start by using the Gram-Schmidt Process. If we assign the columns of <span class="process-math">\(A\)</span> as <span class="process-math">\(\vec x_1\)</span> and <span class="process-math">\(\vec x_2\text{,}\)</span> respectively, then we have that</div>
+<div class="displaymath process-math">
+\begin{align*}
+\vec v_1 \amp = \vec x_1 = \begin{bmatrix} 4 \\ 0 \\ 1 \end{bmatrix}\\
+\vec v_2 \amp = \vec x_2 - \proj_{\vec v_1}\vec x_2 = \begin{bmatrix} 0 \\2 \\ 1 \end{bmatrix} - \dfrac{1}{17}\begin{bmatrix} 4 \\ 0 \\ 1 \end{bmatrix} = \dfrac{1}{17}\begin{bmatrix}-4 \\ 34 \\ 16\end{bmatrix}
+\end{align*}
+</div>
+<div class="para">We will use <span class="process-math">\(\vec v_2' = 17\vec v_2 = \begin{bmatrix} -4 \\ 34 \\ 16 \end{bmatrix}\)</span> in place of <span class="process-math">\(\vec v_2\text{.}\)</span> So, <span class="process-math">\(\left\{\vec v_1, \vec v_2'\right\}\)</span> is an orthogonal basis for <span class="process-math">\(\Col(A).\text{.}\)</span> Therefore, we have that</div>
+<div class="displaymath process-math">
+\begin{align*}
+\widehat b \amp = \proj_{\Col(A)}\vec b\\
+\amp = \proj_{\vec v_1}\vec b + \proj_{\vec v_2'}\vec b\\
+\amp = \dfrac{19}{17}\begin{bmatrix} 4 \\ 0 \\ 1 \end{bmatrix} + \dfrac{2}{17}\begin{bmatrix} -4 \\ 34 \\ 16 \end{bmatrix}\\
+\amp = \dfrac{1}{17}\begin{bmatrix} 76 - 8 \\ 0 + 68 \\ 19 + 32 \end{bmatrix}\\
+\amp = \begin{bmatrix} 4 \\ 4 \\ 3 \end{bmatrix}
+\end{align*}
+</div>
+<div class="para">So, <span class="process-math">\(\widehat b = \begin{bmatrix} 4 \\ 4 \\ 3 \end{bmatrix}\)</span> is the vector in <span class="process-math">\(\Col(A)\)</span> which is as close as possible to <span class="process-math">\(\vec b\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-6-5-inconsistent-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.52.b.1"><a href="#ex-6-5-inconsistent-3-2" title="Copy heading and permalink for Solution 6.52.b.1" aria-label="Copy heading and permalink for Solution 6.52.b.1">🔗</a></div>
+</div></details></div>
+<div class="workspace" data-space="6in"></div>
+<div class="autopermalink" data-description="Task 6.52.b"><a href="#ex-6-5-inconsistent-3" title="Copy heading and permalink for Task 6.52.b" aria-label="Copy heading and permalink for Task 6.52.b">🔗</a></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para">Find the <em class="emphasis">least squares solution</em> to <span class="process-math">\(A\vec x = \vec b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-6-5-inconsistent-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">We will solve the equation <span class="process-math">\(A\vec x = \widehat b\text{.}\)</span> Note that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix} 4 \amp 0 \amp \rvert \amp 4 \\ 0 \amp 2 \amp \rvert \amp 4 \\ 1 \amp 1 \amp \rvert \amp 3 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp \rvert \amp 1 \\ 0 \amp 1 \amp \rvert \amp 2 \\ 1 \amp 1 \amp \rvert \amp 3 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp \rvert \amp 1 \\ 0 \amp 1 \amp \rvert \amp 2 \\ 0 \amp 0 \amp \rvert \amp 0 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus, the least-squares solution is <span class="process-math">\(\widehat x = \begin{bmatrix} 1 \\ 2 \end{bmatrix}\text{.}\)</span> Notice the error from our least-squares solution is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\|\vec b - A\widehat x\| = \|\vec b - \widehat b\| = \left\|\begin{bmatrix} 2 \\ 0 \\ 11 \end{bmatrix} - \begin{bmatrix} 4 \\ 4 \\ 3 \end{bmatrix}\right\| = \sqrt{4 + 16 + 64} = \sqrt{84}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-6-5-inconsistent-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 6.52.c.1"><a href="#ex-6-5-inconsistent-4-2" title="Copy heading and permalink for Solution 6.52.c.1" aria-label="Copy heading and permalink for Solution 6.52.c.1">🔗</a></div>
+</div></details></div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Task 6.52.c"><a href="#ex-6-5-inconsistent-4" title="Copy heading and permalink for Task 6.52.c" aria-label="Copy heading and permalink for Task 6.52.c">🔗</a></div></article><div class="autopermalink" data-description="Example 6.52"><a href="#ex-6-5-inconsistent" title="Copy heading and permalink for Example 6.52" aria-label="Copy heading and permalink for Example 6.52">🔗</a></div></article><span class="incontext"><a class="internal" href="Section-6-5.html#ex-6-5-inconsistent">in-context</a></span>
+</body>
+</html>
