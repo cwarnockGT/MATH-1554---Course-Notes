@@ -3284,6 +3284,87 @@ var ptx_lunr_docs = [
   "number": "6.59",
   "title": "",
   "body": "  Compute the least squares tolustio to , where   given the QR factorization:    "
+},
+{
+  "id": "Section-6-6",
+  "level": "1",
+  "url": "Section-6-6.html",
+  "type": "Section",
+  "number": "",
+  "title": "6.6 Applications to Linear Models",
+  "body": " 6.6 Applications to Linear Models   6.6 Applications to Linear Models   Overview   Topics   Least Squares Lines  Linear and more complicated models     Goals    Apply least-squares and mutiple regression to construct a linear model from a set of data points.    Apply least-squares to fit polynomials and other curves to data.      One of the most useful applications of finding least squares solutions is to determine curves of best fit for data.   A graph containing four points and the line of best fit.    The graph above gives an approximate linear relationship between and .   The black circles are data.    The blue line is the least squares line , also known as the line of best fit .    The lengths of the red lines are the errors between our line of best fit and the data.    The least squares line minimizes the sum of squares of the errors.       Least Squares Solution    Suppose we want to construct a line of the form that best fits the data below.    A 2D scatter plot showing the four points (-2,0), (-1,2), and (3,3) used for linear least squares fitting.      Find a system of equations that can be used to solve for and .      Is the system found in (a) consistent?      Identify the best choices of and by finding the least squares solution to .        We can use this technique to find line of best fit even when there are more than two variables.    Suppose we are trying to predict house prices based on two factors:    size (in 1000 sq ft)     number of bedrooms   We have the following data:  Housing Data    Size (in 1000 sq ft)  Number of Bedrooms  Price (in $1000s)    1.0  1  180    2.0  2  260    3.0  3  310    4.0  3  350         Setup the least squares problem which will produce the best linear model for this situation: .      Solving the system above, we find that . According to this model, how much should a house with 2000 ft and 3 bedrooms be worth?        Non Linear Curves of Best Fit  We do not have to restrict ourselves to linear curves of best fit. All that is required to use Least Squares is that the unknowns we are trying to solve for, our coefficients, are linear. There is nothing wrong with allowing the variables to be nonlinear.  In general, we can consider least squares fitting for the form , where the functions are known, but not necessarily linear. Keep in mind that this is a linear problem in the variables.    For the remaining four examples, we will fit various curves to the following points: . Once you find the curve, graph the points and the curve on Desmos and see how good the curve fits.  We will start by fitting a linear curve to the data: . This one can be solved without the need of a calculator.        Continuing from , we will now fit a quadratic curve to the data: . For the remaining problems, feel free to use a matrix equation solver after setting up the least squares problem as .        Continuing from , we will now fit a cubic curve to the data: . What do you notice about your least-squares solution? Is this expected?        Continuing from , we will now fit a somewhat trigonometric curve to the data: . What do you ntoice about your least-squares solution?      "
+},
+{
+  "id": "obj-6-6-topics-goals",
+  "level": "2",
+  "url": "Section-6-6.html#obj-6-6-topics-goals",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   Least Squares Lines  Linear and more complicated models   "
+},
+{
+  "id": "p-6-6-overview-3",
+  "level": "2",
+  "url": "Section-6-6.html#p-6-6-overview-3",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals    Apply least-squares and mutiple regression to construct a linear model from a set of data points.    Apply least-squares to fit polynomials and other curves to data.    "
+},
+{
+  "id": "ex-6-6-inconsistent",
+  "level": "2",
+  "url": "Section-6-6.html#ex-6-6-inconsistent",
+  "type": "Example",
+  "number": "6.60",
+  "title": "",
+  "body": "  Suppose we want to construct a line of the form that best fits the data below.    A 2D scatter plot showing the four points (-2,0), (-1,2), and (3,3) used for linear least squares fitting.      Find a system of equations that can be used to solve for and .      Is the system found in (a) consistent?      Identify the best choices of and by finding the least squares solution to .    "
+},
+{
+  "id": "handout-section-6-6-applications-of-least-squares-4-2",
+  "level": "2",
+  "url": "Section-6-6.html#handout-section-6-6-applications-of-least-squares-4-2",
+  "type": "Example",
+  "number": "6.61",
+  "title": "",
+  "body": "  Suppose we are trying to predict house prices based on two factors:    size (in 1000 sq ft)     number of bedrooms   We have the following data:  Housing Data    Size (in 1000 sq ft)  Number of Bedrooms  Price (in $1000s)    1.0  1  180    2.0  2  260    3.0  3  310    4.0  3  350         Setup the least squares problem which will produce the best linear model for this situation: .      Solving the system above, we find that . According to this model, how much should a house with 2000 ft and 3 bedrooms be worth?    "
+},
+{
+  "id": "ex-6-6-curve-best-fit-a",
+  "level": "2",
+  "url": "Section-6-6.html#ex-6-6-curve-best-fit-a",
+  "type": "Example",
+  "number": "6.63",
+  "title": "",
+  "body": "  For the remaining four examples, we will fit various curves to the following points: . Once you find the curve, graph the points and the curve on Desmos and see how good the curve fits.  We will start by fitting a linear curve to the data: . This one can be solved without the need of a calculator.   "
+},
+{
+  "id": "handout-section-6-6-applications-of-least-squares-6-1",
+  "level": "2",
+  "url": "Section-6-6.html#handout-section-6-6-applications-of-least-squares-6-1",
+  "type": "Example",
+  "number": "6.64",
+  "title": "",
+  "body": "  Continuing from , we will now fit a quadratic curve to the data: . For the remaining problems, feel free to use a matrix equation solver after setting up the least squares problem as .   "
+},
+{
+  "id": "handout-section-6-6-applications-of-least-squares-7-1",
+  "level": "2",
+  "url": "Section-6-6.html#handout-section-6-6-applications-of-least-squares-7-1",
+  "type": "Example",
+  "number": "6.65",
+  "title": "",
+  "body": "  Continuing from , we will now fit a cubic curve to the data: . What do you notice about your least-squares solution? Is this expected?   "
+},
+{
+  "id": "handout-section-6-6-applications-of-least-squares-8-1",
+  "level": "2",
+  "url": "Section-6-6.html#handout-section-6-6-applications-of-least-squares-8-1",
+  "type": "Example",
+  "number": "6.66",
+  "title": "",
+  "body": "  Continuing from , we will now fit a somewhat trigonometric curve to the data: . What do you ntoice about your least-squares solution?   "
 }
 ]
 
