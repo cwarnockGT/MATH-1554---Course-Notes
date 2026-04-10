@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chapter xml:id="chapter-7" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Google PageRank, Symmetric Matrices, and Quadratic Forms</title>
+
+    <introduction>
+        <p>
+            Section 10.2 is included in this chapter of our Course Notes even though it is not in Chapter 7 of our textbook. This is the only way to have PreText keep the Table of Contents in the correct order.
+        </p>
+    </introduction>
+
+  <section xml:id="Section-10-2">
+    <title>10.2 Google PageRank</title>
+      <xi:include href="./chapter-7-notes/section-10-2.ptx" />
+  </section>
+  
+
+</chapter>
