@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>10.2 Google PageRank</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="MATH 1554 Course Notes - Spring 2026">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.13.3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.b76b8eace4405b9e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.bbf2283c5c1d4f99.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="Warnock_MATH1554CourseNotes" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="notes.html"><span class="title">MATH 1554 Course Notes - Spring 2026</span></a></h1>
+<p class="byline"></p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="embed-button" class="embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><div class="embed-popup hidden" id="embed-popup">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<div class="embed-code-container">
+<textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div>
+</div>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="chapter-7.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-7.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\foo}{b^{ar}}
+\newcommand{\aug}{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
+\newcommand{\Nul}{\operatorname{Nul}}
+\newcommand{\Col}{\operatorname{Col}}
+\newcommand{\Row}{\operatorname{Row}}
+\newcommand{\Span}{\operatorname{Span}}
+\renewcommand{\det}{\operatorname{det}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\proj}{\operatorname{proj}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Linear Equations in Linear Algebra</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-1-1.html" class="internal"><span class="title">1.1 Systems of Linear Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-1-1.html#section-1-1-sol" class="internal"><span class="title">1.1 Systems of Linear Equations</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-1-2.html" class="internal"><span class="title">1.2 Row Reduction and Echelon Forms</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="Section-1-2.html#handout-1-2-sol" class="internal"><span class="title">Worksheet</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-1-3.html" class="internal"><span class="title">1.3 Vector Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-1-3.html#sec-1-3-vector-equations" class="internal"><span class="title">1.3 Vector Equations</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-1-4.html" class="internal"><span class="title">1.4 The Matrix Equation <span class="process-math">\(A \vec{x} = \vec{b}\)</span></span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-1-4.html#sec-1-4-matrix-equation" class="internal"><span class="title">1.4 The Matrix Equation <span class="process-math">\(A \vec{x} = \vec{b}\)</span></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-1-5.html" class="internal"><span class="title">1.5 Solution Sets of Linear Systems</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="Section-1-5.html#sec-1-5-homogeneous" class="internal"><span class="title">1.5 Homogeneous Systems and Parametric Vector Forms</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-1-7.html" class="internal"><span class="title">1.7 Linear Independence</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="Section-1-7.html#Section-1-7-2" class="internal"><span class="title">1.7 Linear Independence</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-1-8.html" class="internal"><span class="title">1.8 An Introduction to Linear Transformations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-1-8.html#Section-1-8-2" class="internal"><span class="title">1.8 An Introduction to Linear Transformations</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-1-9.html" class="internal"><span class="title">1.9 More on Linear Transformations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-1-9.html#handout-section-1-9-matrix-linear-transformation" class="internal"><span class="title">1.9 More on Linear Transformation</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-2.html" class="internal"><span class="codenumber">2</span> <span class="title">Matrix Algebra</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-2-1.html" class="internal"><span class="title">2.1 Matrix Operations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-2-1.html#handout-section-2-1-matrix-algebra" class="internal"><span class="title">2.1 Matrix Operations</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-2-2.html" class="internal"><span class="title">2.2 Matrix Inverses</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-2-2.html#handout-section-2-2-matrix-inverses" class="internal"><span class="title">2.2 Matrix Inverses</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-2-3.html" class="internal"><span class="title">2.3 The Invertible Matrix Theorem</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-2-3.html#handout-section-2-3-imt" class="internal"><span class="title">2.3 The Invertible Matrix Theorem</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-2-5.html" class="internal"><span class="title">2.5 <span class="process-math">\(LU\)</span> Factorization</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-2-5.html#handout-section-2-5-lu" class="internal"><span class="title">2.5 <span class="process-math">\(LU\)</span> Factorization</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-2-8.html" class="internal"><span class="title">2.8 Subspaces</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-2-8.html#handout-section-2-8-subspaces" class="internal"><span class="title">2.8 Subspaces</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-2-9.html" class="internal"><span class="title">2.9 Dimension and Rank</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-2-9.html#handout-section-2-9-dimension" class="internal"><span class="title">2.9 Dimension and Rank</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-3.html" class="internal"><span class="codenumber">3</span> <span class="title">Determinants</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-3-1.html" class="internal"><span class="title">3.1 Introduction to Determinants</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-3-1.html#handout-section-3-1-determinants" class="internal"><span class="title">3.1 Introduction to Determinants</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-3-2.html" class="internal"><span class="title">3.2 Properties of the Determinant</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-3-2.html#handout-section-3-2-determinant-properties" class="internal"><span class="title">3.2 Properties of the Determinant</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-3-3.html" class="internal"><span class="title">3.3 Applications of the Determinant</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-3-3.html#handout-section-3-3-area-volume-determinants" class="internal"><span class="title">3.3 Applications of the Determinant</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-4.html" class="internal"><span class="codenumber">4</span> <span class="title">Vector Spaces</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-4-9.html" class="internal"><span class="title">4.9/5.9 Markov Chains</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-4-9.html#handout-section-4-9-markov" class="internal"><span class="title">4.9/5.9 Markov Chains</span></a></div></li></ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-5.html" class="internal"><span class="codenumber">5</span> <span class="title">Eigenvectors and Eigenvalues</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-5-1.html" class="internal"><span class="title">5.1 Eigenvectors, Eigenvalues, and Eigenspaces</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-5-1.html#handout-section-5-1-eigenvalues-eigenvectors" class="internal"><span class="title">5.1 Eigenvectors, Eigenvalues, and Eigenspaces</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-5-2.html" class="internal"><span class="title">5.2 The Characteristic Equation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-5-2.html#handout-section-5-2-characteristic-similar" class="internal"><span class="title">5.2 The Characteristic Equation</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-5-3.html" class="internal"><span class="title">5.3 Diagonalization</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-5-3.html#handout-section-5-3-diagonalization" class="internal"><span class="title">5.3 Diagonalization</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-5-5.html" class="internal"><span class="title">5.5 Complex Eigenvalues</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-5-5.html#handout-section-5-5-complex-eigenvalues" class="internal"><span class="title">5.5 Complex Eigenvalues</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-6.html" class="internal"><span class="codenumber">6</span> <span class="title">Orthogonality and Least Squares</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-6-1.html" class="internal"><span class="title">6.1 Dot Product, Length, and Orthogonality</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-6-1.html#handout-section-6-1-dotproduct" class="internal"><span class="title">6.1 Dot Product, Length, and Orthogonality</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-6-2.html" class="internal"><span class="title">6.2 Orthogonal Sets, Orthogonal Bases, and Projections</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-6-2.html#handout-section-6-2-orthogonal-sets" class="internal"><span class="title">6.2 Orthogonal Sets, Orthogonal Bases, and Projections</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-6-3.html" class="internal"><span class="title">6.3 Orthogonal Projections</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-6-3.html#handout-section-6-3-projections" class="internal"><span class="title">6.3 Orthogonal Projections</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-6-4.html" class="internal"><span class="title">6.4 Gram–Schmidt and QR Decomposition</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-6-4.html#handout-section-6-4-gram-schmidt" class="internal"><span class="title">6.4 Gram–Schmidt and QR Decomposition</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-6-5.html" class="internal"><span class="title">6.5 Least-Squares Problems</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-6-5.html#handout-section-6-5-least-squares" class="internal"><span class="title">6.5 Least-Squares Problems</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-6-6.html" class="internal"><span class="title">6.6 Applications to Linear Models</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-6-6.html#handout-section-6-6-applications-of-least-squares" class="internal"><span class="title">6.6 Applications to Linear Models</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="chapter-7.html" class="internal"><span class="codenumber">7</span> <span class="title">Google PageRank, Symmetric Matrices, and Quadratic Forms</span></a></div>
+<ul class="structural toc-item-list contains-active"><li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="Section-10-2.html" class="internal"><span class="title">10.2 Google PageRank</span></a></div>
+<ul class="structural toc-item-list active"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-10-2.html#handout-section-10-2-Google-Page-Rank" class="internal"><span class="title">10.2 Google PageRank</span></a></div></li></ul>
+</li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<div class="print-preview-header">
+<h2 class="print-preview">Print preview</h2>
+<div class="print-controls">
+<div class="print-controls-toggles">
+<form class="papersize-select" id="papersize-select">
+<span class="name">Paper size</span><label><input type="radio" name="papersize" value="a4">A4
+        </label><label><input type="radio" name="papersize" value="letter">Letter
+        </label>
+</form>
+<details class="print-options"><summary>Additional printing options</summary><div class="header-footer-options">
+<div class="header-option">
+<span class="title">Print headers</span><label>First page<input type="checkbox" id="print-first-page-header-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-header-checkbox" checked></label>
+</div>
+<div class="footer-option">
+<span class="title">Print footers</span><label>First page<input type="checkbox" id="print-first-page-footer-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-footer-checkbox" checked></label>
+</div>
+</div>
+<div class="highlight-workspace-option">
+<label for="highlight-workspace-checkbox">Highlight workspace</label><input type="checkbox" id="highlight-workspace-checkbox">
+</div></details>
+</div>
+<button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
+</div>
+</div>
+<section class="section" id="Section-10-2"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">10.2 Google PageRank</span>
+</h2>
+<section class="handout" id="handout-section-10-2-Google-Page-Rank" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
+<span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">10.2 Google PageRank</span><div class="print-links"><a href="?printpreview=handout-section-10-2-Google-Page-Rank" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+</h3>
+<section class="onepage" id="p-10-2-overview"><article class="objectives goal-like" id="obj-10-2-topics-goals"><h4 class="heading">
+<span class="type">Objectives<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Topics</span>
+</h4>
+<ul class="disc" id="obj-10-2-topics-goals-2">
+<li id="obj-10-2-topics-goals-2-1">
+<div class="para" id="p-derived-obj-10-2-topics-goals-2-1">Review of Markov chains</div>
+<div class="autopermalink" data-description="Objective"><a href="#obj-10-2-topics-goals-2-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="obj-10-2-topics-goals-2-2">
+<div class="para" id="p-derived-obj-10-2-topics-goals-2-2">Steady-state theorem for Markov chains</div>
+<div class="autopermalink" data-description="Objective"><a href="#obj-10-2-topics-goals-2-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="obj-10-2-topics-goals-2-3">
+<div class="para" id="p-derived-obj-10-2-topics-goals-2-3">Modeling website usage with Markov chains</div>
+<div class="autopermalink" data-description="Objective"><a href="#obj-10-2-topics-goals-2-3" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="obj-10-2-topics-goals-2-4">
+<div class="para" id="p-derived-obj-10-2-topics-goals-2-4">Computing PageRank</div>
+<div class="autopermalink" data-description="Objective"><a href="#obj-10-2-topics-goals-2-4" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Objectives: Topics"><a href="#obj-10-2-topics-goals" title="Copy heading and permalink for Objectives: Topics" aria-label="Copy heading and permalink for Objectives: Topics">🔗</a></div></article><article class="objectives goal-like" id="p-10-2-overview-3"><h4 class="heading">
+<span class="type">Objectives<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Goals</span>
+</h4>
+<ul class="disc" id="p-10-2-overview-3-2">
+<li id="p-10-2-overview-3-2-1">
+<div class="para" id="p-derived-p-10-2-overview-3-2-1">Determine whether a stochastic matrix is regular.</div>
+<div class="autopermalink" data-description="Objective"><a href="#p-10-2-overview-3-2-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="p-10-2-overview-3-2-2">
+<div class="para" id="p-derived-p-10-2-overview-3-2-2">Use matrix powers and theorems to describe long-term behavior.</div>
+<div class="autopermalink" data-description="Objective"><a href="#p-10-2-overview-3-2-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="p-10-2-overview-3-2-3">
+<div class="para" id="p-derived-p-10-2-overview-3-2-3">Construct transition and Google matrices and compute PageRank.</div>
+<div class="autopermalink" data-description="Objective"><a href="#p-10-2-overview-3-2-3" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+</ul>
+<div class="workspace" data-space="0.2in"></div>
+<div class="autopermalink" data-description="Objectives: Goals"><a href="#p-10-2-overview-3" title="Copy heading and permalink for Objectives: Goals" aria-label="Copy heading and permalink for Objectives: Goals">🔗</a></div></article><article class="example example-like" id="prob-car-rental"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="prob-car-rental-1-1">Recall <a href="Section-4-9.html#ex-4-9-cars" class="xref" data-knowl="./knowl/xref/ex-4-9-cars.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.7">Example 4.7</a>: A rental company has three locations A, B, and C.<div class="autopermalink" data-description="Paragraph"><a href="#prob-car-rental-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <figure class="table table-like" id="prob-car-rental-1-2"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Table 7.2"><a href="#prob-car-rental-1-2" title="Copy heading and permalink for Table 7.2" aria-label="Copy heading and permalink for Table 7.2">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r0 l0 t0 lines"></td>
+<td class="l m b2 r0 l0 t0 lines"></td>
+<td class="l m b2 r0 l0 t0 lines" colspan="3">rented from</td>
+</tr>
+<tr>
+<td class="l m b2 r0 l0 t0 lines"></td>
+<td class="l m b2 r0 l0 t0 lines"></td>
+<td class="l m b2 r0 l0 t0 lines">A</td>
+<td class="l m b2 r0 l0 t0 lines">B</td>
+<td class="l m b2 r0 l0 t0 lines">C</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"></td>
+<td class="l m b0 r2 l0 t0 lines">A</td>
+<td class="l m b0 r0 l0 t0 lines">.8</td>
+<td class="l m b0 r0 l0 t0 lines">.1</td>
+<td class="l m b0 r0 l0 t0 lines">.2</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">returned to</td>
+<td class="l m b0 r2 l0 t0 lines">B</td>
+<td class="l m b0 r0 l0 t0 lines">.2</td>
+<td class="l m b0 r0 l0 t0 lines">.6</td>
+<td class="l m b0 r0 l0 t0 lines">.3</td>
+</tr>
+<tr>
+<td class="l m b2 r0 l0 t0 lines"></td>
+<td class="l m b2 r2 l0 t0 lines">C</td>
+<td class="l m b2 r0 l0 t0 lines">.0</td>
+<td class="l m b2 r0 l0 t0 lines">.3</td>
+<td class="l m b2 r0 l0 t0 lines">.5</td>
+</tr>
+</table></div></figure> <div class="para" id="prob-car-rental-1-3">There are 18 cars at each location initially. What happens in the long run?<div class="autopermalink" data-description="Paragraph"><a href="#prob-car-rental-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="5in"></div>
+<div class="autopermalink" data-description="Example 7.1"><a href="#prob-car-rental" title="Copy heading and permalink for Example 7.1" aria-label="Copy heading and permalink for Example 7.1">🔗</a></div></article><div class="para" id="p-10-2-overview-5"> <div class="autopermalink" data-description="Paragraph"><a href="#p-10-2-overview-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="onepage" id="p-10-2-long-term"><div class="para logical" id="p-10-2-long-term-2">
+<div class="para">Recall from <a href="Section-4-9.html#handout-section-4-9-markov" class="internal" title="Handout: 4.9/5.9 Markov Chains">Section 4.9/5.9 Markov Chains</a>, that for Markov Chain problems involving a regular stochastic matrix <span class="process-math">\(P\text{,}\)</span> we can find the unique steady-state vector <span class="process-math">\(\vec q\)</span> by finding the <em class="emphasis">unique</em> probability eigenvector corresponding to an eigenvalue of <span class="process-math">\(\lambda = 1\text{.}\)</span> This involves solving the equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/handout-section-4-9-markov.html" id="p-10-2-long-term-2-6">
+\begin{equation*}
+P\vec q = \vec q\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#p-10-2-long-term-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="p-10-2-long-term-3">For the stochastic matrices <span class="process-math">\(G\text{,}\)</span> called Google Matrices, that we will create in our PageRank problems, it is going to be <em class="emphasis">extremely</em> difficult to solve <span class="process-math">\(G\vec q = \vec q\text{.}\)</span> So, we instead determine a different way to identify the steady-state vector.<div class="workspace" data-space="0.3in"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#p-10-2-long-term-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-regular-markov"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Convergence of Regular Stochastic Matrices.</span>
+</h4>
+<div class="para" id="thm-regular-markov-2-1">If <span class="process-math">\(P\)</span> is a regular <span class="process-math">\(m\times m\)</span> stochastic matrix with <span class="process-math">\(m\ge2\)</span> and with unique steady-state vector <span class="process-math">\(\vec q\text{,}\)</span> then:<div class="autopermalink" data-description="Paragraph"><a href="#thm-regular-markov-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="decimal ol-marker-2" id="thm-regular-markov-2-2">
+<li id="thm-regular-markov-2-2-1">
+<div class="para logical" id="thm-regular-markov-2-2-1-1">
+<div class="para">There is a stochastic matrix <span class="process-math">\(\Pi\)</span> such that</div>
+<div class="displaymath process-math" id="thm-regular-markov-2-2-1-1-2">
+\begin{equation*}
+\lim_{n\to\infty}P^n=\Pi\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-regular-markov-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#thm-regular-markov-2-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="thm-regular-markov-2-2-2">
+<div class="para" id="p-derived-thm-regular-markov-2-2-2">For any starting probability vector <span class="process-math">\(\vec x_0\text{,}\)</span> we have that<div class="displaymath process-math" id="thm-regular-markov-2-2-2-2">
+\begin{equation*}
+\lim_{n\rightarrow\infty}P^n\vec x_0 = \vec q\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#thm-regular-markov-2-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="thm-regular-markov-2-2-3">
+<div class="para" id="p-derived-thm-regular-markov-2-2-3">Each column of <span class="process-math">\(\Pi\)</span> equals <span class="process-math">\(\vec q\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#thm-regular-markov-2-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="thm-regular-markov-2-2-4">
+<div class="para" id="p-derived-thm-regular-markov-2-2-4">
+<span class="process-math">\(\vec q\)</span> is the unique eigenvector with eigenvalue <span class="process-math">\(1\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#thm-regular-markov-2-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="thm-regular-markov-2-2-5">
+<div class="para" id="p-derived-thm-regular-markov-2-2-5">All eigenvalues of <span class="process-math">\(P\)</span> satisfy <span class="process-math">\(|\lambda| \leq 1\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#thm-regular-markov-2-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+</ol>
+<div class="workspace" data-space="3in"></div>
+<div class="autopermalink" data-description="Theorem 7.3: Convergence of Regular Stochastic Matrices"><a href="#thm-regular-markov" title="Copy heading and permalink for Theorem 7.3: Convergence of Regular Stochastic Matrices" aria-label="Copy heading and permalink for Theorem 7.3: Convergence of Regular Stochastic Matrices">🔗</a></div></article><div class="para" id="p-10-2-long-term-5">Focusing on (3), we see that an alternative way to find the unique steady-state vector <span class="process-math">\(\vec q\)</span> is to take large powers of <span class="process-math">\(P\)</span> and see what vector the columns of <span class="process-math">\(P^n\)</span> are converging to. This <em class="emphasis">will</em> require a computer.<div class="autopermalink" data-description="Paragraph"><a href="#p-10-2-long-term-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="p-10-2-long-term-6"> <div class="autopermalink" data-description="Paragraph"><a href="#p-10-2-long-term-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="onepage" id="p-10-2-web-example"><article class="example example-like" id="ex-10-2-web"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="ex-10-2-web-1-1">Suppose we have 5 web pages that link to each other according to the following diagram:<div class="autopermalink" data-description="Paragraph"><a href="#ex-10-2-web-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/img-10-2-web.svg" role="img" class="contained" alt="Directed graph of 5 web page links, where nodes represent pages and arrows represent hyperlinks used to build a transition matrix."></div> <div class="para" id="ex-10-2-web-1-3">Note that Page 1 has direct links to pages <span class="process-math">\(\underline{\hspace{1.5in}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-10-2-web-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-10-2-web-1-4">If a user on a page in this web is <em class="emphasis">equally likely</em> to go to any of the pages that their page links to, construct a stochastic matrix that represents how users navigate this web.<div class="autopermalink" data-description="Paragraph"><a href="#ex-10-2-web-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Example 7.4"><a href="#ex-10-2-web" title="Copy heading and permalink for Example 7.4" aria-label="Copy heading and permalink for Example 7.4">🔗</a></div></article><div class="para logical" id="p-10-2-web-example-3">
+<ul class="disc" id="p-10-2-web-example-3-1">
+<li id="p-10-2-web-example-3-1-1">
+<div class="para" id="p-derived-p-10-2-web-example-3-1-1">Note that the matrix <span class="process-math">\(P\)</span> formed in <a href="Section-10-2.html#ex-10-2-web" class="xref" data-knowl="./knowl/xref/ex-10-2-web.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.4">Example 7.4</a> describes how users transition between pages in the web after clicking a single link.</div>
+<div class="autopermalink" data-description="Item"><a href="#p-10-2-web-example-3-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="p-10-2-web-example-3-1-2">
+<div class="para" id="p-derived-p-10-2-web-example-3-1-2">What does <span class="process-math">\(P^2\)</span> describe?</div>
+<div class="workspace" data-space="0.5in"></div>
+<div class="autopermalink" data-description="Item"><a href="#p-10-2-web-example-3-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="p-10-2-web-example-3-1-3">
+<div class="para" id="p-derived-p-10-2-web-example-3-1-3">What does <span class="process-math">\(\displaystyle\lim_{n\rightarrow \infty} P^n\)</span> describe?</div>
+<div class="workspace" data-space="0.5in"></div>
+<div class="autopermalink" data-description="Item"><a href="#p-10-2-web-example-3-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="p-10-2-web-example-3-1-4">
+<div class="para" id="p-derived-p-10-2-web-example-3-1-4">By <a href="Section-10-2.html#thm-regular-markov" class="xref" data-knowl="./knowl/xref/thm-regular-markov.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 7.3: Convergence of Regular Stochastic Matrices">Theorem 7.3</a>, if <span class="process-math">\(P \)</span> is a regular stochastic matrix, then<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-regular-markov.html" id="p-10-2-web-example-3-1-4-3">
+\begin{equation*}
+\lim_{n\rightarrow \infty} P^n = \begin{bmatrix} \vec q \amp \vec q \amp \cdots \amp \vec q \end{bmatrix}\text{.}
+\end{equation*}
+</div>Each entry of the unique steady-state vector <span class="process-math">\(\vec q \)</span> is describing the how likely someone is to be on that webpage in the long run.</div>
+<div class="autopermalink" data-description="Item"><a href="#p-10-2-web-example-3-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="p-10-2-web-example-3-1-5">
+<div class="para" id="p-derived-p-10-2-web-example-3-1-5">Therefore, <span class="process-math">\(\vec q\)</span> is describing the <em class="emphasis">popularity</em> or <em class="emphasis">importance</em> of each page in the web.</div>
+<div class="autopermalink" data-description="Item"><a href="#p-10-2-web-example-3-1-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="p-10-2-web-example-3-1-6">
+<div class="para" id="p-derived-p-10-2-web-example-3-1-6">The <dfn class="terminology">PageRank</dfn> is the ranking assigned to each page based on its importance, which is determined from <span class="process-math">\(\vec q\text{.}\)</span> The highest ranked page has PageRank 1, the second has PageRank 2, and so on.</div>
+<div class="autopermalink" data-description="Item"><a href="#p-10-2-web-example-3-1-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#p-10-2-web-example-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="p-10-2-web-example-4">Is the matrix <span class="process-math">\(P\)</span> from <a href="Section-10-2.html#ex-10-2-web" class="xref" data-knowl="./knowl/xref/ex-10-2-web.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.4">Example 7.4</a> regular?<div class="autopermalink" data-description="Paragraph"><a href="#p-10-2-web-example-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="onepage" id="p-10-2-adjustment1"><article class="note remark-like" id="note-adjust1"><h4 class="heading">
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Adjustment 1.</span>
+</h4>
+<div class="para" id="note-adjust1-2-1">If a page has no outgoing links, a user moves to any page with equal probability. We call this modified stochastic matrix to <span class="process-math">\(P_*\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#note-adjust1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Note 7.5: Adjustment 1"><a href="#note-adjust1" title="Copy heading and permalink for Note 7.5: Adjustment 1" aria-label="Copy heading and permalink for Note 7.5: Adjustment 1">🔗</a></div></article><article class="example example-like" id="p-10-2-adjustment1-3"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="p-10-2-adjustment1-3-1-1">With this adjustment, what is <span class="process-math">\(P_*\)</span> for <a href="Section-10-2.html#ex-10-2-web" class="xref" data-knowl="./knowl/xref/ex-10-2-web.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.4">Example 7.4</a>? Is it regular?<div class="autopermalink" data-description="Paragraph"><a href="#p-10-2-adjustment1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Example 7.6"><a href="#p-10-2-adjustment1-3" title="Copy heading and permalink for Example 7.6" aria-label="Copy heading and permalink for Example 7.6">🔗</a></div></article><div class="para" id="p-10-2-adjustment1-4"> <div class="autopermalink" data-description="Paragraph"><a href="#p-10-2-adjustment1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="note remark-like" id="note-adjust2"><h4 class="heading">
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Adjustment 2.</span>
+</h4>
+<div class="para logical" id="note-adjust2-2-1">
+<div class="para">A user at any page will navigate to any page among those that their webpage links to with equal probability <span class="process-math">\(p\text{,}\)</span> and to any page in the web with equal probability <span class="process-math">\(1-p\text{.}\)</span> Then, the stochastic matrix becomes</div>
+<div class="displaymath process-math" id="note-adjust2-2-1-3">
+\begin{equation*}
+G = pP_* + (1-p)K\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(K\)</span> is an <span class="process-math">\(n \times n\)</span> stochastic matrix with every entry equal to <span class="process-math">\(\frac{1}{n}\text{.}\)</span> The matrix <span class="process-math">\(G\)</span> is called the <dfn class="terminology">Google Matrix</dfn>. The value <span class="process-math">\(p\)</span> is known as the <dfn class="terminology">damping factor</dfn>. Google is said to use <span class="process-math">\(p=0.85\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#note-adjust2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Note 7.7: Adjustment 2"><a href="#note-adjust2" title="Copy heading and permalink for Note 7.7: Adjustment 2" aria-label="Copy heading and permalink for Note 7.7: Adjustment 2">🔗</a></div></article><article class="example example-like" id="ex-10-2-goog"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="ex-10-2-goog-1-1">With this adjustment and with <span class="process-math">\(p=0.85\text{,}\)</span> what is <span class="process-math">\(G\)</span> for <a href="Section-10-2.html#ex-10-2-web" class="xref" data-knowl="./knowl/xref/ex-10-2-web.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.4">Example 7.4</a>? Is it regular?<div class="autopermalink" data-description="Paragraph"><a href="#ex-10-2-goog-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Example 7.8"><a href="#ex-10-2-goog" title="Copy heading and permalink for Example 7.8" aria-label="Copy heading and permalink for Example 7.8">🔗</a></div></article><div class="para" id="p-10-2-adjustment1-7"> <div class="autopermalink" data-description="Paragraph"><a href="#p-10-2-adjustment1-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="onepage" id="p-10-2-computing-pagerank"><div class="para logical" id="p-10-2-computing-pagerank-2">
+<div class="para">Because <span class="process-math">\(G\)</span> is a regular stochastic matrix, we have that for any initial probability vector we have that</div>
+<div class="displaymath process-math" id="p-10-2-computing-pagerank-2-2">
+\begin{equation*}
+\lim_{n\rightarrow \infty}G^n\vec x_0 \to \vec q\text{.}
+\end{equation*}
+</div>
+<div class="para">In practice, we can compute the PageRank for each page in the web by evaluating</div>
+<div class="displaymath process-math" id="p-10-2-computing-pagerank-2-3">
+\begin{equation*}
+G^n\vec x_0
+\end{equation*}
+</div>
+<div class="para">for large <span class="process-math">\(n\text{.}\)</span> The elements of the resulting vector give the PageRanks of each page in the web.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#p-10-2-computing-pagerank-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="p-10-2-computing-pagerank-3"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="p-10-2-computing-pagerank-3-1-1">
+<div class="para">Let <span class="process-math">\(G\)</span> be the Google matrix from <a href="Section-10-2.html#ex-10-2-goog" class="xref" data-knowl="./knowl/xref/ex-10-2-goog.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.8">Example 7.8</a>. Assuming</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-10-2-goog.html" id="p-10-2-computing-pagerank-3-1-1-3">
+\begin{equation*}
+G^{10} = \begin{bmatrix} 0.2517 \amp 0.25171 \amp 0.25171 \amp 0.25171 \amp 0.25171 \\ 0.2985 \amp 0.29855 \amp 0.29836 \amp 0.29835 \amp 0.2985 \\ 0.17661 \amp 0.17655 \amp 0.17674 \amp 0.17675 \amp 0.17661 \\ 0.15676 \amp 0.15677 \amp 0.15677 \amp 0.15676 \amp 0.15677 \\ 0.11643 \amp 0.11641 \amp 0.11641 \amp 0.11642 \amp 0.11642 \end{bmatrix}\text{,}
+\end{equation*}
+</div>
+<div class="para">determine the PageRank of each of the pages in the web.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#p-10-2-computing-pagerank-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1in"></div>
+<div class="autopermalink" data-description="Example 7.9"><a href="#p-10-2-computing-pagerank-3" title="Copy heading and permalink for Example 7.9" aria-label="Copy heading and permalink for Example 7.9">🔗</a></div></article><div class="para" id="p-10-2-computing-pagerank-4"> <div class="autopermalink" data-description="Paragraph"><a href="#p-10-2-computing-pagerank-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="remark remark-like" id="p-10-2-computing-pagerank-5"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="p-10-2-computing-pagerank-5-1-1">
+<ul class="disc" id="p-10-2-computing-pagerank-5-1-1-1">
+<li id="p-10-2-computing-pagerank-5-1-1-1-1">
+<div class="para" id="p-derived-p-10-2-computing-pagerank-5-1-1-1-1">When PageRank was devised, in 1996, Yahoo! used humans to provide a "index for the Internet", which was 10 million pages.</div>
+<div class="autopermalink" data-description="Item"><a href="#p-10-2-computing-pagerank-5-1-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="p-10-2-computing-pagerank-5-1-1-1-2">
+<div class="para" id="p-derived-p-10-2-computing-pagerank-5-1-1-1-2">The PageRank algortihm was produced as a competing method. The patent was awarded to Stanford University, and exclusively licensed to the newly formed Google corporation.</div>
+<div class="autopermalink" data-description="Item"><a href="#p-10-2-computing-pagerank-5-1-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="p-10-2-computing-pagerank-5-1-1-1-3">
+<div class="para" id="p-derived-p-10-2-computing-pagerank-5-1-1-1-3">Brin and Page combined the PageRank algorithm with a webcrawler to provide regular updates to the Google matrix for the web.</div>
+<div class="autopermalink" data-description="Item"><a href="#p-10-2-computing-pagerank-5-1-1-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="p-10-2-computing-pagerank-5-1-1-1-4">
+<div class="para" id="p-derived-p-10-2-computing-pagerank-5-1-1-1-4">The explosive growth of the web soon overwhelmed human based approaches to searching the internet.</div>
+<div class="autopermalink" data-description="Item"><a href="#p-10-2-computing-pagerank-5-1-1-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#p-10-2-computing-pagerank-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 7.10"><a href="#p-10-2-computing-pagerank-5" title="Copy heading and permalink for Remark 7.10" aria-label="Copy heading and permalink for Remark 7.10">🔗</a></div></article></section><section class="onepage" id="p-10-2-history"><article class="example example-like" id="p-10-2-history-1"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="introduction" id="p-10-2-history-1-1">
+<div class="para" id="p-10-2-history-1-1-1">Consider the following webpage:<div class="autopermalink" data-description="Paragraph"><a href="#p-10-2-history-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/./7-webpage.png" class="contained" alt="A web containing 7 pages and the links between them."></div>
+</div>
+<article class="task exercise-like" id="p-10-2-history-1-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="p-10-2-history-1-2-1-1">Determine the Google matrix <span class="process-math">\(G\)</span> for this web, with <span class="process-math">\(p = 0.85\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#p-10-2-history-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="3in"></div>
+<div class="autopermalink" data-description="Task 7.11.a"><a href="#p-10-2-history-1-2" title="Copy heading and permalink for Task 7.11.a" aria-label="Copy heading and permalink for Task 7.11.a">🔗</a></div></article><article class="task exercise-like" id="p-10-2-history-1-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para logical" id="p-10-2-history-1-3-1-1">
+<div class="para">Determine the PageRank of each page if</div>
+<div class="displaymath process-math" id="p-10-2-history-1-3-1-1-1">
+\begin{equation*}
+G^{12} = \begin{bmatrix} 0.11627 \amp 0.1163 \amp 0.1163 \amp 0.1163 \amp 0.11631 \amp 0.11628 \amp 0.1163 \\ 0.16859 \amp 0.16856 \amp 0.16855 \amp 0.16856 \amp 0.16855 \amp 0.16859 \amp 0.16856 \\ 0.19129 \amp 0.19126 \amp 0.19125 \amp 0.19126 \amp 0.19124 \amp 0.19129 \amp 0.19126 \\ 0.09883 \amp 0.098847 \amp 0.09885 \amp 0.098845 \amp 0.098855 \amp 0.09885 \amp 0.098845 \\ 0.16402 \amp 0.16406 \amp 0.16407 \amp 0.16406 \amp 0.16408 \amp 0.16402 \amp 0.16406 \\ 0.16859 \amp 0.16856 \amp 0.16855 \amp 0.16856 \amp 0.16855 \amp 0.16859 \amp 0.16856 \\ 0.092403 \amp 0.092415 \amp 0.092418 \amp 0.092424 \amp 0.092421 \amp 0.092403 \amp 0.092414 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#p-10-2-history-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1in"></div>
+<div class="autopermalink" data-description="Task 7.11.b"><a href="#p-10-2-history-1-3" title="Copy heading and permalink for Task 7.11.b" aria-label="Copy heading and permalink for Task 7.11.b">🔗</a></div></article><div class="autopermalink" data-description="Example 7.11"><a href="#p-10-2-history-1" title="Copy heading and permalink for Example 7.11" aria-label="Copy heading and permalink for Example 7.11">🔗</a></div></article></section><div class="autopermalink" data-description="Handout: 10.2 Google PageRank"><a href="#handout-section-10-2-Google-Page-Rank" title="Copy heading and permalink for Handout: 10.2 Google PageRank" aria-label="Copy heading and permalink for Handout: 10.2 Google PageRank">🔗</a></div></section><div class="autopermalink" data-description="Section: 10.2 Google PageRank"><a href="#Section-10-2" title="Copy heading and permalink for Section: 10.2 Google PageRank" aria-label="Copy heading and permalink for Section: 10.2 Google PageRank">🔗</a></div></section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="chapter-7.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

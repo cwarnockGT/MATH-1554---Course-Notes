@@ -3365,6 +3365,132 @@ var ptx_lunr_docs = [
   "number": "6.66",
   "title": "",
   "body": "  Continuing from , we will now fit a somewhat trigonometric curve to the data: . What do you notice about your least-squares solution?    Note that the four equations which come from our data points and this model are: This leads to the system . Surprisingly, this system is consistent . Note that . Therefore, the curve of this type which perfectly fits the data is . The graph below displays how this model perfectly fits the four data points.   A graph containing the curve of the above type which perfectly fits the four points (-1,-3), (0,0), (1,3), (2,2).    "
+},
+{
+  "id": "Section-10-2",
+  "level": "1",
+  "url": "Section-10-2.html",
+  "type": "Section",
+  "number": "",
+  "title": "10.2 Google PageRank",
+  "body": " 10.2 Google PageRank   10.2 Google PageRank   Overview   Topics   Review of Markov chains  Steady-state theorem for Markov chains  Modeling website usage with Markov chains  Computing PageRank     Goals   Determine whether a stochastic matrix is regular.  Use matrix powers and theorems to describe long-term behavior.  Construct transition and Google matrices and compute PageRank.      Recall : A rental company has three locations A, B, and C.     rented from    A B C    A .8 .1 .2    returned to B .2 .6 .3    C .0 .3 .5     There are 18 cars at each location initially. What happens in the long run?       Long-Term Behavior  Recall from Section 4.9\/5.9 Markov Chains , that for Markov Chain problems involving a regular stochastic matrix , we can find the unique steady-state vector by finding the unique probability eigenvector corresponding to an eigenvalue of . This involves solving the equation .  For the stochastic matrices , called Google Matrices, that we will create in our PageRank problems, it is going to be extremely difficult to solve . So, we instead determine a different way to identify the steady-state vector.   Convergence of Regular Stochastic Matrices   If is a regular stochastic matrix with and with unique steady-state vector , then:    There is a stochastic matrix such that .   For any starting probability vector , we have that .  Each column of equals .  is the unique eigenvector with eigenvalue .  All eigenvalues of satisfy .     Focusing on (3), we see that an alternative way to find the unique steady-state vector is to take large powers of and see what vector the columns of are converging to. This will require a computer.     Example 1: A Web Graph    Suppose we have 5 web pages that link to each other according to the following diagram:    Directed graph of 5 web page links, where nodes represent pages and arrows represent hyperlinks used to build a transition matrix.   Note that Page 1 has direct links to pages .  If a user on a page in this web is equally likely to go to any of the pages that their page links to, construct a stochastic matrix that represents how users navigate this web.      Note that the matrix formed in describes how users transition between pages in the web after clicking a single link.  What does describe?  What does describe?  By , if is a regular stochastic matrix, then . Each entry of the unique steady-state vector is describing the how likely someone is to be on that webpage in the long run.  Therefore, is describing the popularity or importance of each page in the web.  The PageRank is the ranking assigned to each page based on its importance, which is determined from . The highest ranked page has PageRank 1, the second has PageRank 2, and so on.    Is the matrix from regular?    Adjustment 1: Dangling Nodes   Adjustment 1   If a page has no outgoing links, a user moves to any page with equal probability. We call this modified stochastic matrix to .      With this adjustment, what is for ? Is it regular?      Adjustment 2   A user at any page will navigate to any page among those that their webpage links to with equal probability , and to any page in the web with equal probability . Then, the stochastic matrix becomes , where is an stochastic matrix with every entry equal to . The matrix is called the Google Matrix . The value is known as the damping factor . Google is said to use .      With this adjustment and with , what is for ? Is it regular?       Computing PageRank  Because is a regular stochastic matrix, we have that for any initial probability vector we have that . In practice, we can compute the PageRank for each page in the web by evaluating for large . The elements of the resulting vector give the PageRanks of each page in the web.    Let be the Google matrix from . Assuming , determine the PageRank of each of the pages in the web.         When PageRank was devised, in 1996, Yahoo! used humans to provide a \"index for the Internet\", which was 10 million pages.  The PageRank algortihm was produced as a competing method. The patent was awarded to Stanford University, and exclusively licensed to the newly formed Google corporation.  Brin and Page combined the PageRank algorithm with a webcrawler to provide regular updates to the Google matrix for the web.  The explosive growth of the web soon overwhelmed human based approaches to searching the internet.          Consider the following webpage:   A web containing 7 pages and the links between them.      Determine the Google matrix for this web, with .      Determine the PageRank of each page if .       "
+},
+{
+  "id": "obj-10-2-topics-goals",
+  "level": "2",
+  "url": "Section-10-2.html#obj-10-2-topics-goals",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   Review of Markov chains  Steady-state theorem for Markov chains  Modeling website usage with Markov chains  Computing PageRank   "
+},
+{
+  "id": "p-10-2-overview-3",
+  "level": "2",
+  "url": "Section-10-2.html#p-10-2-overview-3",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals   Determine whether a stochastic matrix is regular.  Use matrix powers and theorems to describe long-term behavior.  Construct transition and Google matrices and compute PageRank.   "
+},
+{
+  "id": "prob-car-rental",
+  "level": "2",
+  "url": "Section-10-2.html#prob-car-rental",
+  "type": "Example",
+  "number": "7.1",
+  "title": "",
+  "body": "  Recall : A rental company has three locations A, B, and C.     rented from    A B C    A .8 .1 .2    returned to B .2 .6 .3    C .0 .3 .5     There are 18 cars at each location initially. What happens in the long run?   "
+},
+{
+  "id": "thm-regular-markov",
+  "level": "2",
+  "url": "Section-10-2.html#thm-regular-markov",
+  "type": "Theorem",
+  "number": "7.3",
+  "title": "Convergence of Regular Stochastic Matrices.",
+  "body": " Convergence of Regular Stochastic Matrices   If is a regular stochastic matrix with and with unique steady-state vector , then:    There is a stochastic matrix such that .   For any starting probability vector , we have that .  Each column of equals .  is the unique eigenvector with eigenvalue .  All eigenvalues of satisfy .    "
+},
+{
+  "id": "ex-10-2-web",
+  "level": "2",
+  "url": "Section-10-2.html#ex-10-2-web",
+  "type": "Example",
+  "number": "7.4",
+  "title": "",
+  "body": "  Suppose we have 5 web pages that link to each other according to the following diagram:    Directed graph of 5 web page links, where nodes represent pages and arrows represent hyperlinks used to build a transition matrix.   Note that Page 1 has direct links to pages .  If a user on a page in this web is equally likely to go to any of the pages that their page links to, construct a stochastic matrix that represents how users navigate this web.   "
+},
+{
+  "id": "p-10-2-web-example-3",
+  "level": "2",
+  "url": "Section-10-2.html#p-10-2-web-example-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "PageRank "
+},
+{
+  "id": "note-adjust1",
+  "level": "2",
+  "url": "Section-10-2.html#note-adjust1",
+  "type": "Note",
+  "number": "7.5",
+  "title": "Adjustment 1.",
+  "body": " Adjustment 1   If a page has no outgoing links, a user moves to any page with equal probability. We call this modified stochastic matrix to .   "
+},
+{
+  "id": "p-10-2-adjustment1-3",
+  "level": "2",
+  "url": "Section-10-2.html#p-10-2-adjustment1-3",
+  "type": "Example",
+  "number": "7.6",
+  "title": "",
+  "body": "  With this adjustment, what is for ? Is it regular?   "
+},
+{
+  "id": "note-adjust2",
+  "level": "2",
+  "url": "Section-10-2.html#note-adjust2",
+  "type": "Note",
+  "number": "7.7",
+  "title": "Adjustment 2.",
+  "body": " Adjustment 2   A user at any page will navigate to any page among those that their webpage links to with equal probability , and to any page in the web with equal probability . Then, the stochastic matrix becomes , where is an stochastic matrix with every entry equal to . The matrix is called the Google Matrix . The value is known as the damping factor . Google is said to use .   "
+},
+{
+  "id": "ex-10-2-goog",
+  "level": "2",
+  "url": "Section-10-2.html#ex-10-2-goog",
+  "type": "Example",
+  "number": "7.8",
+  "title": "",
+  "body": "  With this adjustment and with , what is for ? Is it regular?   "
+},
+{
+  "id": "p-10-2-computing-pagerank-3",
+  "level": "2",
+  "url": "Section-10-2.html#p-10-2-computing-pagerank-3",
+  "type": "Example",
+  "number": "7.9",
+  "title": "",
+  "body": "  Let be the Google matrix from . Assuming , determine the PageRank of each of the pages in the web.   "
+},
+{
+  "id": "p-10-2-computing-pagerank-5",
+  "level": "2",
+  "url": "Section-10-2.html#p-10-2-computing-pagerank-5",
+  "type": "Remark",
+  "number": "7.10",
+  "title": "",
+  "body": "    When PageRank was devised, in 1996, Yahoo! used humans to provide a \"index for the Internet\", which was 10 million pages.  The PageRank algortihm was produced as a competing method. The patent was awarded to Stanford University, and exclusively licensed to the newly formed Google corporation.  Brin and Page combined the PageRank algorithm with a webcrawler to provide regular updates to the Google matrix for the web.  The explosive growth of the web soon overwhelmed human based approaches to searching the internet.     "
+},
+{
+  "id": "p-10-2-history-1",
+  "level": "2",
+  "url": "Section-10-2.html#p-10-2-history-1",
+  "type": "Example",
+  "number": "7.11",
+  "title": "",
+  "body": "  Consider the following webpage:   A web containing 7 pages and the links between them.      Determine the Google matrix for this web, with .      Determine the PageRank of each page if .    "
 }
 ]
 
