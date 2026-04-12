@@ -1,0 +1,212 @@
+<handout xml:id="handout-section-7-1-spectral">
+  <title>7.1 Diagonalization of Symmetric Matrices</title>
+
+  <page xml:id="p-7-1-overview">
+    <title>Overview</title>
+
+    <objectives xml:id="obj-7-1-topics-goals">
+      <title>Topics</title>
+      <ul>
+        <li>Symmetric matrices</li>
+        <li>Orthogonal diagonalization</li>
+        <li>Spectral decomposition</li>
+      </ul>
+    </objectives>
+
+    <objectives workspace="0.2in">      
+      <title>Goals</title>
+      <ul>
+        <li>Construct an orthogonal diagonalization <m>A=PDP^T</m> of a symmetric matrix.</li>
+        <li>Construct a spectral decomposition of a matrix.</li>
+      </ul>
+    </objectives>
+
+    <definition xml:id="def-symmetric">
+      <title>Symmetric Matrix</title>
+      <statement>
+        <p>
+          A matrix <m>A</m> is <term>symmetric</term> if <m>A^T=A</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <example xml:id="ex-7-1-symmetric" workspace="1in">
+      <statement>
+        <p>
+          Which of the following matrices are symmetric? Let <m>a, b, </m> and <m>c</m> represent real numbers.
+        </p>
+        <me>
+          A=[a],\quad \quad
+          B=\begin{bmatrix} a \amp b\\ b \amp c\end{bmatrix},\quad \quad
+          C=\begin{bmatrix} a \amp b\\ 0 \amp 0\end{bmatrix},
+        </me>
+        <p workspace="1in"/>
+        <me>
+          D=\begin{bmatrix}4 \amp 2\\ 0 \amp 0\\ 0 \amp 0\end{bmatrix}, \quad \quad
+          E=\begin{bmatrix}
+            4 \amp 2 \amp 0 \amp 1\\
+            2 \amp 1 \amp 7 \amp 4\\
+            0 \amp 7 \amp 6 \amp 0\\
+            1 \amp 4 \amp 0 \amp 3
+          \end{bmatrix}.
+        </me>
+      </statement>
+    </example>
+
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-7-1-ata-symmetric">
+    <title><m>A^TA</m> Is Symmetric</title>
+
+    <note workspace="1in"> 
+        <p>
+        For any matrix <m>A</m> with columns <m>\vec a_1,\dots,\vec a_n</m>,
+        the matrix <m>A^TA</m> is symmetric and has entries given by dot products
+        of the columns of <m>A</m>.
+        </p>
+
+        <me>
+        A^TA =
+        \begin{bmatrix}
+            \vec a_1^T\vec a_1 \amp \cdots \amp \vec a_1^T\vec a_n\\
+            \vdots \amp \ddots \amp \vdots\\
+            \vec a_n^T\vec a_1 \amp \cdots \amp \vec a_n^T\vec a_n
+        \end{bmatrix}.
+        </me>
+    </note>
+
+
+    <theorem xml:id="thm-orth-eigenspaces" workspace="5in">
+      <title>Orthogonality of Eigenspaces</title>
+      <statement>
+        <p>
+          If <m>A</m> is <em>symmetric</em> and <m>\vec v_1,\vec v_2</m> are eigenvectors corresponding to
+          <em>distinct</em> eigenvalues, then <m>\vec v_1</m> and <m>\vec v_2</m> are <em>orthogonal</em>.
+        </p>
+        <p>
+          More generally, eigenspaces associated with distinct eigenvalues are orthogonal subspaces.
+        </p>
+      </statement>
+    </theorem>
+
+  </page>
+
+
+  <page xml:id="p-7-1-example-orth-diag">
+    <title>Example 1: Orthogonal Diagonalization</title>
+
+    <example xml:id="ex-7-1-orth-diag" workspace="true">
+      <statement>
+        <p>
+          Diagonalize <m>A</m> using an orthogonal matrix. The eigenvalues of <m>A</m> are given.
+        </p>
+        <me>
+          A=\begin{bmatrix}
+            0 \amp 0 \amp 1\\
+            0 \amp 1 \amp 0\\
+            1 \amp 0 \amp 0
+          \end{bmatrix},
+          \qquad \lambda=-1,\,1.
+        </me>
+      </statement>
+    </example>
+
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-7-1-spectral-theorem">
+    <title>Spectral Theorem</title>
+
+    <note workspace="0.5in">
+        <statement>
+            <p>
+                Recall that if <m>P</m> is an <em>orthogonal</em> matrix, then <m>P^{-1} = P^T</m>.
+            </p>
+        </statement>
+    </note>
+
+    <theorem xml:id="thm-spectral" workspace="true">
+      <title>Spectral Theorem</title>
+      <statement>
+        <p>
+          If <m>A</m> is an <m>n\times n</m> <em>symmetric</em> matrix, then:
+        </p>
+        <ol>
+          <li>All eigenvalues of <m>A</m> are real.</li>
+          <li>The dimension of each eigenspace equals its algebraic multiplicity.</li>
+          <li>Eigenspaces corresponding to distinct eigenvalues are orthogonal.</li>
+          <li>
+            <m>A</m> can be orthogonally diagonalized as
+            <m>A=PDP^T</m>, where <m>P</m> is orthogonal.
+          </li>
+        </ol>
+      </statement>
+    </theorem>
+
+    <p><nbsp/></p>
+
+
+    <theorem xml:id="thm-spectral-decomposition" workspace="true">
+      <title>Spectral Decomposition</title>
+      <statement>
+        <p>
+          Suppose <m>A </m> can be orthogonally diagonalized as <me>A=PDP^T = \begin{bmatrix} \vec u_1 \amp \cdots \amp \vec u_n\end{bmatrix} \begin{bmatrix} \lambda_1 \amp \cdots \amp 0 \\ \vdots \amp \ddots \amp \vdots \\ 0 \amp \cdots \amp \lambda_n \end{bmatrix}\begin{bmatrix}\vec u_1^T \\ \vdots \\ \vec u_n^T \end{bmatrix}</me>. Then <m>A</m> has the decomposition <me>A=\sum_{i=1}^n \lambda_i \vec u_i \vec u_i^T = \lambda_1 \vec u_1\vec u_1^T + \cdots + \lambda_n \vec u_n\vec u_n^T</me>. Note that each term <m>\lambda_i\vec u_i\vec u_i^T</m> is a rank 1 matrix.
+        </p>
+      </statement>
+    </theorem>
+  </page>
+
+
+  <page xml:id="p-7-1-example-spectral">
+
+    <example xml:id="ex-7-1-spectral" workspace="true">
+      <statement>
+        <p>
+          Construct a spectral decomposition of <m>A</m>, given its orthogonal diagonalization:
+        </p>
+        <me>
+          A=\begin{bmatrix}3 \amp 1\\ 1 \amp 3\end{bmatrix}
+          =
+          \begin{bmatrix}
+            \tfrac1{\sqrt2} \amp -\tfrac1{\sqrt2}\\
+            \tfrac1{\sqrt2} \amp \tfrac1{\sqrt2}
+          \end{bmatrix}
+          \begin{bmatrix}4 \amp 0\\ 0 \amp 2\end{bmatrix}
+          \begin{bmatrix}
+            \tfrac1{\sqrt2} \amp \tfrac1{\sqrt2}\\
+            -\tfrac1{\sqrt2} \amp \tfrac1{\sqrt2}
+          \end{bmatrix}.
+        </me>
+      </statement>
+    </example>
+
+    <p><nbsp/></p>
+
+  </page>
+
+  <page>
+    <note> 
+        <statement>
+            <p>
+                Note in the solution to <xref ref="ex-7-1-spectral"/> that if <m>\lambda_1 = 4</m> is the larger of the two eigenvalues and <m>\vec u_1</m> is a normalized eigenvector corresponding to <m>\lambda_1</m>, then <m>A \approx \lambda_1\vec u_1\vec u_1^T</m> is a close approximation of the matrix <m>A</m>. In fact, it is the closest approximation of <m>A</m> using a rank 1 matrix.
+            </p> 
+            <p> In general, if we label the eigenvalues of an <m>n \times n</m> symmetric matrix <m>A</m> in non-increasing order by magnitude, so <m>|\lambda_1| \geq |\lambda_2| \geq \cdots \geq |\lambda_n|</m>, then each matrix <me>\sum_{i=1}^j \lambda_i\vec u_i\vec u_i^T = \lambda_1\vec u_1\vec u_1^T + \cdots + \lambda_j\vec u_j \vec u_j^T</me> is the closest<m>^*</m> rank <m>j</m> approximation of <m>A</m>, which gets more accurate as <m>j</m> approaches <m>n</m>. 
+            </p>
+            <p>
+                <m>^*</m>: The distance between two matrices is measured by subtracting the two matrices and calculating the square root of the sums of the squares of the entries in the resulting matrix. This calculation is the same calculation used to calculate the distance between two vectors. By closest, we mean that there is no rank <m>j</m> matrix that is closer. There could be other rank <m>j</m> matrices that are as close.
+            </p>
+        </statement>
+    </note>
+    <example workspace="true">
+        <statement>
+            <p>
+                Construct a spectral decompositon of <me> A = \begin{bmatrix} 0 \amp 0 \amp 1 \\ 0 \amp 1 \amp 0 \\ 1 \amp 0 \amp 0 \end{bmatrix}</me>.
+            </p>
+        </statement>
+    </example>
+  </page>
+
+</handout>

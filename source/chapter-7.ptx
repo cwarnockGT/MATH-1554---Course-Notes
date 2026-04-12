@@ -12,6 +12,12 @@
     <title>10.2 Google PageRank</title>
       <xi:include href="./chapter-7-notes/section-10-2.ptx" />
   </section>
+
+  <section xml:id="Section-7-1">
+    <title>7.1 Diagonalization of Symmetric Matrices</title>
+      <xi:include href="./chapter-7-notes/section-7-1.ptx" />
+  </section>
+
   
 
 </chapter>
