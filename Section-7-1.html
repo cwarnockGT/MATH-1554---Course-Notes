@@ -14,7 +14,7 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>1.5 Solution Sets of Linear Systems</title>
+<title>7.1 Diagonalization of Symmetric Matrices</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -135,7 +135,7 @@ eBookConfig.enable_chatcodes =  false;
 <textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
 </div>
 </div>
-<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="Section-1-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-1.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="Section-1-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="Section-10-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-7.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\foo}{b^{ar}}
 \newcommand{\aug}{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
 \newcommand{\Nul}{\operatorname{Nul}}
@@ -154,9 +154,9 @@ eBookConfig.enable_chatcodes =  false;
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-chapter contains-active">
+<li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="chapter-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Linear Equations in Linear Algebra</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="Section-1-1.html" class="internal"><span class="title">1.1 Systems of Linear Equations</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-1-1.html#section-1-1-sol" class="internal"><span class="title">1.1 Systems of Linear Equations</span></a></div></li></ul>
@@ -173,9 +173,9 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="Section-1-4.html" class="internal"><span class="title">1.4 The Matrix Equation <span class="process-math">\(A \vec{x} = \vec{b}\)</span></span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-1-4.html#sec-1-4-matrix-equation" class="internal"><span class="title">1.4 The Matrix Equation <span class="process-math">\(A \vec{x} = \vec{b}\)</span></span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section contains-active">
+<li class="toc-item toc-section">
 <div class="toc-title-box"><a href="Section-1-5.html" class="internal"><span class="title">1.5 Solution Sets of Linear Systems</span></a></div>
-<ul class="structural toc-item-list active"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="Section-1-5.html#sec-1-5-homogeneous" class="internal"><span class="title">1.5 Homogeneous Systems and Parametric Vector Forms</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="Section-1-5.html#sec-1-5-homogeneous" class="internal"><span class="title">1.5 Homogeneous Systems and Parametric Vector Forms</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="Section-1-7.html" class="internal"><span class="title">1.7 Linear Independence</span></a></div>
@@ -294,16 +294,16 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="chapter-7.html" class="internal"><span class="codenumber">7</span> <span class="title">Google PageRank, Symmetric Matrices, and Quadratic Forms</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="Section-10-2.html" class="internal"><span class="title">10.2 Google PageRank</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-10-2.html#handout-section-10-2-Google-Page-Rank" class="internal"><span class="title">10.2 Google PageRank</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section">
+<li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="Section-7-1.html" class="internal"><span class="title">7.1 Diagonalization of Symmetric Matrices</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-7-1.html#handout-section-7-1-spectral" class="internal"><span class="title">7.1 Diagonalization of Symmetric Matrices</span></a></div></li></ul>
+<ul class="structural toc-item-list active"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-7-1.html#handout-section-7-1-spectral" class="internal"><span class="title">7.1 Diagonalization of Symmetric Matrices</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -318,10 +318,7 @@ eBookConfig.enable_chatcodes =  false;
         </label><label><input type="radio" name="papersize" value="letter">Letter
         </label>
 </form>
-<details class="print-options"><summary>Additional printing options</summary><div class="hide-solutions-options"><div class="hide-option">
-<label for="hide-solution-checkbox">Hide solutions</label><input type="checkbox" id="hide-solution-checkbox">
-</div></div>
-<div class="header-footer-options">
+<details class="print-options"><summary>Additional printing options</summary><div class="header-footer-options">
 <div class="header-option">
 <span class="title">Print headers</span><label>First page<input type="checkbox" id="print-first-page-header-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-header-checkbox" checked></label>
 </div>
@@ -336,194 +333,225 @@ eBookConfig.enable_chatcodes =  false;
 <button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
 </div>
 </div>
-<section class="section" id="Section-1-5"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">1.5 Solution Sets of Linear Systems</span>
+<section class="section" id="Section-7-1"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">7.1 Diagonalization of Symmetric Matrices</span>
 </h2>
-<section class="worksheet" id="sec-1-5-homogeneous" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
-<span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">1.5 Homogeneous Systems and Parametric Vector Forms</span><div class="print-links"><a href="?printpreview=sec-1-5-homogeneous" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+<section class="handout" id="handout-section-7-1-spectral" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
+<span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">7.1 Diagonalization of Symmetric Matrices</span><div class="print-links"><a href="?printpreview=handout-section-7-1-spectral" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h3>
-<section class="onepage" id="sec-1-5-homogeneous-2"><article class="objectives goal-like" id="sec-1-5-homogeneous-2-2"><h4 class="heading">
+<section class="onepage" id="p-7-1-overview"><article class="objectives goal-like" id="obj-7-1-topics-goals"><h4 class="heading">
 <span class="type">Objectives<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Topics</span>
 </h4>
-<ul class="disc" id="sec-1-5-homogeneous-2-2-2">
-<li id="sec-1-5-homogeneous-2-2-2-1">
-<div class="para" id="p-derived-sec-1-5-homogeneous-2-2-2-1">Homogeneous systems</div>
-<div class="autopermalink" data-description="Objective"><a href="#sec-1-5-homogeneous-2-2-2-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+<ul class="disc" id="obj-7-1-topics-goals-2">
+<li id="obj-7-1-topics-goals-2-1">
+<div class="para" id="p-derived-obj-7-1-topics-goals-2-1">Symmetric matrices</div>
+<div class="autopermalink" data-description="Objective"><a href="#obj-7-1-topics-goals-2-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
 </li>
-<li id="sec-1-5-homogeneous-2-2-2-2">
-<div class="para" id="p-derived-sec-1-5-homogeneous-2-2-2-2">Parametric vector forms of solutions to linear systems</div>
-<div class="autopermalink" data-description="Objective"><a href="#sec-1-5-homogeneous-2-2-2-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+<li id="obj-7-1-topics-goals-2-2">
+<div class="para" id="p-derived-obj-7-1-topics-goals-2-2">Orthogonal diagonalization</div>
+<div class="autopermalink" data-description="Objective"><a href="#obj-7-1-topics-goals-2-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="obj-7-1-topics-goals-2-3">
+<div class="para" id="p-derived-obj-7-1-topics-goals-2-3">Spectral decomposition</div>
+<div class="autopermalink" data-description="Objective"><a href="#obj-7-1-topics-goals-2-3" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
 </li>
 </ul>
-<div class="workspace" data-space="0.5in"></div>
-<div class="autopermalink" data-description="Objectives: Topics"><a href="#sec-1-5-homogeneous-2-2" title="Copy heading and permalink for Objectives: Topics" aria-label="Copy heading and permalink for Objectives: Topics">🔗</a></div></article><article class="objectives goal-like" id="sec-1-5-homogeneous-2-3"><h4 class="heading">
+<div class="autopermalink" data-description="Objectives: Topics"><a href="#obj-7-1-topics-goals" title="Copy heading and permalink for Objectives: Topics" aria-label="Copy heading and permalink for Objectives: Topics">🔗</a></div></article><article class="objectives goal-like" id="p-7-1-overview-3"><h4 class="heading">
 <span class="type">Objectives<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Goals</span>
 </h4>
-<ul class="disc" id="sec-1-5-homogeneous-2-3-2">
-<li id="sec-1-5-homogeneous-2-3-2-1">
-<div class="para" id="p-derived-sec-1-5-homogeneous-2-3-2-1">Express the solution set of a linear system in parametric vector form.</div>
-<div class="autopermalink" data-description="Objective"><a href="#sec-1-5-homogeneous-2-3-2-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+<ul class="disc" id="p-7-1-overview-3-2">
+<li id="p-7-1-overview-3-2-1">
+<div class="para" id="p-derived-p-7-1-overview-3-2-1">Construct an orthogonal diagonalization <span class="process-math">\(A=PDP^T\)</span> of a symmetric matrix.</div>
+<div class="autopermalink" data-description="Objective"><a href="#p-7-1-overview-3-2-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
 </li>
-<li id="sec-1-5-homogeneous-2-3-2-2">
-<div class="para" id="p-derived-sec-1-5-homogeneous-2-3-2-2">Provide a geometric interpretation of the solution set of a linear system.</div>
-<div class="autopermalink" data-description="Objective"><a href="#sec-1-5-homogeneous-2-3-2-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
-</li>
-<li id="sec-1-5-homogeneous-2-3-2-3">
-<div class="para" id="p-derived-sec-1-5-homogeneous-2-3-2-3">Characterize homogeneous linear systems using free variables, span, pivots, linear combinations, and echelon forms.</div>
-<div class="autopermalink" data-description="Objective"><a href="#sec-1-5-homogeneous-2-3-2-3" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+<li id="p-7-1-overview-3-2-2">
+<div class="para" id="p-derived-p-7-1-overview-3-2-2">Construct a spectral decomposition of a matrix.</div>
+<div class="autopermalink" data-description="Objective"><a href="#p-7-1-overview-3-2-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
 </li>
 </ul>
+<div class="workspace" data-space="0.2in"></div>
+<div class="autopermalink" data-description="Objectives: Goals"><a href="#p-7-1-overview-3" title="Copy heading and permalink for Objectives: Goals" aria-label="Copy heading and permalink for Objectives: Goals">🔗</a></div></article><article class="definition definition-like" id="def-symmetric"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Symmetric Matrix.</span>
+</h4>
+<div class="para" id="def-symmetric-2-1">A matrix <span class="process-math">\(A\)</span> is <dfn class="terminology">symmetric</dfn> if <span class="process-math">\(A^T=A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-symmetric-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 7.12: Symmetric Matrix"><a href="#def-symmetric" title="Copy heading and permalink for Definition 7.12: Symmetric Matrix" aria-label="Copy heading and permalink for Definition 7.12: Symmetric Matrix">🔗</a></div></article><article class="example example-like" id="ex-7-1-symmetric"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="ex-7-1-symmetric-1-1">Which of the following matrices are symmetric? Let <span class="process-math">\(a, b, \)</span> and <span class="process-math">\(c\)</span> represent real numbers.<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-1-symmetric-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-7-1-symmetric-1-2">
+\begin{equation*}
+A=[a],\quad \quad
+B=\begin{bmatrix} a \amp b\\ b \amp c\end{bmatrix},\quad \quad
+C=\begin{bmatrix} a \amp b\\ 0 \amp 0\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para" id="ex-7-1-symmetric-1-3">
+<div class="workspace" data-space="1in"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-1-symmetric-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-7-1-symmetric-1-4">
+\begin{equation*}
+D=\begin{bmatrix}4 \amp 2\\ 0 \amp 0\\ 0 \amp 0\end{bmatrix}, \quad \quad
+E=\begin{bmatrix}
+4 \amp 2 \amp 0 \amp 1\\
+2 \amp 1 \amp 7 \amp 4\\
+0 \amp 7 \amp 6 \amp 0\\
+1 \amp 4 \amp 0 \amp 3
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="workspace" data-space="1in"></div>
+<div class="autopermalink" data-description="Example 7.13"><a href="#ex-7-1-symmetric" title="Copy heading and permalink for Example 7.13" aria-label="Copy heading and permalink for Example 7.13">🔗</a></div></article><div class="para" id="p-7-1-overview-6"> <div class="autopermalink" data-description="Paragraph"><a href="#p-7-1-overview-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="onepage" id="p-7-1-ata-symmetric"><article class="note remark-like" id="p-7-1-ata-symmetric-2"><h4 class="heading">
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="p-7-1-ata-symmetric-2-1">For any matrix <span class="process-math">\(A\)</span> with columns <span class="process-math">\(\vec a_1,\dots,\vec a_n\text{,}\)</span> the matrix <span class="process-math">\(A^TA\)</span> is symmetric and has entries given by dot products of the columns of <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#p-7-1-ata-symmetric-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="p-7-1-ata-symmetric-2-2">
+\begin{equation*}
+A^TA =
+\begin{bmatrix}
+\vec a_1^T\vec a_1 \amp \cdots \amp \vec a_1^T\vec a_n\\
+\vdots \amp \ddots \amp \vdots\\
+\vec a_n^T\vec a_1 \amp \cdots \amp \vec a_n^T\vec a_n
+\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="workspace" data-space="1in"></div>
+<div class="autopermalink" data-description="Note 7.14"><a href="#p-7-1-ata-symmetric-2" title="Copy heading and permalink for Note 7.14" aria-label="Copy heading and permalink for Note 7.14">🔗</a></div></article><article class="theorem theorem-like" id="thm-orth-eigenspaces"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Orthogonality of Eigenspaces.</span>
+</h4>
+<div class="para" id="thm-orth-eigenspaces-2-1">If <span class="process-math">\(A\)</span> is <em class="emphasis">symmetric</em> and <span class="process-math">\(\vec v_1,\vec v_2\)</span> are eigenvectors corresponding to <em class="emphasis">distinct</em> eigenvalues, then <span class="process-math">\(\vec v_1\)</span> and <span class="process-math">\(\vec v_2\)</span> are <em class="emphasis">orthogonal</em>.<div class="autopermalink" data-description="Paragraph"><a href="#thm-orth-eigenspaces-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="thm-orth-eigenspaces-2-2">More generally, eigenspaces associated with distinct eigenvalues are orthogonal subspaces.<div class="autopermalink" data-description="Paragraph"><a href="#thm-orth-eigenspaces-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="5in"></div>
+<div class="autopermalink" data-description="Theorem 7.15: Orthogonality of Eigenspaces"><a href="#thm-orth-eigenspaces" title="Copy heading and permalink for Theorem 7.15: Orthogonality of Eigenspaces" aria-label="Copy heading and permalink for Theorem 7.15: Orthogonality of Eigenspaces">🔗</a></div></article></section><section class="onepage" id="p-7-1-example-orth-diag"><article class="example example-like" id="ex-7-1-orth-diag"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="ex-7-1-orth-diag-1-1">Diagonalize <span class="process-math">\(A\)</span> using an orthogonal matrix. The eigenvalues of <span class="process-math">\(A\)</span> are given.<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-1-orth-diag-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-7-1-orth-diag-1-2">
+\begin{equation*}
+A=\begin{bmatrix}
+0 \amp 0 \amp 1\\
+0 \amp 1 \amp 0\\
+1 \amp 0 \amp 0
+\end{bmatrix},
+\qquad \lambda=-1,\,1.
+\end{equation*}
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Example 7.16"><a href="#ex-7-1-orth-diag" title="Copy heading and permalink for Example 7.16" aria-label="Copy heading and permalink for Example 7.16">🔗</a></div></article><div class="para" id="p-7-1-example-orth-diag-3"> <div class="autopermalink" data-description="Paragraph"><a href="#p-7-1-example-orth-diag-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="onepage" id="p-7-1-spectral-theorem"><article class="note remark-like" id="p-7-1-spectral-theorem-2"><h4 class="heading">
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="p-7-1-spectral-theorem-2-1-1">Recall that if <span class="process-math">\(P\)</span> is an <em class="emphasis">orthogonal</em> matrix, then <span class="process-math">\(P^{-1} = P^T\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#p-7-1-spectral-theorem-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="workspace" data-space="0.5in"></div>
-<div class="autopermalink" data-description="Objectives: Goals"><a href="#sec-1-5-homogeneous-2-3" title="Copy heading and permalink for Objectives: Goals" aria-label="Copy heading and permalink for Objectives: Goals">🔗</a></div></article><div class="para" id="sec-1-5-homogeneous-2-4"> <div class="autopermalink" data-description="Paragraph"><a href="#sec-1-5-homogeneous-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<article class="definition definition-like" id="def-homogeneous"><h4 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.41</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Homogeneous and inhomogeneous systems.</span>
+<div class="autopermalink" data-description="Note 7.17"><a href="#p-7-1-spectral-theorem-2" title="Copy heading and permalink for Note 7.17" aria-label="Copy heading and permalink for Note 7.17">🔗</a></div></article><article class="theorem theorem-like" id="thm-spectral"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Spectral Theorem.</span>
 </h4>
-<div class="para" id="def-homogeneous-2-1">Linear systems of the form <span class="process-math">\(A\vec{x} = \vec{0}\)</span> are <dfn class="terminology">homogeneous</dfn>. Linear systems of the form <span class="process-math">\(A\vec{x} = \vec{b}\)</span> (with <span class="process-math">\(\vec{b} \neq \vec{0}\)</span>) are <dfn class="terminology">inhomogeneous</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#def-homogeneous-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="thm-spectral-2-1">If <span class="process-math">\(A\)</span> is an <span class="process-math">\(n\times n\)</span> <em class="emphasis">symmetric</em> matrix, then:<div class="autopermalink" data-description="Paragraph"><a href="#thm-spectral-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="thm-spectral-2-2">
+<li id="thm-spectral-2-2-1">
+<div class="para" id="p-derived-thm-spectral-2-2-1">All eigenvalues of <span class="process-math">\(A\)</span> are real.</div>
+<div class="autopermalink" data-description="Item a"><a href="#thm-spectral-2-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="thm-spectral-2-2-2">
+<div class="para" id="p-derived-thm-spectral-2-2-2">The dimension of each eigenspace equals its algebraic multiplicity.</div>
+<div class="autopermalink" data-description="Item b"><a href="#thm-spectral-2-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+<li id="thm-spectral-2-2-3">
+<div class="para" id="p-derived-thm-spectral-2-2-3">Eigenspaces corresponding to distinct eigenvalues are orthogonal.</div>
+<div class="autopermalink" data-description="Item c"><a href="#thm-spectral-2-2-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+</li>
+<li id="thm-spectral-2-2-4">
+<div class="para" id="p-derived-thm-spectral-2-2-4">
+<span class="process-math">\(A\)</span> can be orthogonally diagonalized as <span class="process-math">\(A=PDP^T\text{,}\)</span> where <span class="process-math">\(P\)</span> is orthogonal.</div>
+<div class="autopermalink" data-description="Item d"><a href="#thm-spectral-2-2-4" title="Copy heading and permalink for Item d" aria-label="Copy heading and permalink for Item d">🔗</a></div>
+</li>
+</ol>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Theorem 7.18: Spectral Theorem"><a href="#thm-spectral" title="Copy heading and permalink for Theorem 7.18: Spectral Theorem" aria-label="Copy heading and permalink for Theorem 7.18: Spectral Theorem">🔗</a></div></article><div class="para" id="p-7-1-spectral-theorem-4"> <div class="autopermalink" data-description="Paragraph"><a href="#p-7-1-spectral-theorem-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="workspace" data-space=".3in"></div>
-<div class="autopermalink" data-description="Definition 1.41: Homogeneous and inhomogeneous systems"><a href="#def-homogeneous" title="Copy heading and permalink for Definition 1.41: Homogeneous and inhomogeneous systems" aria-label="Copy heading and permalink for Definition 1.41: Homogeneous and inhomogeneous systems">🔗</a></div></article><div class="para" id="sec-1-5-homogeneous-2-7"> <div class="autopermalink" data-description="Paragraph"><a href="#sec-1-5-homogeneous-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="sec-1-5-homogeneous-2-8">Because homogeneous systems always have the <em class="emphasis">trivial solution</em> <span class="process-math">\(\vec{x} = \vec{0}\text{,}\)</span> the interesting question is whether they have any <em class="emphasis">nontrivial</em> solutions.<div class="workspace" data-space="1in"></div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-1-5-homogeneous-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="sec-1-5-homogeneous-2-9"> <div class="autopermalink" data-description="Paragraph"><a href="#sec-1-5-homogeneous-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="onepage" id="sec-1-5-homogeneous-3"><article class="example example-like" id="ex-homogeneous-1"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.42</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Identify free variables and solution set.</span>
+<article class="theorem theorem-like" id="thm-spectral-decomposition"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Spectral Decomposition.</span>
 </h4>
-<div class="para" id="ex-homogeneous-1-2-1">Identify the free variables and the solution set of the homogeneous system:<div class="autopermalink" data-description="Paragraph"><a href="#ex-homogeneous-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="displaymath process-math" id="ex-homogeneous-1-2-2">
+<div class="para logical" id="thm-spectral-decomposition-2-1">
+<div class="para">Suppose <span class="process-math">\(A \)</span> can be orthogonally diagonalized as</div>
+<div class="displaymath process-math" id="thm-spectral-decomposition-2-1-2">
 \begin{equation*}
-\begin{aligned}
-x_1 + 3x_2 + x_3 \amp= 0 \\
-2x_1 - x_2 - 5x_3 \amp= 0 \\
-x_1 \phantom{+3x_2} - 2x_3 \amp= 0
-\end{aligned}
+A=PDP^T = \begin{bmatrix} \vec u_1 \amp \cdots \amp \vec u_n\end{bmatrix} \begin{bmatrix} \lambda_1 \amp \cdots \amp 0 \\ \vdots \amp \ddots \amp \vdots \\ 0 \amp \cdots \amp \lambda_n \end{bmatrix}\begin{bmatrix}\vec u_1^T \\ \vdots \\ \vec u_n^T \end{bmatrix}\text{.}
 \end{equation*}
 </div>
-<div class="solutions"><details id="ex-homogeneous-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="ex-homogeneous-1-3-1">Since this is a homogeneous system, we know it has the trivial solution <span class="process-math">\(\vec x = \vec 0\)</span> as a solution. However, we want to find <em class="emphasis">all</em> solutions. So, let’s solve the system by simplifying the augmented matrix.<div class="autopermalink" data-description="Paragraph"><a href="#ex-homogeneous-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="ex-homogeneous-1-3-2">Note: you do not have to form the augmented matrix and can instead row reduce <span class="process-math">\(A\)</span> since this is a homogeneous system and row operations will not affected the augmented <span class="process-math">\(\vec 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-homogeneous-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical" id="ex-homogeneous-1-3-3">
-<div class="displaymath process-math" id="ex-homogeneous-1-3-3-1">
+<div class="para">Then <span class="process-math">\(A\)</span> has the decomposition</div>
+<div class="displaymath process-math" id="thm-spectral-decomposition-2-1-4">
 \begin{equation*}
-\begin{bmatrix} 1 \amp 3 \amp 1 \amp \rvert \amp 0 \\ 2 \amp -1 \amp -5 \amp \rvert \amp 0 \\ 1 \amp 0 \amp -2 \amp \rvert \amp 0 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 3 \amp 1 \amp \rvert \amp 0 \\ 0 \amp -7 \amp -7 \amp \rvert \amp 0 \\ 0 \amp -3 \amp -3 \amp \rvert \amp 0 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp -2 \amp \rvert \amp 0 \\ 0 \amp 1 \amp 1 \amp \rvert \amp 0 \\ 0 \amp 0 \amp 0 \amp \rvert \amp 0 \end{bmatrix}
+A=\sum_{i=1}^n \lambda_i \vec u_i \vec u_i^T = \lambda_1 \vec u_1\vec u_1^T + \cdots + \lambda_n \vec u_n\vec u_n^T\text{.}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-homogeneous-1-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Note that each term <span class="process-math">\(\lambda_i\vec u_i\vec u_i^T\)</span> is a rank 1 matrix.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-spectral-decomposition-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="ex-homogeneous-1-3-4">
-<div class="para">Since the third column does not contain a pivot, we have that <span class="process-math">\(x_3\)</span> is a free variable, so we can set <span class="process-math">\(x_3 = t \in \mathbb{R}\text{.}\)</span> Converting the second row of the RREF above into an equation and solving for <span class="process-math">\(x_2\)</span> yields</div>
-<div class="displaymath process-math" id="ex-homogeneous-1-3-4-4">
-\begin{equation*}
-x_2 + x_3 = 0 \quad \implies \quad x_2 = -x_3 \quad \implies \quad x_2 = -t
-\end{equation*}
-</div>
-<div class="para">Similarly, we can use the first row of the RREF and solve for <span class="process-math">\(x_1\)</span> to get</div>
-<div class="displaymath process-math" id="ex-homogeneous-1-3-4-6">
-\begin{equation*}
-x_1 - 2x_3 = 0 \quad \implies \quad x_1 = 2x_3 \quad \implies \quad x_1 = 2t
-\end{equation*}
-</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-homogeneous-1-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="ex-homogeneous-1-3-5">Therefore, the solutions to the system are<div class="autopermalink" data-description="Paragraph"><a href="#ex-homogeneous-1-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical" id="ex-homogeneous-1-3-6">
-<div class="displaymath process-math" id="ex-homogeneous-1-3-6-1">
-\begin{equation*}
-\vec x = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \begin{bmatrix} 2t \\ -t \\ t \end{bmatrix} = t\begin{bmatrix} 2 \\ -1 \\ 1 \end{bmatrix}, t \in \mathbb{R}
-\end{equation*}
-</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-homogeneous-1-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical" id="ex-homogeneous-1-3-7">
-<div class="para">Writing the solution set in terms of the parameter <span class="process-math">\(t\)</span> is what is known as <dfn class="terminology">parametric vector form</dfn>. This form gives an explicit and convenient way of writing down the solution set. It also gives insight into what is happening geometrically. Note that the vectors which satisfy the system are precisely</div>
-<div class="displaymath process-math" id="ex-homogeneous-1-3-7-3">
-\begin{equation*}
-\vec x \in \operatorname{Span}\left\{\begin{bmatrix} 2 \\ -1 \\ 1 \end{bmatrix}\right\}\text{.}
-\end{equation*}
-</div>
-<div class="para">Since the solution set contains <span class="process-math">\(\vec 0\text{,}\)</span> we see that the solution set is a line in <span class="process-math">\(\mathbb{R}^3\)</span> which passes through the origin.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-homogeneous-1-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Solution 1.42.1"><a href="#ex-homogeneous-1-3" title="Copy heading and permalink for Solution 1.42.1" aria-label="Copy heading and permalink for Solution 1.42.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 1.42: Identify free variables and solution set"><a href="#ex-homogeneous-1" title="Copy heading and permalink for Example 1.42: Identify free variables and solution set" aria-label="Copy heading and permalink for Example 1.42: Identify free variables and solution set">🔗</a></div></article><div class="para" id="sec-1-5-homogeneous-3-3"> <div class="autopermalink" data-description="Paragraph"><a href="#sec-1-5-homogeneous-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="onepage" id="sec-1-5-homogeneous-4"><div class="para" id="sec-1-5-homogeneous-4-2">In the previous example, we expressed the solution to the system using a vector equation. This is a <dfn class="terminology">parametric vector form</dfn> of the solution.<div class="workspace" data-space="2in"></div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-1-5-homogeneous-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="sec-1-5-homogeneous-4-3">In general, suppose the free variables for <span class="process-math">\(A\vec{x} = \vec{0}\)</span> are <span class="process-math">\(x_k, \ldots, x_n\text{.}\)</span> Then all solutions can be written in the form<div class="autopermalink" data-description="Paragraph"><a href="#sec-1-5-homogeneous-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="displaymath process-math" id="sec-1-5-homogeneous-4-4">
-\begin{equation*}
-\vec{x} = x_k \vec{v}_k + x_{k+1} \vec{v}_{k+1} + \cdots + x_n \vec{v}_n,
-\end{equation*}
-</div>
-<div class="para" id="sec-1-5-homogeneous-4-5">for some vectors <span class="process-math">\(\vec{v}_k, \ldots, \vec{v}_n\text{.}\)</span> This representation is called the <dfn class="terminology">parametric vector form</dfn> of the solution set.<div class="workspace" data-space="2in"></div>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-1-5-homogeneous-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="sec-1-5-homogeneous-4-6"> <div class="autopermalink" data-description="Paragraph"><a href="#sec-1-5-homogeneous-4-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="onepage" id="sec-1-5-homogeneous-5"><article class="example example-like" id="ex-nonhomogeneous-1"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.43</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Parametric vector form and geometric interpretation.</span>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Theorem 7.19: Spectral Decomposition"><a href="#thm-spectral-decomposition" title="Copy heading and permalink for Theorem 7.19: Spectral Decomposition" aria-label="Copy heading and permalink for Theorem 7.19: Spectral Decomposition">🔗</a></div></article></section><section class="onepage" id="p-7-1-example-spectral"><article class="example example-like" id="ex-7-1-spectral"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="ex-nonhomogeneous-1-2-1">Write the parametric vector form of the solution and give a geometric interpretation.<div class="autopermalink" data-description="Paragraph"><a href="#ex-nonhomogeneous-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-7-1-spectral-1-1">Construct a spectral decomposition of <span class="process-math">\(A\text{,}\)</span> given its orthogonal diagonalization:<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-1-spectral-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="ex-nonhomogeneous-1-2-2">
+<div class="displaymath process-math" id="ex-7-1-spectral-1-2">
 \begin{equation*}
-\begin{aligned}
-x_1 + 3x_2 + x_3 \amp= 9 \\
-2x_1 - x_2 - 5x_3 \amp= 11 \\
-x_1 \phantom{+3x_2} - 2x_3 \amp= 6
-\end{aligned}
+A=\begin{bmatrix}3 \amp 1\\ 1 \amp 3\end{bmatrix}
+=
+\begin{bmatrix}
+\tfrac1{\sqrt2} \amp -\tfrac1{\sqrt2}\\
+\tfrac1{\sqrt2} \amp \tfrac1{\sqrt2}
+\end{bmatrix}
+\begin{bmatrix}4 \amp 0\\ 0 \amp 2\end{bmatrix}
+\begin{bmatrix}
+\tfrac1{\sqrt2} \amp \tfrac1{\sqrt2}\\
+-\tfrac1{\sqrt2} \amp \tfrac1{\sqrt2}
+\end{bmatrix}.
 \end{equation*}
 </div>
-<div class="para" id="ex-nonhomogeneous-1-2-3">(Note: the left-hand side is the same as in the homogeneous system example.)<div class="autopermalink" data-description="Paragraph"><a href="#ex-nonhomogeneous-1-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="solutions"><details id="ex-nonhomogeneous-1-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="ex-nonhomogeneous-1-3-1">Again, we solve the system by simplifying the augmented matrix. This time we do need to keep track of the augmented column since it is not <span class="process-math">\(\vec 0\)</span> and so row operations will affect the entries.<div class="autopermalink" data-description="Paragraph"><a href="#ex-nonhomogeneous-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="ex-nonhomogeneous-1-3-2">
-<span class="process-math">\(\begin{eqnarray*}\begin{bmatrix} 1 \amp 3 \amp 1 \amp \rvert \amp 9 \\ 2 \amp -1 \amp -5 \amp \rvert \amp 11 \\ 1 \amp 0 \amp -2 \amp \rvert \amp 6 \end{bmatrix} \amp \sim \amp \begin{bmatrix} 1 \amp 3 \amp 1 \amp \rvert \amp 9 \\ 0 \amp -7 \amp -7 \amp \rvert \amp -7 \\ 0 \amp -3 \amp -3 \amp \rvert \amp -3 \end{bmatrix} \\ \amp \sim \amp \begin{bmatrix} 1 \amp 0 \amp -2 \amp \rvert \amp 6 \\ 0 \amp 1 \amp 1 \amp \rvert \amp 1 \\ 0 \amp 0 \amp 0 \amp \rvert \amp 0 \end{bmatrix}\end{eqnarray*}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-nonhomogeneous-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical" id="ex-nonhomogeneous-1-3-3">
-<div class="para">Thankfully, the third row had a zero in the augmented position, so our system is consistent and there is at least one solution. Notice that the entries to the left of the augmentation line are exactly the same as they were in <a href="Section-1-5.html#ex-homogeneous-1" class="xref" data-knowl="./knowl/xref/ex-homogeneous-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.42: Identify free variables and solution set">Example 1.42</a>. Therefore, assigning free variables and solving for the pivot variables is almost exactly the same as in that example. The only difference, is now we have to keep track of the nonzero constants on the right side of the augmentation line. We have that <span class="process-math">\(x_3\)</span> is a free variable, so we set <span class="process-math">\(x_3 = t \in \mathbb{R}\text{.}\)</span> Solving for the pivot variables yields</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-homogeneous-1.html" id="ex-nonhomogeneous-1-3-3-4">
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Example 7.20"><a href="#ex-7-1-spectral" title="Copy heading and permalink for Example 7.20" aria-label="Copy heading and permalink for Example 7.20">🔗</a></div></article><div class="para" id="p-7-1-example-spectral-2"> <div class="autopermalink" data-description="Paragraph"><a href="#p-7-1-example-spectral-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="onepage" id="handout-section-7-1-spectral-7"><article class="note remark-like" id="handout-section-7-1-spectral-7-1"><h4 class="heading">
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="handout-section-7-1-spectral-7-1-1-1">Note in the solution to <a href="Section-7-1.html#ex-7-1-spectral" class="xref" data-knowl="./knowl/xref/ex-7-1-spectral.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.20">Example 7.20</a> that if <span class="process-math">\(\lambda_1 = 4\)</span> is the larger of the two eigenvalues and <span class="process-math">\(\vec u_1\)</span> is a normalized eigenvector corresponding to <span class="process-math">\(\lambda_1\text{,}\)</span> then <span class="process-math">\(A \approx \lambda_1\vec u_1\vec u_1^T\)</span> is a close approximation of the matrix <span class="process-math">\(A\text{.}\)</span> In fact, it is the closest approximation of <span class="process-math">\(A\)</span> using a rank 1 matrix.<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-1-spectral-7-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="handout-section-7-1-spectral-7-1-1-2">
+<div class="para">In general, if we label the eigenvalues of an <span class="process-math">\(n \times n\)</span> symmetric matrix <span class="process-math">\(A\)</span> in non-increasing order by magnitude, so <span class="process-math">\(|\lambda_1| \geq |\lambda_2| \geq \cdots \geq |\lambda_n|\text{,}\)</span> then each matrix</div>
+<div class="displaymath process-math" id="handout-section-7-1-spectral-7-1-1-2-4">
 \begin{equation*}
-x_2 + x_3 = 1 \quad \implies \quad x_2 = 1 -x_3 \quad \implies \quad x_2 = 1 -t
+\sum_{i=1}^j \lambda_i\vec u_i\vec u_i^T = \lambda_1\vec u_1\vec u_1^T + \cdots + \lambda_j\vec u_j \vec u_j^T
 \end{equation*}
 </div>
-<div class="para">and</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-homogeneous-1.html" id="ex-nonhomogeneous-1-3-3-5">
+<div class="para">is the closest<span class="process-math">\(^*\)</span> rank <span class="process-math">\(j\)</span> approximation of <span class="process-math">\(A\text{,}\)</span> which gets more accurate as <span class="process-math">\(j\)</span> approaches <span class="process-math">\(n\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-1-spectral-7-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="handout-section-7-1-spectral-7-1-1-3">
+<span class="process-math">\(^*\text{:}\)</span> The distance between two matrices is measured by subtracting the two matrices and calculating the square root of the sums of the squares of the entries in the resulting matrix. This calculation is the same calculation used to calculate the distance between two vectors. By closest, we mean that there is no rank <span class="process-math">\(j\)</span> matrix that is closer. There could be other rank <span class="process-math">\(j\)</span> matrices that are as close.<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-1-spectral-7-1-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Note 7.21"><a href="#handout-section-7-1-spectral-7-1" title="Copy heading and permalink for Note 7.21" aria-label="Copy heading and permalink for Note 7.21">🔗</a></div></article><article class="example example-like" id="handout-section-7-1-spectral-7-2"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.22</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="handout-section-7-1-spectral-7-2-1-1">
+<div class="para">Construct a spectral decompositon of</div>
+<div class="displaymath process-math" id="handout-section-7-1-spectral-7-2-1-1-1">
 \begin{equation*}
-x_1 - 2x_3 = 6 \quad \implies \quad x_1 = 6 + 2x_3 \quad \implies \quad x_1 = 6 + 2t
+A = \begin{bmatrix} 0 \amp 0 \amp 1 \\ 0 \amp 1 \amp 0 \\ 1 \amp 0 \amp 0 \end{bmatrix}\text{.}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-nonhomogeneous-1-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-1-spectral-7-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ex-nonhomogeneous-1-3-4">Therefore, the solutions to the system are<div class="autopermalink" data-description="Paragraph"><a href="#ex-nonhomogeneous-1-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical" id="ex-nonhomogeneous-1-3-5">
-<div class="displaymath process-math" id="ex-nonhomogeneous-1-3-5-1">
-\begin{equation*}
-\vec x = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \begin{bmatrix} 6 + 2t \\ 1 - t \\ t \end{bmatrix} = \begin{bmatrix} 6 \\ 1 \\ 0 \end{bmatrix} + t\begin{bmatrix} 2 \\ -1 \\ 1 \end{bmatrix}, t \in \mathbb{R}
-\end{equation*}
-</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-nonhomogeneous-1-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="ex-nonhomogeneous-1-3-6">Again we have writen the solution set in parametric vector form. Note that the free part of the solution set, the part being scaled by <span class="process-math">\(t\text{,}\)</span> is exactly the same as for the homogeneous system <span class="process-math">\(A\vec x = \vec 0\text{.}\)</span> This is no coincidence. When you are working with a <em class="emphasis">consistent inhomogeneous</em> system <span class="process-math">\(A\vec x = \vec b\text{,}\)</span> the solution set is exactly that of the homogenous system <span class="process-math">\(A\vec x = \vec 0\text{,}\)</span> except translated by a vector which is a particular solution to <span class="process-math">\(A\vec x = \vec b\text{.}\)</span> So, geometrically, this solution set is the same line as in <a href="Section-1-5.html#ex-homogeneous-1" class="xref" data-knowl="./knowl/xref/ex-homogeneous-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.42: Identify free variables and solution set">Example 1.42</a>, except now the line passes through the point <span class="process-math">\((6,1,0)\)</span> instead of the origin.<div class="autopermalink" data-description="Paragraph"><a href="#ex-nonhomogeneous-1-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="ex-nonhomogeneous-1-3-7">Note: if the inhomogeneous system <span class="process-math">\(A\vec x = \vec b\)</span> is inconsistent, then there is still no solution no matter how many solutions there are to <span class="process-math">\(A\vec x = \vec 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-nonhomogeneous-1-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Solution 1.43.1"><a href="#ex-nonhomogeneous-1-3" title="Copy heading and permalink for Solution 1.43.1" aria-label="Copy heading and permalink for Solution 1.43.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 1.43: Parametric vector form and geometric interpretation"><a href="#ex-nonhomogeneous-1" title="Copy heading and permalink for Example 1.43: Parametric vector form and geometric interpretation" aria-label="Copy heading and permalink for Example 1.43: Parametric vector form and geometric interpretation">🔗</a></div></article></section><div class="autopermalink" data-description="Worksheet: 1.5 Homogeneous Systems and Parametric Vector Forms"><a href="#sec-1-5-homogeneous" title="Copy heading and permalink for Worksheet: 1.5 Homogeneous Systems and Parametric Vector Forms" aria-label="Copy heading and permalink for Worksheet: 1.5 Homogeneous Systems and Parametric Vector Forms">🔗</a></div></section><div class="autopermalink" data-description="Section: 1.5 Solution Sets of Linear Systems"><a href="#Section-1-5" title="Copy heading and permalink for Section: 1.5 Solution Sets of Linear Systems" aria-label="Copy heading and permalink for Section: 1.5 Solution Sets of Linear Systems">🔗</a></div></section>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Example 7.22"><a href="#handout-section-7-1-spectral-7-2" title="Copy heading and permalink for Example 7.22" aria-label="Copy heading and permalink for Example 7.22">🔗</a></div></article></section><div class="autopermalink" data-description="Handout: 7.1 Diagonalization of Symmetric Matrices"><a href="#handout-section-7-1-spectral" title="Copy heading and permalink for Handout: 7.1 Diagonalization of Symmetric Matrices" aria-label="Copy heading and permalink for Handout: 7.1 Diagonalization of Symmetric Matrices">🔗</a></div></section><div class="autopermalink" data-description="Section: 7.1 Diagonalization of Symmetric Matrices"><a href="#Section-7-1" title="Copy heading and permalink for Section: 7.1 Diagonalization of Symmetric Matrices" aria-label="Copy heading and permalink for Section: 7.1 Diagonalization of Symmetric Matrices">🔗</a></div></section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="Section-1-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="Section-1-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="Section-10-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

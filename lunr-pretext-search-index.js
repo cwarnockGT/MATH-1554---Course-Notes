@@ -3491,6 +3491,132 @@ var ptx_lunr_docs = [
   "number": "7.11",
   "title": "",
   "body": "  Consider the following webpage:   A web containing 7 pages and the links between them.      Determine the Google matrix for this web, with .      Determine the PageRank of each page if .    "
+},
+{
+  "id": "Section-7-1",
+  "level": "1",
+  "url": "Section-7-1.html",
+  "type": "Section",
+  "number": "",
+  "title": "7.1 Diagonalization of Symmetric Matrices",
+  "body": " 7.1 Diagonalization of Symmetric Matrices   7.1 Diagonalization of Symmetric Matrices   Overview   Topics   Symmetric matrices  Orthogonal diagonalization  Spectral decomposition     Goals   Construct an orthogonal diagonalization of a symmetric matrix.  Construct a spectral decomposition of a matrix.     Symmetric Matrix   A matrix is symmetric if .      Which of the following matrices are symmetric? Let and represent real numbers.          Is Symmetric   For any matrix with columns , the matrix is symmetric and has entries given by dot products of the columns of .     Orthogonality of Eigenspaces   If is symmetric and are eigenvectors corresponding to distinct eigenvalues, then and are orthogonal .  More generally, eigenspaces associated with distinct eigenvalues are orthogonal subspaces.      Example 1: Orthogonal Diagonalization    Diagonalize using an orthogonal matrix. The eigenvalues of are given.        Spectral Theorem    Recall that if is an orthogonal matrix, then .     Spectral Theorem   If is an  symmetric matrix, then:   All eigenvalues of are real.  The dimension of each eigenspace equals its algebraic multiplicity.  Eigenspaces corresponding to distinct eigenvalues are orthogonal.   can be orthogonally diagonalized as , where is orthogonal.       Spectral Decomposition   Suppose can be orthogonally diagonalized as . Then has the decomposition . Note that each term is a rank 1 matrix.        Construct a spectral decomposition of , given its orthogonal diagonalization:          Note in the solution to that if is the larger of the two eigenvalues and is a normalized eigenvector corresponding to , then is a close approximation of the matrix . In fact, it is the closest approximation of using a rank 1 matrix.  In general, if we label the eigenvalues of an symmetric matrix in non-increasing order by magnitude, so , then each matrix is the closest rank approximation of , which gets more accurate as approaches .   : The distance between two matrices is measured by subtracting the two matrices and calculating the square root of the sums of the squares of the entries in the resulting matrix. This calculation is the same calculation used to calculate the distance between two vectors. By closest, we mean that there is no rank matrix that is closer. There could be other rank matrices that are as close.      Construct a spectral decompositon of .      "
+},
+{
+  "id": "obj-7-1-topics-goals",
+  "level": "2",
+  "url": "Section-7-1.html#obj-7-1-topics-goals",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   Symmetric matrices  Orthogonal diagonalization  Spectral decomposition   "
+},
+{
+  "id": "p-7-1-overview-3",
+  "level": "2",
+  "url": "Section-7-1.html#p-7-1-overview-3",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals   Construct an orthogonal diagonalization of a symmetric matrix.  Construct a spectral decomposition of a matrix.   "
+},
+{
+  "id": "def-symmetric",
+  "level": "2",
+  "url": "Section-7-1.html#def-symmetric",
+  "type": "Definition",
+  "number": "7.12",
+  "title": "Symmetric Matrix.",
+  "body": " Symmetric Matrix   A matrix is symmetric if .   "
+},
+{
+  "id": "ex-7-1-symmetric",
+  "level": "2",
+  "url": "Section-7-1.html#ex-7-1-symmetric",
+  "type": "Example",
+  "number": "7.13",
+  "title": "",
+  "body": "  Which of the following matrices are symmetric? Let and represent real numbers.      "
+},
+{
+  "id": "p-7-1-ata-symmetric-2",
+  "level": "2",
+  "url": "Section-7-1.html#p-7-1-ata-symmetric-2",
+  "type": "Note",
+  "number": "7.14",
+  "title": "",
+  "body": " For any matrix with columns , the matrix is symmetric and has entries given by dot products of the columns of .   "
+},
+{
+  "id": "thm-orth-eigenspaces",
+  "level": "2",
+  "url": "Section-7-1.html#thm-orth-eigenspaces",
+  "type": "Theorem",
+  "number": "7.15",
+  "title": "Orthogonality of Eigenspaces.",
+  "body": " Orthogonality of Eigenspaces   If is symmetric and are eigenvectors corresponding to distinct eigenvalues, then and are orthogonal .  More generally, eigenspaces associated with distinct eigenvalues are orthogonal subspaces.   "
+},
+{
+  "id": "ex-7-1-orth-diag",
+  "level": "2",
+  "url": "Section-7-1.html#ex-7-1-orth-diag",
+  "type": "Example",
+  "number": "7.16",
+  "title": "",
+  "body": "  Diagonalize using an orthogonal matrix. The eigenvalues of are given.    "
+},
+{
+  "id": "p-7-1-spectral-theorem-2",
+  "level": "2",
+  "url": "Section-7-1.html#p-7-1-spectral-theorem-2",
+  "type": "Note",
+  "number": "7.17",
+  "title": "",
+  "body": "  Recall that if is an orthogonal matrix, then .   "
+},
+{
+  "id": "thm-spectral",
+  "level": "2",
+  "url": "Section-7-1.html#thm-spectral",
+  "type": "Theorem",
+  "number": "7.18",
+  "title": "Spectral Theorem.",
+  "body": " Spectral Theorem   If is an  symmetric matrix, then:   All eigenvalues of are real.  The dimension of each eigenspace equals its algebraic multiplicity.  Eigenspaces corresponding to distinct eigenvalues are orthogonal.   can be orthogonally diagonalized as , where is orthogonal.    "
+},
+{
+  "id": "thm-spectral-decomposition",
+  "level": "2",
+  "url": "Section-7-1.html#thm-spectral-decomposition",
+  "type": "Theorem",
+  "number": "7.19",
+  "title": "Spectral Decomposition.",
+  "body": " Spectral Decomposition   Suppose can be orthogonally diagonalized as . Then has the decomposition . Note that each term is a rank 1 matrix.   "
+},
+{
+  "id": "ex-7-1-spectral",
+  "level": "2",
+  "url": "Section-7-1.html#ex-7-1-spectral",
+  "type": "Example",
+  "number": "7.20",
+  "title": "",
+  "body": "  Construct a spectral decomposition of , given its orthogonal diagonalization:    "
+},
+{
+  "id": "handout-section-7-1-spectral-7-1",
+  "level": "2",
+  "url": "Section-7-1.html#handout-section-7-1-spectral-7-1",
+  "type": "Note",
+  "number": "7.21",
+  "title": "",
+  "body": "  Note in the solution to that if is the larger of the two eigenvalues and is a normalized eigenvector corresponding to , then is a close approximation of the matrix . In fact, it is the closest approximation of using a rank 1 matrix.  In general, if we label the eigenvalues of an symmetric matrix in non-increasing order by magnitude, so , then each matrix is the closest rank approximation of , which gets more accurate as approaches .   : The distance between two matrices is measured by subtracting the two matrices and calculating the square root of the sums of the squares of the entries in the resulting matrix. This calculation is the same calculation used to calculate the distance between two vectors. By closest, we mean that there is no rank matrix that is closer. There could be other rank matrices that are as close.   "
+},
+{
+  "id": "handout-section-7-1-spectral-7-2",
+  "level": "2",
+  "url": "Section-7-1.html#handout-section-7-1-spectral-7-2",
+  "type": "Example",
+  "number": "7.22",
+  "title": "",
+  "body": "  Construct a spectral decompositon of .   "
 }
 ]
 
