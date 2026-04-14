@@ -18,6 +18,11 @@
       <xi:include href="./chapter-7-notes/section-7-1.ptx" />
   </section>
 
+  <section xml:id="Section-7-2">
+    <title>7.2 Quadratic Forms</title>
+      <xi:include href="./chapter-7-notes/section-7-2.ptx" />
+  </section>
+
   
 
 </chapter>
