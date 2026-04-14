@@ -3617,6 +3617,105 @@ var ptx_lunr_docs = [
   "number": "7.22",
   "title": "",
   "body": "  Construct a spectral decompositon of .   "
+},
+{
+  "id": "Section-7-2",
+  "level": "1",
+  "url": "Section-7-2.html",
+  "type": "Section",
+  "number": "",
+  "title": "7.2 Quadratic Forms",
+  "body": " 7.2 Quadratic Forms   7.2 Quadratic Forms   Overview   Topics   Quadratic forms  Change of variables  Principal axes theorem  Classification of quadratic forms     Goals   Characterize and classify quadratic forms using eigenvalues and eigenvectors.  Express quadratic forms in the form .  Apply the principal axes theorem to remove cross-product terms.    Motivating Question  Does the inequality below hold for all ?     Quadratic Form   A quadratic form is a function defined by   where is an  symmetric matrix.      Example 1    Compute and for the following matrices.                  The graphs of the quadratic forms from are given below. Students are not expected to sketch quadratic surfaces.   Graphs of the two quadratic curves Q_A and Q_B.       Example 2  As we will see shortly, properties of the symmetric matrix used to generate the quadratic form will allow us to determine characterisitcs about the quadratic form, such as whether it is always nonnegative. Therefore, if first presented with the quadratic form, it is useful to find the symmetric matrix which generates the quadratic form.    Write the quadratic form below in the form for .      Note in the above example it is difficult to determine whether is always nonnegative. This is due to the cross-product terms, terms of the form , since these terms could be positive or negative depending on the input.  To help us better determine properties of , we would like to perform a change of variables to obtain an equivalent quadratic form which no longer has any cross-product terms. Recall that we can find a symmetric matrix so that . Since is symmetric, we know by that for a diagonal matrix and orthogonal matrix .  What happens when we make the change of variables ?    Example 3: Removing Cross Terms   Principal Axes Theorem   If is symmetric, then there exists an orthogonal change of variables such that the quadratic form becomes , with no cross-product terms.      Use the orthogonal diagonalization of to remove cross-product terms from .       Classifying Quadratic Forms   Definiteness   A quadratic form is:   Positive definite if for all .  Negative definite if for all .  Positive semidefinite if for all .  Negative semidefinite if for all .  Indefinite if takes both positive and negative values.       Eigenvalue Classification   If is symmetric with eigenvalues , then:   is positive definite iff .  is negative definite iff .  is indefinite iff .          Determine whether the inequality holds for all :       "
+},
+{
+  "id": "obj-7-2-topics-goals",
+  "level": "2",
+  "url": "Section-7-2.html#obj-7-2-topics-goals",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   Quadratic forms  Change of variables  Principal axes theorem  Classification of quadratic forms   "
+},
+{
+  "id": "p-7-2-overview-3",
+  "level": "2",
+  "url": "Section-7-2.html#p-7-2-overview-3",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals   Characterize and classify quadratic forms using eigenvalues and eigenvectors.  Express quadratic forms in the form .  Apply the principal axes theorem to remove cross-product terms.   "
+},
+{
+  "id": "def-quadratic-form",
+  "level": "2",
+  "url": "Section-7-2.html#def-quadratic-form",
+  "type": "Definition",
+  "number": "7.23",
+  "title": "Quadratic Form.",
+  "body": " Quadratic Form   A quadratic form is a function defined by   where is an  symmetric matrix.   "
+},
+{
+  "id": "ex-7-2-qf-compute",
+  "level": "2",
+  "url": "Section-7-2.html#ex-7-2-qf-compute",
+  "type": "Example",
+  "number": "7.24",
+  "title": "",
+  "body": "  Compute and for the following matrices.                 "
+},
+{
+  "id": "ex-7-2-matrix-from-qf",
+  "level": "2",
+  "url": "Section-7-2.html#ex-7-2-matrix-from-qf",
+  "type": "Example",
+  "number": "7.25",
+  "title": "",
+  "body": "  Write the quadratic form below in the form for .    "
+},
+{
+  "id": "thm-principal-axes",
+  "level": "2",
+  "url": "Section-7-2.html#thm-principal-axes",
+  "type": "Theorem",
+  "number": "7.26",
+  "title": "Principal Axes Theorem.",
+  "body": " Principal Axes Theorem   If is symmetric, then there exists an orthogonal change of variables such that the quadratic form becomes , with no cross-product terms.   "
+},
+{
+  "id": "ex-7-2-change-vars",
+  "level": "2",
+  "url": "Section-7-2.html#ex-7-2-change-vars",
+  "type": "Example",
+  "number": "7.27",
+  "title": "",
+  "body": "  Use the orthogonal diagonalization of to remove cross-product terms from .    "
+},
+{
+  "id": "def-classification",
+  "level": "2",
+  "url": "Section-7-2.html#def-classification",
+  "type": "Definition",
+  "number": "7.28",
+  "title": "Definiteness.",
+  "body": " Definiteness   A quadratic form is:   Positive definite if for all .  Negative definite if for all .  Positive semidefinite if for all .  Negative semidefinite if for all .  Indefinite if takes both positive and negative values.    "
+},
+{
+  "id": "thm-qf-eigs",
+  "level": "2",
+  "url": "Section-7-2.html#thm-qf-eigs",
+  "type": "Theorem",
+  "number": "7.29",
+  "title": "Eigenvalue Classification.",
+  "body": " Eigenvalue Classification   If is symmetric with eigenvalues , then:   is positive definite iff .  is negative definite iff .  is indefinite iff .    "
+},
+{
+  "id": "ex-7-2-motivation",
+  "level": "2",
+  "url": "Section-7-2.html#ex-7-2-motivation",
+  "type": "Example",
+  "number": "7.30",
+  "title": "",
+  "body": "  Determine whether the inequality holds for all :    "
 }
 ]
 
