@@ -23,6 +23,11 @@
       <xi:include href="./chapter-7-notes/section-7-2.ptx" />
   </section>
 
+  <section xml:id="Section-7-3">
+    <title>7.3 Constrained Optimization</title>
+      <xi:include href="./chapter-7-notes/section-7-3.ptx" />
+  </section>
+
   
 
 </chapter>
