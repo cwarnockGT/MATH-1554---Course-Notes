@@ -14,7 +14,7 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>7.1 Diagonalization of Symmetric Matrices</title>
+<title>7.3 Constrained Optimization</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -135,7 +135,7 @@ eBookConfig.enable_chatcodes =  false;
 <textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
 </div>
 </div>
-<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="Section-10-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-7.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="Section-7-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="Section-7-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-7.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\foo}{b^{ar}}
 \newcommand{\aug}{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
 \newcommand{\Nul}{\operatorname{Nul}}
@@ -301,17 +301,17 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="Section-10-2.html" class="internal"><span class="title">10.2 Google PageRank</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-10-2.html#handout-section-10-2-Google-Page-Rank" class="internal"><span class="title">10.2 Google PageRank</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section contains-active">
+<li class="toc-item toc-section">
 <div class="toc-title-box"><a href="Section-7-1.html" class="internal"><span class="title">7.1 Diagonalization of Symmetric Matrices</span></a></div>
-<ul class="structural toc-item-list active"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-7-1.html#handout-section-7-1-spectral" class="internal"><span class="title">7.1 Diagonalization of Symmetric Matrices</span></a></div></li></ul>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-7-1.html#handout-section-7-1-spectral" class="internal"><span class="title">7.1 Diagonalization of Symmetric Matrices</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="Section-7-2.html" class="internal"><span class="title">7.2 Quadratic Forms</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-7-2.html#handout-section-7-2-quadratic-forms" class="internal"><span class="title">7.2 Quadratic Forms</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section">
+<li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="Section-7-3.html" class="internal"><span class="title">7.3 Constrained Optimization</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-7-3.html#handout-section-7-3-constrained-optimization" class="internal"><span class="title">7.3 Constrained Optimization</span></a></div></li></ul>
+<ul class="structural toc-item-list active"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-7-3.html#handout-section-7-3-constrained-optimization" class="internal"><span class="title">7.3 Constrained Optimization</span></a></div></li></ul>
 </li>
 </ul>
 </li>
@@ -341,225 +341,189 @@ eBookConfig.enable_chatcodes =  false;
 <button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
 </div>
 </div>
-<section class="section" id="Section-7-1"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">7.1 Diagonalization of Symmetric Matrices</span>
+<section class="section" id="Section-7-3"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">7.3 Constrained Optimization</span>
 </h2>
-<section class="handout" id="handout-section-7-1-spectral" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
-<span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">7.1 Diagonalization of Symmetric Matrices</span><div class="print-links"><a href="?printpreview=handout-section-7-1-spectral" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+<section class="handout" id="handout-section-7-3-constrained-optimization" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
+<span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">7.3 Constrained Optimization</span><div class="print-links"><a href="?printpreview=handout-section-7-3-constrained-optimization" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
 </h3>
-<section class="onepage" id="p-7-1-overview"><article class="objectives goal-like" id="obj-7-1-topics-goals"><h4 class="heading">
+<section class="onepage" id="p-7-3-overview"><article class="objectives goal-like" id="obj-7-3-topics-goals"><h4 class="heading">
 <span class="type">Objectives<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Topics</span>
 </h4>
-<ul class="disc" id="obj-7-1-topics-goals-2">
-<li id="obj-7-1-topics-goals-2-1">
-<div class="para" id="p-derived-obj-7-1-topics-goals-2-1">Symmetric matrices</div>
-<div class="autopermalink" data-description="Objective"><a href="#obj-7-1-topics-goals-2-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+<ul class="disc" id="obj-7-3-topics-goals-2">
+<li id="obj-7-3-topics-goals-2-1">
+<div class="para" id="p-derived-obj-7-3-topics-goals-2-1">Constrained optimization as an eigenvalue problem</div>
+<div class="autopermalink" data-description="Objective"><a href="#obj-7-3-topics-goals-2-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
 </li>
-<li id="obj-7-1-topics-goals-2-2">
-<div class="para" id="p-derived-obj-7-1-topics-goals-2-2">Orthogonal diagonalization</div>
-<div class="autopermalink" data-description="Objective"><a href="#obj-7-1-topics-goals-2-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
-</li>
-<li id="obj-7-1-topics-goals-2-3">
-<div class="para" id="p-derived-obj-7-1-topics-goals-2-3">Spectral decomposition</div>
-<div class="autopermalink" data-description="Objective"><a href="#obj-7-1-topics-goals-2-3" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+<li id="obj-7-3-topics-goals-2-2">
+<div class="para" id="p-derived-obj-7-3-topics-goals-2-2">Distance and orthogonality constraints</div>
+<div class="autopermalink" data-description="Objective"><a href="#obj-7-3-topics-goals-2-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
 </li>
 </ul>
-<div class="autopermalink" data-description="Objectives: Topics"><a href="#obj-7-1-topics-goals" title="Copy heading and permalink for Objectives: Topics" aria-label="Copy heading and permalink for Objectives: Topics">🔗</a></div></article><article class="objectives goal-like" id="p-7-1-overview-3"><h4 class="heading">
+<div class="autopermalink" data-description="Objectives: Topics"><a href="#obj-7-3-topics-goals" title="Copy heading and permalink for Objectives: Topics" aria-label="Copy heading and permalink for Objectives: Topics">🔗</a></div></article><article class="objectives goal-like" id="p-7-3-overview-3"><h4 class="heading">
 <span class="type">Objectives<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Goals</span>
 </h4>
-<ul class="disc" id="p-7-1-overview-3-2">
-<li id="p-7-1-overview-3-2-1">
-<div class="para" id="p-derived-p-7-1-overview-3-2-1">Construct an orthogonal diagonalization <span class="process-math">\(A=PDP^T\)</span> of a symmetric matrix.</div>
-<div class="autopermalink" data-description="Objective"><a href="#p-7-1-overview-3-2-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+<ul class="disc" id="p-7-3-overview-3-2"><li id="p-7-3-overview-3-2-1">
+<div class="para" id="p-derived-p-7-3-overview-3-2-1">Apply eigenvalues and eigenvectors to solve optimization problems subject to distance and orthogonality constraints.</div>
+<div class="autopermalink" data-description="Objective"><a href="#p-7-3-overview-3-2-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li></ul>
+<div class="autopermalink" data-description="Objectives: Goals"><a href="#p-7-3-overview-3" title="Copy heading and permalink for Objectives: Goals" aria-label="Copy heading and permalink for Objectives: Goals">🔗</a></div></article><div class="para" id="p-7-3-overview-4"> <div class="autopermalink" data-description="Paragraph"><a href="#p-7-3-overview-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="ex-7-3-unit-sphere"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.31</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="ex-7-3-unit-sphere-1-1">
+<div class="para">Consider the quadratic form</div>
+<div class="displaymath process-math" id="ex-7-3-unit-sphere-1-1-1">
+\begin{equation*}
+Q(\vec x)=9x_1^2 + 4x_2^2 + 3x_3^2\text{.}
+\end{equation*}
+</div>
+<div class="para">Find the <em class="emphasis">largest</em> and <em class="emphasis">smallest</em> values of <span class="process-math">\(Q(\vec x)\)</span> under the constraint that <span class="process-math">\(\|\vec x\| = 1\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-3-unit-sphere-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Example 7.31"><a href="#ex-7-3-unit-sphere" title="Copy heading and permalink for Example 7.31" aria-label="Copy heading and permalink for Example 7.31">🔗</a></div></article><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/./sphere73.png" class="contained" alt="A coloring of the unit sphere which represents the values of Q from the previous example, where blue means low values and red means high values."></div>
+<div class="para" id="p-7-3-overview-7"> <div class="autopermalink" data-description="Paragraph"><a href="#p-7-3-overview-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="onepage" id="p-7-3-constrained-problem"><div class="para" id="p-7-3-constrained-problem-2">Suppose we wish to find the maximum and minimum values of<div class="autopermalink" data-description="Paragraph"><a href="#p-7-3-constrained-problem-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="p-7-3-constrained-problem-3">
+\begin{equation*}
+Q(\vec x)=\vec x^{\,T}A\vec x
+\end{equation*}
+</div>
+<div class="para" id="p-7-3-constrained-problem-4">subject to the constraint <span class="process-math">\(\|\vec x\|=1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#p-7-3-constrained-problem-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="p-7-3-constrained-problem-5">That is, we want<div class="autopermalink" data-description="Paragraph"><a href="#p-7-3-constrained-problem-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="p-7-3-constrained-problem-6">
+\begin{equation*}
+m=\min\{Q(\vec x)\mid \|\vec x\|=1\},\qquad
+M=\max\{Q(\vec x)\mid \|\vec x\|=1\}.
+\end{equation*}
+</div>
+<div class="para" id="p-7-3-constrained-problem-7">This is an example of a <dfn class="terminology">constrained optimization</dfn> problem. We are also interested in where these extreme values are attained.<div class="autopermalink" data-description="Paragraph"><a href="#p-7-3-constrained-problem-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="p-7-3-constrained-problem-8">These problems are straight-forward when <span class="process-math">\(Q(\vec x)\)</span> has no cross-product terms. What about when it does have cross-product terms?<div class="autopermalink" data-description="Paragraph"><a href="#p-7-3-constrained-problem-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="ex-7-3-example2"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.32</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="ex-7-3-example2-1-1">Calculate the maximum and minimum values of<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-3-example2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-7-3-example2-1-2">
+\begin{equation*}
+Q(\vec x)=x_2^2 + 2x_1x_3.
+\end{equation*}
+</div>
+<div class="para" id="ex-7-3-example2-1-3">where <span class="process-math">\(\vec x\in\mathbb{R}^3\)</span> and <span class="process-math">\(\|\vec x\|=1\text{.}\)</span> Identify the points where these values are obtained.<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-3-example2-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Example 7.32"><a href="#ex-7-3-example2" title="Copy heading and permalink for Example 7.32" aria-label="Copy heading and permalink for Example 7.32">🔗</a></div></article></section><section class="onepage" id="handout-section-7-3-constrained-optimization-4"><div class="para" id="handout-section-7-3-constrained-optimization-4-1">The image below is the unit sphere whose surface is colored according to the quadratic form from <a href="Section-7-3.html#ex-7-3-example2" class="xref" data-knowl="./knowl/xref/ex-7-3-example2.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.32">Example 7.32</a>. Notice the agreement between our solution and the image.<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-3-constrained-optimization-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/./sphere73example2.png" class="contained" alt="A coloring of the unit sphere which represents the values of Q from the previous example, where blue means low values and red means high values."></div>
+<div class="para" id="handout-section-7-3-constrained-optimization-4-3"> <div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-3-constrained-optimization-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-constrained-eigs"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.33</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Extrema via Eigenvalues.</span>
+</h4>
+<div class="para" id="thm-constrained-eigs-2-1">Let <span class="process-math">\(Q(\vec x)=\vec x^{\,T}A\vec x\text{,}\)</span> where <span class="process-math">\(A\)</span> is a real symmetric <span class="process-math">\(n\times n\)</span> matrix with eigenvalues<div class="autopermalink" data-description="Paragraph"><a href="#thm-constrained-eigs-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="thm-constrained-eigs-2-2">
+\begin{equation*}
+\lambda_1 \ge \lambda_2 \ge \cdots \ge \lambda_n
+\end{equation*}
+</div>
+<div class="para" id="thm-constrained-eigs-2-3">and corresponding <em class="emphasis">normalized</em> eigenvectors<div class="autopermalink" data-description="Paragraph"><a href="#thm-constrained-eigs-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="thm-constrained-eigs-2-4">
+\begin{equation*}
+\vec u_1,\vec u_2,\ldots,\vec u_n.
+\end{equation*}
+</div>
+<div class="para" id="thm-constrained-eigs-2-5">Under the constraint <span class="process-math">\(\|\vec x\|=1\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-constrained-eigs-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ul class="disc" id="thm-constrained-eigs-2-6">
+<li id="thm-constrained-eigs-2-6-1">
+<div class="para" id="p-derived-thm-constrained-eigs-2-6-1">The <em class="emphasis">maximum</em> value of <span class="process-math">\(Q\)</span> is <span class="process-math">\(\lambda_1\text{,}\)</span> attained at <span class="process-math">\(\vec x=\pm\vec u_1\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#thm-constrained-eigs-2-6-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="p-7-1-overview-3-2-2">
-<div class="para" id="p-derived-p-7-1-overview-3-2-2">Construct a spectral decomposition of a matrix.</div>
-<div class="autopermalink" data-description="Objective"><a href="#p-7-1-overview-3-2-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+<li id="thm-constrained-eigs-2-6-2">
+<div class="para" id="p-derived-thm-constrained-eigs-2-6-2">The <em class="emphasis">minimum</em> value of <span class="process-math">\(Q\)</span> is <span class="process-math">\(\lambda_n\text{,}\)</span> attained at <span class="process-math">\(\vec x=\pm\vec u_n\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#thm-constrained-eigs-2-6-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="workspace" data-space="0.2in"></div>
-<div class="autopermalink" data-description="Objectives: Goals"><a href="#p-7-1-overview-3" title="Copy heading and permalink for Objectives: Goals" aria-label="Copy heading and permalink for Objectives: Goals">🔗</a></div></article><article class="definition definition-like" id="def-symmetric"><h4 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Symmetric Matrix.</span>
+<div class="autopermalink" data-description="Theorem 7.33: Extrema via Eigenvalues"><a href="#thm-constrained-eigs" title="Copy heading and permalink for Theorem 7.33: Extrema via Eigenvalues" aria-label="Copy heading and permalink for Theorem 7.33: Extrema via Eigenvalues">🔗</a></div></article><article class="example example-like" id="ex-7-3-example4"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.34</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para" id="def-symmetric-2-1">A matrix <span class="process-math">\(A\)</span> is <dfn class="terminology">symmetric</dfn> if <span class="process-math">\(A^T=A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-symmetric-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-7-3-example4-1-1">Calculate the maximum value of <span class="process-math">\(Q(\vec x)=\vec x^{\,T}A\vec x\text{,}\)</span> with <span class="process-math">\(\vec x\in\mathbb{R}^3\text{,}\)</span> subject to the constraint <span class="process-math">\(\|\vec x\|=5\text{.}\)</span> Identify a point where this maximum is obtained.<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-3-example4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 7.12: Symmetric Matrix"><a href="#def-symmetric" title="Copy heading and permalink for Definition 7.12: Symmetric Matrix" aria-label="Copy heading and permalink for Definition 7.12: Symmetric Matrix">🔗</a></div></article><article class="example example-like" id="ex-7-1-symmetric"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4>
-<div class="para" id="ex-7-1-symmetric-1-1">Which of the following matrices are symmetric? Let <span class="process-math">\(a, b, \)</span> and <span class="process-math">\(c\)</span> represent real numbers.<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-1-symmetric-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="displaymath process-math" id="ex-7-1-symmetric-1-2">
+<div class="displaymath process-math" id="ex-7-3-example4-1-2">
 \begin{equation*}
-A=[a],\quad \quad
-B=\begin{bmatrix} a \amp b\\ b \amp c\end{bmatrix},\quad \quad
-C=\begin{bmatrix} a \amp b\\ 0 \amp 0\end{bmatrix},
-\end{equation*}
-</div>
-<div class="para" id="ex-7-1-symmetric-1-3">
-<div class="workspace" data-space="1in"></div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-1-symmetric-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="displaymath process-math" id="ex-7-1-symmetric-1-4">
-\begin{equation*}
-D=\begin{bmatrix}4 \amp 2\\ 0 \amp 0\\ 0 \amp 0\end{bmatrix}, \quad \quad
-E=\begin{bmatrix}
-4 \amp 2 \amp 0 \amp 1\\
-2 \amp 1 \amp 7 \amp 4\\
-0 \amp 7 \amp 6 \amp 0\\
-1 \amp 4 \amp 0 \amp 3
-\end{bmatrix}.
-\end{equation*}
-</div>
-<div class="workspace" data-space="1in"></div>
-<div class="autopermalink" data-description="Example 7.13"><a href="#ex-7-1-symmetric" title="Copy heading and permalink for Example 7.13" aria-label="Copy heading and permalink for Example 7.13">🔗</a></div></article><div class="para" id="p-7-1-overview-6"> <div class="autopermalink" data-description="Paragraph"><a href="#p-7-1-overview-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="onepage" id="p-7-1-ata-symmetric"><article class="note remark-like" id="p-7-1-ata-symmetric-2"><h4 class="heading">
-<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4>
-<div class="para" id="p-7-1-ata-symmetric-2-1">For any matrix <span class="process-math">\(A\)</span> with columns <span class="process-math">\(\vec a_1,\dots,\vec a_n\text{,}\)</span> the matrix <span class="process-math">\(A^TA\)</span> is symmetric and has entries given by dot products of the columns of <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#p-7-1-ata-symmetric-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="displaymath process-math" id="p-7-1-ata-symmetric-2-2">
-\begin{equation*}
-A^TA =
-\begin{bmatrix}
-\vec a_1^T\vec a_1 \amp \cdots \amp \vec a_1^T\vec a_n\\
-\vdots \amp \ddots \amp \vdots\\
-\vec a_n^T\vec a_1 \amp \cdots \amp \vec a_n^T\vec a_n
-\end{bmatrix}.
-\end{equation*}
-</div>
-<div class="workspace" data-space="1in"></div>
-<div class="autopermalink" data-description="Note 7.14"><a href="#p-7-1-ata-symmetric-2" title="Copy heading and permalink for Note 7.14" aria-label="Copy heading and permalink for Note 7.14">🔗</a></div></article><article class="theorem theorem-like" id="thm-orth-eigenspaces"><h4 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Orthogonality of Eigenspaces.</span>
-</h4>
-<div class="para" id="thm-orth-eigenspaces-2-1">If <span class="process-math">\(A\)</span> is <em class="emphasis">symmetric</em> and <span class="process-math">\(\vec v_1,\vec v_2\)</span> are eigenvectors corresponding to <em class="emphasis">distinct</em> eigenvalues, then <span class="process-math">\(\vec v_1\)</span> and <span class="process-math">\(\vec v_2\)</span> are <em class="emphasis">orthogonal</em>.<div class="autopermalink" data-description="Paragraph"><a href="#thm-orth-eigenspaces-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="thm-orth-eigenspaces-2-2">More generally, eigenspaces associated with distinct eigenvalues are orthogonal subspaces.<div class="autopermalink" data-description="Paragraph"><a href="#thm-orth-eigenspaces-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="workspace" data-space="5in"></div>
-<div class="autopermalink" data-description="Theorem 7.15: Orthogonality of Eigenspaces"><a href="#thm-orth-eigenspaces" title="Copy heading and permalink for Theorem 7.15: Orthogonality of Eigenspaces" aria-label="Copy heading and permalink for Theorem 7.15: Orthogonality of Eigenspaces">🔗</a></div></article></section><section class="onepage" id="p-7-1-example-orth-diag"><article class="example example-like" id="ex-7-1-orth-diag"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4>
-<div class="para" id="ex-7-1-orth-diag-1-1">Diagonalize <span class="process-math">\(A\)</span> using an orthogonal matrix. The eigenvalues of <span class="process-math">\(A\)</span> are given.<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-1-orth-diag-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="displaymath process-math" id="ex-7-1-orth-diag-1-2">
-\begin{equation*}
-A=\begin{bmatrix}
-0 \amp 0 \amp 1\\
-0 \amp 1 \amp 0\\
-1 \amp 0 \amp 0
-\end{bmatrix},
-\qquad \lambda=-1,\,1.
+Q(\vec x)=x_2^2 + 2x_1x_3.
 \end{equation*}
 </div>
 <div class="workspace" data-space="2in"></div>
-<div class="autopermalink" data-description="Example 7.16"><a href="#ex-7-1-orth-diag" title="Copy heading and permalink for Example 7.16" aria-label="Copy heading and permalink for Example 7.16">🔗</a></div></article><div class="para" id="p-7-1-example-orth-diag-3"> <div class="autopermalink" data-description="Paragraph"><a href="#p-7-1-example-orth-diag-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="onepage" id="p-7-1-spectral-theorem"><article class="note remark-like" id="p-7-1-spectral-theorem-2"><h4 class="heading">
-<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Example 7.34"><a href="#ex-7-3-example4" title="Copy heading and permalink for Example 7.34" aria-label="Copy heading and permalink for Example 7.34">🔗</a></div></article><div class="para" id="handout-section-7-3-constrained-optimization-4-7"> <div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-3-constrained-optimization-4-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="onepage" id="p-7-3-orth-constraint"><article class="theorem theorem-like" id="thm-orth-constraint"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.35</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Extrema with an Orthogonality Condition.</span>
 </h4>
-<div class="para" id="p-7-1-spectral-theorem-2-1-1">Recall that if <span class="process-math">\(P\)</span> is an <em class="emphasis">orthogonal</em> matrix, then <span class="process-math">\(P^{-1} = P^T\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#p-7-1-spectral-theorem-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="thm-orth-constraint-2-1">Let <span class="process-math">\(Q(\vec x)=\vec x^{\,T}A\vec x\text{,}\)</span> where <span class="process-math">\(A\)</span> is a real symmetric <span class="process-math">\(n\times n\)</span> matrix with eigenvalues<div class="autopermalink" data-description="Paragraph"><a href="#thm-orth-constraint-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="workspace" data-space="0.5in"></div>
-<div class="autopermalink" data-description="Note 7.17"><a href="#p-7-1-spectral-theorem-2" title="Copy heading and permalink for Note 7.17" aria-label="Copy heading and permalink for Note 7.17">🔗</a></div></article><article class="theorem theorem-like" id="thm-spectral"><h4 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Spectral Theorem.</span>
-</h4>
-<div class="para" id="thm-spectral-2-1">If <span class="process-math">\(A\)</span> is an <span class="process-math">\(n\times n\)</span> <em class="emphasis">symmetric</em> matrix, then:<div class="autopermalink" data-description="Paragraph"><a href="#thm-spectral-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <ol class="lower-alpha lower-alpha-level-1" id="thm-spectral-2-2">
-<li id="thm-spectral-2-2-1">
-<div class="para" id="p-derived-thm-spectral-2-2-1">All eigenvalues of <span class="process-math">\(A\)</span> are real.</div>
-<div class="autopermalink" data-description="Item a"><a href="#thm-spectral-2-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+<div class="displaymath process-math" id="thm-orth-constraint-2-2">
+\begin{equation*}
+\lambda_1 \ge \lambda_2 \ge \cdots \ge \lambda_n
+\end{equation*}
+</div>
+<div class="para" id="thm-orth-constraint-2-3">and corresponding eigenvectors<div class="autopermalink" data-description="Paragraph"><a href="#thm-orth-constraint-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="thm-orth-constraint-2-4">
+\begin{equation*}
+\vec u_1,\vec u_2,\ldots,\vec u_n.
+\end{equation*}
+</div>
+<div class="para" id="thm-orth-constraint-2-5">Subject to the constraints <span class="process-math">\(\|\vec x\|=1\)</span> and <span class="process-math">\(\vec x\cdot\vec u_1=0\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-orth-constraint-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ul class="disc" id="thm-orth-constraint-2-6">
+<li id="thm-orth-constraint-2-6-1">
+<div class="para" id="p-derived-thm-orth-constraint-2-6-1">The <em class="emphasis">maximum</em> value of <span class="process-math">\(Q\)</span> is <span class="process-math">\(\lambda_2\text{,}\)</span> attained at an eigenvector associated to <span class="process-math">\(\lambda_2\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#thm-orth-constraint-2-6-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="thm-spectral-2-2-2">
-<div class="para" id="p-derived-thm-spectral-2-2-2">The dimension of each eigenspace equals its algebraic multiplicity.</div>
-<div class="autopermalink" data-description="Item b"><a href="#thm-spectral-2-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+<li id="thm-orth-constraint-2-6-2">
+<div class="para" id="p-derived-thm-orth-constraint-2-6-2">The <em class="emphasis">minimum</em> value of <span class="process-math">\(Q\)</span> is <span class="process-math">\(\lambda_n\text{,}\)</span> attained at <span class="process-math">\(\vec u_n\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#thm-orth-constraint-2-6-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="thm-spectral-2-2-3">
-<div class="para" id="p-derived-thm-spectral-2-2-3">Eigenspaces corresponding to distinct eigenvalues are orthogonal.</div>
-<div class="autopermalink" data-description="Item c"><a href="#thm-spectral-2-2-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
-</li>
-<li id="thm-spectral-2-2-4">
-<div class="para" id="p-derived-thm-spectral-2-2-4">
-<span class="process-math">\(A\)</span> can be orthogonally diagonalized as <span class="process-math">\(A=PDP^T\text{,}\)</span> where <span class="process-math">\(P\)</span> is orthogonal.</div>
-<div class="autopermalink" data-description="Item d"><a href="#thm-spectral-2-2-4" title="Copy heading and permalink for Item d" aria-label="Copy heading and permalink for Item d">🔗</a></div>
-</li>
-</ol>
-<div class="workspace" data-space="2in"></div>
-<div class="autopermalink" data-description="Theorem 7.18: Spectral Theorem"><a href="#thm-spectral" title="Copy heading and permalink for Theorem 7.18: Spectral Theorem" aria-label="Copy heading and permalink for Theorem 7.18: Spectral Theorem">🔗</a></div></article><div class="para" id="p-7-1-spectral-theorem-4"> <div class="autopermalink" data-description="Paragraph"><a href="#p-7-1-spectral-theorem-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</ul> <div class="para" id="thm-orth-constraint-2-7">Here <span class="process-math">\(\lambda_2\)</span> denotes the <em class="emphasis">second largest</em> eigenvalue of <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-orth-constraint-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="thm-spectral-decomposition"><h4 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Spectral Decomposition.</span>
+<div class="workspace" data-space="0.3in"></div>
+<div class="autopermalink" data-description="Theorem 7.35: Extrema with an Orthogonality Condition"><a href="#thm-orth-constraint" title="Copy heading and permalink for Theorem 7.35: Extrema with an Orthogonality Condition" aria-label="Copy heading and permalink for Theorem 7.35: Extrema with an Orthogonality Condition">🔗</a></div></article><article class="example example-like" id="ex-7-3-example3"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.36</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<div class="para logical" id="thm-spectral-decomposition-2-1">
-<div class="para">Suppose <span class="process-math">\(A \)</span> can be orthogonally diagonalized as</div>
-<div class="displaymath process-math" id="thm-spectral-decomposition-2-1-2">
+<div class="para logical" id="ex-7-3-example3-1-1">
+<div class="para">Calculate the maximum and minimum values of</div>
+<div class="displaymath process-math" id="ex-7-3-example3-1-1-1">
 \begin{equation*}
-A=PDP^T = \begin{bmatrix} \vec u_1 \amp \cdots \amp \vec u_n\end{bmatrix} \begin{bmatrix} \lambda_1 \amp \cdots \amp 0 \\ \vdots \amp \ddots \amp \vdots \\ 0 \amp \cdots \amp \lambda_n \end{bmatrix}\begin{bmatrix}\vec u_1^T \\ \vdots \\ \vec u_n^T \end{bmatrix}\text{.}
+Q(\vec x)=\vec x^T A \vec x = x_1^2 + x_2^2 + x_3^2 + 6x_1x_2\text{,}
 \end{equation*}
 </div>
-<div class="para">Then <span class="process-math">\(A\)</span> has the decomposition</div>
-<div class="displaymath process-math" id="thm-spectral-decomposition-2-1-4">
+<div class="para">with <span class="process-math">\(\vec x\in\mathbb{R}^3\text{,}\)</span> subject to <span class="process-math">\(\|\vec x\|=1\)</span> and <span class="process-math">\(\vec x\cdot\vec u_1=0\text{,}\)</span> where</div>
+<div class="displaymath process-math" id="ex-7-3-example3-1-1-5">
 \begin{equation*}
-A=\sum_{i=1}^n \lambda_i \vec u_i \vec u_i^T = \lambda_1 \vec u_1\vec u_1^T + \cdots + \lambda_n \vec u_n\vec u_n^T\text{.}
+A = \begin{bmatrix} 1 \amp 3 \amp 0 \\ 3 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{bmatrix} \quad \text{and} \quad \vec u_1=\begin{bmatrix}1\\1\\0\end{bmatrix}\text{.}
 \end{equation*}
 </div>
-<div class="para">Note that each term <span class="process-math">\(\lambda_i\vec u_i\vec u_i^T\)</span> is a rank 1 matrix.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#thm-spectral-decomposition-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Identifu points where the maximum and minimum values occur. The eigenvalues of <span class="process-math">\(A\)</span> are <span class="process-math">\(\lambda = 4, 1, -2\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-3-example3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="2in"></div>
-<div class="autopermalink" data-description="Theorem 7.19: Spectral Decomposition"><a href="#thm-spectral-decomposition" title="Copy heading and permalink for Theorem 7.19: Spectral Decomposition" aria-label="Copy heading and permalink for Theorem 7.19: Spectral Decomposition">🔗</a></div></article></section><section class="onepage" id="p-7-1-example-spectral"><article class="example example-like" id="ex-7-1-spectral"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4>
-<div class="para" id="ex-7-1-spectral-1-1">Construct a spectral decomposition of <span class="process-math">\(A\text{,}\)</span> given its orthogonal diagonalization:<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-1-spectral-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="displaymath process-math" id="ex-7-1-spectral-1-2">
-\begin{equation*}
-A=\begin{bmatrix}3 \amp 1\\ 1 \amp 3\end{bmatrix}
-=
-\begin{bmatrix}
-\tfrac1{\sqrt2} \amp -\tfrac1{\sqrt2}\\
-\tfrac1{\sqrt2} \amp \tfrac1{\sqrt2}
-\end{bmatrix}
-\begin{bmatrix}4 \amp 0\\ 0 \amp 2\end{bmatrix}
-\begin{bmatrix}
-\tfrac1{\sqrt2} \amp \tfrac1{\sqrt2}\\
--\tfrac1{\sqrt2} \amp \tfrac1{\sqrt2}
-\end{bmatrix}.
-\end{equation*}
-</div>
-<div class="workspace" data-space="2in"></div>
-<div class="autopermalink" data-description="Example 7.20"><a href="#ex-7-1-spectral" title="Copy heading and permalink for Example 7.20" aria-label="Copy heading and permalink for Example 7.20">🔗</a></div></article><div class="para" id="p-7-1-example-spectral-2"> <div class="autopermalink" data-description="Paragraph"><a href="#p-7-1-example-spectral-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="onepage" id="handout-section-7-1-spectral-7"><article class="note remark-like" id="handout-section-7-1-spectral-7-1"><h4 class="heading">
-<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4>
-<div class="para" id="handout-section-7-1-spectral-7-1-1-1">Note in the solution to <a href="Section-7-1.html#ex-7-1-spectral" class="xref" data-knowl="./knowl/xref/ex-7-1-spectral.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.20">Example 7.20</a> that if <span class="process-math">\(\lambda_1 = 4\)</span> is the larger of the two eigenvalues and <span class="process-math">\(\vec u_1\)</span> is a normalized eigenvector corresponding to <span class="process-math">\(\lambda_1\text{,}\)</span> then <span class="process-math">\(A \approx \lambda_1\vec u_1\vec u_1^T\)</span> is a close approximation of the matrix <span class="process-math">\(A\text{.}\)</span> In fact, it is the closest approximation of <span class="process-math">\(A\)</span> using a rank 1 matrix.<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-1-spectral-7-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para logical" id="handout-section-7-1-spectral-7-1-1-2">
-<div class="para">In general, if we label the eigenvalues of an <span class="process-math">\(n \times n\)</span> symmetric matrix <span class="process-math">\(A\)</span> in non-increasing order by magnitude, so <span class="process-math">\(|\lambda_1| \geq |\lambda_2| \geq \cdots \geq |\lambda_n|\text{,}\)</span> then each matrix</div>
-<div class="displaymath process-math" id="handout-section-7-1-spectral-7-1-1-2-4">
-\begin{equation*}
-\sum_{i=1}^j \lambda_i\vec u_i\vec u_i^T = \lambda_1\vec u_1\vec u_1^T + \cdots + \lambda_j\vec u_j \vec u_j^T
-\end{equation*}
-</div>
-<div class="para">is the closest<span class="process-math">\(^*\)</span> rank <span class="process-math">\(j\)</span> approximation of <span class="process-math">\(A\text{,}\)</span> which gets more accurate as <span class="process-math">\(j\)</span> approaches <span class="process-math">\(n\text{.}\)</span>
-</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-1-spectral-7-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para" id="handout-section-7-1-spectral-7-1-1-3">
-<span class="process-math">\(^*\text{:}\)</span> The distance between two matrices is measured by subtracting the two matrices and calculating the square root of the sums of the squares of the entries in the resulting matrix. This calculation is the same calculation used to calculate the distance between two vectors. By closest, we mean that there is no rank <span class="process-math">\(j\)</span> matrix that is closer. There could be other rank <span class="process-math">\(j\)</span> matrices that are as close.<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-1-spectral-7-1-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Note 7.21"><a href="#handout-section-7-1-spectral-7-1" title="Copy heading and permalink for Note 7.21" aria-label="Copy heading and permalink for Note 7.21">🔗</a></div></article><article class="example example-like" id="handout-section-7-1-spectral-7-2"><h4 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.22</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h4>
-<div class="para logical" id="handout-section-7-1-spectral-7-2-1-1">
-<div class="para">Construct a spectral decompositon of</div>
-<div class="displaymath process-math" id="handout-section-7-1-spectral-7-2-1-1-1">
-\begin{equation*}
-A = \begin{bmatrix} 0 \amp 0 \amp 1 \\ 0 \amp 1 \amp 0 \\ 1 \amp 0 \amp 0 \end{bmatrix}\text{.}
-\end{equation*}
-</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-1-spectral-7-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="workspace" data-space="2in"></div>
-<div class="autopermalink" data-description="Example 7.22"><a href="#handout-section-7-1-spectral-7-2" title="Copy heading and permalink for Example 7.22" aria-label="Copy heading and permalink for Example 7.22">🔗</a></div></article></section><div class="autopermalink" data-description="Handout: 7.1 Diagonalization of Symmetric Matrices"><a href="#handout-section-7-1-spectral" title="Copy heading and permalink for Handout: 7.1 Diagonalization of Symmetric Matrices" aria-label="Copy heading and permalink for Handout: 7.1 Diagonalization of Symmetric Matrices">🔗</a></div></section><div class="autopermalink" data-description="Section: 7.1 Diagonalization of Symmetric Matrices"><a href="#Section-7-1" title="Copy heading and permalink for Section: 7.1 Diagonalization of Symmetric Matrices" aria-label="Copy heading and permalink for Section: 7.1 Diagonalization of Symmetric Matrices">🔗</a></div></section>
+<div class="autopermalink" data-description="Example 7.36"><a href="#ex-7-3-example3" title="Copy heading and permalink for Example 7.36" aria-label="Copy heading and permalink for Example 7.36">🔗</a></div></article></section><div class="autopermalink" data-description="Handout: 7.3 Constrained Optimization"><a href="#handout-section-7-3-constrained-optimization" title="Copy heading and permalink for Handout: 7.3 Constrained Optimization" aria-label="Copy heading and permalink for Handout: 7.3 Constrained Optimization">🔗</a></div></section><div class="autopermalink" data-description="Section: 7.3 Constrained Optimization"><a href="#Section-7-3" title="Copy heading and permalink for Section: 7.3 Constrained Optimization" aria-label="Copy heading and permalink for Section: 7.3 Constrained Optimization">🔗</a></div></section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="Section-10-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="Section-7-2.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="Section-7-2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

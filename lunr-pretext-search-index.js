@@ -3716,6 +3716,96 @@ var ptx_lunr_docs = [
   "number": "7.30",
   "title": "",
   "body": "  Determine whether the inequality holds for all :    "
+},
+{
+  "id": "Section-7-3",
+  "level": "1",
+  "url": "Section-7-3.html",
+  "type": "Section",
+  "number": "",
+  "title": "7.3 Constrained Optimization",
+  "body": " 7.3 Constrained Optimization   7.3 Constrained Optimization   Overview   Topics   Constrained optimization as an eigenvalue problem  Distance and orthogonality constraints     Goals   Apply eigenvalues and eigenvectors to solve optimization problems subject to distance and orthogonality constraints.       Consider the quadratic form . Find the largest and smallest values of under the constraint that .     A coloring of the unit sphere which represents the values of Q from the previous example, where blue means low values and red means high values.      A Constrained Optimization Problem  Suppose we wish to find the maximum and minimum values of   subject to the constraint .  That is, we want   This is an example of a constrained optimization problem. We are also interested in where these extreme values are attained.  These problems are straight-forward when has no cross-product terms. What about when it does have cross-product terms?    Calculate the maximum and minimum values of   where and . Identify the points where these values are obtained.      The image below is the unit sphere whose surface is colored according to the quadratic form from . Notice the agreement between our solution and the image.   A coloring of the unit sphere which represents the values of Q from the previous example, where blue means low values and red means high values.    Constrained Optimization and Eigenvalues   Extrema via Eigenvalues   Let , where is a real symmetric matrix with eigenvalues   and corresponding normalized eigenvectors   Under the constraint :   The maximum value of is , attained at .  The minimum value of is , attained at .       Calculate the maximum value of , with , subject to the constraint . Identify a point where this maximum is obtained.        An Orthogonality Constraint   Extrema with an Orthogonality Condition   Let , where is a real symmetric matrix with eigenvalues   and corresponding eigenvectors   Subject to the constraints and :   The maximum value of is , attained at an eigenvector associated to .  The minimum value of is , attained at .   Here denotes the second largest eigenvalue of .      Calculate the maximum and minimum values of , with , subject to and , where . Identifu points where the maximum and minimum values occur. The eigenvalues of are .      "
+},
+{
+  "id": "obj-7-3-topics-goals",
+  "level": "2",
+  "url": "Section-7-3.html#obj-7-3-topics-goals",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   Constrained optimization as an eigenvalue problem  Distance and orthogonality constraints   "
+},
+{
+  "id": "p-7-3-overview-3",
+  "level": "2",
+  "url": "Section-7-3.html#p-7-3-overview-3",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals   Apply eigenvalues and eigenvectors to solve optimization problems subject to distance and orthogonality constraints.   "
+},
+{
+  "id": "ex-7-3-unit-sphere",
+  "level": "2",
+  "url": "Section-7-3.html#ex-7-3-unit-sphere",
+  "type": "Example",
+  "number": "7.31",
+  "title": "",
+  "body": "  Consider the quadratic form . Find the largest and smallest values of under the constraint that .   "
+},
+{
+  "id": "p-7-3-constrained-problem-7",
+  "level": "2",
+  "url": "Section-7-3.html#p-7-3-constrained-problem-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "constrained optimization "
+},
+{
+  "id": "ex-7-3-example2",
+  "level": "2",
+  "url": "Section-7-3.html#ex-7-3-example2",
+  "type": "Example",
+  "number": "7.32",
+  "title": "",
+  "body": "  Calculate the maximum and minimum values of   where and . Identify the points where these values are obtained.   "
+},
+{
+  "id": "thm-constrained-eigs",
+  "level": "2",
+  "url": "Section-7-3.html#thm-constrained-eigs",
+  "type": "Theorem",
+  "number": "7.33",
+  "title": "Extrema via Eigenvalues.",
+  "body": " Extrema via Eigenvalues   Let , where is a real symmetric matrix with eigenvalues   and corresponding normalized eigenvectors   Under the constraint :   The maximum value of is , attained at .  The minimum value of is , attained at .    "
+},
+{
+  "id": "ex-7-3-example4",
+  "level": "2",
+  "url": "Section-7-3.html#ex-7-3-example4",
+  "type": "Example",
+  "number": "7.34",
+  "title": "",
+  "body": "  Calculate the maximum value of , with , subject to the constraint . Identify a point where this maximum is obtained.    "
+},
+{
+  "id": "thm-orth-constraint",
+  "level": "2",
+  "url": "Section-7-3.html#thm-orth-constraint",
+  "type": "Theorem",
+  "number": "7.35",
+  "title": "Extrema with an Orthogonality Condition.",
+  "body": " Extrema with an Orthogonality Condition   Let , where is a real symmetric matrix with eigenvalues   and corresponding eigenvectors   Subject to the constraints and :   The maximum value of is , attained at an eigenvector associated to .  The minimum value of is , attained at .   Here denotes the second largest eigenvalue of .   "
+},
+{
+  "id": "ex-7-3-example3",
+  "level": "2",
+  "url": "Section-7-3.html#ex-7-3-example3",
+  "type": "Example",
+  "number": "7.36",
+  "title": "",
+  "body": "  Calculate the maximum and minimum values of , with , subject to and , where . Identifu points where the maximum and minimum values occur. The eigenvalues of are .   "
 }
 ]
 
