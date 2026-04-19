@@ -22,9 +22,31 @@
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para">Suppose we have 5 web pages that link to each other according to the following diagram:<div class="autopermalink" data-description="Paragraph"><a href="#ex-10-2-web-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/img-10-2-web.svg" role="img" class="contained" alt="Directed graph of 5 web page links, where nodes represent pages and arrows represent hyperlinks used to build a transition matrix."></div> <div class="para">Note that Page 1 has direct links to pages <span class="process-math">\(\underline{\hspace{1.5in}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-10-2-web-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> <div class="para">If a user on a page in this web is <em class="emphasis">equally likely</em> to go to any of the pages that their page links to, construct a stochastic matrix that represents how users navigate this web.<div class="autopermalink" data-description="Paragraph"><a href="#ex-10-2-web-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/img-10-2-web.svg" role="img" class="contained" alt="Directed graph of 5 web page links, where nodes represent pages and arrows represent hyperlinks used to build a transition matrix."></div> <div class="para">Note that Page A has direct links to pages <span class="process-math">\(\underline{\hspace{1.5in}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-10-2-web-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para">B and D.<div class="autopermalink" data-description="Paragraph"><a href="#ex-10-2-web-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="autopermalink" data-description="Solution 1"><a href="#ex-10-2-web-1-4" title="Copy heading and permalink for Solution 1" aria-label="Copy heading and permalink for Solution 1">🔗</a></div>
+</div></details> <div class="para">If a user on a page in this web is <em class="emphasis">equally likely</em> to go to any of the pages that their page links to, construct a stochastic matrix that represents how users navigate this web.<div class="autopermalink" data-description="Paragraph"><a href="#ex-10-2-web-1-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Assuming at each step that we have to click a link to travel to the next page, we find</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P = \begin{bmatrix} 0 \amp \frac{1}{3} \amp \frac{1}{2} \amp 0 \amp 0 \\ \frac{1}{2} \amp 0 \amp \frac{1}{2} \amp 0 \amp 0 \\ 0 \amp \frac{1}{3} \amp 0 \amp 0 \amp 0 \\ \frac{1}{2} \amp \frac{1}{3} \amp 0 \amp 0 \amp 0 \\ 0 \amp 0 \amp 0 \amp 1 \amp 0 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Notice that the fifth column is <span class="process-math">\(\vec 0\)</span> since there are no links leaving Page E. This creates a non-stochastic matrix, which is not good for our problem. To fix this we replace column 5 with <span class="process-math">\(\vec e_5\)</span> since if you are on Page E, you are stuck that after each step since there is no way to travel somewhere else. Therefore, the stochastic matrix <span class="process-math">\(P\)</span> which models this scenario is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P = \begin{bmatrix} 0 \amp \frac{1}{3} \amp \frac{1}{2} \amp 0 \amp 0 \\ \frac{1}{2} \amp 0 \amp \frac{1}{2} \amp 0 \amp 0 \\ 0 \amp \frac{1}{3} \amp 0 \amp 0 \amp 0 \\ \frac{1}{2} \amp \frac{1}{3} \amp 0 \amp 0 \amp 0 \\ 0 \amp 0 \amp 0 \amp 1 \amp 1 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-10-2-web-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.4.1"><a href="#ex-10-2-web-2" title="Copy heading and permalink for Solution 7.4.1" aria-label="Copy heading and permalink for Solution 7.4.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Example 7.4"><a href="#ex-10-2-web" title="Copy heading and permalink for Example 7.4" aria-label="Copy heading and permalink for Example 7.4">🔗</a></div></article><span class="incontext"><a class="internal" href="Section-10-2.html#ex-10-2-web">in-context</a></span>
 </body>
