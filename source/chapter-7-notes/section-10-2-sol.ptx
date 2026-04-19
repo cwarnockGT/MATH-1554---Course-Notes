@@ -1,0 +1,325 @@
+<handout xml:id="handout-section-10-2-Google-Page-Rank">
+  <title>10.2 Google PageRank</title>
+
+  <page xml:id="p-10-2-overview">
+    <title>Overview</title>
+
+    <objectives xml:id="obj-10-2-topics-goals">
+      <title>Topics</title>
+      <ul>
+        <li>Review of Markov chains</li>
+        <li>Steady-state theorem for Markov chains</li>
+        <li>Modeling website usage with Markov chains</li>
+        <li>Computing PageRank</li>
+      </ul>
+      </objectives>
+
+      <objectives workspace="0.2in">
+      <title>Goals</title>
+      <ul>
+        <li>Determine whether a stochastic matrix is regular.</li>
+        <li>Use matrix powers and theorems to describe long-term behavior.</li>
+        <li>Construct transition and Google matrices and compute PageRank.</li>
+      </ul>
+      </objectives>
+
+
+
+    <example xml:id="prob-car-rental" workspace="5in">
+      <statement>
+        <p>Recall <xref ref="ex-4-9-cars"/>: A rental company has three locations A, B, and C.</p>
+
+        <table>
+        <tabular top="none" bottom="medium">
+            <row>
+              <cell ></cell><cell ></cell><cell right="none" colspan="3">rented from</cell>
+            </row>
+            <row>
+              <cell ></cell><cell></cell><cell>A</cell><cell>B</cell><cell>C</cell>
+            </row>
+            <row bottom="none">
+              <cell></cell><cell right="medium">A</cell><cell>.8</cell><cell>.1</cell><cell>.2</cell>
+            </row>
+            <row bottom="none">
+              <cell rowspan="3">returned to</cell><cell right="medium">B</cell><cell>.2</cell><cell>.6</cell><cell>.3</cell>
+            </row>
+            <row>
+              <cell></cell><cell right="medium">C</cell><cell>.0</cell><cell>.3</cell><cell>.5</cell>
+            </row>
+          </tabular>
+        </table>
+
+        <p>There are 18 cars at each location initially. What happens in the long run?</p>
+      </statement>
+      <solution>
+        <p>
+            Recall that the stochastic matrix for this problem is <md>P = \begin{bmatrix} 0.8 \amp 0.1 \amp 0.2 \\ 0.2 \amp 0.6 \amp 0.3 \\ 0 \amp 0.3 \amp 0.5 \end{bmatrix}</md>. Let <m>\vec x_0 = \begin{bmatrix} 18 \\ 18 \\ 18 \end{bmatrix}</m>. We have that the <m>n^\text{th}</m> term in the Markov Chain is given by <m>\vec x_n = P^n\vec x_0</m>. Note <m>P</m> is regular since <m>P^2</m> has only positive entries. <xref ref="thm-regular-converges"/> guarantees that there is a unique steady-state vector for <m>P</m>; that is, there is a unique probability vector <m>\vec q</m> so that <m>P\vec q = \vec q</m>. We now know that <m>\vec q</m> is an eigenvector of <m>P</m> corresponding to an eigenvalue of <m>\lambda = 1</m> which is also a probability vector. We have that the "final" vector in the Markov Chain is <md>\vec \ell = \lim_{n \rightarrow \infty}\vec x_n = \lim_{n\rightarrow \infty}P^n\vec x_0 = t\vec q</md>, where <m>t</m> is the sum of the entries of <m>\vec x_0</m>. Thus, the final vector is <m>\vec \ell = 54 \vec q</m>.
+        </p>
+      </solution>
+    </example>
+
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-10-2-long-term">
+    <title>Long-Term Behavior</title>
+
+    <p>
+      Recall from <xref ref="handout-section-4-9-markov" text="custom">Section 4.9/5.9 Markov Chains</xref>, that for Markov Chain problems involving a regular stochastic matrix <m>P</m>, we can find the unique steady-state vector <m>\vec q</m> by finding the <em>unique</em> probability eigenvector corresponding to an eigenvalue of <m>\lambda = 1</m>. This involves solving the equation <md>P\vec q = \vec q</md>.
+    </p>
+
+    <p workspace="0.3in">
+        For the stochastic matrices <m>G</m>, called Google Matrices, that we will create in our PageRank problems, it is going to be <em>extremely</em> difficult to solve <m>G\vec q = \vec q</m>. So, we instead determine a different way to identify the steady-state vector.
+    </p>
+
+    <theorem xml:id="thm-regular-markov" workspace="3in">
+      <title>Convergence of Regular Stochastic Matrices</title>
+      <statement>
+        <p>If <m>P</m> is a regular <m>m\times m</m> stochastic matrix with <m>m\ge2</m> and with unique steady-state vector <m>\vec q</m>, then:</p>
+        <ol marker="(1)">
+            <li>
+                <p>
+                    There is a stochastic matrix <m>\Pi</m> such that <md>\lim_{n\to\infty}P^n=\Pi</md>.
+                </p>
+            </li>
+            <li>For any starting probability vector <m>\vec x_0</m>, we have that <md>\lim_{n\rightarrow\infty}P^n\vec x_0 = \vec q</md>.</li>
+          <li>Each column of <m>\Pi</m> equals <m>\vec q</m>.</li>
+          <li><m>\vec q</m> is the unique eigenvector with eigenvalue <m>1</m>.</li>
+          <li>All eigenvalues of <m>P</m> satisfy <m>|\lambda| \leq 1</m>.</li>
+        </ol>
+      </statement>
+      <solution>
+        <p>
+            First, note that (2) is guaranteed since <m>P</m> is regular and so has a unique steady state vector <m>\vec q</m> regardless of the starting probability vector <m>\vec x_0</m>. We can prove (3) by observing that for any <m>i = 1, \dots, n</m>, we have that the <m>i^\text{th}</m> column of <m>\Pi</m> is given by <md>\Pi\vec e_i = \lim_{n\rightarrow \infty} P^n e_i = \vec q</md> by (2). Hence, every column of <m>\Pi</m> is equal to <m>\vec q</m>.
+        </p>
+    </solution>
+    </theorem>
+    
+
+    <p>
+        Focusing on (3), we see that an alternative way to find the unique steady-state vector <m>\vec q</m> is to take large powers of <m>P</m> and see what vector the columns of <m>P^n</m> are converging to. This <em>will</em> require a computer.
+    </p>
+
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-10-2-web-example">
+    <title>Example 1: A Web Graph</title>
+
+    <example xml:id="ex-10-2-web" workspace="true">
+      <statement>
+        <p>Suppose we have 5 web pages that link to each other according to the following diagram:</p>
+
+        <image xml:id="img-10-2-web" width="30%">
+          <latex-image>
+            <latex>
+\begin{tikzpicture}
+\begin{scope}[-&gt;,&gt;=stealth',shorten &gt;=1pt,auto,node distance=2cm,thick,
+main node/.style={circle,fill=black!05,draw}]
+\node[main node] (1) {A};
+\node[main node] (2) [right of=1] {B};
+\node[main node] (3) [below of=1] {C};
+\node[main node] (4) [below of=2] {D};
+\node[main node] (5) [right of=4] {E};
+\path
+(1) edge (2) edge (4)
+(2) edge (1) edge (3) edge (4)
+(3) edge (1) edge (2)
+(4) edge (5);
+\end{scope}
+\end{tikzpicture}
+            </latex>
+          </latex-image>
+          <shortdescription>Directed graph of 5 web page links, where nodes represent pages and arrows represent hyperlinks used to build a transition matrix.</shortdescription>
+        </image>
+
+        <p>
+            Note that Page A has direct links to pages <m>\underline{\hspace{1.5in}}</m>.
+        </p>
+        <solution>
+            <p>
+                B and D.
+            </p>
+        </solution>
+
+        <p>
+          If a user on a page in this web is <em>equally likely</em> to go to any of the pages that their page links to, construct a stochastic matrix that represents how users navigate this web.
+        </p>
+      </statement>
+      <solution>
+        <p>
+            Assuming at each step that we have to click a link to travel to the next page, we find <md>P = \begin{bmatrix} 0 \amp \frac{1}{3} \amp \frac{1}{2} \amp 0 \amp 0 \\ \frac{1}{2} \amp 0 \amp \frac{1}{2} \amp 0 \amp 0 \\ 0 \amp \frac{1}{3} \amp 0 \amp 0 \amp 0 \\ \frac{1}{2} \amp \frac{1}{3} \amp 0 \amp 0 \amp 0 \\ 0 \amp 0 \amp 0 \amp 1 \amp 0 \end{bmatrix}</md>. Notice that the fifth column is <m>\vec 0</m> since there are no links leaving Page E. This creates a non-stochastic matrix, which is not good for our problem. To fix this we replace column 5 with <m>\vec e_5</m> since if you are on Page E, you are stuck that after each step since there is no way to travel somewhere else. Therefore, the stochastic matrix <m>P</m> which models this scenario is <md>P = \begin{bmatrix} 0 \amp \frac{1}{3} \amp \frac{1}{2} \amp 0 \amp 0 \\ \frac{1}{2} \amp 0 \amp \frac{1}{2} \amp 0 \amp 0 \\ 0 \amp \frac{1}{3} \amp 0 \amp 0 \amp 0 \\ \frac{1}{2} \amp \frac{1}{3} \amp 0 \amp 0 \amp 0 \\ 0 \amp 0 \amp 0 \amp 1 \amp 1 \end{bmatrix}</md>.
+        </p>
+      </solution>
+    </example>
+
+    <p>
+        <ul>
+            <li>Note that the matrix <m>P</m> formed in <xref ref="ex-10-2-web"/> describes how users transition between pages in the web after clicking a single link.</li> 
+            <li workspace="0.5in">What does <m>P^2</m> describe?</li>
+            <li workspace="0.5in">What does <m>\displaystyle\lim_{n\rightarrow \infty} P^n</m> describe?</li> 
+            <li>By <xref ref="thm-regular-markov"/>, if <m>P </m> is a regular stochastic matrix, then <md>\lim_{n\rightarrow \infty} P^n = \begin{bmatrix} \vec q \amp \vec q \amp \cdots \amp \vec q \end{bmatrix}</md>. Each entry of the unique steady-state vector <m>\vec q </m> is describing the how likely someone is to be on that webpage in the long run.</li> 
+            <li>Therefore, <m>\vec q</m> is describing the <em>popularity</em> or <em>importance</em> of each page in the web.</li>
+            <li>The <term>PageRank</term> is the ranking assigned to each page based on its importance, which is determined from <m>\vec q</m>. The highest ranked page has PageRank 1, the second has PageRank 2, and so on.</li>
+        </ul>
+    </p>
+
+    <p>Is the matrix <m>P</m> from <xref ref="ex-10-2-web"/> regular?</p>
+    <solution>
+        <p>
+            No. So we want to make adjustments.
+        </p>
+    </solution>
+  </page>
+
+
+  <page xml:id="p-10-2-adjustment1">
+    <title>Adjustment 1: Dangling Nodes</title>
+
+    <note xml:id="note-adjust1">
+      <title>Adjustment 1</title>
+      <statement>
+        <p>
+          If a page has no outgoing links, a user moves to any page with equal probability. We call this modified stochastic matrix to <m>P_*</m>.
+        </p>
+      </statement>
+    </note>
+
+    <example workspace="2in">
+        <statement>
+            <p>
+                With this adjustment, what is <m>P_*</m> for <xref ref="ex-10-2-web"/>? Is it regular?
+            </p>
+        </statement>
+        <solution>
+            <p>
+                <md>P_* = \begin{bmatrix} 0 \amp \frac{1}{3} \amp \frac{1}{2} \amp 0 \amp \frac{1}{5} \\ \frac{1}{2} \amp 0 \amp \frac{1}{2} \amp 0 \amp \frac{1}{5} \\ 0 \amp \frac{1}{3} \amp 0 \amp 0 \amp \frac{1}{5} \\ \frac{1}{2} \amp \frac{1}{3} \amp 0 \amp 0 \amp \frac{1}{5} \\ 0 \amp 0 \amp 0 \amp 1 \amp \frac{1}{5} \end{bmatrix}</md>.
+            </p>
+        </solution>
+    </example>
+
+    <p><nbsp/></p>
+
+
+
+    <note xml:id="note-adjust2">
+      <title>Adjustment 2</title>
+      <statement>
+        <p>
+            A user at any page will navigate to any page among those that their webpage links to with equal probability <m>p</m>, and to any page in the web with equal probability <m>1-p</m>. Then, the stochastic matrix becomes <md>G = pP_* + (1-p)K</md>, where <m>K</m> is an <m>n \times n</m> stochastic matrix with every entry equal to <m>\frac{1}{n}</m>. The matrix <m>G</m> is called the <term>Google Matrix</term>. The value <m>p</m> is known as the <term>damping factor</term>. Google is said to use <m>p=0.85</m>.
+        </p>
+      </statement>
+    </note>
+
+    <example workspace="2in" xml:id="ex-10-2-goog">
+        <statement>
+            <p>
+                With this adjustment and with <m>p=0.85</m>, what is <m>G</m> for <xref ref="ex-10-2-web"/>? Is it regular?
+            </p>
+        </statement>
+        <solution>
+            <p>
+                We have that <md>K = \begin{bmatrix} \frac{1}{5} \amp \frac{1}{5} \amp \frac{1}{5} \amp \frac{1}{5} \amp \frac{1}{5} \\ \frac{1}{5} \amp \frac{1}{5} \amp \frac{1}{5} \amp \frac{1}{5} \amp \frac{1}{5} \\ \frac{1}{5} \amp \frac{1}{5} \amp \frac{1}{5} \amp \frac{1}{5} \amp \frac{1}{5} \\ \frac{1}{5} \amp \frac{1}{5} \amp \frac{1}{5} \amp \frac{1}{5} \amp \frac{1}{5} \\ \frac{1}{5} \amp \frac{1}{5} \amp \frac{1}{5} \amp \frac{1}{5} \amp \frac{1}{5} \end{bmatrix}</md>. Then <md>G = 0.85P_* + 0.15K</md>, which is regular since the addition of <m>K</m> guarantees that every entry of <m>G</m> is positive.
+            </p>
+        </solution>
+    </example>
+
+    <p><nbsp/></p>
+
+  </page>
+
+
+  <page xml:id="p-10-2-computing-pagerank">
+    <title>Computing PageRank</title>
+
+        <p> 
+            Because <m>G</m> is a regular stochastic matrix, we have that for any initial probability vector we have that <md>\lim_{n\rightarrow \infty}G^n\vec x_0 \to \vec q</md>. In practice, we can compute the PageRank for each page in the web by evaluating <md>G^n</md> for large <m>n</m> and then using <xref ref="thm-regular-markov"/>. The elements of the resulting columns of <m>G^n</m> give the PageRanks of each page in the web.
+        </p>
+
+<example workspace="1in">
+    <statement>
+        <p>
+            Let <m>G</m> be the Google matrix from <xref ref="ex-10-2-goog"/>. Assuming <md>G^{10} = \begin{bmatrix} 0.2517 \amp 0.25171 \amp 0.25171 \amp 0.25171 \amp 0.25171 \\ 0.2985 \amp 0.29855 \amp 0.29836 \amp 0.29835 \amp 0.2985 \\ 0.17661 \amp 0.17655 \amp 0.17674 \amp 0.17675 \amp 0.17661 \\ 0.15676 \amp 0.15677 \amp 0.15677 \amp 0.15676 \amp 0.15677 \\ 0.11643 \amp 0.11641 \amp 0.11641 \amp 0.11642 \amp 0.11642 \end{bmatrix}</md>, determine the PageRank of each of the pages in the web.
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Note that the columns of <m>G^{10}</m> are very close to one another. Thus, the columns of <m>G^{10}</m> are close to the steady-state vector <m>\vec q</m>. It follows that <md>\vec q \approx \begin{bmatrix} 0.2517 \\ 0.2985 \\ 0.17661 \\ 0.15676 \\ 0.11643 \end{bmatrix}</md>. Ranking these entries from greatest to least, we see that <md>
+                <mrow>\text{Page B gets Page Rank 1}</mrow>
+                <mrow>\text{Page A gets Page Rank 2}</mrow>
+                <mrow>\text{Page C gets Page Rank 3}</mrow>
+                <mrow>\text{Page D gets Page Rank 4}</mrow>
+                <mrow>\text{Page E gets Page Rank 5}</mrow>
+            </md>
+        </p>
+    </solution>
+</example>
+
+<p><nbsp/></p>
+
+<remark>
+    <statement>
+        <p>
+            <ul>
+      <li>When PageRank was devised, in 1996, Yahoo! used humans to provide a "index for the Internet", which was 10 million pages.</li> 
+      <li>The PageRank algortihm was produced as a competing method. The patent was awarded to Stanford University, and exclusively licensed to the newly formed Google corporation.</li> 
+      <li>Brin and Page combined the PageRank algorithm with a webcrawler to provide regular updates to the Google matrix for the web.</li> 
+      <li>The explosive growth of the web soon overwhelmed human based approaches to searching the internet.</li>
+    </ul>
+        </p>
+    </statement>
+    
+</remark>
+
+</page>
+
+
+
+  <page xml:id="p-10-2-history">
+
+    <example>
+    <introduction>
+        <p>
+            Consider the following webpage:
+        </p>
+        <image source="./7-webpage.png" xml:id="img-7-webpage" width="50%">
+                    <shortdescription>A web containing 7 pages and the links between them.</shortdescription>
+                </image>
+    </introduction>
+        <task workspace="3in">
+            <statement>
+                <p>
+                    Determine the Google matrix <m>G</m> for this web, with <m>p = 0.85</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    We have that <md>P_* = \begin{bmatrix} 0 \amp \frac{1}{2} \amp 0 \amp \frac{1}{7} \amp 0 \amp 0 \amp \frac{1}{7} \\ 0 \amp 0 \amp \frac{1}{3} \amp \frac{1}{7} \amp \frac{1}{2} \amp 0 \amp \frac{1}{7} \\ 1 \amp 0 \amp 0 \amp \frac{1}{7} \amp 0 \amp \frac{1}{3} \amp \frac{1}{7} \\ 0 \amp 0 \amp \frac{1}{3} \amp \frac{1}{7} \amp 0 \amp 0 \amp \frac{1}{7} \\ 0 \amp \frac{1}{2} \amp 0 \amp \frac{1}{7} \amp 0 \amp \frac{1}{3} \amp \frac{1}{7} \\ 0 \amp 0 \amp \frac{1}{3} \amp \frac{1}{7} \amp \frac{1}{2} \amp 0 \amp \frac{1}{7} \\ 0 \amp 0 \amp 0 \amp \frac{1}{7} \amp 0 \amp \frac{1}{3} \amp \frac{1}{7} \end{bmatrix} \quad \text{and} \quad K = \frac{1}{7}\begin{bmatrix} 1 \end{bmatrix}_7</md> where <m>\begin{bmatrix}1\end{bmatrix}_7</m> is the <m>7 \times 7</m> matrix with a 1 in every entry. Then, we have that <md>G = 0.85P_* + 0.15K</md>.
+                </p>
+            </solution>
+        </task>
+        <task workspace="1in">
+            <statement>
+                <p>
+                    Determine the PageRank of each page if <md>G^{12} = \begin{bmatrix} 0.11627 \amp 0.1163 \amp 0.1163 \amp 0.1163 \amp 0.11631 \amp 0.11628 \amp 0.1163 \\ 0.16859 \amp 0.16856 \amp 0.16855 \amp 0.16856 \amp 0.16855 \amp 0.16859 \amp 0.16856 \\ 0.19129 \amp 0.19126 \amp 0.19125 \amp 0.19126 \amp 0.19124 \amp 0.19129 \amp 0.19126 \\ 0.09883 \amp 0.098847 \amp 0.09885 \amp 0.098845 \amp 0.098855 \amp 0.09885 \amp 0.098845 \\ 0.16402 \amp 0.16406 \amp 0.16407 \amp 0.16406 \amp 0.16408 \amp 0.16402 \amp 0.16406 \\ 0.16859 \amp 0.16856 \amp 0.16855 \amp 0.16856 \amp 0.16855 \amp 0.16859 \amp 0.16856 \\ 0.092403 \amp 0.092415 \amp 0.092418 \amp 0.092424 \amp 0.092421 \amp 0.092403 \amp 0.092414 \end{bmatrix}</md>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    We have that <md>\vec q \approx \begin{bmatrix} 0.11627 \\ 0.16859 \\ 0.19129 \\ 0.09883 \\ 0.16402 \\ 0.16859 \\ 0.092403 \end{bmatrix}</md>. It follows that <md>
+                <mrow>\text{Page 3 gets Page Rank 1}</mrow>
+                <mrow>\text{Pages 2 and 6 get Page Rank 2}</mrow>
+                <mrow>\text{Page 5 gets Page Rank 3}</mrow>
+                <mrow>\text{Page 1 gets Page Rank 4}</mrow>
+                <mrow>\text{Page 4 gets Page Rank 5}</mrow>
+                <mrow>\text{Page 7 gets Page Rank 6}</mrow>
+            </md>
+                </p>
+            </solution>
+        </task>
+</example>
+  </page> 
+
+</handout>
