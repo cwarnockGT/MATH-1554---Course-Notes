@@ -3806,6 +3806,132 @@ var ptx_lunr_docs = [
   "number": "7.36",
   "title": "",
   "body": "  Calculate the maximum and minimum values of , with , subject to and , where . Identifu points where the maximum and minimum values occur. The eigenvalues of are .   "
+},
+{
+  "id": "Section-7-4",
+  "level": "1",
+  "url": "Section-7-4.html",
+  "type": "Section",
+  "number": "",
+  "title": "7.4 Singular Value Decomposition",
+  "body": " 7.4 Singular Value Decomposition   7.4 Singular Value Decomposition   Overview   Topics   The Singular Value Decomposition (SVD)  Applications of the SVD     Goals   Compute the SVD of a rectangular matrix.  Use the SVD to:  construct bases for the four fundamental subspaces,  construct spectral decompositions.        Singular Value Decomposition   Let be an matrix with rank . Then can be written as   where   is an orthogonal matrix,  is an orthogonal matrix,   is an diagonal matrix with diagonal entries , where .     Note that Singular Value Decomposition applies to any matrix , not just symmetric or square matrices.    Example 1: Geometry of a Linear Transformation    Consider the the linear transformation , where . Note that has an orthogonal diagonalization given by . Also, note that the orthogonal diagonalization of satisfies the properties of a Singular Value Decomposition. The parts below investigate how multiplication by acts on geometrically.     Can you describe geometrically what multiplication by does to an arbitrary vector ?      Instead of determining what does in one fell swoop, let us investigate what each factor of does. First, determine what multiplication by does to an arbitrary vector ?      Next, determine what multiplication by does to an arbitrary vector ?      Now, determine what multiplication by does to an arbitrary vector ?      Combining parts (b) - (d) above, give a geometric description of what multiplication by does to an arbitrary vector .       Singular Values  Recall from that multiplication by an orthogonal matrix does not change the angles between vectors nor the vector's length. Therefore, if is an orthogonal matrix, we have that the linear transformation must simply be a rotation and\/or reflection.  Note that multiplication by a diagonal matrix changes the vector from being in to being in , and then scales it along the appropriate coordinate axes.  Therefore, in general, we can use the SVD of a matrix to describe how the linear transformation acts on the vectors in .   Visualization of the SVD expressing a matrix as rotations and scalings.       Algorithm for Finding the SVD of   How do we find the SVD of a matrix ?   Start by forming the symmetric matrix and finding its eigenvalues , with the eigenvalues assigned in nonincreasing order. Set . These are the singular values of and they are the entries on the diagonal of . Fill any missing diagonal elements with 0.   Since is symmetric, we know from that it has real eigenvalues. A bonus fact is that for symmetric matrices of the form , the eigenvalues must be nonnegative, so        Next, find  normalized and orthogonal eigenvectors of and call them , with corresponding to eigenvalue . These vectors form the rows of .   Make sure to find enough orthonormal eigenvectors for each repeated eigenvalue, which we know we can do by .    Alternatively, we can think of the as the columns of , but since SVD uses , it is usually easier to think with respect to .       Use the formula to find the columns of . If the rank of is less than , then this formula will not produce enough columns to fill . We must find the remaining columns by extending the set to an orthonormal basis of .   The calculated vectors will be normalized and orthogonal to one another as long as the original were.    If the rank of is less than , then some of the eigenvalues found in (1) will be 0, which results in singular values of 0. These singular values can not be used in the formula, since that would result in dividing by 0.            Examples    Construct the SVD of          Construct the SVD of        Applications of the SVD  The SVD has been applied to many modern applications in CS, engineering, and mathematics. Some applications are:  Constructing bases for the four fundamental subspaces  Forming approximations of a matrix  Estimating the rank and the condition number of a matrix  Computing the pseudoinverse of a matrix  Linear least-squares problems  Non-linear least-squares problems  Image compression  Machine learning and data mining  Facial Recognition  Principal component analysis    Students are expected to be familiar with the first two items. We will explore these two items below.     Let be an matrix with rank .  Consider the columns of :   Recall that the formula for calculating the first few columns of is .    It follows that is a set of vectors that all live in .    Therefore, the first columns of form an for     Since the remaining columns of are created so that all columns of form an orthonormal basis for , we see that is a set of vectors which live in .    Therefore, the last columns of form an for .   Now, consider the rows of :   The last rows of are eigenvectors of which correspond to an eigenvalue of .    Therefore, form an for .    We have that . Thus, the last rows of form an for .    Since is an orthogonal matrix, we know that it's rows form an orthonormal basis for . Therefore, is a set of vectors which live in .    It follows that the first rows of form an for .         Let be an matrix with rank and with SVD , where Then,    for .     is an orthonormal basis for .     is an orthonormal basis for .     is an orthonormal basis for .     is an orthonormal basis for .      A graphic depicting the relationship between the rows of V transpose and the columns of U.         Let for . Find an orthonormal basis for each of the four subspaces.       SVD and Spectral Decomposition  We can create the spectral decomposition for a general matrix in a similar way to .    Let be the SVD of a rank matrix, with the columns of given by , the entries on the diagonal of given by , and the rows of given by . Then, the spectral decomposition of is given by       Find the spectral decomposition of . Use the decomposition to identify the best rank 1 approximation of .       We end this section, and this course, by investigating the connection between Spectral Decomposition and Image Compression. Consider an image in grayscale consisting of pixels in a grid. Since each pixel is in grayscale, we can assign it an integer value between 0 and 255 depending on how gray it is, where 0 is black and 255 is white. We can form a matrix where each entry is the grayscale value of the associated pixel. In general, the rank of this matrix could be quite high.  For example, suppose we have selected an image and created the associated matrix and it has rank . One way to store this image in a slightly compressed manner is to store the basis vectors for , and then store a list of linear combinations describing how to use these vectors to recreate all columns (the dimensions of an image are reversed, first horizontal, then vertical).    Could we compress the file size further? Suppose we were okay with a little error in our image. Perhaps just a hair of fuzziness that could be corrected open reopening the compressed file. How could we go about doing this?      The idea is to find a good enough approximation of the image. We can use Spectral Decomposition to find the best rank approximation for . We can save tons of storage by letting be small, but then our image will be super blurry. We can have a very accurate image by letting be large, but then the compression's filesize is not much smaller than the original's filesize. We need to find a which balances these, a good approximation with small filesize.  Here is the best rank 1 approximation for the image. Can you tell what the image is?  Rank 1 approximation of image.    Proceed through the next few images slowly so as not to spoil the surprise.    Here is the best rank 2 approximation for the image. Can you tell what the image is?  Rank 2 approximation of image.      Here is the best rank 4 approximation for the image. Can you tell what the image is?  Rank 4 approximation of image.      Here is the best rank 8 approximation for the image. Can you tell what the image is?  Rank 8 approximation of image.      Here is the best rank 30 approximation for the image. Can you tell what the image is?  Rank 30 approximation of image.      "
+},
+{
+  "id": "obj-7-4-topics-goals",
+  "level": "2",
+  "url": "Section-7-4.html#obj-7-4-topics-goals",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   The Singular Value Decomposition (SVD)  Applications of the SVD   "
+},
+{
+  "id": "p-7-4-overview-3",
+  "level": "2",
+  "url": "Section-7-4.html#p-7-4-overview-3",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals   Compute the SVD of a rectangular matrix.  Use the SVD to:  construct bases for the four fundamental subspaces,  construct spectral decompositions.     "
+},
+{
+  "id": "thm-svd",
+  "level": "2",
+  "url": "Section-7-4.html#thm-svd",
+  "type": "Theorem",
+  "number": "7.37",
+  "title": "Singular Value Decomposition.",
+  "body": " Singular Value Decomposition   Let be an matrix with rank . Then can be written as   where   is an orthogonal matrix,  is an orthogonal matrix,   is an diagonal matrix with diagonal entries , where .    "
+},
+{
+  "id": "ex-7-4-ellipse",
+  "level": "2",
+  "url": "Section-7-4.html#ex-7-4-ellipse",
+  "type": "Example",
+  "number": "7.38",
+  "title": "",
+  "body": "  Consider the the linear transformation , where . Note that has an orthogonal diagonalization given by . Also, note that the orthogonal diagonalization of satisfies the properties of a Singular Value Decomposition. The parts below investigate how multiplication by acts on geometrically.     Can you describe geometrically what multiplication by does to an arbitrary vector ?      Instead of determining what does in one fell swoop, let us investigate what each factor of does. First, determine what multiplication by does to an arbitrary vector ?      Next, determine what multiplication by does to an arbitrary vector ?      Now, determine what multiplication by does to an arbitrary vector ?      Combining parts (b) - (d) above, give a geometric description of what multiplication by does to an arbitrary vector .    "
+},
+{
+  "id": "handout-section-7-4-svd-5-1",
+  "level": "2",
+  "url": "Section-7-4.html#handout-section-7-4-svd-5-1",
+  "type": "Note",
+  "number": "7.39",
+  "title": "Algorithm for Finding the SVD of <span class=\"process-math\">\\(A\\)<\/span>.",
+  "body": " Algorithm for Finding the SVD of   How do we find the SVD of a matrix ?   Start by forming the symmetric matrix and finding its eigenvalues , with the eigenvalues assigned in nonincreasing order. Set . These are the singular values of and they are the entries on the diagonal of . Fill any missing diagonal elements with 0.   Since is symmetric, we know from that it has real eigenvalues. A bonus fact is that for symmetric matrices of the form , the eigenvalues must be nonnegative, so        Next, find  normalized and orthogonal eigenvectors of and call them , with corresponding to eigenvalue . These vectors form the rows of .   Make sure to find enough orthonormal eigenvectors for each repeated eigenvalue, which we know we can do by .    Alternatively, we can think of the as the columns of , but since SVD uses , it is usually easier to think with respect to .       Use the formula to find the columns of . If the rank of is less than , then this formula will not produce enough columns to fill . We must find the remaining columns by extending the set to an orthonormal basis of .   The calculated vectors will be normalized and orthogonal to one another as long as the original were.    If the rank of is less than , then some of the eigenvalues found in (1) will be 0, which results in singular values of 0. These singular values can not be used in the formula, since that would result in dividing by 0.         "
+},
+{
+  "id": "ex-7-4-example1",
+  "level": "2",
+  "url": "Section-7-4.html#ex-7-4-example1",
+  "type": "Example",
+  "number": "7.40",
+  "title": "",
+  "body": "  Construct the SVD of    "
+},
+{
+  "id": "ex-7-4-example2",
+  "level": "2",
+  "url": "Section-7-4.html#ex-7-4-example2",
+  "type": "Example",
+  "number": "7.41",
+  "title": "",
+  "body": "  Construct the SVD of    "
+},
+{
+  "id": "thm-SVD-ortho-subspaces",
+  "level": "2",
+  "url": "Section-7-4.html#thm-SVD-ortho-subspaces",
+  "type": "Theorem",
+  "number": "7.42",
+  "title": "",
+  "body": "  Let be an matrix with rank and with SVD , where Then,    for .     is an orthonormal basis for .     is an orthonormal basis for .     is an orthonormal basis for .     is an orthonormal basis for .      A graphic depicting the relationship between the rows of V transpose and the columns of U.    "
+},
+{
+  "id": "handout-section-7-4-svd-11-1",
+  "level": "2",
+  "url": "Section-7-4.html#handout-section-7-4-svd-11-1",
+  "type": "Example",
+  "number": "7.43",
+  "title": "",
+  "body": "  Let for . Find an orthonormal basis for each of the four subspaces.   "
+},
+{
+  "id": "p-7-4-spectral-connection-2",
+  "level": "2",
+  "url": "Section-7-4.html#p-7-4-spectral-connection-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "spectral decomposition "
+},
+{
+  "id": "thm-",
+  "level": "2",
+  "url": "Section-7-4.html#thm-",
+  "type": "Theorem",
+  "number": "7.44",
+  "title": "",
+  "body": "  Let be the SVD of a rank matrix, with the columns of given by , the entries on the diagonal of given by , and the rows of given by . Then, the spectral decomposition of is given by    "
+},
+{
+  "id": "p-7-4-spectral-connection-4",
+  "level": "2",
+  "url": "Section-7-4.html#p-7-4-spectral-connection-4",
+  "type": "Example",
+  "number": "7.45",
+  "title": "",
+  "body": "  Find the spectral decomposition of . Use the decomposition to identify the best rank 1 approximation of .   "
+},
+{
+  "id": "handout-section-7-4-svd-13-3",
+  "level": "2",
+  "url": "Section-7-4.html#handout-section-7-4-svd-13-3",
+  "type": "Question",
+  "number": "7.46",
+  "title": "",
+  "body": "  Could we compress the file size further? Suppose we were okay with a little error in our image. Perhaps just a hair of fuzziness that could be corrected open reopening the compressed file. How could we go about doing this?   "
 }
 ]
 

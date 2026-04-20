@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>7.4 Singular Value Decomposition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="MATH 1554 Course Notes - Spring 2026">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.13.5';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.52176322e2c1dde5.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.bbf2283c5c1d4f99.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="Warnock_MATH1554CourseNotes" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="notes.html"><span class="title">MATH 1554 Course Notes - Spring 2026</span></a></h1>
+<p class="byline"></p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="embed-button" class="embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><div class="embed-popup hidden" id="embed-popup">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<div class="embed-code-container">
+<textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div>
+</div>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="Section-7-3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-7.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\foo}{b^{ar}}
+\newcommand{\aug}{\fboxsep=-\fboxrule\!\!\!\fbox{\strut}\!\!\!}
+\newcommand{\Nul}{\operatorname{Nul}}
+\newcommand{\Col}{\operatorname{Col}}
+\newcommand{\Row}{\operatorname{Row}}
+\newcommand{\Span}{\operatorname{Span}}
+\renewcommand{\det}{\operatorname{det}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\proj}{\operatorname{proj}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Linear Equations in Linear Algebra</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-1-1.html" class="internal"><span class="title">1.1 Systems of Linear Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-1-1.html#section-1-1-sol" class="internal"><span class="title">1.1 Systems of Linear Equations</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-1-2.html" class="internal"><span class="title">1.2 Row Reduction and Echelon Forms</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="Section-1-2.html#handout-1-2-sol" class="internal"><span class="title">Worksheet</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-1-3.html" class="internal"><span class="title">1.3 Vector Equations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-1-3.html#sec-1-3-vector-equations" class="internal"><span class="title">1.3 Vector Equations</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-1-4.html" class="internal"><span class="title">1.4 The Matrix Equation <span class="process-math">\(A \vec{x} = \vec{b}\)</span></span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-1-4.html#sec-1-4-matrix-equation" class="internal"><span class="title">1.4 The Matrix Equation <span class="process-math">\(A \vec{x} = \vec{b}\)</span></span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-1-5.html" class="internal"><span class="title">1.5 Solution Sets of Linear Systems</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="Section-1-5.html#sec-1-5-homogeneous" class="internal"><span class="title">1.5 Homogeneous Systems and Parametric Vector Forms</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-1-7.html" class="internal"><span class="title">1.7 Linear Independence</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="Section-1-7.html#Section-1-7-2" class="internal"><span class="title">1.7 Linear Independence</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-1-8.html" class="internal"><span class="title">1.8 An Introduction to Linear Transformations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-1-8.html#Section-1-8-2" class="internal"><span class="title">1.8 An Introduction to Linear Transformations</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-1-9.html" class="internal"><span class="title">1.9 More on Linear Transformations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-1-9.html#handout-section-1-9-matrix-linear-transformation" class="internal"><span class="title">1.9 More on Linear Transformation</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-2.html" class="internal"><span class="codenumber">2</span> <span class="title">Matrix Algebra</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-2-1.html" class="internal"><span class="title">2.1 Matrix Operations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-2-1.html#handout-section-2-1-matrix-algebra" class="internal"><span class="title">2.1 Matrix Operations</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-2-2.html" class="internal"><span class="title">2.2 Matrix Inverses</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-2-2.html#handout-section-2-2-matrix-inverses" class="internal"><span class="title">2.2 Matrix Inverses</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-2-3.html" class="internal"><span class="title">2.3 The Invertible Matrix Theorem</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-2-3.html#handout-section-2-3-imt" class="internal"><span class="title">2.3 The Invertible Matrix Theorem</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-2-5.html" class="internal"><span class="title">2.5 <span class="process-math">\(LU\)</span> Factorization</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-2-5.html#handout-section-2-5-lu" class="internal"><span class="title">2.5 <span class="process-math">\(LU\)</span> Factorization</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-2-8.html" class="internal"><span class="title">2.8 Subspaces</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-2-8.html#handout-section-2-8-subspaces" class="internal"><span class="title">2.8 Subspaces</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-2-9.html" class="internal"><span class="title">2.9 Dimension and Rank</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-2-9.html#handout-section-2-9-dimension" class="internal"><span class="title">2.9 Dimension and Rank</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-3.html" class="internal"><span class="codenumber">3</span> <span class="title">Determinants</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-3-1.html" class="internal"><span class="title">3.1 Introduction to Determinants</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-3-1.html#handout-section-3-1-determinants" class="internal"><span class="title">3.1 Introduction to Determinants</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-3-2.html" class="internal"><span class="title">3.2 Properties of the Determinant</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-3-2.html#handout-section-3-2-determinant-properties" class="internal"><span class="title">3.2 Properties of the Determinant</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-3-3.html" class="internal"><span class="title">3.3 Applications of the Determinant</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-3-3.html#handout-section-3-3-area-volume-determinants" class="internal"><span class="title">3.3 Applications of the Determinant</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-4.html" class="internal"><span class="codenumber">4</span> <span class="title">Vector Spaces</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-4-9.html" class="internal"><span class="title">4.9/5.9 Markov Chains</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-4-9.html#handout-section-4-9-markov" class="internal"><span class="title">4.9/5.9 Markov Chains</span></a></div></li></ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-5.html" class="internal"><span class="codenumber">5</span> <span class="title">Eigenvectors and Eigenvalues</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-5-1.html" class="internal"><span class="title">5.1 Eigenvectors, Eigenvalues, and Eigenspaces</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-5-1.html#handout-section-5-1-eigenvalues-eigenvectors" class="internal"><span class="title">5.1 Eigenvectors, Eigenvalues, and Eigenspaces</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-5-2.html" class="internal"><span class="title">5.2 The Characteristic Equation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-5-2.html#handout-section-5-2-characteristic-similar" class="internal"><span class="title">5.2 The Characteristic Equation</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-5-3.html" class="internal"><span class="title">5.3 Diagonalization</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-5-3.html#handout-section-5-3-diagonalization" class="internal"><span class="title">5.3 Diagonalization</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-5-5.html" class="internal"><span class="title">5.5 Complex Eigenvalues</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-5-5.html#handout-section-5-5-complex-eigenvalues" class="internal"><span class="title">5.5 Complex Eigenvalues</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-6.html" class="internal"><span class="codenumber">6</span> <span class="title">Orthogonality and Least Squares</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-6-1.html" class="internal"><span class="title">6.1 Dot Product, Length, and Orthogonality</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-6-1.html#handout-section-6-1-dotproduct" class="internal"><span class="title">6.1 Dot Product, Length, and Orthogonality</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-6-2.html" class="internal"><span class="title">6.2 Orthogonal Sets, Orthogonal Bases, and Projections</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-6-2.html#handout-section-6-2-orthogonal-sets" class="internal"><span class="title">6.2 Orthogonal Sets, Orthogonal Bases, and Projections</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-6-3.html" class="internal"><span class="title">6.3 Orthogonal Projections</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-6-3.html#handout-section-6-3-projections" class="internal"><span class="title">6.3 Orthogonal Projections</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-6-4.html" class="internal"><span class="title">6.4 Gram–Schmidt and QR Decomposition</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-6-4.html#handout-section-6-4-gram-schmidt" class="internal"><span class="title">6.4 Gram–Schmidt and QR Decomposition</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-6-5.html" class="internal"><span class="title">6.5 Least-Squares Problems</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-6-5.html#handout-section-6-5-least-squares" class="internal"><span class="title">6.5 Least-Squares Problems</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-6-6.html" class="internal"><span class="title">6.6 Applications to Linear Models</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-6-6.html#handout-section-6-6-applications-of-least-squares" class="internal"><span class="title">6.6 Applications to Linear Models</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="chapter-7.html" class="internal"><span class="codenumber">7</span> <span class="title">Google PageRank, Symmetric Matrices, and Quadratic Forms</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-10-2.html" class="internal"><span class="title">10.2 Google PageRank</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-10-2.html#handout-section-10-2-Google-Page-Rank" class="internal"><span class="title">10.2 Google PageRank</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-7-1.html" class="internal"><span class="title">7.1 Diagonalization of Symmetric Matrices</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-7-1.html#handout-section-7-1-spectral" class="internal"><span class="title">7.1 Diagonalization of Symmetric Matrices</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-7-2.html" class="internal"><span class="title">7.2 Quadratic Forms</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-7-2.html#handout-section-7-2-quadratic-forms" class="internal"><span class="title">7.2 Quadratic Forms</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Section-7-3.html" class="internal"><span class="title">7.3 Constrained Optimization</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-7-3.html#handout-section-7-3-constrained-optimization" class="internal"><span class="title">7.3 Constrained Optimization</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="Section-7-4.html" class="internal"><span class="title">7.4 Singular Value Decomposition</span></a></div>
+<ul class="structural toc-item-list active"><li class="toc-item toc-handout"><div class="toc-title-box"><a href="Section-7-4.html#handout-section-7-4-svd" class="internal"><span class="title">7.4 Singular Value Decomposition</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<div class="print-preview-header">
+<h2 class="print-preview">Print preview</h2>
+<div class="print-controls">
+<div class="print-controls-toggles">
+<form class="papersize-select" id="papersize-select">
+<span class="name">Paper size</span><label><input type="radio" name="papersize" value="a4">A4
+        </label><label><input type="radio" name="papersize" value="letter">Letter
+        </label>
+</form>
+<details class="print-options"><summary>Additional printing options</summary><div class="header-footer-options">
+<div class="header-option">
+<span class="title">Print headers</span><label>First page<input type="checkbox" id="print-first-page-header-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-header-checkbox" checked></label>
+</div>
+<div class="footer-option">
+<span class="title">Print footers</span><label>First page<input type="checkbox" id="print-first-page-footer-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-footer-checkbox" checked></label>
+</div>
+</div>
+<div class="highlight-workspace-option">
+<label for="highlight-workspace-checkbox">Highlight workspace</label><input type="checkbox" id="highlight-workspace-checkbox">
+</div></details>
+</div>
+<button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
+</div>
+</div>
+<section class="section" id="Section-7-4"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">7.4 Singular Value Decomposition</span>
+</h2>
+<section class="handout" id="handout-section-7-4-svd" data-margins="0.75in 0.75in 0.75in 0.75in"><h3 class="heading hide-type">
+<span class="type">Handout</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">7.4 Singular Value Decomposition</span><div class="print-links"><a href="?printpreview=handout-section-7-4-svd" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+</h3>
+<section class="onepage" id="p-7-4-overview"><article class="objectives goal-like" id="obj-7-4-topics-goals"><h4 class="heading">
+<span class="type">Objectives<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Topics</span>
+</h4>
+<ul class="disc" id="obj-7-4-topics-goals-2">
+<li id="obj-7-4-topics-goals-2-1">
+<div class="para" id="p-derived-obj-7-4-topics-goals-2-1">The Singular Value Decomposition (SVD)</div>
+<div class="autopermalink" data-description="Objective"><a href="#obj-7-4-topics-goals-2-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="obj-7-4-topics-goals-2-2">
+<div class="para" id="p-derived-obj-7-4-topics-goals-2-2">Applications of the SVD</div>
+<div class="autopermalink" data-description="Objective"><a href="#obj-7-4-topics-goals-2-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Objectives: Topics"><a href="#obj-7-4-topics-goals" title="Copy heading and permalink for Objectives: Topics" aria-label="Copy heading and permalink for Objectives: Topics">🔗</a></div></article><article class="objectives goal-like" id="p-7-4-overview-3"><h4 class="heading">
+<span class="type">Objectives<span class="colon heading-divison-mark heading-divison-mark__colon">:</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Goals</span>
+</h4>
+<ul class="disc" id="p-7-4-overview-3-2">
+<li id="p-7-4-overview-3-2-1">
+<div class="para" id="p-derived-p-7-4-overview-3-2-1">Compute the SVD of a rectangular matrix.</div>
+<div class="autopermalink" data-description="Objective"><a href="#p-7-4-overview-3-2-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="p-7-4-overview-3-2-2">
+<div class="para logical" id="p-7-4-overview-3-2-2-1">
+<div class="para">Use the SVD to:</div>
+<ul class="circle" id="p-7-4-overview-3-2-2-1-1">
+<li id="p-7-4-overview-3-2-2-1-1-1">
+<div class="para" id="p-derived-p-7-4-overview-3-2-2-1-1-1">construct bases for the four fundamental subspaces,</div>
+<div class="autopermalink" data-description="Item"><a href="#p-7-4-overview-3-2-2-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="p-7-4-overview-3-2-2-1-1-2">
+<div class="para" id="p-derived-p-7-4-overview-3-2-2-1-1-2">construct spectral decompositions.</div>
+<div class="autopermalink" data-description="Item"><a href="#p-7-4-overview-3-2-2-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#p-7-4-overview-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#p-7-4-overview-3-2-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Objectives: Goals"><a href="#p-7-4-overview-3" title="Copy heading and permalink for Objectives: Goals" aria-label="Copy heading and permalink for Objectives: Goals">🔗</a></div></article><div class="para" id="p-7-4-overview-4"> <div class="autopermalink" data-description="Paragraph"><a href="#p-7-4-overview-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-svd"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.37</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Singular Value Decomposition.</span>
+</h4>
+<div class="para" id="thm-svd-2-1">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(m\times n\)</span> matrix with rank <span class="process-math">\(r\text{.}\)</span> Then <span class="process-math">\(A\)</span> can be written as<div class="autopermalink" data-description="Paragraph"><a href="#thm-svd-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="thm-svd-2-2">
+\begin{equation*}
+A = U\Sigma V^T = \begin{bmatrix} \vec u_1 \amp \cdots \amp \vec u_m \end{bmatrix} \begin{bmatrix} \sigma_1 \amp 0 \amp 0 \amp \cdots \amp  0 \\ 0 \amp \sigma_2 \amp 0 \amp \cdots \amp 0 \\ \vdots \amp \vdots \amp \ddots \amp \vdots \amp \vdots \\ 0 \amp 0 \amp \cdots \amp \sigma_r \amp 0 \\ 0 \amp 0 \amp \cdots \amp 0 \amp 0 \end{bmatrix}\begin{bmatrix} \vec v_1^T \\ \vdots \\ \vec v_n^T \end{bmatrix}
+\end{equation*}
+</div>
+<div class="para" id="thm-svd-2-3">where<div class="autopermalink" data-description="Paragraph"><a href="#thm-svd-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ul class="disc" id="thm-svd-2-4">
+<li id="thm-svd-2-4-1">
+<div class="para" id="p-derived-thm-svd-2-4-1">
+<span class="process-math">\(U\)</span> is an <span class="process-math">\(m\times m\)</span> orthogonal matrix,</div>
+<div class="autopermalink" data-description="Item"><a href="#thm-svd-2-4-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="thm-svd-2-4-2">
+<div class="para" id="p-derived-thm-svd-2-4-2">
+<span class="process-math">\(V\)</span> is an <span class="process-math">\(n\times n\)</span> orthogonal matrix,</div>
+<div class="autopermalink" data-description="Item"><a href="#thm-svd-2-4-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="thm-svd-2-4-3">
+<div class="para" id="p-derived-thm-svd-2-4-3">
+<span class="process-math">\(\Sigma\)</span> is an <span class="process-math">\(m\times n\)</span> diagonal matrix with diagonal entries <span class="process-math">\(\sigma_1,\dots,\sigma_r\text{,}\)</span> where <span class="process-math">\(\sigma_1 \geq \sigma_2 \geq \cdots \geq \sigma_r \gt 0\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#thm-svd-2-4-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Theorem 7.37: Singular Value Decomposition"><a href="#thm-svd" title="Copy heading and permalink for Theorem 7.37: Singular Value Decomposition" aria-label="Copy heading and permalink for Theorem 7.37: Singular Value Decomposition">🔗</a></div></article><div class="para" id="p-7-4-overview-6">Note that Singular Value Decomposition applies to <em class="emphasis">any matrix</em>, not just symmetric or square matrices.<div class="autopermalink" data-description="Paragraph"><a href="#p-7-4-overview-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="onepage" id="p-7-4-example1"><article class="example example-like" id="ex-7-4-ellipse"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.38</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="introduction" id="ex-7-4-ellipse-1"><div class="para logical" id="ex-7-4-ellipse-1-1">
+<div class="para">Consider the the linear transformation <span class="process-math">\(T(\vec x) = A\vec x\text{,}\)</span> where</div>
+<div class="displaymath process-math" id="ex-7-4-ellipse-1-1-2">
+\begin{equation*}
+A = \begin{bmatrix} 3 \amp -1 \\ -1 \amp 3 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Note that <span class="process-math">\(A\)</span> has an orthogonal diagonalization given by</div>
+<div class="displaymath process-math" id="ex-7-4-ellipse-1-1-4">
+\begin{equation*}
+A = PDP^T = \frac{1}{\sqrt{2}}
+\begin{bmatrix}1 \amp 1\\ -1 \amp 1\end{bmatrix}
+\begin{bmatrix}4 \amp 0\\ 0 \amp 2\end{bmatrix}\dfrac{1}{\sqrt{2}}\begin{bmatrix} 1 \amp -1 \\ 1 \amp 1 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Also, note that the orthogonal diagonalization of <span class="process-math">\(A\)</span> satisfies the properties of a Singular Value Decomposition. The parts below investigate how multiplication by <span class="process-math">\(A\)</span> acts on <span class="process-math">\(\mathbb{R}^2\)</span> geometrically.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-ellipse-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<article class="task exercise-like" id="ex-7-4-ellipse-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="ex-7-4-ellipse-2-1-1">Can you describe geometrically what multiplication by <span class="process-math">\(A\)</span> does to an arbitrary vector <span class="process-math">\(\vec x\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-ellipse-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="3in"></div>
+<div class="autopermalink" data-description="Task 7.38.a"><a href="#ex-7-4-ellipse-2" title="Copy heading and permalink for Task 7.38.a" aria-label="Copy heading and permalink for Task 7.38.a">🔗</a></div></article><article class="task exercise-like" id="ex-7-4-ellipse-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="ex-7-4-ellipse-3-1-1">Instead of determining what <span class="process-math">\(A\)</span> does in one fell swoop, let us investigate what each factor of <span class="process-math">\(A =PDP^T\)</span> does. First, determine what multiplication by <span class="process-math">\(P^T\)</span> does to an arbitrary vector <span class="process-math">\(\vec x\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-ellipse-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Task 7.38.b"><a href="#ex-7-4-ellipse-3" title="Copy heading and permalink for Task 7.38.b" aria-label="Copy heading and permalink for Task 7.38.b">🔗</a></div></article><article class="task exercise-like" id="ex-7-4-ellipse-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="ex-7-4-ellipse-4-1-1">Next, determine what multiplication by <span class="process-math">\(D\)</span> does to an arbitrary vector <span class="process-math">\(\vec x\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-ellipse-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Task 7.38.c"><a href="#ex-7-4-ellipse-4" title="Copy heading and permalink for Task 7.38.c" aria-label="Copy heading and permalink for Task 7.38.c">🔗</a></div></article><article class="task exercise-like" id="ex-7-4-ellipse-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="ex-7-4-ellipse-5-1-1">Now, determine what multiplication by <span class="process-math">\(P\)</span> does to an arbitrary vector <span class="process-math">\(\vec x\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-ellipse-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Task 7.38.d"><a href="#ex-7-4-ellipse-5" title="Copy heading and permalink for Task 7.38.d" aria-label="Copy heading and permalink for Task 7.38.d">🔗</a></div></article><article class="task exercise-like" id="ex-7-4-ellipse-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="ex-7-4-ellipse-6-1-1">Combining parts (b) - (d) above, give a geometric description of what multiplication by <span class="process-math">\(A\)</span> does to an arbitrary vector <span class="process-math">\(\vec x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-ellipse-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Task 7.38.e"><a href="#ex-7-4-ellipse-6" title="Copy heading and permalink for Task 7.38.e" aria-label="Copy heading and permalink for Task 7.38.e">🔗</a></div></article><div class="autopermalink" data-description="Example 7.38"><a href="#ex-7-4-ellipse" title="Copy heading and permalink for Example 7.38" aria-label="Copy heading and permalink for Example 7.38">🔗</a></div></article></section><section class="onepage" id="p-7-4-singular-values"><div class="para" id="p-7-4-singular-values-2">Recall from <a href="Section-6-2.html#thm-orthogonal-maps" class="xref" data-knowl="./knowl/xref/thm-orthogonal-maps.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.34: Mapping Properties of Orthogonal Matrices">Theorem 6.34</a> that multiplication by an orthogonal matrix does not change the angles between vectors nor the vector’s length. Therefore, if <span class="process-math">\(U\)</span> is an orthogonal matrix, we have that the linear transformation <span class="process-math">\(T(\vec x) = U\vec x\)</span> must simply be a rotation and/or reflection.<div class="autopermalink" data-description="Paragraph"><a href="#p-7-4-singular-values-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="p-7-4-singular-values-3">Note that multiplication by a <span class="process-math">\(m \times n\)</span> diagonal matrix <span class="process-math">\(\Sigma\)</span> changes the vector from being in <span class="process-math">\(\mathbb{R}^n\)</span> to being in <span class="process-math">\(\mathbb{R}^m\text{,}\)</span> and then scales it along the appropriate coordinate axes.<div class="autopermalink" data-description="Paragraph"><a href="#p-7-4-singular-values-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="p-7-4-singular-values-4">Therefore, in general, we can use the SVD of a matrix <span class="process-math">\(A\)</span> to describe how the linear transformation <span class="process-math">\(T(\vec x) = A\vec x\)</span> acts on the vectors in <span class="process-math">\(\mathbb{R}^n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#p-7-4-singular-values-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/./Singular-Value-Decomposition-Transformation.png" class="contained" alt="Visualization of the SVD expressing a matrix as rotations and scalings."></div>
+<div class="para" id="p-7-4-singular-values-6"> <div class="autopermalink" data-description="Paragraph"><a href="#p-7-4-singular-values-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="onepage" id="handout-section-7-4-svd-5"><article class="note remark-like" id="handout-section-7-4-svd-5-1"><h4 class="heading">
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.39</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Algorithm for Finding the SVD of <span class="process-math">\(A\)</span>.</span>
+</h4>
+<div class="para logical" id="handout-section-7-4-svd-5-1-2-1">
+<div class="para">How do we find the SVD of a matrix <span class="process-math">\(A\text{?}\)</span>
+</div>
+<ol class="decimal ol-marker-2" id="handout-section-7-4-svd-5-1-2-1-2">
+<li id="handout-section-7-4-svd-5-1-2-1-2-1">
+<div class="para logical" id="handout-section-7-4-svd-5-1-2-1-2-1-1">
+<div class="para">Start by forming the symmetric matrix <span class="process-math">\(A^TA\)</span> and finding its eigenvalues <span class="process-math">\(\lambda_i\text{,}\)</span> with the eigenvalues assigned in <em class="emphasis">nonincreasing</em> order. Set <span class="process-math">\(\sigma_i = \sqrt{\lambda_i}\text{.}\)</span> These are the <dfn class="terminology">singular values</dfn> of <span class="process-math">\(A\)</span> and they are the entries on the diagonal of <span class="process-math">\(\Sigma\text{.}\)</span> Fill any missing diagonal elements with 0.</div>
+<ul class="disc" id="handout-section-7-4-svd-5-1-2-1-2-1-1-8"><li id="handout-section-7-4-svd-5-1-2-1-2-1-1-8-1">
+<div class="para logical" id="handout-section-7-4-svd-5-1-2-1-2-1-1-8-1-1">
+<div class="para">Since <span class="process-math">\(A^TA\)</span> is symmetric, we know from <a href="Section-7-1.html#thm-spectral" class="xref" data-knowl="./knowl/xref/thm-spectral.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 7.18: Spectral Theorem">Theorem 7.18</a> that it has <span class="process-math">\(n\)</span> real eigenvalues. A bonus fact is that for symmetric matrices of the form <span class="process-math">\(A^TA\text{,}\)</span> the <span class="process-math">\(n\)</span> eigenvalues must be nonnegative, so</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-spectral.html" id="handout-section-7-4-svd-5-1-2-1-2-1-1-8-1-1-6">
+\begin{equation*}
+\lambda_1 \ge \lambda_2 \ge \cdots \ge \lambda_n \ge 0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-5-1-2-1-2-1-1-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-5-1-2-1-2-1-1-8-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li></ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-5-1-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Item 1"><a href="#handout-section-7-4-svd-5-1-2-1-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="handout-section-7-4-svd-5-1-2-1-2-2">
+<div class="para logical" id="handout-section-7-4-svd-5-1-2-1-2-2-1">
+<div class="para">Next, find <span class="process-math">\(n\)</span> <em class="emphasis">normalized</em> and <em class="emphasis">orthogonal</em> eigenvectors of <span class="process-math">\(A^TA\)</span> and call them <span class="process-math">\(\vec v_i\text{,}\)</span> with <span class="process-math">\(\vec v_i\)</span> corresponding to eigenvalue <span class="process-math">\(\lambda_i\text{.}\)</span> These vectors form the <em class="emphasis">rows</em> of <span class="process-math">\(V^T\text{.}\)</span>
+</div>
+<ul class="disc" id="handout-section-7-4-svd-5-1-2-1-2-2-1-10">
+<li id="handout-section-7-4-svd-5-1-2-1-2-2-1-10-1">
+<div class="para" id="handout-section-7-4-svd-5-1-2-1-2-2-1-10-1-1">Make sure to find enough orthonormal eigenvectors for each repeated eigenvalue, which we know we can do by <a href="Section-7-1.html#thm-spectral" class="xref" data-knowl="./knowl/xref/thm-spectral.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 7.18: Spectral Theorem">Theorem 7.18</a>.<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-5-1-2-1-2-2-1-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-5-1-2-1-2-2-1-10-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="handout-section-7-4-svd-5-1-2-1-2-2-1-10-2">
+<div class="para" id="handout-section-7-4-svd-5-1-2-1-2-2-1-10-2-1">Alternatively, we can think of the <span class="process-math">\(\vec v_i\)</span> as the columns of <span class="process-math">\(V\text{,}\)</span> but since SVD uses <span class="process-math">\(V^T\text{,}\)</span> it is usually easier to think with respect to <span class="process-math">\(V^T\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-5-1-2-1-2-2-1-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-5-1-2-1-2-2-1-10-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-5-1-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Item 2"><a href="#handout-section-7-4-svd-5-1-2-1-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="handout-section-7-4-svd-5-1-2-1-2-3">
+<div class="para logical" id="handout-section-7-4-svd-5-1-2-1-2-3-1">
+<div class="para">Use the formula</div>
+<div class="displaymath process-math" id="handout-section-7-4-svd-5-1-2-1-2-3-1-1">
+\begin{equation*}
+\vec u_i = \dfrac{1}{\sigma_i}A\vec v_i
+\end{equation*}
+</div>
+<div class="para">to find the columns of <span class="process-math">\(U\text{.}\)</span> If the rank of <span class="process-math">\(A\)</span> is less than <span class="process-math">\(m\text{,}\)</span> then this formula will not produce enough columns to fill <span class="process-math">\(U\text{.}\)</span> We must find the remaining columns by extending the set <span class="process-math">\(\left\{\vec u_1, \dots, \vec u_r\right\}\)</span> to an orthonormal basis of <span class="process-math">\(\mathbb{R}^m\text{.}\)</span>
+</div>
+<ul class="disc" id="handout-section-7-4-svd-5-1-2-1-2-3-1-8">
+<li id="handout-section-7-4-svd-5-1-2-1-2-3-1-8-1">
+<div class="para" id="handout-section-7-4-svd-5-1-2-1-2-3-1-8-1-1">The calculated vectors <span class="process-math">\(\vec u_i\)</span> will be normalized and orthogonal to one another as long as the original <span class="process-math">\(\vec v_i\)</span> were.<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-5-1-2-1-2-3-1-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-5-1-2-1-2-3-1-8-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="handout-section-7-4-svd-5-1-2-1-2-3-1-8-2">
+<div class="para" id="handout-section-7-4-svd-5-1-2-1-2-3-1-8-2-1">If the rank of <span class="process-math">\(A\)</span> is less than <span class="process-math">\(n\text{,}\)</span> then some of the eigenvalues found in (1) will be 0, which results in singular values of 0. These singular values can <em class="emphasis">not</em> be used in the formula, since that would result in dividing by 0.<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-5-1-2-1-2-3-1-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-5-1-2-1-2-3-1-8-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-5-1-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Item 3"><a href="#handout-section-7-4-svd-5-1-2-1-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-5-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Note 7.39: Algorithm for Finding the SVD of A"><a href="#handout-section-7-4-svd-5-1" title="Copy heading and permalink for Note 7.39: Algorithm for Finding the SVD of A" aria-label="Copy heading and permalink for Note 7.39: Algorithm for Finding the SVD of A">🔗</a></div></article></section><section class="onepage" id="p-7-4-examples"><article class="example example-like" id="ex-7-4-example1"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.40</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="ex-7-4-example1-1-1">Construct the SVD of<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-example1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-7-4-example1-1-2">
+\begin{equation*}
+A = \begin{bmatrix}3 \amp 8 \\ 0 \amp 3 \end{bmatrix}.
+\end{equation*}
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Example 7.40"><a href="#ex-7-4-example1" title="Copy heading and permalink for Example 7.40" aria-label="Copy heading and permalink for Example 7.40">🔗</a></div></article><div class="para" id="p-7-4-examples-3"> <div class="autopermalink" data-description="Paragraph"><a href="#p-7-4-examples-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="onepage" id="handout-section-7-4-svd-7"><article class="example example-like" id="ex-7-4-example2"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.41</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="ex-7-4-example2-1-1">Construct the SVD of<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-example2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ex-7-4-example2-1-2">
+\begin{equation*}
+A=\begin{bmatrix}1 \amp -1\\ -2 \amp 2\\ 2 \amp -2\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Example 7.41"><a href="#ex-7-4-example2" title="Copy heading and permalink for Example 7.41" aria-label="Copy heading and permalink for Example 7.41">🔗</a></div></article><div class="para" id="handout-section-7-4-svd-7-2"> <div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="onepage" id="p-7-4-applications"><div class="para logical" id="p-7-4-applications-2">
+<div class="para">The SVD has been applied to many modern applications in CS, engineering, and mathematics. Some applications are:</div>
+<ul class="disc" id="p-7-4-applications-2-1">
+<li id="p-7-4-applications-2-1-1">
+<div class="para" id="p-derived-p-7-4-applications-2-1-1">Constructing bases for the four fundamental subspaces</div>
+<div class="autopermalink" data-description="Item"><a href="#p-7-4-applications-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="p-7-4-applications-2-1-2">
+<div class="para" id="p-derived-p-7-4-applications-2-1-2">Forming approximations of a matrix</div>
+<div class="autopermalink" data-description="Item"><a href="#p-7-4-applications-2-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="p-7-4-applications-2-1-3">
+<div class="para" id="p-derived-p-7-4-applications-2-1-3">Estimating the rank and the condition number of a matrix</div>
+<div class="autopermalink" data-description="Item"><a href="#p-7-4-applications-2-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="p-7-4-applications-2-1-4">
+<div class="para" id="p-derived-p-7-4-applications-2-1-4">Computing the pseudoinverse of a matrix</div>
+<div class="autopermalink" data-description="Item"><a href="#p-7-4-applications-2-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="p-7-4-applications-2-1-5">
+<div class="para" id="p-derived-p-7-4-applications-2-1-5">Linear least-squares problems</div>
+<div class="autopermalink" data-description="Item"><a href="#p-7-4-applications-2-1-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="p-7-4-applications-2-1-6">
+<div class="para" id="p-derived-p-7-4-applications-2-1-6">Non-linear least-squares problems</div>
+<div class="autopermalink" data-description="Item"><a href="#p-7-4-applications-2-1-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="p-7-4-applications-2-1-7">
+<div class="para" id="p-derived-p-7-4-applications-2-1-7">Image compression</div>
+<div class="autopermalink" data-description="Item"><a href="#p-7-4-applications-2-1-7" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="p-7-4-applications-2-1-8">
+<div class="para" id="p-derived-p-7-4-applications-2-1-8">Machine learning and data mining</div>
+<div class="autopermalink" data-description="Item"><a href="#p-7-4-applications-2-1-8" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="p-7-4-applications-2-1-9">
+<div class="para" id="p-derived-p-7-4-applications-2-1-9">Facial Recognition</div>
+<div class="autopermalink" data-description="Item"><a href="#p-7-4-applications-2-1-9" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="p-7-4-applications-2-1-10">
+<div class="para" id="p-derived-p-7-4-applications-2-1-10">Principal component analysis</div>
+<div class="autopermalink" data-description="Item"><a href="#p-7-4-applications-2-1-10" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#p-7-4-applications-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="p-7-4-applications-3">Students are expected to be familiar with the first two items. We will explore these two items below.<div class="autopermalink" data-description="Paragraph"><a href="#p-7-4-applications-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="p-7-4-applications-4"> <div class="autopermalink" data-description="Paragraph"><a href="#p-7-4-applications-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="onepage" id="handout-section-7-4-svd-9"><div class="para" id="handout-section-7-4-svd-9-1">Let <span class="process-math">\(A = U\Sigma V^T\)</span> be an <span class="process-math">\(m \times n\)</span> matrix with rank <span class="process-math">\(r\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="handout-section-7-4-svd-9-2">
+<div class="para">Consider the columns of <span class="process-math">\(U\text{:}\)</span>
+</div>
+<ul class="disc" id="handout-section-7-4-svd-9-2-2">
+<li id="handout-section-7-4-svd-9-2-2-1">
+<div class="para logical" id="handout-section-7-4-svd-9-2-2-1-1">
+<div class="para">Recall that the formula for calculating the first few columns of <span class="process-math">\(U\)</span> is</div>
+<div class="displaymath process-math" id="handout-section-7-4-svd-9-2-2-1-1-2">
+\begin{equation*}
+\vec u_i = \dfrac{1}{\sigma_i}A\vec v_i\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="handout-section-7-4-svd-9-2-2-2">
+<div class="para" id="handout-section-7-4-svd-9-2-2-2-1">It follows that <span class="process-math">\(\left\{\vec u_1, \dots, \vec u_r\right\}\)</span> is a set of <span class="process-math">\(\underline{\hspace{2in}}\)</span> vectors that all live in <span class="process-math">\(\underline{\hspace{1.5in}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="handout-section-7-4-svd-9-2-2-3">
+<div class="para" id="handout-section-7-4-svd-9-2-2-3-1">Therefore, the first <span class="process-math">\(r\)</span> columns of <span class="process-math">\(U\)</span> form an <span class="process-math">\(\underline{\hspace{3in}}\)</span> for <span class="process-math">\(\underline{\hspace{1.5in}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="handout-section-7-4-svd-9-2-2-4">
+<div class="para" id="handout-section-7-4-svd-9-2-2-4-1">Since the remaining columns of <span class="process-math">\(U\)</span> are created so that all columns of <span class="process-math">\(U\)</span> form an orthonormal basis for <span class="process-math">\(\mathbb{R}^m\text{,}\)</span> we see that <span class="process-math">\(\left\{\vec u_{r+1}, \dots, \vec u_m\right\}\)</span> is a set of <span class="process-math">\(\underline{\hspace{2in}}\)</span> vectors which live in <span class="process-math">\(\underline{\hspace{3in}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-2-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="handout-section-7-4-svd-9-2-2-5">
+<div class="para" id="handout-section-7-4-svd-9-2-2-5-1">Therefore, the last <span class="process-math">\(m - r\)</span> columns of <span class="process-math">\(U\)</span> form an <span class="process-math">\(\underline{\hspace{3in}}\)</span> for <span class="process-math">\(\underline{\hspace{1.5in}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-2-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">Now, consider the rows of <span class="process-math">\(V^T\text{:}\)</span>
+</div>
+<ul class="disc" id="handout-section-7-4-svd-9-2-4">
+<li id="handout-section-7-4-svd-9-2-4-1">
+<div class="para" id="handout-section-7-4-svd-9-2-4-1-1">The last <span class="process-math">\(n-r\)</span> rows of <span class="process-math">\(V^T\)</span> are eigenvectors of <span class="process-math">\(A^TA\)</span> which correspond to an eigenvalue of <span class="process-math">\(\underline{\hspace{1in}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-4-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="handout-section-7-4-svd-9-2-4-2">
+<div class="para" id="handout-section-7-4-svd-9-2-4-2-1">Therefore, <span class="process-math">\(\left\{\vec v_{r+1}, \dots, \vec v_n\right\}\)</span> form an <span class="process-math">\(\underline{\hspace{3in}}\)</span> for <span class="process-math">\(\underline{\hspace{2in}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-4-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="handout-section-7-4-svd-9-2-4-3">
+<div class="para" id="handout-section-7-4-svd-9-2-4-3-1">We have that <span class="process-math">\(\Nul(A^TA) = \Nul(A)\text{.}\)</span> Thus, the last <span class="process-math">\(n - r\)</span> rows of <span class="process-math">\(V^T\)</span> form an <span class="process-math">\(\underline{\hspace{3in}}\)</span> for <span class="process-math">\(\underline{\hspace{1.5in}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-4-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="handout-section-7-4-svd-9-2-4-4">
+<div class="para" id="handout-section-7-4-svd-9-2-4-4-1">Since <span class="process-math">\(V^T\)</span> is an orthogonal matrix, we know that it’s <span class="process-math">\(n\)</span> rows form an orthonormal basis for <span class="process-math">\(\mathbb{R}^n\text{.}\)</span> Therefore, <span class="process-math">\(\left\{\vec v_1, \dots, \vec v_r\right\}\)</span> is a set of <span class="process-math">\(\underline{\hspace{2in}}\)</span> vectors which live in <span class="process-math">\(\underline{\hspace{3in}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-4-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="handout-section-7-4-svd-9-2-4-5">
+<div class="para" id="handout-section-7-4-svd-9-2-4-5-1">It follows that the first <span class="process-math">\(r\)</span> rows of <span class="process-math">\(V^T\)</span> form an <span class="process-math">\(\underline{\hspace{3in}}\)</span> for <span class="process-math">\(\underline{\hspace{1.5in}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-4-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-4-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="onepage" id="handout-section-7-4-svd-10"><article class="theorem theorem-like" id="thm-SVD-ortho-subspaces"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.42</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="thm-SVD-ortho-subspaces-1-1">
+<div class="para">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(m \times n\)</span> matrix with rank <span class="process-math">\(r\)</span> and with SVD <span class="process-math">\(A = U\Sigma V^T\text{,}\)</span> where</div>
+<div class="displaymath process-math" id="thm-SVD-ortho-subspaces-1-1-5">
+\begin{equation*}
+U = \begin{bmatrix} \vec u_1 \amp \cdots \amp \vec u_m \end{bmatrix}, \quad \Sigma = \begin{bmatrix}  \sigma_1 \amp 0 \amp 0 \amp \cdots \amp  0 \\ 0 \amp \sigma_2 \amp 0 \amp \cdots \amp 0 \\ \vdots \amp \vdots \amp \ddots \amp \vdots \amp \vdots \\ 0 \amp 0 \amp \cdots \amp \sigma_r \amp 0 \\ 0 \amp 0 \amp \cdots \amp 0 \amp 0 \end{bmatrix}, \quad V^T = \begin{bmatrix} \vec v_1^T \\ \vdots \\ \vec v_n^T \end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">Then,</div>
+<ol class="decimal ol-marker-2" id="thm-SVD-ortho-subspaces-1-1-6">
+<li id="thm-SVD-ortho-subspaces-1-1-6-1">
+<div class="para" id="thm-SVD-ortho-subspaces-1-1-6-1-1">
+<span class="process-math">\(A\vec v_i = \sigma_i \vec u_i\)</span> for <span class="process-math">\(i = 1, \cdots, r\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-SVD-ortho-subspaces-1-1-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#thm-SVD-ortho-subspaces-1-1-6-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="thm-SVD-ortho-subspaces-1-1-6-2">
+<div class="para" id="thm-SVD-ortho-subspaces-1-1-6-2-1">
+<span class="process-math">\(\left\{\vec v_1, \dots, \vec v_r\right\}\)</span> is an orthonormal basis for <span class="process-math">\(\Row(A)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-SVD-ortho-subspaces-1-1-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#thm-SVD-ortho-subspaces-1-1-6-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="thm-SVD-ortho-subspaces-1-1-6-3">
+<div class="para" id="thm-SVD-ortho-subspaces-1-1-6-3-1">
+<span class="process-math">\(\left\{\vec u_1, \dots, \vec u_r\right\}\)</span> is an orthonormal basis for <span class="process-math">\(\Col(A)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-SVD-ortho-subspaces-1-1-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#thm-SVD-ortho-subspaces-1-1-6-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="thm-SVD-ortho-subspaces-1-1-6-4">
+<div class="para" id="thm-SVD-ortho-subspaces-1-1-6-4-1">
+<span class="process-math">\(\left\{\vec v_{r+1}, \dots, \vec v_n\right\}\)</span> is an orthonormal basis for <span class="process-math">\(\Nul(A)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-SVD-ortho-subspaces-1-1-6-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#thm-SVD-ortho-subspaces-1-1-6-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="thm-SVD-ortho-subspaces-1-1-6-5">
+<div class="para" id="thm-SVD-ortho-subspaces-1-1-6-5-1">
+<span class="process-math">\(\left\{\vec u_{r+1}, \dots, \vec u_m\right\}\)</span> is an orthonormal basis for <span class="process-math">\(\Nul(A^T)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-SVD-ortho-subspaces-1-1-6-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#thm-SVD-ortho-subspaces-1-1-6-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-SVD-ortho-subspaces-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/./4subspaces.jpg" class="contained" alt="A graphic depicting the relationship between the rows of V transpose and the columns of U."></div>
+<div class="autopermalink" data-description="Theorem 7.42"><a href="#thm-SVD-ortho-subspaces" title="Copy heading and permalink for Theorem 7.42" aria-label="Copy heading and permalink for Theorem 7.42">🔗</a></div></article></section><section class="onepage" id="handout-section-7-4-svd-11"><article class="example example-like" id="handout-section-7-4-svd-11-1"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.43</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="handout-section-7-4-svd-11-1-1-1">
+<div class="para">Let <span class="process-math">\(A = U\Sigma V^T\)</span> for</div>
+<div class="displaymath process-math" id="handout-section-7-4-svd-11-1-1-1-2">
+\begin{equation*}
+U = \begin{bmatrix} 0 \amp 0 \amp 1 \amp 0 \\ 0 \amp 1 \amp 0 \amp 0 \\ 0 \amp 0 \amp 0 \amp -1 \\ 1 \amp 0 \amp 0 \amp 0 \end{bmatrix}, \quad \Sigma = \begin{bmatrix} 4 \amp 0 \amp 0 \amp 0 \amp 0 \\ 0 \amp 3 \amp 0 \amp 0 \amp 0 \\ 0 \amp 0 \amp \sqrt{5} \amp 0 \amp 0 \\ 0 \amp 0 \amp 0 \amp 0 \amp 0 \end{bmatrix}, \quad V^T = \begin{bmatrix} 0 \amp 1 \amp 0 \amp 0 \amp 0 \\ 0 \amp 0 \amp 1 \amp 0 \amp 0 \\ \sqrt{0.2} \amp 0 \amp 0 \amp 0 \amp \sqrt{0.8} \\ 0 \amp 0 \amp 0 \amp 1 \amp 0 \\ -\sqrt{0.8} \amp 0 \amp 0 \amp 0 \amp \sqrt{0.2} \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Find an orthonormal basis for each of the four subspaces.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-11-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Example 7.43"><a href="#handout-section-7-4-svd-11-1" title="Copy heading and permalink for Example 7.43" aria-label="Copy heading and permalink for Example 7.43">🔗</a></div></article><div class="para" id="handout-section-7-4-svd-11-2"> <div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-11-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="onepage" id="p-7-4-spectral-connection"><div class="para" id="p-7-4-spectral-connection-2">We can create the <dfn class="terminology">spectral decomposition</dfn> for a general matrix <span class="process-math">\(A\)</span> in a similar way to <a href="Section-7-1.html#thm-spectral-decomposition" class="xref" data-knowl="./knowl/xref/thm-spectral-decomposition.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 7.19: Spectral Decomposition">Theorem 7.19</a>.<div class="autopermalink" data-description="Paragraph"><a href="#p-7-4-spectral-connection-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.44</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para logical" id="thm--1-1">
+<div class="para">Let <span class="process-math">\(A = U\Sigma V^T\)</span> be the SVD of a rank <span class="process-math">\(r\)</span> matrix, with the columns of <span class="process-math">\(U\)</span> given by <span class="process-math">\(\vec u_i\text{,}\)</span> the entries on the diagonal of <span class="process-math">\(\Sigma\)</span> given by <span class="process-math">\(\sigma_i\text{,}\)</span> and the rows of <span class="process-math">\(V^T\)</span> given by <span class="process-math">\(\vec v_i\text{.}\)</span> Then, the <dfn class="terminology">spectral decomposition</dfn> of <span class="process-math">\(A\)</span> is given by</div>
+<div class="displaymath process-math" id="thm--1-1-11">
+\begin{equation*}
+A=\sum_{i=1}^r \sigma_i\,\vec u_i\vec v_i^T.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm--1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 7.44"><a href="#thm-" title="Copy heading and permalink for Theorem 7.44" aria-label="Copy heading and permalink for Theorem 7.44">🔗</a></div></article><article class="example example-like" id="p-7-4-spectral-connection-4"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.45</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="p-7-4-spectral-connection-4-1-1">Find the spectral decomposition of <span class="process-math">\(A = \begin{bmatrix}3 \amp 8 \\ 0 \amp 3 \end{bmatrix}\text{.}\)</span> Use the decomposition to identify the best rank 1 approximation of <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#p-7-4-spectral-connection-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 7.45"><a href="#p-7-4-spectral-connection-4" title="Copy heading and permalink for Example 7.45" aria-label="Copy heading and permalink for Example 7.45">🔗</a></div></article><div class="para" id="p-7-4-spectral-connection-5"> <div class="autopermalink" data-description="Paragraph"><a href="#p-7-4-spectral-connection-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="onepage" id="handout-section-7-4-svd-13"><div class="para" id="handout-section-7-4-svd-13-1">We end this section, and this course, by investigating the connection between Spectral Decomposition and Image Compression. Consider an image in grayscale consisting of pixels in a <span class="process-math">\(880 \times 1100\)</span> grid. Since each pixel is in grayscale, we can assign it an integer value between 0 and 255 depending on how gray it is, where 0 is black and 255 is white. We can form a <span class="process-math">\(880 \times 1100\)</span> matrix where each entry is the grayscale value of the associated pixel. In general, the rank of this matrix could be quite high.<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="handout-section-7-4-svd-13-2">For example, suppose we have selected an image and created the associated matrix and it has rank <span class="process-math">\(776\text{.}\)</span> One way to store this image in a slightly compressed manner is to store the <span class="process-math">\(776\)</span> basis vectors for <span class="process-math">\(\Col(A)\text{,}\)</span> and then store a list of linear combinations describing how to use these <span class="process-math">\(776\)</span> vectors to recreate all <span class="process-math">\(880\)</span> columns (the dimensions of an image are reversed, first horizontal, then vertical).<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-13-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="question example-like" id="handout-section-7-4-svd-13-3"><h4 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.46</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="handout-section-7-4-svd-13-3-1-1">Could we compress the file size further? Suppose we were okay with a little error in our image. Perhaps just a hair of fuzziness that could be corrected open reopening the compressed file. How could we go about doing this?<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-13-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Question 7.46"><a href="#handout-section-7-4-svd-13-3" title="Copy heading and permalink for Question 7.46" aria-label="Copy heading and permalink for Question 7.46">🔗</a></div></article></section><section class="onepage" id="handout-section-7-4-svd-14"><div class="para" id="handout-section-7-4-svd-14-1">The idea is to find a good enough approximation of the image. We can use Spectral Decomposition to find the best rank <span class="process-math">\(j\)</span> approximation for <span class="process-math">\(j = 1, \dots, r\text{.}\)</span> We can save tons of storage by letting <span class="process-math">\(j\)</span> be small, but then our image will be super blurry. We can have a very accurate image by letting <span class="process-math">\(j\)</span> be large, but then the compression’s filesize is not much smaller than the original’s filesize. We need to find a <span class="process-math">\(j\)</span> which balances these, a good approximation with small filesize.<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-14-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="handout-section-7-4-svd-14-2">Here is the best rank 1 approximation for the image. Can you tell what the image is? <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/./buzz/rank_1.png" class="contained" alt="Rank 1 approximation of image."></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-14-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="handout-section-7-4-svd-14-3">Proceed through the next few images slowly so as not to spoil the surprise.<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-14-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="onepage" id="handout-section-7-4-svd-15"><div class="para" id="handout-section-7-4-svd-15-1">Here is the best rank 2 approximation for the image. Can you tell what the image is? <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/./buzz/rank_2.png" class="contained" alt="Rank 2 approximation of image."></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-15-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="onepage" id="handout-section-7-4-svd-16"><div class="para" id="handout-section-7-4-svd-16-1">Here is the best rank 4 approximation for the image. Can you tell what the image is? <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/./buzz/rank_4.png" class="contained" alt="Rank 4 approximation of image."></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-16-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="onepage" id="handout-section-7-4-svd-17"><div class="para" id="handout-section-7-4-svd-17-1">Here is the best rank 8 approximation for the image. Can you tell what the image is? <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/./buzz/rank_8.png" class="contained" alt="Rank 8 approximation of image."></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-17-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="onepage" id="handout-section-7-4-svd-18"><div class="para" id="handout-section-7-4-svd-18-1">Here is the best rank 30 approximation for the image. Can you tell what the image is? <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/./buzz/rank_30.png" class="contained" alt="Rank 30 approximation of image."></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-18-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Handout: 7.4 Singular Value Decomposition"><a href="#handout-section-7-4-svd" title="Copy heading and permalink for Handout: 7.4 Singular Value Decomposition" aria-label="Copy heading and permalink for Handout: 7.4 Singular Value Decomposition">🔗</a></div></section><div class="autopermalink" data-description="Section: 7.4 Singular Value Decomposition"><a href="#Section-7-4" title="Copy heading and permalink for Section: 7.4 Singular Value Decomposition" aria-label="Copy heading and permalink for Section: 7.4 Singular Value Decomposition">🔗</a></div></section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="Section-7-3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
