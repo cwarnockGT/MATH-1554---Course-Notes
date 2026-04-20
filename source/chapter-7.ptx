@@ -28,6 +28,11 @@
       <xi:include href="./chapter-7-notes/section-7-3.ptx" />
   </section>
 
+  <section xml:id="Section-7-4">
+    <title>7.4 Singular Value Decomposition</title>
+      <xi:include href="./chapter-7-notes/section-7-4.ptx" />
+  </section>
+
   
 
 </chapter>
