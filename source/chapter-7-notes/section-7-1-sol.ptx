@@ -53,7 +53,7 @@
       </statement>
       <solution>
         <p>
-          Matrices <m>A, B,</m> and <m>E</m> are. Matrix <m>C</m> is only if <m>b = 0</m>. Matrix <m>D</m> is not. In fact, a non-square matrix cannot possibly be symmetric.
+          Matrices <m>A, B,</m> and <m>E</m> are symmetric. Matrix <m>C</m> is symmetric if and only if <m>b = 0</m>. Matrix <m>D</m> is not symmetric. In fact, a non-square matrix cannot possibly be symmetric.
         </p>
       </solution>
     </example>
@@ -101,7 +101,7 @@
       </statement>
       <solution>
         <p>
-          Suppose <m>A^T = A</m> and suppose <m>\vec v_1, \vec v_2</m> be eigenvectors of <m>A</m> corresponding to <em>distinct</em> eigenvalues <m>\lambda_1, \lambda_2</m>, respectively. Thus, <m>A\vec v_1 = \lambda_1 \vec v_1</m> and <m>A\vec v_2 = \lambda_2\vec v_2</m>.
+          Suppose <m>A^T = A</m> and suppose <m>\vec v_1, \vec v_2</m> are eigenvectors of <m>A</m> corresponding to <em>distinct</em> eigenvalues <m>\lambda_1, \lambda_2</m>, respectively. Thus, <m>A\vec v_1 = \lambda_1 \vec v_1</m> and <m>A\vec v_2 = \lambda_2\vec v_2</m>.
         </p>
         <p>
           Our goal is to show that <m>\vec v_1</m> and <m>\vec v_2</m> are orthogonal. Therefore, we want to show that <m>\vec v_1 \cdot \vec v_2 = 0</m>. Note the following:
@@ -115,7 +115,7 @@
             <mrow> \amp = \vec v_1 \cdot (\lambda_2 \vec v_2) \amp \quad \text{Definition of eigenvector}</mrow>
             <mrow> \amp = \lambda_2(\vec v_1 \cdot \vec v_2) \amp \quad \text{Associativity of the dot product}</mrow>
           </md>
-          Thus, we have that <md>\lambda_1(\vec v_1 \cdot \vec v_2) = \lambda_2(\vec v_1 \cdot \vec v_2)</md>. Subtracting the right side expression from both sides yields <md>(\lambda_1 - \lambda_2)(\vec v_1 \cdot \vec v_2) = 0</md> Since <m>\lambda_1 \neq \lambda_2</m>, we have that <m>\lambda_1 - \lambda_2 \neq 0</m>. Therefore, it must be the case that <md> <\vec v_1 \cdot \vec v_2 = 0</md> Hence, <m>\vec v_1</m> and <m>\vec v_2</m> are orthogonal.  
+          Thus, we have that <md>\lambda_1(\vec v_1 \cdot \vec v_2) = \lambda_2(\vec v_1 \cdot \vec v_2)</md>. Subtracting the right side expression from both sides yields <md>(\lambda_1 - \lambda_2)(\vec v_1 \cdot \vec v_2) = 0</md> Since <m>\lambda_1 \neq \lambda_2</m>, we have that <m>\lambda_1 - \lambda_2 \neq 0</m>. Therefore, it must be the case that <md> \vec v_1 \cdot \vec v_2 = 0</md> Hence, <m>\vec v_1</m> and <m>\vec v_2</m> are orthogonal.  
         </p>
       </solution>
     </theorem>
@@ -142,10 +142,10 @@
       </statement>
       <solution>
         <p>
-          Let's start with finding the <m>1</m>-eigenspace of <m>A</m>. Note that <md>A - I = \begin{bmatrix} -1 \amp 0 \amp 1 \\ 0 \amp 0 \amp 0 \\ 1 \amp 0 \amp -1 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp -1 \\ 0 \amp 0 \amp 0 \\ 0 \amp 0 \amp 0 \end{bmatrix}</md>. Since <m>A - I</m> has two free variables, the <m>1</m>-eigenspace<m>(A)</m> is two dimensional. If we were only trying to diagonalize <m>A</m>, then any basis of the <m>1</m>-eigenspace<m>(A)</m> would be fine. But we want to diagonalize so that <m>P</m> is an orthogonal matrix. Therefore, we want to find an <em>orthonormal</em> basis of <m>1</m>-eigenspace<m>(A)</m>. Thus, we choose the basis vectors <md>\vec v_1 = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} \quad \text{and} \quad \vec v_2 = \dfrac{1}{\sqrt{2}}\begin{bmatrix} 1 \amp 0 \amp 1 \end{bmatrix}</md>.
+          Let's start with finding the <m>1</m>-eigenspace of <m>A</m>. Note that <md>A - I = \begin{bmatrix} -1 \amp 0 \amp 1 \\ 0 \amp 0 \amp 0 \\ 1 \amp 0 \amp -1 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp -1 \\ 0 \amp 0 \amp 0 \\ 0 \amp 0 \amp 0 \end{bmatrix}</md>. Since <m>A - I</m> has two free variables, the <m>1</m>-eigenspace<m>(A)</m> is two dimensional. If we were only trying to diagonalize <m>A</m>, then any basis of the <m>1</m>-eigenspace<m>(A)</m> would be fine. But we want to diagonalize so that <m>P</m> is an orthogonal matrix. Therefore, we want to find an <em>orthonormal</em> basis of the <m>1</m>-eigenspace<m>(A)</m>. Thus, we choose the basis vectors <md>\vec v_1 = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} \quad \text{and} \quad \vec v_2 = \dfrac{1}{\sqrt{2}}\begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix}</md>.
         </p>
         <p>
-          Now, let's find a basis for the <m>-1</m>-eigenspace<m>(A)</m>. Note that <md>A - (-1)I = \begin{bmatrix} 1 \amp 0 \amp 1 \\ 0 \amp 2 \amp 0 \\ 1 \amp 0 \amp 1 \end{bmatrix}</md>. Since <m>A - (-1)I</m> has only a single free variable, any basis we choose will be an orthogonal basis, we will just make sure to use a normalized vector as a column of <m>P</m>. Let <md>\vec v_3 = \dfrac{1}{\sqrt{2}}\begin{bmatrix} 1 \amp 0 \amp -1 \end{bmatrix}</md>. Note that this vector is <em>guaranteed</em> to be orthogonal to <m>\vec v_1</m> and <m>\vec v_2</m> by <xref ref="thm-orth-eigenspaces"/>.
+          Now, let's find a basis for the <m>-1</m>-eigenspace<m>(A)</m>. Note that <md>A - (-1)I = \begin{bmatrix} 1 \amp 0 \amp 1 \\ 0 \amp 2 \amp 0 \\ 1 \amp 0 \amp 1 \end{bmatrix}</md>. Since <m>A - (-1)I</m> has only a single free variable, any basis we choose will be an orthogonal basis, we will just make sure to use a normalized vector as a column of <m>P</m>. Let <md>\vec v_3 = \dfrac{1}{\sqrt{2}}\begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix}</md>. Note that this vector is <em>guaranteed</em> to be orthogonal to <m>\vec v_1</m> and <m>\vec v_2</m> by <xref ref="thm-orth-eigenspaces"/>.
         </p>
         <p>
           It follows that a diagonalization of <m>A</m> is given by <m>A = PDP^{-1}</m>, where <md>D = \begin{bmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp -1 \end{bmatrix} \quad \text{and} \quad P = \begin{bmatrix}0 \amp \frac{1}{\sqrt{2}} \amp \frac{1}{\sqrt{2}} \\ 1 \amp 0 \amp 0 \\ 0 \amp \frac{1}{\sqrt{2}} \amp -\frac{1}{\sqrt{2}} \end{bmatrix}</md>. Since <m>P</m> is orthogonal, we have that <m>P^{-1} = P^T</m>, so this diagonalization could be written <m>A = PDP^T</m>. We call this diagonalization using an orthogonal matrix an <term>orthogonal diagonalization</term>.
@@ -231,7 +231,7 @@
           Using the formula in<xref ref="thm-spectral-decomposition"/>, we have that <md>
             <mrow>A  \amp = \lambda_1\vec u_1\vec u_1^T + \lambda_2\vec u_2\vec u_2^T</mrow>
             <mrow> \amp = 4\begin{bmatrix}\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}\end{bmatrix}\begin{bmatrix} \frac{1}{\sqrt{2}} \amp \frac{1}{\sqrt{2}}\end{bmatrix} + 2 \begin{bmatrix}\frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}}\end{bmatrix}\begin{bmatrix} \frac{1}{\sqrt{2}} \amp -\frac{1}{\sqrt{2}}\end{bmatrix}</mrow>
-            <mrow> \amp = 4 \begin{bmatrix} \frac{1}{2} \amp \frac{1}{2} \\ \frac{1}{2} \amp \frac{1}{2} \end{bmatrix} + 2\begin{bmatrix} \frac{1}{2} \amp -1\frac{1}{2} \\ -\frac{1}{2} \amp \frac{1}{2} \end{bmatrix}</mrow>
+            <mrow> \amp = 4 \begin{bmatrix} \frac{1}{2} \amp \frac{1}{2} \\ \frac{1}{2} \amp \frac{1}{2} \end{bmatrix} + 2\begin{bmatrix} \frac{1}{2} \amp -\frac{1}{2} \\ -\frac{1}{2} \amp \frac{1}{2} \end{bmatrix}</mrow>
             <mrow> \amp = \begin{bmatrix} 2 \amp 2 \\ 2 \amp 2 \end{bmatrix} + \begin{bmatrix} 1 \amp -1 \\ -1 \amp 1 \end{bmatrix}</mrow>
           </md>.
           Note that the first term in the sum is a fairly close approximation of <m>A</m>. In fact, it is the best rank 1 approximation of <m>A</m>.
@@ -265,7 +265,8 @@
         <solution>
           <p>
             Using the information from the solution to <xref ref="ex-7-1-orth-diag"/>, we have <md>
-              <mrow>A \amp = 1\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}\begin{bmatrix} 0 \amp 1 \amp 0 \end{bmatrix} + 1\begin{bmatrix} \frac{1}{\sqrt{2}} \\ 0 \\ \frac{1}{\sqrt{2}} \end{bmatrix}\begin{bmatrix} \frac{1}{\sqrt{2}} \amp 0 \amp \frac{1}{\sqrt{2}}\end{bmatrix} -1\begin{bmatrix} \frac{1}{\sqrt{2}} \\ 0 \\ -\frac{1}{\sqrt{2}} \end{bmatrix}\begin{bmatrix} \frac{1}{\sqrt{2}} \amp 0 \amp -\frac{1}{\sqrt{2}}\end{bmatrix} </mrow>
+              <mrow>A \amp = 1\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}\begin{bmatrix} 0 \amp 1 \amp 0 \end{bmatrix} + 1\begin{bmatrix} \frac{1}{\sqrt{2}} \\ 0 \\ \frac{1}{\sqrt{2}} \end{bmatrix}\begin{bmatrix} \frac{1}{\sqrt{2}} \amp 0 \amp \frac{1}{\sqrt{2}}\end{bmatrix} </mrow> 
+              <mrow> \amp \hspace{1.5in}-1\begin{bmatrix} \frac{1}{\sqrt{2}} \\ 0 \\ -\frac{1}{\sqrt{2}} \end{bmatrix}\begin{bmatrix} \frac{1}{\sqrt{2}} \amp 0 \amp -\frac{1}{\sqrt{2}}\end{bmatrix} </mrow>
               <mrow> \amp = \begin{bmatrix} 0 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 0 \end{bmatrix} + \begin{bmatrix} \frac{1}{2} \amp 0 \amp \frac{1}{2} \\ 0 \amp 0 \amp 0 \\ \frac{1}{2} \amp 0 \amp \frac{1}{2} \end{bmatrix} + \begin{bmatrix} -\frac{1}{2} \amp 0 \amp \frac{1}{2} \\ 0 \amp 0 \amp 0 \\ \frac{1}{2} \amp 0 \amp -\frac{1}{2} \end{bmatrix}</mrow>.
             </md>
           </p>
@@ -280,7 +281,7 @@
             <md>
               <mrow>\|A - \lambda_3\vec v_3\vec v_3^T\| \amp = \left\|\begin{bmatrix} 0 \amp 0 \amp 1 \\ 0 \amp 1 \amp 0 \\ 1 \amp 0 \amp 0 \end{bmatrix} - \begin{bmatrix} -\frac{1}{2} \amp 0 \amp \frac{1}{2} \\ 0 \amp 0 \amp 0 \\ \frac{1}{2} \amp 0 \amp -\frac{1}{2} \end{bmatrix}\right\|</mrow>
               <mrow> \amp = \left\|\begin{bmatrix} \frac{1}{2} \amp 0 \amp \frac{1}{2} \\ 0 \amp 1 \amp 0 \\ \frac{1}{2} \amp 0 \amp \frac{1}{2}\end{bmatrix}\right\|</mrow>
-              <mrow> \amp = \sqrt{\left(\frac{1}{2}\right)^2 + 0^2 + \left(\frac{1}{2}\right)^2 + 0^2 + 1^2 + 0^2 + \left(\frac{1}{2}\right)^2 + 0^2 + \left(\frac{1}{2}\right)^2} </mrow>
+              <mrow> \amp = \sqrt{\left(\frac{1}{2}\right)^2 + \left(\frac{1}{2}\right)^2 + 1^2 + \left(\frac{1}{2}\right)^2 + \left(\frac{1}{2}\right)^2} </mrow>
               <mrow> \amp = \sqrt{2}</mrow>
             </md>.
           </p>

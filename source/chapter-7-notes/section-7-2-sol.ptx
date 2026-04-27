@@ -84,7 +84,7 @@
         </statement>
         <solution>
             <p>
-                <md>
+                Note that <md>
                     <mrow>Q_B(\vec x) \amp = \begin{bmatrix} x_1 \amp x_2 \end{bmatrix}\begin{bmatrix} 4 \amp 1 \\ 1 \amp -3 \end{bmatrix}\begin{bmatrix} x_1 \\ x_2 \end{bmatrix}</mrow>
                     <mrow> \amp = \begin{bmatrix} x_1 \amp x_2 \end{bmatrix}\begin{bmatrix} 4x_1 + x_2 \\ x_1 - 3x_2 \end{bmatrix}</mrow>
                     <mrow> \amp = x_1(4x_1 + x_2) + x_2(x_1 - 3x_2)</mrow>
@@ -208,10 +208,18 @@
             Under this change of variables, note the following:
             <md>
                 <mrow>Q_A(x_1, x_2) \amp = Q_A\left(\frac{2}{\sqrt{5}}y_1 + \frac{1}{\sqrt{5}}y_2, -\frac{1}{\sqrt{5}}y_1 + \frac{2}{\sqrt{5}}y_2\right) </mrow>
-                <mrow> \amp = 3\left(\frac{2}{\sqrt{5}}y_1 + \frac{1}{\sqrt{5}}y_2\right)^2 + 4\left(\frac{2}{\sqrt{5}}y_1 + \frac{1}{\sqrt{5}}y_2\right)\left(-\frac{1}{\sqrt{5}}y_1 + \frac{2}{\sqrt{5}}y_2\right) + 6\left(-\frac{1}{\sqrt{5}}y_1 + \frac{2}{\sqrt{5}}y_2\right)^2</mrow>
-                <mrow> \amp = \frac{3}{5}(2y_1 + y_2)^2 + \frac{4}{5}(2y_1 + y_2)(-y_1 + 2y_2) + \frac{6}{5}(-y_1+2y_2)^2</mrow>
-                <mrow> \amp = \frac{3}{5}(4y_1^2 + 4y_1y_2 + y_2^2) + \frac{4}{5}(-2y_1^2+3y_1y_2 + 2y_2^2) + \frac{6}{5}(y_1^2 - 4y_1y_2 + 4y_2^2)</mrow>
-                <mrow> \amp = \left(\frac{12}{5} - \frac{8}{5} + \frac{6}{5}\right)y_1^2 + \left(\frac{12}{5} + \frac{12}{5} - \frac{24}{5}\right)y_1y_2 + \left(\frac{3}{5} + \frac{8}{5} + \frac{24}{5}\right)y_2^2</mrow>
+                <mrow> \amp = 3\left(\frac{2}{\sqrt{5}}y_1 + \frac{1}{\sqrt{5}}y_2\right)^2 </mrow> 
+                <mrow> \amp \hspace{1in}+ 4\left(\frac{2}{\sqrt{5}}y_1 + \frac{1}{\sqrt{5}}y_2\right)\left(-\frac{1}{\sqrt{5}}y_1 + \frac{2}{\sqrt{5}}y_2\right) </mrow> 
+                <mrow> \amp \hspace{1in}+ 6\left(-\frac{1}{\sqrt{5}}y_1 + \frac{2}{\sqrt{5}}y_2\right)^2</mrow>
+                <mrow> \amp = \frac{3}{5}(2y_1 + y_2)^2 </mrow> 
+                <mrow> \amp \hspace{1in} + \frac{4}{5}(2y_1 + y_2)(-y_1 + 2y_2) </mrow>
+                <mrow> \amp \hspace{1in} + \frac{6}{5}(-y_1+2y_2)^2</mrow>
+                <mrow> \amp = \frac{3}{5}(4y_1^2 + 4y_1y_2 + y_2^2) </mrow> 
+                <mrow> \amp \hspace{1in} + \frac{4}{5}(-2y_1^2+3y_1y_2 + 2y_2^2) </mrow> 
+                <mrow> \amp \hspace{1in}+ \frac{6}{5}(y_1^2 - 4y_1y_2 + 4y_2^2)</mrow>
+                <mrow> \amp = \left(\frac{12}{5} - \frac{8}{5} + \frac{6}{5}\right)y_1^2 </mrow> 
+                <mrow> \amp \hspace{1in} + \left(\frac{12}{5} + \frac{12}{5} - \frac{24}{5}\right)y_1y_2 </mrow> 
+                <mrow> \amp \hspace{1in} + \left(\frac{3}{5} + \frac{8}{5} + \frac{24}{5}\right)y_2^2</mrow>
                 <mrow> \amp = 2y_1^2 + 7y_2^2</mrow>
                 <mrow> \amp = Q_D(y_1, y_2)</mrow>
             </md>.
@@ -297,7 +305,7 @@
       </statement>
       <solution>
         <p>
-            Note that the symmetric matrix for which <m>Q_A(\vec x) = x_1^2 - 6x_1x_2 + 9x_2^2</m> is <md>A = \begin{bmatrix} 1 \amp -3 \\ -3 \amp 9 \end{bmatrix}</md>. We have that <md>\det(A - \lambda I) = (1-\lambda)(9-\lambda) - 9 = \lambda^2 - 10\lambda = \lambda(\lambda - 10)</md>. Thus, the eigenvalues of <m>A</m> are <m>\lambda = 10, 0</m>. It follows that under the suitable change of variables <md>Q_A(\vec x) = Q_D(\vec y) = 10y_1^2 + 0y_2^2 = 10y_1^2 \geq 0</md> for all inputs <m>\vec y</m>. It follows that <m>Q_A(\vec x) \geq 0</m> for all inputs <m>\vec x</m>. Thus, <md>x_1^2-6x_1x_2+9x_2^2</md> is a <em>positive semidefinite</em> quadratic form.
+            Note that the symmetric matrix for which <m>Q_A(\vec x) = x_1^2 - 6x_1x_2 + 9x_2^2</m> is <md>A = \begin{bmatrix} 1 \amp -3 \\ -3 \amp 9 \end{bmatrix}</md>. We have that <md>\det(A - \lambda I) = (1-\lambda)(9-\lambda) - 9 = \lambda^2 - 10\lambda = \lambda(\lambda - 10)</md>. Thus, the eigenvalues of <m>A</m> are <m>\lambda = 10, 0</m>. It follows that under a suitable change of variables <md>Q_A(\vec x) = Q_D(\vec y) = 10y_1^2 + 0y_2^2 = 10y_1^2 \geq 0</md> for all inputs <m>\vec y</m>. Therefore, <m>Q_A(\vec x) \geq 0</m> for all inputs <m>\vec x</m>. Thus, <md>x_1^2-6x_1x_2+9x_2^2</md> is a <em>positive semidefinite</em> quadratic form.
         </p>
       </solution>
     </example>

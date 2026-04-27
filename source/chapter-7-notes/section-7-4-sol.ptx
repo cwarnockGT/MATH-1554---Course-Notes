@@ -273,7 +273,7 @@
             Next, we find the singular values of <m>A</m> which are the square roots of the eigenvalues of <m>A^TA</m>. Therefore, we have that <md>\sigma_1 = \sqrt{\lambda_1} = 9</md> and <md>\sigma_2 = \sqrt{\lambda_2} = 1</md>. It follows that <md>\Sigma = \begin{bmatrix} \sigma_1 \amp 0 \\ 0 \amp \sigma_2 \end{bmatrix} = \begin{bmatrix} 9 \amp 0 \\ 0 \amp 1 \end{bmatrix}</md>.
         </p>
         <p>
-            Next, we find corresponding eigenvectors for each eigenvalue of <m>A^TA</m>. Note that <md>A - 81I = \begin{bmatrix} -72 \amp 24 \\ 24 \amp -8 \end{bmatrix} \sim \begin{bmatrix} 3 \amp -1 \\ 0 \amp 0 \end{bmatrix}</md>. Thus, <md>\vec v_1 = \dfrac{1}{\sqrt{10}}\begin{bmatrix} 1 \\ 3 \end{bmatrix}</md> is a unit eigenvector of <m>A^TA</m> corresponding to <m>\lambda_1 = 81</m>. Also, note that <md>A - I = \begin{bmatrix} 8 \amp 24 \\ 24 \amp 72 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 3 \\ 0 \amp 0 \end{bmatrix}</md>. It follows that <md>\vec v_2 = \dfrac{1}{\sqrt{10}}\begin{bmatrix} 3 \amp -1 \end{bmatrix}</md> is a unit eigenvector of <m>A^TA</m> corresponding to <m>\lambda_2 = 1</m>. (Note that we could have found <m>\vec v_2</m> in an alternative way by using <xref ref="thm-orth-eigenspaces"/>.) These eigenvectors are the rows of <m>V^T</m>. Therefore, we have that <md>V^T = \begin{bmatrix} \vec v_1^T \\ \vec v_2^T \end{bmatrix} = \begin{bmatrix} \frac{1}{\sqrt{10}} \amp \frac{3}{\sqrt{10}} \\ \frac{3}{\sqrt{10}} \amp \frac{-1}{\sqrt{10}}\end{bmatrix} = \frac{1}{\sqrt{10}}\begin{bmatrix} 1 \amp 3 \\ 3 \amp -1 \end{bmatrix}</md>.
+            Next, we find corresponding eigenvectors for each eigenvalue of <m>A^TA</m>. Note that <md>A^TA - 81I = \begin{bmatrix} -72 \amp 24 \\ 24 \amp -8 \end{bmatrix} \sim \begin{bmatrix} 3 \amp -1 \\ 0 \amp 0 \end{bmatrix}</md>. Thus, <md>\vec v_1 = \dfrac{1}{\sqrt{10}}\begin{bmatrix} 1 \\ 3 \end{bmatrix}</md> is a unit eigenvector of <m>A^TA</m> corresponding to <m>\lambda_1 = 81</m>. Also, note that <md>A^TA - I = \begin{bmatrix} 8 \amp 24 \\ 24 \amp 72 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 3 \\ 0 \amp 0 \end{bmatrix}</md>. It follows that <md>\vec v_2 = \dfrac{1}{\sqrt{10}}\begin{bmatrix} 3 \\ -1 \end{bmatrix}</md> is a unit eigenvector of <m>A^TA</m> corresponding to <m>\lambda_2 = 1</m>. (Note that we could have found <m>\vec v_2</m> in an alternative way by using <xref ref="thm-orth-eigenspaces"/>.) These eigenvectors are the rows of <m>V^T</m>. Therefore, we have that <md>V^T = \begin{bmatrix} \vec v_1^T \\ \vec v_2^T \end{bmatrix} = \begin{bmatrix} \frac{1}{\sqrt{10}} \amp \frac{3}{\sqrt{10}} \\ \frac{3}{\sqrt{10}} \amp \frac{-1}{\sqrt{10}}\end{bmatrix} = \frac{1}{\sqrt{10}}\begin{bmatrix} 1 \amp 3 \\ 3 \amp -1 \end{bmatrix}</md>.
         </p>
         <p>
             Lastly, we find the columns of <m>U</m> by using the formula <md>\vec u_i = \dfrac{1}{\sigma_i}A\vec v_i</md>. Note that <md>\vec u_1 = \frac{1}{\sigma_1}A\vec v_1 = \frac{1}{9}\begin{bmatrix} 3 \amp 8 \\ 0 \amp 3 \end{bmatrix}\frac{1}{\sqrt{10}}\begin{bmatrix} 1 \\ 3 \end{bmatrix} = \frac{1}{9\sqrt{10}}\begin{bmatrix} 27 \\ 9 \end{bmatrix} = \frac{1}{\sqrt{10}}\begin{bmatrix} 3 \\ 1 \end{bmatrix}</md> and <md>\vec u_2 = \frac{1}{\sigma_2}A\vec v_2 = \frac{1}{1}\begin{bmatrix} 3 \amp 8 \\ 0 \amp 3 \end{bmatrix}\frac{1}{\sqrt{10}}\begin{bmatrix} 3 \\ -1 \end{bmatrix} = \frac{1}{\sqrt{10}}\begin{bmatrix} 1 \\ -3 \end{bmatrix}</md>. Therefore, we have that <md>U = \begin{bmatrix} \vec u_1 \amp \vec u_2 \end{bmatrix} = \begin{bmatrix} \frac{3}{\sqrt{10}} \amp \frac{1}{\sqrt{10}} \\ \frac{1}{\sqrt{10}} \amp -\frac{3}{\sqrt{10}}\end{bmatrix} = \frac{1}{\sqrt{10}}\begin{bmatrix} 3 \amp 1 \\ 1 \amp -3 \end{bmatrix}</md>.
@@ -302,7 +302,7 @@
       </statement>
       <solution>
         <p>
-            First, note that <md>A^TA = \begin{bmatrix} 1 \amp -2 \amp 2 \\ -1 \amp 2 \amp -2 \end{bmatrix}\begin{bmatrix} 1 \amp -1 \\ -2 \amp 2 \\ 2 \amp -2 \end{bmatrix} = \begin{bmatrix} 9 \amp -9 \\ -9 \amp 9 \end{bmatrix}</md>. We have that <md>\det(A^TA - \lambda I) = (9-\lambda)^2 - 81 = \lambda^2 - 18\lambda = \lambda(\lambda - 18)</md>. So, the eigenvalues of <m>A^TA</m> are <m>\lambda_1 = 18</m> and <m>\lambda_2 = 0</m>. It follows that the singular values of <m>A</m> are <m>\sigma_1 = \sqrt{18} = 3\sqrt{2}</m> and <m>\sigma_2 = 0</m>. Recall that <m>\Sigma</m> has the same dimensions as <m>A</m>. Thus, <md>\Sigma = \begin{bmatrix} 3\sqrt{2} \amp 0 \\ 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}</md>. Since there is only one non-zero singular value, we have that the rank of <m>A</m> is 1.
+            First, note that <md>A^TA = \begin{bmatrix} 1 \amp -2 \amp 2 \\ -1 \amp 2 \amp -2 \end{bmatrix}\begin{bmatrix} 1 \amp -1 \\ -2 \amp 2 \\ 2 \amp -2 \end{bmatrix} = \begin{bmatrix} 9 \amp -9 \\ -9 \amp 9 \end{bmatrix}</md>. We have that <md>\det(A^TA - \lambda I) = (9-\lambda)^2 - 81 = \lambda^2 - 18\lambda = \lambda(\lambda - 18)</md>. So, the eigenvalues of <m>A^TA</m> are <m>\lambda_1 = 18</m> and <m>\lambda_2 = 0</m>. It follows that the singular values of <m>A</m> are <m>\sigma_1 = \sqrt{18} = 3\sqrt{2}</m> and <m>\sigma_2 = 0</m>. Recall that <m>\Sigma</m> has the same dimensions as <m>A</m>. Thus, <md>\Sigma = \begin{bmatrix} 3\sqrt{2} \amp 0 \\ 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}</md>. Since there is only one nonzero singular value, we have that the rank of <m>A</m> is 1.
         </p>
         <p>
             Note that <md>A^TA - 18 I = \begin{bmatrix} -9 \amp -9 \\ -9 \amp -9 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 1 \\ 0 \amp 0 \end{bmatrix}</md>. Therefore, <md>\vec v_1 = \frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\ -1 \end{bmatrix}</md> is a unit eigenvector of <m>A^TA</m> corresponding to an eigenvalue of <m>\lambda_1 = 18</m>. Also, note that <md>A^TA - 0I = \begin{bmatrix} 9 \amp -9 \\-9 \amp 9 \end{bmatrix} \sim \begin{bmatrix} 1 \amp -1 \\ 0 \amp 0 \end{bmatrix}</md>. Therefore, <md>\vec v_2 = \frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\ 1 \end{bmatrix}</md> is a unit eigenvector of <m>A^TA</m> corresponding to an eigenvalue of <m>\lambda_2 = 0</m>. it follows that <md>V^T = \dfrac{1}{\sqrt{2}}\begin{bmatrix} 1 \amp -1 \\ 1 \amp 1 \end{bmatrix}</md>.
@@ -311,8 +311,8 @@
             We can find <m>\vec u_1</m> using the formula since <m>\sigma_1 \neq 0</m>. Note that <md>\vec u_1 = \frac{1}{\sigma_1}A\vec v_1 = \frac{1}{3\sqrt{2}}\begin{bmatrix} 1 \amp -1 \\ -2 \amp 2 \\ 2 \amp -2 \end{bmatrix}\frac{1}{\sqrt{2}}\begin{bmatrix}1 \\ -1 \end{bmatrix} = \frac{1}{6}\begin{bmatrix} 2 \\ -4 \\ 4 \end{bmatrix} = \frac{1}{3}\begin{bmatrix} 1 \\ -2 \\ 2 \end{bmatrix}</md>. Note that we cannot use the formula to find <m>\vec u_2</m> since that would require us to divide by <m>\sigma_2 = 0</m>. However, we can find <m>\vec u_2</m> by using the properties of <m>U</m>. Recall <m>U</m> is a <m>3 \times 3</m> <em>orthogonal</em> matrix. So, we actually need to find <em>two</em> more columns of <m>U</m>. Thankfully, we can choose any two unit vectors as long as they make <m>U</m> an orthogonal matrix.
         </p> 
         <p> One set of vectors could be <md>\vec u_2 = \frac{1}{\sqrt{2}}\begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix} \quad \text{and} \quad \vec u_3 = \frac{1}{3\sqrt{2}}\begin{bmatrix} 4 \\ 1 \\ -1 \end{bmatrix}</md>. Let's check that the matrix with these columns, call it <m>U_1</m>, works. Note that <md>
-            <mrow>U_1\Sigma V^T\amp = \begin{bmatrix} \frac{1}{3} \amp 0 \amp \frac{4}{3\sqrt{2}} \\ -\frac{2}{3} \amp \frac{1}{\sqrt{2}} \amp \frac{1}{3\sqrt{2}} \\ \frac{2}{3} \amp \frac{1}{\sqrt{2}} \amp -\frac{1}{3\sqrt{2}} \end{bmatrix}\begin{bmatrix} 3\sqrt{2} \amp 0 \\ 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}\frac{1}\sqrt{2}\begin{bmatrix} 1 \amp -1 \\ 1 \amp 1 \end{bmatrix}</mrow>
-            <mrow> \amp = \begin{bmatrix} \frac{1}{3} \amp 0 \amp \frac{4}{3\sqrt{2}} \\ -\frac{2}{3} \amp \frac{1}{\sqrt{2}} \amp \frac{1}{3\sqrt{2}} \\ \frac{2}{3} \amp \frac{1}{\sqrt{2}} \amp -\frac{1}{3\sqrt{2}} \end{bmatrix}\begin{bmatrix} \begin{bmatrix} 3 \amp -3 \\ 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}</mrow>
+            <mrow>U_1\Sigma V^T\amp = \begin{bmatrix} \frac{1}{3} \amp 0 \amp \frac{4}{3\sqrt{2}} \\ -\frac{2}{3} \amp \frac{1}{\sqrt{2}} \amp \frac{1}{3\sqrt{2}} \\ \frac{2}{3} \amp \frac{1}{\sqrt{2}} \amp -\frac{1}{3\sqrt{2}} \end{bmatrix}\begin{bmatrix} 3\sqrt{2} \amp 0 \\ 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}\frac{1}{\sqrt{2}}\begin{bmatrix} 1 \amp -1 \\ 1 \amp 1 \end{bmatrix}</mrow>
+            <mrow> \amp = \begin{bmatrix} \frac{1}{3} \amp 0 \amp \frac{4}{3\sqrt{2}} \\ -\frac{2}{3} \amp \frac{1}{\sqrt{2}} \amp \frac{1}{3\sqrt{2}} \\ \frac{2}{3} \amp \frac{1}{\sqrt{2}} \amp -\frac{1}{3\sqrt{2}} \end{bmatrix}\begin{bmatrix} 3 \amp -3 \\ 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}</mrow>
             <mrow> \amp = \begin{bmatrix} 1 \amp -1 \\ -2 \amp 2 \\ 2 \amp -2 \end{bmatrix} = A</mrow>
         </md>
         </p>
@@ -369,21 +369,41 @@
                 <p>
                     It follows that <m>\left\{\vec u_1, \dots, \vec u_r\right\}</m> is a set of <m>\underline{\hspace{2in}}</m> vectors that all live in <m>\underline{\hspace{1.5in}}</m>.
                 </p>
+                <answer>
+                    <p>
+                        orthonormal; <m>\Col(A)</m>
+                    </p>
+                </answer>
             </li>
             <li>
                 <p>
                     Therefore, the first <m>r</m> columns of <m>U</m> form an <m>\underline{\hspace{3in}}</m> for <m>\underline{\hspace{1.5in}}</m>
                 </p>
+                <answer>
+                    <p>
+                        orthonormal basis; <m>\Col(A)</m>
+                    </p>
+                </answer>
             </li>
             <li>
                 <p>
                     Since the remaining columns of <m>U</m> are created so that all columns of <m>U</m> form an orthonormal basis for <m>\mathbb{R}^m</m>, we see that <m>\left\{\vec u_{r+1}, \dots, \vec u_m\right\}</m> is a set of <m>\underline{\hspace{2in}}</m> vectors which live in <m>\underline{\hspace{3in}}</m>.
                 </p>
+                <answer>
+                    <p>
+                        orthonormal; <m>\Col(A)^\perp = \Nul(A^T)</m>
+                    </p>
+                </answer>
             </li>
             <li>
                 <p>
                     Therefore, the last <m>m - r</m> columns of <m>U</m> form an <m>\underline{\hspace{3in}}</m> for <m>\underline{\hspace{1.5in}}</m>.
                 </p>
+                <answer>
+                    <p>
+                        orthonormal basis; <m>\Nul(A^T)</m>
+                    </p>
+                </answer>
             </li>
         </ul> 
         Now, consider the rows of <m>V^T</m>:
@@ -392,26 +412,51 @@
                 <p>
                     The last <m>n-r</m> rows of <m>V^T</m> are eigenvectors of <m>A^TA</m> which correspond to an eigenvalue of <m>\underline{\hspace{1in}}</m>.
                 </p>
+                <answer>
+                    <p>
+                        <m>\lambda = 0</m>
+                    </p>
+                </answer>
             </li>
             <li>
                 <p>
                     Therefore, <m>\left\{\vec v_{r+1}, \dots, \vec v_n\right\}</m> form an <m>\underline{\hspace{3in}}</m> for <m>\underline{\hspace{2in}}</m>.
                 </p>
+                <answer>
+                    <p>
+                        orthonormal basis; <m>\Nul(A^TA)</m>
+                    </p>
+                </answer>
             </li>
             <li>
                 <p>
                     We have that <m>\Nul(A^TA) = \Nul(A)</m>. Thus, the last <m>n - r</m> rows of <m>V^T</m> form an <m>\underline{\hspace{3in}}</m> for <m>\underline{\hspace{1.5in}}</m>.
                 </p>
+                <answer>
+                    <p>
+                        orthonormal basis; <m>\Nul(A)</m>
+                    </p>
+                </answer>
             </li>
             <li>
                 <p>
                     Since <m>V^T</m> is an orthogonal matrix, we know that it's <m>n</m> rows form an orthonormal basis for <m>\mathbb{R}^n</m>. Therefore, <m>\left\{\vec v_1, \dots, \vec v_r\right\}</m> is a set of <m>\underline{\hspace{2in}}</m> vectors which live in <m>\underline{\hspace{3in}}</m>.
                 </p>
+                <answer>
+                    <p>
+                        orthonormal; <m>\Nul(A)^\perp = \Row(A)</m>
+                    </p>
+                </answer>
             </li>
             <li>
                 <p>
                     It follows that the first <m>r</m> rows of <m>V^T</m> form an <m>\underline{\hspace{3in}}</m> for <m>\underline{\hspace{1.5in}}</m>.
                 </p>
+                <answer>
+                    <p>
+                        orthonormal basis; <m>\Row(A)</m>
+                    </p>
+                </answer>
             </li>
         </ul>
     </p>
@@ -466,6 +511,16 @@
                 Let <m>A = U\Sigma V^T</m> for <md>U = \begin{bmatrix} 0 \amp 0 \amp 1 \amp 0 \\ 0 \amp 1 \amp 0 \amp 0 \\ 0 \amp 0 \amp 0 \amp -1 \\ 1 \amp 0 \amp 0 \amp 0 \end{bmatrix}, \quad \Sigma = \begin{bmatrix} 4 \amp 0 \amp 0 \amp 0 \amp 0 \\ 0 \amp 3 \amp 0 \amp 0 \amp 0 \\ 0 \amp 0 \amp \sqrt{5} \amp 0 \amp 0 \\ 0 \amp 0 \amp 0 \amp 0 \amp 0 \end{bmatrix}, \quad V^T = \begin{bmatrix} 0 \amp 1 \amp 0 \amp 0 \amp 0 \\ 0 \amp 0 \amp 1 \amp 0 \amp 0 \\ \sqrt{0.2} \amp 0 \amp 0 \amp 0 \amp \sqrt{0.8} \\ 0 \amp 0 \amp 0 \amp 1 \amp 0 \\ -\sqrt{0.8} \amp 0 \amp 0 \amp 0 \amp \sqrt{0.2} \end{bmatrix}</md>. Find an orthonormal basis for each of the four subspaces.
             </p>
         </statement>
+        <solution>
+            <p>
+                Since <m>\Sigma</m> has three nonzero elements on its diagonal, we know that <m>\rank(A) = 3</m>. Therefore, the first 3 columns of <m>U</m> form an orthonormal basis for <m>\Col(A)</m> and the remaining column of <m>U</m> forms an orthonormal basis for <m>\Nul(A)^T</m>. Similarly, the first 3 rows of <m>V^T</m> form an orthonormal basis for <m>\Row(A)</m> and the remaining rows of <m>V^T</m> form an orthonormal basis for <m>\Nul(A)</m>. Therefore, we have that <md>
+                    <mrow> \mathcal{B}_1 \amp = \left\{\begin{bmatrix} 0 \\ 0 \\ 0 \\ 1 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}\right\} \text{ is an orthonormal basis for $\Col(A)$.}</mrow> 
+                    <mrow> \mathcal{B}_2 \amp = \left\{\begin{bmatrix} 0 \\ 0 \\ -1\\ 0 \end{bmatrix}\right\} \text{ is an orthonormal basis for $\Nul(A^T)$.}</mrow>
+                    <mrow> \mathcal{B}_3 \amp = \left\{\begin{bmatrix} 0 \\ 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 0 \\ 1 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} \sqrt{0.2} \\ 0 \\ 0 \\ 0 \\ \sqrt{0.8} \end{bmatrix}\right\} \text{ is an orthonormal basis for $\Row(A)$.}</mrow>
+                    <mrow> \mathcal{B}_4 \amp = \left\{\begin{bmatrix} 0 \\ 0 \\ 0 \\ 1 \\ 0 \end{bmatrix}, \begin{bmatrix} -\sqrt{0.8} \\ 0 \\ 0 \\ 0 \\ \sqrt{0.2} \end{bmatrix}\right\} \text{ is an orthonormal basis for $\Nul(A)$.}</mrow>  
+                </md> 
+            </p>
+        </solution>
     </example>
     <p><nbsp/></p>
   </page>
@@ -494,6 +549,17 @@
                 Find the spectral decomposition of <m>A = \begin{bmatrix}3 \amp 8 \\ 0 \amp 3 \end{bmatrix}</m>. Use the decomposition to identify the best rank 1 approximation of <m>A</m>.
             </p>
         </statement>
+        <solution>
+            <p>
+                Using the information from the solution to <xref ref="ex-7-4-example1"/>,we have that <md>
+                    <mrow>\begin{bmatrix} 3 \amp 8 \\ 0 \amp 3 \end{bmatrix} \amp = \sigma_1\vec u_1 \vec v_1^T + \sigma_2 \vec u_2 \vec v_2^T</mrow>
+                    <mrow> \amp = (9)\frac{1}{\sqrt{10}}\begin{bmatrix}3 \\ 1 \end{bmatrix} \frac{1}{\sqrt{10}}\begin{bmatrix} 1 \amp 3 \end{bmatrix} + (1)\frac{1}{\sqrt{10}}\begin{bmatrix} 1 \\ -3 \end{bmatrix}\frac{1}{\sqrt{10}}\begin{bmatrix} 3 \amp -1 \end{bmatrix} </mrow>
+                    <mrow> \amp = \frac{9}{10}\begin{bmatrix} 3 \amp 9 \\1 \amp 3 \end{bmatrix} + \frac{1}{10}\begin{bmatrix} 3 \amp -1 \\ -9 \amp 3 \end{bmatrix}</mrow>
+                    <mrow> \amp = \begin{bmatrix} 2.7 \amp 8.1 \\ 0.9 \amp 2.7 \end{bmatrix} + \begin{bmatrix} 0.3 \amp -0.1 \\ -0.9 \amp 0.3 \end{bmatrix}</mrow>
+                </md>.
+                Therefore, the best rank 1 matrix that approximates <m>A</m> is <m>\begin{bmatrix} 2.7 \amp 8.1 \\ 0.9 \amp 2.7 \end{bmatrix}</m>.
+            </p>
+        </solution>
     </example>
 
     <p><nbsp/></p>
