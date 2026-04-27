@@ -1,0 +1,294 @@
+<handout xml:id="handout-section-7-1-spectral">
+  <title>7.1 Diagonalization of Symmetric Matrices</title>
+
+  <page xml:id="p-7-1-overview">
+    <title>Overview</title>
+
+    <objectives xml:id="obj-7-1-topics-goals">
+      <title>Topics</title>
+      <ul>
+        <li>Symmetric matrices</li>
+        <li>Orthogonal diagonalization</li>
+        <li>Spectral decomposition</li>
+      </ul>
+    </objectives>
+
+    <objectives workspace="0.2in">      
+      <title>Goals</title>
+      <ul>
+        <li>Construct an orthogonal diagonalization <m>A=PDP^T</m> of a symmetric matrix.</li>
+        <li>Construct a spectral decomposition of a matrix.</li>
+      </ul>
+    </objectives>
+
+    <definition xml:id="def-symmetric">
+      <title>Symmetric Matrix</title>
+      <statement>
+        <p>
+          A matrix <m>A</m> is <term>symmetric</term> if <m>A^T=A</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <example xml:id="ex-7-1-symmetric" workspace="1in">
+      <statement>
+        <p>
+          Which of the following matrices are symmetric? Let <m>a, b, </m> and <m>c</m> represent real numbers.
+        </p>
+        <me>
+          A=[a],\quad \quad
+          B=\begin{bmatrix} a \amp b\\ b \amp c\end{bmatrix},\quad \quad
+          C=\begin{bmatrix} a \amp b\\ 0 \amp 0\end{bmatrix},
+        </me>
+        <p workspace="1in"/>
+        <me>
+          D=\begin{bmatrix}4 \amp 2\\ 0 \amp 0\\ 0 \amp 0\end{bmatrix}, \quad \quad
+          E=\begin{bmatrix}
+            4 \amp 2 \amp 0 \amp 1\\
+            2 \amp 1 \amp 7 \amp 4\\
+            0 \amp 7 \amp 6 \amp 0\\
+            1 \amp 4 \amp 0 \amp 3
+          \end{bmatrix}.
+        </me>
+      </statement>
+      <solution>
+        <p>
+          Matrices <m>A, B,</m> and <m>E</m> are. Matrix <m>C</m> is only if <m>b = 0</m>. Matrix <m>D</m> is not. In fact, a non-square matrix cannot possibly be symmetric.
+        </p>
+      </solution>
+    </example>
+
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-7-1-ata-symmetric">
+    <title><m>A^TA</m> Is Symmetric</title>
+
+    <note workspace="1in"> 
+        <p>
+        For any matrix <m>A</m> with columns <m>\vec a_1,\dots,\vec a_n</m>,
+        the matrix <m>A^TA</m> is symmetric and has entries given by dot products
+        of the columns of <m>A</m>.
+        </p>
+
+        <me>
+        A^TA =
+        \begin{bmatrix}
+            \vec a_1^T\vec a_1 \amp \cdots \amp \vec a_1^T\vec a_n\\
+            \vdots \amp \ddots \amp \vdots\\
+            \vec a_n^T\vec a_1 \amp \cdots \amp \vec a_n^T\vec a_n
+        \end{bmatrix}.
+        </me>
+        <solution>
+          <p>
+            Note that <md>(A^TA)^T = (A^T)(A^T)^T = A^TA</md>. Thus, <m>A^TA</m> is symmetric.
+          </p>
+        </solution>
+    </note>
+
+
+    <theorem xml:id="thm-orth-eigenspaces" workspace="5in">
+      <title>Orthogonality of Eigenspaces</title>
+      <statement>
+        <p>
+          If <m>A</m> is <em>symmetric</em> and <m>\vec v_1,\vec v_2</m> are eigenvectors corresponding to
+          <em>distinct</em> eigenvalues, then <m>\vec v_1</m> and <m>\vec v_2</m> are <em>orthogonal</em>.
+        </p>
+        <p>
+          More generally, eigenspaces associated with distinct eigenvalues are orthogonal subspaces.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Suppose <m>A^T = A</m> and suppose <m>\vec v_1, \vec v_2</m> be eigenvectors of <m>A</m> corresponding to <em>distinct</em> eigenvalues <m>\lambda_1, \lambda_2</m>, respectively. Thus, <m>A\vec v_1 = \lambda_1 \vec v_1</m> and <m>A\vec v_2 = \lambda_2\vec v_2</m>.
+        </p>
+        <p>
+          Our goal is to show that <m>\vec v_1</m> and <m>\vec v_2</m> are orthogonal. Therefore, we want to show that <m>\vec v_1 \cdot \vec v_2 = 0</m>. Note the following:
+          <md>
+            <mrow>\lambda_1(\vec v_1 \cdot \vec v_2) \amp = (\lambda_1\vec v_1)\cdot \vec v_2 \amp \quad \text{Associativity of the dot product}</mrow>
+            <mrow> \amp = (A\vec v_1) \cdot \vec v_2 \amp \quad \text{Definition of eigenvector}</mrow>
+            <mrow> \amp = (A\vec v_1)^T\vec v_2 \amp \quad \text{Definition of dot product}</mrow>
+            <mrow> \amp = \vec v_1^TA^T\vec v_2 \amp \quad \text{Distributing transpose}</mrow>
+            <mrow> \amp = \vec v_1^TA\vec v_2 \amp \quad \text{A is symmetric}</mrow>
+            <mrow> \amp = \vec v_1 \cdot (A\vec v_2) \amp \quad \text{Definition of dot product}</mrow>
+            <mrow> \amp = \vec v_1 \cdot (\lambda_2 \vec v_2) \amp \quad \text{Definition of eigenvector}</mrow>
+            <mrow> \amp = \lambda_2(\vec v_1 \cdot \vec v_2) \amp \quad \text{Associativity of the dot product}</mrow>
+          </md>
+          Thus, we have that <md>\lambda_1(\vec v_1 \cdot \vec v_2) = \lambda_2(\vec v_1 \cdot \vec v_2)</md>. Subtracting the right side expression from both sides yields <md>(\lambda_1 - \lambda_2)(\vec v_1 \cdot \vec v_2) = 0</md> Since <m>\lambda_1 \neq \lambda_2</m>, we have that <m>\lambda_1 - \lambda_2 \neq 0</m>. Therefore, it must be the case that <md> <\vec v_1 \cdot \vec v_2 = 0</md> Hence, <m>\vec v_1</m> and <m>\vec v_2</m> are orthogonal.  
+        </p>
+      </solution>
+    </theorem>
+
+  </page>
+
+
+  <page xml:id="p-7-1-example-orth-diag">
+    <title>Example 1: Orthogonal Diagonalization</title>
+
+    <example xml:id="ex-7-1-orth-diag" workspace="true">
+      <statement>
+        <p>
+          Diagonalize <m>A</m> using an orthogonal matrix. The eigenvalues of <m>A</m> are given.
+        </p>
+        <me>
+          A=\begin{bmatrix}
+            0 \amp 0 \amp 1\\
+            0 \amp 1 \amp 0\\
+            1 \amp 0 \amp 0
+          \end{bmatrix},
+          \qquad \lambda=-1,\,1.
+        </me>
+      </statement>
+      <solution>
+        <p>
+          Let's start with finding the <m>1</m>-eigenspace of <m>A</m>. Note that <md>A - I = \begin{bmatrix} -1 \amp 0 \amp 1 \\ 0 \amp 0 \amp 0 \\ 1 \amp 0 \amp -1 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp -1 \\ 0 \amp 0 \amp 0 \\ 0 \amp 0 \amp 0 \end{bmatrix}</md>. Since <m>A - I</m> has two free variables, the <m>1</m>-eigenspace<m>(A)</m> is two dimensional. If we were only trying to diagonalize <m>A</m>, then any basis of the <m>1</m>-eigenspace<m>(A)</m> would be fine. But we want to diagonalize so that <m>P</m> is an orthogonal matrix. Therefore, we want to find an <em>orthonormal</em> basis of <m>1</m>-eigenspace<m>(A)</m>. Thus, we choose the basis vectors <md>\vec v_1 = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} \quad \text{and} \quad \vec v_2 = \dfrac{1}{\sqrt{2}}\begin{bmatrix} 1 \amp 0 \amp 1 \end{bmatrix}</md>.
+        </p>
+        <p>
+          Now, let's find a basis for the <m>-1</m>-eigenspace<m>(A)</m>. Note that <md>A - (-1)I = \begin{bmatrix} 1 \amp 0 \amp 1 \\ 0 \amp 2 \amp 0 \\ 1 \amp 0 \amp 1 \end{bmatrix}</md>. Since <m>A - (-1)I</m> has only a single free variable, any basis we choose will be an orthogonal basis, we will just make sure to use a normalized vector as a column of <m>P</m>. Let <md>\vec v_3 = \dfrac{1}{\sqrt{2}}\begin{bmatrix} 1 \amp 0 \amp -1 \end{bmatrix}</md>. Note that this vector is <em>guaranteed</em> to be orthogonal to <m>\vec v_1</m> and <m>\vec v_2</m> by <xref ref="thm-orth-eigenspaces"/>.
+        </p>
+        <p>
+          It follows that a diagonalization of <m>A</m> is given by <m>A = PDP^{-1}</m>, where <md>D = \begin{bmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp -1 \end{bmatrix} \quad \text{and} \quad P = \begin{bmatrix}0 \amp \frac{1}{\sqrt{2}} \amp \frac{1}{\sqrt{2}} \\ 1 \amp 0 \amp 0 \\ 0 \amp \frac{1}{\sqrt{2}} \amp -\frac{1}{\sqrt{2}} \end{bmatrix}</md>. Since <m>P</m> is orthogonal, we have that <m>P^{-1} = P^T</m>, so this diagonalization could be written <m>A = PDP^T</m>. We call this diagonalization using an orthogonal matrix an <term>orthogonal diagonalization</term>.
+        </p>
+      </solution>
+    </example>
+
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-7-1-spectral-theorem">
+    <title>Spectral Theorem</title>
+
+    <note workspace="0.5in">
+        <statement>
+            <p>
+                Recall that if <m>P</m> is an <em>orthogonal</em> matrix, then <m>P^{-1} = P^T</m>.
+            </p>
+        </statement>
+    </note>
+
+    <theorem xml:id="thm-spectral" workspace="true">
+      <title>Spectral Theorem</title>
+      <statement>
+        <p>
+          If <m>A</m> is an <m>n\times n</m> <em>symmetric</em> matrix, then:
+        </p>
+        <ol>
+          <li>All eigenvalues of <m>A</m> are real.</li>
+          <li>The dimension of each eigenspace equals its algebraic multiplicity.</li>
+          <li>Eigenspaces corresponding to distinct eigenvalues are orthogonal.</li>
+          <li>
+            <m>A</m> can be orthogonally diagonalized as
+            <m>A=PDP^T</m>, where <m>P</m> is orthogonal.
+          </li>
+        </ol>
+      </statement>
+      <solution>
+        <p>
+          Note that only symmetric matrices can be orthogonally diagonalized. This is because if <m>A</m> is a matrix that can be diagonalized as <m>A = PDP^T</m>, then <md>A^T = (PDP^T)^T = (P^T)^TD^TP^T = PDP^T = A</md>, so <m>A</m> is symmetric.
+        </p>
+      </solution>
+    </theorem>
+
+    <p><nbsp/></p>
+
+
+    <theorem xml:id="thm-spectral-decomposition" workspace="true">
+      <title>Spectral Decomposition</title>
+      <statement>
+        <p>
+          Suppose <m>A </m> can be orthogonally diagonalized as <me>A=PDP^T = \begin{bmatrix} \vec u_1 \amp \cdots \amp \vec u_n\end{bmatrix} \begin{bmatrix} \lambda_1 \amp \cdots \amp 0 \\ \vdots \amp \ddots \amp \vdots \\ 0 \amp \cdots \amp \lambda_n \end{bmatrix}\begin{bmatrix}\vec u_1^T \\ \vdots \\ \vec u_n^T \end{bmatrix}</me>. Then <m>A</m> has the decomposition <me>A=\sum_{i=1}^n \lambda_i \vec u_i \vec u_i^T = \lambda_1 \vec u_1\vec u_1^T + \cdots + \lambda_n \vec u_n\vec u_n^T</me>. Note that each term <m>\lambda_i\vec u_i\vec u_i^T</m> is a rank 1 matrix.
+        </p>
+      </statement>
+    </theorem>
+  </page>
+
+
+  <page xml:id="p-7-1-example-spectral">
+
+    <example xml:id="ex-7-1-spectral" workspace="true">
+      <statement>
+        <p>
+          Construct a spectral decomposition of <m>A</m>, given its orthogonal diagonalization:
+        </p>
+        <me>
+          A=\begin{bmatrix}3 \amp 1\\ 1 \amp 3\end{bmatrix}
+          =
+          \begin{bmatrix}
+            \tfrac1{\sqrt2} \amp -\tfrac1{\sqrt2}\\
+            \tfrac1{\sqrt2} \amp \tfrac1{\sqrt2}
+          \end{bmatrix}
+          \begin{bmatrix}4 \amp 0\\ 0 \amp 2\end{bmatrix}
+          \begin{bmatrix}
+            \tfrac1{\sqrt2} \amp \tfrac1{\sqrt2}\\
+            -\tfrac1{\sqrt2} \amp \tfrac1{\sqrt2}
+          \end{bmatrix}.
+        </me>
+      </statement>
+      <solution>
+        <p>
+          Using the formula in<xref ref="thm-spectral-decomposition"/>, we have that <md>
+            <mrow>A  \amp = \lambda_1\vec u_1\vec u_1^T + \lambda_2\vec u_2\vec u_2^T</mrow>
+            <mrow> \amp = 4\begin{bmatrix}\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}\end{bmatrix}\begin{bmatrix} \frac{1}{\sqrt{2}} \amp \frac{1}{\sqrt{2}}\end{bmatrix} + 2 \begin{bmatrix}\frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}}\end{bmatrix}\begin{bmatrix} \frac{1}{\sqrt{2}} \amp -\frac{1}{\sqrt{2}}\end{bmatrix}</mrow>
+            <mrow> \amp = 4 \begin{bmatrix} \frac{1}{2} \amp \frac{1}{2} \\ \frac{1}{2} \amp \frac{1}{2} \end{bmatrix} + 2\begin{bmatrix} \frac{1}{2} \amp -1\frac{1}{2} \\ -\frac{1}{2} \amp \frac{1}{2} \end{bmatrix}</mrow>
+            <mrow> \amp = \begin{bmatrix} 2 \amp 2 \\ 2 \amp 2 \end{bmatrix} + \begin{bmatrix} 1 \amp -1 \\ -1 \amp 1 \end{bmatrix}</mrow>
+          </md>.
+          Note that the first term in the sum is a fairly close approximation of <m>A</m>. In fact, it is the best rank 1 approximation of <m>A</m>.
+        </p>
+      </solution>
+    </example>
+
+    <p><nbsp/></p>
+
+  </page>
+
+  <page>
+    <note> 
+        <statement>
+            <p>
+                Note in the solution to <xref ref="ex-7-1-spectral"/> that if <m>\lambda_1 = 4</m> is the larger of the two eigenvalues and <m>\vec u_1</m> is a normalized eigenvector corresponding to <m>\lambda_1</m>, then <m>A \approx \lambda_1\vec u_1\vec u_1^T</m> is a close approximation of the matrix <m>A</m>. In fact, it is the closest approximation of <m>A</m> using a rank 1 matrix.
+            </p> 
+            <p> In general, if we label the eigenvalues of an <m>n \times n</m> symmetric matrix <m>A</m> in non-increasing order by magnitude, so <m>|\lambda_1| \geq |\lambda_2| \geq \cdots \geq |\lambda_n|</m>, then each matrix <me>\sum_{i=1}^j \lambda_i\vec u_i\vec u_i^T = \lambda_1\vec u_1\vec u_1^T + \cdots + \lambda_j\vec u_j \vec u_j^T</me> is the closest<m>^*</m> rank <m>j</m> approximation of <m>A</m>, which gets more accurate as <m>j</m> approaches <m>n</m>. 
+            </p>
+            <p>
+                <m>^*</m>: The distance between two matrices is measured by subtracting the two matrices and calculating the square root of the sums of the squares of the entries in the resulting matrix. This calculation is the same calculation used to calculate the distance between two vectors. By closest, we mean that there is no rank <m>j</m> matrix that is closer. There could be other rank <m>j</m> matrices that are as close.
+            </p>
+        </statement>
+    </note>
+    <example workspace="true">
+        <statement>
+            <p>
+                Construct a spectral decompositon of <me> A = \begin{bmatrix} 0 \amp 0 \amp 1 \\ 0 \amp 1 \amp 0 \\ 1 \amp 0 \amp 0 \end{bmatrix}</me>.
+            </p>
+        </statement>
+        <solution>
+          <p>
+            Using the information from the solution to <xref ref="ex-7-1-orth-diag"/>, we have <md>
+              <mrow>A \amp = 1\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}\begin{bmatrix} 0 \amp 1 \amp 0 \end{bmatrix} + 1\begin{bmatrix} \frac{1}{\sqrt{2}} \\ 0 \\ \frac{1}{\sqrt{2}} \end{bmatrix}\begin{bmatrix} \frac{1}{\sqrt{2}} \amp 0 \amp \frac{1}{\sqrt{2}}\end{bmatrix} -1\begin{bmatrix} \frac{1}{\sqrt{2}} \\ 0 \\ -\frac{1}{\sqrt{2}} \end{bmatrix}\begin{bmatrix} \frac{1}{\sqrt{2}} \amp 0 \amp -\frac{1}{\sqrt{2}}\end{bmatrix} </mrow>
+              <mrow> \amp = \begin{bmatrix} 0 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 0 \end{bmatrix} + \begin{bmatrix} \frac{1}{2} \amp 0 \amp \frac{1}{2} \\ 0 \amp 0 \amp 0 \\ \frac{1}{2} \amp 0 \amp \frac{1}{2} \end{bmatrix} + \begin{bmatrix} -\frac{1}{2} \amp 0 \amp \frac{1}{2} \\ 0 \amp 0 \amp 0 \\ \frac{1}{2} \amp 0 \amp -\frac{1}{2} \end{bmatrix}</mrow>.
+            </md>
+          </p>
+          <p>
+            Since every eigenvalue has the same magnitude, each term of the Spectral Decomposition will be an equivalent rank 1 approximation according to the metric described above. For example, note that using the first term of the decomposition as an approximation results in the following error:<md>
+              <mrow>\|A - \lambda_1\vec v_1\vec v_1^T\| \amp = \left\| \begin{bmatrix} 0 \amp 0 \amp 1 \\ 0 \amp 1 \amp 0 \\ 1 \amp 0 \amp 0 \end{bmatrix} - \begin{bmatrix} 0 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 0 \end{bmatrix}\right\|</mrow>
+              <mrow> \amp = \left\|\begin{bmatrix} 0 \amp 0 \amp 1 \\ 0 \amp 0 \amp 0 \\ 1 \amp 0 \amp 0 \end{bmatrix}\right\|</mrow>
+              <mrow> \amp = \sqrt{0^2 + 0^2 + 1^2 + 0^2 + 0^2 + 0^2 + 1^2 + 0^2 + 0^2}</mrow>
+              <mrow> \amp = \sqrt{2}</mrow>
+            </md> .
+            Using the third term of the decomposition as an approximation results in the following error:
+            <md>
+              <mrow>\|A - \lambda_3\vec v_3\vec v_3^T\| \amp = \left\|\begin{bmatrix} 0 \amp 0 \amp 1 \\ 0 \amp 1 \amp 0 \\ 1 \amp 0 \amp 0 \end{bmatrix} - \begin{bmatrix} -\frac{1}{2} \amp 0 \amp \frac{1}{2} \\ 0 \amp 0 \amp 0 \\ \frac{1}{2} \amp 0 \amp -\frac{1}{2} \end{bmatrix}\right\|</mrow>
+              <mrow> \amp = \left\|\begin{bmatrix} \frac{1}{2} \amp 0 \amp \frac{1}{2} \\ 0 \amp 1 \amp 0 \\ \frac{1}{2} \amp 0 \amp \frac{1}{2}\end{bmatrix}\right\|</mrow>
+              <mrow> \amp = \sqrt{\left(\frac{1}{2}\right)^2 + 0^2 + \left(\frac{1}{2}\right)^2 + 0^2 + 1^2 + 0^2 + \left(\frac{1}{2}\right)^2 + 0^2 + \left(\frac{1}{2}\right)^2} </mrow>
+              <mrow> \amp = \sqrt{2}</mrow>
+            </md>.
+          </p>
+          <p>
+            Adding any two of the three terms would lead to a best rank 2 approximation of <m>A</m>. Note that the sum of the last two terms of our Spectral Decomposition yields the matrix<md>\lambda_2\vec v_2\vec v_2^T + \lambda_3\vec v_3\vec v_3^T = \begin{bmatrix} 0 \amp 0 \amp 1 \\ 0 \amp 0 \amp 0 \\ 1 \amp 0 \amp 0 \end{bmatrix}</md>, which is <m>1</m> away from <m>A</m> according to the metric described above.
+          </p>
+        </solution>
+    </example>
+  </page>
+
+</handout>

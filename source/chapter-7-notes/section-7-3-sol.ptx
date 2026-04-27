@@ -1,0 +1,244 @@
+<handout xml:id="handout-section-7-3-constrained-optimization">
+  <title>7.3 Constrained Optimization</title>
+
+  <page xml:id="p-7-3-overview">
+    <title>Overview</title>
+
+    <objectives xml:id="obj-7-3-topics-goals">
+      <title>Topics</title>
+      <ul>
+        <li>Constrained optimization as an eigenvalue problem</li>
+        <li>Distance and orthogonality constraints</li>
+      </ul>
+    </objectives>
+
+    <objectives>
+      <title>Goals</title>
+      <ul>
+        <li>
+          Apply eigenvalues and eigenvectors to solve optimization problems
+          subject to distance and orthogonality constraints.
+        </li>
+      </ul>
+    </objectives>
+
+    <p><nbsp/></p>
+
+
+    <example xml:id="ex-7-3-unit-sphere" workspace="true">
+      <statement workspace="true">
+        <p>
+          Consider the quadratic form <me>Q(\vec x)=9x_1^2 + 4x_2^2 + 3x_3^2</me>. Find the <em>largest</em> and <em>smallest</em> values of <m>Q(\vec x)</m> under the constraint that <m>\|\vec x\| = 1</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+            Consider the following outputs of <m>Q(\vec x)</m> under some typical unit vectors:
+            <md>
+                <mrow>Q(\pm 1,0,0) \amp = 9(\pm 1)^2 + 4(0)^2 + 3(0)^2 = 9</mrow>
+                <mrow>Q(0, \pm 1, 0) \amp = 9(0)^2 + 4(\pm 1)^2 + 3(0)^2 = 4</mrow>
+                <mrow>Q(0, 0, \pm 1) \amp = 9(0)^2 + 4(0)^2 + 3(\pm 1)^2 = 3</mrow>
+                <mrow>Q\left(\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}, 0\right) \amp = 9\left(\frac{1}{\sqrt{2}}\right)^2 + 4\left(\frac{1}{\sqrt{2}}\right)^2 + 3(0)^2 = \frac{9 + 4}{2} = \frac{13}{2}</mrow>
+                <mrow>Q\left(\frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}}\right) \amp = 9\left(\frac{1}{\sqrt{3}}\right)^2 + 4\left(\frac{1}{\sqrt{3}}\right)^2 + 3\left(\frac{1}{\sqrt{3}}\right)^2 = \frac{9 + 4 + 3}{3} = \frac{16}{3}</mrow>
+            </md>
+            These calculations show that each unit vector input is giving a particular weighted average of the coefficients <m>9, 4,</m> and <m>3</m>. Thus, the highest weighted average we could get is to put all the weight on 9 (the first calculation we did). Similarly, the smallest weighted average we could get is to put all the weight on 3 (the third calculation we did). Therefore, the maximum of <m>Q(\vec x)</m> under the unit vector input constraing is <m>9</m>, and the minimum of <m>Q(\vec x)</m> under the constraint is 3.
+        </p>
+        <p>
+            Note this example is not hard since <m>Q(\vec x)</m> does not have any cross-product terms. If it did, then we would use <xref ref="thm-principal-axes"/> to instead analyze an equivalent quadratic form without cross-product terms.
+        </p>
+      </solution>
+    </example>
+
+    <image source="./sphere73.png" xml:id="img-7-3-sphere" width="50%">
+        <shortdescription>A coloring of the unit sphere which represents the values of Q from the previous example, where blue means low values and red means high values.</shortdescription>
+    </image>
+
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-7-3-constrained-problem">
+    <title>A Constrained Optimization Problem</title>
+
+    <p>
+      Suppose we wish to find the maximum and minimum values of
+    </p>
+    <me>
+      Q(\vec x)=\vec x^{\,T}A\vec x
+    </me>
+    <p>
+      subject to the constraint <m>\|\vec x\|=1</m>.
+    </p>
+
+    <p>
+      That is, we want
+    </p>
+    <me>
+      m=\min\{Q(\vec x)\mid \|\vec x\|=1\},\qquad
+      M=\max\{Q(\vec x)\mid \|\vec x\|=1\}.
+    </me>
+
+    <p>
+      This is an example of a <term>constrained optimization</term> problem.
+      We are also interested in where these extreme values are attained.
+    </p>
+    <p>
+        These problems are straight-forward when <m>Q(\vec x)</m> has no cross-product terms. What about when it does have cross-product terms?
+    </p>
+
+    <example xml:id="ex-7-3-example2" workspace="true">
+      <statement>
+        <p>
+          Calculate the maximum and minimum values of
+        </p>
+        <me>
+          Q(\vec x)=x_2^2 + 2x_1x_3.
+        </me>
+        <p>
+          where <m>\vec x\in\mathbb{R}^3</m> and <m>\|\vec x\|=1</m>.
+          Identify the points where these values are obtained.
+        </p>
+      </statement>
+      <solution>
+        <p>
+            Since <m>Q(\vec x)</m> has cross-product terms, we will make the change of variables <m>\vec x = P\vec y</m> to get an equivalent quadratic form without cross-product terms. Note that the unit vector constraint is preserved and stil imposed on <m>\vec y</m> since <md>1 = \|\vec x\| = \|P\vec y\| = \|\vec y\|</md> since <m>P</m> is orthogonal matrix and <xref ref="thm-orthogonal-maps"/> tells us that multiplication preserves lengths.
+        </p>
+        <p>
+            We have that the symmetric matrix <m>A</m> so that <m>Q_A(\vec x) = x_2^2 + 2x_1x_3</m> is <md>A = \begin{bmatrix} 0 \amp 0 \amp 1 \\ 0 \amp 1 \amp 0 \\ 1 \amp 0 \amp 0 \end{bmatrix}</md>. In <xref ref="ex-7-1-orth-diag"/>, we saw that the eigenvalues are <m>\lambda_1 = 1</m>, <m>\lambda_2 = 1</m>, and <m>\lambda_3 = -1</m> with accompanying unit eigenvectors <md>\vec v_1 = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}, \quad \vec v_2 = \dfrac{1}{\sqrt{2}}\begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix}, \quad \text{and} \quad \vec v_3 = \frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix}</md>. Therefore, setting <m>P = \begin{bmatrix} \vec v_1 \amp \vec v_2 \amp \vec v_3 \end{bmatrix}</m> and making the change of variables <m>\vec x = P\vec y</m>, we deduce <md>Q_A(\vec x) = Q_D(\vec y) = y_1^2 + y_2^2 - y_3^2</md>. Thus, the maximum value of <m>Q(\vec x) = x_2^2 + 2x_1x_3</m> under the constraint that the input is a unit vector is 1, and the minimum is -1. These maximum and minimum values occur at eigenvectors corresponding to the given eigenvalue. For example, note that <md>
+                <mrow>Q_A(\vec v_1) \amp = (1)^2 + 2(0)(0) = 1</mrow> 
+                <mrow>Q_A(\vec v_2) \amp = 0^2 + 2\left(\frac{1}{\sqrt{2}}\right)\left(\frac{1}{\sqrt{2}}\right) = 2\left(\frac{1}{2}\right) = 1</mrow> 
+                <mrow>Q_A(\vec v_3) \amp = 0^2 + 2\left(\frac{1}{\sqrt{2}}\right)\left(-\frac{1}{\sqrt{2}}\right) = 2\left(-\frac{1}{2}\right) = -1 </mrow>
+                </md>
+        </p>
+      </solution>
+    </example>
+</page>
+
+<page>
+
+    <p>
+      The image below is the unit sphere whose surface is colored according to the quadratic form from <xref ref="ex-7-3-example2"/>. Notice the agreement between our solution and the image.
+    </p>
+
+    <image source="./sphere73example2.png" xml:id="img-7-3-sphere2" width="50%" >
+        <shortdescription>A coloring of the unit sphere which represents the values of Q from the previous example, where blue means low values and red means high values.</shortdescription>
+    </image>
+
+
+
+    <p><nbsp/></p>
+
+    <title>Constrained Optimization and Eigenvalues</title>
+
+    <theorem xml:id="thm-constrained-eigs">
+      <title>Extrema via Eigenvalues</title>
+      <statement>
+        <p>
+          Let <m>Q(\vec x)=\vec x^{\,T}A\vec x</m>, where <m>A</m> is a real symmetric
+          <m>n\times n</m> matrix with eigenvalues
+        </p>
+        <me>
+          \lambda_1 \ge \lambda_2 \ge \cdots \ge \lambda_n
+        </me>
+        <p>
+          and corresponding <em>normalized</em> eigenvectors
+        </p>
+        <me>
+          \vec u_1,\vec u_2,\ldots,\vec u_n.
+        </me>
+        <p>
+          Under the constraint <m>\|\vec x\|=1</m>:
+        </p>
+        <ul>
+          <li>
+            The <em>maximum</em> value of <m>Q</m> is <m>\lambda_1</m>,
+            attained at <m>\vec x=\pm\vec u_1</m>.
+          </li>
+          <li>
+            The <em>minimum</em> value of <m>Q</m> is <m>\lambda_n</m>,
+            attained at <m>\vec x=\pm\vec u_n</m>.
+          </li>
+        </ul>
+      </statement>
+    </theorem>
+
+    <example xml:id="ex-7-3-example4" workspace="true">
+      <statement>
+        <p>
+          Calculate the maximum value of <m>Q(\vec x)=\vec x^{\,T}A\vec x</m>,
+          with <m>\vec x\in\mathbb{R}^3</m>, subject to the constraint
+          <m>\|\vec x\|=5</m>.
+          Identify a point where this maximum is obtained.
+        </p>
+        <me>
+          Q(\vec x)=x_2^2 + 2x_1x_3.
+        </me>
+      </statement>
+      <solution>
+        <p>
+            Note that if <m>\|\vec x\| = 5</m>, then <md>\vec x = 5\vec u = \begin{bmatrix} 5u_1 \\ 5u_2 \\ 5u_3 \end{bmatrix}</md> for some unit vector <m>\vec u</m>. It follows that <md>Q(\vec x) = Q(5\vec u) = (5u_2)^2 + 2(5u_1)(5u_3) = 25u_2 + 25(2u_1u_3) = 25Q(\vec u)</md>. Therefore, we have that the maximum of <m>Q(\vec x)</m> under the constraint that <m>\|\vec x\| = 5</m> is 25 times the maximum of <m>Q(\vec x)</m> under the constraint that <m>\|\vec x \| = 1</m>, and the maximum is stil obtained at the appropriate eigenvector. Therefore, the maximum is 25 and is obtained at any length 5 vector in the <m>1</m>-eigenspace<m>(A)</m>, and the minimum is -25 and is obtained at any length 5 vector in the <m>-1</m>-eigenspace<m>(A)</m>.
+        </p>
+      </solution>
+    </example>
+
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-7-3-orth-constraint">
+    <title>An Orthogonality Constraint</title>
+
+    <theorem xml:id="thm-orth-constraint" workspace="0.3in">
+      <title>Extrema with an Orthogonality Condition</title>
+      <statement>
+        <p>
+          Let <m>Q(\vec x)=\vec x^{\,T}A\vec x</m>, where <m>A</m> is a real symmetric
+          <m>n\times n</m> matrix with eigenvalues
+        </p>
+        <me>
+          \lambda_1 \ge \lambda_2 \ge \cdots \ge \lambda_n
+        </me>
+        <p>
+          and corresponding eigenvectors
+        </p>
+        <me>
+          \vec u_1,\vec u_2,\ldots,\vec u_n.
+        </me>
+        <p>
+          Subject to the constraints
+          <m>\|\vec x\|=1</m> and <m>\vec x\cdot\vec u_1=0</m>:
+        </p>
+        <ul>
+          <li>
+            The <em>maximum</em> value of <m>Q</m> is <m>\lambda_2</m>,
+            attained at an eigenvector associated to <m>\lambda_2</m>.
+          </li>
+          <li>
+            The <em>minimum</em> value of <m>Q</m> is <m>\lambda_n</m>,
+            attained at <m>\vec u_n</m>.
+          </li>
+        </ul>
+        <p>
+          Here <m>\lambda_2</m> denotes the <em>second largest</em> eigenvalue of <m>A</m>.
+        </p>
+      </statement>
+    </theorem>
+
+
+    <example xml:id="ex-7-3-example3" workspace="true">
+      <statement>
+        <p>
+          Calculate the maximum and minimum values of <me>Q(\vec x)=\vec x^T A \vec x = x_1^2 + x_2^2 + x_3^2 + 6x_1x_2</me>,
+          with <m>\vec x\in\mathbb{R}^3</m>, subject to
+          <m>\|\vec x\|=1</m> and <m>\vec x\cdot\vec u_1=0</m>, where <me>A = \begin{bmatrix} 1 \amp 3 \amp 0 \\ 3 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{bmatrix} \quad \text{and} \quad \vec u_1=\begin{bmatrix}1\\1\\0\end{bmatrix}</me>. Identifu points where the maximum and minimum values occur. The eigenvalues of <m>A</m> are <m>\lambda = 4, 1, -2</m>.
+          </p>
+      </statement>
+      <solution>
+        <p>
+            Since <m>\vec u_1</m> is an eigenvector corresponding to <m>\lambda_1 = 4</m>, the maximum of <m>Q(\vec x)</m> under the constraint that <m>\|\vec x\| = 1</m> and <m>\vec x \cdot \vec u_1 = 0</m> is the second largest eigenvalues <m>\lambda_2 = 1</m>. To find a vector that gives this new maximum, we find a unit eigenvector corresponding to <m>\lambda_2 = 1</m>. Note that <md>A - I = \begin{bmatrix} 0 \amp 3 \amp 0 \\ 3 \amp 0 \amp 0 \\ 0 \amp 0 \amp 0 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 0 \end{bmatrix}</md>. Thus, <m>\vec u_2 = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}</m> is a unit eigenvector corresponding to <m>\lambda_2 = 1</m>. Note that this vector is also orthogonal to <m>\vec u_1</m> which is guaranteed by <xref ref="thm-orth-eigenspaces"/>. It follows that <md>Q(\vec u_2) = 0^2 + 0^2 + 1^2 + 6(0)(0) = 1</md>. 
+        </p>
+      </solution>
+    </example>
+  </page>
+
+</handout>

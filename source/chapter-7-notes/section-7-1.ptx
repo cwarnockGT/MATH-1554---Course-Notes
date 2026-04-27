@@ -139,7 +139,7 @@
           <li>The dimension of each eigenspace equals its algebraic multiplicity.</li>
           <li>Eigenspaces corresponding to distinct eigenvalues are orthogonal.</li>
           <li>
-            <m>A</m> can be orthogonally diagonalized as
+            <m>A</m> can be <term>orthogonally diagonalized</term> as
             <m>A=PDP^T</m>, where <m>P</m> is orthogonal.
           </li>
         </ol>

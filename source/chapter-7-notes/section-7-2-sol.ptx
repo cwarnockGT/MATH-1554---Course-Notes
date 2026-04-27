@@ -1,0 +1,306 @@
+<handout xml:id="handout-section-7-2-quadratic-forms">
+  <title>7.2 Quadratic Forms</title>
+
+  <page xml:id="p-7-2-overview">
+    <title>Overview</title>
+
+    <objectives xml:id="obj-7-2-topics-goals">
+      <title>Topics</title>
+      <ul>
+        <li>Quadratic forms</li>
+        <li>Change of variables</li>
+        <li>Principal axes theorem</li>
+        <li>Classification of quadratic forms</li>
+      </ul>
+      </objectives>
+
+      <objectives>
+      <title>Goals</title>
+      <ul>
+        <li>Characterize and classify quadratic forms using eigenvalues and eigenvectors.</li>
+        <li>Express quadratic forms in the form <m>Q(\vec x)=\vec x^{T}A\vec x</m>.</li>
+        <li>Apply the principal axes theorem to remove cross-product terms.</li>
+      </ul>
+      </objectives>
+
+      <p><em>Motivating Question</em></p>
+      <p>
+        Does the inequality below hold for all <m>x,y</m>?
+      <me>
+        x_1^2-6x_1x_2+9x_2^2 \geq 0.
+      </me>
+      </p>
+
+      <p><nbsp/></p>
+
+
+    <definition xml:id="def-quadratic-form" workspace="true">
+      <title>Quadratic Form</title>
+      <statement>
+        <p>
+          A <term>quadratic form</term> is a function
+          <m>Q:\mathbb{R}^n\to\mathbb{R}</m> defined by
+        </p>
+        <me>
+          Q(\vec x)=\vec x^{T}A\vec x = \begin{bmatrix} x_1 \amp x_2 \amp \cdots \amp x_n \end{bmatrix} \begin{bmatrix} a_{1,1} \amp a_{1,2} \amp  \cdots \amp a_{1,n} \\ a_{1,2} \amp a_{2,2} \amp \cdots \amp a_{2,n} \\ \vdots \amp \vdots \amp \ddots \amp \vdots \\ a_{1,n} \amp a_{2,n} \amp  \cdots \amp a_{n,n} \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix},
+        </me>
+        <p>
+          where <m>A</m> is an <m>n\times n</m> <em>symmetric</em> matrix.
+        </p>
+      </statement>
+    </definition>
+  </page>
+
+
+  <page xml:id="p-7-2-example1">
+    <title>Example 1</title>
+
+    <example xml:id="ex-7-2-qf-compute">
+      <introduction>
+        <p>Compute <m>Q_A(\vec x) = \vec x^{T}A\vec x</m> and <m>Q_B(\vec x) = \vec x^{T}B\vec x</m> for the following matrices.</p>
+      </introduction>
+      <task workspace="1.5in">
+        <statement>
+            <p>
+                <m>A=\begin{bmatrix}4 \amp 0\\ 0 \amp 3\end{bmatrix}</m>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Note that <md>
+                    <mrow>Q_A(\vec x) \amp = \begin{bmatrix} x_1 \amp x_2 \end{bmatrix}\begin{bmatrix} 4 \amp 0 \\ 0 \amp 3 \end{bmatrix}\begin{bmatrix} x_1 \\ x_2 \end{bmatrix}</mrow>
+                    <mrow> \amp = \begin{bmatrix} x_1 \amp x_2 \end{bmatrix}\begin{bmatrix} 4x_1 \\ 3x_2 \end{bmatrix}</mrow>
+                    <mrow> \amp = x_1(4x_1) + x_2(3x_2)</mrow>
+                    <mrow> \amp = 4x_1^2 + 3x_2^2</mrow>
+                </md>
+            </p>
+        </solution>
+      </task>
+      <task workspace="1.5in">
+        <statement>
+            <p>
+                <m>B=\begin{bmatrix}4 \amp 1\\ 1 \amp -3\end{bmatrix}</m>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                <md>
+                    <mrow>Q_B(\vec x) \amp = \begin{bmatrix} x_1 \amp x_2 \end{bmatrix}\begin{bmatrix} 4 \amp 1 \\ 1 \amp -3 \end{bmatrix}\begin{bmatrix} x_1 \\ x_2 \end{bmatrix}</mrow>
+                    <mrow> \amp = \begin{bmatrix} x_1 \amp x_2 \end{bmatrix}\begin{bmatrix} 4x_1 + x_2 \\ x_1 - 3x_2 \end{bmatrix}</mrow>
+                    <mrow> \amp = x_1(4x_1 + x_2) + x_2(x_1 - 3x_2)</mrow>
+                    <mrow> \amp = 4x_1^2 + x_1x_2 + x_1x_2 - 3x_2^2</mrow>
+                    <mrow> \amp = 4x_1^2 + 2x_1x_2 - 3x_2^2</mrow>
+                </md>
+            </p>
+        </solution>
+        </task>
+    </example>
+
+
+    <p>
+      The graphs of the quadratic forms from <xref ref="ex-7-2-qf-compute"/> are given below. Students are not expected to sketch quadratic surfaces.
+    </p>
+    <image width="80%">
+        <shortdescription>Graphs of the two quadratic curves Q_A and Q_B.</shortdescription>
+        <latex-image>
+            \begin{tikzpicture}[scale=0.55]
+    \begin{axis} [xlabel = $x_1$,ylabel=$x_2$,ymajorgrids,xmajorgrids] 
+        \addplot3 [surf,shader=flat,draw=black] {4*x^2 + 3*y^2};
+        \end{axis}
+    \end{tikzpicture}
+    \qquad 
+    \begin{tikzpicture}[scale=0.55]
+    \begin{axis} [xlabel = $x_1$,ylabel=$x_2$,ymajorgrids,xmajorgrids] 
+        \addplot3 [surf,shader=flat,draw=black] {4*x^2 + 2*x*y - 3*y^2};
+        \end{axis}
+    \end{tikzpicture}
+        </latex-image>
+    </image>
+
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-7-2-example2">
+    <title>Example 2</title>
+
+    <p>
+        As we will see shortly, properties of the symmetric matrix <m>A</m> used to generate the quadratic form <m>Q_A(\vec x)</m> will allow us to determine characterisitcs about the quadratic form, such as whether it is always nonnegative. Therefore, if first presented with the quadratic form, it is useful to find the symmetric matrix <m>A</m> which generates the quadratic form.
+    </p>
+
+    <example xml:id="ex-7-2-matrix-from-qf" workspace="2in">
+      <statement>
+        <p>
+          Write the quadratic form below in the form <m>\vec x^{T}A\vec x</m>
+          for <m>\vec x\in\mathbb{R}^3</m>.
+        </p>
+        <me>
+          Q(\vec x)=5x_1^2+x_2^2+3x_3^2+6x_1x_3-12x_2x_3.
+        </me>
+      </statement>
+      <solution>
+        <p>
+            We have that <md>
+                A = \begin{bmatrix} 5 \amp 0 \amp 3 \\ 0 \amp 1 \amp -6 \\ 3 \amp -6 \amp 3 \end{bmatrix}
+            </md>
+            satisfies <m>Q(\vec x) = \vec x^T A\vec x</m>.
+        </p>
+      </solution>
+    </example>
+
+    <p><nbsp/></p>
+
+
+    <p>
+      Note in the above example it is difficult to determine whether <m>Q(\vec x)</m> is always nonnegative. This is due to the cross-product terms, terms of the form <m>x_ix_j</m>, since these terms could be positive or negative depending on the input.
+    </p>
+    <p>
+        To help us better determine properties of <m>Q(\vec x)</m>, we would like to perform a <em>change of variables</em> to obtain an equivalent quadratic form <m>Q(\vec y)</m> which no longer has any cross-product terms. Recall that we can find a symmetric matrix <m>A</m> so that <m>Q(\vec x) = \vec x^T A \vec x</m>. Since <m>A</m> is symmetric, we know by <xref ref="thm-spectral"/> that <m>A = PDP^T</m> for a diagonal matrix <m>D</m> and orthogonal matrix <m>P</m>.
+    </p>
+    <p workspace="4in">
+        What happens when we make the change of variables <m>\vec x = P\vec y</m>?
+    </p>
+    <solution>
+        <p>
+            Let <m>A</m> be the symmetric matrix which satisfies <m>Q_A(\vec x) = \vec x^T A\vec x</m>. Since <m>A</m> is symmetric, we can orthogonally diagonalize it as <m>A = PDP^T</m> where <m>P</m> is an orthogonal matrix. Let <m>\vec x = P\vec y</m>. Multiplying both sides by <m>P^T</m> yields <md>P^T\vec x = P^TP\vec y = I\vec y = \vec y</md>, where we used <xref ref="thm-orthonormal-columns"/>. Thus, using <m>\vec y = P^T\vec x</m> yields <md>
+                <mrow>Q_A(\vec x) \amp = \vec x^T A \vec x</mrow>
+                <mrow> \amp = \vec x^T PDP^T \vec x</mrow> 
+                <mrow> \amp = (P^T\vec x)^T D (P^T \vec x)</mrow>
+                <mrow> \amp = \vec y^T D \vec y </mrow>
+                <mrow> \amp = Q_D(\vec y)</mrow>
+            </md>.
+            Since <m>D</m> is a diagonal matrix with the eigenvalues of <m>A</m> on the diagonal, we have that <md>Q_D(\vec y) = \lambda_1y_1^2 + \lambda_2 y_2^2 + \cdots + \lambda_n y_n^2</md>. 
+        </p>
+    </solution>
+
+  </page>
+
+
+  <page xml:id="p-7-2-example3">
+    <title>Example 3: Removing Cross Terms</title>
+
+    <theorem xml:id="thm-principal-axes" workspace="0.2in">
+      <title>Principal Axes Theorem</title>
+      <statement>
+        <p>
+          If <m>A</m> is symmetric, then there exists an orthogonal change of variables
+          <m>\vec x=P\vec y</m> such that the quadratic form <m>\vec x^{T}A\vec x</m> becomes <m>\vec y^{T}D\vec y</m>, with no cross-product terms.
+        </p>
+      </statement>
+    </theorem>
+
+    <example xml:id="ex-7-2-change-vars" workspace="true">
+      <statement>
+        <p>
+          Use the orthogonal diagonalization of <m>A</m> to remove cross-product terms from
+          <m>Q=\vec x^{T}A\vec x</m>.
+        </p>
+        <me>
+          A=\begin{bmatrix}3 \amp 2\\ 2 \amp 6\end{bmatrix}
+          =PDP^{T} = \frac{1}{\sqrt5}\begin{bmatrix}2 \amp 1\\ -1 \amp 2\end{bmatrix}\begin{bmatrix}2 \amp 0\\ 0 \amp 7\end{bmatrix}\frac{1}{\sqrt5}\begin{bmatrix}2 \amp -1\\ 1 \amp 2\end{bmatrix}
+        </me>
+      </statement>
+      <solution>
+        <p>
+            Note that <md>Q_A(\vec x) = 3x_1^2 + 4x_1x_2 + 6x_2^2</md>. Let <m>P = \dfrac{1}{\sqrt{5}}\begin{bmatrix} 2 \amp -1 \\ -1 \amp 2 \end{bmatrix}</m>. Then, we will make the change of variables <md>
+                \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \vec x = P\vec y = \begin{bmatrix} \frac{2}{\sqrt{5}}\vec y_1 + \frac{1}{\sqrt{5}}y_2 \\ -\frac{1}{\sqrt{5}}y_1 + \frac{2}{\sqrt{5}}y_2 \end{bmatrix}
+            </md>.
+            Under this change of variables, note the following:
+            <md>
+                <mrow>Q_A(x_1, x_2) \amp = Q_A\left(\frac{2}{\sqrt{5}}y_1 + \frac{1}{\sqrt{5}}y_2, -\frac{1}{\sqrt{5}}y_1 + \frac{2}{\sqrt{5}}y_2\right) </mrow>
+                <mrow> \amp = 3\left(\frac{2}{\sqrt{5}}y_1 + \frac{1}{\sqrt{5}}y_2\right)^2 + 4\left(\frac{2}{\sqrt{5}}y_1 + \frac{1}{\sqrt{5}}y_2\right)\left(-\frac{1}{\sqrt{5}}y_1 + \frac{2}{\sqrt{5}}y_2\right) + 6\left(-\frac{1}{\sqrt{5}}y_1 + \frac{2}{\sqrt{5}}y_2\right)^2</mrow>
+                <mrow> \amp = \frac{3}{5}(2y_1 + y_2)^2 + \frac{4}{5}(2y_1 + y_2)(-y_1 + 2y_2) + \frac{6}{5}(-y_1+2y_2)^2</mrow>
+                <mrow> \amp = \frac{3}{5}(4y_1^2 + 4y_1y_2 + y_2^2) + \frac{4}{5}(-2y_1^2+3y_1y_2 + 2y_2^2) + \frac{6}{5}(y_1^2 - 4y_1y_2 + 4y_2^2)</mrow>
+                <mrow> \amp = \left(\frac{12}{5} - \frac{8}{5} + \frac{6}{5}\right)y_1^2 + \left(\frac{12}{5} + \frac{12}{5} - \frac{24}{5}\right)y_1y_2 + \left(\frac{3}{5} + \frac{8}{5} + \frac{24}{5}\right)y_2^2</mrow>
+                <mrow> \amp = 2y_1^2 + 7y_2^2</mrow>
+                <mrow> \amp = Q_D(y_1, y_2)</mrow>
+            </md>.
+            Therefore, we see that making the appropriate change of variables yields a quadratic from without any cross-product terms.
+        </p>
+      </solution>
+    </example>
+  </page>
+
+
+  <page xml:id="p-7-2-classification">
+    <title>Classifying Quadratic Forms</title>
+
+    <definition xml:id="def-classification" workspace="true">
+      <title>Definiteness</title>
+      <statement>
+        <p>A quadratic form <m>Q</m> is:</p>
+        <ol>
+          <li><term>Positive definite</term> if <m>Q(\vec x)&gt;0</m> for all <m>\vec x\neq\vec 0</m>.</li>
+          <li><term>Negative definite</term> if <m>Q(\vec x)&lt;0</m> for all <m>\vec x\neq\vec 0</m>.</li>
+          <li><term>Positive semidefinite</term> if <m>Q(\vec x)\ge0</m> for all <m>\vec x</m>.</li>
+          <li><term>Negative semidefinite</term> if <m>Q(\vec x)\le0</m> for all <m>\vec x</m>.</li>
+          <li><term>Indefinite</term> if <m>Q(\vec x)</m> takes both positive and negative values.</li>
+        </ol>
+      </statement>
+    </definition>
+
+    <p><nbsp/></p>
+
+    <theorem xml:id="thm-qf-eigs" workspace="true">
+      <title>Eigenvalue Classification</title>
+      <statement>
+        <p>
+          If <m>A</m> is symmetric with eigenvalues <m>\lambda_i</m>, then:
+        </p>
+        <ol>
+          <li><m>Q</m> is <em>positive definite</em> iff <m>\underline{\hspace{3in}}</m>.
+        <solution>
+            <p>
+                <m>\lambda_i &gt; 0 </m> for all <m>i</m>.
+            </p>
+        </solution></li>
+          <li><m>Q</m> is <em>negative definite</em> iff <m>\underline{\hspace{3in}}</m>.
+        <solution>
+            <p>
+                <m>\lambda_i &lt; 0 </m> for all <m>i</m>.
+            </p>
+        </solution></li>
+        <li><m>Q</m> is <em>positive semidefinite</em> iff <m>\underline{\hspace{3in}}</m>.
+        <solution>
+            <p>
+                <m>\lambda_i \geq 0 </m> for all <m>i</m>.
+            </p>
+        </solution></li>
+          <li><m>Q</m> is <em>negative semidefinite</em> iff <m>\underline{\hspace{3in}}</m>.
+        <solution>
+            <p>
+                <m>\lambda_i \leq 0 </m> for all <m>i</m>.
+            </p>
+        </solution></li>
+          <li><m>Q</m> is <em>indefinite</em> iff <m>\underline{\hspace{3in}}</m>.
+        <solution>
+            <p>
+                <m>\lambda_i &gt; 0 </m> for some <m>i</m> and <m>\lambda_j &lt; 0</m> for some <m>j</m>.
+            </p>
+        </solution></li>
+        </ol>
+      </statement>
+    </theorem>
+    <p><nbsp/></p>
+  </page>
+
+
+  <page xml:id="p-7-2-example5">
+
+    <example xml:id="ex-7-2-motivation" workspace="true">
+      <statement>
+        <p>Determine whether the inequality holds for all <m>x,y</m>:
+        <md>
+          x_1^2-6x_1x_2+9x_2^2 \geq 0.
+        </md>
+    </p>
+      </statement>
+      <solution>
+        <p>
+            Note that the symmetric matrix for which <m>Q_A(\vec x) = x_1^2 - 6x_1x_2 + 9x_2^2</m> is <md>A = \begin{bmatrix} 1 \amp -3 \\ -3 \amp 9 \end{bmatrix}</md>. We have that <md>\det(A - \lambda I) = (1-\lambda)(9-\lambda) - 9 = \lambda^2 - 10\lambda = \lambda(\lambda - 10)</md>. Thus, the eigenvalues of <m>A</m> are <m>\lambda = 10, 0</m>. It follows that under the suitable change of variables <md>Q_A(\vec x) = Q_D(\vec y) = 10y_1^2 + 0y_2^2 = 10y_1^2 \geq 0</md> for all inputs <m>\vec y</m>. It follows that <m>Q_A(\vec x) \geq 0</m> for all inputs <m>\vec x</m>. Thus, <md>x_1^2-6x_1x_2+9x_2^2</md> is a <em>positive semidefinite</em> quadratic form.
+        </p>
+      </solution>
+    </example>
+  </page>
+
+</handout>
