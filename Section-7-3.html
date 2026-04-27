@@ -330,7 +330,10 @@ eBookConfig.enable_chatcodes =  false;
         </label><label><input type="radio" name="papersize" value="letter">Letter
         </label>
 </form>
-<details class="print-options"><summary>Additional printing options</summary><div class="header-footer-options">
+<details class="print-options"><summary>Additional printing options</summary><div class="hide-solutions-options"><div class="hide-option">
+<label for="hide-solution-checkbox">Hide solutions</label><input type="checkbox" id="hide-solution-checkbox">
+</div></div>
+<div class="header-footer-options">
 <div class="header-option">
 <span class="title">Print headers</span><label>First page<input type="checkbox" id="print-first-page-header-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-header-checkbox" checked></label>
 </div>
@@ -387,12 +390,32 @@ Q(\vec x)=9x_1^2 + 4x_2^2 + 3x_3^2\text{.}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-7-3-unit-sphere-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="ex-7-3-unit-sphere-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-7-3-unit-sphere-2-1">
+<div class="para">Consider the following outputs of <span class="process-math">\(Q(\vec x)\)</span> under some typical unit vectors:</div>
+<div class="displaymath process-math" id="ex-7-3-unit-sphere-2-1-2">
+\begin{align*}
+Q(\pm 1,0,0) \amp = 9(\pm 1)^2 + 4(0)^2 + 3(0)^2 = 9\\
+Q(0, \pm 1, 0) \amp = 9(0)^2 + 4(\pm 1)^2 + 3(0)^2 = 4\\
+Q(0, 0, \pm 1) \amp = 9(0)^2 + 4(0)^2 + 3(\pm 1)^2 = 3\\
+Q\left(\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}, 0\right) \amp = 9\left(\frac{1}{\sqrt{2}}\right)^2 + 4\left(\frac{1}{\sqrt{2}}\right)^2 + 3(0)^2 = \frac{9 + 4}{2} = \frac{13}{2}\\
+Q\left(\frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}}\right) \amp = 9\left(\frac{1}{\sqrt{3}}\right)^2 + 4\left(\frac{1}{\sqrt{3}}\right)^2 + 3\left(\frac{1}{\sqrt{3}}\right)^2 = \frac{16}{3}
+\end{align*}
+</div>
+<div class="para">These calculations show that each unit vector input is giving a particular weighted average of the coefficients <span class="process-math">\(9, 4,\)</span> and <span class="process-math">\(3\text{.}\)</span> Thus, the highest weighted average we could get is to put all the weight on <span class="process-math">\(9\)</span> (the first calculation we did). Similarly, the smallest weighted average we could get is to put all the weight on <span class="process-math">\(3\)</span> (the third calculation we did). Therefore, the maximum of <span class="process-math">\(Q(\vec x)\)</span> under the unit vector input constraing is <span class="process-math">\(9\text{,}\)</span> and the minimum of <span class="process-math">\(Q(\vec x)\)</span> under the constraint is <span class="process-math">\(3\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-3-unit-sphere-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-7-3-unit-sphere-2-2">Note this example is not hard since <span class="process-math">\(Q(\vec x)\)</span> does not have any cross-product terms. If it did, then we would use <a href="Section-7-2.html#thm-principal-axes" class="xref" data-knowl="./knowl/xref/thm-principal-axes.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 7.26: Principal Axes Theorem">Theorem 7.26</a> to instead analyze an equivalent quadratic form without cross-product terms.<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-3-unit-sphere-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.31.1"><a href="#ex-7-3-unit-sphere-2" title="Copy heading and permalink for Solution 7.31.1" aria-label="Copy heading and permalink for Solution 7.31.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Example 7.31"><a href="#ex-7-3-unit-sphere" title="Copy heading and permalink for Example 7.31" aria-label="Copy heading and permalink for Example 7.31">🔗</a></div></article><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/./sphere73.png" class="contained" alt="A coloring of the unit sphere which represents the values of Q from the previous example, where blue means low values and red means high values."></div>
 <div class="para" id="p-7-3-overview-7"> <div class="autopermalink" data-description="Paragraph"><a href="#p-7-3-overview-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><section class="onepage" id="p-7-3-constrained-problem"><div class="para" id="p-7-3-constrained-problem-2">Suppose we wish to find the maximum and minimum values of<div class="autopermalink" data-description="Paragraph"><a href="#p-7-3-constrained-problem-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="p-7-3-constrained-problem-3">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-orthogonal-maps.html ./knowl/xref/ex-7-1-orth-diag.html" id="p-7-3-constrained-problem-3">
 \begin{equation*}
 Q(\vec x)=\vec x^{\,T}A\vec x
 \end{equation*}
@@ -401,7 +424,7 @@ Q(\vec x)=\vec x^{\,T}A\vec x
 </div>
 <div class="para" id="p-7-3-constrained-problem-5">That is, we want<div class="autopermalink" data-description="Paragraph"><a href="#p-7-3-constrained-problem-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="p-7-3-constrained-problem-6">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-orthogonal-maps.html ./knowl/xref/ex-7-1-orth-diag.html" id="p-7-3-constrained-problem-6">
 \begin{equation*}
 m=\min\{Q(\vec x)\mid \|\vec x\|=1\},\qquad
 M=\max\{Q(\vec x)\mid \|\vec x\|=1\}.
@@ -423,6 +446,48 @@ Q(\vec x)=x_2^2 + 2x_1x_3.
 </div>
 <div class="para" id="ex-7-3-example2-1-3">where <span class="process-math">\(\vec x\in\mathbb{R}^3\)</span> and <span class="process-math">\(\|\vec x\|=1\text{.}\)</span> Identify the points where these values are obtained.<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-3-example2-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="ex-7-3-example2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-7-3-example2-2-1">
+<div class="para">Since <span class="process-math">\(Q(\vec x)\)</span> has cross-product terms, we will make the change of variables <span class="process-math">\(\vec x = P\vec y\)</span> to get an equivalent quadratic form without cross-product terms. Note that the unit vector constraint is preserved and stil imposed on <span class="process-math">\(\vec y\)</span> since</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-orthogonal-maps.html" id="ex-7-3-example2-2-1-4">
+\begin{equation*}
+1 = \|\vec x\| = \|P\vec y\| = \|\vec y\|
+\end{equation*}
+</div>
+<div class="para">since <span class="process-math">\(P\)</span> is orthogonal matrix and <a href="Section-6-2.html#thm-orthogonal-maps" class="xref" data-knowl="./knowl/xref/thm-orthogonal-maps.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.34: Mapping Properties of Orthogonal Matrices">Theorem 6.34</a> tells us that multiplication preserves lengths.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-3-example2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-7-3-example2-2-2">
+<div class="para">We have that the symmetric matrix <span class="process-math">\(A\)</span> so that <span class="process-math">\(Q_A(\vec x) = x_2^2 + 2x_1x_3\)</span> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-7-1-orth-diag.html" id="ex-7-3-example2-2-2-3">
+\begin{equation*}
+A = \begin{bmatrix} 0 \amp 0 \amp 1 \\ 0 \amp 1 \amp 0 \\ 1 \amp 0 \amp 0 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">In <a href="Section-7-1.html#ex-7-1-orth-diag" class="xref" data-knowl="./knowl/xref/ex-7-1-orth-diag.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.16">Example 7.16</a>, we saw that the eigenvalues are <span class="process-math">\(\lambda_1 = 1\text{,}\)</span> <span class="process-math">\(\lambda_2 = 1\text{,}\)</span> and <span class="process-math">\(\lambda_3 = -1\)</span> with accompanying unit eigenvectors</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-7-1-orth-diag.html" id="ex-7-3-example2-2-2-8">
+\begin{equation*}
+\vec v_1 = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}, \quad \vec v_2 = \dfrac{1}{\sqrt{2}}\begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix}, \quad \text{and} \quad \vec v_3 = \frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Therefore, setting <span class="process-math">\(P = \begin{bmatrix} \vec v_1 \amp \vec v_2 \amp \vec v_3 \end{bmatrix}\)</span> and making the change of variables <span class="process-math">\(\vec x = P\vec y\text{,}\)</span> we deduce</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-7-1-orth-diag.html" id="ex-7-3-example2-2-2-11">
+\begin{equation*}
+Q_A(\vec x) = Q_D(\vec y) = y_1^2 + y_2^2 - y_3^2\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus, the maximum value of <span class="process-math">\(Q(\vec x) = x_2^2 + 2x_1x_3\)</span> under the constraint that the input is a unit vector is <span class="process-math">\(1\text{,}\)</span> and the minimum is <span class="process-math">\(-1\text{.}\)</span> These maximum and minimum values occur at eigenvectors corresponding to the given eigenvalue. For example, note that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-7-1-orth-diag.html" id="ex-7-3-example2-2-2-15">
+\begin{align*}
+Q_A(\vec v_1) \amp = (1)^2 + 2(0)(0) = 1\\
+Q_A(\vec v_2) \amp = 0^2 + 2\left(\frac{1}{\sqrt{2}}\right)\left(\frac{1}{\sqrt{2}}\right) = 2\left(\frac{1}{2}\right) = 1\\
+Q_A(\vec v_3) \amp = 0^2 + 2\left(\frac{1}{\sqrt{2}}\right)\left(-\frac{1}{\sqrt{2}}\right) = 2\left(-\frac{1}{2}\right) = -1 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-3-example2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.32.1"><a href="#ex-7-3-example2-2" title="Copy heading and permalink for Solution 7.32.1" aria-label="Copy heading and permalink for Solution 7.32.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Example 7.32"><a href="#ex-7-3-example2" title="Copy heading and permalink for Example 7.32" aria-label="Copy heading and permalink for Example 7.32">🔗</a></div></article></section><section class="onepage" id="handout-section-7-3-constrained-optimization-4"><div class="para" id="handout-section-7-3-constrained-optimization-4-1">The image below is the unit sphere whose surface is colored according to the quadratic form from <a href="Section-7-3.html#ex-7-3-example2" class="xref" data-knowl="./knowl/xref/ex-7-3-example2.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.32">Example 7.32</a>. Notice the agreement between our solution and the image.<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-3-constrained-optimization-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -469,6 +534,26 @@ Q(\vec x)=x_2^2 + 2x_1x_3.
 Q(\vec x)=x_2^2 + 2x_1x_3.
 \end{equation*}
 </div>
+<div class="solutions"><details id="ex-7-3-example4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-7-3-example4-2-1">
+<div class="para">Note that if <span class="process-math">\(\|\vec x\| = 5\text{,}\)</span> then</div>
+<div class="displaymath process-math" id="ex-7-3-example4-2-1-2">
+\begin{equation*}
+\vec x = 5\vec u = \begin{bmatrix} 5u_1 \\ 5u_2 \\ 5u_3 \end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">for some unit vector <span class="process-math">\(\vec u\text{.}\)</span> It follows that</div>
+<div class="displaymath process-math" id="ex-7-3-example4-2-1-4">
+\begin{equation*}
+Q(\vec x) = Q(5\vec u) = (5u_2)^2 + 2(5u_1)(5u_3) = 25u_2^2 + 25(2u_1u_3) = 25Q(\vec u)\text{.}
+\end{equation*}
+</div>
+<div class="para">Therefore, we have that the maximum of <span class="process-math">\(Q(\vec x)\)</span> under the constraint that <span class="process-math">\(\|\vec x\| = 5\)</span> is <span class="process-math">\(25\)</span> times the maximum of <span class="process-math">\(Q(\vec x)\)</span> under the constraint that <span class="process-math">\(\|\vec x \| = 1\text{,}\)</span> and the maximum is stil obtained at the appropriate eigenvector. Therefore, the maximum is <span class="process-math">\(25\)</span> and is obtained at any length <span class="process-math">\(5\)</span> vector in the <span class="process-math">\(1\)</span>-eigenspace<span class="process-math">\((A)\text{,}\)</span> and the minimum is <span class="process-math">\(-25\)</span> and is obtained at any length <span class="process-math">\(5\)</span> vector in the <span class="process-math">\(-1\)</span>-eigenspace<span class="process-math">\((A)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-3-example4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.34.1"><a href="#ex-7-3-example4-2" title="Copy heading and permalink for Solution 7.34.1" aria-label="Copy heading and permalink for Solution 7.34.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Example 7.34"><a href="#ex-7-3-example4" title="Copy heading and permalink for Example 7.34" aria-label="Copy heading and permalink for Example 7.34">🔗</a></div></article><div class="para" id="handout-section-7-3-constrained-optimization-4-7"> <div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-3-constrained-optimization-4-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><section class="onepage" id="p-7-3-orth-constraint"><article class="theorem theorem-like" id="thm-orth-constraint"><h4 class="heading">
@@ -523,6 +608,24 @@ A = \begin{bmatrix} 1 \amp 3 \amp 0 \\ 3 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{b
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-7-3-example3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="ex-7-3-example3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-7-3-example3-2-1">
+<div class="para">Since <span class="process-math">\(\vec u_1\)</span> is an eigenvector corresponding to <span class="process-math">\(\lambda_1 = 4\text{,}\)</span> the maximum of <span class="process-math">\(Q(\vec x)\)</span> under the constraint that <span class="process-math">\(\|\vec x\| = 1\)</span> and <span class="process-math">\(\vec x \cdot \vec u_1 = 0\)</span> is the second largest eigenvalues <span class="process-math">\(\lambda_2 = 1\text{.}\)</span> To find a vector that gives this new maximum, we find a unit eigenvector corresponding to <span class="process-math">\(\lambda_2 = 1\text{.}\)</span> Note that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-orth-eigenspaces.html" id="ex-7-3-example3-2-1-8">
+\begin{equation*}
+A - I = \begin{bmatrix} 0 \amp 3 \amp 0 \\ 3 \amp 0 \amp 0 \\ 0 \amp 0 \amp 0 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 0 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus, <span class="process-math">\(\vec u_2 = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}\)</span> is a unit eigenvector corresponding to <span class="process-math">\(\lambda_2 = 1\text{.}\)</span> Note that this vector is also orthogonal to <span class="process-math">\(\vec u_1\)</span> which is guaranteed by <a href="Section-7-1.html#thm-orth-eigenspaces" class="xref" data-knowl="./knowl/xref/thm-orth-eigenspaces.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 7.15: Orthogonality of Eigenspaces">Theorem 7.15</a>. It follows that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-orth-eigenspaces.html" id="ex-7-3-example3-2-1-13">
+\begin{equation*}
+Q(\vec u_2) = 0^2 + 0^2 + 1^2 + 6(0)(0) = 1\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-3-example3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.36.1"><a href="#ex-7-3-example3-2" title="Copy heading and permalink for Solution 7.36.1" aria-label="Copy heading and permalink for Solution 7.36.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Example 7.36"><a href="#ex-7-3-example3" title="Copy heading and permalink for Example 7.36" aria-label="Copy heading and permalink for Example 7.36">🔗</a></div></article></section><div class="autopermalink" data-description="Handout: 7.3 Constrained Optimization"><a href="#handout-section-7-3-constrained-optimization" title="Copy heading and permalink for Handout: 7.3 Constrained Optimization" aria-label="Copy heading and permalink for Handout: 7.3 Constrained Optimization">🔗</a></div></section><div class="autopermalink" data-description="Section: 7.3 Constrained Optimization"><a href="#Section-7-3" title="Copy heading and permalink for Section: 7.3 Constrained Optimization" aria-label="Copy heading and permalink for Section: 7.3 Constrained Optimization">🔗</a></div></section>
 </div>

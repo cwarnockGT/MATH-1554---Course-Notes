@@ -330,7 +330,15 @@ eBookConfig.enable_chatcodes =  false;
         </label><label><input type="radio" name="papersize" value="letter">Letter
         </label>
 </form>
-<details class="print-options"><summary>Additional printing options</summary><div class="header-footer-options">
+<details class="print-options"><summary>Additional printing options</summary><div class="hide-solutions-options">
+<div class="hide-option">
+<label for="hide-answer-checkbox">Hide answers</label><input type="checkbox" id="hide-answer-checkbox">
+</div>
+<div class="hide-option">
+<label for="hide-solution-checkbox">Hide solutions</label><input type="checkbox" id="hide-solution-checkbox">
+</div>
+</div>
+<div class="header-footer-options">
 <div class="header-option">
 <span class="title">Print headers</span><label>First page<input type="checkbox" id="print-first-page-header-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-header-checkbox" checked></label>
 </div>
@@ -446,22 +454,125 @@ A = PDP^T = \frac{1}{\sqrt{2}}
 <article class="task exercise-like" id="ex-7-4-ellipse-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <div class="para" id="ex-7-4-ellipse-2-1-1">Can you describe geometrically what multiplication by <span class="process-math">\(A\)</span> does to an arbitrary vector <span class="process-math">\(\vec x\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-ellipse-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="ex-7-4-ellipse-2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-7-4-ellipse-2-2-1">Let’s see if we can figure out what <span class="process-math">\(T\)</span> does to some nice inputs.<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-ellipse-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-7-4-ellipse-2-2-2">
+<div class="para">First, let’s see what happens to <span class="process-math">\(\vec e_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}\text{.}\)</span> Note that</div>
+<div class="displaymath process-math" id="ex-7-4-ellipse-2-2-2-2">
+\begin{equation*}
+T\left(\begin{bmatrix} 1 \\ 0 \end{bmatrix}\right) = \begin{bmatrix} 3 \amp -1 \\ -1 \amp 3 \end{bmatrix}\begin{bmatrix} 1 \\ 0 \end{bmatrix} = \begin{bmatrix} 3 \\ -1 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Geometrically, we can describe the action of <span class="process-math">\(T\)</span> on this vector by scaling the input by <span class="process-math">\(\sqrt{10}\)</span> and rotating it clockwise by some angle <span class="process-math">\(\theta\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-ellipse-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-7-4-ellipse-2-2-3">
+<div class="para">Next, let’s see what happens to <span class="process-math">\(\vec e_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}\text{.}\)</span> Note that</div>
+<div class="displaymath process-math" id="ex-7-4-ellipse-2-2-3-2">
+\begin{equation*}
+T\left(\begin{bmatrix} 0 \\ 1 \end{bmatrix}\right) = \begin{bmatrix} 3 \amp -1 \\ -1 \amp 3 \end{bmatrix}\begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} -1 \\ 3 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Geometrically, we can describe the action of <span class="process-math">\(T\)</span> on this vector by scaling the input by <span class="process-math">\(\sqrt{10}\)</span> and rotating it counterclockwise by that same angle <span class="process-math">\(\theta\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-ellipse-2-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-7-4-ellipse-2-2-4">
+<div class="para">Now, let’s see what happens to <span class="process-math">\(\vec e_1 + \vec e_2 = \begin{bmatrix} 1 \\ 1 \end{bmatrix}\text{.}\)</span> Note that</div>
+<div class="displaymath process-math" id="ex-7-4-ellipse-2-2-4-2">
+\begin{equation*}
+T\left(\begin{bmatrix} 1 \\ 1 \end{bmatrix}\right) = \begin{bmatrix} 3 \amp -1 \\ -1 \amp 3 \end{bmatrix}\begin{bmatrix} 1 \\ 1 \end{bmatrix} = \begin{bmatrix} 2 \\ 2 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Geometrically, we can describe the action of <span class="process-math">\(T\)</span> on this vector by scaling the input by <span class="process-math">\(2\)</span> and no rotation.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-ellipse-2-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-7-4-ellipse-2-2-5">It is very hard to describe what <span class="process-math">\(T\)</span> is doing in general that will match the descriptions we found for just these three inputs.<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-ellipse-2-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.38.a.1"><a href="#ex-7-4-ellipse-2-2" title="Copy heading and permalink for Solution 7.38.a.1" aria-label="Copy heading and permalink for Solution 7.38.a.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="3in"></div>
 <div class="autopermalink" data-description="Task 7.38.a"><a href="#ex-7-4-ellipse-2" title="Copy heading and permalink for Task 7.38.a" aria-label="Copy heading and permalink for Task 7.38.a">🔗</a></div></article><article class="task exercise-like" id="ex-7-4-ellipse-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="para" id="ex-7-4-ellipse-3-1-1">Instead of determining what <span class="process-math">\(A\)</span> does in one fell swoop, let us investigate what each factor of <span class="process-math">\(A =PDP^T\)</span> does. First, determine what multiplication by <span class="process-math">\(P^T\)</span> does to an arbitrary vector <span class="process-math">\(\vec x\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-ellipse-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="ex-7-4-ellipse-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-7-4-ellipse-3-2-1">
+<div class="para">Note that</div>
+<div class="displaymath process-math" id="ex-7-4-ellipse-3-2-1-1">
+\begin{equation*}
+P^T = \frac{1}{\sqrt{2}}\begin{bmatrix} 1 \amp -1 \\ 1 \amp 1 \end{bmatrix} = \begin{bmatrix} \frac{\sqrt{2}}{2} \amp -\frac{\sqrt{2}}{2} \\ \frac{\sqrt{2}}{2} \amp \frac{\sqrt{2}}{2} \end{bmatrix} = \begin{bmatrix} \cos\left(45^\circ\right) \amp -\sin\left(45^\circ\right) \\ \sin\left(45^\circ\right) \amp \cos\left(45^\circ\right) \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Therefore, multiplication by <span class="process-math">\(P^T\)</span> rotates vectors <span class="process-math">\(45^\circ\)</span> counterclockwise.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-ellipse-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.38.b.1"><a href="#ex-7-4-ellipse-3-2" title="Copy heading and permalink for Solution 7.38.b.1" aria-label="Copy heading and permalink for Solution 7.38.b.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Task 7.38.b"><a href="#ex-7-4-ellipse-3" title="Copy heading and permalink for Task 7.38.b" aria-label="Copy heading and permalink for Task 7.38.b">🔗</a></div></article><article class="task exercise-like" id="ex-7-4-ellipse-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
 <div class="para" id="ex-7-4-ellipse-4-1-1">Next, determine what multiplication by <span class="process-math">\(D\)</span> does to an arbitrary vector <span class="process-math">\(\vec x\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-ellipse-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="ex-7-4-ellipse-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-7-4-ellipse-4-2-1">
+<div class="para">Note that</div>
+<div class="displaymath process-math" id="ex-7-4-ellipse-4-2-1-1">
+\begin{equation*}
+D\vec x = \begin{bmatrix} 4 \amp 0 \\ 0 \amp 2 \end{bmatrix}\begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} 4x_1 \\ 2x_2 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus, multiplication by <span class="process-math">\(D\)</span> scales the vector in the <span class="process-math">\(x_1\)</span>-direction by <span class="process-math">\(4\)</span> and in the <span class="process-math">\(x_2\)</span>-direction by <span class="process-math">\(2\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-ellipse-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.38.c.1"><a href="#ex-7-4-ellipse-4-2" title="Copy heading and permalink for Solution 7.38.c.1" aria-label="Copy heading and permalink for Solution 7.38.c.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Task 7.38.c"><a href="#ex-7-4-ellipse-4" title="Copy heading and permalink for Task 7.38.c" aria-label="Copy heading and permalink for Task 7.38.c">🔗</a></div></article><article class="task exercise-like" id="ex-7-4-ellipse-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
 <div class="para" id="ex-7-4-ellipse-5-1-1">Now, determine what multiplication by <span class="process-math">\(P\)</span> does to an arbitrary vector <span class="process-math">\(\vec x\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-ellipse-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="ex-7-4-ellipse-5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-7-4-ellipse-5-2-1">
+<div class="para">Note that</div>
+<div class="displaymath process-math" id="ex-7-4-ellipse-5-2-1-1">
+\begin{equation*}
+P = \frac{1}{\sqrt{2}}\begin{bmatrix} 1 \amp 1 \\ -1 \amp 1 \end{bmatrix} = \begin{bmatrix} \frac{\sqrt{2}}{2} \amp \frac{\sqrt{2}}{2} \\ -\frac{\sqrt{2}}{2} \amp \frac{\sqrt{2}}{2} \end{bmatrix} = \begin{bmatrix} \cos\left(-45^\circ\right) \amp -\sin\left(-45^\circ\right) \\ \sin\left(-45^\circ\right) \amp \cos\left(-45^\circ\right) \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Therefore, multiplication by <span class="process-math">\(P\)</span> rotates vectors <span class="process-math">\(45^\circ\)</span> clockwise.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-ellipse-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.38.d.1"><a href="#ex-7-4-ellipse-5-2" title="Copy heading and permalink for Solution 7.38.d.1" aria-label="Copy heading and permalink for Solution 7.38.d.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Task 7.38.d"><a href="#ex-7-4-ellipse-5" title="Copy heading and permalink for Task 7.38.d" aria-label="Copy heading and permalink for Task 7.38.d">🔗</a></div></article><article class="task exercise-like" id="ex-7-4-ellipse-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
 <div class="para" id="ex-7-4-ellipse-6-1-1">Combining parts (b) - (d) above, give a geometric description of what multiplication by <span class="process-math">\(A\)</span> does to an arbitrary vector <span class="process-math">\(\vec x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-ellipse-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="ex-7-4-ellipse-6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-7-4-ellipse-6-2-1">
+<div class="para">Mutliplcation by <span class="process-math">\(A\)</span> does the following:</div>
+<ol class="lower-alpha lower-alpha-level-1" id="ex-7-4-ellipse-6-2-1-2">
+<li id="ex-7-4-ellipse-6-2-1-2-1">
+<div class="para" id="ex-7-4-ellipse-6-2-1-2-1-1">First, it rotates the vector <span class="process-math">\(45^\circ\)</span> counterclockwise.<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-ellipse-6-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#ex-7-4-ellipse-6-2-1-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
+</li>
+<li id="ex-7-4-ellipse-6-2-1-2-2">
+<div class="para" id="ex-7-4-ellipse-6-2-1-2-2-1">Then, scales the resulting vector by <span class="process-math">\(4\)</span> in the <span class="process-math">\(x_1\)</span>-direction and by <span class="process-math">\(2\)</span> in the <span class="process-math">\(x_2\)</span>-direction.<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-ellipse-6-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#ex-7-4-ellipse-6-2-1-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
+</li>
+<li id="ex-7-4-ellipse-6-2-1-2-3">
+<div class="para" id="ex-7-4-ellipse-6-2-1-2-3-1">Finally, rotates the resulting vector <span class="process-math">\(45^\circ\)</span> clockwise.<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-ellipse-6-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item c"><a href="#ex-7-4-ellipse-6-2-1-2-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-ellipse-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.38.e.1"><a href="#ex-7-4-ellipse-6-2" title="Copy heading and permalink for Solution 7.38.e.1" aria-label="Copy heading and permalink for Solution 7.38.e.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Task 7.38.e"><a href="#ex-7-4-ellipse-6" title="Copy heading and permalink for Task 7.38.e" aria-label="Copy heading and permalink for Task 7.38.e">🔗</a></div></article><div class="autopermalink" data-description="Example 7.38"><a href="#ex-7-4-ellipse" title="Copy heading and permalink for Example 7.38" aria-label="Copy heading and permalink for Example 7.38">🔗</a></div></article></section><section class="onepage" id="p-7-4-singular-values"><div class="para" id="p-7-4-singular-values-2">Recall from <a href="Section-6-2.html#thm-orthogonal-maps" class="xref" data-knowl="./knowl/xref/thm-orthogonal-maps.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.34: Mapping Properties of Orthogonal Matrices">Theorem 6.34</a> that multiplication by an orthogonal matrix does not change the angles between vectors nor the vector’s length. Therefore, if <span class="process-math">\(U\)</span> is an orthogonal matrix, we have that the linear transformation <span class="process-math">\(T(\vec x) = U\vec x\)</span> must simply be a rotation and/or reflection.<div class="autopermalink" data-description="Paragraph"><a href="#p-7-4-singular-values-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -559,6 +670,122 @@ A = PDP^T = \frac{1}{\sqrt{2}}
 A = \begin{bmatrix}3 \amp 8 \\ 0 \amp 3 \end{bmatrix}.
 \end{equation*}
 </div>
+<div class="solutions"><details id="ex-7-4-example1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-7-4-example1-2-1">
+<div class="para">First, we calculate the symmetric matrix <span class="process-math">\(A^TA\text{.}\)</span> Note that</div>
+<div class="displaymath process-math" id="ex-7-4-example1-2-1-2">
+\begin{equation*}
+A^TA = \begin{bmatrix} 3 \amp 0 \\ 8 \amp 3 \end{bmatrix}\begin{bmatrix} 3 \amp 8 \\ 0 \amp 3 \end{bmatrix} = \begin{bmatrix} 9 \amp 24 \\ 24 \amp 73\end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-example1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-7-4-example1-2-2">
+<div class="para">Next, we find the eigenvalues of <span class="process-math">\(A^TA\text{.}\)</span> Note that</div>
+<div class="displaymath process-math" id="ex-7-4-example1-2-2-2">
+\begin{equation*}
+\det(A^TA - \lambda I) = (9-\lambda)(73-\lambda) - 24^2 = (\lambda - 81)(\lambda - 1)\text{.}
+\end{equation*}
+</div>
+<div class="para">Therefore, the eigenvalues of <span class="process-math">\(A^TA\)</span> are <span class="process-math">\(\lambda_1 = 81\)</span> and <span class="process-math">\(\lambda_2 = 1\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-example1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-7-4-example1-2-3">
+<div class="para">Next, we find the singular values of <span class="process-math">\(A\)</span> which are the square roots of the eigenvalues of <span class="process-math">\(A^TA\text{.}\)</span> Therefore, we have that</div>
+<div class="displaymath process-math" id="ex-7-4-example1-2-3-3">
+\begin{equation*}
+\sigma_1 = \sqrt{\lambda_1} = 9
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" id="ex-7-4-example1-2-3-4">
+\begin{equation*}
+\sigma_2 = \sqrt{\lambda_2} = 1\text{.}
+\end{equation*}
+</div>
+<div class="para">It follows that</div>
+<div class="displaymath process-math" id="ex-7-4-example1-2-3-5">
+\begin{equation*}
+\Sigma = \begin{bmatrix} \sigma_1 \amp 0 \\ 0 \amp \sigma_2 \end{bmatrix} = \begin{bmatrix} 9 \amp 0 \\ 0 \amp 1 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-example1-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-7-4-example1-2-4">
+<div class="para">Next, we find corresponding eigenvectors for each eigenvalue of <span class="process-math">\(A^TA\text{.}\)</span> Note that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-orth-eigenspaces.html" id="ex-7-4-example1-2-4-2">
+\begin{equation*}
+A^TA - 81I = \begin{bmatrix} -72 \amp 24 \\ 24 \amp -8 \end{bmatrix} \sim \begin{bmatrix} 3 \amp -1 \\ 0 \amp 0 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-orth-eigenspaces.html" id="ex-7-4-example1-2-4-3">
+\begin{equation*}
+\vec v_1 = \dfrac{1}{\sqrt{10}}\begin{bmatrix} 1 \\ 3 \end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">is a unit eigenvector of <span class="process-math">\(A^TA\)</span> corresponding to <span class="process-math">\(\lambda_1 = 81\text{.}\)</span> Also, note that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-orth-eigenspaces.html" id="ex-7-4-example1-2-4-6">
+\begin{equation*}
+A^TA - I = \begin{bmatrix} 8 \amp 24 \\ 24 \amp 72 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 3 \\ 0 \amp 0 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">It follows that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-orth-eigenspaces.html" id="ex-7-4-example1-2-4-7">
+\begin{equation*}
+\vec v_2 = \dfrac{1}{\sqrt{10}}\begin{bmatrix} 3 \\ -1 \end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">is a unit eigenvector of <span class="process-math">\(A^TA\)</span> corresponding to <span class="process-math">\(\lambda_2 = 1\text{.}\)</span> (Note that we could have found <span class="process-math">\(\vec v_2\)</span> in an alternative way by using <a href="Section-7-1.html#thm-orth-eigenspaces" class="xref" data-knowl="./knowl/xref/thm-orth-eigenspaces.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 7.15: Orthogonality of Eigenspaces">Theorem 7.15</a>.) These eigenvectors are the rows of <span class="process-math">\(V^T\text{.}\)</span> Therefore, we have that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-orth-eigenspaces.html" id="ex-7-4-example1-2-4-13">
+\begin{equation*}
+V^T = \begin{bmatrix} \vec v_1^T \\ \vec v_2^T \end{bmatrix} = \begin{bmatrix} \frac{1}{\sqrt{10}} \amp \frac{3}{\sqrt{10}} \\ \frac{3}{\sqrt{10}} \amp \frac{-1}{\sqrt{10}}\end{bmatrix} = \frac{1}{\sqrt{10}}\begin{bmatrix} 1 \amp 3 \\ 3 \amp -1 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-example1-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-7-4-example1-2-5">
+<div class="para">Lastly, we find the columns of <span class="process-math">\(U\)</span> by using the formula</div>
+<div class="displaymath process-math" id="ex-7-4-example1-2-5-2">
+\begin{equation*}
+\vec u_i = \dfrac{1}{\sigma_i}A\vec v_i\text{.}
+\end{equation*}
+</div>
+<div class="para">Note that</div>
+<div class="displaymath process-math" id="ex-7-4-example1-2-5-3">
+\begin{equation*}
+\vec u_1 = \frac{1}{\sigma_1}A\vec v_1 = \frac{1}{9}\begin{bmatrix} 3 \amp 8 \\ 0 \amp 3 \end{bmatrix}\frac{1}{\sqrt{10}}\begin{bmatrix} 1 \\ 3 \end{bmatrix} = \frac{1}{9\sqrt{10}}\begin{bmatrix} 27 \\ 9 \end{bmatrix} = \frac{1}{\sqrt{10}}\begin{bmatrix} 3 \\ 1 \end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" id="ex-7-4-example1-2-5-4">
+\begin{equation*}
+\vec u_2 = \frac{1}{\sigma_2}A\vec v_2 = \frac{1}{1}\begin{bmatrix} 3 \amp 8 \\ 0 \amp 3 \end{bmatrix}\frac{1}{\sqrt{10}}\begin{bmatrix} 3 \\ -1 \end{bmatrix} = \frac{1}{\sqrt{10}}\begin{bmatrix} 1 \\ -3 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Therefore, we have that</div>
+<div class="displaymath process-math" id="ex-7-4-example1-2-5-5">
+\begin{equation*}
+U = \begin{bmatrix} \vec u_1 \amp \vec u_2 \end{bmatrix} = \begin{bmatrix} \frac{3}{\sqrt{10}} \amp \frac{1}{\sqrt{10}} \\ \frac{1}{\sqrt{10}} \amp -\frac{3}{\sqrt{10}}\end{bmatrix} = \frac{1}{\sqrt{10}}\begin{bmatrix} 3 \amp 1 \\ 1 \amp -3 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-example1-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-7-4-example1-2-6">
+<div class="para">We can check our Singular Value Decomposition by verifying that the matrices <span class="process-math">\(U, \Sigma,\)</span> and <span class="process-math">\(V^T\)</span> have the appropriate properties and satisfy <span class="process-math">\(A = U\Sigma V^T\text{.}\)</span> Note that</div>
+<div class="displaymath process-math" id="ex-7-4-example1-2-6-4">
+\begin{align*}
+U\Sigma V^T \amp = \frac{1}{\sqrt{10}}\begin{bmatrix} 3 \amp 1 \\ 1 \amp -3 \end{bmatrix}\begin{bmatrix} 9 \amp 0 \\ 0 \amp 1 \end{bmatrix}\frac{1}{\sqrt{10}}\begin{bmatrix} 1 \amp 3 \\ 3 \amp -1 \end{bmatrix}\\
+\amp = \frac{1}{10}\begin{bmatrix} 3 \amp 1 \\ 1 \amp -3 \end{bmatrix}\begin{bmatrix} 9 \amp 27 \\ 3 \amp -1 \end{bmatrix}\\
+\amp = \frac{1}{10}\begin{bmatrix}30 \amp 80 \\ 0 \amp 30 \end{bmatrix}\\
+\amp = \begin{bmatrix} 3 \amp 8 \\ 0 \amp 3 \end{bmatrix} = A
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-example1-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.40.1"><a href="#ex-7-4-example1-2" title="Copy heading and permalink for Solution 7.40.1" aria-label="Copy heading and permalink for Solution 7.40.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Example 7.40"><a href="#ex-7-4-example1" title="Copy heading and permalink for Example 7.40" aria-label="Copy heading and permalink for Example 7.40">🔗</a></div></article><div class="para" id="p-7-4-examples-3"> <div class="autopermalink" data-description="Paragraph"><a href="#p-7-4-examples-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><section class="onepage" id="handout-section-7-4-svd-7"><article class="example example-like" id="ex-7-4-example2"><h4 class="heading">
@@ -571,6 +798,102 @@ A = \begin{bmatrix}3 \amp 8 \\ 0 \amp 3 \end{bmatrix}.
 A=\begin{bmatrix}1 \amp -1\\ -2 \amp 2\\ 2 \amp -2\end{bmatrix}.
 \end{equation*}
 </div>
+<div class="solutions"><details id="ex-7-4-example2-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ex-7-4-example2-2-1">
+<div class="para">First, note that</div>
+<div class="displaymath process-math" id="ex-7-4-example2-2-1-1">
+\begin{equation*}
+A^TA = \begin{bmatrix} 1 \amp -2 \amp 2 \\ -1 \amp 2 \amp -2 \end{bmatrix}\begin{bmatrix} 1 \amp -1 \\ -2 \amp 2 \\ 2 \amp -2 \end{bmatrix} = \begin{bmatrix} 9 \amp -9 \\ -9 \amp 9 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">We have that</div>
+<div class="displaymath process-math" id="ex-7-4-example2-2-1-2">
+\begin{equation*}
+\det(A^TA - \lambda I) = (9-\lambda)^2 - 81 = \lambda^2 - 18\lambda = \lambda(\lambda - 18)\text{.}
+\end{equation*}
+</div>
+<div class="para">So, the eigenvalues of <span class="process-math">\(A^TA\)</span> are <span class="process-math">\(\lambda_1 = 18\)</span> and <span class="process-math">\(\lambda_2 = 0\text{.}\)</span> It follows that the singular values of <span class="process-math">\(A\)</span> are <span class="process-math">\(\sigma_1 = \sqrt{18} = 3\sqrt{2}\)</span> and <span class="process-math">\(\sigma_2 = 0\text{.}\)</span> Recall that <span class="process-math">\(\Sigma\)</span> has the same dimensions as <span class="process-math">\(A\text{.}\)</span> Thus,</div>
+<div class="displaymath process-math" id="ex-7-4-example2-2-1-11">
+\begin{equation*}
+\Sigma = \begin{bmatrix} 3\sqrt{2} \amp 0 \\ 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Since there is only one nonzero singular value, we have that the rank of <span class="process-math">\(A\)</span> is 1.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-example2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-7-4-example2-2-2">
+<div class="para">Note that</div>
+<div class="displaymath process-math" id="ex-7-4-example2-2-2-1">
+\begin{equation*}
+A^TA - 18 I = \begin{bmatrix} -9 \amp -9 \\ -9 \amp -9 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 1 \\ 0 \amp 0 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Therefore,</div>
+<div class="displaymath process-math" id="ex-7-4-example2-2-2-2">
+\begin{equation*}
+\vec v_1 = \frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\ -1 \end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">is a unit eigenvector of <span class="process-math">\(A^TA\)</span> corresponding to an eigenvalue of <span class="process-math">\(\lambda_1 = 18\text{.}\)</span> Also, note that</div>
+<div class="displaymath process-math" id="ex-7-4-example2-2-2-5">
+\begin{equation*}
+A^TA - 0I = \begin{bmatrix} 9 \amp -9 \\-9 \amp 9 \end{bmatrix} \sim \begin{bmatrix} 1 \amp -1 \\ 0 \amp 0 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Therefore,</div>
+<div class="displaymath process-math" id="ex-7-4-example2-2-2-6">
+\begin{equation*}
+\vec v_2 = \frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\ 1 \end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">is a unit eigenvector of <span class="process-math">\(A^TA\)</span> corresponding to an eigenvalue of <span class="process-math">\(\lambda_2 = 0\text{.}\)</span> it follows that</div>
+<div class="displaymath process-math" id="ex-7-4-example2-2-2-9">
+\begin{equation*}
+V^T = \dfrac{1}{\sqrt{2}}\begin{bmatrix} 1 \amp -1 \\ 1 \amp 1 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-example2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-7-4-example2-2-3">
+<div class="para">We can find <span class="process-math">\(\vec u_1\)</span> using the formula since <span class="process-math">\(\sigma_1 \neq 0\text{.}\)</span> Note that</div>
+<div class="displaymath process-math" id="ex-7-4-example2-2-3-3">
+\begin{equation*}
+\vec u_1 = \frac{1}{\sigma_1}A\vec v_1 = \frac{1}{3\sqrt{2}}\begin{bmatrix} 1 \amp -1 \\ -2 \amp 2 \\ 2 \amp -2 \end{bmatrix}\frac{1}{\sqrt{2}}\begin{bmatrix}1 \\ -1 \end{bmatrix} = \frac{1}{6}\begin{bmatrix} 2 \\ -4 \\ 4 \end{bmatrix} = \frac{1}{3}\begin{bmatrix} 1 \\ -2 \\ 2 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Note that we cannot use the formula to find <span class="process-math">\(\vec u_2\)</span> since that would require us to divide by <span class="process-math">\(\sigma_2 = 0\text{.}\)</span> However, we can find <span class="process-math">\(\vec u_2\)</span> by using the properties of <span class="process-math">\(U\text{.}\)</span> Recall <span class="process-math">\(U\)</span> is a <span class="process-math">\(3 \times 3\)</span> <em class="emphasis">orthogonal</em> matrix. So, we actually need to find <em class="emphasis">two</em> more columns of <span class="process-math">\(U\text{.}\)</span> Thankfully, we can choose any two unit vectors as long as they make <span class="process-math">\(U\)</span> an orthogonal matrix.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-example2-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-7-4-example2-2-4">
+<div class="para">One set of vectors could be</div>
+<div class="displaymath process-math" id="ex-7-4-example2-2-4-1">
+\begin{equation*}
+\vec u_2 = \frac{1}{\sqrt{2}}\begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix} \quad \text{and} \quad \vec u_3 = \frac{1}{3\sqrt{2}}\begin{bmatrix} 4 \\ 1 \\ -1 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Let’s check that the matrix with these columns, call it <span class="process-math">\(U_1\text{,}\)</span> works. Note that</div>
+<div class="displaymath process-math" id="ex-7-4-example2-2-4-3">
+\begin{align*}
+U_1\Sigma V^T\amp = \begin{bmatrix} \frac{1}{3} \amp 0 \amp \frac{4}{3\sqrt{2}} \\ -\frac{2}{3} \amp \frac{1}{\sqrt{2}} \amp \frac{1}{3\sqrt{2}} \\ \frac{2}{3} \amp \frac{1}{\sqrt{2}} \amp -\frac{1}{3\sqrt{2}} \end{bmatrix}\begin{bmatrix} 3\sqrt{2} \amp 0 \\ 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}\frac{1}{\sqrt{2}}\begin{bmatrix} 1 \amp -1 \\ 1 \amp 1 \end{bmatrix}\\
+\amp = \begin{bmatrix} \frac{1}{3} \amp 0 \amp \frac{4}{3\sqrt{2}} \\ -\frac{2}{3} \amp \frac{1}{\sqrt{2}} \amp \frac{1}{3\sqrt{2}} \\ \frac{2}{3} \amp \frac{1}{\sqrt{2}} \amp -\frac{1}{3\sqrt{2}} \end{bmatrix}\begin{bmatrix} 3 \amp -3 \\ 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}\\
+\amp = \begin{bmatrix} 1 \amp -1 \\ -2 \amp 2 \\ 2 \amp -2 \end{bmatrix} = A
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-example2-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-7-4-example2-2-5">
+<div class="para">The previous choice of <span class="process-math">\(\vec u_2\)</span> and <span class="process-math">\(\vec u_3\)</span> are not the only vectors that could fill the columns of <span class="process-math">\(U\text{.}\)</span> Suppose instead we chose</div>
+<div class="displaymath process-math" id="ex-7-4-example2-2-5-4">
+\begin{equation*}
+\vec u_2' = \frac{1}{3}\begin{bmatrix} 2 \\ -1 \\ -2 \end{bmatrix} \quad \text{and} \quad \vec u_3' = \frac{1}{3}\begin{bmatrix} 2 \\ 2 \\ 1 \end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">as the columns of <span class="process-math">\(U\text{,}\)</span> call the matrix <span class="process-math">\(U_2\text{.}\)</span> Then, we also have that <span class="process-math">\(A = U_2\Sigma V^T\)</span> is a valid Singular Value Decomposition of <span class="process-math">\(A\text{.}\)</span> There are many valid factorizations when there is more than one missing column of <span class="process-math">\(U\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-4-example2-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.41.1"><a href="#ex-7-4-example2-2" title="Copy heading and permalink for Solution 7.41.1" aria-label="Copy heading and permalink for Solution 7.41.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Example 7.41"><a href="#ex-7-4-example2" title="Copy heading and permalink for Example 7.41" aria-label="Copy heading and permalink for Example 7.41">🔗</a></div></article><div class="para" id="handout-section-7-4-svd-7-2"> <div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><section class="onepage" id="p-7-4-applications"><div class="para logical" id="p-7-4-applications-2">
@@ -643,22 +966,38 @@ A=\begin{bmatrix}1 \amp -1\\ -2 \amp 2\\ 2 \amp -2\end{bmatrix}.
 <li id="handout-section-7-4-svd-9-2-2-2">
 <div class="para" id="handout-section-7-4-svd-9-2-2-2-1">It follows that <span class="process-math">\(\left\{\vec u_1, \dots, \vec u_r\right\}\)</span> is a set of <span class="process-math">\(\underline{\hspace{2in}}\)</span> vectors that all live in <span class="process-math">\(\underline{\hspace{1.5in}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<details id="handout-section-7-4-svd-9-2-2-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="handout-section-7-4-svd-9-2-2-2-2-1">orthonormal; <span class="process-math">\(\Col(A)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1"><a href="#handout-section-7-4-svd-9-2-2-2-2" title="Copy heading and permalink for Answer 1" aria-label="Copy heading and permalink for Answer 1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="handout-section-7-4-svd-9-2-2-3">
 <div class="para" id="handout-section-7-4-svd-9-2-2-3-1">Therefore, the first <span class="process-math">\(r\)</span> columns of <span class="process-math">\(U\)</span> form an <span class="process-math">\(\underline{\hspace{3in}}\)</span> for <span class="process-math">\(\underline{\hspace{1.5in}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<details id="handout-section-7-4-svd-9-2-2-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="handout-section-7-4-svd-9-2-2-3-2-1">orthonormal basis; <span class="process-math">\(\Col(A)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1"><a href="#handout-section-7-4-svd-9-2-2-3-2" title="Copy heading and permalink for Answer 1" aria-label="Copy heading and permalink for Answer 1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="handout-section-7-4-svd-9-2-2-4">
 <div class="para" id="handout-section-7-4-svd-9-2-2-4-1">Since the remaining columns of <span class="process-math">\(U\)</span> are created so that all columns of <span class="process-math">\(U\)</span> form an orthonormal basis for <span class="process-math">\(\mathbb{R}^m\text{,}\)</span> we see that <span class="process-math">\(\left\{\vec u_{r+1}, \dots, \vec u_m\right\}\)</span> is a set of <span class="process-math">\(\underline{\hspace{2in}}\)</span> vectors which live in <span class="process-math">\(\underline{\hspace{3in}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-2-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<details id="handout-section-7-4-svd-9-2-2-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="handout-section-7-4-svd-9-2-2-4-2-1">orthonormal; <span class="process-math">\(\Col(A)^\perp = \Nul(A^T)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-2-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1"><a href="#handout-section-7-4-svd-9-2-2-4-2" title="Copy heading and permalink for Answer 1" aria-label="Copy heading and permalink for Answer 1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-2-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="handout-section-7-4-svd-9-2-2-5">
 <div class="para" id="handout-section-7-4-svd-9-2-2-5-1">Therefore, the last <span class="process-math">\(m - r\)</span> columns of <span class="process-math">\(U\)</span> form an <span class="process-math">\(\underline{\hspace{3in}}\)</span> for <span class="process-math">\(\underline{\hspace{1.5in}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-2-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<details id="handout-section-7-4-svd-9-2-2-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="handout-section-7-4-svd-9-2-2-5-2-1">orthonormal basis; <span class="process-math">\(\Nul(A^T)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-2-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1"><a href="#handout-section-7-4-svd-9-2-2-5-2" title="Copy heading and permalink for Answer 1" aria-label="Copy heading and permalink for Answer 1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-2-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
 <div class="para">Now, consider the rows of <span class="process-math">\(V^T\text{:}\)</span>
@@ -667,27 +1006,48 @@ A=\begin{bmatrix}1 \amp -1\\ -2 \amp 2\\ 2 \amp -2\end{bmatrix}.
 <li id="handout-section-7-4-svd-9-2-4-1">
 <div class="para" id="handout-section-7-4-svd-9-2-4-1-1">The last <span class="process-math">\(n-r\)</span> rows of <span class="process-math">\(V^T\)</span> are eigenvectors of <span class="process-math">\(A^TA\)</span> which correspond to an eigenvalue of <span class="process-math">\(\underline{\hspace{1in}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-4-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<details id="handout-section-7-4-svd-9-2-4-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="handout-section-7-4-svd-9-2-4-1-2-1">
+<span class="process-math">\(\lambda = 0\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-4-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1"><a href="#handout-section-7-4-svd-9-2-4-1-2" title="Copy heading and permalink for Answer 1" aria-label="Copy heading and permalink for Answer 1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-4-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="handout-section-7-4-svd-9-2-4-2">
 <div class="para" id="handout-section-7-4-svd-9-2-4-2-1">Therefore, <span class="process-math">\(\left\{\vec v_{r+1}, \dots, \vec v_n\right\}\)</span> form an <span class="process-math">\(\underline{\hspace{3in}}\)</span> for <span class="process-math">\(\underline{\hspace{2in}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-4-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<details id="handout-section-7-4-svd-9-2-4-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="handout-section-7-4-svd-9-2-4-2-2-1">orthonormal basis; <span class="process-math">\(\Nul(A^TA)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-4-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1"><a href="#handout-section-7-4-svd-9-2-4-2-2" title="Copy heading and permalink for Answer 1" aria-label="Copy heading and permalink for Answer 1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-4-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="handout-section-7-4-svd-9-2-4-3">
 <div class="para" id="handout-section-7-4-svd-9-2-4-3-1">We have that <span class="process-math">\(\Nul(A^TA) = \Nul(A)\text{.}\)</span> Thus, the last <span class="process-math">\(n - r\)</span> rows of <span class="process-math">\(V^T\)</span> form an <span class="process-math">\(\underline{\hspace{3in}}\)</span> for <span class="process-math">\(\underline{\hspace{1.5in}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-4-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<details id="handout-section-7-4-svd-9-2-4-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="handout-section-7-4-svd-9-2-4-3-2-1">orthonormal basis; <span class="process-math">\(\Nul(A)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-4-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1"><a href="#handout-section-7-4-svd-9-2-4-3-2" title="Copy heading and permalink for Answer 1" aria-label="Copy heading and permalink for Answer 1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-4-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="handout-section-7-4-svd-9-2-4-4">
 <div class="para" id="handout-section-7-4-svd-9-2-4-4-1">Since <span class="process-math">\(V^T\)</span> is an orthogonal matrix, we know that it’s <span class="process-math">\(n\)</span> rows form an orthonormal basis for <span class="process-math">\(\mathbb{R}^n\text{.}\)</span> Therefore, <span class="process-math">\(\left\{\vec v_1, \dots, \vec v_r\right\}\)</span> is a set of <span class="process-math">\(\underline{\hspace{2in}}\)</span> vectors which live in <span class="process-math">\(\underline{\hspace{3in}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-4-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<details id="handout-section-7-4-svd-9-2-4-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="handout-section-7-4-svd-9-2-4-4-2-1">orthonormal; <span class="process-math">\(\Nul(A)^\perp = \Row(A)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-4-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1"><a href="#handout-section-7-4-svd-9-2-4-4-2" title="Copy heading and permalink for Answer 1" aria-label="Copy heading and permalink for Answer 1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-4-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="handout-section-7-4-svd-9-2-4-5">
 <div class="para" id="handout-section-7-4-svd-9-2-4-5-1">It follows that the first <span class="process-math">\(r\)</span> rows of <span class="process-math">\(V^T\)</span> form an <span class="process-math">\(\underline{\hspace{3in}}\)</span> for <span class="process-math">\(\underline{\hspace{1.5in}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-4-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-4-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<details id="handout-section-7-4-svd-9-2-4-5-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="handout-section-7-4-svd-9-2-4-5-2-1">orthonormal basis; <span class="process-math">\(\Row(A)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2-4-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1"><a href="#handout-section-7-4-svd-9-2-4-5-2" title="Copy heading and permalink for Answer 1" aria-label="Copy heading and permalink for Answer 1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item"><a href="#handout-section-7-4-svd-9-2-4-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
 <div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -749,6 +1109,21 @@ U = \begin{bmatrix} 0 \amp 0 \amp 1 \amp 0 \\ 0 \amp 1 \amp 0 \amp 0 \\ 0 \amp 0
 <div class="para">Find an orthonormal basis for each of the four subspaces.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-11-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="handout-section-7-4-svd-11-1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="handout-section-7-4-svd-11-1-2-1">
+<div class="para">Since <span class="process-math">\(\Sigma\)</span> has three nonzero elements on its diagonal, we know that <span class="process-math">\(\rank(A) = 3\text{.}\)</span> Therefore, the first 3 columns of <span class="process-math">\(U\)</span> form an orthonormal basis for <span class="process-math">\(\Col(A)\)</span> and the remaining column of <span class="process-math">\(U\)</span> forms an orthonormal basis for <span class="process-math">\(\Nul(A)^T\text{.}\)</span> Similarly, the first 3 rows of <span class="process-math">\(V^T\)</span> form an orthonormal basis for <span class="process-math">\(\Row(A)\)</span> and the remaining rows of <span class="process-math">\(V^T\)</span> form an orthonormal basis for <span class="process-math">\(\Nul(A)\text{.}\)</span> Therefore, we have that</div>
+<div class="displaymath process-math" id="handout-section-7-4-svd-11-1-2-1-11">
+\begin{align*}
+\mathcal{B}_1 \amp = \left\{\begin{bmatrix} 0 \\ 0 \\ 0 \\ 1 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}\right\} \text{ is an orthonormal basis for $\Col(A)$.}\\
+\mathcal{B}_2 \amp = \left\{\begin{bmatrix} 0 \\ 0 \\ -1\\ 0 \end{bmatrix}\right\} \text{ is an orthonormal basis for $\Nul(A^T)$.}\\
+\mathcal{B}_3 \amp = \left\{\begin{bmatrix} 0 \\ 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 0 \\ 1 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} \sqrt{0.2} \\ 0 \\ 0 \\ 0 \\ \sqrt{0.8} \end{bmatrix}\right\} \text{ is an orthonormal basis for $\Row(A)$.}\\
+\mathcal{B}_4 \amp = \left\{\begin{bmatrix} 0 \\ 0 \\ 0 \\ 1 \\ 0 \end{bmatrix}, \begin{bmatrix} -\sqrt{0.8} \\ 0 \\ 0 \\ 0 \\ \sqrt{0.2} \end{bmatrix}\right\} \text{ is an orthonormal basis for $\Nul(A)$.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-11-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.43.1"><a href="#handout-section-7-4-svd-11-1-2" title="Copy heading and permalink for Solution 7.43.1" aria-label="Copy heading and permalink for Solution 7.43.1">🔗</a></div>
+</div></details></div>
 <div class="workspace" data-space="2in"></div>
 <div class="autopermalink" data-description="Example 7.43"><a href="#handout-section-7-4-svd-11-1" title="Copy heading and permalink for Example 7.43" aria-label="Copy heading and permalink for Example 7.43">🔗</a></div></article><div class="para" id="handout-section-7-4-svd-11-2"> <div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-11-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><section class="onepage" id="p-7-4-spectral-connection"><div class="para" id="p-7-4-spectral-connection-2">We can create the <dfn class="terminology">spectral decomposition</dfn> for a general matrix <span class="process-math">\(A\)</span> in a similar way to <a href="Section-7-1.html#thm-spectral-decomposition" class="xref" data-knowl="./knowl/xref/thm-spectral-decomposition.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 7.19: Spectral Decomposition">Theorem 7.19</a>.<div class="autopermalink" data-description="Paragraph"><a href="#p-7-4-spectral-connection-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -770,6 +1145,23 @@ A=\sum_{i=1}^r \sigma_i\,\vec u_i\vec v_i^T.
 </h4>
 <div class="para" id="p-7-4-spectral-connection-4-1-1">Find the spectral decomposition of <span class="process-math">\(A = \begin{bmatrix}3 \amp 8 \\ 0 \amp 3 \end{bmatrix}\text{.}\)</span> Use the decomposition to identify the best rank 1 approximation of <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#p-7-4-spectral-connection-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="solutions"><details id="p-7-4-spectral-connection-4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="p-7-4-spectral-connection-4-2-1">
+<div class="para">Using the information from the solution to <a href="Section-7-4.html#ex-7-4-example1" class="xref" data-knowl="./knowl/xref/ex-7-4-example1.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.40">Example 7.40</a>,we have that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-7-4-example1.html" id="p-7-4-spectral-connection-4-2-1-2">
+\begin{align*}
+\begin{bmatrix} 3 \amp 8 \\ 0 \amp 3 \end{bmatrix} \amp = \sigma_1\vec u_1 \vec v_1^T + \sigma_2 \vec u_2 \vec v_2^T\\
+\amp = (9)\frac{1}{\sqrt{10}}\begin{bmatrix}3 \\ 1 \end{bmatrix} \frac{1}{\sqrt{10}}\begin{bmatrix} 1 \amp 3 \end{bmatrix} + (1)\frac{1}{\sqrt{10}}\begin{bmatrix} 1 \\ -3 \end{bmatrix}\frac{1}{\sqrt{10}}\begin{bmatrix} 3 \amp -1 \end{bmatrix} \\
+\amp = \frac{9}{10}\begin{bmatrix} 3 \amp 9 \\1 \amp 3 \end{bmatrix} + \frac{1}{10}\begin{bmatrix} 3 \amp -1 \\ -9 \amp 3 \end{bmatrix}\\
+\amp = \begin{bmatrix} 2.7 \amp 8.1 \\ 0.9 \amp 2.7 \end{bmatrix} + \begin{bmatrix} 0.3 \amp -0.1 \\ -0.9 \amp 0.3 \end{bmatrix}\text{.}
+\end{align*}
+</div>
+<div class="para">Therefore, the best rank 1 matrix that approximates <span class="process-math">\(A\)</span> is <span class="process-math">\(\begin{bmatrix} 2.7 \amp 8.1 \\ 0.9 \amp 2.7 \end{bmatrix}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#p-7-4-spectral-connection-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.45.1"><a href="#p-7-4-spectral-connection-4-2" title="Copy heading and permalink for Solution 7.45.1" aria-label="Copy heading and permalink for Solution 7.45.1">🔗</a></div>
+</div></details></div>
 <div class="autopermalink" data-description="Example 7.45"><a href="#p-7-4-spectral-connection-4" title="Copy heading and permalink for Example 7.45" aria-label="Copy heading and permalink for Example 7.45">🔗</a></div></article><div class="para" id="p-7-4-spectral-connection-5"> <div class="autopermalink" data-description="Paragraph"><a href="#p-7-4-spectral-connection-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><section class="onepage" id="handout-section-7-4-svd-13"><div class="para" id="handout-section-7-4-svd-13-1">We end this section, and this course, by investigating the connection between Spectral Decomposition and Image Compression. Consider an image in grayscale consisting of pixels in a <span class="process-math">\(880 \times 1100\)</span> grid. Since each pixel is in grayscale, we can assign it an integer value between 0 and 255 depending on how gray it is, where 0 is black and 255 is white. We can form a <span class="process-math">\(880 \times 1100\)</span> matrix where each entry is the grayscale value of the associated pixel. In general, the rank of this matrix could be quite high.<div class="autopermalink" data-description="Paragraph"><a href="#handout-section-7-4-svd-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
