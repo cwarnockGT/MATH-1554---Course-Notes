@@ -1,0 +1,279 @@
+
+<handout xml:id="handout-section-2-4-partitioned-matrices">
+  <title>2.4 Partitioned Matrices</title>
+
+  <page xml:id="p-2-4-overview">
+    <title>Overview</title>
+
+
+
+    <objectives xml:id="obj-2-4-topics-goals">
+      <title>Topics</title>
+      <ul>
+        <li>Partitioned matrices (or block matrices)</li>
+      </ul>
+    </objectives>
+
+    <objectives>
+      <title>Goals</title>
+      <ul>
+        <li>
+          Apply partitioned matrices to problems involving matrix multiplication
+          and invertibility.
+        </li>
+      </ul>
+    </objectives>
+
+    <p><nbsp/></p>
+
+    <example xml:id="ex-2-4-basic-partition" workspace="true">
+      <statement>
+        <p>The matrix</p>
+        <md>
+          \begin{bmatrix}
+            3 \amp 1 \amp 4 \amp 1 \amp 0\\
+            1 \amp 6 \amp 1 \amp 0 \amp 1\\
+            0 \amp 0 \amp 0 \amp 4 \amp 2
+          \end{bmatrix}
+        </md>
+
+        <p>can be partitioned into blocks:</p>
+
+        <md>
+          \begin{bmatrix}
+            \begin{bmatrix}
+              3 \amp 1 \amp 4\\
+              1 \amp 6 \amp 1
+            \end{bmatrix}
+            \amp
+            \begin{bmatrix}
+              1 \amp 0\\
+              0 \amp 1
+            \end{bmatrix}
+            \\
+            \begin{bmatrix}
+              0 \amp 0 \amp 0
+            \end{bmatrix}
+            \amp
+            \begin{bmatrix}
+              4 \amp 2
+            \end{bmatrix}
+          \end{bmatrix}
+          =
+          \begin{bmatrix}
+            A_{11} \amp A_{12}\\
+            A_{21} \amp A_{22}
+          \end{bmatrix}.
+        </md>
+
+        <p>
+          Each submatrix is called a <em>block</em>. Blocks can have different sizes.
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="ex-2-4-rref" workspace="1in">
+      <statement>
+        <p>
+          A row-reduced matrix can often be written in block form:
+        </p>
+
+        <md>
+          \begin{bmatrix}
+            1 \amp 0 \amp 0 \amp 0 \amp \ast \amp \cdots \amp \ast\\
+            0 \amp 1 \amp 0 \amp 0 \amp \ast \amp \cdots \amp \ast\\
+            0 \amp 0 \amp 1 \amp 0 \amp \ast \amp \cdots \amp \ast\\
+            0 \amp 0 \amp 0 \amp 1 \amp \ast \amp \cdots \amp \ast\\
+            0 \amp 0 \amp 0 \amp 0 \amp 0 \amp \cdots \amp 0\\
+            0 \amp 0 \amp 0 \amp 0 \amp 0 \amp \cdots \amp 0
+          \end{bmatrix}
+          =
+          \begin{bmatrix}
+            I_4 \amp F\\
+            0 \amp 0
+          \end{bmatrix}.
+        </md>
+
+        <p>
+          This form is helpful when studying the <em>null space</em> of a matrix.
+        </p>
+      </statement>
+    </example>
+  </page>
+
+  <p><nbsp/></p>
+
+
+  <page xml:id="p-2-4-row-column">
+    <title>Row–Column Method</title>
+
+    <p>
+      Recall that multiplying a row vector by a column vector produces a scalar.
+    </p>
+
+    <example xml:id="ex-2-4-dot-product" workspace="1in">
+      <statement>
+        <md>
+          \begin{bmatrix}1 \amp 1 \amp 1\end{bmatrix}
+          \begin{bmatrix}1\\0\\2\end{bmatrix} = 
+        </md>
+      </statement>
+      <solution>
+        <p>
+            Note that <md>
+          \begin{bmatrix}1 \amp 1 \amp 1\end{bmatrix}
+          \begin{bmatrix}1\\0\\2\end{bmatrix} = 1(1) + 1(0) + 1(2) = 1 + 0 + 2 = 3
+        </md>
+        </p>
+      </solution>
+    </example>
+
+    <theorem xml:id="thm-row-column">
+      <title>Row–Column Method</title>
+      <statement>
+        <p>
+          If <m>A</m> is <m>m\times n</m> and <m>B</m> is <m>n\times p</m>, then the
+          <m>(i,j)</m> entry of <m>AB</m> is
+        </p>
+        <md>
+          \text{row}_i(A)\cdot \text{col}_j(B).
+        </md>
+      </statement>
+    </theorem>
+
+    <p>
+      Partitioned matrices can be multiplied the same way, treating each block like
+      a single entry (provided dimensions match).
+    </p>
+
+    <example>
+        <introduction>
+            <p>
+                Let <m> A = \begin{bmatrix} 1 \amp 0 \\ 3 \amp -1 \end{bmatrix}</m>                
+            </p>
+        </introduction>
+        <task workspace="1in">
+            <statement>
+                <p>
+                    Verify that <m>A^2 = I_2</m>.
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Note that <md>A^2 = \begin{bmatrix} 1 \amp 0 \\ 3 \amp -1 \end{bmatrix}\begin{bmatrix} 1 \amp 0 \\ 3 \amp -1 \end{bmatrix} = \begin{bmatrix} 1 \amp 0 \\ 3 - 3 \amp (-1)^2 \end{bmatrix} = \begin{bmatrix} 1 \amp 0 \\ 0 \amp 1 \end{bmatrix} = I_2</md>
+                </p>
+            </solution>
+        </task>
+        <task workspace="4in">
+            <statement>
+                <p>
+                    Use partitioned matrices to show that <m>M^2 = I_4</m>, where <md> M = \begin{bmatrix} 1 \amp 0 \amp 0 \amp 0 \\ 3 \amp -1 \amp 0 \amp 0 \\ 1 \amp 0 \amp -1 \amp 0 \\ 0 \amp 1 \amp -3 \amp 1 \end{bmatrix}</md>
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    Note that <m>M</m> can be written as <md>M = \begin{bmatrix} A \amp 0_2 \\ I_2 \amp -A \end{bmatrix}</md>, where <m>0_2</m> is the <m>2 \times 2</m> zero matrix. Then, we have that <md>
+                        <mrow> M^2 \amp = \begin{bmatrix} A \amp 0_2 \\ I_2 \amp -A\end{bmatrix}\begin{bmatrix} A \amp 0_2 \\ I_2 \amp -A \end{bmatrix}</mrow> 
+                        <mrow> \amp = \begin{bmatrix} A^2 + 0_2I_2 \amp A0_2 + 0_2(-A) \\ I_2A + -AI_2 \amp I_20_2 + (-A)(-A) \end{bmatrix}</mrow> 
+                        <mrow> \amp = \begin{bmatrix} A^2 \amp 0_2 \\ A - A \amp A^2 \end{bmatrix}</mrow>
+                        <mrow> \amp = \begin{bmatrix} I_2 \amp 0_2 \\ 0_2 \amp I_2\end{bmatrix}</mrow>
+                        <mrow> \amp = I_4</mrow>
+                    </md>
+                </p>
+            </solution>
+        </task>
+    </example>    
+  </page>
+
+
+  <page xml:id="p-2-4-block-inverse">
+    <title>Example: Block Matrix Inverse</title>
+
+    <example xml:id="ex-2-4-block-inverse" workspace="true">
+      <statement>
+        <p>
+          Let <m>A,B,C</m> be invertible <m>n \times n </m> matrices.
+          Find the inverse of:
+        </p>
+        <md>
+          \begin{bmatrix}
+            A \amp B\\
+            0 \amp C
+          \end{bmatrix}.
+        </md>
+      </statement>
+      <solution>
+        <p>
+            We are looking for <m>n \times n</m> matrices <m>W,X,Y,Z</m> such that <md>\begin{bmatrix} A \amp B \\ 0 \amp C \end{bmatrix}\begin{bmatrix} W \amp X \\ Y \amp Z \end{bmatrix} = \begin{bmatrix} I_2 \amp 0 \\ 0 \amp I_2 \end{bmatrix}</md>. Expanding the left side yields <md>\begin{bmatrix} AW + BY \amp AX + BZ \\ 0W + CY \amp 0X + CZ \end{bmatrix} = \begin{bmatrix} I_2 \amp 0 \\ 0 \amp I_2 \end{bmatrix}</md>. Setting corresponding entries equal, we see that <md>
+                <mrow> AW + BY \amp = I_2 </mrow>
+                <mrow> AX + BZ \amp = 0</mrow>
+                <mrow> CY \amp = 0 </mrow>
+                <mrow> CZ \amp = I_2</mrow> 
+            </md>
+            Since <m>C</m> is invertible, multiplying the last two equations by <m>C^{-1}</m> on the left yields <m>Y = 0</m> and <m>Z = C^{-1}</m>. Plugging <m>Y = 0</m> into the top equation yields <md>AW + B0 = I_2 \quad \implies \quad AW = I_2 \quad \implies \quad W = A^{-1}</md>. Plugging <m>Z = C^{-1}</m> into the equation <m>AX + BZ = 0</m> yields <md>AX + BC^{-1} = 0 \ \implies \ AX = -BC^{-1} \ \implies \ X = -A^{-1}BC^{-1}</md>. Therefore, we have that <md>\begin{bmatrix} A \amp B \\ 0 \amp C \end{bmatrix}^{-1} = \begin{bmatrix} W \amp X \\ Y \amp Z \end{bmatrix} = \begin{bmatrix} A^{-1} \amp -A^{-1}BC^{-1} \\ 0 \amp C^{-1}\end{bmatrix}</md>.
+        </p>
+        <p>
+            Let's check. Note that <md>
+                
+                <mrow>\begin{bmatrix} A \amp B \\ 0 \amp C \end{bmatrix}\begin{bmatrix}A \amp B \\ 0 \amp C \end{bmatrix}^{-1} \amp = \begin{bmatrix} A \amp B \\ 0 \amp C \end{bmatrix}\begin{bmatrix}A^{-1} \amp -A^{-1}BC^{-1} \\ 0 \amp C^{-1} \end{bmatrix} </mrow> 
+                <mrow> \amp = \begin{bmatrix} AA^{-1} + 0B \amp A(-A^{-1}BC^{-1}) + BC^{-1} \\ 0A^{-1} + C0 \amp 0(-A^{-1}BC^{-1}) + CC^{-1} \end{bmatrix}</mrow> 
+                <mrow> \amp = \begin{bmatrix} I_2 \amp 0 \\ 0 \amp I_2 \end{bmatrix}</mrow>
+            </md>.
+        </p>
+      </solution>
+    </example>
+
+    <p><nbsp/></p>
+
+  </page>
+
+
+  <page xml:id="p-2-4-strassen">
+    <title>The Strassen Algorithm</title>
+
+    <p>The following two examples demonstrate how partitioned matrices can be used. Students are not responsible for this material.</p>
+
+    <example workspace="0.5in">
+        <title>Strassen's Algorithm</title>
+        <statement>
+            <p>
+                Standard multiplication of two <m>n\times n</m> matrices requires about <m>n^3</m> operations.
+            </p>
+
+            <p>
+            Strassen’s algorithm partitions matrices and reduces the complexity to approximately <m>n^{2.803}</m>.
+            </p>
+
+            <image source="./StrassenAlgorithm.png" width="100%">
+                <shortdescription>Visual representation of recursive block multiplication used in Strassen's algorithm.</shortdescription>
+            </image>
+        </statement>
+    </example>
+      
+    <example workspace="0.5in"> 
+        <title>Fast Fourier Transform</title>
+        <statement>
+            <p>
+                The Fast Fourier Transform (FFT) is another algorithm that uses partitioned matrices recursively.
+            </p>
+
+            <md>
+                G_0 =
+                \begin{bmatrix}1\end{bmatrix},
+                \qquad
+                G_{n+1} =
+                \begin{bmatrix}
+                    G_n \amp -G_n\\
+                    G_n \amp G_n
+                \end{bmatrix}.
+            </md>
+
+            <p>
+            This recursive structure allows computation in nearly linear time,
+            a dramatic improvement over <m>n^3</m>.
+            </p>
+        </statement> 
+    </example>
+  </page>
+
+</handout>
