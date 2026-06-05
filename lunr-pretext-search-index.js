@@ -1243,6 +1243,105 @@ var ptx_lunr_docs = [
   "body": "  For each matrix below, determine all values of so that the matrix is singular (not invertible). If there are no values of , explain why.          Note that . Thus, is missing a pivot if and only if . Therefore, is the only value of which makes singular.           Note that regardless of the value of , will have a pivot in each column. Therefore, no value of will make singular.           Note that . Thus, is missing a pivot in the third row if and only if . Therefore, is the only value of which makes singular.    "
 },
 {
+  "id": "Section-2-4",
+  "level": "1",
+  "url": "Section-2-4.html",
+  "type": "Section",
+  "number": "",
+  "title": "2.4 Partitioned Matrices",
+  "body": " 2.4 Partitioned Matrices   2.4 Partitioned Matrices   Overview   Topics   Partitioned matrices (or block matrices)     Goals   Apply partitioned matrices to problems involving matrix multiplication and invertibility.       The matrix   can be partitioned into blocks:   Each submatrix is called a block . Blocks can have different sizes.      A row-reduced matrix can often be written in block form:   This form is helpful when studying the null space of a matrix.       Row–Column Method  Recall that multiplying a row vector by a column vector produces a scalar.       Note that      Row–Column Method   If is and is , then the entry of is     Partitioned matrices can be multiplied the same way, treating each block like a single entry (provided dimensions match).    Let      Verify that .    Note that       Use partitioned matrices to show that , where     Note that can be written as , where is the zero matrix. Then, we have that        Example: Block Matrix Inverse    Let be invertible matrices. Find the inverse of:     We are looking for matrices such that . Expanding the left side yields . Setting corresponding entries equal, we see that Since is invertible, multiplying the last two equations by on the left yields and . Plugging into the top equation yields . Plugging into the equation yields . Therefore, we have that .  Let's check. Note that .       The Strassen Algorithm  The following two examples demonstrate how partitioned matrices can be used. Students are not responsible for this material.   Strassen's Algorithm   Standard multiplication of two matrices requires about operations.  Strassen’s algorithm partitions matrices and reduces the complexity to approximately .   Visual representation of recursive block multiplication used in Strassen's algorithm.      Fast Fourier Transform   The Fast Fourier Transform (FFT) is another algorithm that uses partitioned matrices recursively.   This recursive structure allows computation in nearly linear time, a dramatic improvement over .      "
+},
+{
+  "id": "obj-2-4-topics-goals",
+  "level": "2",
+  "url": "Section-2-4.html#obj-2-4-topics-goals",
+  "type": "Objectives",
+  "number": "",
+  "title": "Topics",
+  "body": " Topics   Partitioned matrices (or block matrices)   "
+},
+{
+  "id": "p-2-4-overview-3",
+  "level": "2",
+  "url": "Section-2-4.html#p-2-4-overview-3",
+  "type": "Objectives",
+  "number": "",
+  "title": "Goals",
+  "body": " Goals   Apply partitioned matrices to problems involving matrix multiplication and invertibility.   "
+},
+{
+  "id": "ex-2-4-basic-partition",
+  "level": "2",
+  "url": "Section-2-4.html#ex-2-4-basic-partition",
+  "type": "Example",
+  "number": "2.30",
+  "title": "",
+  "body": "  The matrix   can be partitioned into blocks:   Each submatrix is called a block . Blocks can have different sizes.   "
+},
+{
+  "id": "ex-2-4-rref",
+  "level": "2",
+  "url": "Section-2-4.html#ex-2-4-rref",
+  "type": "Example",
+  "number": "2.31",
+  "title": "",
+  "body": "  A row-reduced matrix can often be written in block form:   This form is helpful when studying the null space of a matrix.   "
+},
+{
+  "id": "ex-2-4-dot-product",
+  "level": "2",
+  "url": "Section-2-4.html#ex-2-4-dot-product",
+  "type": "Example",
+  "number": "2.32",
+  "title": "",
+  "body": "     Note that    "
+},
+{
+  "id": "thm-row-column",
+  "level": "2",
+  "url": "Section-2-4.html#thm-row-column",
+  "type": "Theorem",
+  "number": "2.33",
+  "title": "Row–Column Method.",
+  "body": " Row–Column Method   If is and is , then the entry of is    "
+},
+{
+  "id": "p-2-4-row-column-6",
+  "level": "2",
+  "url": "Section-2-4.html#p-2-4-row-column-6",
+  "type": "Example",
+  "number": "2.34",
+  "title": "",
+  "body": "  Let      Verify that .    Note that       Use partitioned matrices to show that , where     Note that can be written as , where is the zero matrix. Then, we have that     "
+},
+{
+  "id": "ex-2-4-block-inverse",
+  "level": "2",
+  "url": "Section-2-4.html#ex-2-4-block-inverse",
+  "type": "Example",
+  "number": "2.35",
+  "title": "",
+  "body": "  Let be invertible matrices. Find the inverse of:     We are looking for matrices such that . Expanding the left side yields . Setting corresponding entries equal, we see that Since is invertible, multiplying the last two equations by on the left yields and . Plugging into the top equation yields . Plugging into the equation yields . Therefore, we have that .  Let's check. Note that .   "
+},
+{
+  "id": "p-2-4-strassen-3",
+  "level": "2",
+  "url": "Section-2-4.html#p-2-4-strassen-3",
+  "type": "Example",
+  "number": "2.36",
+  "title": "Strassen’s Algorithm.",
+  "body": " Strassen's Algorithm   Standard multiplication of two matrices requires about operations.  Strassen’s algorithm partitions matrices and reduces the complexity to approximately .   Visual representation of recursive block multiplication used in Strassen's algorithm.    "
+},
+{
+  "id": "p-2-4-strassen-4",
+  "level": "2",
+  "url": "Section-2-4.html#p-2-4-strassen-4",
+  "type": "Example",
+  "number": "2.37",
+  "title": "Fast Fourier Transform.",
+  "body": " Fast Fourier Transform   The Fast Fourier Transform (FFT) is another algorithm that uses partitioned matrices recursively.   This recursive structure allows computation in nearly linear time, a dramatic improvement over .   "
+},
+{
   "id": "Section-2-5",
   "level": "1",
   "url": "Section-2-5.html",
@@ -1301,7 +1400,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-5.html#thm-lu-factorization",
   "type": "Theorem",
-  "number": "2.30",
+  "number": "2.38",
   "title": "<span class=\"process-math\">\\(LU\\)<\/span> Factorization.",
   "body": " Factorization   If is an matrix that can be row reduced to echelon form without row exchanges, then there exists matrices and such that , where   is a lower triangular matrix with ones on the diagonal.  is an echelon form of .    "
 },
@@ -1310,7 +1409,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-5.html#ex-lu-form",
   "type": "Example",
-  "number": "2.31",
+  "number": "2.39",
   "title": "",
   "body": "  If is a matrix, then its LU factorization has the form:    "
 },
@@ -1319,7 +1418,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-5.html#ex-compute-lu",
   "type": "Example",
-  "number": "2.32",
+  "number": "2.40",
   "title": "",
   "body": "  Compute the LU factorization of:     First, let's determine the sizes of and . Since is an echelon form of , we know that has the same dimension as . Thus, is a matrix. Since is a square matrix that multiplies on the left, must be a matrix.  Now, we determine by row reducing to echelon form only using row replacements of the form . Each time we make one of these row replacements, we are finding an entry of , specifically we are finding that .  I tend to write down the form of with blanks in the lower portion and fill them in after each row replacement. So, I start the problem with the following written towards the bottom of the page:    Note the following row operations:    : Note that the row replacement could be written as , so we have that .      : Since we used the row operation , we have that .      : Since we used the row operation , we have that . Since the matrix is in echelon form, we have found .      Therefore, we have that . We can check by verifying that .   "
 },
@@ -1328,7 +1427,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-5.html#ex-compute-lu2",
   "type": "Example",
-  "number": "2.33",
+  "number": "2.41",
   "title": "",
   "body": "  Compute the LU factorization of:     Note will be a matrix and will be a matrix. I start by writing the following near the bottom of the page:    Note the following row operations: Therefore, we have that and .   Note that if we were only interested getting to echelon form, then we could do ; however, since we are interested in -factorization we must pay attention to Caution 2 . Therefore, we must use Row 2 next since it is the next pivot column. Note the following: Thus, we have that and .   We are still not in echelon form, so we must do one more row operation. Therefore, . What about ? Well, we didn't need to do anything to Row 5, so can we put anything in that position? NO. Notice, that if you put a non-zero number in that position, say , then we are saying that we need to do the row replacement which would mess up our row of zeros at the bottom of the matrix, thus undoing our work in getting to echelon form. Therefore, we need to make NO change to Row 5, which is doing the row replacement , so must be .   Since the final matrix is in echelon form, we have found . However, there is still one more entry of to determine, . Do we have to put a zero there? NO. Note that whatever number is in that position, say , would result in the row replacement which actually doesn't change anything since Row 4 is a row consisting entirely of 's. Therefore, , where can be anything you wish. Thus, we have that One consequence of this is that the factorization of a matrix might not be unique. It is true that is unique; however, there could be many possible 's that work.   "
 },
@@ -1337,7 +1436,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-5.html#ex-solve-with-lu",
   "type": "Example",
-  "number": "2.34",
+  "number": "2.42",
   "title": "",
   "body": "  Solve the linear system with:     We start with determining a vector so that . Note that Therefore, we have that .   Next, we determine so that . Note that Therefore, we have that is the solution to the system .   "
 },
@@ -1373,7 +1472,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#def-subset-rn",
   "type": "Definition",
-  "number": "2.35",
+  "number": "2.43",
   "title": "Subset of <span class=\"process-math\">\\(\\mathbb{R}^n\\)<\/span>.",
   "body": " Subset of   A subset of is any collection of vectors contained in .   "
 },
@@ -1382,7 +1481,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#def-subspace",
   "type": "Definition",
-  "number": "2.36",
+  "number": "2.44",
   "title": "Subspace.",
   "body": " Subspace   A subset of is a subspace if:    for all .  for any scalar and any .    "
 },
@@ -1391,7 +1490,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#ex-subspace-pictures",
   "type": "Example",
-  "number": "2.37",
+  "number": "2.45",
   "title": "",
   "body": "  Which of the following subsets could be subspaces of ?   A graphic showing three subsets of . The first (a) is the unit square. The second (b) is a line through the origin. The third (c) is a line that does not pass throught the origin.     For (a), note that the unit square contains the vector , but does not contain the vector . Therefore, the unit square is NOT a subspace of .  For (b), first note that the line passes throught the origin, so the subset contains . Next, if is a nonzero vector on the line, we see that every vector on the line can be expressed as some multiple of . Therefore, the subset can be written as . It follows that the subset is closed under vector addition and scalar multiplication. Hence, a line passing throught the origin IS as subpace of .  For (c), note that the line does NOT pass through the origin. So the subset does NOT contain and is NOT a subspace of .   "
 },
@@ -1400,7 +1499,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#p-2-8-subspace-examples-2",
   "type": "Example",
-  "number": "2.38",
+  "number": "2.46",
   "title": "",
   "body": "  For each subset of given below, determine if it is a subspace of .          Note that . Also, we have that is closed under vector addition and scalar multiplication since every vector you choose in has to be since it is the only vector in . Thus, is a subspace of .           Note that , but . Therefore, is NOT closed under scalar multiplication, so is NOT a subspace of .           Note that , but . Thus, is not closed under vector addition, so is NOT a subspace of .           Since is the span of a set of vectors, we know that contains every possible linear combination of its vectors. Therefore, must contain and must be closed under vector addition and scalar multiplication. Hence, is a subspace of .    "
 },
@@ -1409,7 +1508,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#handout-section-2-8-subspaces-4-2",
   "type": "Example",
-  "number": "2.39",
+  "number": "2.47",
   "title": "",
   "body": "  The following subsets of are written in set-builder notation. For each, determine if it is a subspace of . Note that is the set of integers.          Note that , but since is not an integer. Therefore, is NOT closed under scalar multiplication, so is NOT a subspace of .           Note that . It follows that is a subspace of .           Note that . It follows that is a subspace of . In fact, the solution set of any homogeneous system is a subspace of . This subspace is called the nullspace (see ).           Note that , so is NOT a subspace of . In fact, the solution set of any inhomogeneous system is NOT a subspace of .    "
 },
@@ -1418,7 +1517,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#thm-subspace-are-span",
   "type": "Theorem",
-  "number": "2.40",
+  "number": "2.48",
   "title": "",
   "body": "  Every subspace of can be written as the span of a finite number of vectors; that is, if is a subspace of , then there exists vectors so that .   "
 },
@@ -1427,7 +1526,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#def-col-null",
   "type": "Definition",
-  "number": "2.41",
+  "number": "2.49",
   "title": "Column Space and Null Space.",
   "body": " Column Space and Null Space   Let be an matrix.   The column space of , , is the subspace of spanned by .  The null space of , , is the subspace of consisting of all solutions to .    "
 },
@@ -1436,7 +1535,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#thm-nul-same-col-dif",
   "type": "Theorem",
-  "number": "2.42",
+  "number": "2.50",
   "title": "",
   "body": "  Let be an matrix, and let be any matrix which is row equivalent to . Then  The subspaces and are most likely different. So, often, .  The subspaces and are always the same. So, it is always true that .     "
 },
@@ -1445,7 +1544,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#ex-colspace-membership",
   "type": "Example",
-  "number": "2.43",
+  "number": "2.51",
   "title": "",
   "body": "  Is in the column space of ?     By , asking whether is equivalent to asking whether the matrix equation has a solution. By , we must augment with the matrix and cannot augment with . Note that . Since we do not have a pivot in the augmented column, the system is consistent. Hence, .  You can find a particular linear combination of the columns of which produce by continuing to solve the system.   "
 },
@@ -1454,7 +1553,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#ex-nullspace-membership",
   "type": "Example",
-  "number": "2.44",
+  "number": "2.52",
   "title": "",
   "body": "  Determine whether is in .     By , we are free to check whether or since . Note that . Thus, for any value of .  Let's determine if there are any other vectors in . Since we determine all solutions to . Since is already in RREF, we see that is a free variable and and are pivot variables. It follows that    "
 },
@@ -1463,7 +1562,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#def-basis",
   "type": "Definition",
-  "number": "2.45",
+  "number": "2.53",
   "title": "Basis.",
   "body": " Basis   A basis for a subspace is a set of linearly independent vectors in that span .   "
 },
@@ -1472,7 +1571,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#ex-basis-subspace",
   "type": "Example",
-  "number": "2.46",
+  "number": "2.54",
   "title": "",
   "body": "  Let      Find at least three vectors which live in .    We have the following  since  since  since        Find a matrix such that .    Note that if , then , which is the defining characteristic of the vectors in . Therefore, .      Construct a basis for .    Note that the second, third, and fourth columns of correspond to free variables. Therefore, and are the free variables and is the pivot variables. It follows that   Therefore, we see that the three vectors span . Since they are linearly independent, they form a basis for . Thus, a basis for is the set of vectors . This basis is NOT unique. Note you can replace any of the three vectors with a nonzero multiple of itself. Also, you could replace one of them with suitable linear combination. For example, you could replace the middle vector with the first place the second and that would still yield a valid basis since the resulting three vectors would be linearly independent and span the space.    "
 },
@@ -1481,7 +1580,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#ex-basis-col-null",
   "type": "Example",
-  "number": "2.47",
+  "number": "2.55",
   "title": "",
   "body": "  Construct a basis for and .     First, note that we can express as the span of some vectors by finding all solutions to . It follows that Thus, a basis for is   By the definition of , we see that Note that the set containing the four column vectors of is NOT a basis since those vectors are NOT linearly independent. From , we see that Column 2 and Column 4 of are NOT pivot columns. Therefore, they are linearly dependent on the other columns of . It follows that the following set containing Column 1 and Column 2 of spans and is linearly independent, so it is a basis for .    "
 },
@@ -1490,7 +1589,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#ex-V-ab-equals-zero",
   "type": "Example",
-  "number": "2.48",
+  "number": "2.56",
   "title": "",
   "body": "  Let      Give an example of a vector that is in .    Note that since and since .      Give an example of a vector that is not in .    Note that since       Is the zero vector in ?    Yes, since .      Is a subspace of ?    From (a) and (b), we see that , but . Thus, is not closed under vector addition. Hence, is NOT a subspace of .    "
 },
@@ -1526,7 +1625,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#p-2-9-intro-objectives-7",
   "type": "Example",
-  "number": "2.49",
+  "number": "2.57",
   "title": "",
   "body": "  Sketch in each coordinate system below.    Two coordinate systems showing different basis orientations.  Two grids with different bases; vectors and are drawn.    "
 },
@@ -1535,7 +1634,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#def-coordinates",
   "type": "Definition",
-  "number": "2.50",
+  "number": "2.58",
   "title": "Coordinates Relative to a Basis.",
   "body": " Coordinates Relative to a Basis   Let be a basis for a subspace . For any , the coordinates of relative to are the scalars such that   The coordinate vector of relative to is:    "
 },
@@ -1544,7 +1643,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#ex-coordinates",
   "type": "Example",
-  "number": "2.51",
+  "number": "2.59",
   "title": "",
   "body": "  Let:   Verify that is in the span of , and compute .    Let . Note that is a basis for since the vectors in both span and are linearly independent.  We determine if by seeing whether can be written as a linear combination of the basis vectors; that is, we need to find whether there exists so that . Note that Therefore, we have that . Since there were no free variables, we see that this is the ONLY way of expressing as a linear combination of the basis vectors. Therefore, The coordinate vector of relative to being a vector in is not a mistake. This must happen since the basis contains two vectors. If you chose a different basis for , say , then would still be a vector in , but would most likely be different.   "
 },
@@ -1553,7 +1652,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#ex-coordinates2",
   "type": "Example",
-  "number": "2.52",
+  "number": "2.60",
   "title": "",
   "body": "  Let   and .     Verify that is a basis for .    Note that the matrix has a pivot in each column. Therefore, the columns are linearly independent. Since the vectors in span and are linearly independent, is a basis for .      Determine if .    Note that . So, .      Compute .    Since , we have .    "
 },
@@ -1562,7 +1661,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#def-dimension",
   "type": "Definition",
-  "number": "2.53",
+  "number": "2.61",
   "title": "Dimension.",
   "body": " Dimension   The dimension of a nonzero subspace , written , is the number of vectors in any basis of . We define .   "
 },
@@ -1571,7 +1670,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#thm-dimension-basis",
   "type": "Theorem",
-  "number": "2.54",
+  "number": "2.62",
   "title": "Dimension Is Well-Defined.",
   "body": " Dimension Is Well-Defined   Any two bases and of a nonzero subspace have the same number of vectors.   "
 },
@@ -1580,7 +1679,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#note-examples-dimension",
   "type": "Note",
-  "number": "2.55",
+  "number": "2.63",
   "title": "",
   "body": "Some Examples:   .   has dimension .  is the number of free variables.  is the number of pivotal columns.   "
 },
@@ -1589,7 +1688,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#def-rank",
   "type": "Definition",
-  "number": "2.56",
+  "number": "2.64",
   "title": "Rank.",
   "body": " Rank   The rank of a matrix is the dimension of its column space.   "
 },
@@ -1598,7 +1697,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#ex-rank-computation",
   "type": "Example",
-  "number": "2.57",
+  "number": "2.65",
   "title": "",
   "body": "  Compute and and find a basis for and , where     First, note that we can express the column space as the span of the columns of ; that is, . This does not mean that the set containing those five vectors forms a basis. In fact, we know from that no set containing five vectors from can form a basis. Since Columns 3 and 5 of do not correspond to pivot columns, they are linearly dependent on the other vectors and are not needed in the span. Therefore, we have that a basis for is . Thus, .  From , is equal to the number of free variables. Therefore, . We can find a basis for by finding two vectors which are linearly independent satisfy . You can attempt to find such vectors by guessing (strategically). If that fails, you can proceed to following our normal procedure. Note that we have already been given an echelon form of and can see that Columns 3 and 5 correspond to free variables. Solving for the pivot varialbes in terms of and yields , , and . It follows that . Thus, a basis for is .   "
 },
@@ -1607,7 +1706,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#thm-rank-theorem",
   "type": "Theorem",
-  "number": "2.58",
+  "number": "2.66",
   "title": "Rank Theorem.",
   "body": " Rank Theorem   If a matrix has columns, then    "
 },
@@ -1616,7 +1715,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#thm-basis-theorem",
   "type": "Theorem",
-  "number": "2.59",
+  "number": "2.67",
   "title": "Basis Theorem.",
   "body": " Basis Theorem   Any two bases for a subspace have the same number of vectors. That common number of vectors is the dimension of the subspace.   "
 },
@@ -1625,7 +1724,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#thm-IMT-Cont-1",
   "type": "Theorem",
-  "number": "2.60",
+  "number": "2.68",
   "title": "The Invertible Matrix Theorem (Continued).",
   "body": " The Invertible Matrix Theorem (Continued)   Let be an matrix. The following are equivalent:   (a)   is invertible.  (m)   The columns of form a basis for .  (n)   .  (o)   .  (p)   .  (q)   .  (r)   .    "
 },
@@ -1634,7 +1733,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#ex-rref-rank-questions",
   "type": "Example",
-  "number": "2.61",
+  "number": "2.69",
   "title": "",
   "body": "  For each part below, give an example of a matrix in RREF with the stated property, if possible.          In order for , states that must have 3 pivots. Since only has two rows, it cannot have 3 pivots. Therefore, this is not possible.           In order for , the matrix must have 2 pivots. This is possible, for example . In this case, .           In order for , states that must have two free variables. Therefore, works. In this case, .           Recall from that . Therefore, should have no free variables, or equivalently, should have a pivot in every column. This is impossible for a matrix with more columns than rows. Therefore, there is no matrix such that .    "
 },
