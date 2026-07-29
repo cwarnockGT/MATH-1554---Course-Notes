@@ -10,117 +10,117 @@ var ptx_lunr_docs = [
   "body": " 1.1 Systems of Linear Equations   1.1 Systems of Linear Equations    Topics and Objectives   Topics   Systems of Linear Equations  Matrix Notation  Elementary Row Operations  Existence and Uniqueness of Solutions     Goals   Characterize a linear system by the number of solutions and consistency.  Apply elementary row operations to solve linear systems.  Express a system as an augmented matrix.      A Single Linear Equation  A linear equation has the form: where, and are the coefficients , are the variables (unknowns), and is the dimension (number of variables).   Some Examples:  is a line in two dimensions.  is a plane in three dimensions.      Non Examples:           Systems of Linear Equations  When we have more than one linear equation, we have a system of linear equations . For example, a system of two linear equations is:       Solution to a Linear System  The set of all possible values of that satisfy every equation in the system is the solution, or solution set, to the system.     Consider finding solutions to the system given above . At this point, we don't have a great way of determining the solutions to a system of linear equations. We can try guessing some solutions.  Try : Note this points makes the first equation true since , but it does not make the second equation true since . Therefore, is not a solution to the system.  Try : Note plugging this point into the first equation yields which is a true statement. Plugging the point into the second equation yields which is also a true statement. Since the point makes both equations true, it is a solution to the system.  Can you find any more solutions?      How many solutions can a system have?     Two-Dimensional Case    Consider the following systems of two linear equations in two variables and determine how many solutions there are for each.        Graphing the two lines gives the following:  Two lines in the plane with a single point of intersection.   Cartesian axes with two lines, showing where they intersect.  The graph of the lines (in red) and (in blue), showing their intersection point at     We see that the lines only intersect at , so this is the only solution to the system.         Graphing the two lines gives the following:  Two parallel lines in the plane.   Cartesian axes with two parallel lines.  The graph of the lines (in red) and (in blue)    We see that the lines are parallel, so they never intersect. Therefore, there is no solution to the system.         Graphing the two lines gives the following:  Two lines lying on top of one another.   Cartesian axes with two parallel lines.  The graph of the lines (in red) and (in blue)    The two linear equations give the same line. Therefore, there are infinitely many points that satisfy both equations, any point that is on the line.     Conclusion: A system of linear equations in two variables can have solutions.   zero, one, or infinitely many         Three-Dimensional Case  A linear equation in three variables, , defines a plane in .    How many solutions can a system of two linear equations in three variables have?    Play around with drawing two planes in 3-space and seeing how they intersect. Can they never intersect? What about intersect in a finite number of points? What about intersect in infinitely many points?      How many solutions can a system of three linear equations in three variables have?    Play around with drawing three planes in 3-space and seeing how they intersect. Can they never intersect? What about intersect in a finite number of points? What about intersect in infinitely many points?     Conclusion: Every system of linear equations, no matter the number of equations and number of variables has solutions.  zero, one, or infinitely many        Row Reduction by Elementary Row Operations  As we saw in the previous examples, one way to solve a system of linear equations is by graphing. This is not practical for most examples, especially if we are working with four or more varialbes. A more useful approach to solving a linear system is to manipulate the equations through the use of row operations .    Replacement\/Addition: add a multiple of one row to another.  Interchange: swap two rows.  Scaling: multiply a row by a nonzero scalar.       Example of Row Reduction   Apply row operations to systematically simplify the system below to an equivalent (easier to read) form in order to more easily identify the solution(s).    We will simplify the system using appropriate row operations. I am going to go ahead and use augmented matrices since that is what we will do from here on out.     Therefore, we have that the only solution is .        Augmented Matrices  It’s redundant to write variables repeatedly, so we use a augmented matrix to simplify the notation for the system. For example, the previous system Can be writen as the augmented matrix The vertical bar separates the coefficient matrix (for ) from the constants.    Determine if the following system has a solution.    Note the following:     Note that the final row suggests that which is impossible, no matter the choice of . Therefore, there is no solution. So the system is inconsistent.        Consistent Systems and Row Equivalence   Consistent  A linear system is consistent if it has at least one solution . Otherwise, it is inconsistent .     Row Equivalence  Two matrices are row equivalent if a sequence of row operations transforms one matrix into the other.     Note : If the augmented matrices of two linear systems are row equivalent, they have the same solution set.    Fundamental Questions : Two questions that we will revisit many times throughout the course:  Does a given linear system have a solution? In other words, is it consistent?  If it is consistent, is the solution unique?      "
 },
 {
-  "id": "section-1-1-sol-2-2",
+  "id": "sec-1-1-systems-of-linear-equations-2-2",
   "level": "2",
-  "url": "Section-1-1.html#section-1-1-sol-2-2",
+  "url": "Section-1-1.html#sec-1-1-systems-of-linear-equations-2-2",
   "type": "Objectives",
   "number": "",
   "title": "Topics",
   "body": " Topics   Systems of Linear Equations  Matrix Notation  Elementary Row Operations  Existence and Uniqueness of Solutions   "
 },
 {
-  "id": "section-1-1-sol-2-3",
+  "id": "sec-1-1-systems-of-linear-equations-2-3",
   "level": "2",
-  "url": "Section-1-1.html#section-1-1-sol-2-3",
+  "url": "Section-1-1.html#sec-1-1-systems-of-linear-equations-2-3",
   "type": "Objectives",
   "number": "",
   "title": "Goals",
   "body": " Goals   Characterize a linear system by the number of solutions and consistency.  Apply elementary row operations to solve linear systems.  Express a system as an augmented matrix.   "
 },
 {
-  "id": "section-1-1-sol-2-5",
+  "id": "sec-1-1-systems-of-linear-equations-2-5",
   "level": "2",
-  "url": "Section-1-1.html#section-1-1-sol-2-5",
+  "url": "Section-1-1.html#sec-1-1-systems-of-linear-equations-2-5",
   "type": "Definition",
   "number": "1.1",
   "title": "A Single Linear Equation.",
   "body": " A Single Linear Equation  A linear equation has the form: where, and are the coefficients , are the variables (unknowns), and is the dimension (number of variables).  "
 },
 {
-  "id": "section-1-1-sol-3-4",
+  "id": "sec-1-1-systems-of-linear-equations-3-4",
   "level": "2",
-  "url": "Section-1-1.html#section-1-1-sol-3-4",
+  "url": "Section-1-1.html#sec-1-1-systems-of-linear-equations-3-4",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "solution, or solution set, "
 },
 {
-  "id": "section-1-1-sol-4-2",
+  "id": "sec-1-1-systems-of-linear-equations-4-2",
   "level": "2",
-  "url": "Section-1-1.html#section-1-1-sol-4-2",
+  "url": "Section-1-1.html#sec-1-1-systems-of-linear-equations-4-2",
   "type": "Example",
   "number": "1.3",
   "title": "",
   "body": "  Consider the following systems of two linear equations in two variables and determine how many solutions there are for each.        Graphing the two lines gives the following:  Two lines in the plane with a single point of intersection.   Cartesian axes with two lines, showing where they intersect.  The graph of the lines (in red) and (in blue), showing their intersection point at     We see that the lines only intersect at , so this is the only solution to the system.         Graphing the two lines gives the following:  Two parallel lines in the plane.   Cartesian axes with two parallel lines.  The graph of the lines (in red) and (in blue)    We see that the lines are parallel, so they never intersect. Therefore, there is no solution to the system.         Graphing the two lines gives the following:  Two lines lying on top of one another.   Cartesian axes with two parallel lines.  The graph of the lines (in red) and (in blue)    The two linear equations give the same line. Therefore, there are infinitely many points that satisfy both equations, any point that is on the line.     Conclusion: A system of linear equations in two variables can have solutions.   zero, one, or infinitely many    "
 },
 {
-  "id": "section-1-1-sol-5-3",
+  "id": "sec-1-1-systems-of-linear-equations-5-3",
   "level": "2",
-  "url": "Section-1-1.html#section-1-1-sol-5-3",
+  "url": "Section-1-1.html#sec-1-1-systems-of-linear-equations-5-3",
   "type": "Example",
   "number": "1.7",
   "title": "",
   "body": "  How many solutions can a system of two linear equations in three variables have?    Play around with drawing two planes in 3-space and seeing how they intersect. Can they never intersect? What about intersect in a finite number of points? What about intersect in infinitely many points?   "
 },
 {
-  "id": "section-1-1-sol-5-4",
+  "id": "sec-1-1-systems-of-linear-equations-5-4",
   "level": "2",
-  "url": "Section-1-1.html#section-1-1-sol-5-4",
+  "url": "Section-1-1.html#sec-1-1-systems-of-linear-equations-5-4",
   "type": "Example",
   "number": "1.8",
   "title": "",
   "body": "  How many solutions can a system of three linear equations in three variables have?    Play around with drawing three planes in 3-space and seeing how they intersect. Can they never intersect? What about intersect in a finite number of points? What about intersect in infinitely many points?   "
 },
 {
-  "id": "section-1-1-sol-6-2",
+  "id": "sec-1-1-systems-of-linear-equations-6-2",
   "level": "2",
-  "url": "Section-1-1.html#section-1-1-sol-6-2",
+  "url": "Section-1-1.html#sec-1-1-systems-of-linear-equations-6-2",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "row operations "
 },
 {
-  "id": "section-1-1-sol-6-3",
+  "id": "sec-1-1-systems-of-linear-equations-6-3",
   "level": "2",
-  "url": "Section-1-1.html#section-1-1-sol-6-3",
+  "url": "Section-1-1.html#sec-1-1-systems-of-linear-equations-6-3",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "Replacement\/Addition: Interchange: Scaling: "
 },
 {
-  "id": "section-1-1-sol-7-2",
+  "id": "sec-1-1-systems-of-linear-equations-7-2",
   "level": "2",
-  "url": "Section-1-1.html#section-1-1-sol-7-2",
+  "url": "Section-1-1.html#sec-1-1-systems-of-linear-equations-7-2",
   "type": "Example",
   "number": "1.9",
   "title": "",
   "body": " Apply row operations to systematically simplify the system below to an equivalent (easier to read) form in order to more easily identify the solution(s).    We will simplify the system using appropriate row operations. I am going to go ahead and use augmented matrices since that is what we will do from here on out.     Therefore, we have that the only solution is .   "
 },
 {
-  "id": "section-1-1-sol-8-2",
+  "id": "sec-1-1-systems-of-linear-equations-8-2",
   "level": "2",
-  "url": "Section-1-1.html#section-1-1-sol-8-2",
+  "url": "Section-1-1.html#sec-1-1-systems-of-linear-equations-8-2",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "augmented matrix "
 },
 {
-  "id": "section-1-1-sol-8-4",
+  "id": "sec-1-1-systems-of-linear-equations-8-4",
   "level": "2",
-  "url": "Section-1-1.html#section-1-1-sol-8-4",
+  "url": "Section-1-1.html#sec-1-1-systems-of-linear-equations-8-4",
   "type": "Example",
   "number": "1.10",
   "title": "",
   "body": " Determine if the following system has a solution.    Note the following:     Note that the final row suggests that which is impossible, no matter the choice of . Therefore, there is no solution. So the system is inconsistent.   "
 },
 {
-  "id": "section-1-1-sol-9-2",
+  "id": "sec-1-1-systems-of-linear-equations-9-2",
   "level": "2",
-  "url": "Section-1-1.html#section-1-1-sol-9-2",
+  "url": "Section-1-1.html#sec-1-1-systems-of-linear-equations-9-2",
   "type": "Definition",
   "number": "1.11",
   "title": "Consistent.",
@@ -136,9 +136,9 @@ var ptx_lunr_docs = [
   "body": " Row Equivalence  Two matrices are row equivalent if a sequence of row operations transforms one matrix into the other.  "
 },
 {
-  "id": "section-1-1-sol-9-8",
+  "id": "sec-1-1-systems-of-linear-equations-9-8",
   "level": "2",
-  "url": "Section-1-1.html#section-1-1-sol-9-8",
+  "url": "Section-1-1.html#sec-1-1-systems-of-linear-equations-9-8",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -154,126 +154,126 @@ var ptx_lunr_docs = [
   "body": " 1.2 Row Reduction and Echelon Forms    1.2 Row Reduction and Echelon Forms    Topics   Row reduction algorithm  Pivots, basic and free variables  Echelon forms, existence and uniqueness      Goals   Characterize a linear system in terms of leading entries, free variables, pivots, pivot columns, and pivot positions.  Apply the row reduction algorithm to reduce a linear system to echelon form or reduced echelon form.  Apply row reduction to compute the coefficients of a polynomial.       Echelon Form and Row Row Reduced Echelon Form   A rectangular matrix is in echelon form (REF) if:   All zero rows (if any) are at the bottom.  The first nonzero entry (or leading entry ) of a row is to the right of any leading entry in the row above it.  All entries below a leading entry are zero.   A matrix in echelon form is in row reduced echelon form (RREF) if additionally:   All leading entries equal .  Each leading entry is the only nonzero entry in its column.         Let denote a nonzero number, and denote any number.   is in REF and is in RREF.       Definitions of Pivot Position and Pivot Column     Determine whether each matrix is in RREF, REF, or neither.       REF       RREF       Neither        REF         RREF        Pivot Position and Pivot Column   A pivot position in a matrix is a location in that corresponds to a leading in the RREF of . A pivot column is a column of that contains a pivot position.        Express the matrix in row reduced echelon form and identify the pivot columns.          Therefore, we can see that the pivot columns are columns 1, 2, and 4.       Row Reduction Algorithm    Row Reduction Algorithm (Steps to RREF)  The algorithm below produces a matrix in RREF.   Step 1a: Swap the first row with a lower one so the leftmost nonzero entry is in the first row.  Step 1b: Scale the first row so that its leading entry equals .  Step 1c: Use row replacement so all entries above and below this are .  Step 2a: Swap the second row with a lower one so the leftmost nonzero entry below the first row is in the second row.  Step 2b: Scale the second row so that its leading entry equals .  Step 2c: Use row replacement so all entries above and below this are .  Continue: Repeat these steps for each subsequent row until the matrix is in RREF.       Use the algorithm above to convert the following matrix into RREF.               Pivot and Free Variables   Pivot Variables and Free Variables   Variables in a system that correspond to pivot column in the augmented matrix are called pivot variables . The other variables in the system are called free variables . This is because, if the system is consistent, then any choice of the free variables will lead to a valid solution.        Determine the pivot variables and the free variables for the system represented below.       Notice that the pivots are in columns 1, 3, and 4. So the pivot variables are . Therefore, the free variables are .       Existence and Uniqueness of Solutions  A linear system is consistent if and only if the last column of the augmented matrix does not have a pivot. Equivalently, the RREF of the augmented matrix does not contain a row of the form .  If a linear system is consistent, then:   It has a unique solution if and only if (iff) there are .  no free variables    Otherwise, it has many solutions parameterized by the free variables.  infinitely       "
 },
 {
-  "id": "handout-1-2-sol-1-2",
+  "id": "sec-1-2-row-reduction-1-2",
   "level": "2",
-  "url": "Section-1-2.html#handout-1-2-sol-1-2",
+  "url": "Section-1-2.html#sec-1-2-row-reduction-1-2",
   "type": "Objectives",
   "number": "",
   "title": "Topics",
   "body": " Topics   Row reduction algorithm  Pivots, basic and free variables  Echelon forms, existence and uniqueness   "
 },
 {
-  "id": "handout-1-2-sol-1-3",
+  "id": "sec-1-2-row-reduction-1-3",
   "level": "2",
-  "url": "Section-1-2.html#handout-1-2-sol-1-3",
+  "url": "Section-1-2.html#sec-1-2-row-reduction-1-3",
   "type": "Objectives",
   "number": "",
   "title": "Goals",
   "body": " Goals   Characterize a linear system in terms of leading entries, free variables, pivots, pivot columns, and pivot positions.  Apply the row reduction algorithm to reduce a linear system to echelon form or reduced echelon form.  Apply row reduction to compute the coefficients of a polynomial.   "
 },
 {
-  "id": "handout-1-2-sol-1-5",
+  "id": "sec-1-2-row-reduction-1-5",
   "level": "2",
-  "url": "Section-1-2.html#handout-1-2-sol-1-5",
+  "url": "Section-1-2.html#sec-1-2-row-reduction-1-5",
   "type": "Definition",
   "number": "1.13",
   "title": "Echelon Form and Row Row Reduced Echelon Form.",
   "body": " Echelon Form and Row Row Reduced Echelon Form   A rectangular matrix is in echelon form (REF) if:   All zero rows (if any) are at the bottom.  The first nonzero entry (or leading entry ) of a row is to the right of any leading entry in the row above it.  All entries below a leading entry are zero.   A matrix in echelon form is in row reduced echelon form (RREF) if additionally:   All leading entries equal .  Each leading entry is the only nonzero entry in its column.    "
 },
 {
-  "id": "handout-1-2-sol-1-7",
+  "id": "sec-1-2-row-reduction-1-7",
   "level": "2",
-  "url": "Section-1-2.html#handout-1-2-sol-1-7",
+  "url": "Section-1-2.html#sec-1-2-row-reduction-1-7",
   "type": "Example",
   "number": "1.14",
   "title": "",
   "body": "  Let denote a nonzero number, and denote any number.   is in REF and is in RREF.   "
 },
 {
-  "id": "handout-1-2-sol-2-2-2",
+  "id": "sec-1-2-row-reduction-2-2-2",
   "level": "2",
-  "url": "Section-1-2.html#handout-1-2-sol-2-2-2",
+  "url": "Section-1-2.html#sec-1-2-row-reduction-2-2-2",
   "type": "Worksheet Exercise",
   "number": "1",
   "title": "",
   "body": "    REF  "
 },
 {
-  "id": "handout-1-2-sol-2-2-3",
+  "id": "sec-1-2-row-reduction-2-2-3",
   "level": "2",
-  "url": "Section-1-2.html#handout-1-2-sol-2-2-3",
+  "url": "Section-1-2.html#sec-1-2-row-reduction-2-2-3",
   "type": "Worksheet Exercise",
   "number": "2",
   "title": "",
   "body": "    RREF  "
 },
 {
-  "id": "handout-1-2-sol-2-2-4",
+  "id": "sec-1-2-row-reduction-2-2-4",
   "level": "2",
-  "url": "Section-1-2.html#handout-1-2-sol-2-2-4",
+  "url": "Section-1-2.html#sec-1-2-row-reduction-2-2-4",
   "type": "Worksheet Exercise",
   "number": "3",
   "title": "",
   "body": "    Neither  "
 },
 {
-  "id": "handout-1-2-sol-2-2-5",
+  "id": "sec-1-2-row-reduction-2-2-5",
   "level": "2",
-  "url": "Section-1-2.html#handout-1-2-sol-2-2-5",
+  "url": "Section-1-2.html#sec-1-2-row-reduction-2-2-5",
   "type": "Worksheet Exercise",
   "number": "4",
   "title": "",
   "body": "     REF   "
 },
 {
-  "id": "handout-1-2-sol-2-2-6",
+  "id": "sec-1-2-row-reduction-2-2-6",
   "level": "2",
-  "url": "Section-1-2.html#handout-1-2-sol-2-2-6",
+  "url": "Section-1-2.html#sec-1-2-row-reduction-2-2-6",
   "type": "Worksheet Exercise",
   "number": "5",
   "title": "",
   "body": "     RREF   "
 },
 {
-  "id": "handout-1-2-sol-2-4",
+  "id": "sec-1-2-row-reduction-2-4",
   "level": "2",
-  "url": "Section-1-2.html#handout-1-2-sol-2-4",
+  "url": "Section-1-2.html#sec-1-2-row-reduction-2-4",
   "type": "Definition",
   "number": "1.15",
   "title": "Pivot Position and Pivot Column.",
   "body": " Pivot Position and Pivot Column   A pivot position in a matrix is a location in that corresponds to a leading in the RREF of . A pivot column is a column of that contains a pivot position.   "
 },
 {
-  "id": "handout-1-2-sol-2-6",
+  "id": "sec-1-2-row-reduction-2-6",
   "level": "2",
-  "url": "Section-1-2.html#handout-1-2-sol-2-6",
+  "url": "Section-1-2.html#sec-1-2-row-reduction-2-6",
   "type": "Example",
   "number": "1.16",
   "title": "",
   "body": "  Express the matrix in row reduced echelon form and identify the pivot columns.          Therefore, we can see that the pivot columns are columns 1, 2, and 4.   "
 },
 {
-  "id": "handout-1-2-sol-3-4",
+  "id": "sec-1-2-row-reduction-3-4",
   "level": "2",
-  "url": "Section-1-2.html#handout-1-2-sol-3-4",
+  "url": "Section-1-2.html#sec-1-2-row-reduction-3-4",
   "type": "Example",
   "number": "1.17",
   "title": "",
   "body": "  Use the algorithm above to convert the following matrix into RREF.           "
 },
 {
-  "id": "handout-1-2-sol-4-2",
+  "id": "sec-1-2-row-reduction-4-2",
   "level": "2",
-  "url": "Section-1-2.html#handout-1-2-sol-4-2",
+  "url": "Section-1-2.html#sec-1-2-row-reduction-4-2",
   "type": "Definition",
   "number": "1.18",
   "title": "Pivot Variables and Free Variables.",
   "body": " Pivot Variables and Free Variables   Variables in a system that correspond to pivot column in the augmented matrix are called pivot variables . The other variables in the system are called free variables . This is because, if the system is consistent, then any choice of the free variables will lead to a valid solution.   "
 },
 {
-  "id": "handout-1-2-sol-4-4",
+  "id": "sec-1-2-row-reduction-4-4",
   "level": "2",
-  "url": "Section-1-2.html#handout-1-2-sol-4-4",
+  "url": "Section-1-2.html#sec-1-2-row-reduction-4-4",
   "type": "Example",
   "number": "1.19",
   "title": "",
@@ -2725,7 +2725,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "6.1 Dot Product, Length, and Orthogonality",
-  "body": " 6.1 Dot Product, Length, and Orthogonality   6.1 Dot Product, Length, and Orthogonality   Overview   Topics   Dot product of vectors  Magnitude of vectors and distances in  Orthogonal vectors and complements  Angles between vectors     Goals   Compute (a) dot products, (b) magnitudes, (c) distances in , and (d) angles between vectors.  Apply theorems involving orthogonal complements, row\/column space, and their relationships to linear systems.    Motivating Question  For a matrix , which vectors are orthogonal to all the rows of ? To the columns of ?    Dot Product   The dot product of two vectors is:       For what values of is ?     Note that . It follows that if and only if .       Properties of the Dot Product   Basic Identities of the Dot Product   Let and .   (Symmetry) .  (Linearity) .  (Scalars) .  (Positivity) , and it equals 0 if and only if .       Length (Magnitude)   The length , or magnitude , of is       Compute where .   Sketch of the point (1,3,2) in 3-space.      Note that . It follows that .       Example: Length of a Sum    Let , , and . Compute .    Using , see that . Note that squaring both sides of the equation yields . Also, note that the dot product is commutative. Thus, we have that .     For any vector and scalar ,    Unit Vector   A vector of length 1 is called a unit vector .    Examples of unit vectors:      Distance in   Distance   For , the distance between them is       Compute the distance between and .    Note that       Orthogonal Vectors   Two vectors are orthogonal if .  This is equivalent to     Proof: The equivalent statement, known as the Pythagorean Theorem, is true since since because the vectors are orthogonal.    The zero vector is orthogonal to every vector in .    Example: Orthogonal Subspace in    Sketch the set of all vectors orthogonal to .   Sketch of the vector v in coordinate plane.      Let . Note that . Therefore, geometrically, we can describe the set of all vectors which are orthogonal to as the line . Algebraically, the set of vectors which are orthogonal to is given by . It is no coincidence that this set is a subspace. (See .)      Orthogonal Complement   If is a subspace of , a vector is orthogonal to if for every . The set of all such vectors is the orthogonal complement :   The set is also a subspace of . We have that . Furthermore, for any subspace , we have that .      Suppose . Find .    NOte that . It follows that . Note that if and only if is orthogonal to every vector in . Since every vector in is a multiple of , we have that is orthogonal to every vector of as long as it is orthogonal to . Note that . It follows that for . Thus, .      Example: Plane Orthogonal to a Line in    Let be the line spanned by . Since is 1-dimensional, its orthogonal complement is a plane. Find an equation for the plane .   Graph of a line L in 3-space passing through the origin and the point (1,-1,2).      First, note that by , we have that . Thus, the space really is a plane in . Let . Note that . Thus, we have that .      Row Space   The row space is the subspace spanned by the rows of a matrix .    Facts:   .  A basis for is given by the pivot rows of .  In general, and are unrelated spaces.      Row Space    Describe in terms of an orthogonal subspace.    if and only if .       This means is to each row of .  orthogonal    Therefore is of .  the orthogonal complement     .           The Four Subspaces   For any :   is the orthogonal complement of :   is the orthogonal complement of :      This geometric structure is often shown using overlapping regions representing the four fundamental subspaces.   Visual representation of the four subspaces from the Four Subspace Theorem       Angles Between Vectors   Dot Product and Angle   The dot product satisfies   Thus, if , then either one vector is the zero vector or the vectors are orthogonal.    Proof: We will prove this theorem for vectors in . A similar argument can be made for two vectors in by considering them in the plane (or line) which they span.  First, note that if either or , then the equation is true since both the left side and right side are 0. Now suppose and . Then, we know that and . Let's consider the unit vectors and . Since both and are unit vectors in , they both lie on the unit circle. Note that rotating both vectors by the same angle will not change the angle between them. So, let's rotate the vectors so that lies on the positive -axis. (This is similar to choosing a new reference frame in physics). Then, and , where is the angle between and . In this reference frame, we have that . By replacing and with their definitions in terms of and , we see that .      Find the angle between and . Note that is a unit vector.    Note that . Also, note that . Since is a unit vector, we have that . Therefore, we have so . Thus, there is a angle between and .      "
+  "body": " 6.1 Dot Product, Length, and Orthogonality   6.1 Dot Product, Length, and Orthogonality   Overview   Topics   Dot product of vectors  Magnitude of vectors and distances in  Orthogonal vectors and complements  Angles between vectors     Goals   Compute (a) dot products, (b) magnitudes, (c) distances in , and (d) angles between vectors.  Apply theorems involving orthogonal complements, row\/column space, and their relationships to linear systems.    Motivating Question  For a matrix , which vectors are orthogonal to all the rows of ? To the columns of ?    Dot Product   The dot product of two vectors is:       For what values of is ?     Note that . It follows that if and only if .       Properties of the Dot Product   Basic Identities of the Dot Product   Let and .   (Symmetry) .  (Linearity) .  (Scalars) .  (Positivity) , and it equals 0 if and only if .       Length (Magnitude)   The length , or magnitude , of is       Compute where .   Sketch of the point (1,3,2) in 3-space.      Note that . It follows that .       Example: Length of a Sum    Let , , and . Compute .    Using , see that . Note that squaring both sides of the equation yields . Also, note that the dot product is commutative. Thus, we have that .     For any vector and scalar ,    Unit Vector   A vector of length 1 is called a unit vector .    Examples of unit vectors:      Distance in   Distance   For , the distance between them is       Compute the distance between and .    Note that       Orthogonal Vectors   Two vectors are orthogonal if .  This is equivalent to     Proof: The equivalent statement, known as the Pythagorean Theorem, is true since since because the vectors are orthogonal.    The zero vector is orthogonal to every vector in .    Example: Orthogonal Subspace in    Sketch the set of all vectors orthogonal to .   Sketch of the vector v in coordinate plane.      Let . Note that . Therefore, geometrically, we can describe the set of all vectors which are orthogonal to as the line . Algebraically, the set of vectors which are orthogonal to is given by . It is no coincidence that this set is a subspace. (See .)      Orthogonal Complement   If is a subspace of , a vector is orthogonal to if for every . The set of all such vectors is the orthogonal complement :   The set is also a subspace of . We have that . Furthermore, for any subspace , we have that .      Suppose . Find .    Note that . It follows that . Note that if and only if is orthogonal to every vector in . Since every vector in is a multiple of , we have that is orthogonal to every vector of as long as it is orthogonal to . Note that . It follows that for . Thus, .      Example: Plane Orthogonal to a Line in    Let be the line spanned by . Since is 1-dimensional, its orthogonal complement is a plane. Find an equation for the plane .   Graph of a line L in 3-space passing through the origin and the point (1,-1,2).      First, note that by , we have that . Thus, the space really is a plane in . Let . Note that . Thus, we have that .      Row Space   The row space is the subspace spanned by the rows of a matrix .    Facts:   .  A basis for is given by the pivot rows of .  In general, and are unrelated spaces.      Row Space    Describe in terms of an orthogonal subspace.    if and only if .       This means is to each row of .  orthogonal    Therefore is of .  the orthogonal complement     .           The Four Subspaces   For any :   is the orthogonal complement of :   is the orthogonal complement of :      This geometric structure is often shown using overlapping regions representing the four fundamental subspaces.   Visual representation of the four subspaces from the Four Subspace Theorem       Angles Between Vectors   Dot Product and Angle   The dot product satisfies   Thus, if , then either one vector is the zero vector or the vectors are orthogonal.    Proof: We will prove this theorem for vectors in . A similar argument can be made for two vectors in by considering them in the plane (or line) which they span.  First, note that if either or , then the equation is true since both the left side and right side are 0. Now suppose and . Then, we know that and . Let's consider the unit vectors and . Since both and are unit vectors in , they both lie on the unit circle. Note that rotating both vectors by the same angle will not change the angle between them. So, let's rotate the vectors so that lies on the positive -axis. (This is similar to choosing a new reference frame in physics). Then, and , where is the angle between and . In this reference frame, we have that . By replacing and with their definitions in terms of and , we see that .      Find the angle between and . Note that is a unit vector.    Note that . Also, note that . Since is a unit vector, we have that . Therefore, we have so . Thus, there is a angle between and .      "
 },
 {
   "id": "obj-6-1-topics-goals",
@@ -2860,7 +2860,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "6.13",
   "title": "",
-  "body": "  Suppose . Find .    NOte that . It follows that . Note that if and only if is orthogonal to every vector in . Since every vector in is a multiple of , we have that is orthogonal to every vector of as long as it is orthogonal to . Note that . It follows that for . Thus, .   "
+  "body": "  Suppose . Find .    Note that . It follows that . Note that if and only if is orthogonal to every vector in . Since every vector in is a multiple of , we have that is orthogonal to every vector of as long as it is orthogonal to . Note that . It follows that for . Thus, .   "
 },
 {
   "id": "ex-6-1-line-plane",
