@@ -24,6 +24,7 @@
     </ul>
     </objectives>
 
+    <p><nbsp/></p>
 
     <definition xml:id="def-zero-matrix" workspace="true">
       <title>Zero Matrix</title>
@@ -77,6 +78,8 @@
       Note: Any matrix with dimensions <m>n\times n</m> is <term>square</term>.
       Zero matrices need not be square; identity matrices must be square.
     </p>
+
+    <p><nbsp/></p>
   </page>
 
 
@@ -128,6 +131,8 @@
         </p>
       </statement>
     </example>
+
+    <p><nbsp/></p>
   </page>
 
 
@@ -146,6 +151,8 @@
       <li><m>(r+s)A = rA + sA</m></li>
       <li><m>r(sA) = (rs)A</m></li>
     </ol>
+
+    <p><nbsp/></p>
 
 
     <definition xml:id="def-matrix-multiplication-columns" workspace="true">
@@ -181,6 +188,8 @@
         A visual guide to when <m>AB</m> is defined based on inner dimensions.
       </description>
     </image>
+
+    <p><nbsp/></p>
   </page>
 
 
@@ -219,12 +228,14 @@
         </me>
       </statement>
     </example>
+
+    <p><nbsp/></p>
   </page>
 
 
   <page xml:id="p-2-1-properties-multiplication">
     <title>Properties and Warnings</title>
-    <theorem workspace="true">
+    <theorem workspace="true" xml:id="thm-properties-multiplication">
         <title> Properties and Warnings</title>
             <p>
             Let <m>A,B,C</m> be matrices of sizes needed for the products to be defined,
@@ -251,6 +262,8 @@
             </li>
             </ol>
         </theorem>
+
+        <p><nbsp/></p>
 
     <p>
       The associative property is <m>(AB)C = A(BC)</m>. If <m>C=\vec x</m>, then:
@@ -294,6 +307,8 @@
       or by multiplying by <m>B</m> and then by <m>A</m>. This corresponds to
       <em>composition of linear transformations</em>.
     </p>
+
+    <p><nbsp/></p>
   </page>
 
 
@@ -316,6 +331,8 @@
         </p>
       </statement>
     </example>
+
+    <p><nbsp/></p>
   </page>
 
 
@@ -326,7 +343,7 @@
       <title>Transpose</title>
       <statement>
         <p>
-          The transpose <m>A^T</m> is the matrix whose columns are the rows of <m>A</m>.
+          The <term>transpose</term> <m>A^T</m> is the matrix whose columns are the rows of <m>A</m>.
         </p>
       </statement>
     </definition>
@@ -337,7 +354,7 @@
       <statement>
         <p>Compute:</p>
         <me>
-          \begin{bmatrix}
+          A = \begin{bmatrix}
             1 \amp 2 \amp 3 \amp 4 \amp 5\\
             0 \amp 1 \amp 0 \amp 2 \amp 0
           \end{bmatrix}^T
@@ -345,7 +362,9 @@
       </statement>
     </example>
 
-    <theorem xml:id="ex-transpose-properties-fill" workspace="true">
+    <p><nbsp/></p>
+
+    <theorem xml:id="thm-transpose-properties" workspace="true">
       <title>Properties of Matrix Transpose</title>
       <statement>
         <ol>
@@ -356,6 +375,8 @@
         </ol>
       </statement>
     </theorem>
+
+    <p><nbsp/></p>
   </page>
 
   <page xml:id="p-2-1-which-defined">
@@ -397,8 +418,11 @@
           </task>
         <task workspace="true">
             <statement><p><m>A + ABCB^T</m></p></statement>
+
         </task>
     </example>
+
+    <p><nbsp/></p>
   </page>
 
   <page xml:id="p-2-1-matrix-powers">
@@ -411,13 +435,15 @@
 
     <me>A^k = AA\cdots A.</me>
 
-    <example workspace="true">
+    <example xml:id="ex-compute-a-power" workspace="true">
         <statement>
             <p>
                 Compute <m>A^2</m> for <me>A = \begin{bmatrix} 3 \amp -2 \\ 5 \amp 1 \end{bmatrix}</me>
             </p>
         </statement>
     </example>
+
+    <p><nbsp/></p>
 
     <example xml:id="ex-compute-c-power" workspace="true">
       <statement>
@@ -432,6 +458,8 @@
         </me>
       </statement>
     </example>
+
+    <p><nbsp/></p>
   </page>
 
 
@@ -449,16 +477,14 @@
       <task workspace="true">
         <statement>
         <p>
-          For any <m>I_n</m> and any <m>A\in\mathbb{R}^{n\times n}</m>,
-          <m>(I_n + A)(I_n - A) = I_n - A^2</m>.
+          Let <m>n \in \mathbb{R}</m>. Then for any <m>n \times n</m> matrix <m></m>, we have <m>(I_n + A)(I_n - A) = I_n - A^2</m>.
         </p>
         </statement>
         </task>
         <task workspace="true">
             <statement>
                 <p>
-                    For any <m>A</m> and <m>B</m> in <m>\mathbb{R}^{n\times n}</m>,
-          <m>(A+B)^2 = A^2 + B^2 + 2AB</m>.
+                    Let <m>n \in \mathbb{R}</m>. For any <m>n \times n</m> matrices <m>A</m> and <m>B</m>, we have <m>(A+B)^2 = A^2 + B^2 + 2AB</m>.
                 </p>
             </statement>
         </task>

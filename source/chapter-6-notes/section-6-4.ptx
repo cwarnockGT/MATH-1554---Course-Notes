@@ -117,7 +117,7 @@
     </p>
 
 
-    <example workspace="true">
+    <example workspace="true" xml:id="ex-6-4-2vec">
       <statement>
         <p>
           Let <m>W = \Span\left\{\begin{bmatrix} 3 \\ 0 \\ -1 \end{bmatrix}, \begin{bmatrix} 8 \\ 5 \\ -6 \end{bmatrix} \right\}</m>. Find an orthogonal basis for <m>W</m>.

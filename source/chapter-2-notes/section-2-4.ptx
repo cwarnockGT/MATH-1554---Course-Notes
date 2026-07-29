@@ -171,7 +171,6 @@
           Let <m>A,B,C</m> be invertible <m>n \times n </m> matrices.
           Find the inverse of:
         </p>
-
         <md>
           \begin{bmatrix}
             A \amp B\\

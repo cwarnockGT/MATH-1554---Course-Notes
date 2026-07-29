@@ -58,12 +58,11 @@
         <p>
             where <m>\widehat y \in W</m> and <m>w^\perp \in W^\perp</m>. In fact, if <m>\{\vec u_1,\dots,\vec u_p\}</m> is any <em>orthogonal basis</em> for <m>W</m>, then
         </p>
-        <me>
-          \widehat y
-          = \frac{\vec y\cdot\vec u_1}{\vec u_1\cdot\vec u_1}\vec u_1
-          + \cdots +
-          \frac{\vec y\cdot\vec u_p}{\vec u_p\cdot\vec u_p}\vec u_p.
-        </me>
+        <md>
+          <mrow>\widehat y \amp = \proj_W \vec y </mrow> 
+          <mrow> \amp = \proj_{\vec u_1}\vec y + \cdots + \proj_{\vec u_p}\vec y</mrow> 
+          <mrow> \amp = \frac{\vec y\cdot\vec u_1}{\vec u_1\cdot\vec u_1}\vec u_1 + \cdots + \frac{\vec y\cdot\vec u_p}{\vec u_p\cdot\vec u_p}\vec u_p </mrow>
+        </md>
         <p>
           The vector <m>\widehat y</m> is called the <em>orthogonal projection</em> of
           <m>\vec y</m> onto <m>W</m> and can be written <m>\widehat y = \proj_{W}\vec y</m>.
@@ -126,7 +125,7 @@
       <statement>
         <p>
           Let <m>W\subseteq\mathbb{R}^n</m> and <m>\vec y\in\mathbb{R}^n</m>.
-          If <m>\widehat y</m> is the orthogonal projection of <m>\vec y</m> onto <m>W</m>, then
+          If <m>\widehat y</m> is the orthogonal projection of <m>\vec y</m> onto <m>W</m>; that is <m>\widehat y = \proj_W\vec y</m>, then
           for every <m>\vec w\in W</m> with <m>\vec w\ne \widehat y</m>,
         </p>
 
@@ -135,10 +134,18 @@
         </me>
 
         <p>
-          Thus, <m>\widehat y</m> is the unique closest vector in <m>W</m> to <m>\vec y</m>.
+          Thus, <m>\widehat y</m> is the <em>unique</em> closest vector in <m>W</m> to <m>\vec y</m>.
         </p>
       </statement>
     </theorem>
+
+    <definition xml:id="def-dist-W">
+        <statement>
+            <p>
+                Let <m>W \subset \mathbb{R}^n</m> and <m>\vec y \in \mathbb{R}^n</m>. The <term>distance of a vector <m>\vec y</m> from a subspace <m>W</m></term>, denoted <m>\dist(\vec y, W)</m>, is the minimum distance between <m>\vec y</m> and a vector <m>\vec w \in W</m>; that is, <me>\dist(\vec y, W) = \operatorname{min}\left\{\dist(\vec y, \vec w) : w \in W\right\}</me>. By <xref ref="thm-best-approx"/>, we see that the vector in <m>W</m> which is closest to <m>\vec y</m> is <m>\widehat y = \proj_W\vec y</m>. Therefore, <me>\dist(\vec y, W) = \dist(\vec y, \widehat y)</me>.
+            </p>
+        </statement>
+    </definition>
 
     <p><nbsp/></p>
 

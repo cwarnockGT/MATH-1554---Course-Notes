@@ -209,15 +209,15 @@
       <title>Orthogonal Vectors</title>
       <statement>
         <p>
-          Two vectors <m>\vec u,\vec w</m> are <term>orthogonal</term> if
-          <m>\vec u\cdot\vec w=0</m>.  
+          Two vectors <m>\vec u,\vec v</m> are <term>orthogonal</term> if
+          <m>\vec u\cdot\vec v=0</m>.  
         </p>
         <p>
           This is equivalent to
         </p>
         <me>
-          \| \vec u+\vec w\|^2
-          = \|\vec u\|^2 + \|\vec w\|^2.
+          \| \vec u+\vec v\|^2
+          = \|\vec u\|^2 + \|\vec v\|^2.
         </me>
       </statement>
     </definition>
@@ -267,7 +267,7 @@
           W^\perp=\{\vec z\in\mathbb{R}^n:\vec z\cdot\vec w=0 \;\text{for all}\; \vec w\in W\}.
         </me>
         <p>
-            The set <m>W^\perp</m> is also a subspace of <m>\mathbb{R}^n</m>. Furthermore we have that <me>\dim(W) + \dim(W^\perp) = n</me>.
+            The set <m>W^\perp</m> is also a subspace of <m>\mathbb{R}^n</m>. We have that <me>\dim(W) + \dim(W^\perp) = n</me>. Furthermore, for any subspace <m>W</m>, we have that <m>\left(W^\perp\right)^\perp = W</m>.
         </p>
       </statement>
     </definition>
@@ -286,7 +286,7 @@
   <page xml:id="p-6-1-plane-example">
     <title>Example: Plane Orthogonal to a Line in <m>\mathbb{R}^3</m></title>
 
-    <example xml:id="ex-6-1-line-plane" workspace="0.8in">
+    <example xml:id="ex-6-1-line-plane" workspace="0.5in">
       <statement>
         <p>
           Let <m>L</m> be the line spanned by <m>\vec v=\begin{bmatrix}1\\-1\\2\end{bmatrix}</m>.
@@ -369,17 +369,22 @@
     <example xml:id="ex-6-1-null-row" workspace="1in">
       <statement>
         <p>
-          Describe <m>\Nul(A)</m> in terms of an orthogonal subspace.
+          Describe <m>\Nul(A) \subseteq \mathbb{R}^n</m> in terms of an orthogonal subspace.
         </p>
 
         <ol>
-          <li><m>\vec x\in\Nul(A)</m> if and only if <m>\underline{\hspace{2in}}</m>.</li>
+          <li>
+            <m>\vec x\in\Nul(A)</m> if and only if <m>\underline{\hspace{2in}}</m>. 
+        </li>
+          
           <li>
             This means <m>\vec x</m> is <m>\underline{\hspace{2in}}</m> to each row of <m>A</m>.
           </li>
+          
           <li>
             Therefore <m>\operatorname{Row}(A)</m> is <m>\underline{\hspace{3in}}</m> of <m>\Nul(A)</m>.
           </li>
+          
           <li>
             <m>\dim(\operatorname{Row}(A))+\dim(\Nul(A))=\underline{\hspace{1in}}</m>.
           </li>
@@ -394,8 +399,8 @@
           For any <m>A\in\mathbb{R}^{m\times n}</m>:
         </p>
         <ul>
-          <li><m>\Nul(A)</m> is the orthogonal complement of <m>\operatorname{Row}(A)</m>.</li>
-          <li><m>\Nul(A^T)</m> is the orthogonal complement of <m>\operatorname{Col}(A)</m>.</li>
+          <li><p><m>\Nul(A)</m> is the orthogonal complement of <m>\operatorname{Row}(A)</m>:</p> <me>\Row(A)^\perp = \Nul(A) \quad \text{and} \quad \Nul(A)^\perp = \Row(A)</me></li>
+          <li><p><m>\Nul(A^T)</m> is the orthogonal complement of <m>\operatorname{Col}(A)</m>:</p> <me>\Col(A)^\perp = \Nul(A^T) \quad \text{and} \quad \Nul(A^T)^\perp = \Col(A)</me></li>
         </ul>
       </statement>
     </theorem>
@@ -444,7 +449,7 @@
           \vec a\cdot\vec b=\lVert\vec a\rVert\,\lVert\vec b\rVert\cos\theta.
         </me>
         <p>
-          Thus, if <m>\vec a\cdot\vec b=0</m>, then either one vector is zero or the vectors are orthogonal.
+          Thus, if <m>\vec a\cdot\vec b=0</m>, then either one vector is the zero vector or the vectors are orthogonal.
         </p>
       </statement>
     </theorem>

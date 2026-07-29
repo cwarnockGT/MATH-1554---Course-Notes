@@ -144,6 +144,7 @@
         <p>Given <m>z=3-4i</m>, compute <m>\overline{z}</m>, <m>\lvert z\rvert</m>, and the polar form of <m>z</m>.</p>
       </statement>
     </example>
+    
 
     <p><nbsp/></p>
   </page>
@@ -280,7 +281,7 @@
     <example xml:id="ex-5-5-complete-eigs" workspace="true">
       <statement>
         <p>
-          Four eigenvalues of a <m>7\times 7</m> real matrix are <m>-2</m>, <m>4+i</m>, <m>-4-i</m>, and <m>i</m>. What are the other eigenvalues?
+          Four eigenvalues of a <m>7\times 7</m> real matrix <m>A</m> are <m>-2</m>, <m>4+i</m>, <m>-4-i</m>, and <m>i</m>. What are the other eigenvalues?
         </p>
       </statement>
     </example>

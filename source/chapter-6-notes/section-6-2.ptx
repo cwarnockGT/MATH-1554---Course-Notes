@@ -109,10 +109,11 @@
         </p>
 
         <me>
-          c_q = \frac{\vec w\cdot\vec u_q}{\vec u_q\cdot\vec u_q}.
+          c_k = \frac{\vec w\cdot\vec u_k}{\vec u_k\cdot\vec u_k}.
         </me>
       </statement>
     </theorem>
+    
 
     <p><nbsp/></p>
   </page>
@@ -198,7 +199,7 @@
     <theorem xml:id="thm-projection-ortho" workspace="0.5in">
         <statement>
             <p>
-                Let <m>\vec u</m> be a nonzero vector. Then, the vector <m>\vec w=\vec v - \operatorname{proj}_{\vec u}(\vec v)</m> is orthogonal to <m>\vec u</m>. Furthermore, 
+                Let <m>\vec u</m> be a nonzero vector. Then, the vector <m>\proj_{\vec u}\vec v</m> is the vector in <m>\Span\{\vec u\}</m> which is closest to <m>\vec v</m>. Also, the vector <m>\vec w=\vec v - \operatorname{proj}_{\vec u}(\vec v)</m> is orthogonal to <m>\vec u</m>. Furthermore, 
                 <me>\|\vec v\|^2 = \|\proj_{\vec u}{\vec v}\|^2 + \|\vec w\|^2</me>.
             </p>
         </statement>
@@ -244,16 +245,21 @@
 
     <p><nbsp/></p>
 
-    <definition xml:id="def-orthonormal-basis">
+    <definition xml:id="def-orthonormal-basis" workspace="0.5in">
       <title>Orthonormal Basis</title>
       <statement>
         <p>
           An <term>orthonormal basis</term> for a subspace <m>W</m> is an orthogonal basis
           in which each vector has length 1.
         </p>
+      </statement>
+    </definition>
 
+    <theorem xml:id="thm-orthonomal-basis" workspace="1in">
+      <title>Expansion in an Orthonormal Basis</title>
+      <statement>
         <p>
-          If <m>\{\vec u_1,\dots,\vec u_p\}</m> is orthonormal and <m>\vec w\in W</m>, then
+          If <m>\{\vec u_1,\dots,\vec u_p\}</m> is orthonormal basis for <m>W</m> and <m>\vec w\in W</m>, then
         </p>
 
         <me>
@@ -269,14 +275,18 @@
           }.
         </me>
       </statement>
-    </definition>
+    </theorem>
+
+  </page>
+
+  <page>
 
 
     <example xml:id="ex-6-2-orthonormal-complete" workspace="true">
       <statement>
         <p>
           Let <m>W = \Span\left\{\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}\right\}^\perp</m>.
-          Find the missing entries in an orthonormal basis:
+          Find the missing entries in an orthonormal basis for <m>W</m>:
         </p>
 
         <me>
@@ -286,6 +296,10 @@
           v=\frac{1}{\sqrt{\phantom{-1}}}
           \begin{bmatrix} \phantom{-1} \\ \phantom{-1} \\ \phantom{-1}  \end{bmatrix}
         </me>
+
+        <p>
+          Then, express <m>\vec w = \begin{bmatrix} 3 \\ 6 \\ -9 \end{bmatrix} \in W</m> as a linear combination of <m>\vec u</m> and <m>\vec v</m>.
+        </p>
       </statement>
     </example>
 
@@ -326,12 +340,17 @@
         <p>If <m>U</m> is an orthogonal matrix, then:</p>
 
         <ol>
-          <li><em>Preserves length:</em> <m>\| U\vec x\| = \|\vec x\|</m>.</li>
-          <li>
-            <em>Preserves angles:</em>
-            <m>(U\vec x)\cdot(U\vec y)=\vec x\cdot\vec y</m>.
-          </li>
-          <li><em>Preserves orthogonality.</em></li> 
+            <li>
+                <em>Preserves angles:</em>
+                <m>(U\vec x)\cdot(U\vec y)=\vec x\cdot\vec y</m>.
+            </li>
+            <li>
+                <em>Preserves length:</em> <m>\| U\vec x\| = \|\vec x\|</m>.
+            </li>
+          
+            <li>
+                <em>Preserves orthogonality.</em>
+            </li> 
         </ol>
       </statement>
     </theorem>

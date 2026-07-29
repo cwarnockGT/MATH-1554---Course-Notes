@@ -9,7 +9,6 @@
       <ul>
         <li>The characteristic polynomial of a matrix</li>
         <li>Algebraic and geometric multiplicity of eigenvalues</li>
-        <li>Similar matrices</li>
       </ul>
       </objectives>
 
@@ -20,6 +19,14 @@
         <li>Characterize the long-term behaviour of dynamical systems using eigenvalue decompositions.</li>
       </ul>
     </objectives>
+
+    <p><nbsp/></p>
+
+    <note>
+        <statement>
+            Similar matrices are introduced in Section 5.2, but are not used until Section 5.3. We will wait to introduce them in Section 5.3.
+        </statement>
+    </note>
 
     <p><nbsp/></p>
 
@@ -39,7 +46,7 @@
         The quantity <m>\det(A-\lambda I)</m> is the <term>characteristic polynomial</term> of <m>A</m>.
         </p>
         <p>
-            The equation <m>\det(A - \lambda I) = 0</m> is the <term>characterisitc equation</term> of <m>A</m>.
+            The equation <m>\det(A - \lambda I) = 0</m> is the <term>characteristic equation</term> of <m>A</m>.
         </p>
         <p>
         The roots of the characteristic polynomial are the <term>eigenvalues</term> of <m>A</m>.
@@ -93,6 +100,17 @@
   <page xml:id="p-5-2-algebraic-multiplicity">
     <title>Algebraic Multiplicity</title>
 
+    <theorem xml:id="thm-det-prod-eigs">
+        <statement>
+            <p>
+                Let <m>A</m> be an <m>n \times n</m> matrix with eigenvalues <m>\lambda_1, \dots, \lambda_n</m>. Then, <m>\det(A) = \lambda_1\cdots\lambda_n</m> and <m>\operatorname{tr}(A) = \lambda_1 + \cdots + \lambda_n</m>.
+            </p>
+        </statement>
+    </theorem>
+
+    <p><nbsp/></p>
+    
+
     <definition xml:id="def-algebraic-multiplicity" workspace=".3in">
       <title>Algebraic Multiplicity</title>
       <statement>
@@ -126,7 +144,7 @@
       <title>Geometric Multiplicity</title>
       <statement>
         <p>
-          The <term>geometric multiplicity</term> of an eigenvalue <m>\lambda</m> is the dimension of <m>\operatorname{Null}(A-\lambda I)</m>.
+          The <term>geometric multiplicity</term> of an eigenvalue <m>\lambda</m> is the dimension of <m>\operatorname{Nul}(A-\lambda I)</m>.
         </p>
       </statement>
     </definition>
@@ -138,11 +156,11 @@
           Basic example:
           <me>
             \begin{bmatrix}
-              0 \amp 1\\
-              0 \amp 0
+              1 \amp 1\\
+              0 \amp 1
             \end{bmatrix}
           </me>
-          has only eigenvalue <m>\lambda=0</m>. Its algebraic multiplicity is 2, but its geometric multiplicity is 1.
+          has only eigenvalue <m>\lambda=1</m>. Its algebraic multiplicity is 2, but its geometric multiplicity is 1.
         </li>
       </ol>
     </p>
@@ -175,7 +193,7 @@
           For each part below, give an example of a <m>5\times 5</m> matrix withe the stated properties, if possible. 
         </p>
     </introduction>
-    <task workspace="true">
+    <task workspace="true" xml:id="ex-5-2-t1">
         <statement>
             <p>
                 The only eigenvalue is <m>\lambda=0</m>, but the geometric multiplicity of <m>\lambda=0</m> is one.
@@ -290,7 +308,7 @@
           For what values of <m>k</m> does the matrix have one real eigenvalue with algebraic multiplicity 2?
         </p>
         <me>
-          \begin{bmatrix}
+          A = \begin{bmatrix}
             -3 \amp k\\
             2 \amp -6
           \end{bmatrix}

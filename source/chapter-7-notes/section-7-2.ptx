@@ -27,7 +27,7 @@
       <p>
         Does the inequality below hold for all <m>x,y</m>?
       <me>
-        x^2-6xy+9y^2 \geq 0.
+        x_1^2-6x_1x_2+9x_2^2 \geq 0.
       </me>
       </p>
 
@@ -189,13 +189,19 @@
           If <m>A</m> is symmetric with eigenvalues <m>\lambda_i</m>, then:
         </p>
         <ol>
-          <li><m>Q</m> is <em>positive definite</em> iff <m>\underline{\hspace{3in}}</m>.</li>
-          <li><m>Q</m> is <em>negative definite</em> iff <m>\underline{\hspace{3in}}</m>.</li>
-          <li><m>Q</m> is <em>indefinite</em> iff <m>\underline{\hspace{3in}}</m>.</li>
+          <li><m>Q</m> is <em>positive definite</em> iff <m>\underline{\hspace{3in}}</m>.
+        </li>
+          <li><m>Q</m> is <em>negative definite</em> iff <m>\underline{\hspace{3in}}</m>.
+        </li>
+        <li><m>Q</m> is <em>positive semidefinite</em> iff <m>\underline{\hspace{3in}}</m>.
+        </li>
+          <li><m>Q</m> is <em>negative semidefinite</em> iff <m>\underline{\hspace{3in}}</m>.
+        </li>
+          <li><m>Q</m> is <em>indefinite</em> iff <m>\underline{\hspace{3in}}</m>.
+        </li>
         </ol>
       </statement>
     </theorem>
-
     <p><nbsp/></p>
   </page>
 
@@ -205,11 +211,12 @@
     <example xml:id="ex-7-2-motivation" workspace="true">
       <statement>
         <p>Determine whether the inequality holds for all <m>x,y</m>:
-        <me>
-          x^2-6xy+9y^2 \geq 0.
-        </me>
+        <md>
+          x_1^2-6x_1x_2+9x_2^2 \geq 0.
+        </md>
     </p>
       </statement>
+
     </example>
   </page>
 

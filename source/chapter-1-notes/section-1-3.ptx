@@ -11,7 +11,7 @@
     </objectives>
 
   <!-- Learning Objectives -->
-    <objectives workspace="0.1in" xml:id="obj-1-3">
+    <objectives  xml:id="obj-1-3">
       <title>Goals</title>
       <ul>
         <li>Apply geometric and algebraic properties of vectors in <m>\mathbb{R}^n</m> to compute vector additions and scalar multiplications.</li>
@@ -19,6 +19,8 @@
 
       </ul>
     </objectives>
+
+    <p><nbsp/></p>
 
 
     <p xml:id="motivation">
@@ -39,11 +41,11 @@
         <figure xml:id="fig-motivation-lines">
           <caption>Two lines in the plane with a single point of intersection.</caption>
           <image xml:id="img-motivation-lines" width="30%" decorative="no">
-            <shortdescription>
+            <shortdescription>Two lines intersecting in the plane in a single point.</shortdescription>
+            <description>
             Cartesian axes with two lines: one with positive slope (from the equation <m>x-3y=-3</m>) and one 
             with negative slope (from <m>2x+y=8</m>), intersecting at a point.
-          </shortdescription>
-          <description> Test </description>
+          </description>
             <latex-image>
               <preamble>
               </preamble>
@@ -68,11 +70,13 @@
     To better see this, we introduce <m>n</m>-dimensional space <m>\mathbb{R}^n</m> and the vectors that live in it.
     
   </p>
+
+  <p><nbsp/></p>
   </page>
 
   <page xml:id="Rn">
     <title><m>\mathbb{R}^n</m></title>
-    <definition workspace="0.1in">
+    <definition>
       <statement>
         <p>
           Recall that <m>\mathbb{R}</m> denotes the collection of all real numbers. For a positive integer <m>n</m>, define
@@ -82,15 +86,17 @@
       </statement>
         </definition>
 
+        <p><nbsp/></p>
+
     <p>
       When <m>n=1</m>, we get <m>\mathbb{R}^1=\mathbb{R}</m>, the number line.
       </p>
 
-    <figure xml:id="fig-number-line" workspace=".5in">
+    <figure xml:id="fig-number-line" >
       <caption>The number line for <m>\mathbb{R}</m>.</caption>
       <image xml:id="img-number-line" width="70%" decorative="no">
         <shortdescription>
-        A horizontal line with tick marks labeled from -3 to 3 representing the real numbers.
+        A horizontal line with tick marks labeled from -3 to 3 representing the real number line.
       </shortdescription>
         <latex-image>
           <preamble>
@@ -106,6 +112,8 @@
         </latex-image>
       </image>
     </figure>
+
+    <p><nbsp/></p>
   
     <p>
       When <m>n=2</m>, we can think of <m>\mathbb{R}^2</m> as a plane. Each point is an ordered pair of real numbers: its 
@@ -119,7 +127,7 @@
         </p>    
 
     <figure xml:id="fig-r2-grid">
-      <caption>Cartesian plane with grid, axes, and room to mark <m>(3,2)</m> and <m>\begin{bmatrix}3\\2\end{bmatrix}</m>.</caption>
+      <caption>Cartesian plane with grid and axes.</caption>
       <image xml:id="img-r2-grid" width="50%">
         <shortdescription>
         A square grid with horizontal and vertical axes spanning from -4 to 4.
@@ -132,7 +140,6 @@
   \draw[help lines] (-4, -4) grid (4, 4);
   \draw[-{Stealth[length=4pt]}, thick] (-4,0) -- (4,0);
   \draw[-{Stealth[length=4pt]}, thick] (0,-4) -- (0,4);
-  % Instructor/reader can add a plotted point at (3,2) and a vector from (0,0) to (3,2)
 \end{tikzpicture}
           </tex>
         </latex-image>
@@ -140,6 +147,8 @@
     </figure>
     </statement>
   </example>
+
+  <p><nbsp/></p>
 </page>
 
   <page xml:id="vector-algebra">
@@ -148,13 +157,14 @@
       When we think of an element of <m>\mathbb{R}^n</m> as a vector, we commonly write it as a column:
     </p>
     <me>
-      \vec v \;=\; \begin{bmatrix} 1\\ 2\\ 3 \end{bmatrix}.
+      \vec v \;=\; \begin{bmatrix} 1\\ 2\\ 3 \end{bmatrix} \in \mathbb{R}^3.
     </me>
+    <p><nbsp/></p>
     <p>Suppose <m>c</m> is an arbitrary real number, written <m>c \in \mathbb{R}</m>, and let </p>
     <me>
-      \vec u \;=\; \begin{bmatrix} u_1\\ u_2 \end{bmatrix}, 
+      \vec u \;=\; \begin{bmatrix} u_1\\ u_2 \end{bmatrix} \in \mathbb{R}^2, 
       \qquad
-      \vec v \;=\; \begin{bmatrix} v_1\\ v_2 \end{bmatrix}.
+      \vec v \;=\; \begin{bmatrix} v_1\\ v_2 \end{bmatrix} \in \mathbb{R}^2.
     </me>
     <p>Vectors have the following properties.</p>
     <ol>
@@ -171,9 +181,11 @@
         </me>
       </li>
     </ol>
-    <p workspace="1.5in">
+    <p >
       Vectors in higher dimensions satisfy the same operations componentwise.
     </p>
+
+    <p><nbsp/></p>
 
   </page>
 
@@ -198,6 +210,8 @@
       </statement>
     </definition>
 
+    <p><nbsp/></p>
+
     <p>
       Any two vectors in <m>\mathbb{R}^2</m> that are not scalar multiples of one another span <m>\mathbb{R}^2</m>. 
       Thus, any vector in <m>\mathbb{R}^2</m> can be written as a linear combination of such a pair.
@@ -206,6 +220,7 @@
     <figure xml:id="fig-grid-combos">
       <caption>Linear combinations of two nonparallel vectors spanning the plane.</caption>
       <image xml:id="img-grid-combos" width="60%">
+        <shortdescription>A grid representing the span of two linearly independent vectors</shortdescription>
         <description>
         A lightly rotated square grid with the origin and multiples/sums of two non-parallel vectors labeled, 
         illustrating how combinations like <m>\vec v+\vec u</m>, <m>2\vec v+\vec u</m>, etc., tile the plane.
@@ -240,6 +255,8 @@
       </image>
     </figure>
 
+    <p><nbsp/></p>
+
   </page>
 
   <page xml:id="examples">
@@ -253,13 +270,19 @@
       </statement>
     </example>
 
-    <example workspace="2in">
+    <p><nbsp/></p>
+    
+
+    <example workspace="2in" xml:id="ex-span">
       <statement>
         <p>
-          Let <m>\vec u=\begin{bmatrix} -1\\ 4\\ 2\end{bmatrix}</m> and <m>\vec v=\begin{bmatrix} 5\\ 0\\ -3\end{bmatrix}</m>. Determine if <m>\vec w = \begin{bmatrix} 2 \\ 12 \\ 3 \end{bmatrix}</m> is in <m>\textrm{Span}(\vec u, \vec v)</m>.
+          Let <m>\vec u=\begin{bmatrix} -1\\ 4\\ 2\end{bmatrix}</m> and <m>\vec v=\begin{bmatrix} 5\\ 0\\ -3\end{bmatrix}</m>. Determine if <m>\vec w = \begin{bmatrix} 2 \\ 12 \\ 3 \end{bmatrix}</m> is in <m>\operatorname{Span}(\vec u, \vec v)</m>.
         </p>
       </statement>
     </example>
+
+    <p><nbsp/></p>
+    
   </page>
 
   <page xml:id="example-span">
@@ -315,6 +338,8 @@
         </latex-image>
       </image>
     </figure>
+
+    <p><nbsp/></p>
 
     <example xml:id="ex-span-membership">
       <statement>

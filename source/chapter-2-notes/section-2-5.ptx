@@ -23,6 +23,8 @@
       </ul>
     </objectives>
 
+    <p><nbsp/></p>
+
     <p workspace="0.1in"> We have learned several techniques for solving the equation <m>A\vec x = \vec b</m>. We <em>could</em> solve <m>A\vec x=\vec b</m> using <m>\vec x=A^{-1}\vec b</m>, but this requires computing the inverse of an <m>n\times n</m> matrix, which becomes difficult for large <m>n</m>. Gaussian elimination is better, but still inefficient for large systems.
     </p>
     <p workspace="0.1in">More efficient and numerically stable methods rely on matrix factorizations. A <term>matrix factorization</term> (or <term>matrix decomposition</term>) is a factorization of a matrix into a product of matrices. Such factorizations help solve <m>A\vec x=\vec b</m> and reveal matrix structure. Several matrix factorizations appear throughout this course. In this section, we factor a matrix into <em>lower</em> and <em>upper</em> triangular matrices.
@@ -72,6 +74,8 @@
     </me>
 
     <p workspace="0.2in">Can you have a matrix that is both upper and lower triangular?</p>
+
+    <p><nbsp/></p>
   </page>
 
 
@@ -113,6 +117,8 @@
       </statement>
     </example>
 
+    <p><nbsp/></p>
+
     <p>
       How do we find <m>L </m> and <m>U</m>? Suppose <m>A</m> can be row reduced to echelon form <m>U</m> without interchanging rows. Then
     </p>
@@ -146,6 +152,8 @@
       A = E_1^{-1}\cdots E_p^{-1}U = LU.
     </me>
     </p>
+
+    <p><nbsp/></p>
   </page>
 
   <page xml:id="p-2-5-algorithm-computing-lu">
@@ -161,9 +169,19 @@
         Place entries in <m>L</m> so that the same sequence of row operations reduce <m>L</m> to <m>I</m>.
       </li>
     </ol>
-
-       Note, in MATH 1554, the only allowed row replacement operation can be written in the form <m>R_i - kR_j \rightarrow R_i</m>. The number <m>k</m> is what should go into the <m>i^\text{th}</m> row and <m>j^\text{th}</m> column of <m>L</m>, so <m>\ell_{i,j} = k</m>.
     </p>
+    <p>
+       Note, in MATH 1554, the only allowed row replacement operation can be written in the form <m>R_i - kR_j \rightarrow R_i</m>. The number <m>k</m> is what should go into the <m>i^\text{th}</m> row and <m>j^\text{th}</m> column of <m>L</m>, so <m>\ell_{i,j} = k</m>.
+    </p>   
+    <p> 
+        <em>Caution 1:</em> Note that <m>\ell_{i,j}</m> is the opposite of the scalar used in the row replacement. This is because the formula <m>R_i - kR_j \rightarrow R_i</m> has a negative sign built in.
+    </p>
+    <p xml:id="caution-row-replacement"> 
+        <em>Caution 2:</em> Note that you are only guaranteed to find the correct <m>\ell_{i,j}</m> if you are working from left to right and from top to bottom. So, start with the leftmost pivot column and use its pivot row to elimnate all nonzero entries below it. Then move to the next pivot column (from the left) and repeat.
+    </p>
+    
+
+    <p><nbsp/></p>
 
     <example xml:id="ex-compute-lu" workspace="true">
       <statement>
@@ -178,6 +196,8 @@
         </me>
       </statement>
     </example>
+
+    <p><nbsp/></p>
   </page>
 
   <page>
@@ -196,6 +216,8 @@
         </me>
       </statement>
     </example>
+
+    <p><nbsp/></p>
   </page>
 
 
@@ -211,6 +233,7 @@
       <li>Forward substitution to solve for <m>\vec y</m> in <m>L\vec y=\vec b</m>.</li>
       <li>Backward substitution to solve for <m>\vec x</m> in <m>U\vec x=\vec y</m>.</li>
     </ol>
+    <p>Since <m>L</m> is an invertible matrix, the system <m>L\vec y = \vec b</m> will always be consistent and have a unique solution. The system <m>U\vec x = \vec y</m> may be inconsistent. Since <m>U</m> is in echelon form, we can quickly determine whether <m>U\vec x = \vec y</m> is inconsistent by checking if there is a nonzero entry in <m>\vec y</m> that corresponds to a row of zeros in <m>U</m>.</p>
 
     <example xml:id="ex-solve-with-lu" workspace="true">
       <statement>
@@ -232,7 +255,7 @@
           \qquad
           \vec b=
           \begin{bmatrix}
-            2\\3\\2\\0
+            2\\5\\8\\2
           \end{bmatrix}.
         </me>
       </statement>

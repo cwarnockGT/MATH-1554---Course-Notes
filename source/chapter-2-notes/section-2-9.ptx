@@ -246,7 +246,7 @@
 
     <p><nbsp/></p>
 
-    <p workspace="true"><strong>Some Examples:</strong>
+    <note workspace="true" xml:id="note-examples-dimension"><strong>Some Examples:</strong>
     <ol>
       <li><m>\operatorname{dim}(\mathbb{R}^n)=n</m>.</li>
       <li>
@@ -255,7 +255,7 @@
       <li><m>\operatorname{dim}(\operatorname{Nul}A)</m> is the number of free variables.</li>
       <li><m>\operatorname{dim}(\operatorname{Col}A)</m> is the number of pivotal columns.</li>
     </ol>
-    </p>
+  </note>
 
     <p><nbsp/></p>
   </page>
@@ -277,7 +277,7 @@
 
     <example xml:id="ex-rank-computation" workspace="true">
       <statement>
-        <p>Compute <m>\operatorname{rank}(A)</m> and <m>\operatorname{dim}(\operatorname{Nul}A)</m>, where</p>
+        <p>Compute <m>\operatorname{rank}(A)</m> and <m>\operatorname{dim}(\operatorname{Nul}A)</m> and find a basis for <m>\Col(A)</m> and <m>\Nul(A)</m>, where</p>
         <me>
           A = \begin{bmatrix}
             2 \amp -3 \amp -12 \amp 4 \amp -7\\
@@ -318,14 +318,14 @@
     <theorem xml:id="thm-basis-theorem" workspace="true">
       <title>Basis Theorem</title>
       <statement>
-        <p>Any two bases for a subspace have the same dimension.</p>
+        <p>Any two bases for a subspace have the same number of vectors. That common number of vectors is the dimension of the subspace.</p>
       </statement>
     </theorem>
 
     <p><nbsp/></p>
 
     <theorem xml:id="thm-IMT-Cont-1" workspace="true">
-      <title>The Invertible Matrix Theorem (Continued) Theorem</title>
+      <title>The Invertible Matrix Theorem (Continued)</title>
       <statement>
         <p>
           Let <m>A</m> be an <m>n\times n</m> matrix. The following are equivalent:
@@ -380,7 +380,7 @@
     <task workspace="true">
         <statement>
             <p>
-                <m>\operatorname{Null}(A)=\{\vec 0\}</m>
+                <m>\operatorname{Nul}(A)=\{\vec 0\}</m>
             </p>
         </statement>
     </task>

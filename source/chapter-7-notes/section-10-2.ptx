@@ -61,7 +61,7 @@
     <title>Long-Term Behavior</title>
 
     <p>
-      Recall from <xref ref="handout-section-4-9-markov" text="custom">Section 4.9/5.9 Markov Chains</xref>, that for Markov Chain problems involving a regular stochastic matrix <m>P</m>, we can find the unique steady-state vector <m>\vec q</m> by finding the <em>unique</em> probability eigenvector corresponding to an eigenvalue of <m>\lambda = 1</m>. This involves solving the equation <me>P\vec q = \vec q</me>.
+      Recall from <xref ref="handout-section-4-9-markov" text="custom">Section 4.9/5.9 Markov Chains</xref>, that for Markov Chain problems involving a regular stochastic matrix <m>P</m>, we can find the unique steady-state vector <m>\vec q</m> by finding the <em>unique</em> probability eigenvector corresponding to an eigenvalue of <m>\lambda = 1</m>. This involves solving the equation <md>P\vec q = \vec q</md>.
     </p>
 
     <p workspace="0.3in">
@@ -75,16 +75,17 @@
         <ol marker="(1)">
             <li>
                 <p>
-                    There is a stochastic matrix <m>\Pi</m> such that <me>\lim_{n\to\infty}P^n=\Pi</me>.
+                    There is a stochastic matrix <m>\Pi</m> such that <md>\lim_{n\to\infty}P^n=\Pi</md>.
                 </p>
             </li>
-            <li>For any starting probability vector <m>\vec x_0</m>, we have that <me>\lim_{n\rightarrow\infty}P^n\vec x_0 = \vec q</me>.</li>
+            <li>For any starting probability vector <m>\vec x_0</m>, we have that <md>\lim_{n\rightarrow\infty}P^n\vec x_0 = \vec q</md>.</li>
           <li>Each column of <m>\Pi</m> equals <m>\vec q</m>.</li>
           <li><m>\vec q</m> is the unique eigenvector with eigenvalue <m>1</m>.</li>
           <li>All eigenvalues of <m>P</m> satisfy <m>|\lambda| \leq 1</m>.</li>
         </ol>
       </statement>
     </theorem>
+    
 
     <p>
         Focusing on (3), we see that an alternative way to find the unique steady-state vector <m>\vec q</m> is to take large powers of <m>P</m> and see what vector the columns of <m>P^n</m> are converging to. This <em>will</em> require a computer.
@@ -125,7 +126,7 @@ main node/.style={circle,fill=black!05,draw}]
         </image>
 
         <p>
-            Note that Page 1 has direct links to pages <m>\underline{\hspace{1.5in}}</m>.
+            Note that Page A has direct links to pages <m>\underline{\hspace{1.5in}}</m>.
         </p>
 
         <p>
@@ -139,7 +140,7 @@ main node/.style={circle,fill=black!05,draw}]
             <li>Note that the matrix <m>P</m> formed in <xref ref="ex-10-2-web"/> describes how users transition between pages in the web after clicking a single link.</li> 
             <li workspace="0.5in">What does <m>P^2</m> describe?</li>
             <li workspace="0.5in">What does <m>\displaystyle\lim_{n\rightarrow \infty} P^n</m> describe?</li> 
-            <li>By <xref ref="thm-regular-markov"/>, if <m>P </m> is a regular stochastic matrix, then <me>\lim_{n\rightarrow \infty} P^n = \begin{bmatrix} \vec q \amp \vec q \amp \cdots \amp \vec q \end{bmatrix}</me>. Each entry of the unique steady-state vector <m>\vec q </m> is describing the how likely someone is to be on that webpage in the long run.</li> 
+            <li>By <xref ref="thm-regular-markov"/>, if <m>P </m> is a regular stochastic matrix, then <md>\lim_{n\rightarrow \infty} P^n = \begin{bmatrix} \vec q \amp \vec q \amp \cdots \amp \vec q \end{bmatrix}</md>. Each entry of the unique steady-state vector <m>\vec q </m> is describing the how likely someone is to be on that webpage in the long run.</li> 
             <li>Therefore, <m>\vec q</m> is describing the <em>popularity</em> or <em>importance</em> of each page in the web.</li>
             <li>The <term>PageRank</term> is the ranking assigned to each page based on its importance, which is determined from <m>\vec q</m>. The highest ranked page has PageRank 1, the second has PageRank 2, and so on.</li>
         </ul>
@@ -177,7 +178,7 @@ main node/.style={circle,fill=black!05,draw}]
       <title>Adjustment 2</title>
       <statement>
         <p>
-            A user at any page will navigate to any page among those that their webpage links to with equal probability <m>p</m>, and to any page in the web with equal probability <m>1-p</m>. Then, the stochastic matrix becomes <me>G = pP_* + (1-p)K</me>, where <m>K</m> is an <m>n \times n</m> stochastic matrix with every entry equal to <m>\frac{1}{n}</m>. The matrix <m>G</m> is called the <term>Google Matrix</term>. The value <m>p</m> is known as the <term>damping factor</term>. Google is said to use <m>p=0.85</m>.
+            A user at any page will navigate to any page among those that their webpage links to with equal probability <m>p</m>, and to any page in the web with equal probability <m>1-p</m>. Then, the stochastic matrix becomes <md>G = pP_* + (1-p)K</md>, where <m>K</m> is an <m>n \times n</m> stochastic matrix with every entry equal to <m>\frac{1}{n}</m>. The matrix <m>G</m> is called the <term>Google Matrix</term>. The value <m>p</m> is known as the <term>damping factor</term>. Google is said to use <m>p=0.85</m>.
         </p>
       </statement>
     </note>
@@ -199,13 +200,13 @@ main node/.style={circle,fill=black!05,draw}]
     <title>Computing PageRank</title>
 
         <p> 
-            Because <m>G</m> is a regular stochastic matrix, we have that for any initial probability vector we have that <me>\lim_{n\rightarrow \infty}G^n\vec x_0 \to \vec q</me>. In practice, we can compute the PageRank for each page in the web by evaluating <me>G^n\vec x_0</me> for large <m>n</m>. The elements of the resulting vector give the PageRanks of each page in the web.
+            Because <m>G</m> is a regular stochastic matrix, we have that for any initial probability vector we have that <md>\lim_{n\rightarrow \infty}G^n\vec x_0 \to \vec q</md>. In practice, we can compute the PageRank for each page in the web by evaluating <md>G^n</md> for large <m>n</m> and then using <xref ref="thm-regular-markov"/>. The elements of the resulting columns of <m>G^n</m> give the PageRanks of each page in the web.
         </p>
 
 <example workspace="1in">
     <statement>
         <p>
-            Let <m>G</m> be the Google matrix from <xref ref="ex-10-2-goog"/>. Assuming <me>G^{10} = \begin{bmatrix} 0.2517 \amp 0.25171 \amp 0.25171 \amp 0.25171 \amp 0.25171 \\ 0.2985 \amp 0.29855 \amp 0.29836 \amp 0.29835 \amp 0.2985 \\ 0.17661 \amp 0.17655 \amp 0.17674 \amp 0.17675 \amp 0.17661 \\ 0.15676 \amp 0.15677 \amp 0.15677 \amp 0.15676 \amp 0.15677 \\ 0.11643 \amp 0.11641 \amp 0.11641 \amp 0.11642 \amp 0.11642 \end{bmatrix}</me>, determine the PageRank of each of the pages in the web.
+            Let <m>G</m> be the Google matrix from <xref ref="ex-10-2-goog"/>. Assuming <md>G^{10} = \begin{bmatrix} 0.2517 \amp 0.25171 \amp 0.25171 \amp 0.25171 \amp 0.25171 \\ 0.2985 \amp 0.29855 \amp 0.29836 \amp 0.29835 \amp 0.2985 \\ 0.17661 \amp 0.17655 \amp 0.17674 \amp 0.17675 \amp 0.17661 \\ 0.15676 \amp 0.15677 \amp 0.15677 \amp 0.15676 \amp 0.15677 \\ 0.11643 \amp 0.11641 \amp 0.11641 \amp 0.11642 \amp 0.11642 \end{bmatrix}</md>, determine the PageRank of each of the pages in the web.
         </p>
     </statement>
 </example>
@@ -251,7 +252,7 @@ main node/.style={circle,fill=black!05,draw}]
         <task workspace="1in">
             <statement>
                 <p>
-                    Determine the PageRank of each page if <me>G^{12} = \begin{bmatrix} 0.11627 \amp 0.1163 \amp 0.1163 \amp 0.1163 \amp 0.11631 \amp 0.11628 \amp 0.1163 \\ 0.16859 \amp 0.16856 \amp 0.16855 \amp 0.16856 \amp 0.16855 \amp 0.16859 \amp 0.16856 \\ 0.19129 \amp 0.19126 \amp 0.19125 \amp 0.19126 \amp 0.19124 \amp 0.19129 \amp 0.19126 \\ 0.09883 \amp 0.098847 \amp 0.09885 \amp 0.098845 \amp 0.098855 \amp 0.09885 \amp 0.098845 \\ 0.16402 \amp 0.16406 \amp 0.16407 \amp 0.16406 \amp 0.16408 \amp 0.16402 \amp 0.16406 \\ 0.16859 \amp 0.16856 \amp 0.16855 \amp 0.16856 \amp 0.16855 \amp 0.16859 \amp 0.16856 \\ 0.092403 \amp 0.092415 \amp 0.092418 \amp 0.092424 \amp 0.092421 \amp 0.092403 \amp 0.092414 \end{bmatrix}</me>.
+                    Determine the PageRank of each page if <md>G^{12} = \begin{bmatrix} 0.11627 \amp 0.1163 \amp 0.1163 \amp 0.1163 \amp 0.11631 \amp 0.11628 \amp 0.1163 \\ 0.16859 \amp 0.16856 \amp 0.16855 \amp 0.16856 \amp 0.16855 \amp 0.16859 \amp 0.16856 \\ 0.19129 \amp 0.19126 \amp 0.19125 \amp 0.19126 \amp 0.19124 \amp 0.19129 \amp 0.19126 \\ 0.09883 \amp 0.098847 \amp 0.09885 \amp 0.098845 \amp 0.098855 \amp 0.09885 \amp 0.098845 \\ 0.16402 \amp 0.16406 \amp 0.16407 \amp 0.16406 \amp 0.16408 \amp 0.16402 \amp 0.16406 \\ 0.16859 \amp 0.16856 \amp 0.16855 \amp 0.16856 \amp 0.16855 \amp 0.16859 \amp 0.16856 \\ 0.092403 \amp 0.092415 \amp 0.092418 \amp 0.092424 \amp 0.092421 \amp 0.092403 \amp 0.092414 \end{bmatrix}</md>.
                 </p>
             </statement>
         </task>

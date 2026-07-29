@@ -44,8 +44,9 @@
           A subset <m>H</m> of <m>\mathbb{R}^n</m> is a <term>subspace</term> if:
         </p>
         <ul>
-          <li><m>c\vec u\in H</m> for any scalar <m>c\in\mathbb{R}</m> and any <m>\vec u\in H</m>.</li>
+          <li><m>\vec 0 \in H</m></li>
           <li><m>\vec u+\vec v\in H</m> for all <m>\vec u,\vec v\in H</m>.</li>
+          <li><m>c\vec u\in H</m> for any scalar <m>c\in\mathbb{R}</m> and any <m>\vec u\in H</m>.</li>
         </ul>
       </statement>
     </definition>
@@ -61,7 +62,7 @@
         <p>Which of the following subsets could be subspaces of <m>\mathbb{R}^2</m>?</p>
 
         <image xml:id="img-subspaces" source="./subspaces.png" width="80%">
-          <shortdescription>A graphic showing three subsets of <m>\mathbb{R}^2</m>. The first is the unit square. The second is a line through the origin. The third is a line that does not pass throught the origin.</shortdescription>
+          <shortdescription>A graphic showing three subsets of <m>\mathbb{R}^2</m>. The first (a) is the unit square. The second (b) is a line through the origin. The third (c) is a line that does not pass throught the origin.</shortdescription>
         </image>
       </statement>
     </example> 
@@ -76,38 +77,72 @@
                 For each subset of <m>\mathbb{R}^3</m> given below, determine if it is a subspace of <m>\mathbb{R}^3</m>.
             </p>
         </introduction>
-        <task workspace="0.8in">
+        <task workspace="true">
             <statement>
                 <p>
-                    <m>\left\{\vec 0\right\}</m>
-                </p>
-            </statement>
-        </task>
-        <task workspace="0.8in">
-            <statement>
-                <p>
-                    <m>\left\{\vec 0, \begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix},\begin{bmatrix}-1 \\ 0 \\ -1\end{bmatrix} \right\}</m>
-                </p>
-            </statement>
-        </task>
-        <task workspace="0.8in">
-            <statement>
-                <p>
-                    <m>\left\{\begin{bmatrix}1 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}\right\}</m>
-                </p>
-            </statement>
-        </task>
-        <task workspace="0.8in">
-            <statement>
-                <p>
-                    <m>\textrm{Span}\left\{\begin{bmatrix}1 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}\right\}</m>
+                    <m>S_1 = \left\{\vec 0\right\}</m>
                 </p>
             </statement>
         </task>
         <task workspace="true">
             <statement>
                 <p>
-                    <m>\left\{\begin{bmatrix} x \\ -x \\ y \end{bmatrix}; x,y\in\mathbb{R}\right\}</m>
+                    <m>S_2 = \left\{\vec 0, \begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix},\begin{bmatrix}-1 \\ 0 \\ -1\end{bmatrix} \right\}</m>
+                </p>
+            </statement>
+        </task>
+        <task workspace="true">
+            <statement>
+                <p>
+                    <m>S_3 = \left\{\begin{bmatrix}1 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}\right\}</m>
+                </p>
+            </statement>
+        </task>
+        <task workspace="true">
+            <statement>
+                <p>
+                    <m>S_4 = \operatorname{Span}\left\{\begin{bmatrix}1 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}\right\}</m>
+                </p>
+            </statement>
+        </task>
+    </example>
+    <p><nbsp/></p>
+</page>
+<page>
+    <title>More Examples of Subspaces</title>
+    
+    
+    <example>
+        <introduction>
+            <p>
+                The following subsets of <m>\mathbb{R}^2</m> are written in set-builder notation. For each, determine if it is a subspace of <m>\mathbb{R}^2</m>. Note that <m>\mathbb{Z} = \{\dots, -2, -1, 0, 1 , 2, \dots\}</m> is the set of integers.
+            </p>
+        </introduction>
+        <task workspace="true">
+            <statement>
+                <p>
+                    <m>T_1 = \left\{\begin{bmatrix} x \\ -x \end{bmatrix} \in \mathbb{R}^2 \ \Big \rvert \ x\in\mathbb{Z}\right\}</m>
+                </p>
+            </statement>
+        </task>
+        <task workspace="true">
+            <statement>
+                <p>
+                    <m>T_2 = \left\{\begin{bmatrix} x \\ -x \end{bmatrix} \in \mathbb{R}^2 \ \Big \rvert \ x\in\mathbb{R}\right\}</m>
+                </p>
+            </statement>
+        </task>
+        <task workspace="true">
+            <statement>
+                <p>
+                    <m>T_3 = \left\{\vec x \in \mathbb{R}^2 \ \Big \rvert \ \begin{bmatrix} 1 \amp 2 \\ 2 \amp 4 \end{bmatrix}\vec x = \begin{bmatrix} 0 \\ 0 \end{bmatrix}\right\}</m>
+                </p>
+            </statement>
+        </task>
+        <task workspace="true">
+            <statement>
+                <p>
+                    <m>T_4 = \left\{\vec x \in \mathbb{R}^2 \ \Big \rvert \ \begin{bmatrix} 1 \amp 2 \\ 2 \amp 4 \end{bmatrix}\vec x = \begin{bmatrix} 1 \\ 2 \end{bmatrix}\right\}</m>
                 </p>
             </statement>
         </task>
@@ -124,16 +159,13 @@
       <m>\operatorname{Span}\{\vec v_1,\dots,\vec v_p\}</m> is the subspace consisting of all linear combinations of these vectors. Not only is the span of vectors an example of a subspace of <m>\mathbb{R}^n</m>, they are the only examples of subspace of <m>\mathbb{R}^n</m>.
     </p>
 
-    <p><nbsp/></p>
-
     <theorem xml:id="thm-subspace-are-span">
         <statement>
             <p>
-                Every subspace of <m>\mathbb{R}^n</m> can be written as the span of a finite number of vectors; that is, if <m>H</m> is a subspace of <m>\mathbb{R}^n</m>, then there exists vectors <m>\vec v_1, \dots, \vec v_k</m> so that <m>H = \textrm{Span}\left\{\vec v_1, \dots, \vec v_n\right\}</m>.
+                Every subspace of <m>\mathbb{R}^n</m> can be written as the span of a finite number of vectors; that is, if <m>H</m> is a subspace of <m>\mathbb{R}^n</m>, then there exists vectors <m>\vec v_1, \dots, \vec v_k</m> so that <m>H = \operatorname{Span}\left\{\vec v_1, \dots, \vec v_n\right\}</m>.
             </p>
         </statement>
     </theorem>
-    
 
     <p><nbsp/></p>
 
@@ -161,6 +193,18 @@
       </statement>
     </definition>
 
+    <theorem xml:id="thm-nul-same-col-dif">
+        <statement>
+            <p>
+                Let <m>A</m> be an <m>m \times n</m> matrix, and let <m>B</m> be any matrix which is <xref ref="def-row-equiv" text="custom">row equivalent</xref> to <m>A</m>. Then 
+                    <ul>
+                        <li>The subspaces <m>\operatorname{Col}(A)</m> and <m>\operatorname{Col}(B)</m> are <em>most likely</em> different. So, often, <m>\operatorname{Col}(A) \neq \operatorname{Col}(B)</m>.</li>
+                        <li>The subspaces <m>\operatorname{Nul}(A)</m> and <m>\operatorname{Nul}(B)</m> are <em>always</em> the same. So, it is always true that <m>\operatorname{Nul}(A) = \operatorname{Nul}(B)</m>.</li>
+                    </ul>
+                </p>
+            </statement>
+    </theorem>
+
     <p><nbsp/></p>
 
     <example xml:id="ex-colspace-membership" workspace="true">
@@ -176,10 +220,10 @@
           \end{bmatrix}
           \sim
           \begin{bmatrix}
-            1 \amp -3 \amp -4\\
-            0 \amp -6 \amp -18\\
+            1 \amp 0 \amp 5\\
+            0 \amp 1 \amp 3\\
             0 \amp 0 \amp 0
-          \end{bmatrix},
+          \end{bmatrix} = B,
           \qquad
           \vec b=
           \begin{bmatrix}
@@ -188,6 +232,7 @@
         </me>
       </statement>
     </example>
+    
     <p><nbsp/></p>
   </page>
 
@@ -206,18 +251,18 @@
             -3 \amp 7 \amp 6
           \end{bmatrix} \sim
           \begin{bmatrix}
-            1 \amp -3 \amp -4\\
-            0 \amp -6 \amp -18\\
+            1 \amp 0 \amp 5\\
+            0 \amp 1 \amp 2\\
             0 \amp 0 \amp 0
-          \end{bmatrix}, 
+          \end{bmatrix} = B, 
           \qquad          
           \vec v=
           \begin{bmatrix}
-            -5\lambda\\
-            -3\lambda\\
-            \lambda
+            -5t\\
+            -3t\\
+            t
           \end{bmatrix},
-          \quad \lambda\in\mathbb{R}.
+          \quad t\in\mathbb{R}.
         </me>
     </p>
       </statement>
@@ -227,7 +272,7 @@
 
   <page>
     <title>Definition of basis and Example</title>
-        <definition xml:id="def-basis" workspace="1in">
+        <definition xml:id="def-basis" workspace="0.5in">
       <title>Basis</title>
       <statement>
         <p>
@@ -235,30 +280,52 @@
           <m>H</m> that span <m>H</m>.
         </p>
       </statement>
-    </definition>    
+    </definition>
+    <p>
+        In MATH 1554, each basis will be a <em>finite</em> set of vectors. For every subspace other than the trivial subspace <m>\left\{\vec 0\right\}</m>, there are infinitely many choices for the basis.
+    </p>    
+    <p>
+        Be careful to NEVER include <m>\Span</m> when writing your basis. Writing <m>\Span</m> of the basis gives the entire subspace. A basis is NOT the entire subspace, but a finite set of building blocks used to build the space.
+    </p>
     <p><nbsp/></p>
     
 <example xml:id="ex-basis-subspace" workspace="true">
-      <statement>
-        <p>
-          Let
-        </p>
+        <introduction>
+            <p>
+            Let
+            </p>
 
-        <me>
-          H=\left\{
-          \begin{bmatrix}
-            x_1\\x_2\\x_3\\x_4
-          \end{bmatrix}
-          \in\mathbb{R}^4\;\middle|\;
-          x_1+2x_2+x_3+5x_4=0
-          \right\}.
-        </me>
-
-        <ol marker="a">
-          <li>Find a matrix <m>A</m> such that <m>H=\operatorname{Nul}(A)</m>.</li>
-          <li>Construct a basis for <m>H</m>.</li>
-        </ol>
-      </statement>
+            <me>
+            H=\left\{
+            \begin{bmatrix}
+                x_1\\x_2\\x_3\\x_4
+            \end{bmatrix}
+            \in\mathbb{R}^4\;\middle|\;
+            x_1+2x_2+x_3+5x_4=0
+            \right\}.
+            </me>
+        </introduction>
+        <task workspace="true">
+            <statement>
+                <p>
+                    Find at least three vectors which live in <m>H</m>.   
+                </p>
+            </statement>
+        </task>    
+        <task workspace="true">
+            <statement>
+                <p>
+                    Find a matrix <m>A</m> such that <m>H=\operatorname{Nul}(A)</m>.  
+                </p>
+            </statement>
+        </task>  
+        <task workspace="true">
+            <statement>
+                <p>
+                    Construct a basis for <m>H</m>. 
+                </p>
+            </statement>
+        </task>  
     </example>
     <p><nbsp/></p>
   </page>
@@ -283,7 +350,7 @@
             1 \amp -2 \amp 0 \amp 0\\
             0 \amp 0 \amp 1 \amp 0\\
             0 \amp 0 \amp 0 \amp 0
-          \end{bmatrix}.
+          \end{bmatrix} = B.
         </me>
       </statement>
     </example>
@@ -295,7 +362,7 @@
   <page>
     <title>Another Example</title>
     <example xml:id="ex-V-ab-equals-zero" workspace="true">
-      <statement>
+      <introduction>
         <p>
           Let
         </p>
@@ -308,14 +375,35 @@
           \in\mathbb{R}^2\;\middle|\;ab=0
           \right\}.
         </me>
-
-        <ol>
-          <li>Give an example of a vector that is in <m>V</m>.</li>
-          <li>Give an example of a vector that is not in <m>V</m>.</li>
-          <li>Is the zero vector in <m>V</m>?</li>
-          <li>Is <m>V</m> a subspace?</li>
-        </ol>
-      </statement>
+        </introduction>
+        <task workspace="1in">
+            <statement>
+                <p>
+                    Give an example of a vector that is in <m>V</m>.
+                </p>
+            </statement>
+        </task>
+        <task workspace="1in">
+            <statement>
+                <p>
+                    Give an example of a vector that is not in <m>V</m>.
+                </p>
+            </statement>
+        </task>
+        <task workspace="1in">
+            <statement>
+                <p>
+                    Is the zero vector in <m>V</m>?
+                </p>
+            </statement>
+        </task>
+        <task workspace="1in">
+            <statement>
+                <p>
+                    Is <m>V</m> a subspace of <m>\mathbb{R}^2</m>?
+                </p>
+            </statement>
+        </task>
     </example>
     
   </page>

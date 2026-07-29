@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<handout xml:id="handout-1-2" xmlns:xi="http://www.w3.org/2001/XInclude">
+<worksheet xml:id="sec-1-2-row-reduction" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <page>
   <title>1.2 Row Reduction and Echelon Forms</title>
   <!-- Topics -->
-    <objectives xml:id="obj-1-2-topics">
+    <objectives>
       <title>Topics</title>
       <ul>
         <li>Row reduction algorithm</li>
@@ -12,7 +13,7 @@
     </objectives>
 
   <!-- Learning Objectives -->
-    <objectives workspace="0.2in" xml:id="obj-1-2">
+    <objectives>
       <title>Goals</title>
       <ul>
         <li>Characterize a linear system in terms of leading entries, free variables, pivots, pivot columns, and pivot positions.</li>
@@ -21,8 +22,10 @@
       </ul>
     </objectives>
 
+    <p><nbsp/></p>
+
   <!-- Definition: Echelon form and RREF -->
-  <definition  xml:id="def-echelon-rref" workspace="0.3in">
+  <definition>
     <title>Echelon Form and Row Row Reduced Echelon Form</title>
     <statement>
       <p>A rectangular matrix is in <term>echelon form</term> (REF) if:</p>
@@ -39,58 +42,78 @@
     </statement>
   </definition>
 
+  <p><nbsp/></p>
+
   <!-- Example: matrix in echelon form -->
-  <example xml:id="ex-echelon">
+  <example>
       <statement>
       <p>Let <m>\blacksquare</m> denote a nonzero number, and <m>\ast</m> denote any number.</p>
       <p>
         <m>
           \begin{bmatrix}
-          0 \amp \blacksquare \amp \ast \amp \ast \amp \ast \amp \ast \amp \ast \amp \ast \amp \ast \amp \ast \\
-          0 \amp 0 \amp 0 \amp \blacksquare \amp \ast \amp \ast \amp \ast \amp \ast \amp \ast \amp \ast \\
-          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp \blacksquare \amp \ast \amp \ast \\
-          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp \blacksquare \amp \ast \\
-          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0
+          0 \amp \blacksquare \amp \ast   \amp \ast \amp \ast \amp \ast \amp \ast \amp \ast \\
+          0 \amp 0 \amp 0 \amp \blacksquare  \amp \ast \amp \ast \amp \ast \amp \ast \\
+          0 \amp 0 \amp 0 \amp 0  \amp 0 \amp \blacksquare \amp \ast \amp \ast \\
+          0 \amp 0 \amp 0 \amp 0  \amp 0 \amp 0 \amp \blacksquare \amp \ast \\
+          0 \amp 0 \amp 0 \amp 0  \amp 0  \amp 0 \amp 0 \amp 0
           \end{bmatrix}
-        </m> is in REF.
-      </p>
-      <p>
+        </m> is in REF and 
         <m>
           \begin{bmatrix}
-          0 \amp 1 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \\
-          0 \amp 0 \amp 0 \amp 1 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \\
-          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 0 \amp 0 \\
-          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 0 \\
-          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0
+          0 \amp 1 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \\
+          0 \amp 0 \amp 0 \amp 1 \amp 0 \amp 0 \amp 0 \amp 0 \\
+          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 0 \amp 0 \\
+          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 0 \\
+          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0
           \end{bmatrix}
         </m> is in RREF.
       </p>
     </statement>
   </example>
 
+  <p><nbsp/></p>
+</page>
+
+<page>
+  <title>Definitions of Pivot Position and Pivot Column</title>
+  
+  
   <!-- Exercise set: which are in RREF? -->
-  <example xml:id="task-rref-check" >
-    <statement>
+  <exercisegroup cols="3">
+    <introduction>
       <p>Determine whether each matrix is in RREF, REF, or neither.</p>
-      <p workspace="0.3in">
-        <m>\text{a)}\quad \begin{bmatrix} 1 \amp 0 \\ 0 \amp 2 \end{bmatrix}
-        \qquad \qquad \qquad
-        \text{b)}\quad \begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}
-        \qquad \qquad \qquad
-        \text{c)}\quad \begin{bmatrix} 0 \\ 1 \\ 0 \\ 0 \end{bmatrix}
-        </m>
-      </p>
-      <p workspace="0.3in">
-        <m>\text{d)}\quad \begin{bmatrix} 0 \amp 6 \amp 3 \amp 0 \end{bmatrix}
-        \qquad \qquad
-        \text{e)}\quad \begin{bmatrix} 1 \amp 17 \amp 0 \\ 0 \amp 0 \amp 1 \end{bmatrix}
-        </m>
-      </p>
-    </statement>
-  </example>
+    </introduction>
+      <exercise workspace="0.3in">
+        <statement>
+        <m>\begin{bmatrix} 1 \amp 0 \\ 0 \amp 2 \end{bmatrix}</m>
+        </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <m>\begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}</m>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <m>\begin{bmatrix} 0 \\ 1 \\ 0 \\ 0 \end{bmatrix}</m>
+            </statement>
+        </exercise>
+      <exercise workspace="0.3in">
+        <statement>
+        <m>\begin{bmatrix} 0 \amp 6 \amp 3 \amp 0 \end{bmatrix}</m>
+        </statement>
+        </exercise>
+        <exercise>
+            <statement>
+            <m>\begin{bmatrix} 1 \amp 17 \amp 0 \\ 0 \amp 0 \amp 1 \end{bmatrix}</m>
+            </statement>
+        </exercise>
+    </exercisegroup>
+
+    <p><nbsp/></p>
 
   <!-- Definition: pivot position / pivot column -->
-  <definition workspace="0.2in" xml:id="def-pivot">
+  <definition workspace="0.2in">
     <title>Pivot Position and Pivot Column</title>
     <statement>
       <p>
@@ -100,8 +123,10 @@
       </statement>
   </definition>
 
+  <p><nbsp/></p>
+
   <!-- Guided task: compute RREF and identify pivot columns -->
-  <example xml:id="task-pivots" workspace="true">
+  <example workspace="true">
     <statement>
       <p>Express the matrix in row reduced echelon form and identify the pivot columns.</p>
       <p>
@@ -118,8 +143,15 @@
     </statement>
   </example>
 
+  <p><nbsp/></p>
+</page>
+
+<page>
+<title>Row Reduction Algorithm</title>
+
+
   <!-- Algorithm: Row reduction -->
-  <paragraphs xml:id="algo-rref" workspace="0.2in">
+  <paragraphs workspace="0.2in">
     <title>Row Reduction Algorithm (Steps to RREF)</title>
     <p>The algorithm below produces a matrix in RREF.</p>
     <ul>
@@ -132,6 +164,8 @@
       <li><strong>Continue:</strong> Repeat these steps for each subsequent row until the matrix is in RREF.</li>
     </ul>
   </paragraphs>
+
+  <p><nbsp/></p>
 
   <example workspace="true">
     <statement>
@@ -149,6 +183,12 @@
       </p>
     </statement>
   </example>
+  <p><nbsp/></p>
+</page>
+
+<page>
+<title>Pivot and Free Variables</title>
+
 
   <definition workspace="0.2in">
     <title>Pivot Variables and Free Variables</title>
@@ -160,8 +200,10 @@
       </statement>
   </definition>
 
+  <p><nbsp/></p>
+
   <!-- Example: basic and free variables -->
-  <example xml:id="ex-basic-free" workspace="true">
+  <example workspace="true">
     <statement>
       <p>Determine the pivot variables and the free variables for the system represented below.</p>
       <p>
@@ -178,10 +220,11 @@
     </statement>
   </example>
 
+  <p><nbsp/></p>
+
   <!-- Theorem: existence and uniqueness -->
-  <theorem xml:id="thm-existence-uniqueness">
+  <theorem xml:id="thm-inconsistent-system"> 
     <title>Existence and Uniqueness of Solutions</title>
-    <statement>
       <p>
         A linear system is consistent if and only if the last column of the <strong>augmented</strong> matrix does not have a pivot.
         Equivalently, the RREF of the augmented matrix does <em>not</em> contain a row of the form
@@ -189,10 +232,13 @@
       </p>
       <p>If a linear system is consistent, then:</p>
       <ol>
-        <li>It has a unique solution if and only if (iff) there are <m>\underline{\phantom{free variable free variables}}</m>.</li>
-        <li>Otherwise, it has <m>\underline{\phantom{infinitely infinitely}}</m> many solutions parameterized by the free variables.</li>
-      </ol>
-    </statement>
-  </theorem>
+        <li>It has a unique solution if and only if (iff) there are <m>\underline{\hspace{3in}}</m>.
+    </li>
 
-</handout>
+        <li>Otherwise, it has <m>\underline{\hspace{2in}}</m> many solutions parameterized by the free variables.
+        
+      </ol>
+  </theorem>
+</page>
+
+</worksheet>

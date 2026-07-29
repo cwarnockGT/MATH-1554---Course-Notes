@@ -10,7 +10,7 @@
       <title>Topics</title>
       <ul>
         <li>The definition of a linear transformation.</li>
-      <li>Interpreting matrix multiplication as a linear transformation.</li>
+        <li>Interpreting matrix multiplication as a linear transformation.</li>
       </ul>
     </objectives>
 
@@ -27,6 +27,8 @@
         </li>
       </ul>
     </objectives>
+
+    <p><nbsp/></p>
 
     <definition workspace="true">
     <statement>
@@ -45,6 +47,7 @@
 </statement>
     </definition>
 
+
     <p>This yields another interpretation of the equation <m>A\vec x=\vec b</m>:</p>
     <ul>
       <li>as a system of linear equations,</li>
@@ -53,6 +56,8 @@
       <li>as a matrix equation,</li>
       <li>as a linear transformation equation.</li>
     </ul>
+
+    <p><nbsp/></p>
   </page>
 
   <!-- ==================== PAGE 3 ==================== -->
@@ -68,7 +73,7 @@
 
     <image xml:id="img-sine-graph" width="80%">
         <shortdescription> Graph of function on the Cartesian plane.</shortdescription>
-      <description>Graph of <m>y = sin(x)</m> on the interval <m>[-2\pi, 2\pi]</m> with axes labeled <m>x</m> and <m>y</m> and a light grid.</description>
+      <description>Graph of <m>y = \sin(x)</m> on the interval <m>[-2\pi, 2\pi]</m> with axes labeled <m>x</m> and <m>y</m> and a light grid.</description>
       <latex-image>
         <preamble>
               </preamble>
@@ -108,7 +113,9 @@
       </latex-image>
     </image>
 
-    <p>This is fine when both domain and codomain are <m>\mathbb{R}</m>. If the domain is <m>\mathbb{R}^2</m> and the codomain is <m>\mathbb{R}^3</m>, we would need five dimensions to draw the full graph—so a geometric graph is not possible.</p>
+    <p>Graphing is fine when both domain and codomain are <m>\mathbb{R}</m>. If the domain is <m>\mathbb{R}^2</m> and the codomain is <m>\mathbb{R}^3</m>, we would need five dimensions to draw the full graph, so a geometric graph is not possible.</p>
+
+    <p><nbsp/></p>
   </page>
 
   <!-- ==================== PAGE 4 ==================== -->
@@ -133,6 +140,7 @@
         <task workspace="true">
           <statement><p>Find <m>\vec v\in\mathbb{R}^2</m> so that <m>T(\vec v)=\vec b</m>.</p></statement>
         </task>
+        
 
         <task workspace="true">
           <statement>
@@ -141,6 +149,8 @@
           </statement>
         </task>
     </example>
+
+    <p><nbsp/></p>
   </page>
 
   <!-- ==================== PAGE 5 ==================== -->
@@ -156,6 +166,8 @@
     </p>
     </definition>
 
+    <p><nbsp/></p>
+
     <p workspace="1in"> By linearity, for any scalars <m>c_1,\dots,c_k</m> and vectors <m>\vec v_1,\dots,\vec v_k</m>,
     <me>
       T\!\big(c_1\vec v_1+\cdots+c_k\vec v_k\big)
@@ -166,9 +178,13 @@
 
     <p workspace="0.5in">This is the <term>principle of superposition</term>. In particular, once we know <m>T(\vec e_1),\dots,T(\vec e_n)</m>, we can compute <m>T(\vec v)</m> for any <m>\vec v \in \mathbb{R}^n</m>.</p>
 
+    <p><nbsp/></p>
+
     <fact>
-      <p>Every matrix transformation <m>T_A(\vec v)=A\vec v</m> is linear.</p>
+      <p>Every matrix transformation <m>T_A(\vec v)=A\vec v</m> is linear.</p> 
     </fact>
+
+    <p><nbsp/></p>
   </page>
 
   <!-- ==================== PAGE 6 ==================== -->
@@ -195,6 +211,8 @@
           </statement>
         </task>
     </example>
+
+    <p><nbsp/></p>
   </page>
 
   <!-- ==================== PAGE 7 ==================== -->
@@ -213,6 +231,8 @@
             </statement>
         </task>
     </example>
+
+    <p><nbsp/></p>
   </page>
 
   <!-- ==================== PAGE 8 ==================== -->

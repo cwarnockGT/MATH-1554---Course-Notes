@@ -55,6 +55,7 @@
                       Then there exists at least one vector <m>\vec v</m> so that <m>\underline{\hspace{1.5in}}</m>.
                     </p>
                   </li>
+                  
                   <li>
                     <p>
                       This vector <m>\widehat x =  \vec v</m> is a <em>least squares solution</em> to <m>A\vec x = \vec b</m> and we have that <me>\underline{\hspace{0.5in}} = \|\vec b - A\widehat\| \leq \|\vec b - A\vec x\|</me> for all <m>\vec x \in \mathbb{R}^n</m>.
@@ -185,10 +186,14 @@
     <p>
       <ul>
         <li>
-          Note that if <m>\widehat x</m> is a least squares solution to <m>A\vec x = \vec b</m>, then <m>\vec b - A\widehat x</m> is orthogonal to every vector in <m>\underline{\hspace{2in}}</m>.
+          <p> 
+            Note that if <m>\widehat x</m> is a least squares solution to <m>A\vec x = \vec b</m>, then <m>\vec b - A\widehat x</m> is orthogonal to every vector in <m>\underline{\hspace{2in}}</m>.
+          </p>
         </li>
         <li>
-          Then, we have that <m>\vec b - A\widehat x</m> lives in <m>\underline{\hspace{2in}}</m>.
+          <p> 
+            Then, we have that <m>\vec b - A\widehat x</m> lives in <m>\underline{\hspace{2in}}</m>.
+          </p>
         </li>
         <li>
           <p>
@@ -196,7 +201,9 @@
           </p>
         </li>
         <li>
-          Therefore, we have that <m>\underline{\hspace{1in}}\left(\vec b - A\widehat x\right) = \underline{\hspace{1in}}</m>.
+          <p> 
+            Therefore, we have that <m>\underline{\hspace{1in}}\left(\vec b - A\widehat x\right) = \underline{\hspace{1in}}</m>.
+          </p>
         </li>
         <li>
           <p>
@@ -230,7 +237,7 @@
 
     <example xml:id="ex-6-5-normal" workspace="true">
       <statement>
-        <p>Use the normal equations to find the least squares solution of <m>A\vec x=\vec b</m>, where</p>
+        <p>Use the normal equations to find the least-squares solution of <m>A\vec x=\vec b</m>, where</p>
         <me>
           A=\begin{bmatrix}
             4 \amp 0\\
@@ -316,7 +323,7 @@
 
     <example xml:id="ex-6-5-qr-ls" workspace="true">
       <statement>
-        <p>Compute the least squares tolustio to  <m>A\vec x=\vec b</m>, where</p>
+        <p>Compute the least squares solution to  <m>A\vec x=\vec b</m>, where</p>
 
         <me>
           A=
@@ -335,7 +342,7 @@
         <p>given the QR factorization:</p>
 
         <me>
-          A = \tfrac12
+          A = \dfrac{1}{2}
           \begin{bmatrix}
             1 \amp 1 \amp 1\\
             1 \amp -1 \amp -1\\

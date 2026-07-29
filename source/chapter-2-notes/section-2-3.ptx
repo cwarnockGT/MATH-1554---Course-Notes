@@ -40,8 +40,12 @@
       </ul>
     </objectives>
 
+    <p><nbsp/></p>
+
       <p><em>Motivating Question</em>: When is a square matrix invertible? Let me count the ways!
       </p>
+
+      <p><nbsp/></p>
   </page>
 
 
@@ -83,6 +87,8 @@
       </statement>
     </theorem>
 
+    <p><nbsp/></p>
+
   </page>
 
 
@@ -120,6 +126,8 @@
     </me>
     </p>
 
+    <p><nbsp/></p>
+
     
 
 
@@ -135,6 +143,8 @@
       </ul>
 
     </p>
+
+    <p><nbsp/></p>
     <theorem xml:id="thm-left-right-inverses" workspace="0.5in">
       <title>Left and Right Inverses</title>
       <statement>
@@ -146,13 +156,15 @@
       </statement>
     </theorem>
 
+    <p><nbsp/></p>
+
 
  </page>
 
 
   <page xml:id="p-2-3-example-completion">
 
-    <example xml:id="ex-check-invertible" workspace="true">
+    <example xml:id="ex-check-invertible" workspace="1in">
       <statement>
         <p> Is <m>A</m> invertible?</p>
         <me>
@@ -164,36 +176,53 @@
         </me>
       </statement>
     </example>
+
+    <p><nbsp/></p>
  
 
-    <example xml:id="ex-matrix-completion-singular" workspace="true">
-      <statement>
+    <example xml:id="ex-matrix-completion-singular">
+      <introduction>
         <p>
-          If possible, fill in the missing entries so that each matrix is singular (not invertible).
-          If it is not possible, explain why.
+          For each matrix below, determine all values of <m>h</m> so that the matrix is singular (not invertible).
+          If there are no values of <m>h </m>, explain why.
         </p>
-
-        <md>
-          \begin{bmatrix}
+    </introduction>
+    <task workspace=".3in">
+        <statement>
+            <p>
+                <m>A = \begin{bmatrix}
             1 \amp 0 \amp 1\\
-            1 \amp  \amp 1\\
+            1 \amp  h \amp 1\\
             0 \amp 0 \amp 1
-          \end{bmatrix},
-          \qquad
-          \begin{bmatrix}
-            1 \amp  \amp 1\\
+          \end{bmatrix}</m>
+            </p>
+        </statement>
+    </task>
+    <task workspace=".3in">
+        <statement>
+            <p>
+                <m>B = \begin{bmatrix}
+            1 \amp h \amp 1\\
             0 \amp 1 \amp 1\\
             0 \amp 0 \amp 1
-          \end{bmatrix},
-          \qquad
-          \begin{bmatrix}
+          \end{bmatrix}</m>
+            </p>
+        </statement>
+    </task>
+    <task workspace=".3in">
+        <statement>
+            <p>
+                <m>C = \begin{bmatrix}
             1 \amp 0 \amp 0\\
             0 \amp 1 \amp 1\\
-            0 \amp  \amp 1
-          \end{bmatrix}
-        </md>
-      </statement>
+            0 \amp h \amp 1
+          \end{bmatrix}</m>
+            </p>
+        </statement>
+    </task>
     </example>
+    <p><nbsp/></p>
+    <p><nbsp/></p>
   </page>
 
 </handout>

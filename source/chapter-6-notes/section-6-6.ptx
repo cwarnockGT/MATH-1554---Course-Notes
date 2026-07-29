@@ -132,7 +132,7 @@
     <task workspace="6in">
         <statement>
             <p>
-                Identify the best choices of <m>m</m> and <m>b</m> by finding the <em>least squares solution</em> to <m>A\vec x = \vec b</m>.
+                Identify the best choices of <m>m</m> and <m>b</m> by finding the <em>least-squares solution</em> to <m>A\vec x = \vec b</m>.
             </p>
         </statement>
     </task>
@@ -200,7 +200,7 @@
         <task workspace="5in">
             <statement>
                 <p>
-                    Setup the least squares problem which will produce the best linear model for this situation: <me>y = \beta_0 + \beta_1 x_1 + \beta_2 x_2</me>.
+                    Setup the least-squares problem which will produce the best linear model for this situation: <me>y = \beta_0 + \beta_1 x_1 + \beta_2 x_2</me>.
                 </p>
             </statement>
         </task>
@@ -237,7 +237,6 @@
             </p>
         </statement>
     </example>
-    
   </page>
 
   <page>
@@ -258,13 +257,14 @@
             </p>
         </statement>
     </example>
+    
   </page>
 
   <page>
     <example>
         <statement>
             <p>
-                Continuing from <xref ref="ex-6-6-curve-best-fit-a"/>, we will now fit a somewhat trigonometric curve to the data: <me>y = \beta_0 x + \beta_1 \sin\left(\frac{\pi x}{2}\right)</me>. What do you ntoice about your least-squares solution?
+                Continuing from <xref ref="ex-6-6-curve-best-fit-a"/>, we will now fit a somewhat trigonometric curve to the data: <me>y = \beta_0 x + \beta_1 \sin\left(\frac{\pi x}{2}\right)</me>. What do you notice about your least-squares solution?
             </p>
         </statement>
     </example>

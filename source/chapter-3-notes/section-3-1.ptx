@@ -25,7 +25,7 @@
       <title>Determinant</title>
       <statement>
         <p>
-          Suppose <m>A</m> is <m>n\times n</m> with entries <m>a_{ij}</m>. Then the <term>determinant</term> of <m>A</m>, written <m>\det(A)</m> or <m>\det A</m>, is defined by the following recursive formula.
+          Suppose <m>A</m> is <m>n\times n</m> with entries <m>a_{ij}</m>. Then the <term>determinant</term> of <m>A</m>, written <m>\det(A)</m> or <m>\det A</m> or <m>\left| A\right|</m>, is defined by the following recursive formula.
         </p>
         <ul>
           <li>
@@ -193,14 +193,14 @@
           Compute the determinant of the following triangular matrix.
         </p>
         <me>
-          \begin{bmatrix}
-            7 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \\
-            \pi \amp 6 \amp 0 \amp 0 \amp 0  \amp 0 \amp 0 \\
-            \pi^2 \amp \pi \amp 5 \amp 0 \amp 0 \amp 0 \amp 0  \\
-            \pi^3 \amp \pi^2 \amp \pi \amp 4 \amp 0 \amp 0 \amp 0  \\
-            \pi^4 \amp \pi^3 \amp \pi^2 \amp \pi \amp 3 \amp 0 \amp 0 \\
-            \pi^5 \amp \pi^4 \amp \pi^3 \amp \pi^2 \amp \pi \amp 2 \amp 0\\
-            \pi^6 \amp \pi^5 \amp \pi^4 \amp \pi^3 \amp \pi^2 \amp \pi \amp 1
+          A = \begin{bmatrix}
+            7 \amp \pi \amp \pi^2 \amp \pi^3 \amp \pi^4 \amp \pi^5 \amp \pi^6 \\
+            0 \amp 6 \amp \pi \amp \pi^2 \amp \pi^3  \amp \pi^4 \amp \pi^5 \\
+            0 \amp 0 \amp 5 \amp \pi \amp \pi^2 \amp \pi^3 \amp \pi^4  \\
+            0 \amp 0 \amp 0 \amp 4 \amp \pi \amp \pi^2 \amp \pi^3  \\
+            0 \amp 0 \amp 0 \amp 0 \amp 3 \amp \pi \amp \pi^2 \\
+            0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 2 \amp \pi\\
+            0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 1
           \end{bmatrix}.
         </me>
       </statement>

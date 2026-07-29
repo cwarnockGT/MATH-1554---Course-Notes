@@ -1,5 +1,5 @@
 <handout xml:id="handout-section-5-3-diagonalization">
-  <!-- <title>Section 5.3: Diagonalization and Computing Matrix Powers</title> -->
+  <title>5.3 Diagonalization</title>
 
   <page xml:id="p-5-3-overview">
     <title>Overview</title>
@@ -147,20 +147,30 @@
       If <m>A</m> is diagonal, then <m>A^k</m> is easy to compute by raising diagonal entries to the <m>k</m>-th power.
     </p>
 
-    <example xml:id="ex-5-3-powers-diagonal" workspace="true">
+    <example xml:id="ex-5-3-powers-diagonal">
       <title>Example: Powers of a Diagonal Matrix</title>
-      <statement>
-        <p>Let <me> A=\begin{bmatrix} 3 \amp 0\\ 0 \amp 0.5 \end{bmatrix}</me>. Compute <m>A^2</m> and <m>A^k</m>.</p>
-      </statement>
+        <task workspace="true">
+            <statement>
+                <p>Let <me> A=\begin{bmatrix} 3 \amp 0\\ 0 \amp 0.5 \end{bmatrix}</me>. Compute <m>A^2</m> and <m>A^k</m>.</p>
+            </statement>
+        </task>
+        <task workspace="1.5in">
+            <statement>
+                <p>
+                    Is this as easy to do if <m>A</m> is <em>not</em> diagonal?
+                </p>
+            </statement>
+        </task>
+        <task workspace="1.5in">
+            <statement>
+                <p>
+                    What about if <m>A</m> is <em>similar</em> to a diagonal matrix?
+                </p>
+            </statement>
+        </task>
     </example>
 
-    <p workspace="1.5in">
-      Is this as easy to do if <m>A</m> is <em>not</em> diagonal?
-    </p>
-
-    <p workspace="1.5in">
-      What about if <m>A</m> is <em>similar</em> to a diagonal matrix?
-    </p>
+    <p><nbsp/></p>
 
   </page>
 
@@ -261,7 +271,7 @@
       <statement>
         <p>Diagonalize if possible:</p>
         <me>
-          \begin{bmatrix}
+          A = \begin{bmatrix}
             3 \amp 1\\
             0 \amp 3
           \end{bmatrix}.
@@ -281,7 +291,7 @@
       <statement>
         <p>Diagonalize if possible:</p>
         <me>
-          \begin{bmatrix}
+          A = \begin{bmatrix}
             2 \amp 6\\
             0 \amp -1
           \end{bmatrix}.
@@ -358,7 +368,7 @@
           \end{bmatrix}\vec x_{k-1},\quad
           \vec x_0=
           \begin{bmatrix}
-            1\\
+            0\\
             1
           \end{bmatrix},\quad
           k=1,2,3,\ldots
