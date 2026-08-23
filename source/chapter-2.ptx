@@ -4,37 +4,37 @@
 
   <section xml:id="Section-2-1">
     <title>2.1 Matrix Operations</title>
-      <xi:include href="./chapter-2-notes/section-2-1-sol.ptx" />
+      <xi:include href="./chapter-2-notes/section-2-1.ptx" />
   </section>
 
   <section xml:id="Section-2-2">
     <title>2.2 Matrix Inverses</title>
-      <xi:include href="./chapter-2-notes/section-2-2-sol.ptx" />
+      <xi:include href="./chapter-2-notes/section-2-2.ptx" />
   </section>
 
   <section xml:id="Section-2-3">
     <title>2.3 The Invertible Matrix Theorem</title>
-      <xi:include href="./chapter-2-notes/section-2-3-sol.ptx" />
+      <xi:include href="./chapter-2-notes/section-2-3.ptx" />
   </section>
 
   <section xml:id="Section-2-4">
     <title>2.4 Partitioned Matrices</title>
-      <xi:include href="./chapter-2-notes/section-2-4-sol.ptx" />
+      <xi:include href="./chapter-2-notes/section-2-4.ptx" />
   </section>
 
   <section xml:id="Section-2-5">
     <title>2.5 <m>LU</m> Factorization</title>
-      <xi:include href="./chapter-2-notes/section-2-5-sol.ptx" />
+      <xi:include href="./chapter-2-notes/section-2-5.ptx" />
   </section>
 
   <section xml:id="Section-2-8">
     <title>2.8 Subspaces</title>
-      <xi:include href="./chapter-2-notes/section-2-8-sol.ptx" />
+      <xi:include href="./chapter-2-notes/section-2-8.ptx" />
   </section>
 
   <section xml:id="Section-2-9">
     <title>2.9 Dimension and Rank</title>
-      <xi:include href="./chapter-2-notes/section-2-9-sol.ptx" />
+      <xi:include href="./chapter-2-notes/section-2-9.ptx" />
   </section>
   
 

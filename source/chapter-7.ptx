@@ -10,27 +10,27 @@
 
   <section xml:id="Section-10-2">
     <title>10.2 Google PageRank</title>
-      <xi:include href="./chapter-7-notes/section-10-2-sol.ptx" />
+      <xi:include href="./chapter-7-notes/section-10-2.ptx" />
   </section>
 
   <section xml:id="Section-7-1">
     <title>7.1 Diagonalization of Symmetric Matrices</title>
-      <xi:include href="./chapter-7-notes/section-7-1-sol.ptx" />
+      <xi:include href="./chapter-7-notes/section-7-1.ptx" />
   </section>
 
   <section xml:id="Section-7-2">
     <title>7.2 Quadratic Forms</title>
-      <xi:include href="./chapter-7-notes/section-7-2-sol.ptx" />
+      <xi:include href="./chapter-7-notes/section-7-2.ptx" />
   </section>
 
   <section xml:id="Section-7-3">
     <title>7.3 Constrained Optimization</title>
-      <xi:include href="./chapter-7-notes/section-7-3-sol.ptx" />
+      <xi:include href="./chapter-7-notes/section-7-3.ptx" />
   </section>
 
   <section xml:id="Section-7-4">
     <title>7.4 Singular Value Decomposition</title>
-      <xi:include href="./chapter-7-notes/section-7-4-sol.ptx" />
+      <xi:include href="./chapter-7-notes/section-7-4.ptx" />
   </section>
 
   

@@ -4,32 +4,32 @@
 
   <section xml:id="Section-6-1">
     <title>6.1 Dot Product, Length, and Orthogonality</title>
-      <xi:include href="./chapter-6-notes/section-6-1-sol.ptx" />
+      <xi:include href="./chapter-6-notes/section-6-1.ptx" />
   </section>
 
   <section xml:id="Section-6-2">
     <title>6.2 Orthogonal Sets, Orthogonal Bases, and Projections</title>
-      <xi:include href="./chapter-6-notes/section-6-2-sol.ptx" />
+      <xi:include href="./chapter-6-notes/section-6-2.ptx" />
   </section>
 
   <section xml:id="Section-6-3">
     <title>6.3 Orthogonal Projections</title>
-      <xi:include href="./chapter-6-notes/section-6-3-sol.ptx" />
+      <xi:include href="./chapter-6-notes/section-6-3.ptx" />
   </section>
 
   <section xml:id="Section-6-4">
     <title>6.4 Gram–Schmidt and QR Decomposition</title>
-      <xi:include href="./chapter-6-notes/section-6-4-sol.ptx" />
+      <xi:include href="./chapter-6-notes/section-6-4.ptx" />
   </section>
 
   <section xml:id="Section-6-5">
     <title>6.5 Least-Squares Problems</title>
-      <xi:include href="./chapter-6-notes/section-6-5-sol.ptx" />
+      <xi:include href="./chapter-6-notes/section-6-5.ptx" />
   </section>
 
   <section xml:id="Section-6-6">
     <title>6.6 Applications to Linear Models</title>
-      <xi:include href="./chapter-6-notes/section-6-6-sol.ptx" />
+      <xi:include href="./chapter-6-notes/section-6-6.ptx" />
   </section>
   
 
