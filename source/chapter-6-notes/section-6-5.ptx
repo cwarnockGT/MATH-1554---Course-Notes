@@ -58,7 +58,7 @@
                   
                   <li>
                     <p>
-                      This vector <m>\widehat x =  \vec v</m> is a <em>least squares solution</em> to <m>A\vec x = \vec b</m> and we have that <me>\underline{\hspace{0.5in}} = \|\vec b - A\widehat\| \leq \|\vec b - A\vec x\|</me> for all <m>\vec x \in \mathbb{R}^n</m>.
+                      This vector <m>\widehat x =  \vec v</m> is a <em>least squares solution</em> to <m>A\vec x = \vec b</m> and we have that <me>\underline{\hspace{0.5in}} = \|\vec b - A\widehat x\| \leq \|\vec b - A\vec x\|</me> for all <m>\vec x \in \mathbb{R}^n</m>.
                     </p>
                   </li>
                 </ul>  
