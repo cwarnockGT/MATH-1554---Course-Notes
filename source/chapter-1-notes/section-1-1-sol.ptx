@@ -49,6 +49,7 @@
         <li><m>x_1 + x_2^3 = 3</m></li>
         <li><m>2x_1 - 4x_2 - \sqrt{x_3} = 4</m></li>
         <li><m>\dfrac{1}{x_1} + x_2 + x_3 = 4</m></li>
+        <li><m>\sin(x_1) + x_2 = 3</m></li>
       </ul>
 </p>
 <p><nbsp/></p>
@@ -271,6 +272,11 @@
           Play around with drawing two planes in 3-space and seeing how they intersect. Can they never intersect? What about intersect in a finite number of points? What about intersect in infinitely many points?
         </p>
       </hint>
+      <answer>
+        <p>
+          zero or infinitely many. It is <em>impossible</em> to have exactly one solution in this case.
+        </p>
+      </answer>
     </example>
 
     <example workspace = "3in">
@@ -284,6 +290,11 @@
           Play around with drawing three planes in 3-space and seeing how they intersect.  Can they never intersect? What about intersect in a finite number of points? What about intersect in infinitely many points?
         </p>
       </hint>
+      <answer>
+        <p>
+          zero, one, or infinitely many
+        </p>
+      </answer>
     </example>
 
     <p>
