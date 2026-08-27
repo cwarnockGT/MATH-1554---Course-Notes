@@ -7,7 +7,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "1.1 Systems of Linear Equations",
-  "body": " 1.1 Systems of Linear Equations   1.1 Systems of Linear Equations    Topics and Objectives   Topics   Systems of Linear Equations  Matrix Notation  Elementary Row Operations  Existence and Uniqueness of Solutions     Goals   Characterize a linear system by the number of solutions and consistency.  Apply elementary row operations to solve linear systems.  Express a system as an augmented matrix.      A Single Linear Equation  A linear equation has the form: where, and are the coefficients , are the variables (unknowns), and is the dimension (number of variables).   Some Examples:  is a line in two dimensions.  is a plane in three dimensions.      Non Examples:           Systems of Linear Equations  When we have more than one linear equation, we have a system of linear equations . For example, a system of two linear equations is:       Solution to a Linear System  The set of all possible values of that satisfy every equation in the system is the solution, or solution set, to the system.     How many solutions can a system have?     Two-Dimensional Case    Consider the following systems of two linear equations in two variables and determine how many solutions there are for each.                   Conclusion: A system of linear equations in two variables can have solutions.   zero, one, or infinitely many         Three-Dimensional Case  A linear equation in three variables, , defines a plane in .    How many solutions can a system of two linear equations in three variables have?    Play around with drawing two planes in 3-space and seeing how they intersect. Can they never intersect? What about intersect in a finite number of points? What about intersect in infinitely many points?      How many solutions can a system of three linear equations in three variables have?    Play around with drawing three planes in 3-space and seeing how they intersect. Can they never intersect? What about intersect in a finite number of points? What about intersect in infinitely many points?     Conclusion: Every system of linear equations, no matter the number of equations and number of variables has solutions.      Row Reduction by Elementary Row Operations  As we saw in the previous examples, one way to solve a system of linear equations is by graphing. This is not practical for most examples, especially if we are working with four or more varialbes. A more useful approach to solving a linear system is to manipulate the equations through the use of row operations .    Replacement\/Addition: add a multiple of one row to another.  Interchange: swap two rows.  Scaling: multiply a row by a nonzero scalar.       Example of Row Reduction   Apply row operations to systematically simplify the system below to an equivalent (easier to read) form in order to more easily identify the solution(s).        Augmented Matrices  It’s redundant to write variables repeatedly, so we use a augmented matrix to simplify the notation for the system. For example, the previous system Can be writen as the augmented matrix The vertical bar separates the coefficient matrix (for ) from the constants.    Determine if the following system has a solution.        Consistent Systems and Row Equivalence   Consistent  A linear system is consistent if it has at least one solution . Otherwise, it is inconsistent .     Row Equivalence  Two matrices are row equivalent if a sequence of row operations transforms one matrix into the other.     Note : If the augmented matrices of two linear systems are row equivalent, they have the same solution set.    Fundamental Questions : Two questions that we will revisit many times throughout the course:  Does a given linear system have a solution? In other words, is it consistent?  If it is consistent, is the solution unique?      "
+  "body": " 1.1 Systems of Linear Equations   1.1 Systems of Linear Equations    Topics and Objectives   Topics   Systems of Linear Equations  Matrix Notation  Elementary Row Operations  Existence and Uniqueness of Solutions     Goals   Characterize a linear system by the number of solutions and consistency.  Apply elementary row operations to solve linear systems.  Express a system as an augmented matrix.      A Single Linear Equation  A linear equation has the form: where, and are the coefficients , are the variables (unknowns), and is the dimension (number of variables).   Some Examples:  is a line in two dimensions.  is a plane in three dimensions.      Non Examples:            Systems of Linear Equations  When we have more than one linear equation, we have a system of linear equations . For example, a system of two linear equations is:       Solution to a Linear System  The set of all possible values of that satisfy every equation in the system is the solution, or solution set, to the system.     Consider finding solutions to the system given above . At this point, we don't have a great way of determining the solutions to a system of linear equations. We can try guessing some solutions.  Try : Note this points makes the first equation true since , but it does not make the second equation true since . Therefore, is not a solution to the system.  Try : Note plugging this point into the first equation yields which is a true statement. Plugging the point into the second equation yields which is also a true statement. Since the point makes both equations true, it is a solution to the system.  Can you find any more solutions?      How many solutions can a system have?     Two-Dimensional Case    Consider the following systems of two linear equations in two variables and determine how many solutions there are for each.        Graphing the two lines gives the following:  Two lines in the plane with a single point of intersection.   Cartesian axes with two lines, showing where they intersect.  The graph of the lines (in red) and (in blue), showing their intersection point at     We see that the lines only intersect at , so this is the only solution to the system.         Graphing the two lines gives the following:  Two parallel lines in the plane.   Cartesian axes with two parallel lines.  The graph of the lines (in red) and (in blue)    We see that the lines are parallel, so they never intersect. Therefore, there is no solution to the system.         Graphing the two lines gives the following:  Two lines lying on top of one another.   Cartesian axes with two parallel lines.  The graph of the lines (in red) and (in blue)    The two linear equations give the same line. Therefore, there are infinitely many points that satisfy both equations, any point that is on the line.     Conclusion: A system of linear equations in two variables can have solutions.   zero, one, or infinitely many         Three-Dimensional Case  A linear equation in three variables, , defines a plane in .    How many solutions can a system of two linear equations in three variables have?    Play around with drawing two planes in 3-space and seeing how they intersect. Can they never intersect? What about intersect in a finite number of points? What about intersect in infinitely many points?    zero or infinitely many. It is impossible to have exactly one solution in this case.      How many solutions can a system of three linear equations in three variables have?    Play around with drawing three planes in 3-space and seeing how they intersect. Can they never intersect? What about intersect in a finite number of points? What about intersect in infinitely many points?    zero, one, or infinitely many     Conclusion: Every system of linear equations, no matter the number of equations and number of variables has solutions.  zero, one, or infinitely many        Row Reduction by Elementary Row Operations  As we saw in the previous examples, one way to solve a system of linear equations is by graphing. This is not practical for most examples, especially if we are working with four or more varialbes. A more useful approach to solving a linear system is to manipulate the equations through the use of row operations .    Replacement\/Addition: add a multiple of one row to another.  Interchange: swap two rows.  Scaling: multiply a row by a nonzero scalar.       Example of Row Reduction   Apply row operations to systematically simplify the system below to an equivalent (easier to read) form in order to more easily identify the solution(s).    We will simplify the system using appropriate row operations. I am going to go ahead and use augmented matrices since that is what we will do from here on out.     Therefore, we have that the only solution is .        Augmented Matrices  It’s redundant to write variables repeatedly, so we use a augmented matrix to simplify the notation for the system. For example, the previous system Can be writen as the augmented matrix The vertical bar separates the coefficient matrix (for ) from the constants.    Determine if the following system has a solution.    Note the following:     Note that the final row suggests that which is impossible, no matter the choice of . Therefore, there is no solution. So the system is inconsistent.        Consistent Systems and Row Equivalence   Consistent  A linear system is consistent if it has at least one solution . Otherwise, it is inconsistent .     Row Equivalence  Two matrices are row equivalent if a sequence of row operations transforms one matrix into the other.     Note : If the augmented matrices of two linear systems are row equivalent, they have the same solution set.    Fundamental Questions : Two questions that we will revisit many times throughout the course:  Does a given linear system have a solution? In other words, is it consistent?  If it is consistent, is the solution unique?      "
 },
 {
   "id": "sec-1-1-systems-of-linear-equations-2-2",
@@ -52,25 +52,25 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.3",
   "title": "",
-  "body": "  Consider the following systems of two linear equations in two variables and determine how many solutions there are for each.                   Conclusion: A system of linear equations in two variables can have solutions.   zero, one, or infinitely many    "
+  "body": "  Consider the following systems of two linear equations in two variables and determine how many solutions there are for each.        Graphing the two lines gives the following:  Two lines in the plane with a single point of intersection.   Cartesian axes with two lines, showing where they intersect.  The graph of the lines (in red) and (in blue), showing their intersection point at     We see that the lines only intersect at , so this is the only solution to the system.         Graphing the two lines gives the following:  Two parallel lines in the plane.   Cartesian axes with two parallel lines.  The graph of the lines (in red) and (in blue)    We see that the lines are parallel, so they never intersect. Therefore, there is no solution to the system.         Graphing the two lines gives the following:  Two lines lying on top of one another.   Cartesian axes with two parallel lines.  The graph of the lines (in red) and (in blue)    The two linear equations give the same line. Therefore, there are infinitely many points that satisfy both equations, any point that is on the line.     Conclusion: A system of linear equations in two variables can have solutions.   zero, one, or infinitely many    "
 },
 {
   "id": "sec-1-1-systems-of-linear-equations-5-3",
   "level": "2",
   "url": "Section-1-1.html#sec-1-1-systems-of-linear-equations-5-3",
   "type": "Example",
-  "number": "1.4",
+  "number": "1.7",
   "title": "",
-  "body": "  How many solutions can a system of two linear equations in three variables have?    Play around with drawing two planes in 3-space and seeing how they intersect. Can they never intersect? What about intersect in a finite number of points? What about intersect in infinitely many points?   "
+  "body": "  How many solutions can a system of two linear equations in three variables have?    Play around with drawing two planes in 3-space and seeing how they intersect. Can they never intersect? What about intersect in a finite number of points? What about intersect in infinitely many points?    zero or infinitely many. It is impossible to have exactly one solution in this case.   "
 },
 {
   "id": "sec-1-1-systems-of-linear-equations-5-4",
   "level": "2",
   "url": "Section-1-1.html#sec-1-1-systems-of-linear-equations-5-4",
   "type": "Example",
-  "number": "1.5",
+  "number": "1.8",
   "title": "",
-  "body": "  How many solutions can a system of three linear equations in three variables have?    Play around with drawing three planes in 3-space and seeing how they intersect. Can they never intersect? What about intersect in a finite number of points? What about intersect in infinitely many points?   "
+  "body": "  How many solutions can a system of three linear equations in three variables have?    Play around with drawing three planes in 3-space and seeing how they intersect. Can they never intersect? What about intersect in a finite number of points? What about intersect in infinitely many points?    zero, one, or infinitely many   "
 },
 {
   "id": "sec-1-1-systems-of-linear-equations-6-2",
@@ -95,9 +95,9 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-1.html#sec-1-1-systems-of-linear-equations-7-2",
   "type": "Example",
-  "number": "1.6",
+  "number": "1.9",
   "title": "",
-  "body": " Apply row operations to systematically simplify the system below to an equivalent (easier to read) form in order to more easily identify the solution(s).   "
+  "body": " Apply row operations to systematically simplify the system below to an equivalent (easier to read) form in order to more easily identify the solution(s).    We will simplify the system using appropriate row operations. I am going to go ahead and use augmented matrices since that is what we will do from here on out.     Therefore, we have that the only solution is .   "
 },
 {
   "id": "sec-1-1-systems-of-linear-equations-8-2",
@@ -113,16 +113,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-1.html#sec-1-1-systems-of-linear-equations-8-4",
   "type": "Example",
-  "number": "1.7",
+  "number": "1.10",
   "title": "",
-  "body": " Determine if the following system has a solution.   "
+  "body": " Determine if the following system has a solution.    Note the following:     Note that the final row suggests that which is impossible, no matter the choice of . Therefore, there is no solution. So the system is inconsistent.   "
 },
 {
   "id": "sec-1-1-systems-of-linear-equations-9-2",
   "level": "2",
   "url": "Section-1-1.html#sec-1-1-systems-of-linear-equations-9-2",
   "type": "Definition",
-  "number": "1.8",
+  "number": "1.11",
   "title": "Consistent.",
   "body": " Consistent  A linear system is consistent if it has at least one solution . Otherwise, it is inconsistent .  "
 },
@@ -131,7 +131,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-1.html#def-row-equiv",
   "type": "Definition",
-  "number": "1.9",
+  "number": "1.12",
   "title": "Row Equivalence.",
   "body": " Row Equivalence  Two matrices are row equivalent if a sequence of row operations transforms one matrix into the other.  "
 },
@@ -176,7 +176,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-2.html#sec-1-2-row-reduction-1-5",
   "type": "Definition",
-  "number": "1.10",
+  "number": "1.13",
   "title": "Echelon Form and Row Row Reduced Echelon Form.",
   "body": " Echelon Form and Row Row Reduced Echelon Form   A rectangular matrix is in echelon form (REF) if:   All zero rows (if any) are at the bottom.  The first nonzero entry (or leading entry ) of a row is to the right of any leading entry in the row above it.  All entries below a leading entry are zero.   A matrix in echelon form is in row reduced echelon form (RREF) if additionally:   All leading entries equal .  Each leading entry is the only nonzero entry in its column.    "
 },
@@ -185,7 +185,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-2.html#sec-1-2-row-reduction-1-7",
   "type": "Example",
-  "number": "1.11",
+  "number": "1.14",
   "title": "",
   "body": "  Let denote a nonzero number, and denote any number.   is in REF and is in RREF.   "
 },
@@ -239,7 +239,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-2.html#sec-1-2-row-reduction-2-4",
   "type": "Definition",
-  "number": "1.12",
+  "number": "1.15",
   "title": "Pivot Position and Pivot Column.",
   "body": " Pivot Position and Pivot Column   A pivot position in a matrix is a location in that corresponds to a leading in the RREF of . A pivot column is a column of that contains a pivot position.   "
 },
@@ -248,7 +248,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-2.html#sec-1-2-row-reduction-2-6",
   "type": "Example",
-  "number": "1.13",
+  "number": "1.16",
   "title": "",
   "body": "  Express the matrix in row reduced echelon form and identify the pivot columns.      "
 },
@@ -257,7 +257,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-2.html#sec-1-2-row-reduction-3-4",
   "type": "Example",
-  "number": "1.14",
+  "number": "1.17",
   "title": "",
   "body": "  Use the algorithm above to convert the following matrix into RREF.      "
 },
@@ -266,7 +266,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-2.html#sec-1-2-row-reduction-4-2",
   "type": "Definition",
-  "number": "1.15",
+  "number": "1.18",
   "title": "Pivot Variables and Free Variables.",
   "body": " Pivot Variables and Free Variables   Variables in a system that correspond to pivot column in the augmented matrix are called pivot variables . The other variables in the system are called free variables . This is because, if the system is consistent, then any choice of the free variables will lead to a valid solution.   "
 },
@@ -275,7 +275,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-2.html#sec-1-2-row-reduction-4-4",
   "type": "Example",
-  "number": "1.16",
+  "number": "1.19",
   "title": "",
   "body": "  Determine the pivot variables and the free variables for the system represented below.      "
 },
@@ -284,7 +284,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-2.html#thm-inconsistent-system",
   "type": "Theorem",
-  "number": "1.17",
+  "number": "1.20",
   "title": "Existence and Uniqueness of Solutions.",
   "body": " Existence and Uniqueness of Solutions  A linear system is consistent if and only if the last column of the augmented matrix does not have a pivot. Equivalently, the RREF of the augmented matrix does not contain a row of the form .  If a linear system is consistent, then:   It has a unique solution if and only if (iff) there are .  Otherwise, it has many solutions parameterized by the free variables.   "
 },
@@ -320,7 +320,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-3.html#fig-motivation-lines",
   "type": "Figure",
-  "number": "1.18",
+  "number": "1.21",
   "title": "",
   "body": " Two lines in the plane with a single point of intersection.   Two lines intersecting in the plane in a single point.  Cartesian axes with two lines: one with positive slope (from the equation ) and one with negative slope (from ), intersecting at a point.    "
 },
@@ -329,7 +329,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-3.html#Rn-2",
   "type": "Definition",
-  "number": "1.19",
+  "number": "1.22",
   "title": "",
   "body": "  Recall that denotes the collection of all real numbers. For a positive integer , define    "
 },
@@ -338,7 +338,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-3.html#fig-number-line",
   "type": "Figure",
-  "number": "1.20",
+  "number": "1.23",
   "title": "",
   "body": " The number line for .   A horizontal line with tick marks labeled from -3 to 3 representing the real number line.    "
 },
@@ -347,7 +347,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-3.html#Rn-8",
   "type": "Example",
-  "number": "1.21",
+  "number": "1.24",
   "title": "",
   "body": "  Sketch the point and the vector .   Cartesian plane with grid and axes.   A square grid with horizontal and vertical axes spanning from -4 to 4.      "
 },
@@ -356,7 +356,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-3.html#def-linear-combination-span",
   "type": "Definition",
-  "number": "1.23",
+  "number": "1.26",
   "title": "",
   "body": "   Given vectors and scalars , the vector is called a linear combination of with weights .  The set of all linear combinations of is called the span of these vectors.    "
 },
@@ -365,7 +365,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-3.html#fig-grid-combos",
   "type": "Figure",
-  "number": "1.24",
+  "number": "1.27",
   "title": "",
   "body": " Linear combinations of two nonparallel vectors spanning the plane.   A grid representing the span of two linearly independent vectors  A lightly rotated square grid with the origin and multiples\/sums of two non-parallel vectors labeled, illustrating how combinations like , , etc., tile the plane.    "
 },
@@ -374,7 +374,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-3.html#examples-2",
   "type": "Example",
-  "number": "1.25",
+  "number": "1.28",
   "title": "",
   "body": "  Let and . Determine three vectors which are linear combinations of and .   "
 },
@@ -383,7 +383,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-3.html#ex-span",
   "type": "Example",
-  "number": "1.26",
+  "number": "1.29",
   "title": "",
   "body": "  Let and . Determine if is in .   "
 },
@@ -392,7 +392,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-3.html#fig-plane-span",
   "type": "Figure",
-  "number": "1.27",
+  "number": "1.30",
   "title": "",
   "body": " Two nonparallel vectors in span a plane through the origin.   A translucent plane through the origin with two nonparallel vectors drawn from the origin; coordinate axes are shown for reference.    "
 },
@@ -401,7 +401,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-3.html#ex-span-membership",
   "type": "Example",
-  "number": "1.28",
+  "number": "1.31",
   "title": "",
   "body": "  Is in the span of and ?    "
 },
@@ -437,7 +437,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-4.html#sec-1-4-matrix-equation-2-8",
   "type": "Table",
-  "number": "1.29",
+  "number": "1.32",
   "title": "",
   "body": "   symbol  meaning     belongs to     the set of vectors with real-valued elements     the set of real-valued matrices with rows and columns    "
 },
@@ -446,7 +446,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-4.html#def-matrix-vector-product",
   "type": "Definition",
-  "number": "1.30",
+  "number": "1.33",
   "title": "Matrix Vector Product as a Linear Combination.",
   "body": " Matrix Vector Product as a Linear Combination   Let be an matrix with columns and let . The matrix vector product  is the following linear combination of the columns of :   In particular, lies in the span of the columns of .   "
 },
@@ -455,7 +455,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-4.html#sec-1-4-matrix-equation-3-4",
   "type": "Example",
-  "number": "1.31",
+  "number": "1.34",
   "title": "",
   "body": "  Write the product below as a linear combination of column vectors.      "
 },
@@ -464,7 +464,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-4.html#sec-1-4-matrix-equation-3-6",
   "type": "Example",
-  "number": "1.32",
+  "number": "1.35",
   "title": "",
   "body": "  Simplify the product below.      "
 },
@@ -473,7 +473,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-4.html#thm-same-solutions",
   "type": "Theorem",
-  "number": "1.33",
+  "number": "1.36",
   "title": "Equivalent Formulations of a Linear System.",
   "body": " Equivalent Formulations of a Linear System   Let be an matrix with columns , let , and let . The solutions to   are the same as the solutions to the vector equation   which are the same as the solutions to the linear system with augmented matrix    "
 },
@@ -482,7 +482,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-4.html#thm-existence-span",
   "type": "Theorem",
-  "number": "1.34",
+  "number": "1.37",
   "title": "The Existence of Solutions for the Matrix Equation.",
   "body": " The Existence of Solutions for the Matrix Equation   The equation has a solution if and only if is a linear combination of the columns of .   "
 },
@@ -491,7 +491,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-4.html#thm-consistency-rows-pivots",
   "type": "Theorem",
-  "number": "1.35",
+  "number": "1.38",
   "title": "Consistency for all <span class=\"process-math\">\\(\\vec{b}\\)<\/span> and pivots.",
   "body": " Consistency for all and pivots   The equation is consistent for every if and only if every row of has a pivot.   "
 },
@@ -500,7 +500,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-4.html#sec-1-4-matrix-equation-5-1",
   "type": "Example",
-  "number": "1.36",
+  "number": "1.39",
   "title": "",
   "body": "  For what vectors does the equation have a solution?    "
 },
@@ -509,7 +509,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-4.html#sec-1-4-matrix-equation-6-1",
   "type": "Example",
-  "number": "1.37",
+  "number": "1.40",
   "title": "",
   "body": "  For what values of is the system consistent for every possible choice of vector ?    "
 },
@@ -545,7 +545,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-5.html#def-homogeneous",
   "type": "Definition",
-  "number": "1.38",
+  "number": "1.41",
   "title": "Homogeneous and inhomogeneous systems.",
   "body": " Homogeneous and inhomogeneous systems   Linear systems of the form are homogeneous . Linear systems of the form (with ) are inhomogeneous .   "
 },
@@ -554,7 +554,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-5.html#ex-homogeneous-1",
   "type": "Example",
-  "number": "1.39",
+  "number": "1.42",
   "title": "Identify free variables and solution set.",
   "body": " Identify free variables and solution set   Identify the free variables and the solution set of the homogeneous system:    "
 },
@@ -581,7 +581,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-5.html#ex-nonhomogeneous-1",
   "type": "Example",
-  "number": "1.40",
+  "number": "1.43",
   "title": "Parametric vector form and geometric interpretation.",
   "body": " Parametric vector form and geometric interpretation   Write the parametric vector form of the solution and give a geometric interpretation.   (Note: the left-hand side is the same as in the homogeneous system example.)   "
 },
@@ -617,7 +617,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-7.html#Section-1-7-2-2-7",
   "type": "Definition",
-  "number": "1.41",
+  "number": "1.44",
   "title": "",
   "body": " A set of vectors in is called linearly independent if the vector equation has only the trivial solution  . The set is said to be linearly dependent if there exist weights , not all zero , such that   "
 },
@@ -626,7 +626,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-7.html#Section-1-7-2-3-1",
   "type": "Example",
-  "number": "1.42",
+  "number": "1.45",
   "title": "",
   "body": "  For each of the following sets, determine if the set is linearly independent or linearly dependent.                      "
 },
@@ -635,7 +635,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-7.html#Section-1-7-2-4-2",
   "type": "Theorem",
-  "number": "1.43",
+  "number": "1.46",
   "title": "",
   "body": " Any set containing the zero vector is linearly dependent.  "
 },
@@ -644,7 +644,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-7.html#thm-lin-dep-too-many-vectors",
   "type": "Theorem",
-  "number": "1.44",
+  "number": "1.47",
   "title": "",
   "body": " Suppose are vectors in with . Then the set is linearly dependent.  "
 },
@@ -653,7 +653,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-7.html#Section-1-7-2-5-2",
   "type": "Example",
-  "number": "1.45",
+  "number": "1.48",
   "title": "",
   "body": " For what values of are the vectors   linearly dependent?  "
 },
@@ -689,7 +689,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-8.html#Section-1-8-2-2-5",
   "type": "Definition",
-  "number": "1.46",
+  "number": "1.49",
   "title": "",
   "body": "  Let be an matrix. Define a function   A function of this form is called a matrix transformation .   The domain of is .  The codomain (or target ) of is .  The vector is the image of under .  The set of all possible images is the range of .    "
 },
@@ -698,7 +698,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-8.html#ex-1",
   "type": "Example",
-  "number": "1.47",
+  "number": "1.50",
   "title": "",
   "body": "  Let   Consider the matrix transformation .    Compute .    Find so that .     Give a vector for which there is no with .  Equivalently: Give a not in the range of , i.e., not in the span of the columns of .    "
 },
@@ -707,7 +707,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-8.html#Section-1-8-2-5-2",
   "type": "Definition",
-  "number": "1.48",
+  "number": "1.51",
   "title": "",
   "body": " A function is linear if for all and all scalars :  ,  .    "
 },
@@ -725,7 +725,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-8.html#Section-1-8-2-5-7",
   "type": "Fact",
-  "number": "1.49",
+  "number": "1.52",
   "title": "",
   "body": " Every matrix transformation is linear.  "
 },
@@ -734,7 +734,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-8.html#ex-2",
   "type": "Example",
-  "number": "1.50",
+  "number": "1.53",
   "title": "",
   "body": "  Suppose . Give a brief geometric description of the action of in for each matrix.               for    "
 },
@@ -743,7 +743,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-8.html#ex-3",
   "type": "Example",
-  "number": "1.51",
+  "number": "1.54",
   "title": "",
   "body": " Describe the effect of on vectors in .            "
 },
@@ -752,7 +752,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-8.html#ex-4",
   "type": "Example",
-  "number": "1.52",
+  "number": "1.55",
   "title": "",
   "body": "  A linear transformation satisfies   What is the matrix that represents ?   "
 },
@@ -788,7 +788,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-9.html#def-standard-vectors",
   "type": "Definition",
-  "number": "1.53",
+  "number": "1.56",
   "title": "The Standard Vectors.",
   "body": " The Standard Vectors   The standard vectors in are the vectors .  They are:   For example, in :    "
 },
@@ -797,7 +797,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-9.html#ex-aei-column",
   "type": "Example",
-  "number": "1.54",
+  "number": "1.57",
   "title": "Example.",
   "body": " Example   Compute:    "
 },
@@ -806,7 +806,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-9.html#thm-standard-matrix",
   "type": "Theorem",
-  "number": "1.55",
+  "number": "1.58",
   "title": "The Standard Matrix of a Linear Transformation.",
   "body": " The Standard Matrix of a Linear Transformation   Let be a linear transformation. Then there is a unique matrix such that   In fact, is an matrix, and its th column is . That is,    "
 },
@@ -824,7 +824,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-9.html#ex-rotation-theta",
   "type": "Example",
-  "number": "1.56",
+  "number": "1.59",
   "title": "",
   "body": "  What is the linear transformation defined by rotates vectors counterclockwise by angle ?   "
 },
@@ -833,7 +833,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-9.html#def-onto",
   "type": "Definition",
-  "number": "1.57",
+  "number": "1.60",
   "title": "Onto.",
   "body": " Onto   A linear transformation is onto if for every there exists such that . In otherwords, a linear transformation is onto if the range of equals the codomain of .   "
 },
@@ -842,7 +842,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-9.html#thm-onto-equivalences",
   "type": "Theorem",
-  "number": "1.58",
+  "number": "1.61",
   "title": "Onto: Equivalent Statements.",
   "body": " Onto: Equivalent Statements   For a linear transformation with standard matrix , the following are equivalent:   is onto.  The columns of span .  The matrix has a pivot in every row (equivalently, pivotal columns).    "
 },
@@ -851,7 +851,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-9.html#def-one-to-one",
   "type": "Definition",
-  "number": "1.59",
+  "number": "1.62",
   "title": "One-to-One.",
   "body": " One-to-One   A linear transformation is one-to-one if for every there is at most one (possibly none) such that .   "
 },
@@ -860,7 +860,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-9.html#thm-one-to-one-equivalences",
   "type": "Theorem",
-  "number": "1.60",
+  "number": "1.63",
   "title": "One-to-One: Equivalent Statements.",
   "body": " One-to-One: Equivalent Statements   For a linear transformation with standard matrix , the following are equivalent:   is one-to-one.  The unique solution to is .  The columns of are linearly independent.  Every column of is pivotal (equivalently, has no free variables).    "
 },
@@ -869,7 +869,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-9.html#p-1-9-fill-in-matrices-2",
   "type": "Example",
-  "number": "1.61",
+  "number": "1.64",
   "title": "",
   "body": "  Complete the matrices below by entering numbers into the missing entries so that the stated properties are satisfied. If it isn't possible, state why.      is a standard matrix for a one-to-one linear transformation.      is a standard matrix for an onto linear transformation.      is a standard matrix of a linear transformation that is one-to-one and onto.    "
 },
@@ -878,7 +878,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-1-9.html#ex-linear-transform-3d-onto-oto",
   "type": "Example",
-  "number": "1.62",
+  "number": "1.65",
   "title": "",
   "body": "  Define a linear transformation by   Is one-to-one? Is onto?   "
 },
