@@ -151,7 +151,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "1.2 Row Reduction and Echelon Forms",
-  "body": " 1.2 Row Reduction and Echelon Forms    1.2 Row Reduction and Echelon Forms    Topics   Row reduction algorithm  Pivots, basic and free variables  Echelon forms, existence and uniqueness      Goals   Characterize a linear system in terms of leading entries, free variables, pivots, pivot columns, and pivot positions.  Apply the row reduction algorithm to reduce a linear system to echelon form or reduced echelon form.  Apply row reduction to compute the coefficients of a polynomial.       Echelon Form and Row Row Reduced Echelon Form   A rectangular matrix is in echelon form (REF) if:   All zero rows (if any) are at the bottom.  The first nonzero entry (or leading entry ) of a row is to the right of any leading entry in the row above it.  All entries below a leading entry are zero.   A matrix in echelon form is in row reduced echelon form (RREF) if additionally:   All leading entries equal .  Each leading entry is the only nonzero entry in its column.         Let denote a nonzero number, and denote any number.   is in REF and is in RREF.       Definitions of Pivot Position and Pivot Column     Determine whether each matrix is in RREF, REF, or neither.                                Pivot Position and Pivot Column   A pivot position in a matrix is a location in that corresponds to a leading in the RREF of . A pivot column is a column of that contains a pivot position.        Express the matrix in row reduced echelon form and identify the pivot columns.          Row Reduction Algorithm    Row Reduction Algorithm (Steps to RREF)  The algorithm below produces a matrix in RREF.   Step 1a: Swap the first row with a lower one so the leftmost nonzero entry is in the first row.  Step 1b: Scale the first row so that its leading entry equals .  Step 1c: Use row replacement so all entries above and below this are .  Step 2a: Swap the second row with a lower one so the leftmost nonzero entry below the first row is in the second row.  Step 2b: Scale the second row so that its leading entry equals .  Step 2c: Use row replacement so all entries above and below this are .  Continue: Repeat these steps for each subsequent row until the matrix is in RREF.       Use the algorithm above to convert the following matrix into RREF.          Pivot and Free Variables   Pivot Variables and Free Variables   Variables in a system that correspond to pivot column in the augmented matrix are called pivot variables . The other variables in the system are called free variables . This is because, if the system is consistent, then any choice of the free variables will lead to a valid solution.        Determine the pivot variables and the free variables for the system represented below.          Existence and Uniqueness of Solutions  A linear system is consistent if and only if the last column of the augmented matrix does not have a pivot. Equivalently, the RREF of the augmented matrix does not contain a row of the form .  If a linear system is consistent, then:   It has a unique solution if and only if (iff) there are .  Otherwise, it has many solutions parameterized by the free variables.      "
+  "body": " 1.2 Row Reduction and Echelon Forms    1.2 Row Reduction and Echelon Forms    Topics   Row reduction algorithm  Pivots, basic and free variables  Echelon forms, existence and uniqueness      Goals   Characterize a linear system in terms of leading entries, free variables, pivots, pivot columns, and pivot positions.  Apply the row reduction algorithm to reduce a linear system to echelon form or reduced echelon form.  Apply row reduction to compute the coefficients of a polynomial.       Echelon Form and Row Row Reduced Echelon Form   A rectangular matrix is in echelon form (REF) if:   All zero rows (if any) are at the bottom.  The first nonzero entry (or leading entry ) of a row is to the right of any leading entry in the row above it.  All entries below a leading entry are zero.   A matrix in echelon form is in row reduced echelon form (RREF) if additionally:   All leading entries equal .  Each leading entry is the only nonzero entry in its column.         Let denote a nonzero number, and denote any number.   is in REF and is in RREF.       Definitions of Pivot Position and Pivot Column     Determine whether each matrix is in RREF, REF, or neither.       REF       RREF       Neither        REF         RREF        Pivot Position and Pivot Column   A pivot position in a matrix is a location in that corresponds to a leading in the RREF of . A pivot column is a column of that contains a pivot position.        Express the matrix in row reduced echelon form and identify the pivot columns.          Therefore, we can see that the pivot columns are columns 1, 2, and 4.       Row Reduction Algorithm    Row Reduction Algorithm (Steps to RREF)  The algorithm below produces a matrix in RREF.   Step 1a: Swap the first row with a lower one so the leftmost nonzero entry is in the first row.  Step 1b: Scale the first row so that its leading entry equals .  Step 1c: Use row replacement so all entries above and below this are .  Step 2a: Swap the second row with a lower one so the leftmost nonzero entry below the first row is in the second row.  Step 2b: Scale the second row so that its leading entry equals .  Step 2c: Use row replacement so all entries above and below this are .  Continue: Repeat these steps for each subsequent row until the matrix is in RREF.       Use the algorithm above to convert the following matrix into RREF.               Pivot and Free Variables   Pivot Variables and Free Variables   Variables in a system that correspond to pivot column in the augmented matrix are called pivot variables . The other variables in the system are called free variables . This is because, if the system is consistent, then any choice of the free variables will lead to a valid solution.        Determine the pivot variables and the free variables for the system represented below.       Notice that the pivots are in columns 1, 3, and 4. So the pivot variables are . Therefore, the free variables are .       Existence and Uniqueness of Solutions  A linear system is consistent if and only if the last column of the augmented matrix does not have a pivot. Equivalently, the RREF of the augmented matrix does not contain a row of the form .  If a linear system is consistent, then:   It has a unique solution if and only if (iff) there are .  no free variables    Otherwise, it has many solutions parameterized by the free variables.  infinitely       "
 },
 {
   "id": "sec-1-2-row-reduction-1-2",
@@ -196,7 +196,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet Exercise",
   "number": "1",
   "title": "",
-  "body": "    "
+  "body": "    REF  "
 },
 {
   "id": "sec-1-2-row-reduction-2-2-3",
@@ -205,7 +205,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet Exercise",
   "number": "2",
   "title": "",
-  "body": "    "
+  "body": "    RREF  "
 },
 {
   "id": "sec-1-2-row-reduction-2-2-4",
@@ -214,7 +214,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet Exercise",
   "number": "3",
   "title": "",
-  "body": "    "
+  "body": "    Neither  "
 },
 {
   "id": "sec-1-2-row-reduction-2-2-5",
@@ -223,7 +223,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet Exercise",
   "number": "4",
   "title": "",
-  "body": "    "
+  "body": "     REF   "
 },
 {
   "id": "sec-1-2-row-reduction-2-2-6",
@@ -232,7 +232,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet Exercise",
   "number": "5",
   "title": "",
-  "body": "    "
+  "body": "     RREF   "
 },
 {
   "id": "sec-1-2-row-reduction-2-4",
@@ -250,7 +250,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.16",
   "title": "",
-  "body": "  Express the matrix in row reduced echelon form and identify the pivot columns.      "
+  "body": "  Express the matrix in row reduced echelon form and identify the pivot columns.          Therefore, we can see that the pivot columns are columns 1, 2, and 4.   "
 },
 {
   "id": "sec-1-2-row-reduction-3-4",
@@ -259,7 +259,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.17",
   "title": "",
-  "body": "  Use the algorithm above to convert the following matrix into RREF.      "
+  "body": "  Use the algorithm above to convert the following matrix into RREF.           "
 },
 {
   "id": "sec-1-2-row-reduction-4-2",
@@ -277,7 +277,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.19",
   "title": "",
-  "body": "  Determine the pivot variables and the free variables for the system represented below.      "
+  "body": "  Determine the pivot variables and the free variables for the system represented below.       Notice that the pivots are in columns 1, 3, and 4. So the pivot variables are . Therefore, the free variables are .   "
 },
 {
   "id": "thm-inconsistent-system",
@@ -286,7 +286,7 @@ var ptx_lunr_docs = [
   "type": "Theorem",
   "number": "1.20",
   "title": "Existence and Uniqueness of Solutions.",
-  "body": " Existence and Uniqueness of Solutions  A linear system is consistent if and only if the last column of the augmented matrix does not have a pivot. Equivalently, the RREF of the augmented matrix does not contain a row of the form .  If a linear system is consistent, then:   It has a unique solution if and only if (iff) there are .  Otherwise, it has many solutions parameterized by the free variables.   "
+  "body": " Existence and Uniqueness of Solutions  A linear system is consistent if and only if the last column of the augmented matrix does not have a pivot. Equivalently, the RREF of the augmented matrix does not contain a row of the form .  If a linear system is consistent, then:   It has a unique solution if and only if (iff) there are .  no free variables    Otherwise, it has many solutions parameterized by the free variables.  infinitely    "
 },
 {
   "id": "Section-1-3",
