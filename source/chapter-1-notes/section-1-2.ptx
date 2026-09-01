@@ -60,10 +60,10 @@
         </m> is in REF and 
         <m>
           \begin{bmatrix}
-          0 \amp 1 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \\
-          0 \amp 0 \amp 0 \amp 1 \amp 0 \amp 0 \amp 0 \amp 0 \\
-          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 0 \amp 0 \\
-          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 0 \\
+          0 \amp 1 \amp \ast \amp 0 \amp \ast \amp 0 \amp 0 \amp \ast \\
+          0 \amp 0 \amp 0 \amp 1 \amp \ast \amp 0 \amp 0 \amp \ast \\
+          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 0 \amp \ast \\
+          0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 1 \amp \ast \\
           0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 0
           \end{bmatrix}
         </m> is in RREF.
