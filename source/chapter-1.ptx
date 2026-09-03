@@ -21,7 +21,7 @@
 
   <section xml:id="Section-1-4">
     <title>1.4 The Matrix Equation <m>A \vec{x} = \vec{b}</m></title>
-      <xi:include href="./chapter-1-notes/section-1-4.ptx" />
+      <xi:include href="./chapter-1-notes/section-1-4-sol.ptx" />
   </section>
 
   <section xml:id="Section-1-5">
