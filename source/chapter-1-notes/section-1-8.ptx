@@ -41,6 +41,7 @@
     <ul workspace="true">
       <li>The <term>domain</term> of <m>T</m> is <m>\mathbb{R}^n</m>.</li>
       <li>The <term>codomain</term> (or <term>target</term>) of <m>T</m> is <m>\mathbb{R}^m</m>.</li>
+      <li>The <term>kernel</term> of <m>T</m> is the set of all vectors <m>\vec x</m> such that <m>T(\vec x) = \vec 0</m>.</li>
       <li>The vector <m>T(\vec x)</m> is the <term>image</term> of <m>\vec x</m> under <m>T</m>.</li>
       <li>The set of all possible images <m>T(\vec x)</m> is the <term>range</term> of <m>T</m>.</li>
     </ul>
