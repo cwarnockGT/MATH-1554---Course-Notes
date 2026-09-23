@@ -1243,112 +1243,13 @@ var ptx_lunr_docs = [
   "body": "  For each matrix below, determine all values of so that the matrix is singular (not invertible). If there are no values of , explain why.          Note that . Thus, is missing a pivot if and only if . Therefore, is the only value of which makes singular.           Note that regardless of the value of , will have a pivot in each column. Therefore, no value of will make singular.           Note that . Thus, is missing a pivot in the third row if and only if . Therefore, is the only value of which makes singular.    "
 },
 {
-  "id": "Section-2-4",
-  "level": "1",
-  "url": "Section-2-4.html",
-  "type": "Section",
-  "number": "",
-  "title": "2.4 Partitioned Matrices",
-  "body": " 2.4 Partitioned Matrices   2.4 Partitioned Matrices   Overview   Topics   Partitioned matrices (or block matrices)     Goals   Apply partitioned matrices to problems involving matrix multiplication and invertibility.       The matrix   can be partitioned into blocks:   Each submatrix is called a block . Blocks can have different sizes.      A row-reduced matrix can often be written in block form:   This form is helpful when studying the null space of a matrix.       Row–Column Method  Recall that multiplying a row vector by a column vector produces a scalar.        Row–Column Method   If is and is , then the entry of is     Partitioned matrices can be multiplied the same way, treating each block like a single entry (provided dimensions match).    Let      Verify that .      Use partitioned matrices to show that , where        Example: Block Matrix Inverse    Let be invertible matrices. Find the inverse of:        The Strassen Algorithm  The following two examples demonstrate how partitioned matrices can be used. Students are not responsible for this material.   Strassen's Algorithm   Standard multiplication of two matrices requires about operations.  Strassen’s algorithm partitions matrices and reduces the complexity to approximately .   Visual representation of recursive block multiplication used in Strassen's algorithm.      Fast Fourier Transform   The Fast Fourier Transform (FFT) is another algorithm that uses partitioned matrices recursively.   This recursive structure allows computation in nearly linear time, a dramatic improvement over .      "
-},
-{
-  "id": "obj-2-4-topics-goals",
-  "level": "2",
-  "url": "Section-2-4.html#obj-2-4-topics-goals",
-  "type": "Objectives",
-  "number": "",
-  "title": "Topics",
-  "body": " Topics   Partitioned matrices (or block matrices)   "
-},
-{
-  "id": "p-2-4-overview-3",
-  "level": "2",
-  "url": "Section-2-4.html#p-2-4-overview-3",
-  "type": "Objectives",
-  "number": "",
-  "title": "Goals",
-  "body": " Goals   Apply partitioned matrices to problems involving matrix multiplication and invertibility.   "
-},
-{
-  "id": "ex-2-4-basic-partition",
-  "level": "2",
-  "url": "Section-2-4.html#ex-2-4-basic-partition",
-  "type": "Example",
-  "number": "2.30",
-  "title": "",
-  "body": "  The matrix   can be partitioned into blocks:   Each submatrix is called a block . Blocks can have different sizes.   "
-},
-{
-  "id": "ex-2-4-rref",
-  "level": "2",
-  "url": "Section-2-4.html#ex-2-4-rref",
-  "type": "Example",
-  "number": "2.31",
-  "title": "",
-  "body": "  A row-reduced matrix can often be written in block form:   This form is helpful when studying the null space of a matrix.   "
-},
-{
-  "id": "ex-2-4-dot-product",
-  "level": "2",
-  "url": "Section-2-4.html#ex-2-4-dot-product",
-  "type": "Example",
-  "number": "2.32",
-  "title": "",
-  "body": "    "
-},
-{
-  "id": "thm-row-column",
-  "level": "2",
-  "url": "Section-2-4.html#thm-row-column",
-  "type": "Theorem",
-  "number": "2.33",
-  "title": "Row–Column Method.",
-  "body": " Row–Column Method   If is and is , then the entry of is    "
-},
-{
-  "id": "p-2-4-row-column-6",
-  "level": "2",
-  "url": "Section-2-4.html#p-2-4-row-column-6",
-  "type": "Example",
-  "number": "2.34",
-  "title": "",
-  "body": "  Let      Verify that .      Use partitioned matrices to show that , where     "
-},
-{
-  "id": "ex-2-4-block-inverse",
-  "level": "2",
-  "url": "Section-2-4.html#ex-2-4-block-inverse",
-  "type": "Example",
-  "number": "2.35",
-  "title": "",
-  "body": "  Let be invertible matrices. Find the inverse of:    "
-},
-{
-  "id": "p-2-4-strassen-3",
-  "level": "2",
-  "url": "Section-2-4.html#p-2-4-strassen-3",
-  "type": "Example",
-  "number": "2.36",
-  "title": "Strassen’s Algorithm.",
-  "body": " Strassen's Algorithm   Standard multiplication of two matrices requires about operations.  Strassen’s algorithm partitions matrices and reduces the complexity to approximately .   Visual representation of recursive block multiplication used in Strassen's algorithm.    "
-},
-{
-  "id": "p-2-4-strassen-4",
-  "level": "2",
-  "url": "Section-2-4.html#p-2-4-strassen-4",
-  "type": "Example",
-  "number": "2.37",
-  "title": "Fast Fourier Transform.",
-  "body": " Fast Fourier Transform   The Fast Fourier Transform (FFT) is another algorithm that uses partitioned matrices recursively.   This recursive structure allows computation in nearly linear time, a dramatic improvement over .   "
-},
-{
   "id": "Section-2-5",
   "level": "1",
   "url": "Section-2-5.html",
   "type": "Section",
   "number": "",
   "title": "2.5 <span class=\"process-math\">\\(LU\\)<\/span> Factorization",
-  "body": " 2.5 Factorization   2.5 Factorization   Overview   Topics   The factorization of a matrix.  Using factorization to solve a system.  Why the factorization works.     Goals   Compute an factorization of a matrix.  Apply factorization to solve systems of equations.  Determine whether a matrix has an factorization.     We have learned several techniques for solving the equation . We could solve using , but this requires computing the inverse of an matrix, which becomes difficult for large . Gaussian elimination is better, but still inefficient for large systems.  More efficient and numerically stable methods rely on matrix factorizations. A matrix factorization (or matrix decomposition ) is a factorization of a matrix into a product of matrices. Such factorizations help solve and reveal matrix structure. Several matrix factorizations appear throughout this course. In this section, we factor a matrix into lower and upper triangular matrices.  A rectangular matrix is upper triangular if whenever .   A rectangular matrix is lower triangular if whenever .   Can you have a matrix that is both upper and lower triangular?     The Factorization   Factorization   If is an matrix that can be row reduced to echelon form without row exchanges, then there exists matrices and such that , where   is a lower triangular matrix with ones on the diagonal.  is an echelon form of .       If is a matrix, then its LU factorization has the form:      How do we find and ? Suppose can be row reduced to echelon form without interchanging rows. Then   where the are elementary row-operation matrices. These matrices are lower triangular and invertible. For example,   Therefore:      Algorithm for Computing  To compute an LU factorization:  Reduce to an echelon form using only row replacement operations. So no row swapping or scaling.  Place entries in so that the same sequence of row operations reduce to .    Note, in MATH 1554, the only allowed row replacement operation can be written in the form . The number is what should go into the row and column of , so .   Caution 1: Note that is the opposite of the scalar used in the row replacement. This is because the formula has a negative sign built in.   Caution 2: Note that you are only guaranteed to find the correct if you are working from left to right and from top to bottom. So, start with the leftmost pivot column and use its pivot row to elimnate all nonzero entries below it. Then move to the next pivot column (from the left) and repeat.     Compute the LU factorization of:          Compute the LU factorization of:        Using the Decomposition  How do we use factorization to help us solve ?  If , then the equation can be written , or equivalently, . Setting , we do the following:   Forward substitution to solve for in .  Backward substitution to solve for in .   Since is an invertible matrix, the system will always be consistent and have a unique solution. The system may be inconsistent. Since is in echelon form, we can quickly determine whether is inconsistent by checking if there is a nonzero entry in that corresponds to a row of zeros in .    Solve the linear system with:       "
+  "body": " 2.5 Factorization   2.5 Factorization   Overview   Topics   The factorization of a matrix.  Using factorization to solve a system.  Why the factorization works.     Goals   Compute an factorization of a matrix.  Apply factorization to solve systems of equations.  Determine whether a matrix has an factorization.     We have learned several techniques for solving the equation . We could solve using , but this requires computing the inverse of an matrix, which becomes difficult for large . Gaussian elimination is better, but still inefficient for large systems.  More efficient and numerically stable methods rely on matrix factorizations. A matrix factorization (or matrix decomposition ) is a factorization of a matrix into a product of matrices. Such factorizations help solve and reveal matrix structure. Several matrix factorizations appear throughout this course. In this section, we factor a matrix into lower and upper triangular matrices.  A rectangular matrix is upper triangular if whenever .   A rectangular matrix is lower triangular if whenever .   Can you have a matrix that is both upper and lower triangular?   There are many matrices which are both, such as       The Factorization   Factorization   If is an matrix that can be row reduced to echelon form without row exchanges, then there exists matrices and such that , where   is a lower triangular matrix with ones on the diagonal.  is an echelon form of .       If is a matrix, then its LU factorization has the form:      How do we find and ? Suppose can be row reduced to echelon form without interchanging rows. Then   where the are elementary row-operation matrices. These matrices are lower triangular and invertible. For example,   Therefore:      Algorithm for Computing  To compute an LU factorization:  Reduce to an echelon form using only row replacement operations. So no row swapping or scaling.  Place entries in so that the same sequence of row operations reduce to .    Note, in MATH 1554, the only allowed row replacement operation can be written in the form . The number is what should go into the row and column of , so .   Caution 1: Note that is the opposite of the scalar used in the row replacement. This is because the formula has a negative sign built in.   Caution 2: Note that you are only guaranteed to find the correct if you are working from left to right and from top to bottom. So, start with the leftmost pivot column and use its pivot row to elimnate all nonzero entries below it. Then move to the next pivot column (from the left) and repeat.     Compute the LU factorization of:     First, let's determine the sizes of and . Since is an echelon form of , we know that has the same dimension as . Thus, is a matrix. Since is a square matrix that multiplies on the left, must be a matrix.  Now, we determine by row reducing to echelon form only using row replacements of the form . Each time we make one of these row replacements, we are finding an entry of , specifically we are finding that .  I tend to write down the form of with blanks in the lower portion and fill them in after each row replacement. So, I start the problem with the following written towards the bottom of the page:    Note the following row operations:    : Note that the row replacement could be written as , so we have that .      : Since we used the row operation , we have that .      : Since we used the row operation , we have that . Since the matrix is in echelon form, we have found .      Therefore, we have that . We can check by verifying that .         Compute the LU factorization of:     Note will be a matrix and will be a matrix. I start by writing the following near the bottom of the page:    Note the following row operations: Therefore, we have that and .   Note that if we were only interested getting to echelon form, then we could do ; however, since we are interested in -factorization we must pay attention to Caution 2 . Therefore, we must use Row 2 next since it is the next pivot column. Note the following: Thus, we have that and .   We are still not in echelon form, so we must do one more row operation. Therefore, . What about ? Well, we didn't need to do anything to Row 5, so can we put anything in that position? NO. Notice, that if you put a non-zero number in that position, say , then we are saying that we need to do the row replacement which would mess up our row of zeros at the bottom of the matrix, thus undoing our work in getting to echelon form. Therefore, we need to make NO change to Row 5, which is doing the row replacement , so must be .   Since the final matrix is in echelon form, we have found . However, there is still one more entry of to determine, . Do we have to put a zero there? NO. Note that whatever number is in that position, say , would result in the row replacement which actually doesn't change anything since Row 4 is a row consisting entirely of 's. Therefore, , where can be anything you wish. Thus, we have that One consequence of this is that the factorization of a matrix might not be unique. It is true that is unique; however, there could be many possible 's that work.       Using the Decomposition  How do we use factorization to help us solve ?  If , then the equation can be written , or equivalently, . Setting , we do the following:   Forward substitution to solve for in .  Backward substitution to solve for in .   Since is an invertible matrix, the system will always be consistent and have a unique solution. The system may be inconsistent. Since is in echelon form, we can quickly determine whether is inconsistent by checking if there is a nonzero entry in that corresponds to a row of zeros in .    Solve the linear system with:     We start with determining a vector so that . Note that Therefore, we have that .   Next, we determine so that . Note that Therefore, we have that is the solution to the system .      "
 },
 {
   "id": "obj-2-5-topics-goals",
@@ -1400,7 +1301,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-5.html#thm-lu-factorization",
   "type": "Theorem",
-  "number": "2.38",
+  "number": "2.30",
   "title": "<span class=\"process-math\">\\(LU\\)<\/span> Factorization.",
   "body": " Factorization   If is an matrix that can be row reduced to echelon form without row exchanges, then there exists matrices and such that , where   is a lower triangular matrix with ones on the diagonal.  is an echelon form of .    "
 },
@@ -1409,7 +1310,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-5.html#ex-lu-form",
   "type": "Example",
-  "number": "2.39",
+  "number": "2.31",
   "title": "",
   "body": "  If is a matrix, then its LU factorization has the form:    "
 },
@@ -1418,27 +1319,27 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-5.html#ex-compute-lu",
   "type": "Example",
-  "number": "2.40",
+  "number": "2.32",
   "title": "",
-  "body": "  Compute the LU factorization of:    "
+  "body": "  Compute the LU factorization of:     First, let's determine the sizes of and . Since is an echelon form of , we know that has the same dimension as . Thus, is a matrix. Since is a square matrix that multiplies on the left, must be a matrix.  Now, we determine by row reducing to echelon form only using row replacements of the form . Each time we make one of these row replacements, we are finding an entry of , specifically we are finding that .  I tend to write down the form of with blanks in the lower portion and fill them in after each row replacement. So, I start the problem with the following written towards the bottom of the page:    Note the following row operations:    : Note that the row replacement could be written as , so we have that .      : Since we used the row operation , we have that .      : Since we used the row operation , we have that . Since the matrix is in echelon form, we have found .      Therefore, we have that . We can check by verifying that .   "
 },
 {
   "id": "ex-compute-lu2",
   "level": "2",
   "url": "Section-2-5.html#ex-compute-lu2",
   "type": "Example",
-  "number": "2.41",
+  "number": "2.33",
   "title": "",
-  "body": "  Compute the LU factorization of:    "
+  "body": "  Compute the LU factorization of:     Note will be a matrix and will be a matrix. I start by writing the following near the bottom of the page:    Note the following row operations: Therefore, we have that and .   Note that if we were only interested getting to echelon form, then we could do ; however, since we are interested in -factorization we must pay attention to Caution 2 . Therefore, we must use Row 2 next since it is the next pivot column. Note the following: Thus, we have that and .   We are still not in echelon form, so we must do one more row operation. Therefore, . What about ? Well, we didn't need to do anything to Row 5, so can we put anything in that position? NO. Notice, that if you put a non-zero number in that position, say , then we are saying that we need to do the row replacement which would mess up our row of zeros at the bottom of the matrix, thus undoing our work in getting to echelon form. Therefore, we need to make NO change to Row 5, which is doing the row replacement , so must be .   Since the final matrix is in echelon form, we have found . However, there is still one more entry of to determine, . Do we have to put a zero there? NO. Note that whatever number is in that position, say , would result in the row replacement which actually doesn't change anything since Row 4 is a row consisting entirely of 's. Therefore, , where can be anything you wish. Thus, we have that One consequence of this is that the factorization of a matrix might not be unique. It is true that is unique; however, there could be many possible 's that work.   "
 },
 {
   "id": "ex-solve-with-lu",
   "level": "2",
   "url": "Section-2-5.html#ex-solve-with-lu",
   "type": "Example",
-  "number": "2.42",
+  "number": "2.34",
   "title": "",
-  "body": "  Solve the linear system with:    "
+  "body": "  Solve the linear system with:     We start with determining a vector so that . Note that Therefore, we have that .   Next, we determine so that . Note that Therefore, we have that is the solution to the system .   "
 },
 {
   "id": "Section-2-8",
@@ -1472,7 +1373,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#def-subset-rn",
   "type": "Definition",
-  "number": "2.43",
+  "number": "2.35",
   "title": "Subset of <span class=\"process-math\">\\(\\mathbb{R}^n\\)<\/span>.",
   "body": " Subset of   A subset of is any collection of vectors contained in .   "
 },
@@ -1481,7 +1382,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#def-subspace",
   "type": "Definition",
-  "number": "2.44",
+  "number": "2.36",
   "title": "Subspace.",
   "body": " Subspace   A subset of is a subspace if:    for all .  for any scalar and any .    "
 },
@@ -1490,7 +1391,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#ex-subspace-pictures",
   "type": "Example",
-  "number": "2.45",
+  "number": "2.37",
   "title": "",
   "body": "  Which of the following subsets could be subspaces of ?   A graphic showing three subsets of . The first (a) is the unit square. The second (b) is a line through the origin. The third (c) is a line that does not pass throught the origin.    "
 },
@@ -1499,7 +1400,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#p-2-8-subspace-examples-2",
   "type": "Example",
-  "number": "2.46",
+  "number": "2.38",
   "title": "",
   "body": "  For each subset of given below, determine if it is a subspace of .                               "
 },
@@ -1508,7 +1409,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#handout-section-2-8-subspaces-4-2",
   "type": "Example",
-  "number": "2.47",
+  "number": "2.39",
   "title": "",
   "body": "  The following subsets of are written in set-builder notation. For each, determine if it is a subspace of . Note that is the set of integers.                               "
 },
@@ -1517,7 +1418,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#thm-subspace-are-span",
   "type": "Theorem",
-  "number": "2.48",
+  "number": "2.40",
   "title": "",
   "body": "  Every subspace of can be written as the span of a finite number of vectors; that is, if is a subspace of , then there exists vectors so that .   "
 },
@@ -1526,7 +1427,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#def-col-null",
   "type": "Definition",
-  "number": "2.49",
+  "number": "2.41",
   "title": "Column Space and Null Space.",
   "body": " Column Space and Null Space   Let be an matrix.   The column space of , , is the subspace of spanned by .  The null space of , , is the subspace of consisting of all solutions to .    "
 },
@@ -1535,7 +1436,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#thm-nul-same-col-dif",
   "type": "Theorem",
-  "number": "2.50",
+  "number": "2.42",
   "title": "",
   "body": "  Let be an matrix, and let be any matrix which is row equivalent to . Then  The subspaces and are most likely different. So, often, .  The subspaces and are always the same. So, it is always true that .     "
 },
@@ -1544,7 +1445,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#ex-colspace-membership",
   "type": "Example",
-  "number": "2.51",
+  "number": "2.43",
   "title": "",
   "body": "  Is in the column space of ?    "
 },
@@ -1553,7 +1454,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#ex-nullspace-membership",
   "type": "Example",
-  "number": "2.52",
+  "number": "2.44",
   "title": "",
   "body": "  Determine whether is in .    "
 },
@@ -1562,7 +1463,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#def-basis",
   "type": "Definition",
-  "number": "2.53",
+  "number": "2.45",
   "title": "Basis.",
   "body": " Basis   A basis for a subspace is a set of linearly independent vectors in that span .   "
 },
@@ -1571,7 +1472,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#ex-basis-subspace",
   "type": "Example",
-  "number": "2.54",
+  "number": "2.46",
   "title": "",
   "body": "  Let      Find at least three vectors which live in .      Find a matrix such that .      Construct a basis for .    "
 },
@@ -1580,7 +1481,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#ex-basis-col-null",
   "type": "Example",
-  "number": "2.55",
+  "number": "2.47",
   "title": "",
   "body": "  Construct a basis for and .    "
 },
@@ -1589,7 +1490,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-8.html#ex-V-ab-equals-zero",
   "type": "Example",
-  "number": "2.56",
+  "number": "2.48",
   "title": "",
   "body": "  Let      Give an example of a vector that is in .      Give an example of a vector that is not in .      Is the zero vector in ?      Is a subspace of ?    "
 },
@@ -1625,7 +1526,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#p-2-9-intro-objectives-7",
   "type": "Example",
-  "number": "2.57",
+  "number": "2.49",
   "title": "",
   "body": "  Sketch in each coordinate system below.    Two coordinate systems showing different basis orientations.  Two grids with different bases; vectors and are drawn.    "
 },
@@ -1634,7 +1535,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#def-coordinates",
   "type": "Definition",
-  "number": "2.58",
+  "number": "2.50",
   "title": "Coordinates Relative to a Basis.",
   "body": " Coordinates Relative to a Basis   Let be a basis for a subspace . For any , the coordinates of relative to are the scalars such that   The coordinate vector of relative to is:    "
 },
@@ -1643,7 +1544,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#ex-coordinates",
   "type": "Example",
-  "number": "2.59",
+  "number": "2.51",
   "title": "",
   "body": "  Let:   Verify that is in the span of , and compute .   "
 },
@@ -1652,7 +1553,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#ex-coordinates2",
   "type": "Example",
-  "number": "2.60",
+  "number": "2.52",
   "title": "",
   "body": "  Let   and .     Verify that is a basis for .      Determine if .      Compute .    "
 },
@@ -1661,7 +1562,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#def-dimension",
   "type": "Definition",
-  "number": "2.61",
+  "number": "2.53",
   "title": "Dimension.",
   "body": " Dimension   The dimension of a nonzero subspace , written , is the number of vectors in any basis of . We define .   "
 },
@@ -1670,7 +1571,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#thm-dimension-basis",
   "type": "Theorem",
-  "number": "2.62",
+  "number": "2.54",
   "title": "Dimension Is Well-Defined.",
   "body": " Dimension Is Well-Defined   Any two bases and of a nonzero subspace have the same number of vectors.   "
 },
@@ -1679,7 +1580,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#note-examples-dimension",
   "type": "Note",
-  "number": "2.63",
+  "number": "2.55",
   "title": "",
   "body": "Some Examples:   .   has dimension .  is the number of free variables.  is the number of pivotal columns.   "
 },
@@ -1688,7 +1589,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#def-rank",
   "type": "Definition",
-  "number": "2.64",
+  "number": "2.56",
   "title": "Rank.",
   "body": " Rank   The rank of a matrix is the dimension of its column space.   "
 },
@@ -1697,7 +1598,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#ex-rank-computation",
   "type": "Example",
-  "number": "2.65",
+  "number": "2.57",
   "title": "",
   "body": "  Compute and and find a basis for and , where    "
 },
@@ -1706,7 +1607,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#thm-rank-theorem",
   "type": "Theorem",
-  "number": "2.66",
+  "number": "2.58",
   "title": "Rank Theorem.",
   "body": " Rank Theorem   If a matrix has columns, then    "
 },
@@ -1715,7 +1616,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#thm-basis-theorem",
   "type": "Theorem",
-  "number": "2.67",
+  "number": "2.59",
   "title": "Basis Theorem.",
   "body": " Basis Theorem   Any two bases for a subspace have the same number of vectors. That common number of vectors is the dimension of the subspace.   "
 },
@@ -1724,7 +1625,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#thm-IMT-Cont-1",
   "type": "Theorem",
-  "number": "2.68",
+  "number": "2.60",
   "title": "The Invertible Matrix Theorem (Continued).",
   "body": " The Invertible Matrix Theorem (Continued)   Let be an matrix. The following are equivalent:   (a)   is invertible.  (m)   The columns of form a basis for .  (n)   .  (o)   .  (p)   .  (q)   .  (r)   .    "
 },
@@ -1733,7 +1634,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "Section-2-9.html#ex-rref-rank-questions",
   "type": "Example",
-  "number": "2.69",
+  "number": "2.61",
   "title": "",
   "body": "  For each part below, give an example of a matrix in RREF with the stated property, if possible.                               "
 },
