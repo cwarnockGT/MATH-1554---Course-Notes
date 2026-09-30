@@ -252,7 +252,7 @@
           \end{bmatrix} \sim
           \begin{bmatrix}
             1 \amp 0 \amp 5\\
-            0 \amp 1 \amp 2\\
+            0 \amp 1 \amp 3\\
             0 \amp 0 \amp 0
           \end{bmatrix} = B, 
           \qquad          
