@@ -1501,7 +1501,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "2.9 Dimension and Rank",
-  "body": " 2.9 Dimension and Rank   2.9 Dimension and Rank   Overview   Topics   Coordinates relative to a basis.  Dimension of a subspace.  The rank of a matrix.     Goals   Calculate coordinates of a vector in a given basis.  Characterize subspaces using the concept of dimension.  Characterize matrices using rank, column space, and null space.  Apply the Rank, Basis, and Invertibility Theorems to describe matrices and subspaces.      Key idea: Many different bases may be chosen for a given subspace. The choice can dramatically affect coordinate representations.     Sketch in each coordinate system below.    Two coordinate systems showing different basis orientations.  Two grids with different bases; vectors and are drawn.        Coordinates Relative to a Basis   Coordinates Relative to a Basis   Let be a basis for a subspace . For any , the coordinates of relative to are the scalars such that   The coordinate vector of relative to is:        Let:   Verify that is in the span of , and compute .       Another Example of Coordinate Vector    Let   and .     Verify that is a basis for .      Determine if .      Compute .        Dimension   Dimension   The dimension of a nonzero subspace , written , is the number of vectors in any basis of . We define .      Dimension Is Well-Defined   Any two bases and of a nonzero subspace have the same number of vectors.     Some Examples:   .   has dimension .  is the number of free variables.  is the number of pivotal columns.       Rank   Rank   The rank of a matrix is the dimension of its column space.       Compute and and find a basis for and , where        Rank, Basis, and Invertibility Theorems   Rank Theorem   If a matrix has columns, then       Basis Theorem   Any two bases for a subspace have the same number of vectors. That common number of vectors is the dimension of the subspace.      The Invertible Matrix Theorem (Continued)   Let be an matrix. The following are equivalent:   (a)   is invertible.  (m)   The columns of form a basis for .  (n)   .  (o)   .  (p)   .  (q)   .  (r)   .        Examples    For each part below, give an example of a matrix in RREF with the stated property, if possible.                                  "
+  "body": " 2.9 Dimension and Rank   2.9 Dimension and Rank   Overview   Topics   Coordinates relative to a basis.  Dimension of a subspace.  The rank of a matrix.     Goals   Calculate coordinates of a vector in a given basis.  Characterize subspaces using the concept of dimension.  Characterize matrices using rank, column space, and null space.  Apply the Rank, Basis, and Invertibility Theorems to describe matrices and subspaces.      Key idea: Many different bases may be chosen for a given subspace. The choice can dramatically affect coordinate representations.     Sketch in each coordinate system below.    Two coordinate systems showing different basis orientations.  Two grids with different bases; vectors and are drawn.        Coordinates Relative to a Basis   Coordinates Relative to a Basis   Let be a basis for a subspace . For any , the coordinates of relative to are the scalars such that   The coordinate vector of relative to is:        Let:   Verify that is in the span of , and compute .    Let . Note that is a basis for since the vectors in both span and are linearly independent.  We determine if by seeing whether can be written as a linear combination of the basis vectors; that is, we need to find whether there exists so that . Note that Therefore, we have that . Since there were no free variables, we see that this is the ONLY way of expressing as a linear combination of the basis vectors. Therefore, The coordinate vector of relative to being a vector in is not a mistake. This must happen since the basis contains two vectors. If you chose a different basis for , say , then would still be a vector in , but would most likely be different.       Another Example of Coordinate Vector    Let   and .     Verify that is a basis for .    Note that the matrix has a pivot in each column. Therefore, the columns are linearly independent. Since the vectors in span and are linearly independent, is a basis for .      Determine if .    Note that . So, .      Compute .    Since , we have .        Dimension   Dimension   The dimension of a nonzero subspace , written , is the number of vectors in any basis of . We define .      Dimension Is Well-Defined   Any two bases and of a nonzero subspace have the same number of vectors.     Some Examples:   .   has dimension .  is the number of free variables.  is the number of pivotal columns.       Rank   Rank   The rank of a matrix is the dimension of its column space.       Compute and and find a basis for and , where     First, note that we can express the column space as the span of the columns of ; that is, . This does not mean that the set containing those five vectors forms a basis. In fact, we know from that no set containing five vectors from can form a basis. Since Columns 3 and 5 of do not correspond to pivot columns, they are linearly dependent on the other vectors and are not needed in the span. Therefore, we have that a basis for is . Thus, .  From , is equal to the number of free variables. Therefore, . We can find a basis for by finding two vectors which are linearly independent satisfy . You can attempt to find such vectors by guessing (strategically). If that fails, you can proceed to following our normal procedure. Note that we have already been given an echelon form of and can see that Columns 3 and 5 correspond to free variables. Solving for the pivot varialbes in terms of and yields , , and . It follows that . Thus, a basis for is .       Rank, Basis, and Invertibility Theorems   Rank Theorem   If a matrix has columns, then       Basis Theorem   Any two bases for a subspace have the same number of vectors. That common number of vectors is the dimension of the subspace.      The Invertible Matrix Theorem (Continued)   Let be an matrix. The following are equivalent:   (a)   is invertible.  (m)   The columns of form a basis for .  (n)   .  (o)   .  (p)   .  (q)   .  (r)   .        Examples    For each part below, give an example of a matrix in RREF with the stated property, if possible.          In order for , states that must have 3 pivots. Since only has two rows, it cannot have 3 pivots. Therefore, this is not possible.           In order for , the matrix must have 2 pivots. This is possible, for example . In this case, .           In order for , states that must have two free variables. Therefore, works. In this case, .           Recall from that . Therefore, should have no free variables, or equivalently, should have a pivot in every column. This is impossible for a matrix with more columns than rows. Therefore, there is no matrix such that .       "
 },
 {
   "id": "obj-2-9-topics-goals",
@@ -1546,7 +1546,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.51",
   "title": "",
-  "body": "  Let:   Verify that is in the span of , and compute .   "
+  "body": "  Let:   Verify that is in the span of , and compute .    Let . Note that is a basis for since the vectors in both span and are linearly independent.  We determine if by seeing whether can be written as a linear combination of the basis vectors; that is, we need to find whether there exists so that . Note that Therefore, we have that . Since there were no free variables, we see that this is the ONLY way of expressing as a linear combination of the basis vectors. Therefore, The coordinate vector of relative to being a vector in is not a mistake. This must happen since the basis contains two vectors. If you chose a different basis for , say , then would still be a vector in , but would most likely be different.   "
 },
 {
   "id": "ex-coordinates2",
@@ -1555,7 +1555,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.52",
   "title": "",
-  "body": "  Let   and .     Verify that is a basis for .      Determine if .      Compute .    "
+  "body": "  Let   and .     Verify that is a basis for .    Note that the matrix has a pivot in each column. Therefore, the columns are linearly independent. Since the vectors in span and are linearly independent, is a basis for .      Determine if .    Note that . So, .      Compute .    Since , we have .    "
 },
 {
   "id": "def-dimension",
@@ -1600,7 +1600,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.57",
   "title": "",
-  "body": "  Compute and and find a basis for and , where    "
+  "body": "  Compute and and find a basis for and , where     First, note that we can express the column space as the span of the columns of ; that is, . This does not mean that the set containing those five vectors forms a basis. In fact, we know from that no set containing five vectors from can form a basis. Since Columns 3 and 5 of do not correspond to pivot columns, they are linearly dependent on the other vectors and are not needed in the span. Therefore, we have that a basis for is . Thus, .  From , is equal to the number of free variables. Therefore, . We can find a basis for by finding two vectors which are linearly independent satisfy . You can attempt to find such vectors by guessing (strategically). If that fails, you can proceed to following our normal procedure. Note that we have already been given an echelon form of and can see that Columns 3 and 5 correspond to free variables. Solving for the pivot varialbes in terms of and yields , , and . It follows that . Thus, a basis for is .   "
 },
 {
   "id": "thm-rank-theorem",
@@ -1636,7 +1636,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "2.61",
   "title": "",
-  "body": "  For each part below, give an example of a matrix in RREF with the stated property, if possible.                               "
+  "body": "  For each part below, give an example of a matrix in RREF with the stated property, if possible.          In order for , states that must have 3 pivots. Since only has two rows, it cannot have 3 pivots. Therefore, this is not possible.           In order for , the matrix must have 2 pivots. This is possible, for example . In this case, .           In order for , states that must have two free variables. Therefore, works. In this case, .           Recall from that . Therefore, should have no free variables, or equivalently, should have a pivot in every column. This is impossible for a matrix with more columns than rows. Therefore, there is no matrix such that .    "
 },
 {
   "id": "Section-3-1",
@@ -1645,7 +1645,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "3.1 Introduction to Determinants",
-  "body": " 3.1 Introduction to Determinants   3.1 Introduction to Determinants   Overview   Topics   The definition and computation of a determinant.  The determinant of triangular matrices.     Goals   Compute determinants of matrices using a cofactor expansion.  Apply theorems to compute determinants of matrices that have particular structures.      Determinant   Suppose is with entries . Then the determinant of , written or or , is defined by the following recursive formula.   If , then and .  If , then    where is the submatrix obtained by deleting row and column of .       Compute .       More examples    Use the definition to compute        Use the definition to compute        Cofactors and Expansion   Cofactor   For an matrix , the cofactor is   The sign pattern alternates in a checkerboard:      Cofactor Expansion along Any Row or Column   The determinant of can be computed by expanding along any row or any column. For example, expanding down the -th column:     This gives a practical way to compute determinants more efficiently by choosing rows or columns with many zeros.    Example: A 4×4 Determinant    Use to compute the determinant of in an efficient manner.        Triangular Matrices   Determinant of a Triangular Matrix   If is triangular (upper or lower), then   the product of its diagonal entries.      Compute the determinant of the following triangular matrix.      A naive cofactor expansion for an matrix requires on the order of multiplications, which grows very quickly:  A matrix requires roughly multiplications.  A matrix requires approximately multiplications.    This doesn't mean that determinants are not useful.  We will briefly study more efficient methods for computing determinants.  We will learn some application of determinants, such as solving linear systems and calculating area\/volume of certain regions.  Determinants are used in multivariable calculus (e.g., Jacobians for change of variables in integrals).      "
+  "body": " 3.1 Introduction to Determinants   3.1 Introduction to Determinants   Overview   Topics   The definition and computation of a determinant.  The determinant of triangular matrices.     Goals   Compute determinants of matrices using a cofactor expansion.  Apply theorems to compute determinants of matrices that have particular structures.      Determinant   Suppose is with entries . Then the determinant of , written or or , is defined by the following recursive formula.   If , then and .  If , then    where is the submatrix obtained by deleting row and column of .       Compute .    Using , we have that .       More examples    Use the definition to compute     Using and the result from , we have        Use the definition to compute     Note that        Cofactors and Expansion   Cofactor   For an matrix , the cofactor is   The sign pattern alternates in a checkerboard:      Cofactor Expansion along Any Row or Column   The determinant of can be computed by expanding along any row or any column. For example, expanding down the -th column:     This gives a practical way to compute determinants more efficiently by choosing rows or columns with many zeros.    Example: A 4×4 Determinant    Use to compute the determinant of in an efficient manner.     We will calculate the determinant by expanding along the first column. Note that . To calculate the determinant of the remaining matrix, we can expand over any row or column we choose. How about expanding over Column 3 since there are several 0's. Note that        Triangular Matrices   Determinant of a Triangular Matrix   If is triangular (upper or lower), then   the product of its diagonal entries.      Compute the determinant of the following triangular matrix.     By , we have that      A naive cofactor expansion for an matrix requires on the order of multiplications, which grows very quickly:  A matrix requires roughly multiplications.  A matrix requires approximately multiplications.    This doesn't mean that determinants are not useful.  We will briefly study more efficient methods for computing determinants.  We will learn some application of determinants, such as solving linear systems and calculating area\/volume of certain regions.  Determinants are used in multivariable calculus (e.g., Jacobians for change of variables in integrals).      "
 },
 {
   "id": "obj-3-1-topics-goals",
@@ -1681,7 +1681,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.2",
   "title": "",
-  "body": "  Compute .   "
+  "body": "  Compute .    Using , we have that .   "
 },
 {
   "id": "ex-det-3x3",
@@ -1690,7 +1690,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.3",
   "title": "",
-  "body": "  Use the definition to compute    "
+  "body": "  Use the definition to compute     Using and the result from , we have    "
 },
 {
   "id": "ex-det-3x3-2",
@@ -1699,7 +1699,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.4",
   "title": "",
-  "body": "  Use the definition to compute    "
+  "body": "  Use the definition to compute     Note that    "
 },
 {
   "id": "def-cofactor",
@@ -1726,7 +1726,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.7",
   "title": "",
-  "body": "  Use to compute the determinant of in an efficient manner.    "
+  "body": "  Use to compute the determinant of in an efficient manner.     We will calculate the determinant by expanding along the first column. Note that . To calculate the determinant of the remaining matrix, we can expand over any row or column we choose. How about expanding over Column 3 since there are several 0's. Note that    "
 },
 {
   "id": "thm-triangular-det",
@@ -1744,7 +1744,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.9",
   "title": "",
-  "body": "  Compute the determinant of the following triangular matrix.    "
+  "body": "  Compute the determinant of the following triangular matrix.     By , we have that    "
 },
 {
   "id": "Section-3-2",
@@ -1753,7 +1753,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "3.2 Properties of the Determinant",
-  "body": " 3.2 Properties of the Determinant   3.2 Properties of the Determinant   Overview   Topics   The relationships between row reductions, invertibility, and determinants.     Goals   Apply determinant properties (related to row reductions, transpose, and matrix products) to compute determinants efficiently.  Use determinants to determine whether a square matrix is invertible.     We have a method for computing determinants, but without the strategies in this section, the cofactor-expansion algorithm can be very inefficient. Row operations provide a more efficient method.    Row Operations and the Determinant   Let be a square matrix.   If a multiple of one row of is added to another to produce , then .  If two rows of are interchanged to produce , then .  If a row of is multiplied by a scalar to produce , then .        Example 1    Compute:        Compute:        Determinants and Invertibility    If is reduced to echelon form using row interchanges, then        For any matrices and , the following properties hold:   is invertible if and only if .  .  .        Additional Example    Determine the value of:        Use the determinant to find all values of for which the matrix is not invertible.       "
+  "body": " 3.2 Properties of the Determinant   3.2 Properties of the Determinant   Overview   Topics   The relationships between row reductions, invertibility, and determinants.     Goals   Apply determinant properties (related to row reductions, transpose, and matrix products) to compute determinants efficiently.  Use determinants to determine whether a square matrix is invertible.     We have a method for computing determinants, but without the strategies in this section, the cofactor-expansion algorithm can be very inefficient. Row operations provide a more efficient method.    Row Operations and the Determinant   Let be a square matrix.   If a multiple of one row of is added to another to produce , then .  If two rows of are interchanged to produce , then .  If a row of is multiplied by a scalar to produce , then .      Let . Note that Below, we will use an example of each type of row operation to show how the determinant changes according to .   Consider the row replacement operation : . Note that     Consider swapping Row 1 and Row 2: . Note that .    Consider the row scaling operation : . Note that          Example 1    Compute:     Since the matrix does not have any zeros, we start by performing row operations to create some zeros below the pivots. Then we use cofactor expansion. Feel free to go all the way to echelon form if you want. . Instead of expanding over the first column, we could have expanded over the second row, which would have resulted in Instead of using cofactor expansion, we could have swapped Row 2 and Row 3, which would negate my determinant by , and then used . This would result in . Regardless of the path chosen to evaluate the determinant, we get the same answer.       Compute:     In this example, we will reduce the matrix all the way down to REF and then apply . Note that        Determinants and Invertibility    If is reduced to echelon form using row interchanges, then        For any matrices and , the following properties hold:   is invertible if and only if .  .  .        Additional Example    Determine the value of:     Since the determinant is multiplicative ( part (b)), we have the following:        Use the determinant to find all values of for which the matrix is not invertible.     First, note that can be written as We know from part (a) that is not invertible if and only if . Note that . Therefore, we have that the which make not invertible are precisely those which make , or equivalently, which make . Thus, the which make not invertible are .      "
 },
 {
   "id": "obj-3-2-topics-goals",
@@ -1789,7 +1789,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.11",
   "title": "",
-  "body": "  Compute:    "
+  "body": "  Compute:     Since the matrix does not have any zeros, we start by performing row operations to create some zeros below the pivots. Then we use cofactor expansion. Feel free to go all the way to echelon form if you want. . Instead of expanding over the first column, we could have expanded over the second row, which would have resulted in Instead of using cofactor expansion, we could have swapped Row 2 and Row 3, which would negate my determinant by , and then used . This would result in . Regardless of the path chosen to evaluate the determinant, we get the same answer.   "
 },
 {
   "id": "ex-3-2-rowops-example2",
@@ -1798,7 +1798,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.12",
   "title": "",
-  "body": "  Compute:    "
+  "body": "  Compute:     In this example, we will reduce the matrix all the way down to REF and then apply . Note that    "
 },
 {
   "id": "thm-det-prod-pivots",
@@ -1825,7 +1825,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.15",
   "title": "",
-  "body": "  Determine the value of:    "
+  "body": "  Determine the value of:     Since the determinant is multiplicative ( part (b)), we have the following:    "
 },
 {
   "id": "ex-3-2-lambda",
@@ -1834,7 +1834,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "3.16",
   "title": "",
-  "body": "  Use the determinant to find all values of for which the matrix is not invertible.    "
+  "body": "  Use the determinant to find all values of for which the matrix is not invertible.     First, note that can be written as We know from part (a) that is not invertible if and only if . Note that . Therefore, we have that the which make not invertible are precisely those which make , or equivalently, which make . Thus, the which make not invertible are .   "
 },
 {
   "id": "Section-3-3",
