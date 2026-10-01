@@ -39,17 +39,17 @@
         <p>Let <m>A</m> be a square matrix.</p>
         <ol>
           <li>
-            If a multiple of one row of <m>A</m> is added to another to produce <m>B</m>,
+            <em>Row Replacement:</em> If a multiple of one row of <m>A</m> is added to another to produce <m>B</m>,
             then <m>\operatorname{det}(B)=\operatorname{det}(A)</m>.
           </li>
 
           <li>
-            If two rows of <m>A</m> are interchanged to produce <m>B</m>,
+            <em>Row Swap: </em> If two rows of <m>A</m> are interchanged to produce <m>B</m>,
             then <m>\operatorname{det}(B)=-\operatorname{det}(A)</m>.
           </li>
 
           <li>
-            If a row of <m>A</m> is multiplied by a scalar <m>k</m> to produce <m>B</m>,
+            <em>Row Scaling: </em> If a row of <m>A</m> is multiplied by a scalar <m>k</m> to produce <m>B</m>,
             then <m>\operatorname{det}(B)=k\operatorname{det}(A)</m>.
           </li>
         </ol>
@@ -102,7 +102,7 @@
     <theorem xml:id="thm-det-prod-pivots" workspace="true">
         <statement>
             <p>
-                If <m>A</m> is reduced to echelon form using <m>r</m> row interchanges, then
+                If <m>A</m> is reduced to echelon form using <m>r</m> row replacements and row swaps, then
             </p>
             <me>
             |A|=
