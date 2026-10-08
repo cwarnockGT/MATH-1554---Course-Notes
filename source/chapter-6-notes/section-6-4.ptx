@@ -25,11 +25,11 @@
         Identify an orthogonal basis for the subspace spanned by:
       </p>
 
-      <me>
+      <md>
         \vec x_1=\begin{bmatrix}1\\1\\1\\1\end{bmatrix},\quad
         \vec x_2=\begin{bmatrix}0\\1\\1\\1\end{bmatrix},\quad
         \vec x_3=\begin{bmatrix}0\\0\\1\\1\end{bmatrix}.
-      </me>
+      </md>
 
       <p><nbsp/></p>
 
@@ -48,7 +48,7 @@
           <mrow>\vec v_p \amp = \vec x_p - \frac{\vec x_p\cdot\vec v_1}{\vec v_1\cdot\vec v_1}\vec v_1 - \cdots - \frac{\vec x_p \cdot \vec v_{p-1}}{\vec v_{p-1} \cdot \vec v_{p-1}}\vec v_{p-1}.</mrow>
         </md>
         <p>
-          Then <m>\{\vec v_1,\dots,\vec v_p\}</m> is an orthogonal basis for <m>W</m>. Additionally, <me>W_k = \Span\left\{\vec v_1, \dots, \vec v_k\right\} = \Span\left\{\vec x_1, \dots, \vec x_k\right\} \qquad \text{for $1 \leq k \leq p$}</me>. Thus, we see that each vector <m>\vec v_k</m> is formed by starting with <m>\vec x_k</m> and then removing the orthogonal projection of <m>\vec x_k</m> onto <m>W_{k-1}</m>; that is, <me>\vec v_k = \vec x_k - \proj_{W_{k-1}}\vec x_k = \vec x_k - \proj_{\vec v_1}\vec x_k - \cdots - \proj_{\vec v_{k-1}}\vec x_k</me>.
+          Then <m>\{\vec v_1,\dots,\vec v_p\}</m> is an orthogonal basis for <m>W</m>. Additionally, <md>W_k = \Span\left\{\vec v_1, \dots, \vec v_k\right\} = \Span\left\{\vec x_1, \dots, \vec x_k\right\} \qquad \text{for $1 \leq k \leq p$}</md>. Thus, we see that each vector <m>\vec v_k</m> is formed by starting with <m>\vec x_k</m> and then removing the orthogonal projection of <m>\vec x_k</m> onto <m>W_{k-1}</m>; that is, <md>\vec v_k = \vec x_k - \proj_{W_{k-1}}\vec x_k = \vec x_k - \proj_{\vec v_1}\vec x_k - \cdots - \proj_{\vec v_{k-1}}\vec x_k</md>.
         </p>
       </statement>
     </theorem>
@@ -136,11 +136,11 @@
         <p>
           The vectors below span a subspace <m>W\subseteq\mathbb{R}^4</m>. Construct an orthogonal basis for <m>W</m>.
         </p>
-        <me>
+        <md>
           \vec x_1=\begin{bmatrix}1\\1\\1\\1\end{bmatrix},\quad
           \vec x_2=\begin{bmatrix}0\\1\\1\\1\end{bmatrix},\quad
           \vec x_3=\begin{bmatrix}0\\0\\1\\1\end{bmatrix}.
-        </me>
+        </md>
       </statement>
     </example>
     
@@ -160,9 +160,9 @@
           a QR factorization:
         </p>
 
-        <me>
+        <md>
           A = QR,
-        </me>
+        </md>
 
         <p>where:</p>
 
@@ -179,13 +179,13 @@
           Compute the QR decomposition of:
         </p>
 
-        <me>
+        <md>
           A=\begin{bmatrix}
             3 \amp -2\\
             2 \amp 3\\
             0 \amp 1
           \end{bmatrix}.
-        </me>
+        </md>
       </statement>
     </example>
 
@@ -198,14 +198,14 @@
           Compute the QR decomposition of:
         </p>
 
-        <me>
+        <md>
           A=\begin{bmatrix}
             1 \amp 0 \amp 0 \\
             1 \amp 1 \amp 0 \\
             1 \amp 1 \amp 1 \\
             1 \amp 1 \amp 1
           \end{bmatrix}.
-        </me>
+        </md>
       </statement>
     </example>
   </page>

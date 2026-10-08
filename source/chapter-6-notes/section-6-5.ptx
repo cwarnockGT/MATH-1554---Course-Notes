@@ -35,12 +35,12 @@
           Let <m>A</m> be an <m>m\times n</m> matrix. A vector <m>\widehat x</m> is a
           <em>least squares solution</em> to <m>A\vec x=\vec b</m> if
         </p>
-        <me>
+        <md>
           \lVert\vec b - A\widehat x\rVert
           \le
           \lVert\vec b - A\vec x\rVert
           \quad \text{for all } \vec x\in\mathbb{R}^n.
-        </me>
+        </md>
       </statement>
     </definition>
 
@@ -58,7 +58,7 @@
                   
                   <li>
                     <p>
-                      This vector <m>\widehat x =  \vec v</m> is a <em>least squares solution</em> to <m>A\vec x = \vec b</m> and we have that <me>\underline{\hspace{0.5in}} = \|\vec b - A\widehat x\| \leq \|\vec b - A\vec x\|</me> for all <m>\vec x \in \mathbb{R}^n</m>.
+                      This vector <m>\widehat x =  \vec v</m> is a <em>least squares solution</em> to <m>A\vec x = \vec b</m> and we have that <md>\underline{\hspace{0.5in}} = \|\vec b - A\widehat x\| \leq \|\vec b - A\vec x\|</md> for all <m>\vec x \in \mathbb{R}^n</m>.
                     </p>
                   </li>
                 </ul>  
@@ -107,7 +107,7 @@
     <example xml:id="ex-6-5-inconsistent" >
       <introduction>
         <p>
-            Consider the system <m>A\vec x = \vec b</m> for <me>A = \begin{bmatrix} 4 \amp 0 \\ 0 \amp 2 \\ 1 \amp 1 \end{bmatrix} \quad \text{and} \quad \vec b = \begin{bmatrix} 2 \\ 0 \\ 11 \end{bmatrix}</me>.
+            Consider the system <m>A\vec x = \vec b</m> for <md>A = \begin{bmatrix} 4 \amp 0 \\ 0 \amp 2 \\ 1 \amp 1 \end{bmatrix} \quad \text{and} \quad \vec b = \begin{bmatrix} 2 \\ 0 \\ 11 \end{bmatrix}</md>.
         </p>
     </introduction>
     <task workspace="2in">
@@ -220,9 +220,9 @@
         <p>
           Least squares solutions of <m>A\vec x=\vec b</m> are precisely the solutions of
         </p>
-        <me>
+        <md>
           A^T A\vec x = A^T\vec b,
-        </me>
+        </md>
         <p>
           refered to as the <em>normal equations</em>.
         </p>
@@ -238,7 +238,7 @@
     <example xml:id="ex-6-5-normal" workspace="true">
       <statement>
         <p>Use the normal equations to find the least-squares solution of <m>A\vec x=\vec b</m>, where</p>
-        <me>
+        <md>
           A=\begin{bmatrix}
             4 \amp 0\\
             0 \amp 2\\
@@ -248,7 +248,7 @@
           \vec b=\begin{bmatrix}
             2\\0\\11
           \end{bmatrix}.
-        </me>
+        </md>
       </statement>
     </example>
 
@@ -276,16 +276,16 @@
           When these hold,
         </p>
 
-        <me>
+        <md>
           \widehat x = (A^TA)^{-1}A^T\vec b.
-        </me>
+        </md>
       </statement>
     </theorem>
 
     <example xml:id="ex-6-5-orth-cols" workspace="true">
       <statement>
         <p>Compute the least squares solution to <m>A\vec x = \vec b</m>, where</p>
-        <me>
+        <md>
           A=\begin{bmatrix}
             1 \amp -6\\
             1 \amp -2\\
@@ -296,7 +296,7 @@
           \vec b=\begin{bmatrix}
             -1\\2\\1\\6
           \end{bmatrix}.
-        </me>
+        </md>
       </statement>
     </example>
 
@@ -315,9 +315,9 @@
           any <m>\vec b</m> the least squares solution of <m>A\vec x=\vec b</m> satisfies:
         </p>
 
-        <me>
+        <md>
           R\widehat x = Q^T\vec b.
-        </me>
+        </md>
       </statement>
     </theorem>
 
@@ -325,7 +325,7 @@
       <statement>
         <p>Compute the least squares solution to  <m>A\vec x=\vec b</m>, where</p>
 
-        <me>
+        <md>
           A=
           \begin{bmatrix}
             1 \amp 3 \amp 5\\
@@ -337,11 +337,11 @@
           \vec b=\begin{bmatrix}
             3\\5\\7\\-3
           \end{bmatrix}
-        </me>
+        </md>
 
         <p>given the QR factorization:</p>
 
-        <me>
+        <md>
           A = \dfrac{1}{2}
           \begin{bmatrix}
             1 \amp 1 \amp 1\\
@@ -354,7 +354,7 @@
             0 \amp 2 \amp 3\\
             0 \amp 0 \amp 2
           \end{bmatrix}.
-        </me>
+        </md>
 
       </statement>
     </example>

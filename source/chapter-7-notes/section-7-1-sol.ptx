@@ -35,13 +35,13 @@
         <p>
           Which of the following matrices are symmetric? Let <m>a, b, </m> and <m>c</m> represent real numbers.
         </p>
-        <me>
+        <md>
           A=[a],\quad \quad
           B=\begin{bmatrix} a \amp b\\ b \amp c\end{bmatrix},\quad \quad
           C=\begin{bmatrix} a \amp b\\ 0 \amp 0\end{bmatrix},
-        </me>
+        </md>
         <p workspace="1in"/>
-        <me>
+        <md>
           D=\begin{bmatrix}4 \amp 2\\ 0 \amp 0\\ 0 \amp 0\end{bmatrix}, \quad \quad
           E=\begin{bmatrix}
             4 \amp 2 \amp 0 \amp 1\\
@@ -49,7 +49,7 @@
             0 \amp 7 \amp 6 \amp 0\\
             1 \amp 4 \amp 0 \amp 3
           \end{bmatrix}.
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -72,14 +72,14 @@
         of the columns of <m>A</m>.
         </p>
 
-        <me>
+        <md>
         A^TA =
         \begin{bmatrix}
             \vec a_1^T\vec a_1 \amp \cdots \amp \vec a_1^T\vec a_n\\
             \vdots \amp \ddots \amp \vdots\\
             \vec a_n^T\vec a_1 \amp \cdots \amp \vec a_n^T\vec a_n
         \end{bmatrix}.
-        </me>
+        </md>
         <solution>
           <p>
             Note that <md>(A^TA)^T = (A^T)(A^T)^T = A^TA</md>. Thus, <m>A^TA</m> is symmetric.
@@ -131,14 +131,14 @@
         <p>
           Diagonalize <m>A</m> using an orthogonal matrix. The eigenvalues of <m>A</m> are given.
         </p>
-        <me>
+        <md>
           A=\begin{bmatrix}
             0 \amp 0 \amp 1\\
             0 \amp 1 \amp 0\\
             1 \amp 0 \amp 0
           \end{bmatrix},
           \qquad \lambda=-1,\,1.
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -198,7 +198,7 @@
       <title>Spectral Decomposition</title>
       <statement>
         <p>
-          Suppose <m>A </m> can be orthogonally diagonalized as <me>A=PDP^T = \begin{bmatrix} \vec u_1 \amp \cdots \amp \vec u_n\end{bmatrix} \begin{bmatrix} \lambda_1 \amp \cdots \amp 0 \\ \vdots \amp \ddots \amp \vdots \\ 0 \amp \cdots \amp \lambda_n \end{bmatrix}\begin{bmatrix}\vec u_1^T \\ \vdots \\ \vec u_n^T \end{bmatrix}</me>. Then <m>A</m> has the decomposition <me>A=\sum_{i=1}^n \lambda_i \vec u_i \vec u_i^T = \lambda_1 \vec u_1\vec u_1^T + \cdots + \lambda_n \vec u_n\vec u_n^T</me>. Note that each term <m>\lambda_i\vec u_i\vec u_i^T</m> is a rank 1 matrix.
+          Suppose <m>A </m> can be orthogonally diagonalized as <md>A=PDP^T = \begin{bmatrix} \vec u_1 \amp \cdots \amp \vec u_n\end{bmatrix} \begin{bmatrix} \lambda_1 \amp \cdots \amp 0 \\ \vdots \amp \ddots \amp \vdots \\ 0 \amp \cdots \amp \lambda_n \end{bmatrix}\begin{bmatrix}\vec u_1^T \\ \vdots \\ \vec u_n^T \end{bmatrix}</md>. Then <m>A</m> has the decomposition <md>A=\sum_{i=1}^n \lambda_i \vec u_i \vec u_i^T = \lambda_1 \vec u_1\vec u_1^T + \cdots + \lambda_n \vec u_n\vec u_n^T</md>. Note that each term <m>\lambda_i\vec u_i\vec u_i^T</m> is a rank 1 matrix.
         </p>
       </statement>
     </theorem>
@@ -212,7 +212,7 @@
         <p>
           Construct a spectral decomposition of <m>A</m>, given its orthogonal diagonalization:
         </p>
-        <me>
+        <md>
           A=\begin{bmatrix}3 \amp 1\\ 1 \amp 3\end{bmatrix}
           =
           \begin{bmatrix}
@@ -224,7 +224,7 @@
             \tfrac1{\sqrt2} \amp \tfrac1{\sqrt2}\\
             -\tfrac1{\sqrt2} \amp \tfrac1{\sqrt2}
           \end{bmatrix}.
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -249,7 +249,7 @@
             <p>
                 Note in the solution to <xref ref="ex-7-1-spectral"/> that if <m>\lambda_1 = 4</m> is the larger of the two eigenvalues and <m>\vec u_1</m> is a normalized eigenvector corresponding to <m>\lambda_1</m>, then <m>A \approx \lambda_1\vec u_1\vec u_1^T</m> is a close approximation of the matrix <m>A</m>. In fact, it is the closest approximation of <m>A</m> using a rank 1 matrix.
             </p> 
-            <p> In general, if we label the eigenvalues of an <m>n \times n</m> symmetric matrix <m>A</m> in non-increasing order by magnitude, so <m>|\lambda_1| \geq |\lambda_2| \geq \cdots \geq |\lambda_n|</m>, then each matrix <me>\sum_{i=1}^j \lambda_i\vec u_i\vec u_i^T = \lambda_1\vec u_1\vec u_1^T + \cdots + \lambda_j\vec u_j \vec u_j^T</me> is the closest<m>^*</m> rank <m>j</m> approximation of <m>A</m>, which gets more accurate as <m>j</m> approaches <m>n</m>. 
+            <p> In general, if we label the eigenvalues of an <m>n \times n</m> symmetric matrix <m>A</m> in non-increasing order by magnitude, so <m>|\lambda_1| \geq |\lambda_2| \geq \cdots \geq |\lambda_n|</m>, then each matrix <md>\sum_{i=1}^j \lambda_i\vec u_i\vec u_i^T = \lambda_1\vec u_1\vec u_1^T + \cdots + \lambda_j\vec u_j \vec u_j^T</md> is the closest<m>^*</m> rank <m>j</m> approximation of <m>A</m>, which gets more accurate as <m>j</m> approaches <m>n</m>. 
             </p>
             <p>
                 <m>^*</m>: The distance between two matrices is measured by subtracting the two matrices and calculating the square root of the sums of the squares of the entries in the resulting matrix. This calculation is the same calculation used to calculate the distance between two vectors. By closest, we mean that there is no rank <m>j</m> matrix that is closer. There could be other rank <m>j</m> matrices that are as close.
@@ -259,7 +259,7 @@
     <example workspace="true">
         <statement>
             <p>
-                Construct a spectral decompositon of <me> A = \begin{bmatrix} 0 \amp 0 \amp 1 \\ 0 \amp 1 \amp 0 \\ 1 \amp 0 \amp 0 \end{bmatrix}</me>.
+                Construct a spectral decompositon of <md> A = \begin{bmatrix} 0 \amp 0 \amp 1 \\ 0 \amp 1 \amp 0 \\ 1 \amp 0 \amp 0 \end{bmatrix}</md>.
             </p>
         </statement>
         <solution>

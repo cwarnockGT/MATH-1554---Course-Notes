@@ -28,7 +28,7 @@
     <example xml:id="ex-7-3-unit-sphere" workspace="true">
       <statement workspace="true">
         <p>
-          Consider the quadratic form <me>Q(\vec x)=9x_1^2 + 4x_2^2 + 3x_3^2</me>. Find the <em>largest</em> and <em>smallest</em> values of <m>Q(\vec x)</m> under the constraint that <m>\|\vec x\| = 1</m>.
+          Consider the quadratic form <md>Q(\vec x)=9x_1^2 + 4x_2^2 + 3x_3^2</md>. Find the <em>largest</em> and <em>smallest</em> values of <m>Q(\vec x)</m> under the constraint that <m>\|\vec x\| = 1</m>.
         </p>
       </statement>
     </example>
@@ -47,9 +47,9 @@
     <p>
       Suppose we wish to find the maximum and minimum values of
     </p>
-    <me>
+    <md>
       Q(\vec x)=\vec x^{\,T}A\vec x
-    </me>
+    </md>
     <p>
       subject to the constraint <m>\|\vec x\|=1</m>.
     </p>
@@ -57,10 +57,10 @@
     <p>
       That is, we want
     </p>
-    <me>
+    <md>
       m=\min\{Q(\vec x)\mid \|\vec x\|=1\},\qquad
       M=\max\{Q(\vec x)\mid \|\vec x\|=1\}.
-    </me>
+    </md>
 
     <p>
       This is an example of a <term>constrained optimization</term> problem.
@@ -75,9 +75,9 @@
         <p>
           Calculate the maximum and minimum values of
         </p>
-        <me>
+        <md>
           Q(\vec x)=x_2^2 + 2x_1x_3.
-        </me>
+        </md>
         <p>
           where <m>\vec x\in\mathbb{R}^3</m> and <m>\|\vec x\|=1</m>.
           Identify the points where these values are obtained.
@@ -109,15 +109,15 @@
           Let <m>Q(\vec x)=\vec x^{\,T}A\vec x</m>, where <m>A</m> is a real symmetric
           <m>n\times n</m> matrix with eigenvalues
         </p>
-        <me>
+        <md>
           \lambda_1 \ge \lambda_2 \ge \cdots \ge \lambda_n
-        </me>
+        </md>
         <p>
           and corresponding <em>normalized</em> eigenvectors
         </p>
-        <me>
+        <md>
           \vec u_1,\vec u_2,\ldots,\vec u_n.
-        </me>
+        </md>
         <p>
           Under the constraint <m>\|\vec x\|=1</m>:
         </p>
@@ -142,9 +142,9 @@
           <m>\|\vec x\|=5</m>.
           Identify a point where this maximum is obtained.
         </p>
-        <me>
+        <md>
           Q(\vec x)=x_2^2 + 2x_1x_3.
-        </me>
+        </md>
       </statement>
     </example>
 
@@ -162,15 +162,15 @@
           Let <m>Q(\vec x)=\vec x^{\,T}A\vec x</m>, where <m>A</m> is a real symmetric
           <m>n\times n</m> matrix with eigenvalues
         </p>
-        <me>
+        <md>
           \lambda_1 \ge \lambda_2 \ge \cdots \ge \lambda_n
-        </me>
+        </md>
         <p>
           and corresponding eigenvectors
         </p>
-        <me>
+        <md>
           \vec u_1,\vec u_2,\ldots,\vec u_n.
-        </me>
+        </md>
         <p>
           Subject to the constraints
           <m>\|\vec x\|=1</m> and <m>\vec x\cdot\vec u_1=0</m>:
@@ -195,9 +195,9 @@
     <example xml:id="ex-7-3-example3" workspace="true">
       <statement>
         <p>
-          Calculate the maximum and minimum values of <me>Q(\vec x)=\vec x^T A \vec x = x_1^2 + x_2^2 + x_3^2 + 6x_1x_2</me>,
+          Calculate the maximum and minimum values of <md>Q(\vec x)=\vec x^T A \vec x = x_1^2 + x_2^2 + x_3^2 + 6x_1x_2</md>,
           with <m>\vec x\in\mathbb{R}^3</m>, subject to
-          <m>\|\vec x\|=1</m> and <m>\vec x\cdot\vec u_1=0</m>, where <me>A = \begin{bmatrix} 1 \amp 3 \amp 0 \\ 3 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{bmatrix} \quad \text{and} \quad \vec u_1=\begin{bmatrix}1\\1\\0\end{bmatrix}</me>. Identifu points where the maximum and minimum values occur. The eigenvalues of <m>A</m> are <m>\lambda = 4, 1, -2</m>.
+          <m>\|\vec x\|=1</m> and <m>\vec x\cdot\vec u_1=0</m>, where <md>A = \begin{bmatrix} 1 \amp 3 \amp 0 \\ 3 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{bmatrix} \quad \text{and} \quad \vec u_1=\begin{bmatrix}1\\1\\0\end{bmatrix}</md>. Identifu points where the maximum and minimum values occur. The eigenvalues of <m>A</m> are <m>\lambda = 4, 1, -2</m>.
           </p>
       </statement>
     </example>

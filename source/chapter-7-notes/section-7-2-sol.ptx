@@ -26,9 +26,9 @@
       <p><em>Motivating Question</em></p>
       <p>
         Does the inequality below hold for all <m>x,y</m>?
-      <me>
+      <md>
         x_1^2-6x_1x_2+9x_2^2 \geq 0.
-      </me>
+      </md>
       </p>
 
       <p><nbsp/></p>
@@ -41,9 +41,9 @@
           A <term>quadratic form</term> is a function
           <m>Q:\mathbb{R}^n\to\mathbb{R}</m> defined by
         </p>
-        <me>
+        <md>
           Q(\vec x)=\vec x^{T}A\vec x = \begin{bmatrix} x_1 \amp x_2 \amp \cdots \amp x_n \end{bmatrix} \begin{bmatrix} a_{1,1} \amp a_{1,2} \amp  \cdots \amp a_{1,n} \\ a_{1,2} \amp a_{2,2} \amp \cdots \amp a_{2,n} \\ \vdots \amp \vdots \amp \ddots \amp \vdots \\ a_{1,n} \amp a_{2,n} \amp  \cdots \amp a_{n,n} \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix},
-        </me>
+        </md>
         <p>
           where <m>A</m> is an <m>n\times n</m> <em>symmetric</em> matrix.
         </p>
@@ -134,9 +134,9 @@
           Write the quadratic form below in the form <m>\vec x^{T}A\vec x</m>
           for <m>\vec x\in\mathbb{R}^3</m>.
         </p>
-        <me>
+        <md>
           Q(\vec x)=5x_1^2+x_2^2+3x_3^2+6x_1x_3-12x_2x_3.
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
@@ -195,10 +195,10 @@
           Use the orthogonal diagonalization of <m>A</m> to remove cross-product terms from
           <m>Q=\vec x^{T}A\vec x</m>.
         </p>
-        <me>
+        <md>
           A=\begin{bmatrix}3 \amp 2\\ 2 \amp 6\end{bmatrix}
           =PDP^{T} = \frac{1}{\sqrt5}\begin{bmatrix}2 \amp 1\\ -1 \amp 2\end{bmatrix}\begin{bmatrix}2 \amp 0\\ 0 \amp 7\end{bmatrix}\frac{1}{\sqrt5}\begin{bmatrix}2 \amp -1\\ 1 \amp 2\end{bmatrix}
-        </me>
+        </md>
       </statement>
       <solution>
         <p>

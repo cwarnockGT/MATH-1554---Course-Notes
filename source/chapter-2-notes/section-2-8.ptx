@@ -211,7 +211,7 @@
       <statement>
         <p>Is <m>\vec b</m> in the column space of <m>A</m>?</p>
 
-        <me>
+        <md>
           A=
           \begin{bmatrix}
             1 \amp -3 \amp -4\\
@@ -229,7 +229,7 @@
           \begin{bmatrix}
             3\\3\\-4
           \end{bmatrix}.
-        </me>
+        </md>
       </statement>
     </example>
     
@@ -245,7 +245,7 @@
         <p>
           Determine whether
           <m>\vec v</m> is in <m>\operatorname{Nul}(A)</m>. 
-          <me>A = \begin{bmatrix}
+          <md>A = \begin{bmatrix}
             1 \amp -3 \amp -4\\
             -4 \amp 6 \amp -2\\
             -3 \amp 7 \amp 6
@@ -263,7 +263,7 @@
             t
           \end{bmatrix},
           \quad t\in\mathbb{R}.
-        </me>
+        </md>
     </p>
       </statement>
     </example>
@@ -295,7 +295,7 @@
             Let
             </p>
 
-            <me>
+            <md>
             H=\left\{
             \begin{bmatrix}
                 x_1\\x_2\\x_3\\x_4
@@ -303,7 +303,7 @@
             \in\mathbb{R}^4\;\middle|\;
             x_1+2x_2+x_3+5x_4=0
             \right\}.
-            </me>
+            </md>
         </introduction>
         <task workspace="true">
             <statement>
@@ -338,7 +338,7 @@
       <statement>
         <p>Construct a basis for <m>\operatorname{Nul}(A)</m> and <m>\operatorname{Col}(A)</m>.</p>
 
-        <me>
+        <md>
           A=
           \begin{bmatrix}
             -3 \amp 6 \amp -1 \amp 0\\
@@ -351,7 +351,7 @@
             0 \amp 0 \amp 1 \amp 0\\
             0 \amp 0 \amp 0 \amp 0
           \end{bmatrix} = B.
-        </me>
+        </md>
       </statement>
     </example>
     <p><nbsp/></p>
@@ -367,14 +367,14 @@
           Let
         </p>
 
-        <me>
+        <md>
           V=\left\{
           \begin{bmatrix}
             a\\b
           \end{bmatrix}
           \in\mathbb{R}^2\;\middle|\;ab=0
           \right\}.
-        </me>
+        </md>
         </introduction>
         <task workspace="1in">
             <statement>

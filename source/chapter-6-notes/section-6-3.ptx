@@ -33,7 +33,7 @@
         For the matrix <m>A</m> and vector <m>\vec b</m>, which vector <m>\widehat b \in \Col(A)</m> is closest to <m>\vec b</m>?
       </p>
 
-      <me>
+      <md>
         A=\begin{bmatrix}
           1 \amp 2\\
           3 \amp 0\\
@@ -41,7 +41,7 @@
         \end{bmatrix},
         \qquad
         \vec b=\begin{bmatrix}1\\1\\1\end{bmatrix}.
-      </me>
+      </md>
 
       <p><nbsp/></p>
 
@@ -52,9 +52,9 @@
           If <m>W</m> is a subspace of <m>\mathbb{R}^n</m>, then each <m>\vec y\in\mathbb{R}^n</m> has a
           <em>unique</em> decomposition:
         </p>
-        <me>
+        <md>
           \vec y = \widehat y + w^\perp
-        </me>
+        </md>
         <p>
             where <m>\widehat y \in W</m> and <m>w^\perp \in W^\perp</m>. In fact, if <m>\{\vec u_1,\dots,\vec u_p\}</m> is any <em>orthogonal basis</em> for <m>W</m>, then
         </p>
@@ -100,11 +100,11 @@
     <example xml:id="ex-6-3-example2a" workspace="2in">
       <statement>
         <p>Given</p>
-        <me>
+        <md>
           \vec y=\begin{bmatrix}-1\\2\\6\end{bmatrix},\quad
           \vec u_1=\begin{bmatrix}3\\-1\\2\end{bmatrix},\quad
           \vec u_2=\begin{bmatrix}1\\-1\\-2\end{bmatrix},
-        </me>
+        </md>
         <p>
           construct the decomposition <m>\vec y = \widehat y + w^\perp</m>, where <m>\widehat y</m> is the orthogonal projection of <m>\vec y</m> onto
           <m>W=\operatorname{Span}\{\vec u_1,\vec u_2\}</m>.
@@ -129,9 +129,9 @@
           for every <m>\vec w\in W</m> with <m>\vec w\ne \widehat y</m>,
         </p>
 
-        <me>
+        <md>
           \lVert\vec y-\widehat y\rVert &lt; \lVert\vec y-\vec w\rVert.
-        </me>
+        </md>
 
         <p>
           Thus, <m>\widehat y</m> is the <em>unique</em> closest vector in <m>W</m> to <m>\vec y</m>.
@@ -142,7 +142,7 @@
     <definition xml:id="def-dist-W">
         <statement>
             <p>
-                Let <m>W \subset \mathbb{R}^n</m> and <m>\vec y \in \mathbb{R}^n</m>. The <term>distance of a vector <m>\vec y</m> from a subspace <m>W</m></term>, denoted <m>\dist(\vec y, W)</m>, is the minimum distance between <m>\vec y</m> and a vector <m>\vec w \in W</m>; that is, <me>\dist(\vec y, W) = \operatorname{min}\left\{\dist(\vec y, \vec w) : w \in W\right\}</me>. By <xref ref="thm-best-approx"/>, we see that the vector in <m>W</m> which is closest to <m>\vec y</m> is <m>\widehat y = \proj_W\vec y</m>. Therefore, <me>\dist(\vec y, W) = \dist(\vec y, \widehat y)</me>.
+                Let <m>W \subset \mathbb{R}^n</m> and <m>\vec y \in \mathbb{R}^n</m>. The <term>distance of a vector <m>\vec y</m> from a subspace <m>W</m></term>, denoted <m>\dist(\vec y, W)</m>, is the minimum distance between <m>\vec y</m> and a vector <m>\vec w \in W</m>; that is, <md>\dist(\vec y, W) = \operatorname{min}\left\{\dist(\vec y, \vec w) : w \in W\right\}</md>. By <xref ref="thm-best-approx"/>, we see that the vector in <m>W</m> which is closest to <m>\vec y</m> is <m>\widehat y = \proj_W\vec y</m>. Therefore, <md>\dist(\vec y, W) = \dist(\vec y, \widehat y)</md>.
             </p>
         </statement>
     </definition>
@@ -153,11 +153,11 @@
       <statement>
         <p>Using the same vectors as <xref ref="ex-6-3-example2a"/>:</p>
 
-        <me>
+        <md>
           \vec y=\begin{bmatrix}-1\\2\\6\end{bmatrix},\quad
           \vec u_1=\begin{bmatrix}3\\-1\\2\end{bmatrix},\quad
           \vec u_2=\begin{bmatrix}1\\-1\\-2\end{bmatrix},
-        </me>
+        </md>
 
         <p>
           compute the distance from <m>\vec y</m> to
@@ -175,7 +175,7 @@
     <example xml:id="ex-6-3-example3" workspace="true">
         <statement>
             <p>
-                Find the distance from <m>\vec y</m> to the subspace <m>W = \Span\{\vec v_1, \vec v_2, \vec v_3\}</m>, where <me>\vec y = \begin{bmatrix} 11 \\ 1 \\ -2 \\ 6 \end{bmatrix}, \qquad \vec v_1 = \begin{bmatrix} 1 \\ 1 \\ 0 \\ -1 \end{bmatrix}, \qquad \vec v_2 = \begin{bmatrix} 1 \\ 0 \\ 1 \\ 1 \end{bmatrix}, \qquad \vec v_3 = \begin{bmatrix} 0 \\ -1 \\ 1 \\ -1\end{bmatrix}</me>.
+                Find the distance from <m>\vec y</m> to the subspace <m>W = \Span\{\vec v_1, \vec v_2, \vec v_3\}</m>, where <md>\vec y = \begin{bmatrix} 11 \\ 1 \\ -2 \\ 6 \end{bmatrix}, \qquad \vec v_1 = \begin{bmatrix} 1 \\ 1 \\ 0 \\ -1 \end{bmatrix}, \qquad \vec v_2 = \begin{bmatrix} 1 \\ 0 \\ 1 \\ 1 \end{bmatrix}, \qquad \vec v_3 = \begin{bmatrix} 0 \\ -1 \\ 1 \\ -1\end{bmatrix}</md>.
             </p>
         </statement>
     </example>

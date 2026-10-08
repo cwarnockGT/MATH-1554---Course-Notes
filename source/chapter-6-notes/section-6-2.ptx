@@ -32,11 +32,11 @@
         What are the special properties of the following basis for <m>\mathbb{R}^3</m>?
       </p>
 
-      <me>
+      <md>
         \frac{1}{\sqrt{11}}\begin{bmatrix}3\\1\\1\end{bmatrix},\quad
         \frac{1}{\sqrt{6}}\begin{bmatrix}-1\\2\\1\end{bmatrix},\quad
         \frac{1}{\sqrt{66}}\begin{bmatrix}-1\\-4\\7\end{bmatrix}
-      </me>
+      </md>
 
     <p><nbsp/></p>
 
@@ -57,11 +57,11 @@
           Fill in missing entries so that <m>\{\vec u_1,\vec u_2,\vec u_3\}</m> is an orthogonal set:
         </p>
 
-        <me>
+        <md>
           \vec u_1 = \begin{bmatrix}4\\0\\1\end{bmatrix},\qquad
           \vec u_2 = \begin{bmatrix}-2\\0\\ \phantom{1} \end{bmatrix},\qquad
           \vec u_3 = \begin{bmatrix} \phantom{-1} \\ \phantom{1} \\ \phantom{1} \end{bmatrix}
-        </me>
+        </md>
       </statement>
     </example>
 
@@ -79,10 +79,10 @@
           If <m>\{\vec u_1,\dots,\vec u_p\}</m> is an orthogonal set of vectors, then:
         </p>
 
-        <me>
+        <md>
           \left\lVert c_1\vec u_1 + \cdots + c_p\vec u_p\right\rVert^2
           = c_1^2\lVert\vec u_1\rVert^2 + \cdots + c_p^2\lVert\vec u_p\rVert^2.
-        </me>
+        </md>
 
         <p>
           Furthermore, if all the vectors <m>\vec u_1</m> are nonzero, then the set is linearly independent.
@@ -100,17 +100,17 @@
           then any <m>\vec w\in W</m> can be written:
         </p>
 
-        <me>
+        <md>
           \vec w = c_1\vec u_1 + \cdots + c_p\vec u_p,
-        </me>
+        </md>
 
         <p>
           where
         </p>
 
-        <me>
+        <md>
           c_k = \frac{\vec w\cdot\vec u_k}{\vec u_k\cdot\vec u_k}.
-        </me>
+        </md>
       </statement>
     </theorem>
     
@@ -126,12 +126,12 @@
       <introduction>
         <p>
           Let
-        <me>
+        <md>
           \vec x=\begin{bmatrix}1\\1\\1\end{bmatrix},\qquad
           \vec u=\begin{bmatrix}1\\-2\\1\end{bmatrix},\qquad
           \vec v=\begin{bmatrix}-1\\0\\1\end{bmatrix},\qquad
           \vec s=\begin{bmatrix}3\\-4\\1\end{bmatrix}.
-        </me>
+        </md>
             and let <m>W</m> be the subspace of <m>\mathbb{R}^3</m> that is orthogonal to <m>\vec x</m>.
         </p>
         </introduction>
@@ -172,9 +172,9 @@
           For a nonzero vector <m>\vec u</m> and vector <m>\vec v</m>,
           the <term>orthogonal projection of <m>\vec v</m> onto <m>\vec u</m></term> is:
         </p>
-        <me>
+        <md>
           \proj_{\vec u}(\vec v) = \frac{\vec v\cdot\vec u}{\vec u\cdot\vec u}\vec u.
-        </me>
+        </md>
       </statement>
     </definition>
 
@@ -200,7 +200,7 @@
         <statement>
             <p>
                 Let <m>\vec u</m> be a nonzero vector. Then, the vector <m>\proj_{\vec u}\vec v</m> is the vector in <m>\Span\{\vec u\}</m> which is closest to <m>\vec v</m>. Also, the vector <m>\vec w=\vec v - \operatorname{proj}_{\vec u}(\vec v)</m> is orthogonal to <m>\vec u</m>. Furthermore, 
-                <me>\|\vec v\|^2 = \|\proj_{\vec u}{\vec v}\|^2 + \|\vec w\|^2</me>.
+                <md>\|\vec v\|^2 = \|\proj_{\vec u}{\vec v}\|^2 + \|\vec w\|^2</md>.
             </p>
         </statement>
     </theorem>
@@ -262,18 +262,18 @@
           If <m>\{\vec u_1,\dots,\vec u_p\}</m> is orthonormal basis for <m>W</m> and <m>\vec w\in W</m>, then
         </p>
 
-        <me>
+        <md>
           \vec w = (\vec w\cdot\vec u_1)\vec u_1 + \cdots + (\vec w\cdot\vec u_p)\vec u_p,
-        </me>
+        </md>
 
         <p>and</p>
 
-        <me>
+        <md>
           \|\vec w\| = 
           \sqrt{
             (\vec w\cdot\vec u_1)^2 + \cdots + (\vec w\cdot\vec u_p)^2
           }.
-        </me>
+        </md>
       </statement>
     </theorem>
 
@@ -289,13 +289,13 @@
           Find the missing entries in an orthonormal basis for <m>W</m>:
         </p>
 
-        <me>
+        <md>
           u=\frac{1}{\sqrt{\phantom{-1}}}
           \begin{bmatrix}1\\0\\ \phantom{-1} \end{bmatrix},
           \qquad
           v=\frac{1}{\sqrt{\phantom{-1}}}
           \begin{bmatrix} \phantom{-1} \\ \phantom{-1} \\ \phantom{-1}  \end{bmatrix}
-        </me>
+        </md>
 
         <p>
           Then, express <m>\vec w = \begin{bmatrix} 3 \\ 6 \\ -9 \end{bmatrix} \in W</m> as a linear combination of <m>\vec u</m> and <m>\vec v</m>.
@@ -360,7 +360,7 @@
       <statement>
         <p>Compute the length of</p>
 
-        <me>
+        <md>
           \begin{bmatrix}
             \frac12 \amp \frac{2}{\sqrt{14}}\\
             \frac12 \amp \frac{1}{\sqrt{14}}\\
@@ -371,7 +371,7 @@
             \sqrt{5}\\
             -2
           \end{bmatrix}.
-        </me>
+        </md>
       </statement>
     </example>
   </page>

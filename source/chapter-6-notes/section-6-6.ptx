@@ -200,14 +200,14 @@
         <task workspace="5in">
             <statement>
                 <p>
-                    Setup the least-squares problem which will produce the best linear model for this situation: <me>y = \beta_0 + \beta_1 x_1 + \beta_2 x_2</me>.
+                    Setup the least-squares problem which will produce the best linear model for this situation: <md>y = \beta_0 + \beta_1 x_1 + \beta_2 x_2</md>.
                 </p>
             </statement>
         </task>
         <task workspace="2in">
             <statement>
                 <p>
-                    Solving the system above, we find that <me>\widehat \beta = \begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \end{bmatrix} = \begin{bmatrix} 120 \\ 35 \\ 30\end{bmatrix}</me>. According to this model, how much should a house with 2000 ft<m>^2</m> and 3 bedrooms be worth?
+                    Solving the system above, we find that <md>\widehat \beta = \begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \end{bmatrix} = \begin{bmatrix} 120 \\ 35 \\ 30\end{bmatrix}</md>. According to this model, how much should a house with 2000 ft<m>^2</m> and 3 bedrooms be worth?
                 </p>
             </statement>
         </task>
@@ -224,26 +224,16 @@
     </p>
 
     <p workspace="0.5in">
-        In general, we can consider least squares fitting for the form <me>y = \beta_0 + \beta_1 f_1(x_1, \dots, x_m) + \beta_2 f_2(x_1, \dots, x_m) + \cdots + \beta_n f_n(x_1, \dots, x_m)</me>, where the functions <m>f_i</m> are known, but not necessarily linear. Keep in mind that this is a <em>linear</em> problem in the <m>\beta_i</m> variables.
+        In general, we can consider least squares fitting for the form <md>y = \beta_0 + \beta_1 f_1(x_1, \dots, x_m) + \beta_2 f_2(x_1, \dots, x_m) + \cdots + \beta_n f_n(x_1, \dots, x_m)</md>, where the functions <m>f_i</m> are known, but not necessarily linear. Keep in mind that this is a <em>linear</em> problem in the <m>\beta_i</m> variables.
     </p>
 
     <example xml:id="ex-6-6-curve-best-fit-a" workspace="5in">
         <statement>
             <p>
-                For the remaining four examples, we will fit various curves to the following points: <me>(-1,-3), (0,0), (1,3), (2,2)</me>. Once you find the curve, graph the points and the curve on Desmos and see how good the curve fits.
+                For the remaining four examples, we will fit various curves to the following points: <md>(-1,-3), (0,0), (1,3), (2,2)</md>. Once you find the curve, graph the points and the curve on Desmos and see how good the curve fits.
             </p>
             <p>
-                We will start by fitting a linear curve to the data: <me>y = \beta_0 + \beta_1 x</me>. This one can be solved without the need of a calculator. 
-            </p>
-        </statement>
-    </example>
-  </page>
-
-  <page>
-    <example>
-        <statement>
-            <p>
-                Continuing from <xref ref="ex-6-6-curve-best-fit-a"/>, we will now fit a quadratic curve to the data: <me>y = \beta_0 + \beta_1 x + \beta_2 x^2</me>. For the remaining problems, feel free to use a matrix equation solver after setting up the least squares problem as <m>A^TA\widehat x = A^T\vec b</m>.
+                We will start by fitting a linear curve to the data: <md>y = \beta_0 + \beta_1 x</md>. This one can be solved without the need of a calculator. 
             </p>
         </statement>
     </example>
@@ -253,7 +243,17 @@
     <example>
         <statement>
             <p>
-                Continuing from <xref ref="ex-6-6-curve-best-fit-a"/>, we will now fit a cubic curve to the data: <me>y = \beta_0 + \beta_1 x + \beta_2 x^2 + \beta_3 x^3</me>. What do you notice about your least-squares solution? Is this expected?
+                Continuing from <xref ref="ex-6-6-curve-best-fit-a"/>, we will now fit a quadratic curve to the data: <md>y = \beta_0 + \beta_1 x + \beta_2 x^2</md>. For the remaining problems, feel free to use a matrix equation solver after setting up the least squares problem as <m>A^TA\widehat x = A^T\vec b</m>.
+            </p>
+        </statement>
+    </example>
+  </page>
+
+  <page>
+    <example>
+        <statement>
+            <p>
+                Continuing from <xref ref="ex-6-6-curve-best-fit-a"/>, we will now fit a cubic curve to the data: <md>y = \beta_0 + \beta_1 x + \beta_2 x^2 + \beta_3 x^3</md>. What do you notice about your least-squares solution? Is this expected?
             </p>
         </statement>
     </example>
@@ -264,7 +264,7 @@
     <example>
         <statement>
             <p>
-                Continuing from <xref ref="ex-6-6-curve-best-fit-a"/>, we will now fit a somewhat trigonometric curve to the data: <me>y = \beta_0 x + \beta_1 \sin\left(\frac{\pi x}{2}\right)</me>. What do you notice about your least-squares solution?
+                Continuing from <xref ref="ex-6-6-curve-best-fit-a"/>, we will now fit a somewhat trigonometric curve to the data: <md>y = \beta_0 x + \beta_1 \sin\left(\frac{\pi x}{2}\right)</md>. What do you notice about your least-squares solution?
             </p>
         </statement>
     </example>

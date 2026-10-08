@@ -129,7 +129,7 @@
                     <mrow>(-1,2) \amp \rightarrow  2 = m(-1) + b \amp \implies \phantom{.}-m + b = 2</mrow>
                     <mrow>(3,3)  \amp \rightarrow  3 = m(3)\phantom{-} + b \amp \implies \phantom{-}3m + b = 3</mrow>    
                 </md>
-                Therefore, the system which should be solved to determine <m>m</m> and <m>b</m> is <me> \begin{bmatrix}-2 \amp 1 \\ -1 \amp 1 \\ 3 \amp 1 \end{bmatrix}\begin{bmatrix} m \\ b \end{bmatrix} = \begin{bmatrix} 0 \\ 2 \\ 3 \end{bmatrix}</me>.
+                Therefore, the system which should be solved to determine <m>m</m> and <m>b</m> is <md> \begin{bmatrix}-2 \amp 1 \\ -1 \amp 1 \\ 3 \amp 1 \end{bmatrix}\begin{bmatrix} m \\ b \end{bmatrix} = \begin{bmatrix} 0 \\ 2 \\ 3 \end{bmatrix}</md>.
             </p>
         </solution>
     </task>
@@ -141,7 +141,7 @@
         </statement>
         <solution>
             <p>
-                Note that <me>\begin{bmatrix}-2 \amp 1 \amp \rvert \amp 0 \\ -1 \amp 1 \amp \rvert \amp 2 \\ 3 \amp 1 \amp \rvert \amp 3 \end{bmatrix} \sim \begin{bmatrix} 1 \amp -1 \amp \rvert \amp -2 \\ 0 \amp -1 \amp \rvert \amp -4 \\ 0 \amp 4 \amp \rvert \amp 9 \end{bmatrix} \sim \begin{bmatrix} 1 \amp -1 \amp \rvert \amp -2 \\ 0 \amp 1 \amp \rvert \amp 4 \\ 0 \amp 0 \amp \rvert \amp -7 \end{bmatrix}</me>, which is an inconsistent system. 
+                Note that <md>\begin{bmatrix}-2 \amp 1 \amp \rvert \amp 0 \\ -1 \amp 1 \amp \rvert \amp 2 \\ 3 \amp 1 \amp \rvert \amp 3 \end{bmatrix} \sim \begin{bmatrix} 1 \amp -1 \amp \rvert \amp -2 \\ 0 \amp -1 \amp \rvert \amp -4 \\ 0 \amp 4 \amp \rvert \amp 9 \end{bmatrix} \sim \begin{bmatrix} 1 \amp -1 \amp \rvert \amp -2 \\ 0 \amp 1 \amp \rvert \amp 4 \\ 0 \amp 0 \amp \rvert \amp -7 \end{bmatrix}</md>, which is an inconsistent system. 
             </p>
         </solution>
     </task>
@@ -153,7 +153,7 @@
         </statement>
         <solution>
             <p>
-                We start with the normal equations <m>A^TA\vec x = A^T\vec b</m>. Note that <me>A^TA = \begin{bmatrix} -2 \amp -1 \amp 3 \\ 1 \amp 1 \amp 1 \end{bmatrix} \begin{bmatrix} -2 \amp 1 \\ -1 \amp 1 \\ 3 \amp 1 \end{bmatrix} = \begin{bmatrix} 14 \amp 0 \\ 0 \amp 3 \end{bmatrix}</me> and <me>A^T\vec b = \begin{bmatrix} -2 \amp -1 \amp 3 \\ 1 \amp 1 \amp 1 \end{bmatrix} \begin{bmatrix} 0 \\ 2 \\ 3 \end{bmatrix} = \begin{bmatrix} 7 \\ 5 \end{bmatrix}</me>. Therefore, to find the least-squares solution, we solve the system <me>\begin{bmatrix} 14 \amp 0 \\ 0 \amp 3 \end{bmatrix} \begin{bmatrix} m \\ b \end{bmatrix} = \begin{bmatrix} 7 \\ 5 \end{bmatrix}</me>. Note that <me>\begin{bmatrix} 14 \amp 0 \amp \rvert \amp 7 \\ 0 \amp 3 \amp \rvert \amp 5 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp \rvert \amp \frac{1}{2} \\ 0 \amp 1 \amp \rvert \amp \frac{5}{3}\end{bmatrix}</me>. Thus, the line of best fit is <me> y = \frac{1}{2}x + \frac{5}{3}</me>.
+                We start with the normal equations <m>A^TA\vec x = A^T\vec b</m>. Note that <md>A^TA = \begin{bmatrix} -2 \amp -1 \amp 3 \\ 1 \amp 1 \amp 1 \end{bmatrix} \begin{bmatrix} -2 \amp 1 \\ -1 \amp 1 \\ 3 \amp 1 \end{bmatrix} = \begin{bmatrix} 14 \amp 0 \\ 0 \amp 3 \end{bmatrix}</md> and <md>A^T\vec b = \begin{bmatrix} -2 \amp -1 \amp 3 \\ 1 \amp 1 \amp 1 \end{bmatrix} \begin{bmatrix} 0 \\ 2 \\ 3 \end{bmatrix} = \begin{bmatrix} 7 \\ 5 \end{bmatrix}</md>. Therefore, to find the least-squares solution, we solve the system <md>\begin{bmatrix} 14 \amp 0 \\ 0 \amp 3 \end{bmatrix} \begin{bmatrix} m \\ b \end{bmatrix} = \begin{bmatrix} 7 \\ 5 \end{bmatrix}</md>. Note that <md>\begin{bmatrix} 14 \amp 0 \amp \rvert \amp 7 \\ 0 \amp 3 \amp \rvert \amp 5 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp \rvert \amp \frac{1}{2} \\ 0 \amp 1 \amp \rvert \amp \frac{5}{3}\end{bmatrix}</md>. Thus, the line of best fit is <md> y = \frac{1}{2}x + \frac{5}{3}</md>.
             </p>
         </solution>
     </task>
@@ -221,31 +221,31 @@
         <task workspace="5in">
             <statement>
                 <p>
-                    Setup the least-squares problem which will produce the best linear model for this situation: <me>y = \beta_0 + \beta_1 x_1 + \beta_2 x_2</me>.
+                    Setup the least-squares problem which will produce the best linear model for this situation: <md>y = \beta_0 + \beta_1 x_1 + \beta_2 x_2</md>.
                 </p>
             </statement>
             <solution>
                 <p>
-                    The data gives the following data points <m>(x_1, x_2, y)</m>: <me>(1, 1, 180), (2,2, 260), (3,3,310), (4,3,350)</me>. Like in the previous example, each data point gives an equation: 
+                    The data gives the following data points <m>(x_1, x_2, y)</m>: <md>(1, 1, 180), (2,2, 260), (3,3,310), (4,3,350)</md>. Like in the previous example, each data point gives an equation: 
                     <md alignment="alignat">
                         <mrow>(1,1,180) \amp \rightarrow 180 = \beta_0 + \beta_1(1) + \beta_2(1) \amp \implies \beta_0 + \phantom{2}\beta_1 + \phantom{3}\beta_2 = 180</mrow>
                         <mrow>(2,2,260) \amp \rightarrow 260 = \beta_0 + \beta_1(2) + \beta_2(2) \amp \implies \beta_0 + 2\beta_1 + 2\beta_2 = 260</mrow>
                         <mrow>(3,3,310) \amp \rightarrow 310 = \beta_0 + \beta_1(3) + \beta_2(3) \amp \implies \beta_0 + 3\beta_1 + 3\beta_2 = 310</mrow>
                         <mrow>(4,3,350) \amp \rightarrow 350 = \beta_0 + \beta_1(4) + \beta_2(3) \amp \implies \beta_0 + 4\beta_1 + 3\beta_2 = 350</mrow>
                     </md>
-                    It follows that the system of the form <m>A\vec x = \vec b</m> which would lead to an exact fitting of the curve is <me>\begin{bmatrix} 1 \amp 1 \amp 1 \\ 1 \amp 2 \amp 2 \\ 1 \amp 3 \amp 3 \\ 1 \amp 4 \amp 3 \end{bmatrix} \begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \end{bmatrix} = \begin{bmatrix} 180 \\ 260 \\ 310 \\ 350 \end{bmatrix}</me>. This system is not consistent (feel free to check). Therefore, we instead find the normal equations in order to find the least-squares solution. Note that <me>A^TA = \begin{bmatrix} 1 \amp 1 \amp 1 \amp 1 \\ 1 \amp 2 \amp 3 \amp 4 \\ 1 \amp 2 \amp 3 \amp 3 \end{bmatrix}\begin{bmatrix} 1 \amp 1 \amp 1 \\ 1 \amp 2 \amp 2 \\ 1 \amp 3 \amp 3 \\ 1 \amp 4 \amp 3 \end{bmatrix} = \begin{bmatrix} 4 \amp 10 \amp 9 \\ 10 \amp 30 \amp 26 \\ 9 \amp 26 \amp 23 \end{bmatrix}</me> and <me>A^T\vec b = \begin{bmatrix} 1 \amp 1 \amp 1 \amp 1 \\ 1 \amp 2 \amp 3 \amp 4 \\ 1 \amp 2 \amp 3 \amp 3 \end{bmatrix}\begin{bmatrix} 180 \\ 260 \\ 310 \\ 350 \end{bmatrix} = \begin{bmatrix} 1100 \\ 3030 \\ 2680 \end{bmatrix}</me>. Therefore, the system which leads to our least-squares solution is <me>\begin{bmatrix} 4 \amp 10 \amp 9 \\ 10 \amp 30 \amp 26 \\ 9 \amp 26 \amp 23 \end{bmatrix}\begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \end{bmatrix} = \begin{bmatrix} 1100 \\ 3030 \\ 2680 \end{bmatrix}</me>.
+                    It follows that the system of the form <m>A\vec x = \vec b</m> which would lead to an exact fitting of the curve is <md>\begin{bmatrix} 1 \amp 1 \amp 1 \\ 1 \amp 2 \amp 2 \\ 1 \amp 3 \amp 3 \\ 1 \amp 4 \amp 3 \end{bmatrix} \begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \end{bmatrix} = \begin{bmatrix} 180 \\ 260 \\ 310 \\ 350 \end{bmatrix}</md>. This system is not consistent (feel free to check). Therefore, we instead find the normal equations in order to find the least-squares solution. Note that <md>A^TA = \begin{bmatrix} 1 \amp 1 \amp 1 \amp 1 \\ 1 \amp 2 \amp 3 \amp 4 \\ 1 \amp 2 \amp 3 \amp 3 \end{bmatrix}\begin{bmatrix} 1 \amp 1 \amp 1 \\ 1 \amp 2 \amp 2 \\ 1 \amp 3 \amp 3 \\ 1 \amp 4 \amp 3 \end{bmatrix} = \begin{bmatrix} 4 \amp 10 \amp 9 \\ 10 \amp 30 \amp 26 \\ 9 \amp 26 \amp 23 \end{bmatrix}</md> and <md>A^T\vec b = \begin{bmatrix} 1 \amp 1 \amp 1 \amp 1 \\ 1 \amp 2 \amp 3 \amp 4 \\ 1 \amp 2 \amp 3 \amp 3 \end{bmatrix}\begin{bmatrix} 180 \\ 260 \\ 310 \\ 350 \end{bmatrix} = \begin{bmatrix} 1100 \\ 3030 \\ 2680 \end{bmatrix}</md>. Therefore, the system which leads to our least-squares solution is <md>\begin{bmatrix} 4 \amp 10 \amp 9 \\ 10 \amp 30 \amp 26 \\ 9 \amp 26 \amp 23 \end{bmatrix}\begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \end{bmatrix} = \begin{bmatrix} 1100 \\ 3030 \\ 2680 \end{bmatrix}</md>.
                 </p>
             </solution>
         </task>
         <task workspace="2in">
             <statement>
                 <p>
-                    Solving the system above, we find that <me>\widehat \beta = \begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \end{bmatrix} = \begin{bmatrix} 120 \\ 35 \\ 30\end{bmatrix}</me>. According to this model, how much should a house with 2000 ft<m>^2</m> and 3 bedrooms be worth?
+                    Solving the system above, we find that <md>\widehat \beta = \begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \end{bmatrix} = \begin{bmatrix} 120 \\ 35 \\ 30\end{bmatrix}</md>. According to this model, how much should a house with 2000 ft<m>^2</m> and 3 bedrooms be worth?
                 </p>
             </statement>
             <solution>
                 <p>
-                    We find that the linear model that best fits the data is <me>y = 120 + 35x_1 + 30x_2</me>. Note that 2000 ft<m>^2</m> corresponds to <m>x_1 = 2</m> and 3 bedrooms corresponds to <m>x_2 = 3</m>. Plugging this into the model, we find that <me>y = 120 + 35(2) + 30(3) = 120 + 70 + 90 = 280</me>. Therefore, a house with 2000 ft<m>^2</m> and 3 bedrooms should be worth $280,000.
+                    We find that the linear model that best fits the data is <md>y = 120 + 35x_1 + 30x_2</md>. Note that 2000 ft<m>^2</m> corresponds to <m>x_1 = 2</m> and 3 bedrooms corresponds to <m>x_2 = 3</m>. Plugging this into the model, we find that <md>y = 120 + 35(2) + 30(3) = 120 + 70 + 90 = 280</md>. Therefore, a house with 2000 ft<m>^2</m> and 3 bedrooms should be worth $280,000.
                 </p>
             </solution>
         </task>
@@ -262,16 +262,16 @@
     </p>
 
     <p workspace="0.5in">
-        In general, we can consider least squares fitting for the form <me>y = \beta_0 + \beta_1 f_1(x_1, \dots, x_m) + \beta_2 f_2(x_1, \dots, x_m) + \cdots + \beta_n f_n(x_1, \dots, x_m)</me>, where the functions <m>f_i</m> are known, but not necessarily linear. Keep in mind that this is a <em>linear</em> problem in the <m>\beta_i</m> variables.
+        In general, we can consider least squares fitting for the form <md>y = \beta_0 + \beta_1 f_1(x_1, \dots, x_m) + \beta_2 f_2(x_1, \dots, x_m) + \cdots + \beta_n f_n(x_1, \dots, x_m)</md>, where the functions <m>f_i</m> are known, but not necessarily linear. Keep in mind that this is a <em>linear</em> problem in the <m>\beta_i</m> variables.
     </p>
 
     <example xml:id="ex-6-6-curve-best-fit-a" workspace="5in">
         <statement>
             <p>
-                For the remaining four examples, we will fit various curves to the following points: <me>(-1,-3), (0,0), (1,3), (2,2)</me>. Once you find the curve, graph the points and the curve on Desmos and see how good the curve fits.
+                For the remaining four examples, we will fit various curves to the following points: <md>(-1,-3), (0,0), (1,3), (2,2)</md>. Once you find the curve, graph the points and the curve on Desmos and see how good the curve fits.
             </p>
             <p>
-                We will start by fitting a linear curve to the data: <me>y = \beta_0 + \beta_1 x</me>. This one can be solved without the need of a calculator. 
+                We will start by fitting a linear curve to the data: <md>y = \beta_0 + \beta_1 x</md>. This one can be solved without the need of a calculator. 
             </p>
         </statement>
         <solution>
@@ -283,13 +283,13 @@
                     <mrow>(1,3) \amp \rightarrow \phantom{-}3 \amp = \beta_0 + \phantom{-}\beta_1(1) \amp \implies \beta_0 + \phantom{2}\beta_1 \amp = \phantom{-}3</mrow>
                     <mrow>(2,2) \amp \rightarrow \phantom{-}2 \amp = \beta_0 + \phantom{-}\beta_1(2) \amp \implies \beta_0 + 2\beta_1 \amp = \phantom{-}2</mrow>
                  </md>
-                 This leads to the system <me>\begin{bmatrix} 1 \amp -1 \\ 1 \amp 0 \\ 1 \amp 1 \\ 1 \amp 2 \end{bmatrix}\begin{bmatrix} \beta_0 \\ \beta_1 \end{bmatrix} = \begin{bmatrix} -3 \\ 0 \\ 3 \\ 2 \end{bmatrix}</me> which is an inconsistent system. Therefore, we find the least-squares solution. Note that <me>A^TA = \begin{bmatrix} 1 \amp 1 \amp 1 \amp 1 \\ -1 \amp 0 \amp 1 \amp 2 \end{bmatrix}\begin{bmatrix} 1 \amp -1 \\ 1 \amp 0 \\ 1 \amp 1 \\ 1 \amp 2 \end{bmatrix} = \begin{bmatrix} 4 \amp 2 \\ 2 \amp 6 \end{bmatrix}</me> and <me>A^T\vec b = \begin{bmatrix}1 \amp 1 \amp 1 \amp 1 \\ -1 \amp 0 \amp 1 \amp 2 \end{bmatrix}\begin{bmatrix} -3 \\ 0 \\ 3 \\ 2\end{bmatrix} = \begin{bmatrix} 2 \\ 10 \end{bmatrix}</me>. So, the normal equations are <me>\begin{bmatrix} 4 \amp 2 \\ 2 \amp 6 \end{bmatrix}\begin{bmatrix} \beta_0 \\ \beta_1 \end{bmatrix} = \begin{bmatrix} 2 \\ 10 \end{bmatrix}</me>. We have that <md> 
+                 This leads to the system <md>\begin{bmatrix} 1 \amp -1 \\ 1 \amp 0 \\ 1 \amp 1 \\ 1 \amp 2 \end{bmatrix}\begin{bmatrix} \beta_0 \\ \beta_1 \end{bmatrix} = \begin{bmatrix} -3 \\ 0 \\ 3 \\ 2 \end{bmatrix}</md> which is an inconsistent system. Therefore, we find the least-squares solution. Note that <md>A^TA = \begin{bmatrix} 1 \amp 1 \amp 1 \amp 1 \\ -1 \amp 0 \amp 1 \amp 2 \end{bmatrix}\begin{bmatrix} 1 \amp -1 \\ 1 \amp 0 \\ 1 \amp 1 \\ 1 \amp 2 \end{bmatrix} = \begin{bmatrix} 4 \amp 2 \\ 2 \amp 6 \end{bmatrix}</md> and <md>A^T\vec b = \begin{bmatrix}1 \amp 1 \amp 1 \amp 1 \\ -1 \amp 0 \amp 1 \amp 2 \end{bmatrix}\begin{bmatrix} -3 \\ 0 \\ 3 \\ 2\end{bmatrix} = \begin{bmatrix} 2 \\ 10 \end{bmatrix}</md>. So, the normal equations are <md>\begin{bmatrix} 4 \amp 2 \\ 2 \amp 6 \end{bmatrix}\begin{bmatrix} \beta_0 \\ \beta_1 \end{bmatrix} = \begin{bmatrix} 2 \\ 10 \end{bmatrix}</md>. We have that <md> 
                     <mrow>\begin{bmatrix} 4 \amp 2 \amp \rvert \amp 2 \\ 2 \amp 6 \amp \rvert \amp 10 \end{bmatrix} \amp \sim \begin{bmatrix} 1 \amp 3 \amp \rvert \amp 5 \\ 2 \amp 1 \amp \rvert \amp 1 \end{bmatrix}</mrow> 
                     <mrow> \amp \sim \begin{bmatrix} 1 \amp 3 \amp \rvert \amp 5 \\ 0 \amp -5 \amp \rvert \amp -9 \end{bmatrix}</mrow> 
                     <mrow> \amp \sim \begin{bmatrix} 1 \amp 3 \amp \rvert \amp 5 \\ 0 \amp 1 \amp \rvert \amp \frac{9}{5} \end{bmatrix}</mrow>
                     <mrow> \amp \sim \begin{bmatrix} 1 \amp 0 \amp \rvert \amp -\frac{2}{5} \\ 0 \amp 1 \amp \rvert \amp \frac{9}{5} \end{bmatrix}</mrow>
                  </md>  
-                 Therefore, the line of best fit is <me>y = -\frac{2}{5} + \frac{9}{5}x</me>. The graph below displays how well this line fits the four data points.
+                 Therefore, the line of best fit is <md>y = -\frac{2}{5} + \frac{9}{5}x</md>. The graph below displays how well this line fits the four data points.
                 </p>
                  <image source="./Lin-Reg.jpg" xml:id="img-lin-reg" width="100%">
                     <shortdescription>A graph containing the line of best fit for the four points (-1,-3), (0,0), (1,3), (2,2).</shortdescription>
@@ -302,7 +302,7 @@
     <example>
         <statement>
             <p>
-                Continuing from <xref ref="ex-6-6-curve-best-fit-a"/>, we will now fit a quadratic curve to the data: <me>y = \beta_0 + \beta_1 x + \beta_2 x^2</me>. For the remaining problems, feel free to use a matrix equation solver after setting up the least squares problem as <m>A^TA\widehat x = A^T\vec b</m>.
+                Continuing from <xref ref="ex-6-6-curve-best-fit-a"/>, we will now fit a quadratic curve to the data: <md>y = \beta_0 + \beta_1 x + \beta_2 x^2</md>. For the remaining problems, feel free to use a matrix equation solver after setting up the least squares problem as <m>A^TA\widehat x = A^T\vec b</m>.
             </p>
         </statement>
         <solution>
@@ -314,8 +314,8 @@
                     <mrow>(1,3) \amp \rightarrow \phantom{-}3 \amp = \beta_0 + \phantom{-}\beta_1(1) + \phantom{-}\beta_2(1)^2 \amp \implies \beta_0 + \phantom{2}\beta_1 + \phantom{4}\beta_2 \amp = \phantom{-}3</mrow>
                     <mrow>(2,2) \amp \rightarrow \phantom{-}2 \amp = \beta_0 + \phantom{-}\beta_1(2) + \phantom{-}\beta_2(2)^2 \amp \implies \beta_0 + 2\beta_1 + 4\beta_2 \amp = \phantom{-}2</mrow>
                  </md>
-                 This leads to the system <me>\begin{bmatrix} 1 \amp -1 \amp 1\\ 1 \amp 0 \amp 0 \\ 1 \amp 1 \amp 1 \\ 1 \amp 2 \amp 4 \end{bmatrix}\begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \end{bmatrix} = \begin{bmatrix} -3 \\ 0 \\ 3 \\ 2 \end{bmatrix}</me> which is an inconsistent system. Therefore, we find the least-squares solution. Note that <me>A^TA = \begin{bmatrix} 1 \amp 1 \amp 1 \amp 1 \\ -1 \amp 0 \amp 1 \amp 2 \\ 1 \amp 0 \amp 1 \amp 4 \end{bmatrix}\begin{bmatrix} 1 \amp -1 \amp 1\\ 1 \amp 0 \amp 0 \\ 1 \amp 1 \amp 1 \\ 1 \amp 2 \amp 4 \end{bmatrix} = \begin{bmatrix} 4 \amp 2 \amp 6 \\ 2 \amp 6 \amp 8 \\ 6 \amp 8 \amp 18 \end{bmatrix}</me> and <me>A^T\vec b = \begin{bmatrix} 1 \amp 1 \amp 1 \amp 1 \\ -1 \amp 0 \amp 1 \amp 2 \\ 1 \amp 0 \amp 1 \amp 4 \end{bmatrix}\begin{bmatrix} -3 \\ 0 \\ 3 \\ 2\end{bmatrix} = \begin{bmatrix} 2 \\ 10 \\ 8 \end{bmatrix}</me>. So, the normal equations are <me>\begin{bmatrix} 4 \amp 2 \amp 6 \\ 2 \amp 6 \amp 8 \\ 6 \amp 8 \amp 18 \end{bmatrix} = \begin{bmatrix} 2 \\ 10 \\ 8 \end{bmatrix}</me>. We have that <me> \begin{bmatrix} 4 \amp 2 \amp 6 \amp \rvert \amp 2 \\ 2 \amp 6 \amp 8 \amp \rvert \amp 10 \\ 6 \amp 8 \amp 18 \amp \rvert \amp 8 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp 0 \amp \rvert \amp \frac{3}{5} \\ 0 \amp 1 \amp 0 \amp \rvert \amp \frac{14}{5} \\ 0 \amp 0 \amp 1 \amp \rvert \amp -1 \end{bmatrix}</me>.  
-                 Therefore, the quadratic which best fits the data is <me>y = \frac{3}{5} + \frac{14}{5}x - x^2</me>. The graph below displays how well this quadratic fits the four data points.
+                 This leads to the system <md>\begin{bmatrix} 1 \amp -1 \amp 1\\ 1 \amp 0 \amp 0 \\ 1 \amp 1 \amp 1 \\ 1 \amp 2 \amp 4 \end{bmatrix}\begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \end{bmatrix} = \begin{bmatrix} -3 \\ 0 \\ 3 \\ 2 \end{bmatrix}</md> which is an inconsistent system. Therefore, we find the least-squares solution. Note that <md>A^TA = \begin{bmatrix} 1 \amp 1 \amp 1 \amp 1 \\ -1 \amp 0 \amp 1 \amp 2 \\ 1 \amp 0 \amp 1 \amp 4 \end{bmatrix}\begin{bmatrix} 1 \amp -1 \amp 1\\ 1 \amp 0 \amp 0 \\ 1 \amp 1 \amp 1 \\ 1 \amp 2 \amp 4 \end{bmatrix} = \begin{bmatrix} 4 \amp 2 \amp 6 \\ 2 \amp 6 \amp 8 \\ 6 \amp 8 \amp 18 \end{bmatrix}</md> and <md>A^T\vec b = \begin{bmatrix} 1 \amp 1 \amp 1 \amp 1 \\ -1 \amp 0 \amp 1 \amp 2 \\ 1 \amp 0 \amp 1 \amp 4 \end{bmatrix}\begin{bmatrix} -3 \\ 0 \\ 3 \\ 2\end{bmatrix} = \begin{bmatrix} 2 \\ 10 \\ 8 \end{bmatrix}</md>. So, the normal equations are <md>\begin{bmatrix} 4 \amp 2 \amp 6 \\ 2 \amp 6 \amp 8 \\ 6 \amp 8 \amp 18 \end{bmatrix} = \begin{bmatrix} 2 \\ 10 \\ 8 \end{bmatrix}</md>. We have that <md> \begin{bmatrix} 4 \amp 2 \amp 6 \amp \rvert \amp 2 \\ 2 \amp 6 \amp 8 \amp \rvert \amp 10 \\ 6 \amp 8 \amp 18 \amp \rvert \amp 8 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp 0 \amp \rvert \amp \frac{3}{5} \\ 0 \amp 1 \amp 0 \amp \rvert \amp \frac{14}{5} \\ 0 \amp 0 \amp 1 \amp \rvert \amp -1 \end{bmatrix}</md>.  
+                 Therefore, the quadratic which best fits the data is <md>y = \frac{3}{5} + \frac{14}{5}x - x^2</md>. The graph below displays how well this quadratic fits the four data points.
                 </p>
                  <image source="./Quad-Reg.jpg" xml:id="img-quad-reg" width="100%">
                     <shortdescription>A graph containing the quadratic of best fit for the four points (-1,-3), (0,0), (1,3), (2,2).</shortdescription>
@@ -328,7 +328,7 @@
     <example>
         <statement>
             <p>
-                Continuing from <xref ref="ex-6-6-curve-best-fit-a"/>, we will now fit a cubic curve to the data: <me>y = \beta_0 + \beta_1 x + \beta_2 x^2 + \beta_3 x^3</me>. What do you notice about your least-squares solution? Is this expected?
+                Continuing from <xref ref="ex-6-6-curve-best-fit-a"/>, we will now fit a cubic curve to the data: <md>y = \beta_0 + \beta_1 x + \beta_2 x^2 + \beta_3 x^3</md>. What do you notice about your least-squares solution? Is this expected?
             </p>
         </statement>
         <solution>
@@ -340,7 +340,7 @@
                     <mrow>(1,3) \amp \rightarrow \beta_0 + \phantom{2}\beta_1 + \phantom{4}\beta_2 + \phantom{8}\beta_3 \amp = \phantom{-}3</mrow>
                     <mrow>(2,2) \amp \rightarrow \beta_0 + 2\beta_1 + 4\beta_2 + 8\beta_3 \amp = \phantom{-}2</mrow>
                  </md>
-                 This leads to the system <me>\begin{bmatrix} 1 \amp -1 \amp 1 \amp -1 \\ 1 \amp 0 \amp 0 \amp 0 \\ 1 \amp 1 \amp 1 \amp 1 \\ 1 \amp 2 \amp 4 \amp 8 \end{bmatrix}\begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \\ \beta_3 \end{bmatrix} = \begin{bmatrix} -3 \\ 0 \\ 3 \\ 2 \end{bmatrix}</me>. This time the system <m>A\vec x = \vec b</m> is <em>consistent</em>, so there is no need to find the least-squares solution. Note that <me>\begin{bmatrix} 1 \amp -1 \amp 1 \amp -1  \amp \rvert \amp -3 \\ 1 \amp 0 \amp 0 \amp 0 \amp \rvert \amp 0 \\ 1 \amp 1 \amp 1 \amp 1 \amp \rvert \amp 3 \\ 1 \amp 2 \amp 4 \amp 8 \amp \rvert \amp 2 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp 0 \amp 0 \amp \rvert \amp 0 \\ 0 \amp 1 \amp 0 \amp 0 \amp \rvert \amp \frac{11}{3} \\ 0 \amp 0 \amp 1 \amp 0 \amp \rvert \amp 0 \\ 0 \amp 0 \amp 0 \amp 1 \amp \rvert \amp -\frac{2}{3}\end{bmatrix}</me>. Therefore, the cubic which <em>perfectly</em> fits the data is <me>y = \frac{11}{3}x - \frac{2}{3}x^3</me>. The graph below shows how this cubic fits the four data points perfectly.
+                 This leads to the system <md>\begin{bmatrix} 1 \amp -1 \amp 1 \amp -1 \\ 1 \amp 0 \amp 0 \amp 0 \\ 1 \amp 1 \amp 1 \amp 1 \\ 1 \amp 2 \amp 4 \amp 8 \end{bmatrix}\begin{bmatrix} \beta_0 \\ \beta_1 \\ \beta_2 \\ \beta_3 \end{bmatrix} = \begin{bmatrix} -3 \\ 0 \\ 3 \\ 2 \end{bmatrix}</md>. This time the system <m>A\vec x = \vec b</m> is <em>consistent</em>, so there is no need to find the least-squares solution. Note that <md>\begin{bmatrix} 1 \amp -1 \amp 1 \amp -1  \amp \rvert \amp -3 \\ 1 \amp 0 \amp 0 \amp 0 \amp \rvert \amp 0 \\ 1 \amp 1 \amp 1 \amp 1 \amp \rvert \amp 3 \\ 1 \amp 2 \amp 4 \amp 8 \amp \rvert \amp 2 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp 0 \amp 0 \amp \rvert \amp 0 \\ 0 \amp 1 \amp 0 \amp 0 \amp \rvert \amp \frac{11}{3} \\ 0 \amp 0 \amp 1 \amp 0 \amp \rvert \amp 0 \\ 0 \amp 0 \amp 0 \amp 1 \amp \rvert \amp -\frac{2}{3}\end{bmatrix}</md>. Therefore, the cubic which <em>perfectly</em> fits the data is <md>y = \frac{11}{3}x - \frac{2}{3}x^3</md>. The graph below shows how this cubic fits the four data points perfectly.
                 </p>
                  <image source="./Cubic-Reg.jpg" xml:id="img-cubic-reg" width="100%">
                     <shortdescription>A graph containing the cubic which perfectly fits the four points (-1,-3), (0,0), (1,3), (2,2).</shortdescription>
@@ -357,7 +357,7 @@
     <example>
         <statement>
             <p>
-                Continuing from <xref ref="ex-6-6-curve-best-fit-a"/>, we will now fit a somewhat trigonometric curve to the data: <me>y = \beta_0 x + \beta_1 \sin\left(\frac{\pi x}{2}\right)</me>. What do you notice about your least-squares solution?
+                Continuing from <xref ref="ex-6-6-curve-best-fit-a"/>, we will now fit a somewhat trigonometric curve to the data: <md>y = \beta_0 x + \beta_1 \sin\left(\frac{\pi x}{2}\right)</md>. What do you notice about your least-squares solution?
             </p>
         </statement>
         <solution>
@@ -369,7 +369,7 @@
                     <mrow>(1,3) \amp \rightarrow \phantom{-}3 \amp = \beta_0(1) + \beta_1\sin\left(\frac{\pi(1)}{2}\right) \amp \implies \phantom{2}\beta_0 + \beta_1 \amp = \phantom{-}3</mrow>
                     <mrow>(2,2) \amp \rightarrow \phantom{-}2 \amp = \beta_0(2) + \beta_1\sin\left(\frac{\pi(2)}{2}\right) \amp \implies 2\beta_0 \phantom{+ \beta_1} \amp = \phantom{-}2</mrow>
                  </md>
-                 This leads to the system <me>\begin{bmatrix} -1 \amp -1 \\ 0 \amp 0 \\ 1 \amp 1 \\ 2 \amp 0 \end{bmatrix}\begin{bmatrix} \beta_0 \\ \beta_1 \end{bmatrix} = \begin{bmatrix} -3 \\ 0 \\ 3 \\ 2 \end{bmatrix}</me>. Surprisingly, this system <m>A\vec x = \vec b</m> is <em>consistent</em>. Note that <me>\begin{bmatrix} -1 \amp -1 \amp \rvert \amp -3 \\ 0 \amp 0 \amp \rvert \amp 0 \\ 1 \amp 1 \amp \rvert \amp 3 \\ 2 \amp 0 \amp \rvert \amp 2 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp \rvert \amp 1 \\ 0 \amp 1 \amp \rvert \amp 2 \\ 0 \amp 0 \amp \rvert \amp 0 \\ 0 \amp 0 \amp \rvert \amp 0 \end{bmatrix}</me>. Therefore, the curve of this type which <em>perfectly</em> fits the data is <me>y = 1x +2\sin\left(\frac{\pi x}{2}\right)</me>. The graph below displays how this model perfectly fits the four data points.
+                 This leads to the system <md>\begin{bmatrix} -1 \amp -1 \\ 0 \amp 0 \\ 1 \amp 1 \\ 2 \amp 0 \end{bmatrix}\begin{bmatrix} \beta_0 \\ \beta_1 \end{bmatrix} = \begin{bmatrix} -3 \\ 0 \\ 3 \\ 2 \end{bmatrix}</md>. Surprisingly, this system <m>A\vec x = \vec b</m> is <em>consistent</em>. Note that <md>\begin{bmatrix} -1 \amp -1 \amp \rvert \amp -3 \\ 0 \amp 0 \amp \rvert \amp 0 \\ 1 \amp 1 \amp \rvert \amp 3 \\ 2 \amp 0 \amp \rvert \amp 2 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp \rvert \amp 1 \\ 0 \amp 1 \amp \rvert \amp 2 \\ 0 \amp 0 \amp \rvert \amp 0 \\ 0 \amp 0 \amp \rvert \amp 0 \end{bmatrix}</md>. Therefore, the curve of this type which <em>perfectly</em> fits the data is <md>y = 1x +2\sin\left(\frac{\pi x}{2}\right)</md>. The graph below displays how this model perfectly fits the four data points.
                 </p>
                  <image source="./Sin-Reg.jpg" xml:id="img-sin-reg" width="100%">
                     <shortdescription>A graph containing the curve of the above type which perfectly fits the four points (-1,-3), (0,0), (1,3), (2,2).</shortdescription>

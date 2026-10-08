@@ -52,7 +52,9 @@
       
     <!-- <xi:include href="./frontmatter.ptx" /> -->
     
-    <xi:include href="./introduction.ptx" />
+    <frontmatter>
+      <xi:include href="./introduction.ptx" />
+    </frontmatter>
     <xi:include href="./chapter-1.ptx" />
     <xi:include href="./chapter-2.ptx" />
     <xi:include href="./chapter-3.ptx" />

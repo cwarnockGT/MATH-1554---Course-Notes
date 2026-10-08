@@ -39,7 +39,7 @@
           </statement>
           <solution>
             <p>
-                Note that <me>T\left(\vec e_1\right) = T\left(\begin{bmatrix} 1 \\ 0 \end{bmatrix}\right) = \begin{bmatrix} 0 \\ 1 \end{bmatrix}</me> and <me>T\left(\vec e_2\right) = T\left(\begin{bmatrix} 0 \\ 1 \end{bmatrix}\right) = \begin{bmatrix} -1 \\ 0 \end{bmatrix}</me>. Therefore, we have that <me>A = \begin{bmatrix} T\left(\vec e_1\right) \amp T\left(\vec e_2\right) \end{bmatrix} = \begin{bmatrix} 0 \amp -1 \\ 1 \amp 0 \end{bmatrix}</me>.
+                Note that <md>T\left(\vec e_1\right) = T\left(\begin{bmatrix} 1 \\ 0 \end{bmatrix}\right) = \begin{bmatrix} 0 \\ 1 \end{bmatrix}</md> and <md>T\left(\vec e_2\right) = T\left(\begin{bmatrix} 0 \\ 1 \end{bmatrix}\right) = \begin{bmatrix} -1 \\ 0 \end{bmatrix}</md>. Therefore, we have that <md>A = \begin{bmatrix} T\left(\vec e_1\right) \amp T\left(\vec e_2\right) \end{bmatrix} = \begin{bmatrix} 0 \amp -1 \\ 1 \amp 0 \end{bmatrix}</md>.
             </p>
           </solution>
         </task>
@@ -51,7 +51,7 @@
           </statement>
           <solution>
             <p>
-                Note that <me>\det(A - \lambda I) = \begin{vmatrix} -\lambda \amp -1 \\ 1 \amp -\lambda \end{vmatrix} = \lambda^2 + 1</me>.
+                Note that <md>\det(A - \lambda I) = \begin{vmatrix} -\lambda \amp -1 \\ 1 \amp -\lambda \end{vmatrix} = \lambda^2 + 1</md>.
             </p>
           </solution>
         </task>
@@ -63,7 +63,7 @@
           </statement>
           <solution>
             <p>
-                Note that the quadratic equation <m>\lambda^2 + 1 = 0</m> has no real roots since trying to solve the equation yields <me>\lambda^2 + 1 = 0 \qquad \implies \qquad \lambda^2 = - 1 \qquad \implies \qquad \lambda = \pm\sqrt{-1}</me> and <m>\sqrt{-1}</m> is not a real number. If we want to "fix" this, we can define <m>i = \sqrt{-1}</m> and say that <m>i</m> and <m>-i</m> are the two <em>Complex</em> roots of the polynomial <m>\lambda^2 + 1</m>.
+                Note that the quadratic equation <m>\lambda^2 + 1 = 0</m> has no real roots since trying to solve the equation yields <md>\lambda^2 + 1 = 0 \qquad \implies \qquad \lambda^2 = - 1 \qquad \implies \qquad \lambda = \pm\sqrt{-1}</md> and <m>\sqrt{-1}</m> is not a real number. If we want to "fix" this, we can define <m>i = \sqrt{-1}</m> and say that <m>i</m> and <m>-i</m> are the two <em>Complex</em> roots of the polynomial <m>\lambda^2 + 1</m>.
             </p>
           </solution>
         </task>
@@ -81,9 +81,9 @@
       <statement>
         <p>
            The <term>complex numbers</term> are denoted by <m>\mathbb{C}</m>, where
-        <me>
+        <md>
           \mathbb{C}=\{\,a+bi \mid a,b\in\mathbb{R}\,\}.
-        </me>
+        </md>
         </p>
       </statement>
     </definition>
@@ -111,7 +111,7 @@
         </statement>
         <solution>
             <p>
-                Note that <me>z_1 + z_2 = (2 - 3i) + (-1 + i) = (2-1) + (-3i + i) = 1 - 2i</me>.
+                Note that <md>z_1 + z_2 = (2 - 3i) + (-1 + i) = (2-1) + (-3i + i) = 1 - 2i</md>.
             </p>
         </solution>
       </task>
@@ -123,7 +123,7 @@
         </statement>
         <solution>
             <p>
-                Using the distributive property, we have <me>z_1z_2 = (2 - 3i)(-1+i) = -2 + 2i -3i(-1) -3i(i) = -2 + 5i -3i^2</me>. Since <m>i = \sqrt{-1}</m>, we have that <m>i^2 = -1</m>. Therefore, <me>z_1z_2 = -2 + 5i - 3i^2 = -2 + 5i -3(-1) = 1 + 5i</me>.
+                Using the distributive property, we have <md>z_1z_2 = (2 - 3i)(-1+i) = -2 + 2i -3i(-1) -3i(i) = -2 + 5i -3i^2</md>. Since <m>i = \sqrt{-1}</m>, we have that <m>i^2 = -1</m>. Therefore, <md>z_1z_2 = -2 + 5i - 3i^2 = -2 + 5i -3(-1) = 1 + 5i</md>.
             </p>
         </solution>
       </task>
@@ -175,7 +175,7 @@
       </statement>
       <solution>
         <p>
-            Note that the conjuage of <m>z</m> is <me>\overline{z} = \overline{3 - 4i} = 3 + 4i</me>. The modulus of <m>z</m> is <me>\|z\| = \sqrt{3^2 + 4^2} = \sqrt{25} = 5</me>. To find the polar form of <m>z</m>, we first find the angle <m>\phi</m>. Note that <me>\phi = \operatorname{arctan}\left(\frac{b}{a}\right) = \operatorname{arctan}\left(\frac{-4}{3}\right)</me>. Therefore, we have that <me>z = \|r\|e^{i\phi} = 5e^{i\operatorname{arctan}\left(-\frac{4}{3}\right)}</me>.
+            Note that the conjuage of <m>z</m> is <md>\overline{z} = \overline{3 - 4i} = 3 + 4i</md>. The modulus of <m>z</m> is <md>\|z\| = \sqrt{3^2 + 4^2} = \sqrt{25} = 5</md>. To find the polar form of <m>z</m>, we first find the angle <m>\phi</m>. Note that <md>\phi = \operatorname{arctan}\left(\frac{b}{a}\right) = \operatorname{arctan}\left(\frac{-4}{3}\right)</md>. Therefore, we have that <md>z = \|r\|e^{i\phi} = 5e^{i\operatorname{arctan}\left(-\frac{4}{3}\right)}</md>.
         </p>
     </solution>
     </example>
@@ -244,10 +244,10 @@
     <title>Euler’s Formula and Products in Polar Form</title>
 
     <p>
-      Suppose <m>z_1</m> has angle <m>\phi_1</m> and <m>z_2</m> has angle <m>\phi_2</m>; that is, let <m>z_1 = |z_1|e^{i\phi_1}</m> and <m>z_2 = |z_2|e^{i\phi_2}</m>. Note that <me>
+      Suppose <m>z_1</m> has angle <m>\phi_1</m> and <m>z_2</m> has angle <m>\phi_2</m>; that is, let <m>z_1 = |z_1|e^{i\phi_1}</m> and <m>z_2 = |z_2|e^{i\phi_2}</m>. Note that <md>
       z_3=z_1z_2=(\lvert z_1\rvert e^{i\phi_1})(\lvert z_2\rvert e^{i\phi_2})
       = \lvert z_1\rvert \lvert z_2\rvert e^{i(\phi_1+\phi_2)}.
-    </me>
+    </md>
     Therefore, the product <m>z_1z_2</m> has modulus <m>|z_1||z_2|</m> and has angle <m>\phi_1 + \phi_2</m>.
     </p>
 
@@ -321,7 +321,7 @@
       </statement>
       <solution>
         <p>
-            By <xref ref="thm-fta"/> and <xref ref="thm-conjugate-roots"/>, we know that <m>A</m> has 7 eigenvalues, counting multiplicites. We have been told 4 of them. Note that for each complex eigenvalues, it's complex conjugate must also be an eigenvalue. Therefore, we have that the eigenvalues are <m>\lambda_1 = -2</m>, and <me>\lambda_2 = 4 + i \quad \implies \quad \lambda_3 = \overline{\lambda_2} = 4 - i </me> and <me>\lambda_4 = -4 - i \quad \implies \quad \lambda_5 = \overline{\lambda_4} = -4 + i </me> and <me>\lambda_6 = i \quad \implies \quad \lambda_7 = \overline{\lambda_6} = -i</me> are the 7 eigenvalues of <m>A</m>.
+            By <xref ref="thm-fta"/> and <xref ref="thm-conjugate-roots"/>, we know that <m>A</m> has 7 eigenvalues, counting multiplicites. We have been told 4 of them. Note that for each complex eigenvalues, it's complex conjugate must also be an eigenvalue. Therefore, we have that the eigenvalues are <m>\lambda_1 = -2</m>, and <md>\lambda_2 = 4 + i \quad \implies \quad \lambda_3 = \overline{\lambda_2} = 4 - i </md> and <md>\lambda_4 = -4 - i \quad \implies \quad \lambda_5 = \overline{\lambda_4} = -4 + i </md> and <md>\lambda_6 = i \quad \implies \quad \lambda_7 = \overline{\lambda_6} = -i</md> are the 7 eigenvalues of <m>A</m>.
         </p>
       </solution>
     </example>
@@ -338,7 +338,7 @@
         <p>
           The matrix that rotates vectors by <m>\phi=\pi/4</m> about the origin and then scales by <m>r=\sqrt{2}</m> is
         </p>
-        <me>
+        <md>
           A=
           \begin{bmatrix}
             r \amp 0\\
@@ -353,21 +353,21 @@
             1 \amp -1\\
             1 \amp 1
           \end{bmatrix}.
-        </me>
+        </md>
         <p>Find the eigenvalues of <m>A</m> and one eigenvector for each eigenvalue.</p>
       </statement>
       <solution>
         <p>
-            Note that <me>\det(A - \lambda I) = \begin{vmatrix} 1-\lambda \amp -1 \\ 1 \amp 1 - \lambda\end{vmatrix} = (1-\lambda)^2 + 1 = \lambda^2 - 2\lambda + 2</me>. Using the quadratic formula, we find the eigenvalues of <m>A</m> are <me>\lambda = \dfrac{2 \pm \sqrt{4 - 4(1)(2)}}{2} = \dfrac{2 \pm \sqrt{-4}}{2} = \dfrac{2 \pm 2i}{2} = 1 \pm i</me>. Let <m>\lambda_1 = 1+i</m> and <m>\lambda_2 = 1-i</m>. Note that these are conjuage pairs as suggested by <xref ref="thm-conjugate-roots"/>.
+            Note that <md>\det(A - \lambda I) = \begin{vmatrix} 1-\lambda \amp -1 \\ 1 \amp 1 - \lambda\end{vmatrix} = (1-\lambda)^2 + 1 = \lambda^2 - 2\lambda + 2</md>. Using the quadratic formula, we find the eigenvalues of <m>A</m> are <md>\lambda = \dfrac{2 \pm \sqrt{4 - 4(1)(2)}}{2} = \dfrac{2 \pm \sqrt{-4}}{2} = \dfrac{2 \pm 2i}{2} = 1 \pm i</md>. Let <m>\lambda_1 = 1+i</m> and <m>\lambda_2 = 1-i</m>. Note that these are conjuage pairs as suggested by <xref ref="thm-conjugate-roots"/>.
         </p>
         <p>
-            Note that <m>\lambda_1</m> can be written in polar form as <me>\lambda_1 = \|\lambda_1\|e^{i\operatorname{arctan}\left(\frac{1}{1}\right)} = \sqrt{2}e^{i\frac{\pi}{4}}</me>. We see that <m>r = \|\lambda_1\| = \sqrt{2}</m> gives the scaling factor of <m>A</m> and <m>\phi = \frac{\pi}{4}</m> gives the rotation factor of <m>A</m>.
+            Note that <m>\lambda_1</m> can be written in polar form as <md>\lambda_1 = \|\lambda_1\|e^{i\operatorname{arctan}\left(\frac{1}{1}\right)} = \sqrt{2}e^{i\frac{\pi}{4}}</md>. We see that <m>r = \|\lambda_1\| = \sqrt{2}</m> gives the scaling factor of <m>A</m> and <m>\phi = \frac{\pi}{4}</m> gives the rotation factor of <m>A</m>.
         </p>
         <p>
-            Now, let's find at least one eigenvector for each eigenvalue. For <m>\lambda_1</m>, we have <me>A - \lambda_1 I = \begin{bmatrix} 1 \amp -1 \\ 1 \amp 1 \end{bmatrix} - \begin{bmatrix} 1 + i \amp 0 \\ 0 \amp 1 + i \end{bmatrix} = \begin{bmatrix} -i \amp -1 \\ 1 \amp -i \end{bmatrix}</me>. At first glance, <m>A - \lambda_1 I</m> might not appear to have a free variable. Hopefully it does, or else we made an error somewhere. Note that we can still use row operations on <m>A</m> even though it contains complex numbers. This, hopefully, will expose the dependency of the columns. Note that <me>\begin{bmatrix} -i \amp -1 \\ 1 \amp -i \end{bmatrix} \overset{\text{Swap $R_1$ and $R_2$}}{\LARGE \sim} \begin{bmatrix} 1 \amp -i \\ -i \amp -1 \end{bmatrix} \overset{R_2 + iR_1 \rightarrow R_2}{\LARGE \sim} \begin{bmatrix} 1 \amp -i \\ 0 \amp 0 \end{bmatrix}</me>. Now, we see that <me>\vec v_1 = \begin{bmatrix} i \\ 1 \end{bmatrix} \in \Nul(A - \lambda_1 I)</me>. Let's check that <m>A\vec v_1 = \lambda_1 \vec v_1</m>. Note that <me>A\vec v_1 = \begin{bmatrix} 1 \amp -1 \\ 1 \amp 1 \end{bmatrix} \begin{bmatrix} i \\ 1 \end{bmatrix} = \begin{bmatrix} i - 1 \\ i + 1 \end{bmatrix}</me> and <me>\lambda_1 \vec v_1 = (1 + i)\begin{bmatrix} i \\ 1 \end{bmatrix} = \begin{bmatrix} i + i^2 \\ 1 + i \end{bmatrix} = \begin{bmatrix} i - 1 \\ i + 1 \end{bmatrix}</me>, so <m>A\vec v_1 = \lambda_1 \vec v_1</m>.
+            Now, let's find at least one eigenvector for each eigenvalue. For <m>\lambda_1</m>, we have <md>A - \lambda_1 I = \begin{bmatrix} 1 \amp -1 \\ 1 \amp 1 \end{bmatrix} - \begin{bmatrix} 1 + i \amp 0 \\ 0 \amp 1 + i \end{bmatrix} = \begin{bmatrix} -i \amp -1 \\ 1 \amp -i \end{bmatrix}</md>. At first glance, <m>A - \lambda_1 I</m> might not appear to have a free variable. Hopefully it does, or else we made an error somewhere. Note that we can still use row operations on <m>A</m> even though it contains complex numbers. This, hopefully, will expose the dependency of the columns. Note that <md>\begin{bmatrix} -i \amp -1 \\ 1 \amp -i \end{bmatrix} \overset{\text{Swap $R_1$ and $R_2$}}{\LARGE \sim} \begin{bmatrix} 1 \amp -i \\ -i \amp -1 \end{bmatrix} \overset{R_2 + iR_1 \rightarrow R_2}{\LARGE \sim} \begin{bmatrix} 1 \amp -i \\ 0 \amp 0 \end{bmatrix}</md>. Now, we see that <md>\vec v_1 = \begin{bmatrix} i \\ 1 \end{bmatrix} \in \Nul(A - \lambda_1 I)</md>. Let's check that <m>A\vec v_1 = \lambda_1 \vec v_1</m>. Note that <md>A\vec v_1 = \begin{bmatrix} 1 \amp -1 \\ 1 \amp 1 \end{bmatrix} \begin{bmatrix} i \\ 1 \end{bmatrix} = \begin{bmatrix} i - 1 \\ i + 1 \end{bmatrix}</md> and <md>\lambda_1 \vec v_1 = (1 + i)\begin{bmatrix} i \\ 1 \end{bmatrix} = \begin{bmatrix} i + i^2 \\ 1 + i \end{bmatrix} = \begin{bmatrix} i - 1 \\ i + 1 \end{bmatrix}</md>, so <m>A\vec v_1 = \lambda_1 \vec v_1</m>.
         </p>
         <p>
-            By <xref ref="thm-conjugate-roots"/>, we have that <me>\vec v_2 = \overline{\vec v_1} = \begin{bmatrix} \overline{i} \\ \overline{1} \end{bmatrix} = \begin{bmatrix} -i \\ 1 \end{bmatrix}</me> is an eigenvector for <m>\lambda_2 = \overline{\lambda_1}</m>.
+            By <xref ref="thm-conjugate-roots"/>, we have that <md>\vec v_2 = \overline{\vec v_1} = \begin{bmatrix} \overline{i} \\ \overline{1} \end{bmatrix} = \begin{bmatrix} -i \\ 1 \end{bmatrix}</md> is an eigenvector for <m>\lambda_2 = \overline{\lambda_1}</m>.
         </p>
       </solution>
     </example>
@@ -387,14 +387,14 @@
     <example xml:id="ex-5-5-C-eigs-polar-1" workspace="true">
       <statement>
         <p>Compute the eigenvalues of</p>
-        <me>
+        <md>
           C=\begin{bmatrix} a \amp -b\\ b \amp a \end{bmatrix}
-        </me>
+        </md>
         <p>and express them in the polar form <m>re^{i\phi}</m>.</p>
       </statement>
       <solution>
         <p>
-            Note that <me>\det(C - \lambda I) = \begin{vmatrix} a - \lambda \amp -b \\ b \amp a - \lambda \end{vmatrix} = (a - \lambda)^2 + b^2</me>. Solving for the eigenvalues, we see that <md><mrow> (a - \lambda)^2 + b^2 = 0 \amp \implies (a-\lambda)^2 = -b^2 </mrow> <mrow> \amp \implies a - \lambda = \pm bi </mrow> <mrow>\amp \implies \lambda = a \pm bi</mrow></md>. Therefore, <m>\lambda_1 = a + bi</m> and <m>\lambda_2 = a - bi</m> are the two eigenvalues of <m>C</m>. Writing these in polar form, we have that <me>\lambda_1 = \sqrt{a^2 + b^2}e^{i\operatorname{arctan}\left(\frac{b}{a}\right)} \quad \text{and} \quad \lambda_2 = \sqrt{a^2 + b^2}e^{i\operatorname{arctan}\left(-\frac{b}{a}\right)}</me>. Similar to the eigenvalues found in <xref ref="ex-5-5-rot-dil-eigs"/>, we see that <m>r = \|\lambda_1\| = \sqrt{a^2 + b^2}</m> is the scaling factor of <m>C</m> and <m>\phi = \operatorname{arctan}\left(\frac{b}{a}\right)</m> is the rotation factor of <m>C</m>. 
+            Note that <md>\det(C - \lambda I) = \begin{vmatrix} a - \lambda \amp -b \\ b \amp a - \lambda \end{vmatrix} = (a - \lambda)^2 + b^2</md>. Solving for the eigenvalues, we see that <md><mrow> (a - \lambda)^2 + b^2 = 0 \amp \implies (a-\lambda)^2 = -b^2 </mrow> <mrow> \amp \implies a - \lambda = \pm bi </mrow> <mrow>\amp \implies \lambda = a \pm bi</mrow></md>. Therefore, <m>\lambda_1 = a + bi</m> and <m>\lambda_2 = a - bi</m> are the two eigenvalues of <m>C</m>. Writing these in polar form, we have that <md>\lambda_1 = \sqrt{a^2 + b^2}e^{i\operatorname{arctan}\left(\frac{b}{a}\right)} \quad \text{and} \quad \lambda_2 = \sqrt{a^2 + b^2}e^{i\operatorname{arctan}\left(-\frac{b}{a}\right)}</md>. Similar to the eigenvalues found in <xref ref="ex-5-5-rot-dil-eigs"/>, we see that <m>r = \|\lambda_1\| = \sqrt{a^2 + b^2}</m> is the scaling factor of <m>C</m> and <m>\phi = \operatorname{arctan}\left(\frac{b}{a}\right)</m> is the rotation factor of <m>C</m>. 
         </p>
       </solution>
     </example>
@@ -409,22 +409,22 @@
     <example xml:id="ex-5-5-complex-eigs" workspace="true">
       <statement>
         <p>Find the complex eigenvalues and an associated complex eigenvector for each eigenvalue of</p>
-        <me>
+        <md>
           A=\begin{bmatrix}
             1 \amp -2\\
             1 \amp 3
           \end{bmatrix}.
-        </me>
+        </md>
       </statement>
       <solution>
         <p>
-            Note that <me>\det(A - \lambda I) = \begin{vmatrix} 1 - \lambda \amp -2 \\ 1 \amp 3-\lambda \end{vmatrix} = (1-\lambda)(3-\lambda) + 2 = \lambda^2 - 4\lambda + 5</me>. Using the quadratic formula, we see that the eigenvalues of <m>A</m> are <me>\lambda = \dfrac{4 \pm \sqrt{16 - 20}}{2} = \dfrac{4 \pm 2i}{2} = 2\pm i</me>. 
+            Note that <md>\det(A - \lambda I) = \begin{vmatrix} 1 - \lambda \amp -2 \\ 1 \amp 3-\lambda \end{vmatrix} = (1-\lambda)(3-\lambda) + 2 = \lambda^2 - 4\lambda + 5</md>. Using the quadratic formula, we see that the eigenvalues of <m>A</m> are <md>\lambda = \dfrac{4 \pm \sqrt{16 - 20}}{2} = \dfrac{4 \pm 2i}{2} = 2\pm i</md>. 
         </p>
         <p>
-            Let <m>\lambda_1 = 2 + i</m>. Then we have that <me>A - \lambda_1 I = \begin{bmatrix} -1 -i \amp -2 \\ 1 \amp 1-i \end{bmatrix} \sim \begin{bmatrix} 1 \amp 1-i \\ 0 \amp 0 \end{bmatrix}</me>. It follows that <me>\vec v_1 = \begin{bmatrix} 1 - i \\ -1 \end{bmatrix}</me> is an eigenvector corresponding to <m>\lambda_1</m>. Check this.
+            Let <m>\lambda_1 = 2 + i</m>. Then we have that <md>A - \lambda_1 I = \begin{bmatrix} -1 -i \amp -2 \\ 1 \amp 1-i \end{bmatrix} \sim \begin{bmatrix} 1 \amp 1-i \\ 0 \amp 0 \end{bmatrix}</md>. It follows that <md>\vec v_1 = \begin{bmatrix} 1 - i \\ -1 \end{bmatrix}</md> is an eigenvector corresponding to <m>\lambda_1</m>. Check this.
         </p>
         <p>
-            Let <m>\lambda_2 = 2 - i = \overline{\lambda_1}</m>. By <xref ref="thm-conjugate-roots"/>, we see that <me>\vec v_2 = \overline{\vec v_1} = \begin{bmatrix} 1 + i \\ -1 \end{bmatrix}</me> is an eigenvector corresponding to <m>\lambda_2</m>.
+            Let <m>\lambda_2 = 2 - i = \overline{\lambda_1}</m>. By <xref ref="thm-conjugate-roots"/>, we see that <md>\vec v_2 = \overline{\vec v_1} = \begin{bmatrix} 1 + i \\ -1 \end{bmatrix}</md> is an eigenvector corresponding to <m>\lambda_2</m>.
         </p>
       </solution>
     </example>
