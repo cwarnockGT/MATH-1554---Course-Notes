@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para">Diagonalize <span class="process-math">\(A\)</span> using an orthogonal matrix. The eigenvalues of <span class="process-math">\(A\)</span> are given.<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-1-orth-diag-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=\begin{bmatrix}
+0 \amp 0 \amp 1\\
+0 \amp 1 \amp 0\\
+1 \amp 0 \amp 0
+\end{bmatrix},
+\qquad \lambda=-1,\,1.
+\end{equation*}
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Let’s start with finding the <span class="process-math">\(1\)</span>-eigenspace of <span class="process-math">\(A\text{.}\)</span> Note that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A - I = \begin{bmatrix} -1 \amp 0 \amp 1 \\ 0 \amp 0 \amp 0 \\ 1 \amp 0 \amp -1 \end{bmatrix} \sim \begin{bmatrix} 1 \amp 0 \amp -1 \\ 0 \amp 0 \amp 0 \\ 0 \amp 0 \amp 0 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(A - I\)</span> has two free variables, the <span class="process-math">\(1\)</span>-eigenspace<span class="process-math">\((A)\)</span> is two dimensional. If we were only trying to diagonalize <span class="process-math">\(A\text{,}\)</span> then any basis of the <span class="process-math">\(1\)</span>-eigenspace<span class="process-math">\((A)\)</span> would be fine. But we want to diagonalize so that <span class="process-math">\(P\)</span> is an orthogonal matrix. Therefore, we want to find an <em class="emphasis">orthonormal</em> basis of the <span class="process-math">\(1\)</span>-eigenspace<span class="process-math">\((A)\text{.}\)</span> Thus, we choose the basis vectors</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vec v_1 = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} \quad \text{and} \quad \vec v_2 = \dfrac{1}{\sqrt{2}}\begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-1-orth-diag-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Now, let’s find a basis for the <span class="process-math">\(-1\)</span>-eigenspace<span class="process-math">\((A)\text{.}\)</span> Note that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-orth-eigenspaces.html">
+\begin{equation*}
+A - (-1)I = \begin{bmatrix} 1 \amp 0 \amp 1 \\ 0 \amp 2 \amp 0 \\ 1 \amp 0 \amp 1 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(A - (-1)I\)</span> has only a single free variable, any basis we choose will be an orthogonal basis, we will just make sure to use a normalized vector as a column of <span class="process-math">\(P\text{.}\)</span> Let</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-orth-eigenspaces.html">
+\begin{equation*}
+\vec v_3 = \dfrac{1}{\sqrt{2}}\begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Note that this vector is <em class="emphasis">guaranteed</em> to be orthogonal to <span class="process-math">\(\vec v_1\)</span> and <span class="process-math">\(\vec v_2\)</span> by <a href="Section-7-1.html#thm-orth-eigenspaces" class="xref" data-knowl="./knowl/xref/thm-orth-eigenspaces.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 7.15: Orthogonality of Eigenspaces">Theorem 7.15</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-1-orth-diag-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">It follows that a diagonalization of <span class="process-math">\(A\)</span> is given by <span class="process-math">\(A = PDP^{-1}\text{,}\)</span> where</div>
+<div class="displaymath process-math">
+\begin{equation*}
+D = \begin{bmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp -1 \end{bmatrix} \quad \text{and} \quad P = \begin{bmatrix}0 \amp \frac{1}{\sqrt{2}} \amp \frac{1}{\sqrt{2}} \\ 1 \amp 0 \amp 0 \\ 0 \amp \frac{1}{\sqrt{2}} \amp -\frac{1}{\sqrt{2}} \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(P\)</span> is orthogonal, we have that <span class="process-math">\(P^{-1} = P^T\text{,}\)</span> so this diagonalization could be written <span class="process-math">\(A = PDP^T\text{.}\)</span> We call this diagonalization using an orthogonal matrix an <dfn class="terminology">orthogonal diagonalization</dfn>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-7-1-orth-diag-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 7.16.1"><a href="#ex-7-1-orth-diag-2" title="Copy heading and permalink for Solution 7.16.1" aria-label="Copy heading and permalink for Solution 7.16.1">🔗</a></div>
+</div></details></div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" data-description="Example 7.16"><a href="#ex-7-1-orth-diag" title="Copy heading and permalink for Example 7.16" aria-label="Copy heading and permalink for Example 7.16">🔗</a></div></article><span class="incontext"><a class="internal" href="Section-7-1.html#ex-7-1-orth-diag">in-context</a></span>
+</body>
+</html>
