@@ -62,6 +62,20 @@
     <xi:include href="./chapter-5.ptx" />
     <xi:include href="./chapter-6.ptx" />
     <xi:include href="./chapter-7.ptx" />
+
+<backmatter>
+  <appendix xml:id="appendix-list-defs">
+  <title>List of Definitions</title>
+
+  <list-of elements="definition" divisions="chapter" empty="yes"/>
+</appendix>
+<appendix xml:id="appendix-list-thms">
+  <title>List of Theorems</title>
+
+  <list-of elements="theorem" divisions="chapter" empty="yes"/>
+</appendix>
+</backmatter>
+
   </book>
 
 </pretext>
