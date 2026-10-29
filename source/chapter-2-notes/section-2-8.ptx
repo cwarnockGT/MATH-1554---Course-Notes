@@ -160,6 +160,7 @@
     </p>
 
     <theorem xml:id="thm-subspace-are-span">
+      <title>Subspace and Span</title>
         <statement>
             <p>
                 Every subspace of <m>\mathbb{R}^n</m> can be written as the span of a finite number of vectors; that is, if <m>H</m> is a subspace of <m>\mathbb{R}^n</m>, then there exists vectors <m>\vec v_1, \dots, \vec v_k</m> so that <m>H = \operatorname{Span}\left\{\vec v_1, \dots, \vec v_n\right\}</m>.
@@ -194,6 +195,7 @@
     </definition>
 
     <theorem xml:id="thm-nul-same-col-dif">
+      <title>Null Space and Column Space of Row Equivalent Matrices</title>
         <statement>
             <p>
                 Let <m>A</m> be an <m>m \times n</m> matrix, and let <m>B</m> be any matrix which is <xref ref="def-row-equiv" text="custom">row equivalent</xref> to <m>A</m>. Then 

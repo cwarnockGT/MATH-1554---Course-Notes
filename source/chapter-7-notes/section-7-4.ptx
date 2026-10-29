@@ -321,6 +321,7 @@
 <page>
 
         <theorem xml:id="thm-SVD-ortho-subspaces">
+            <title>SVD and the Four Subspaces</title>
         <statement>
             <p>
                 Let <m>A</m> be an <m>m \times n</m> matrix with rank <m>r</m> and with SVD <m>A = U\Sigma V^T</m>, where <md>U = \begin{bmatrix} \vec u_1 \amp \cdots \amp \vec u_m \end{bmatrix}, \quad \Sigma = \begin{bmatrix}  \sigma_1 \amp 0 \amp 0 \amp \cdots \amp  0 \\ 0 \amp \sigma_2 \amp 0 \amp \cdots \amp 0 \\ \vdots \amp \vdots \amp \ddots \amp \vdots \amp \vdots \\ 0 \amp 0 \amp \cdots \amp \sigma_r \amp 0 \\ 0 \amp 0 \amp \cdots \amp 0 \amp 0 \end{bmatrix}, \quad V^T = \begin{bmatrix} \vec v_1^T \\ \vdots \\ \vec v_n^T \end{bmatrix}</md>  Then,
@@ -379,6 +380,7 @@
     <p>We can create the <term>spectral decomposition</term> for a general matrix <m>A</m> in a similar way to <xref ref="thm-spectral-decomposition"/>. </p>
 
     <theorem xml:id="thm-">
+        <title>Spectral Decomposition</title>
         <statement>
             <p>
                  Let <m>A = U\Sigma V^T</m> be the SVD of a rank <m>r</m> matrix, with the columns of <m>U</m> given by <m>\vec u_i</m>, the entries on the diagonal of <m>\Sigma</m> given by <m>\sigma_i</m>, and the rows of <m>V^T</m> given by <m>\vec v_i</m>. Then, the <term>spectral decomposition</term> of <m>A</m> is given by 

@@ -158,6 +158,7 @@
     </theorem>
 
     <definition xml:id="def-dist-W">
+      <title>Distance from a Subspace</title>
         <statement>
             <p>
                 Let <m>W \subset \mathbb{R}^n</m> and <m>\vec y \in \mathbb{R}^n</m>. The <term>distance of a vector <m>\vec y</m> from a subspace <m>W</m></term>, denoted <m>\dist(\vec y, W)</m>, is the minimum distance between <m>\vec y</m> and a vector <m>\vec w \in W</m>; that is, <md>\dist(\vec y, W) = \operatorname{min}\left\{\dist(\vec y, \vec w) : w \in W\right\}</md>. By <xref ref="thm-best-approx"/>, we see that the vector in <m>W</m> which is closest to <m>\vec y</m> is <m>\widehat y = \proj_W\vec y</m>. Therefore, <md>\dist(\vec y, W) = \dist(\vec y, \widehat y)</md>.

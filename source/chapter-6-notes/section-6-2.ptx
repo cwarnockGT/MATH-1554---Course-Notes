@@ -197,6 +197,7 @@
     </image>
 
     <theorem xml:id="thm-projection-ortho" workspace="0.5in">
+      <title>Properties of Orthogonal Projections</title>
         <statement>
             <p>
                 Let <m>\vec u</m> be a nonzero vector. Then, the vector <m>\proj_{\vec u}\vec v</m> is the vector in <m>\Span\{\vec u\}</m> which is closest to <m>\vec v</m>. Also, the vector <m>\vec w=\vec v - \operatorname{proj}_{\vec u}(\vec v)</m> is orthogonal to <m>\vec u</m>. Furthermore, 
@@ -320,6 +321,7 @@
     </definition>
 
     <theorem xml:id="thm-orthonormal-columns">
+      <title>Orthonormal Columns</title>
         <statement>
             <p>
                 An <m>m \times n</m> matrix <m>U</m> has orthonormal columns if and only if <m>U^TU = I_n</m>. 

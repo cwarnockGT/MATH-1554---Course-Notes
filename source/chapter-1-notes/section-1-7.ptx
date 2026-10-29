@@ -34,6 +34,7 @@
     <p><nbsp/></p>
 
     <definition>
+      <title>Linear Independence and Dependence</title>
       <statement>
         A set of vectors
         <m>{\vec v_1, \ldots, \vec v_k}</m>
@@ -104,6 +105,7 @@
     <title>Two Important Facts</title>
 
     <theorem workspace="true">
+      <title>The Zero Vector and Linear Dependence</title>
       <statement>
         Any set containing the zero vector <m> \vec 0</m> is linearly dependent.
       </statement>
@@ -113,6 +115,7 @@
     
 
     <theorem workspace="true" xml:id="thm-lin-dep-too-many-vectors">
+      <title>Too Many Vectors and Linear Dependence</title>
       <statement>
         Suppose <m>\vec v_1, \ldots, \vec v_n</m> are vectors in
         <m>\mathbb{R}^m</m> with <m>n &gt; m</m>. Then the set

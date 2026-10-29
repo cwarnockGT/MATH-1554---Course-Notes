@@ -31,6 +31,9 @@
     <p><nbsp/></p>
 
     <definition workspace="true">
+      <title>Matrix Transformation</title>
+      
+      
     <statement>
         <p>Let <m>A</m> be an <m>m\times n</m> matrix. Define a function</p>
     <md>
@@ -184,12 +187,15 @@
     <title>Linear Transformations and Superposition</title>
 
     <definition workspace="1in">
+      <title>Linear Transformation</title>
+      <statement>
       <p>A function <m>T:\mathbb{R}^n\to\mathbb{R}^m</m> is <term>linear</term> if for all <m>\vec u,\vec v\in\mathbb{R}^n</m> and all scalars <m>c\in\mathbb{R}</m>:
       <ul>
         <li><m>T(\vec u+\vec v)=T(\vec u)+T(\vec v)</m>,</li>
         <li><m>T(c\,\vec v)=c\,T(\vec v)</m>.</li>
       </ul>
     </p>
+    </statement>
     </definition>
 
     <p><nbsp/></p>

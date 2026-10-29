@@ -77,6 +77,7 @@
   <page xml:id="Rn">
     <title><m>\mathbb{R}^n</m></title>
     <definition>
+      <title><m>\mathbb{R}^n</m></title>
       <statement>
         <p>
           Recall that <m>\mathbb{R}</m> denotes the collection of all real numbers. For a positive integer <m>n</m>, define
@@ -193,6 +194,7 @@
     <title>Linear Combinations and Span</title>
 
     <definition xml:id="def-linear-combination-span" workspace="0.5in">
+      <title>Linear Combinations and Span</title>
       <statement>
         <ol>
           <li>

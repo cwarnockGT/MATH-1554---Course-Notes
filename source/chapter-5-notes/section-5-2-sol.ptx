@@ -42,6 +42,8 @@
       \det(A-\lambda I)=0.
     </md>
     <definition xml:id="def-characteristic">
+      <title>Charteristic Polynomial and Characteristic Equation</title>
+      <statement>
         <p>
         The quantity <m>\det(A-\lambda I)</m> is the <term>characteristic polynomial</term> of <m>A</m>.
         </p>
@@ -51,6 +53,7 @@
         <p>
         The roots of the characteristic polynomial are the <term>eigenvalues</term> of <m>A</m>.
         </p>
+        </statement>
     </definition>
     <p><nbsp/></p>
 
@@ -122,6 +125,7 @@
     <title>Algebraic Multiplicity</title>
 
     <theorem xml:id="thm-det-prod-eigs">
+      <title>Determinant, Trace, and Eigenvalues</title>
         <statement>
             <p>
                 Let <m>A</m> be an <m>n \times n</m> matrix with eigenvalues <m>\lambda_1, \dots, \lambda_n</m>. Then, <m>\det(A) = \lambda_1\cdots\lambda_n</m> and <m>\operatorname{tr}(A) = \lambda_1 + \cdots + \lambda_n</m>.
