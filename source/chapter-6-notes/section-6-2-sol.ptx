@@ -370,15 +370,6 @@
   <page xml:id="p-6-2-orthogonal-matrices">
     <title>Orthogonal Matrices</title>
 
-    <definition xml:id="def-orthogonal-matrix">
-      <title>Orthogonal Matrix</title>
-      <statement>
-        <p>
-          An <term>orthogonal matrix</term> is a <em>square</em> matrix whose columns are orthonormal.
-        </p>
-      </statement>
-    </definition>
-
     <theorem xml:id="thm-orthonormal-columns">
       <title>Orthonormal Columns</title>
         <statement>
@@ -400,10 +391,19 @@
 
     <p><nbsp/></p>
 
-    <theorem xml:id="thm-orthogonal-maps" workspace="1in">
-      <title>Mapping Properties of Orthogonal Matrices</title>
+      <definition xml:id="def-orthogonal-matrix">
+      <title>Orthogonal Matrix</title>
       <statement>
-        <p>If <m>U</m> is an orthogonal matrix, then:</p>
+        <p>
+          An <term>orthogonal matrix</term> is a <em>square</em> matrix whose columns are orthonormal.
+        </p>
+      </statement>
+    </definition>
+
+    <theorem xml:id="thm-orthogonal-maps" workspace="1in">
+      <title>Mapping Properties of Matrices with Orthonormal Columns</title>
+      <statement>
+        <p>If <m>U</m> is a matrix with orthonormal columns, then:</p>
 
         <ol>
             <li>
