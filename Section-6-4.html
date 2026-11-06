@@ -38,7 +38,7 @@ lang: "en-US",
 <meta property="og:title" content="MATH 1554 Course Notes - Fall 2026">
 <meta property="book:title" content="MATH 1554 Course Notes - Fall 2026">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.55"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.55"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.56"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.56"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -462,7 +462,7 @@ W_k = \Span\left\{\vec v_1, \dots, \vec v_k\right\} = \Span\left\{\vec x_1, \dot
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Theorem 6.44: The Gram–Schmidt Process"><a tabindex="-1" href="#thm-gram-schmidt" title="Copy heading and permalink for Theorem 6.44: The Gram–Schmidt Process" aria-label="Copy heading and permalink for Theorem 6.44: The Gram–Schmidt Process">🔗</a></div>
 </article></section><section class="onepage" id="p-6-4-gs-geometry"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;">
-<img src="generated/latex-image/img-6-4-gs-geom.svg" role="img" class="contained" alt="Geometric view of Gram–Schmidt orthogonalization."><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="img-6-4-gs-geom-description">Vectors <span class="process-math">\(\vec x_1,\vec x_2,\vec x_3\)</span> are used to produce orthogonal vectors <span class="process-math">\(\vec v_1,\vec v_2,\vec v_3\)</span> via subtraction of projections.</div></details>
+<img src="generated/latex-image/img-6-4-gs-geom.svg" role="img" class="contained" alt="Geometric view of Gram–Schmidt orthogonalization."><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="img-6-4-gs-geom-description" style="width: 100%; margin-left: 0%;">Vectors <span class="process-math">\(\vec x_1,\vec x_2,\vec x_3\)</span> are used to produce orthogonal vectors <span class="process-math">\(\vec v_1,\vec v_2,\vec v_3\)</span> via subtraction of projections.</div></details>
 </div>
 <div class="para" id="p-6-4-gs-geometry-3">Gram–Schmidt successively removes the components of each vector in the span of earlier ones.<div class="workspace" data-space="1in"></div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#p-6-4-gs-geometry-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -625,21 +625,20 @@ A=\begin{bmatrix}
 <details id="ex-6-4-qr-example-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
 <div class="para logical" id="ex-6-4-qr-example-2-1">
-<div class="para">Note from <a href="Section-6-4.html#ex-6-4-2vec" class="xref" data-knowl="./knowl/xref/ex-6-4-2vec.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 6.45">Example 6.45</a> that <span class="process-math">\(\left\{\begin{bmatrix} 3 \\ 0 \\ -1 \end{bmatrix}, \begin{bmatrix} -1 \\ 5 \\ -3 \end{bmatrix}\right\}\)</span> is an orthogonal basis for <span class="process-math">\(\Col(A)\text{.}\)</span> Normalizing the vectors results in the following orthonormal basis for <span class="process-math">\(\Col(A)\text{:}\)</span>
-</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-6-4-2vec.html" id="ex-6-4-qr-example-2-1-5">
+<div class="para">Note that the columns of <span class="process-math">\(A\)</span> form an orthogonal basis for <span class="process-math">\(\Col(A)\)</span> since. Therefore, we simply need to normalize them to get an orthonormal basis for <span class="process-math">\(\Col(A)\text{.}\)</span> It follows that</div>
+<div class="displaymath process-math" id="ex-6-4-qr-example-2-1-4">
 \begin{equation*}
 \left\{\dfrac{1}{\sqrt{13}}\begin{bmatrix} 3 \\ 2 \\ 0 \end{bmatrix}, \dfrac{1}{\sqrt{14}}\begin{bmatrix}-2 \\ 3 \\ 1 \end{bmatrix}\right\}
 \end{equation*}
 </div>
-<div class="para">We let these be the columns of <span class="process-math">\(Q\text{,}\)</span> so</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-6-4-2vec.html" id="ex-6-4-qr-example-2-1-7">
+<div class="para">is an orthonormal basis for <span class="process-math">\(\Col(A)\text{.}\)</span> We let these vectors be the columns of <span class="process-math">\(Q\text{,}\)</span> so</div>
+<div class="displaymath process-math" id="ex-6-4-qr-example-2-1-7">
 \begin{equation*}
 Q = \begin{bmatrix} \frac{3}{\sqrt{13}} \amp \frac{-2}{\sqrt{14}} \\ \frac{2}{\sqrt{13}} \amp \frac{3}{\sqrt{14}} \\ 0 \amp \frac{1}{\sqrt{14}} \end{bmatrix}\text{.}
 \end{equation*}
 </div>
 <div class="para">To find <span class="process-math">\(R\text{,}\)</span> we calculate <span class="process-math">\(R = Q^TA\text{.}\)</span> Note that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-6-4-2vec.html" id="ex-6-4-qr-example-2-1-10">
+<div class="displaymath process-math" id="ex-6-4-qr-example-2-1-10">
 \begin{align*}
 R \amp = Q^TA\\
 \amp = \begin{bmatrix} \frac{3}{\sqrt{13}} \amp \frac{2}{\sqrt{13}} \amp 0 \\ \frac{-2}{\sqrt{14}} \amp \frac{3}{\sqrt{14}} \amp \frac{1}{\sqrt{14}} \end{bmatrix} \begin{bmatrix} 3 \amp -2 \\ 2 \amp 3 \\ 0 \amp 1 \end{bmatrix}\\
